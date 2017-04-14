@@ -1,0 +1,1277 @@
+<!-- Ideas from Glitch for fancier things than raw html: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Beeminder Changelog</title>
+<meta name="description" content="TODO">
+<link id="favicon" rel="icon" 
+      href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header>
+<h1>
+Beeminder Changelog
+</h1>
+</header>
+
+<main>
+
+<p>
+Before we publicly launched 
+<a href="https://www.beeminder.com">Beeminder</a> in 2011
+we committed to deploying and tweeting one 
+<a href="http://messymatters.com/uvi">User-Visible Improvement</a>
+to Beeminder per day.
+</p>  
+
+<p>This was our very first UVI:</p>
+
+<ol>
+<li>
+Created this twitter acct to log user-visible improvements (UVIs) to Beeminder. (Yes, this is a UVI. Everything counts no matter how small!)
+[<a href="https://twitter.com/beemuvi/status/39402430655373312">2011 Feb 20</a>]
+</li>
+</ol>
+
+<p>
+We diligently maintained our average &mdash;
+<a href="https://www.beeminder.com/meta/uvi">enforced by Beeminder</a>
+&mdash; for over 2 years before we messed up and had to pay one of our users $1000.
+But it was more than worth it and we've continued uninterrupted for 2239 days (over 6 years!) and counting.
+</p>
+  
+<p>
+From that first tweet in 2011 to 2014 June 18 we didn't log our UVIs anywhere but the 
+<a href="http://twitter.com/beemuvi">@beemuvi Twitter account</a>.
+Eventually we'll import those UVIs here but in the meantime there's a gap.
+</p>
+
+<p>
+As always, one of you gets $1000 whenever we fail to tweet one by midnight!
+</p>
+
+<p>
+And here are all our UVIs starting 2014 June 19:
+</p>
+
+<h3>2014-Jun-19 to 2015-Dec-01</h3>
+
+<ol>
+<li>Custom color palette for graphs means they're like 1/2 the filesize or less (8-bit vs 24-bit, but look identical). Faster, less bandwith!</li>
+<li>If you said like "2300" instead of "23:00" for your deadline, we gave a 500 error instead of politely complaining. #bugfix</li>
+<li><strong>Beedroid v2.3.2: "What's new" dialog, faster & less bandwidth, do-less value defaults to prev day, zeno polling past midnight; + 6 bugfixes!</strong></li>
+<li>Made the comments field in our <a href="http://zapminder.com" title="Zapier + Beeminder = heart heart heart">Zapier integration</a> more robust -- special characters like accents or emdashes were causing failures. #bugfix</li>
+<li>And another critical #bugfix for <a href="http://zapminder.com" title="Zapier + Beeminder = heart heart heart">Zapier goals</a>: <a href="http://blog.beeminder.com/zeno">Zeno polling</a> was not triggering. Starting now it will!</li>
+<li>Mini-UVIs: Added Malcolm Ocean to <a href="http://beeminder.com/aboutus">beeminder.com/aboutus</a> & "(bee)mind" instead of the apparently confusing "mind" on the frontpage</li>
+<li>Zeno poll emails were saying you could reply with data even for autodata goals #bugfix (or #emailcopyfix)</li>
+<li>Serious #bugfix w/ certain autodata goals since Oct 27: final midnight check for data was sometimes counting the datapoint for the next day (trello, codeschool, duolingo, github, gmailzero, habitrpg)</li>
+<li>Prev #bugfix caused a brief <a href="http://blog.beeminder.com/rescuetime">RescueTime</a> bug that was adding duplicate datapoints, now also fixed and cleaned up (and refunds issued). Thx to Ben Trettel and Lawrence Evalyn.</li>
+<li>When registering Beeminder API clients we allowed '.' in the app name which caused errors editing the app so now we disallow periods #bugfix [HT: Ryan Kluzak]</li>
+<li><a href="http://forum.beeminder.com/t/deadlines-cant-be-snoozed-anymore/310" title="Forum post about this">There's now a 6-hour akrasia horizon on snoozing your deadline</a></li>
+<li>Brought <a href="http://beeminder.com/faq" title="Beeminder FAQ">beeminder.com/faq</a> up to code: pointer to the forum, arbitrary deadlines, deleting goals in the 1st week, and auto-widening</li>
+<li>We were ignoring updates to the deauthorize callback URL for registered API clients; now we actually update the field! #bugfix</li>
+<li>Made the deadline time under the goal's countdown (above the graph) be a link to deadline setting (& don't do -1 minute thing)</li>
+<li>Oldie-but-goodie: Major <a href="http://blog.beeminder.com/runkeeper">RunKeeper</a> #bugfix which we broke when we deployed Arbitrary Deadlines (and fixed all the duplicate datapoints)</li>
+<li>Rare bug w/ hitting goal date w/ an early deadline causing us to treat it briefly as derailed and trying to recommit. #bugfix HT <a href="https://twitter.com/samstokes" title="Sam Stokes, of Rapportive fame">@samstokes</a></li>
+<li>Another RunKeeper #bugfix: their API gives times relative to user's local time. We were off-by-1 converting activity days for some people.</li>
+<li>Terrifyingly Advanced Settings are now less terrifying thanks to lots of new descriptions and mouseovers and links</li>
+<li>Mini-UVIs: Added hovertext to fields in Basic Settings; renamed "Inbox Fewer" goal type "Whittle Down"; more obvious that Do More is default</li>
+<li>Prettied up and simplified <a href="http://beeminder.com/services" title="3rd party apps that can connect to Beeminder">beeminder.com/services</a> to just be about autodata integrations, not "sign up or sign in with..."</li>
+<li><strong><a href="http://beeminder.com/sleep" title="Our CTO, Bethany, is personally a big fan of this">Sleep as Android integration!</a></strong> See also <a href="http://blog.beeminder.com/sleep">blog announcement</a>.</li>
+<li>Sign-in/up initial button selection now matches the view. Thanks <a href="https://alanpearce.uk" title="Alan Pearce, long time Beeminder fan">Alan Pearce</a></li>
+<li>Fixed display of table of past payments so dates never wrap, since that was hideous, and link to that page from Settings &rarr; Payment tab</li>
+<li><strong>Android app v2.3.3: better widget creation, somewhat rare but important bugfix w/ date display, other tweaks/fixes; see changelog in the app</strong></li>
+<li>Two Sleep As Android bugfixes: don't prematurely show pledge form (on create); fetch since we last saw data, rather than since today #bugfix</li>
+<li>Mini-UVIs: Typo in pledge cap settings (HT Yonah Sienna), nice error if Code School user 404s, adapted to a minor change in <a href="http://blog.beeminder.com/habitrpg">HabitRPG</a>'s API</li>
+<li>Critical #bugfix w/ surprisingly few people affected: regex error counted PPRs as active datapoints and the deadman switch wasn't activating</li>
+<li>Moved and prettied up the All Data link again since people were still commonly unaware of its existence. PSA: you can edit/export past data!</li>
+<li>Tweak or maybe #bugfix with graphs where they&#8217;d sometimes show a bit of graph below y=0 despite no part of the road or data being negative</li>
+<li>Messed up css for archive/stepdown countdowns (font too large &amp; white-on-gray). Now you can read them. Contrast ftw. #bugfix</li>
+<li>Gitminder #bugfix: New &#8220;issues closed&#8221; goals (since Bethany&#8217;s maniac week) counted commits made to the repo instead</li>
+<li>Another gitminder #bugfix: On goal creation, javascript validation on the &#8220;repo&#8221; field didn&#8217;t trim, so let you submit blank repo. HT <a href="http://twitter.com/pbkobold">@pbkobold</a>.</li>
+<li>Had a bug for 10 days where you couldn&#8217;t up from 0 &rarr; $5 if you&#8217;d added a credit card prior to <a href="https://twitter.com/beemuvi/status/477576353236004864">this UVI</a> #bugfix #metabugfix HT @mhartl</li>
+<li>Fixed <a href="http://www.fatcyclist.com/2014/07/07/ringcycles-wins-fat-cyclist-weight-loss-contest/">Fat Cyclist</a> comments which were briefly broken after we changed URLs to end in /weight instead of /fatty (latter still works too tho)</li>
+<li>Some improvements to the goal creation wizard, making it more clear what &#8220;weekly rate&#8221; means, by asking for the units and by adding tooltips</li>
+<li>Live from <a href="http://indiewebcamp.com">Indie Web Camp</a>: global callback URL in account settings in addition to per-goal callback (handy, eg, for <a href="http://pjf.id.au/tech/2014/02/09/automate-your-life-with-exobrain.html">Exobrain</a>)</li>
+<li>Also live from Indie Web Camp: <a href="http://indieauth.com">Indieauth</a> supports Beeminder! Add your personal URL and it&#8217;s shown on your gallery page as a rel=me link</li>
+<li>If you had a credit card on file we&#8217;d sometimes send you to the payment page instead of the restart page for goals that were frozen. #bugfix HT <a href="http://luciamerlo.com/">Lucia Merlo</a></li>
+<li>If you archived all your goals we&#8217;d show you the newbee splash page even when you tried to view your archived goals. #bugfix HT Llucille Petersen and Josh McFarland</li>
+<li>It was briefly impossible to create new weight &amp; inbox goals (new goal units field was both hidden and required! #bugfix) HT <a href="http://twitter.com/awarenesss">@awarenesss</a></li>
+<li>Tappable tooltips! And goal units now used in y-axis label, and fixed countdown javascript for <a href="http://beeminder.com/widgets">goal widgets</a> HT Kyle Marek-Spartz</li>
+<li>The &#8220;Take A Break&#8221; feature now also shows you currently scheduled upcoming breaks!</li>
+<li>If you have a <a href="http://beeminder.com/premium">Beeminder premium plan</a> then <a href="http://blog.beeminder.com/glossary#retroratchet">Retroratchet</a> lets you make it be an eep day Right Now</li>
+<li>We briefly broke <a href="http://beeminder.com/widgets">goal widgets</a> again when we did <a href="https://twitter.com/beeminfra/status/486374945656541184" title="From our 'infrahancement' beeminding">this refactoring</a>. Fixed now. #bugfix</li>
+<li>Got over our carrot-dangliness paranoia &amp; just say &#8220;premium only&#8221; for custom goals &amp; configurable retroratchet. Updated <a href="http://beeminder.com/premium">beeminder.com/premium</a> too.</li>
+<li>Sometimes (rarely) we&#8217;d fail to pick up data for newly created <a href="http://beeminder.com/runkeeper">RunKeeper</a> goals (eg, if you manually add activities for a prev day) #bugfix</li>
+<li>One more #bugfix w/ adding new pledges: we were still making it impossible to add a pledge after un-archiving a successful unpledged goal</li>
+<li>We accidentally were making you double-confirm goal deletion until recently (modal popped up &amp; then the javascript &#8220;are you sure?&#8221; as well)</li>
+<li>Retroratchet made things better &amp; less buggy for Do More but mostly made things worse for Do Less. Reverted to old way for Do Less. #bugfix</li>
+<li>If you have the Plan Bee or higher premium plan you can now change your goal URLs (careful about breaking links please!)</li>
+<li>Goal wizard form validation much nicer: they&#8217;re actually next to the field that&#8217;s in error. Also units updates in real time, &#8220;__ per week&#8221;.</li>
+<li>Added <a href="http://github.com/alice0meta">Alice Monday</a> and <a href="http://github.com/eendividi">Chris Goodman</a> to the <a href="http://beeminder.com/aboutus">About Us</a> page</li>
+<li>Guilt-trip email if you stop beeminding and we auto-cancel your subscription, in case you didn&#8217;t mean to let that happen</li>
+<li>Some time ago <a href="http://bethaknee.com">Bethany</a> ditched our default avatars, citing ugliness. Today we added a new default avatar. Note the use of negative space.</li>
+<li>&#8220;Feature me&#8221; feature in goal settings adds you to <a href="http://beeminder.com/featured">public gallery</a>. Thanks awesome people on <a href="http://blog.beeminder.com/akratics">Akratics Anonymous</a>.</li>
+<li>We were asking for a password on social sign-up (facebook, google, etc) since late April when we refactored sign-up code. Thanks <a href="http://geekportfolio.com/">Ryan Moore</a>. #bugfix </li>
+<li>Bugfix where we&#8217;d sometimes/rarely give a 500 error if you deleted all your recent datapoints and then tried to resume a frozen goal.</li>
+<li>Webcopy tweaks, tooltips for things like explaining safety buffer for Do Less goals &amp; auto-canceling subscriptions on <a href="http://beeminder.com/premium">beeminder.com/premium</a>.</li>
+<li>We no longer add <a href="http://beeminder.com/duolingo">Duolingo</a> datapoints if no change from previous day (important so we know if you go MIA so we can flip the deadman switch).</li>
+<li>When adding a pledge the first time we were getting the credit card info then failing to actually add the pledge (moneyburning #bugfix).</li>
+<li>Vastly slicker form for getting credit card details when you first add a pledge, thanks to <a href="https://stripe.com/checkout">Stripe Checkout</a>.</li>
+<li>Big changes to freebees and deleting goals! First UVI: We now show number of freebees remaining in the sidebar.</li>
+<li><strong>When you delete a goal, we ask you why and if it&#8217;s for technical reasons, we give back the <a href="http://blog.beeminder.com/glossary#freebee" title="A freebee is a goal that starts at $0 pledged">freebee</a>.</strong></li>
+<li>Scrapped &#8220;add a pledge&#8221; vs &#8220;commit later&#8221; (ie, no option to add a pledge when creating a goal &#8212; if you have a freebee left you&#8217;re using it).</li>
+<li>Fancy dynamic text depending on which option you pick in the goal deletion dialog. (This stuff is all spec&#8217;d out at <a href="http://expost.padm.us/freebee">expost.padm.us/freebee</a>.)</li>
+<li>Fixed link to glossary in deletion dialog (and tweaked &#8220;why are you deleting this?&#8221; webcopy). #bugfix</li>
+<li>The popup to confirm you&#8217;re on the hook for all goals after adding credit card was too easily dismissable; now mimics [Stripe] Checkout.</li>
+<li>Truncated the goal titles and added tooltip about archiving in the &#8220;archive any of these active goals you&#8217;re not serious about&#8221; popup.</li>
+<li>Get credit card first (thanks again Stripe), then send the user to unfreeze a goal (improvement over the mixed messages on unfreeze page)&#8230;</li>
+<li>&#8230;which let us simplify the unfreeze page and remove a bunch of text from it (because nobody ever reads on the internet).</li>
+<li>We show the text about giving back freebees only if you do or might have freebees remaining; see &#8220;deletables&#8221; in <a href="http://expost.padm.us/freebee">expost.padm.us/freebees</a>.</li>
+<li>Fixed moneyburning lunacy where we used to increment freebees every time you added a pledge so lots of people wouldn&#8217;t ever actually run out.</li>
+<li>Error handling for failure to save credit card info (not great error handling but it does indicate this to the user now).</li>
+<li>Answering the goal deletion dialog generates an email to us (part of <a href="http://expost.padm.us/freebee">expost.padm.us/freebee</a> which we&#8217;re now done tweeting about!).</li>
+<li>Removed the needless error checks preventing craziness like aggday=mean for autosumming goals since crazy people like Alex Schell wanted it!</li>
+<li><strong>Deadman switch now never treats you as still active if you have an autodata source reporting flatlined data. Same for <a href="http://blog.beeminder.com/autocancel">blog.beeminder.com/autocancel</a>.</strong></li>
+<li>Tiny UVI: we now always say, eg, &#8220;$5&#8221; instead of &#8220;$5.0&#8221;. We told <a href="https://twitter.com/slothbear">@slothbear</a> we&#8217;d pay him $5.0 if we didn&#8217;t fix that by tomorrow. #bugfix</li>
+<li>Fixed formatting in the Guilt Trip email (for premium people who go MIA) and made human-friendly phrasing like &#8220;Bee Lite every month&#8221;.</li>
+<li>Letting you start creating a goal before signing up confused people for no real benefit. Now you have to sign up first.</li>
+<li>Chinese users can now use Alipay instead of a credit card. (One of many UVIs thanks to <a href="https://stripe.com/checkout">Stripe Checkout</a>; cf #7.) UPDATE: Oops, we have to do something more before this is live!</li>
+<li>Quickly clicking the +/- buttons in the newbee data form triggered a double-click, highlighting the buttons. Ugly. Thanks <a href="http://truesoftwaretesting.com/">True Software Testing</a>. #bugfix</li>
+<li>The clickable tooltip thing for the Archive Goal button in settings (as opposed to main graph screen) works now. #bugfix</li>
+<li>Deadman #bugfix introduced a bug: Gmailzero needs a datapoint even if count&#8217;s unchanged; inbox size more like weight than like eg CodeSchool.</li>
+<li>When graph&#8217;s stuck generating we no longer throw up our hands like &#8220;the server is melting; email support?&#8221; &amp; instead give a &#8220;try now&#8221; button.</li>
+<li>Better / less snarky categories for goal deletion reasons: technical reasons (beeminder messed up), confusion, abusing loophole, and other. </li>
+<li>The <a href="http://blog.beeminder.com/glossary/#flatline">flatlined datapoint</a> is now shown as a rightward-pointing triangle (zoom in to see!).</li>
+<li>Also if the official, aggregated datapoint for the day does not have a corresponding actual datapoint (eg, aggday=mean) it&#8217;s shown hollow.</li>
+<li><strong>Intern Chris&#8217;s Twitter integration is live at <a href="http://beeminder.com/twitter">beeminder.com/twitter</a></strong> (and date bug that it had when we first deployed it is now fixed).</li>
+<li>Dutch is now supported in Duolingo &#8212; Hoezee! &#8212; and now you can beemind it &#8212; Hoezee^2!</li>
+<li>Incorrectly hidden modal on goal page left its ghost &#8220;on top of&#8221; the settings cog making it unclickable! Thanks <a href="http://twitter.com/aaronpk">Aaron Parecki</a> and <a href="http://twitter.com/peterhurford">Peter Hurford</a>. #bugfix</li>
+<li><strong>Time and day of derailment now shown under the countdown timer; another prereq for <a href="http://expost.padm.us/midnight">Generalized Midnight</a> (most are behind the scenes).</strong></li>
+<li>Better date picker that lets you select month and year with dropdowns so you neither have to type the date by hand nor click month by month.</li>
+<li>The datapoint that counts (like the min for weightloss goals; cf &#8220;aggday&#8221; setting) is shown bigger than the others; future ones ghostlike.</li>
+<li>Errors displayed on graphs no longer overflow on both sides; other tweaks like road starts flush w/ axes, tick marks not covered up by aura.</li>
+<li>Introduced a bug where the bull&#8217;s eye showed up underneath the YBR, visible since the road was translucent, but ugly. Fixed now. #bugfix</li>
+<li>Fixed an (embarrassing, money burning) bug where we retried charges before saving new credit card, thus trying them against old one. #bugfix</li>
+<li>We were not handling malformed dates nicely in the road dial and other places. #bugfix (also broken x-min, etc briefly; now fixed as well)</li>
+<li>In newbee data form, we now always default to previous datapoint, not zero and especially not the broken thing we used to do for odom goals.</li>
+<li><strong>Various <a href="http://beeminder.com/rescuetime">RescueTime</a> integration improvements:</strong>
+<ol>
+<li>OMG don&#8217;t wait 45 seconds before redirecting to the newly created goal. #bugfix</li>
+<li>Still do the check for if it&#8217;s a productive vs unproductive time goal even if no RescueTime data yet to extrapolate a rate from. #bugfix</li>
+<li>Show the &#8220;we&#8217;re importing your RescueTime data, this could take a minute&#8221; as soon as the user submits, not <em>after</em> the wait and redirect.</li>
+<li>Force user to pledge if no freebees left; incidentally also fixes the 404 after creating the RescueTime goal if no freebees left.</li>
+</ol></li>
+<li>We weren&#8217;t removing the &#8220;hey this goal is frozen because you haven&#8217;t added a credit card yet!&#8221; banner after you add your credit card. #bugfix</li>
+<li>Another #bugfix with email bot parsing, this time with non-ascii / non-standard whitespace from Airmail on OSX. Thanks <a href="https://twitter.com/deadsunrise">@deadsunrise</a>.</li>
+<li>Our batch of RescueTime improvements introduced a bug for people with unlimited freebees wherein goals were not saved. Thanks <a href="http://twitter.com/kathyreid">Kathy Reid</a>. #bugfix</li>
+<li>Previous bugfix for people w/ unlimited freebees briefly borked the goal creation wizard for everyone <em>w/out</em> unlimited freebees. #bugfix</li>
+<li>The purple steppy line had a glitch where it would jump to the start of the yellow brick road even if that didn&#8217;t make sense. #bugfix</li>
+<li>The y-axis now always starts at zero when there&#8217;s an initial datapoint of zero. #bugfix &amp; Bonus UVI: <strong>a &#8220;share your graph on Facebook&#8221; button</strong>.</li>
+<li>Added <a href="https://www.beeminder.com/faq#qdcl">deadbeat flag</a> to the <a href="http://beeminder.com/api">API</a> output for the user resource.</li>
+<li>If we do the &#8220;deadbeat&#8221; thing to your account because your credit card fails, we now automatically undo it when the automatic retry succeeds.</li>
+<li>If third party authentication (eg &#8220;sign in w/ Google!&#8221;) fails, give an error message when user is returned to Beeminder, instead of 404ing.</li>
+<li>When Google&#8217;s notification server flakes out (for Android push notifications) we try again in a few seconds. #bugfix (or #robustnessfix)</li>
+<li><strong><a href="https://play.google.com/store/apps/details?id=com.beeminder.beeminder">Android app version 2.3</a>!</strong> Goal search interface and fixes/improvements to notifications and other fixes (see changelog in the app for more)</li>
+<li>Countdown to derailment defaulted to midnight if graph wasn&#8217;t yet generated (or had errors) which was lies. Now just doesn&#8217;t show countdown.</li>
+<li>We now canonicalize phone numbers when you add them so we can find you again to confirm your number (SMS bot is still US-only unfortunately).</li>
+<li>#bugfix w/ editing Twitter goal settings: ignore &#8216;#&#8217; part of hashtag if user includes it; also consistency in pluralization of &#8220;hashtag&#8221;.</li>
+<li>Introduced a bug that made us fail to increment freebees when goals were deleted for technical reasons; #bugfix&#8217;d it, gave back the freebees.</li>
+<li>Recent Duolingo updates caused an error for us; #bugfix&#8217;d it but currently can&#8217;t get your points count if you change your native language.</li>
+<li>Small improvements to <a href="http://beeminder.com/duolingo">Duolingo</a> integration: default goal date is +18 months, updates for Irish &amp; Danish, better error. Thanks Jan Bogaerts.</li>
+<li>#bugfix like #43 but in the take-a-break tab; &amp; tiny Twitterminder fix: &#8220;This data autogenerated from Twitter user .&#8221;</li>
+<li>Not sure when we broke this or if, G-d forbid, always was this way but when you pick username, trailing spaces weren&#8217;t trim&#8217;d. Thanks <a href="http://colinmarc.com/">Colin Marc</a> #bugfix </li>
+<li>We updated Google oauth recently and it broke sign-in via Google on Android (now getting numeric ids instead of email address). #bugfix</li>
+<li>Better table of contents in API documentation.</li>
+<li>Slight improvement to weightloss countdown: be explicit about counting down &#8220;Time Left until [Wrong Lane] vs [Derailment]&#8221;.</li>
+<li>Tiny UVIs: Flatlined triangle datapoint always shows up on top of others, &amp; plot width adjusts better for crazy huge numbers on the y-axis.</li>
+<li>We added a way to collect basic stats on (specifically weightloss) users. Please update &#8212; For Science! (Also #bugfix: you actually can update.)</li>
+<li>Was impossible to create a <a href="http://beeminder.com/jawbone">Jawbone</a> goal if no freebees left. Kept sending you to auth jawbone in an infinite loop. Thanks <a href="http://janabeck.com/">Jana Beck</a>. #bugfix</li>
+<li>#bugfix with case-sensitive email comparison in <a href="http://gitminder.com">Gitminder</a> (GitHub canonicalizes email addresses but your local git config does not).</li>
+<li><strong>API&#8217;s &#8220;roadall&#8221; in the Goal resource lets you make <em>arbitrary changes</em> to the yellow brick road (except not easier between now and + 1 week).</strong></li>
+<li><strong>Pledge caps! Instead of just being able to turn on or off auto-increasing pledges you can pre-specify a pledge cap in goal settings.</strong></li>
+<li><strong>Legit check email now warns you if you hit your pledge cap and points you to goal settings to change it</strong> (cleaned up the copy a bit too)</li>
+<li>If you got an error changing advanced settings for Trello or Twitter goal the Trello/Twitter info on the page wd cause a 500 error #bugfix</li>
+<li>Dubious improvement except in helping w/ waitlisting by scaring more people off: <a href="http://beeminder.com/premium">Beekeeper</a> has additional $256 setup fee</li>
+<li>Tweaked webcopy in goal settings for pledge caps and made it point to the <a href="http://blog.beeminder.com/pledgecaps">new blog post about it</a> (&amp; road dial tweak)</li>
+<li><strong>You can now buy 10 freebees (goals that start with $0 pledged) for $1, which we also <a href="http://blog.beeminder.com/freebees">blogged about</a></strong></li>
+<li>The page that <a href="https://twitter.com/beemuvi/status/363174766372331520">shows you an ewok</a> if you're using an old version of Internet Explorer now points you to whatbrowser.org</li>
+<li>Fixed a bug w/ retrying failed charges too many times; fewer failed charges littering up <a href="http://beeminder.com/pledges">your pledges</a>  #bugfix</li>
+<li>Fixed Withings goal creation bug we <a href="https://twitter.com/beeminfra/status/516106310165987328">cause</a>. Now you can create Withings goals again! (yikes) HT <a href="http://twitter.com/MaybiusStrip">@MaybiusStrip</a></li>
+<li>Fixed RunKeeper goal creation bug: we'd let you submit without selecting any type of activity to track, and then we'd crash #bugfix</li>
+<li>Put the "Σ" back, showing/explaining about auto-summing. Unrelated, but too small for separate UVI: updated <a href="http://beeminder.com/money">beeminder.com/money</a> HT Geoff</li>
+<li><strong>New Discourse forum: <a href="http://forum.beeminder.com">forum.beeminder.com</a> -- Announced here: <a href="http://blog.beeminder.com/discourse">blog.beeminder.com/discourse</a></strong></li>
+<li>For user stats (on weight loss goals) we handle imperial units submitted like 5'6" or 5.5 feet. We drew the line there; no cubits, etc.</li>
+<li>User (weightloss) stats #bugfix: fixed a 500 error after submitting if you were updating on an archived goal. (But why would you do that?)</li>
+<li>One more (silly) stats #bugfix: if you use inches we were decrementing your waist/height every time you submitted the form. #bestdietever</li>
+<li>Another casualty of <a href="https://twitter.com/beeminfra/status/516106310165987328">goal wizard refactoring</a> ... Withings #bugfix w/ new goals: we were also failing to fetch new data for those goals</li>
+<li>#bugfix: remember datapoint sort order on delete (previously fixed for edits) and, when changing the sort order, remember page you were on</li>
+<li>We added a header to <a href="http://forum.beeminder.com">forum.beeminder.com</a> that links to Beeminder. (It's less obtrusive when you scroll; could still use work tho.)</li>
+<li>Better images for the contracts on our integrations pages: <a href="http://gmailzero.com">gmailzero.com</a>, <a href="http://gitminder.com">gitminder.com</a>, <a href="http://beeminder.com/duolingo">beeminder.com/duolingo</a>, etc</li>
+<li>Do-less goal creation buglets: "Commit to AT MOST" &amp; the (i) after "Set your upper limit..." was wrapping to a new line #bugfix</li>
+<li><strong><a href="http://blog.beeminder.com/habitrpg">HabitRPG integration!</a></strong></li>
+<li>HabitRPG integration #bugfix: Negative rates (like for beeminding remaining To-dos) broke the goal creation form.</li>
+<li>The API's now robust (moreso, at least) to newlines in comments of datapoints. Turns them into \n's instead of dying. Matters for Zapier...</li>
+<li><strong><a href="http://blog.beeminder.com/deadlines">New Feature and Veritable Paradigm Shift: Arbitrary Deadlines!</a></strong></li>
+<li>Missed a few hardcoded instances of the string "midnight" (our rushed launch of arbitrary deadlines promises to be a fertile UVI source!)</li>
+<li>Much <a href="https://s3.amazonaws.com/uploads.hipchat.com/27248/766489/PxLTFw55TtVuz7k/upload.png">nicer logos</a> for autodata integrations. #alice</li>
+<li>In arbitrary deadline interface, we made it more clear that deadline is akrasia-proofed &amp; your change is happening in a week, not right now</li>
+<li>Tweaks &amp; #bugfix in HabitRPG integration: default to "More To-Dos completed" &amp; don't let you select neither! (&amp; introduced&amp;fixed bug w/ tags)</li>
+<li><strong>Important <a href="https://play.google.com/store/apps/details?id=com.beeminder.beeminder">new version of the Beeminder Android app (v2.3.1r2)</a> with bugfixes for arbitrary deadlines.</strong></li>
+<li>Android app also now handles different screen sizes, including tablets, better. Nicer visuals, longer list of recent datapoints.</li>
+<li>And Android app has better/faster updating of the widgets. And did we mention the arbitrary deadlines bugfixes? There were lots of those! oy</li>
+<li>Fixed the create_all call in the API #bugfix. Remaining bugs from the aftermath of arbitrary deadlines <a href="http://forum.beeminder.com/t/arbitrary-deadlines-buglist/195">in the forum</a></li>
+<li>Fixed the checkmarks in the goal gallery showing if you've entered data that day (they were confused about what "that day" meant) #bugfix</li>
+<li><strong>Deadlines are now shown in the goal gallery &amp; on the watermarks of the graphs themselves. So much easier to keep on top of what's due when!</strong></li>
+<li>The new watermarks show deadline time if eep day, day of the week of eep day if within 7 days, or number of days till derailment otherwise.</li>
+<li>Tweak to our HabitRPG integration: we don't count Challenge To-Dos -- you may now join and leave Challenges with impunity!</li>
+<li>And HabitRPG integration #bugfix: were overwriting intermediate datapoints (not wrong but more data = better + needed for odometer feature)</li>
+<li>One more #bugfix with HabitRPG integration: goal creation was failing for people who had tasks predating a change to HabitRPG Challenges</li>
+<li>When Fitbit switched to ssl-only we updated for existing goals but not for users newly authorizing. Fixed now! #bugfix HT <a href="http://twitter.com/annafun">@annafung</a></li>
+<li>Fixed the "no data" error when creating new goals after midnight but before deadline. #bugfix (like the 8th one with arbitrary deadlines)</li>
+<li>Default deadline for new goals is now midnight. Tweaked the watermarks to make them more visible. Forum link in footer. Deadline copy tweaks.</li>
+<li>Oh and we <strong>totally dropped the akrasia-proofing so you can change deadlines willy-nilly</strong>. Not sure if improvement but last tweet was 4-in-1...</li>
+<li>Fixed autoratchet trigger condition (was maybe pretty much broken since deadlines feature for many people, due to 3am deadline...) #bugfix</li>
+<li>If you added a <a href="http://blog.beeminder.com/supporters/">Supporter</a> with a '+' in their email address, we didn't handle it right. #bugfix</li>
+<li>Fixed the last critical bug from arbitrary deadlines: dates no longer change when you edit datapoints. #bugfix (<a href="http://forum.beeminder.com/t/arbitrary-deadlines-buglist/195">forum post</a>)</li>
+<li>Just kidding, 1 more important #bugfix w/ arbitrary deadlines: zeno polling wasn't polling after midnight (then broke &amp; fixed it 2 new ways)</li>
+<li>Mini UVIs: Higher contrast text in blog section on frontpage; HabitRPG API fields wide enough so the spinny thing won't overlap the text </li>
+<li>Hadn't had gzip turned on for "application/json" which means 60% reduction in data usage for the Android &amp; iPhone apps &amp; other API consumers (EDIT: when the apps support it)</li>
+<li><strong>We just launched our official Zapier integration, which means 100s of new autodata sources you can beemind! So huge! <a href="http://blog.beeminder.com/zapier">blog.beeminder.com/zapier</a></strong></li>
+<li><strong>Version 3.1 of <a href="https://itunes.apple.com/us/app/beeminder/id551869729">our iPhone app</a>! Bug fixes with dates, added min to get to each lane of road, goal rate on gallery screen; last update up top</strong></li>
+<li>And then BeemiOS version 3.1.1 also fixes a crashing bug for iOS 7 users (sorry!) and adds layout fixes and double-tap to zoom out graph.</li>
+<li>We're gradually transitioning from <a href="http://uservoice.beeminder.com">uservoice.beeminder.com</a> to <a href="http://forum.beeminder.com/c/bugabee">forum.beeminder.com</a> (link to forum now in site header)</li>
+<li>Terrifyingly Advanced Settings now has a "Data source" field, automatically set to Zapier for Zapier-mediated autodata goals. Yay <a href="http://zapier.com">Zapier</a>!</li>
+<li>In <a href="http://gitminder.com">Gitminder</a>: we now track Creates plus Pushes towards your count (GitHub gives them different event codes, &amp; we'd been excluding Creates)</li>
+<li>Arbitrary deadlines #bugfix from a while ago: pessimistic presumptive datapoints sometimes failed to get replaced due to date confusion</li>
+<li>In the stats we collect in the sidebar for weightloss, don't bug out if errors in the graph, and don't allow 0 for waist size. #bugfix</li>
+<li>We now always send you a reminder even for goals that have errors! #bugfix</li>
+<li>Subtle but important bug with reaching goaldate and not refreshing the graph, leading to bugginess trying to restart the goal later. #bugfix</li>
+<li>Mini-UVIs: better beekeeper blurb at <a href="http://beeminder.com/premium">beeminder.com/premium</a> & fixed /start icon centering (and added <a href="http://blog.beeminder.com/sleep">Sleep as Android</a>!)</li>
+<li>If there was an error submitting credit card info we left the submit button disabled till you refreshed. #bugfix HT <a href="http://dreev.es/eli5">Faire Soule-Reeves</a></li>
+<li><strong>We finally actually have a radio button for Do More vs Do Less when creating <a href="http://blog.beeminder.com/rescuetime">Rescuetime goals</a>!</strong></li>
+<li>Bugfix in Sleep as Android integration where we might've missed the first day's data after goal creation</li>
+<li>Added a warning to Take A Break about safety buffer caps, w/ link to settings (only applies to premium users who can set safety buffer caps)</li>
+<li><strong>Beedroid 2.4! New summary widget (so handy!), Buzzing bee animation (so cute!), Better icons (so modern android!), & no less than 7 bugfixes</strong></li>
+<li><strong>For the full list of changes in version 2.4 of the Beeminder Android app: Settings → About Beeminder → ChangeLog [10 UVIs in 2 tweets!]</strong></li>
+<li>Another improvement to mention in the Beeminder Android app: replaced webview w/ imageview for graphs, meaning it's faster on slower devices</li>
+<li>And a bugfix that was driving at least one of us crazy: if you open the app via a desktop widget you can now task-switch away & back to it</li>
+<li>Gitminder bug (introduced by arbitrary deadlines) where we could skip a day if you had 2 days in a row w/ the same number of commits #bugfix</li>
+<li>Updated our google oauth2 lib but didn't migrate database, so some who used to sign in w/ google couldn't sign in to the Android app #bugfix</li>
+<li>Removed the deadline (due date) info from the goal gallery listing on goals that are finished. (They're no longer due!) #mini (ie, mini UVI)</li>
+<li>Fixed whitespace in bot reminder emails that made format instructions for replying with data needlessly confusing. HT <a href="http://twitter.com/zooko">@zooko</a> #mini</li>
+<li>"Units" placeholder in goal wizard, refresh the graph after stepping down the pledge, linkify "advanced settings" in recent data. #mini ×3</li>
+<li>We were wrongly saying "you've reached your pledge cap" in legit check emails for anyone with a pledge stepdown scheduled. #bugfix</li>
+<li>We were accidentally including withings/fitbit bodyfat goals in our weight loss science experiment. #bugfix</li>
+<li>Not sure it should count since we had to do literally nothing (HT <a href="http://stripe.com">Stripe</a>) but <strong>we auto-update most user's credit card expiration dates now</strong></li>
+<li>Anti-slopeslipping: this = last UVI we'll count ∀ ongoing improvements to Stripe checkout, Discourse forum, etc where we don't lift a finger</li>
+<li>A self-rate-limiting catch on reminders that suppressed them if the last was &lt;12h ago led to us (rarely) skipping reminders AND zeno #bugfix</li>
+<!-- a restriction on reminders that said "don't send reminder if the last reminder was less than 12 hours ago" lead to us skipping reminders AND zeno emails in some eep day cases [pretty rare condition that your last reminder would be less than 12 hours from your previous one, but then total silent failure of notifications on an eep day results] -->
+<li>Fixed <a href="https://twitter.com/PareidoliaX/status/555547027145502720">Quick Add whitespace bug</a> (HT <a href="http://twitter.com/PareidoliaX">@PareidoliaX</a>) which turned out to be idiocy in an undocumented part of our API #bugfix</li>
+<li>Rare failure of legit checks in certain cases where we bcc us humans (eg, high pledge amounts); we caught all cases so far manually. #bugfix</li>
+<!-- a legit check would fail if trying to BCC support & "highest_paid" was not yet set. [happened a total of 6 times, and corrected w/in the day for all cases] -->
+<li>Beeminder Android app v2.4.1 fixes freezing after goal creation/deletion & sync progress indicator didn't work on some devices. #bugfix ×2</li>
+<li>Mini UVIs: Link and hovertext on http://duominder.com & added "e.g." to placeholders (people would not notice it was just a placeholder)</li>
+<li>We'd send a scary email about how some new/unknown email address added data to your goal when an admin fixed your emailed data. #bugfix</li>
+<li>Twitter autodata bug: last datapoint traveled forward in time if you hadn't tweeted anything new. HT <a href="http://twitter.com/gedkins">@gdedkins</a> #bugfix</li>
+<!-- Led to going from orange => derailed instead of orange => red. -->
+<li>Reminder time & deadline time accept time of day like "2300" now, & error rather than die on bad input. Related to <a href="https://twitter.com/beemuvi/status/537117900004679680">previous UVI</a></li>
+<li>There can be only one (gmailzero goal)! If you try to create 2nd: warning, redirect to existing one (even if archived) HT <a href="http://complice.co">Malcolm Ocean</a></li>
+<li>Got rid of the crufty/confusing "reset road at X" datapoint comments in favor of "DERAILED"; tweaked the comment for PPRs too. #mini</li>
+<li>Oops, we were saying "DERAILED" for restarted goals. <strong>Now meta datapoints are one of {"PESSIMISTIC PRESUMPTION", "RECOMMITTED", "RESTARTED"}.</strong></li>
+<li><strong>You can now set pledge caps below your current pledge (which take effect when/if you actually drop your pledge to the cap) HT <a href="http://twitter.com/Jolly">@Jolly</a> #alice</strong></li>
+<li>Mini UVIs: smart submit buttons for integrations, labels clickable for pledge cap radio buttons, wording of "reached pledge cap" #mini ×3</li>
+<!-- [smart-submit a la https://twitter.com/beemuvi/status/344335764101926912] -->
+<li>Do some actual input validation on "roadall" in the API. HT <a href="http://twitter.com/chipmanaged">@chipmanaged</a> Cf <a href="https://twitter.com/beemuvi/status/513396851031441409">previous UVI</a></li>
+<li>For ppl who'd created gitminder goals before or out of freebees, we were failing to redirect to the goal page after goal creation #bugfix</li>
+<li>Also could fail to ensure you'd auth'd before creating gitminder goal #bugfix. Also <strong>always use fancy landing page layout for goal creation</strong>.</li>
+<li>2 mini UVIs: reworded confusing "extend it first before using retroratchet", added warning re start dates for scheduled breaks. HT <a href="http://twitter.com/aaronpk">@aaronpk</a></li>
+<li>Reminder email was missing link to the goal for goals manually marked as autodata; also <strong><a href="http://beeminder.com/featured">beeminder.com/featured</a> has more goals & sorts better</strong></li>
+<!-- [Featured gallery has twice as many goals shown and sorts by most recently added data instead of most recent save] -->
+<li>Ongoing heroic JS refactoring continues to break things. Do More goals created after Odometer goals had spurious initial datapoints #bugfix</li>
+<li><strong>Beeminder is very proud to be one of a handful of launch partners for the new @Epson #quantifiedself wearables: <a href="http://blog.beeminder.com/epson">blog.beeminder.com/epson</a></strong></li>
+<li>We were preemptively trying to create your Withings goal, causing a spurious "couldn't save goal" error immediately after sign-in #bugfix</li>
+<!-- ...before you'd actually filled out the form -->
+<li>3 #mini UVIs: added hovertext for Buzz on front page, improved it for integrations, added username to subject of account confirmation emails</li>
+<li>Epson: Fixed date issues that could cause missed activities, time zone issue, & aggregating multiple datapoints for a single day. #bugfix ×3</li>
+<!-- [epson dates: fixed an error with start-date in api call for steps endpoint, and to use date of last-fetched activity for the activities endpoint (runsense) -- so if you have a lag in updating your data we don't miss any activities.]
+     [epson steps/sleep: aggregate the day's data into one datapoint, a la fitbit & jawbone. (this one is questionable since you were the only one to ever encounter it, and i'd have done this from the beginning if i'd actually tested stuff in dev or read the docs more closely)]
+     [epson times: use the user's timezone when giving clarifying time-of-day that the event started, or the datapoint was added.] -->
+<li><strong>Eek! We let you change the road dial on frozen goals, which usually led to insta-derail. Now: force you to use the restart button! #bugfix</strong></li>
+<li>Fixed a passel of glitches with Sleep as Android auth (via Google), confusion with previously issued keys and expiring tokens. #bugfix</li>
+<!-- [three things with google auth: tell rails to remember the user before signing them in, update token info on login if it differs from current info (old-style Google auth?), programmatically revoke tokens when removing an authorization] -->
+<li><strong>Added API documentation for rah, delta, callback_url, description, graphsum, lanewidth, deadline, plotall, etc. HT <a href="http://twitter.com/instigate_it">@instigate_it</a></strong></li>
+<li>Two things in landing pages: consistently hide goal form when showing pledge info, and opaque overlay when showing infinibee. #bugfix ×2</li>
+<li>Mini UVIs: typo fixes in hovertext in settings, fix checkmark symbol in api docs, pruned testimonials, copyright year thing. #mini ×4</li>
+<!-- [stop saying the copyright year since that keeps getting out of date] -->
+<li>We weren't alerting you if there were problems with your credit card on premium renewal; now we email an alert, and only retry a few times</li>
+<li><strong>Much prettier auth page with simple green vs red buttons to confirm/reject. (When you authorize a 3rd-party app; cf <a href="http://beeminder.com/apps">beeminder.com/apps</a>)</strong></li>
+<li><strong>If you weaselproof yourself you can no longer edit data or add it via the email bot for autodata goals. #closingloopholes HT <a href="http://twitter.com/joeymac1981">@joeymac1981</a></strong></li>
+<li><strong>In graph hovertext, bot emails, etc, safety buffer now refers to approximate number of days till derailment, not confusingly that minus one</strong></li>
+<li>Consistent grammar/orthography ("beeswax", "e.g., foo" not "e.g. foo", "~N days until" in retroratchet), iOS favicon. HT Nick Head #mini ×4</li>
+
+<li>Important #bugfix in API's roadall (1 of 3): We were ignoring rate units (runits) for roadall and treating it as if it was always days</li>
+<li>Roadall #bugfix (2 of 3): Discontinuities in the road weren't handled right, led to rejection of road changes that should've been allowed</li>
+<li>Roadall #bugfix (3 of 3): Floating point comparison bug: rejected resubmission of unchanged road matrices! HT <a href="http://twitter.com/instigate_it">@instigate_it</a> <a href="http://twitter.com/chipmanaged">@chipmanaged</a></li>
+<li>Moved list of 3rd party apps you've authorized to access your beeswax (Beeminder data) into user settings so it's actually discoverable now</li>
+<li>Also linked <a href="http://beeminder.com/apps">beeminder.com/apps</a> and <a href="http://beeminder.com/apps/new">beeminder.com/apps/new</a> and <a href="http://beeminder.com/settings/apps">beeminder.com/settings/apps</a> to each other. HT <a href="http://twitter.com/Malcolm_Ocean">@Malcolm_Ocean</a></li>
+<li>Finally there's a button to regenerate your personal auth token in the advanced account settings page (where we show it to you)</li>
+<li><strong>A new aggday type: triangle. Described in a <a href="http://forum.beeminder.com/t/triangular-beeminding-for-tracking-alcohol-consumption/543">forum thread</a>. Huge HT <a href="http://twitter.com/DRMacIver">@DRMacIver</a>.</strong></li>
+<li>From Jan 30 to Feb 26 HabitRPG goal creation gave cryptic errors in place of graph image at first (tho goal got created) #bugfix</li>
+<li>Explanatory text and visual improvements in <a href="http://beeminder.com/apps">beeminder.com/apps</a>. HT <a href="http://twitter.com/instigate_it">@instigate_it</a> who's been a huge help with API hacking lately.</li>
+<li>Added hint "(Did you mix up auth_token and access_token?)" to an API error message and added two more aggday functions: square and clocky</li>
+<li>To catch infinite loops w/ our new (beta only still) IFTTT triggers (or other autodata schemes) there's now a cap of 144 datapoints per day</li>
+<li>Important #bugfix in drawing the graph after a derailment where it could fail to <a href="http://blog.beeminder.com/glossary/#flatline">flatline</a> past the derail day</li>
+<li><strong>Now over-achievers can have every day be an eep day too! (on Do More goals, set 'Max Safety' to 0 just like manual ratchets) #planbeeperqs</strong></li>
+<li>Datapoints + centerline of YBR now show on top of bull's eye. #mini (And so many improvements to Garmin & IFTTT; contact us to beta-test!)</li>
+<li><strong>Subject lines of legit check emails are now like "paying $X, now pledging $Y on bob/foo: beeminder legitimacy check" (key info up front)</strong></li>
+<li>Fixed the Epson "this data is autogenerated" link: now specifies whether you created goal with Pulsense vs Runsense #mini</li>
+<li>Discovered we were silently failing on Fitbit oauth errors: now puts up a banner letting you know what's up. #bugfix</li>
+<li>Made the API's create_all call (for adding datapoints) a bit more robust/accepting, as <a href="http://forum.beeminder.com/t/http-500-for-create-all-json/558/2">Bee explains</a></li>
+<li>Added Epson to bmndr.com/start (had it on front page but forgot it here) & auto-update the verb in the form, eg "i pledge to sleep" vs "to train"</li>
+<li>Tweaked legit check copy ("Any other technicalities or even just confusion about the rules?" and PS about pledge stepdown) #mini</li>
+<!-- "P.S. Pro tip: drop your pledge back down with the arrows above your graph." -->
+
+<li><strong>Beeminder launches official Garmin integration! <a href="http://blog.beeminder.com/garmin">blog.beeminder.com/garmin</a></strong></li>
+<li>Fixed bugs w/ watermarks on graph thumbnails, and maybe now they're bigger and so more readable from the thumbnails (<a href="http://forum.beeminder.com/t/thumbnail-shows-what-looks-like-the-wrong-time/572">forum post</a>)</li>
+<li>Mini UVIs: Another aggday function: count; copy tweak for reminder settings; new robots.txt (not that human users should care) #mini ×3</li>
+<li>Use user's timezone in comment 'Auto-entered by Garmin at TIME' & fixed link by recent data "this data is autogenerated by ..." #mini ×2</li>
+<li>Updated a banner from "email settings updated" to just "reminder settings updated" cuz you can update sms reminders there too #mini</li>
+<li>Had a bug with sometimes missing data from Garmin's pushed data. Now periodically check for missed data #bugfix HT <a href="http://janabeck.com/">Jana Beck</a></li>
+<li>Bugfix in the SMS bot: in multi-line SMS, if there's a blank line in the middle we'd 500. Now politely skip them instead. #bugfix</li>
+<li>Our timezone info was out of date (eg, Moscow stopped summertime sometime recentlyish); updated the tzinfo gem for latest timezones. #mini</li>
+<li>Brief bug w/ the email template for "your credit card failed" emails when we retried a charge that caused us to not send the emails #bugfix [for ~1 week]</li>
+<li>Our Jawbone goal wizard said "pounds" when in fact weight data from Jawbone seems to be only KGs #bugfix <a href="http://forum.beeminder.com/t/jawbone-weight-goal-is-confused-about-units/576">forum</a></li>
+<li>Half (or more) of scroll-to-locations in autodata landing pages weren't scroll-to-ing (draftin, codeschool, trello). #bugfix</li>
+<li>Broke and then fixed the confirmation emails for new users signing up. #mini #bugfix (a net-zero UVI but it counts! (related to Science!))</li>
+<li>New advanced setting to hide y-axis numbers, like if you want to share your weight loss progress but not your weight <a href="http://beeminder.uservoice.com/forums/3011-general/suggestions/2286463-have-an-option-for-sharing-graphs-without-the-numb">forum</a></li>
+<li><a href="http://beeminder.com/featured">beeminder.com/featured</a> was breaking if someone with no datapoints added themselves #bugfix #mini</li>
+<li><a href="http://gitminder.com">Gitminder.com</a> form was not redirecting back to the landing page after authenticating #bugfix</li>
+    <!-- [TODO: general fix for "redirects omg"] -->
+<li>Email bot reminders for goals w/ data fed from our Epson integration now are specific to the kind of goal (running/steps/sleep) #mini</li>
+<li>Added Garmin to the front page and added links to the <a href="http://beeminder.com/garmin">beeminder.com/garmin</a> landing page. #mini</li>
+<li>We were showing the "you really should add a credit card" banner thing when not logged in. HT <a href="http://twitter.com/DRMacIver">@DRMacIver</a> and <a href="http://twitter.com/chipmanaged">@chipmanaged</a> #mini #bugfix</li>
+<li>There was an error in Epson sleep goals causing us to double-count time (in Epson's API, end dates are inclusive) #bugfix</li>
+<li>Beebrain #mini #bugfix: tmin defaults to min(tini,asof), in case you want your YBR to start in the future for some reason. HT <a href="http://twitter.com/chipmanaged">@chipmanaged</a></li>
+<li>The API now supports upsert. Set upsert=true (and include a requestid) for create datapoint, and it creates or updates. HT <a href="http://complice.co">Malcolm Ocean</a></li>
+<li>Now upsert works without needing an "upsert" parameter. Way better. POST a datapoint w/ requestid, it returns CREATED, UPDATED, or DUPLICATE</li>
+<li>Gmailzero goals no longer do the hideous hack of adding a dummy datapoint for yesterday to make the start of the road stay put</li>
+<li>More prettying/concising of the "allow this app to access your beeswax" page [<a href="https://twitter.com/beemuvi/status/567469096522883072">previous UVI</a>] and blog post authors back on front page</li>
+<li>API #bugfix: when using "me" param in place of username, and getting a 404, we'd give a weird error ("you're logged in as...") HT <a href="http://twitter.com/DRMacIver">@DRMacIver</a></li>
+<li>When a goal that's counting down to being archived derails, we were incorrectly saying "paying/repledging" in the legit check. #bugfix</li>
+<li><strong>iOS app 3.2! You can add a Beeminder widget to the Today view; shows up to 3 goals in urgency order, plus bare min needed if beemergency</strong></li>
+<li><strong>Also in Beeminder iOS app 3.2: Robuster push notifications (robust to device token expiration or connection flakeout) + other bug fixes</strong></li>
+<li>Documented upsert in <a href="http://beeminder.com/api">beeminder.com/api</a> and made a best-of collection of Beeminder blog posts: <a href="http://blog.beeminder.com/tag/best-of">blog.beeminder.com/tag/best-of</a></li>
+<li>Blurb below Allow/Cancel buttons: "We call this 'accessing your beeswax'. You can revoke access any time in Settings → Apps [link/tooltip]."</li>
+<li>Now allow new GmailZero goal if old is archived. Fixed unique slug error. Missing error messages on GmailZero landing page. HT <a href="http://twitter.com/carlcoryell">@carlcoryell</a></li>
+<li>Rare bug w/ autoratchet=0 & goal end date: we ratcheted w/out checking end date, yielding enddate++ every day. #bugfix HT <a href="http://twitter.com/chipmanaged">@chipmanaged</a></li>
+<li>Related #bugfix: rare infinite loop trying to recommit you when ending a goal in the red (added explicit check for "goal recommitable?")</li>
+    <!-- [Does not happen every time, so I'm not sure exactly why this sometimes happened, but I just added the explicit date check to the "is this goal recommitable?" condition] -->
+<li>API #bugfix: requestids should only be checked for uniqueness within the goal, not all the user's goals. HT <a href="http://complice.co">Malcolm Ocean</a></li>
+<li>Mini UVIs: typo fix in API docs (reqeustid) + upsert works for create_all now as well. #mini ×2 HT <a href="http://complice.co">Malcolm Ocean</a></li>
+<li>Timestamp for datapoint POST now defaults to Now, OR whatever the existing timestamp is, if it's being updated. HT <a href="http://complice.co">Malcolm Ocean</a> yet again</li>
+<li>Transition to OAuth2 for GmailZero! (Alert in bot emails to re-auth, new goals now use oauth2 (not sketchy "this is unsupported" oauth1))</li>
+<li>Large inboxes work, no more "you have more than 1000 messages"; you can query "in:inbox AND is:read" in Gmail to see what Beeminder'll count</li>
+<li>Show the actual email address that you're authed with again at <a href="http://gmailzero.com">GmailZero.com</a> #bugfix related to the GmailZero OAuth1&rarr;2 transition</li>
+<li>GmailZero OAuth1 is now dead! Added error banner if no OAuth2; include "reauthorize us" alert in GmailZero zenos (in addition to reminders)</li>
+<li>The "Are you sure you want to remove this service option?" in beeminder.com/services didn't let you actually cancel! #bugfix HT Sean Fellows</li>
+<li>Fixed dates in datapoint export: off-by-1 in some instances because we weren't using new daystamp from Arbitrary Deadlines refactor #bugfix</li>
+<li>One more GmailZero OAuth #bugfix: handful of people got a 500 error trying to reauthorize (stuff with expiring/revoking/refreshing tokens)</li>
+<li>Dumb #mini #bugfix: typo in link to fix your auth if we got permission errors trying to fetch your Sleep as Android data (was 404ing)</li>
+<li>Garmin (& IFTTT) autodata pushes were failing if their JSON had non-ascii characters. #bugfix Also an infrahancement [<a href="https://twitter.com/beeminfra/status/586575255377874944">infra</a>]</li>
+<li>More GmailZero #bugfix's: failed to add a datapoint if 0 messages, failed to handle pagination & count more than 100 threads</li>
+    <!-- [then there was yet another UVI we're not counting where we made it actually count up all the threads instead of using gmail's estimate] -->
+<li>Now simpler to beemind multiple languages on Duolingo: we retry and wait 3 days before giving up if no points found for your language</li>
+<li>Copyediting pass through the API docs: mention idempotency, better/clearer links, tighter prose, cuteness, etc. <a href="http://beeminder.com/api">beeminder.com/api</a></li>
+<li>GmailZero counts the min of the day but we now show, in the comment of the last datapoint, the actual last count fetched. Demystifying!</li>
+<li><strong>A GmailZero improvement so momentous we blogged about it: beemind arbitrary queries! <a href="http://blog.beeminder.com/gmailzeroer">blog.beeminder.com/gmailzeroer</a></strong></li>
+<li>If there's an error w/ a client application's "post deauthorize callback", email the actual app owner so they can do something about it.</li>
+<li>Seeming bug in Gmail's API returning spurious empty messages that we're working around now by disregarding. So less overcounting. #bugfix</li>
+<li>On the outstanding charges page, when you update your credit card, don't keep saying "...when you update your credit card..." HT Robin Ryder (<a href="http://twitter.com/Pruneau">@Pruneau</a>)</li>
+    <!-- Robin Ryder (@Pruneau) suggested: "Thank you for updating your card. The following charges are outstanding and will now be retried." -->
+<li><strong>FEATURE: Added "Total Calories Eaten" to the things you can beemind with Fitbit</strong></li>
+<li>BUGFIX: Safety buffer off-by-one in bot reminder copy that says "in the red!" vs "in the wrong lane!" [and prefixes over hashtags? yay/nay?]</li>
+<li>OLDIE: Zapier button + regular refresh button for Zapier goals to run your Zap manually when working down to the wire (also better tooltip)</li>
+<li><strong>FEATURE: You can now create multiple GmailZero goals (for the same Gmail account). Just name each goal you create at <a href="http://gmailzero.com">GmailZero.com</a></strong></li>
+<li><strong>Announcement! Beeminder is an official IFTTT Channel! So many things to automatically beemind... <a href="http://blog.beeminder.com/ifttt">blog.beeminder.com/ifttt</a></strong></li>
+<li>Fancy landing page for our IFTTT Channel at <a href="http://ifthisMINDthat.com">ifthisMINDthat.com</a> (and did we mention we published 57 Recipes that use Beeminder?)</li>
+<li>So many other IFTTT-related UVIs we haven't been able to tweet til now: specifying IFTTT as autodata source, button for manual refresh, etc</li>
+<li>IF you delete/archive a goal that an IFTTT recipe is trying to send data to THEN we send a nice email explaining why the recipe's failing</li>
+<li>Rearranged autodata integration icons on the front page, added IFTTT (still catching breath from the launch, which was like 57 UVIs in 1!) #mini</li>
+<li>In Trello integration, use latest datapoint, not a 0 when we can't reach Trello's API, otherwise you get unwanted odometer reset. #bugfix</li>
+<li>Fixed 500 error in API when no goal provided. #bugfix (first verify parameters, *then* find the goal!) See <a href="https://twitter.com/beeminfra/status/598998892735135744">previous infrahancement</a></li>
+<li>FEATURE: Under the thumbnails in the gallery we now show how much is due, not just when</li>
+<li>Relatedly, the Quick Add box now actually causes the amounts under the thumbnail to update immediately. (<a href="http://forum.beeminder.com/t/quick-add-doesnt-update-the-text-part/735">forum discussion</a>) #bugfix</li>
+<li>Fixed the blurb under the thumbnails for Do Less goals so they don't give a deadline (which was confusing anyway) and just say today's limit</li>
+<li>Do Less roads had wrong initial width implying you cd go hog wild on day 1 only to say "jk ur in the red" on day 2 #bugfix HT <a href="http://twitter.com/noackstefan">@noackstefan</a></li>
+<!-- [Use tini/vini for do less goals' initial safety buffer. Old way caused the road width to be 2x "true" width for the first day, so your Hard Limit numbers were kind of a lie. we'd been using a road row to jump the road because it was implemented before tini vini.] -->
+<li>Safe days IFTTT Trigger had a bug that made it trigger twice if deadline after midnight and still in the red down to the wire. #bugfix HT <a href="http://twitter.com/rhitsqueaky">@rhitsqueaky</a></li>
+<li><strong>Macros you can use in IFTTT recipes to turn not-strictly-numeric Ingredients to beemindable numbers (<a href="http://forum.beeminder.com/t/ifttt-macros/804">forum discussion</a>) (eg time-of-day)</strong></li>
+<li>Mini UVI: Now truncate instead of wrap long usernames in <a href="http://beeminder.com/services">beeminder.com/services</a> (keeps them all nice and neat and uniform size)</li>
+<li>We added swimming as an activity to beemind in our RunKeeper integration. HT Emilie Lostis</li>
+<li>We did this a long time ago (<a href="https://twitter.com/beemuvi/status/390955734386483201">buzzing infinibee UVI</a>) then partially broke it. Should now consistently time out. #bugfix</li>
+<!-- [sadness because there's still periods of extreme slowness for this to happen in the first place. there's probably a way to word this that sounds more positive.]  -->
+<li>Now always email you if an IFTTT Recipe's trying to find a missing goal; were only doing so for Add Datapoint Action, not Triggers #bugfix</li>
+<li>We missed cases of notifying you on missing goals, namely @IFTTT Recipe triggering on beemergency or safe days on a specific goal #bugfix</li>
+<!-- [orig:     handled missing goal for add datapoint Action
+      prev UVI: handled missing goal for add datapoint Trigger
+      new UVI:  handle missing goal for beemergency safebuf Trigger] -->
+<li>Our IFTTT macros can now be nested! (<a href="http://forum.beeminder.com/t/ifttt-macros/804/19">forum discussion</a>)</li>
+<li>Mini UVIs: don't try to pluralize the goal units in the default y-axis string, fixed broken link in <a href="http://beeminder.com/legalschmegal">beeminder.com/legalschmegal</a> #mini ×2</li>
+<li>Similar to the gallery blurbs for Do Less goals, non-autosumming (and w/o odom reset feature) goals now show the absolute bare min, not delta</li>
+<!-- https://www.dropbox.com/s/ttg756ot309ekev/Screenshot%202015-05-21%2010.21.20.png?dl=0 HT sean fellows (drtall) gusthecorgi.com -->
+<li><strong>Official Misfit integration! Our blog post here: <a href="http://blog.beeminder.com/misfit">blog.beeminder.com/misfit</a> -- and look at us in their partner gallery: <a href="https://build.misfit.com/partners">build.misfit.com/partners</a></strong></li>
+<li><strong>Misfit integration features: beemind amount of sleep or steps. Option to import last month's worth of data when you create the goal.</strong></li>
+<li><strong>Finally, we use Misfit's push API so Beeminder updates your graph (roughly) as soon you sync your Shine/Flash</strong></li>
+<!-- [when/why do you have to refresh on Beeminder? -- you shouldn't in theory. though i don't know *how* quickly they push data out. There might be a delay? like IFTTT "automatically" syncs, but you still have to wait 15 minutes] -->
+<li>Have lots of goals/datapoints? Should see up to 50% faster syncs in the Android app (was partly responsible for server issues last week too)</li>
+<!-- [api users controller is still one of the slowest transactions, but now the slow calls are ~600ms as opposed to ~3000ms] -->
+<li>Goals w/ deadline after midnight would wind up w/ datapoints off-by-one-day if you re-scaled them (bottom of advanced settings) #bugfix</li>
+<li>The API's roadall was giving a 0 timestamp in the final row instead of null when value and rate (but not goaldate) were specified. #bugfix</li>
+<li>Now the hard cap / bare min numbers show *both* deltas and absolutes; this is kind of terrible but better than previous mess we made</li>
+<li>Small improvement to iOS EEP alerts: "+X due by DEADLINE" (was "by end of day" but that's changeable)</li>
+<!-- [these are scheduled based on "Sort Threshold" (see Terrifyingly Advanced settings) but we're deprecating that] -->
+<li>Added a helpful table of upcoming week's worth of Bare Mins (or Hard Caps) to the sidebar of your goal!</li>
+<li>When you choose "hide y-axis" (for people who want to show off their graph but not the numbers) we now suppress the bare min etc numbers too</li>
+<li><strong>Got rid of most of the confusing baremin/hardcap numbers above graph, since we have the Helpful Table; now just 2 confusing numbers up there</strong></li>
+<li><strong>Official Skritter integration! <a href="http://blog.beeminder.com/skritter">blog.beeminder.com/skritter</a></strong></li>
+<li>Made hard cap / bare min numbers and the table in the sidebar update live when you add new data</li>
+<li>Fixed a confusing bug with the baremin/hardcap table that could cause the values to be nonmonotone if there were upcoming kinks in the road</li>
+<li>New stats in sidebar: both daily and weekly rate (as of today, as opposed to road dial which gives it as of akrasia horizon) plus average rate</li>
+<li>We forgot to respect the user's deadline in the Due By table. Now the listed days are defined to end at whatever your deadline is. #bugfix</li>
+<!-- [case for "yesterday" in helpful table: this happens if table is out of date, e.g. just after the day rolls over and before the goal is refreshed.] -->
+<li>Added nice tooltips explaining the new traffic light fanciness (in short: how much you need to do to get one more day of safety buffer)</li>
+<li>Medley of other UVIs with traffic light and table: better heading, say "hard cap" when apropos, deltas on mouseover, other bugfixes, tweaks</li>
+<!-- [don't error if no color (e.g. goal error or new goal)]
+     [chipmanaged asked for the deltas in the title text in case you've already reached the delta.]
+     [fixes next_color 500 error] -->
+<li>Last one for now: We color-coded the amounts-due-by (or hard-cap-by) table. Now the new UI should unambiguously dominate the old one!</li>
+<li>Fixed bug in previous "confusing" bugfix that monotonized the table values the wrong way so all upcoming Due Less hard caps were identical</li>
+<li>New API parameter safebump tells you what value you need to reach to get one more day of safety buffer, in the case of Do More goals</li>
+    <!-- [for Do Less and weight loss goals safebump is not really meaningful] -->
+<li>Tooltips on Bare Min / Hard Cap section and in the Due By table show up on click and on hover; tooltip explains Due By table</li>
+<li>Bugfix with Due By table and stats: now they always update on new data (before there were some cases where you had to reload the page)</li>
+<li>Copy tweak on graph errors (don't ask you to email support, we automatically do that and come to the rescue) + dumb bugfix w/ Do Less hardcaps</li>
+    <!-- [lame because it was a stupid bug and totally my fault, but fixed a bug in do less hardcap section where it was displaying like a stop sign & missing the targets] -->
+<li>Broke Duolingo integration last night working on custom deadlines! Fixed it this morn (and fixed spurious derails; thx for the forbearance!)</li>
+<li>Don't include secret goals (which show up only as masked bee, because secret) in <a href="http://beeminder.com/featured">beeminder.com/featured</a> and warn if you try to set secr. and feat.</li>
+    <!-- [http://forum.beeminder.com/t/secret-featured/886] -->
+<li>Our Skritter form -- <a href="http://beeminder.com/skritter">beeminder.com/skritter</a> -- is now consistent that the metric is *time* studied, not points. #mini</li>
+<li>#bugfix in our IFTTT error emails. Now provides hint as to what went wrong if a recipe sends Beeminder bad data. HT @robby1066 of @rescuetime</li>
+<li>Helpful onboarding widget for newbees! (So you veterans won't see it and only half of newbees will, because bucket-testing) HT @useronboard</li>
+<li>Fixed contrast of tabs/navpills on the sign-up/in modal (when prompted to sign up/in from landing pages). Now you can see there're two tabs.</li>
+<li>Fixed Duolingo redirect (was sending you from Duolingo signup to yr goals after sign-in/up). Also nicely jumps down to the "Ready?" anchor.</li>
+<li>Placeholders use "e.g.," everywhere, or in some cases are just sufficiently bossy as to not be confused with actual data</li>
+<li>No longer allow 'remind' as a goal slug. That's a special route for reminder settings so things broke if you tried to use that name. #bugfix</li>
+<li>Minor #bugfix w/ default y-axis label: lost units when we fixed <a href="https://twitter.com/beemuvi/status/603686534982819843">this pluralization thing</a>. HT @instigate_it</li>
+<li>Can now opt out of weight loss mannequin study. Some people don't like them because of flashing, or because they say they're creepy.</li>
+<li>Our Skritter integration now checks previous 4 days of data so we don't miss any time due to lag betw end of day and all time reflected API</li>
+<li><strong>Beeminder iPhone app 4.0! (We may've accidentally made it require iOS 8.3 instead of the intended 8.0) Faster, robuster syncing and submitting</strong></li>
+<li>Beeminder iPhone app now shows the amount needed to get an extra day of safety buffer if you're already in the green</li>
+<li>Beeminder iPhone app has multi-column landscape view on iPhone 6 and iPad, and lets you sign in w/ your Google account</li>
+<li>Beeminder iPhone app (4.0) now updates the goal in the gallery immediately after updating the graph</li>
+<li>Beeminder iPhone app has redesigned data entry fields to help ensure correct formatting and are generally easier to use</li>
+<li>Beeminder iPhone app now correctly handles renamed goal slugs; and handles entering data on keyboards w/ radix "," instead of "." #bugfix ×2</li>
+<li>We weren't allowing for more than 1 sleep on a given day in our Misfit integration; now we make them unique by start-time, not date #bugfix</li>
+<li>Imported data on new RescueTime goals now viewable if you adjust x-min to be before the import date (previously was imported but invisible)</li>
+<li>Added a link to IFTTT integration on <a href="http://beeminder.com/start">beeminder.com/start</a> and made the links to integrations not open in new tabs (no target=blank)</li>
+<li>Our RescueTime integration was giving the safety buffer option, but ignoring your pick in the case of do-less goals #bugfix</li>
+<li>Rare bug in odometer goals was triggered when day before derail had multiple datapoints; were picking wrong value for resetting road #bugfix</li>
+<li>New ratelimit-specific error email for IFTTT goals adding too much data. Were sending a generic "bad datapoint" email, which was confusing.</li>
+    <!-- [Ratelimit is to protect against infinite loops since we have both IFTTT triggers & actions around adding data] -->
+<li>Beeminder iPhone app v4.1 fixes, we believe, the disappearing goals bug but may have to delete and reinstall (another bugfix version coming!)</li>
+<li>We were double-counting certain closed issues in Gitminder #bugfix (ie, issues closed betw midnight and autodata fetch shortly after midnight)</li>
+    <!-- [we were counting up all the issues closed since midnight, but if the maint check doesn't run until 00:30 and there are additional issues closed btwn 00:00 and 00:30 when maintenance runs, then we'd count them for yesterday, and again tomorrow when we count up issues] -->
+<li>If there was an auth error with your GmailZero token, we were only adding a 0 datapoint, not telling you it's broken. #bugfix</li>
+<li>Rare bug w/ blank pledge caps (involved a double-save on goal setup) caused us not to send legit check #mini #bugfix and emailed ppl affected</li>
+    <!-- [all the goals we found were gmailzero goals, but this was not all gmailzero goals.. ~6 of them. looks like something in setup is sometimes causing a double save on create, which had the side effect of clobbering the pledge cap ... fixed it with redundancy in setting the pledge cap, since there should never not be a pledge cap we now set it before_save any time it is blank, instead of once, after create...][also, of the 6 goals w/no pledgecap, only one known instance of the bug because mostly people don't derail] -->
+<li>New stat in the Stats box in sidebar of goal page: "90% Variance" which is actually a 90% quantile on... well, see <a href="http://beeminder.com/faq#qvar">beeminder.com/faq#qvar</a></li>
+<li>Night Owls, you can now customize deadlines for Duolingo goals. Thanks @wycats for keeping on us this whole time! (We clearly need that.)</li>
+<li>Oops, inverted which deadlines can be set, which can't #bugfix + We're now consistent in referring to "derailing" rather than "losing" #mini</li>
+<li>Got rid of sadreset in Jawbone, meaning that when you create a new goal and we import your data, you can actually adjust xmin and view it.</li>
+<li>2 RescueTime UVIs today: we had a bug where we didn't let you correct the key if there was a problem. Now we show an error message. #bugfix</li>
+<li><strong>Second RescueTime improvement: Sub-category minding! Some middle ground btwn minding a specific app and, eg, the entire "Business" category.</strong></li>
+<li>Our Jawbone goal creation wasn't giving you the option for an initial week of safety buffer. #bugfix</li>
+    <!-- [We were probably trying to be too clever? now just give the option.]-- >
+<li>In "sign up/in" dialog for some of the autodata integrations, the header was giving text specific to Sleep as Android integration. #bugfix</li>
+    <!-- [e.g. in misfit landing page the header text on the sign up/in modal said "Sign in using google to get started with your sleep as android goal.] -->
+<li>Long overdue cleanup of our <a href="http://beeminder.com/aboutus">beeminder.com/aboutus</a> page; mainly adding Support Czar, Chelsea Miller.</li>
+<li>The email bot now gives proper threaded replies when you email data to it! (Churning through prereqs for our big reminders revamp...)</li>
+<li>Dropped the option in reminder settings for getting a reply, figuring now that it's a proper threaded reply who wouldn't want it. Simplify!</li>
+<li>If a charge was created via the API w/ no note describing it then the alert email wouldn't get sent to the user. #bugfix</li>
+<li>When forcing you to pledge (cuz no freebees) on a new Fitbit goal we were failing to redirect to your goal page after creating it. #bugfix</li>
+<li>A bug in some "proper replies" was causing mailgun to retry messages it thought had failed, causing us to add duplicate datapoints. #bugfix</li>
+    <!-- [i was lazily throwing the entire message content into the db, which failed to serialize msgs w/ attachments. now we store just the relevant reply params] -->
+<li>Our TagTime integration now understands Beeminder deadlines! (Our TagTime integration is, however, still kludgetastic, involving perl+xterms)</li>
+<li>Now give an error instead of letting you shoot yourself in the foot w/ a custom goal that has both odometer and auto-summing set true. #mini</li>
+<li>Added the goal attribute "fullroad" to the API (Plus documentation fixes like list of "skinny" attributes) <a href="http://beeminder.com/api">beeminder.com/api</a></li>
+<li>Workaround ("try refreshing page") for retroratchet not noticing new data added; base "90% variance" only on data since YBR start. #mini ×2</li>
+<li>We now retry GmailZero, RunKeeper autodata fetches if they time out; Prepended [initday,initval,0] row to "fullroad" (API) HT @instigate_it</li>
+    <!-- [For gmailzero and runkeeper goals we now retry the data fetch in a few minutes if we get a Timeout error from the external service.] -->
+<li>We put user-initiated autodata fetches on a higher priority queue, and less infinibee buzzing for background autodata fetches</li>
+    <!-- [For autodata goals we were doing the fetch-new-data part of user-initiated refreshes on a lower priority queue. Now refresh and fetch on highest prio queue.] -->
+<li>Now for Fitbit and Withings you can use x-min to adjust the plot range and see imported data (new goals only; fixing existing ones soon)</li>
+    <!-- [previously tweeted for rescuetime and jawbone] -->
+<li>Added "yaxis" and "nomercy" to the API. Also fixed asterisks accidentally getting interpreted as markdown on <a href="http://beeminder.com/api">beeminder.com/api</a></li>
+<li>No longer requiring the datapoint value when doing an update to the datapoint via the API (ie, you can let it default to its existing value)</li>
+<li>New warning when scheduling a break: "You have Pessimistic Presumptive Reports turned on for this Do Less goal. Careful they don't..."</li>
+    <!-- ["...derail you while you're gone!"] -->
+<li>Configurable Retroratchet is now free! (Existing Bee Lite subscribers, we'll email you tomorrow about this and another change to Bee Lite.)</li>
+<li>Oldie: IFTTT error emails were missing the name of the goal in error (not applicable to 'any goal' type triggers) #mini #bugfix</li>
+<li>The goal progress box in the sidebar is now collapsible, with the Archive button above it instead of inside it. #mini HT Justin Kwok</li>
+<li>Fixed the bug in the API that made the Goal's "datapoints" parameter expect the string "true" instead of the JSON boolean true. #bugfix</li>
+<li>Our Garmin integration was failing on manual activities w/ no distance specified (for goals tracking distance) #bugfix</li>
+<li>If you signed up for Beeminder and didn't fill out a required field or gave a bad email address, etc, we'd barf a 500 error at you. #bugfix</li>
+    <!-- [since changing something with Mixpanel] -->
+<li>Our IFTTT datapoint-added trigger sometimes triggered multiple times for same datapoint. #bugfix w/ updating flag for when we last checked</li>
+    <!-- [confusion about what exactly the bug was, because seemed like it should have been universal problem, but wasn't] -->
+<li>"Multisport" activities from Garmin were causing duplicate distances to be logged so now we ignore those. HT @notspelledright #bugfix</li>
+    <!-- [they send an event with type "MULTI_SPORT" that is the sum total of all the multiple events recorded as part of the multi-sport triathlon training extravaganza. since they also send along each of the different multiple sports as their own stand-alone entries, the multi-sport one should just be ignored] -->
+<li>We messed up grandfathering certain SMS users such that they couldn't update their user info at all (eg, changing a password) #bugfix</li>
+    <!-- [only for the subset of ppl who didn't have any active goals with sms reminders on, i think, so maybe pretty inconsequential] -->
+<li>Too many people not understanding the week delay in archiving goals so we made the pop-up pop up when you first press Archive, to explain</li>
+    <!-- [we'd previously only had this come up when you clicked Cancel on a pending archive] -->
+<li>If you forget to hit submit on the quick-add form (right side of goal gallery) it now actually warns you. #bugfix Cf <a href="https://twitter.com/beemuvi/status/476413103765073920">previous UVI</a></li>
+<li>Oops, just selecting goal in quick-add box shouldn't trigger the "are you sure you want to navigate away w/out submitting" warning #bugfix</li>
+<li>Another #bugfix: if you tried to submit bad data in quick-add and *then* tried to navigate away, the warning would fail to happen</li>
+<li>We no longer give a 500 error when you specify roadall in the API on a goal currently in an error state (Beebrain). #bugfix HT @chipmanaged</li>
+<li>And on the website, goals in an error state (eg no data) gave an embarrassed bee error (500) if you tried to dial/restart them #mini #bugfix</li>
+<li>Clarified error message and outlined the errored field in red in reset form when you don't give the reset value for the graph #bugfix</li>
+    <!-- [occasional error for custom or weight loss restarts from success state. seemed to be unclear, however, given the rate that the error was occurring] -->
+<li>Were accidentally requesting non-https version of useronboard widget which caused warnings, plus conditionally include it cuz faster #bugfix</li>
+<li>Beeminder now uses Habitica's new name and logo! (Previously HabitRPG) Special thanks to @lady_alys</li>
+<li>API now gives permissions error if you try to change the slug (premium only) instead of silent failure #bugfix HT Chris of <a href="http://blog.openendings.net/">blog.openendings.net</a></li>
+<li>Changed the subject lines for zeno polling emails to give the deadline instead of "in 0 days"</li>
+<li>Added a warning and disabled rescaling of graphs with automatic data sources (can't rescale the graph without rescaling incoming data!)</li>
+<li>Fixed broken images after HabitRPG&rarr;Habitica transition. Also updated API docs to mention the daystamp attribute of the Datapoint resource.</li>
+<li>Weaselproofed goals now also don't let you change their data source back to manual. People complained about us letting them weasel that way.</li>
+<li>Yesterday's UVI broke the workaround for changing deadlines on IFTTT/Zapier goals so we fixed that. You can change IFTTT/Zap deadlines now.</li>
+<li>Scootched the gryffin closer in Habitica logo to make collage work. Added daystamps to all Datapoint examples in <a href="http://beeminder.com/api">beeminder.com/api</a> #mini ×2</li>
+<li>Fixes to the "Due By" / "Hard Cap By" table to always use the right heading and "total" vs "value" (for auto-summing or not) as column label</li>
+<li>Deadlines can now be as early as 7am! And added explanation to hopefully mitigate confusion regarding earlybird vs nightowl deadlines.</li>
+<li>RunKeeper goals can now have arbitrary deadlines!</li>
+<li>Added new FAQ item about Rarely Asked Questions, with lots of links to "Beeminder around the internet". <a href="http://beeminder.com/faq">beeminder.com/faq</a> #mini</li>
+<li>The "bare min / hard cap" header above the graph now says the right thing for Rationing goals (metrics you want to go down but not too fast)</li>
+<li>Background job (that checks for Garmin data that failed to push) wasn't checking for valid auth. Caused a few cases of missing data. #bugfix</li>
+<li>Fixed help text tooltip for "Due By / Hard Cap By" table to tailor it for the case of Do Less goals. HT <a href="https://www.facebook.com/profile.php?id=100007318037266">David Storrs</a></li>
+<li>We were sometimes getting the date wrong for Duolingo data with non-midnight deadlines when fetched via Beeminder's refresh button. #bugfix</li>
+    <!-- [when after midnight for a nightowl deadline, or after the deadline and before midnight for an early bird goal] -->
+<li>Improvements to <a href="http://beeminder.com/overview">beeminder.com/overview</a> like better links, hovertext, explanation of derailment in "How Beeminder works" HT Bill Adams</li>
+<li>Hitting Beeminder's refresh button right after midnight no longer derails you if a fetch from the previous day's still queued up. #bugfix</li>
+    <!-- [Fixes the bug where user presses refresh right after midnight to fetch their last data and derails themselves and then we're like "if you'd just waited patiently you would have been fine..", so if the autodata goal was last processed prior to the deadline, then queue this fetch for the previous day's date, and not todays.] -->
+<li>Expose the integery parameter for custom goals (even though it doesn't do much but change how some bare min etc numbers are displayed) #mini</li>
+<li>We now support arbitrary deadlines for Code School goals!</li>
+<li>Added more tooltips in Terrifyingly Advanced Settings. Unclear whether the terror level went up or down. #mini</li>
+<li>Added new Q's to <a href="http://beeminder.com/faq">beeminder.com/faq</a> (blog stuff, integrations) and link to <a href="http://blog.beeminder.com/perverse">blog.beeminder.com/perverse</a> and fixed syntax errors w/ other links</li>
+<li>New IFTTT macro for recipes that send data to Beeminder: PROD[] (as in product, as in multiplying) (<a href="http://forum.beeminder.com/t/ifttt-macros/804">more on the forum</a></li>
+<li>We now support arbitrary deadlines for Trello goals!</li>
+<li>We now support arbitrary deadlines for Withings goals!</li>
+<li>On front page, updated "guaranteed fresh" link, hovertext for that and main navigation links, don't open blog in new tab, and IFTTT macro bugfix</li>
+<li>For goals where we're pretty sure it's measuring time (goal units = "hours") show the recent datapoints as HH:MM:SS not fractional hours</li>
+<li>Moved rate units to basic settings and exposed goal units there (now that we actually use goal units for something)</li>
+<li>Fixed caching of the recent datapoints so if you set your goal units to/from "hours" the time-based display will happen right away #bugfix</li>
+<li>Archiving now happens at the min of {Akrasia horizon, Goal date}. Which also means insta-archive for completed (but not frozen) goals.</li>
+<li>If you derail on the day that your goal is scheduled to archive, the archiving now always happens first (actually just midnight prev night)</li>
+    <!-- [used to just do now + AKH, now do floor(now) + AKH, now the archive *def* comes before the derail email on the final day would kick in] -->
+<li><strong>Reminders Revamp! Huge simplification of reminder settings. Each goal has 3 relevant settings: zeno start time, days lead time, deadline</strong></li>
+<li>Reminders Revamp 2 of N: Now possible to have *only* emergency day alerts (set days lead time to 0, the default), w/o wrong lane alerts too</li>
+<li>Reminders Revamp 3 of N: You now have more control over alerts for Do Less goals (though some confusion remains re: what "safe days" means)</li>
+<li>Reminders Revamp 4 of N: Global defaults for reminder settings! And for each goal you can choose to inherit from defaults or not</li>
+<li>Sort of part of the reminders revamp: we also now have global defaults for pledge cap and for whether to do no-mercy derailments</li>
+<li>Lock icons on pledge cap and no-mercy if they inherit from global defaults (cumbersome but at least no confusion about where to set them)</li>
+<li>Reminders Revamp 5 of N: To turn reminders off altogether: either set alert start time a minute before deadline or set days lead time to -1</li>
+<li>Now using html emails for the alerts (though we're barely taking advantage: links instead of raw URLs, bullets) Also: bugfixes w/ email body</li>
+<li>Reminders Revamp 6 of N: Decoupled beemail from reminders a bit more in that you can say "never" to beemails w/out stopping all reminders</li>
+<li>Reminders Revamp 7 of N: Single setting for SMS vs email (premium only) means less confusion w/ enabling SMS for each goal</li>
+<li>Reminders Revamp 8 of N: The SMS bot now does zeno polling (premium only; grandfathered original SMS users from before we announced this)</li>
+<li>Reminders Revamp 9 of N: Zeno polling start time no longer restricted to 3am-11:59pm. Now anything in the 24 hours pre deadline (sorta).</li>
+<li>Important #bugfix for weightloss/inbox goals where zeno polling would fail to happen if you moved into the red after zeno start time</li>
+<li>Changing your deadline now won't let you insta-derail yourself on an eep day, in addition to not letting you snooze w/in 6 hours #bugfix</li>
+<li>Reminders Revamp 10 of N: Zeno SMS messages now tell you the number of hours left to your deadline</li>
+<li>Autodata vs manual goal reminders had "reply w/ new data" in the subject backwards #bugfix (and briefly broke the "N hours" in subject lines)</li>
+<li>Doh, the defaults weren't getting applied to new goals (was using default defaults instead of adjusted defaults) #bugfix in reminders revamp</li>
+<li>Bug introduced w/ Withings arbitrary deadlines prevented goals from automatically refreshing after getting new data pushed. #bugfix</li>
+<li>Introduced a bug with reminders revamp that made us send you to settings after hitting Retroratchet. Now fixed. #bugfix</li>
+<li>Mini UVIs: made Unsubscribe All button red, better description of SMS perq on premium page, days lead time now enforces range [-1,30]</li>
+<li>One more mini UVI: changed name of tab from "Email" to "Default Settings" since it's not just email anymore (still poorly organized tho!)</li>
+<li>If we fetched new autodata, making you safe, we'd send the Eep! email anyway. And a similar fix for preventing stale eep alerts. #bugfix ×2</li>
+    <!-- [if we passed the deadline while running the job, or while it was queued, we'd send the Eep! alert anyway. Skip this too-late alert now.] -->
+<li>Added lifecycle email for newly created goals since reminders revamp means no alerts by default till it's a beemergency</li>
+<li>We had a small bug where we'd sometimes send queued up zeno reminders after the deadline was past and the goal already derailed. #bugfix</li>
+<li>Zeno subject line included 'respond w/ data' for autodata goals instead of manual, and vice versa. #bugfix Also added time to derail to body</li>
+<li>The range for default deadline was (for a while) still enforcing noon-6am after individual deadlines allowed 7am-6am. #bugfix</li>
+    <!-- [aka the 10:06am bug.] -->
+<li>Autodata polling could get behind & for non-monotonic ones (eg GmailZero) could fail to start zenoing & thus cause surprise derails #bugfix [and spurious derails addressed]</li>
+    <!-- [fix in the autodata polling job: if queues were backed up, and more than an hour passed since the last job. spurious derails addressed.] -->
+<li>In Runkeeper goal creation: 1) actually show error messages to user, 2) for a day or so we gave 500 error trying to create goals #bugfix ×2</li>
+    <!-- [fix 500 error from queue-for-refresh on new goals] -->
+<li>Were failing to respect user-set data source. We try to guess if it should be IFTTT or Zapier, but if you change it back we leave it be.</li>
+    <!-- [http://forum.beeminder.com/t/ifttt-and-manual-entry-fiasco/720/6?u=dreev] -->
+<li>If you deauthorized Beeminder from Jawbone or something else went wrong we were failing silently instead of throwing up the alert. #bugfix</li>
+    <!-- [if the response code is not 200, then the data attribute will be blank, so don't check for that until you've checked for 401 unauthorized or other error codes in the response] -->
+<li>Rare bug (manifested if autodata push failed and had to poll Withings) with not fetching data prior to a "RECOMMITTED" datapoint. #bugfix</li>
+    <!-- [now we fetch data since the last non-reset datapoint] -->
+<li>We're now robust to adding stupidly large values like 999999999999999999999999999999999999999999 that used to make everything break. #bugfix</li>
+<li>Broke Skritter goal creation: Skritterland requires 4am end-of-day which didn't play nice w/ new default deadlines. #bugfix</li>
+<li>Fixed a rare problem with adding duplicate datapoints submitted by email (related to email retries). Now check message ID to de-dup. #bugfix</li>
+<li>Patch for IFTTT add datapoint TOD (time-of-day) macro to turn 12-hour time of day strings to 24-hour (like add 12 if it's PM... and &lt;12)</li>
+<li>Renamed defaults tab to 'Reminders/Defaults', rearranged/edited "new goal" email copy, tooltip for "-1" in indiv. alert settings #mini ×3</li>
+    <!-- [tooltip was already done in the default settings section] -->
+<li>Added leadtime and alertstart to the API -- <a href="http://beeminder.com/api">beeminder.com/api</a> (Thx Andy Brett; & this portends big reminders improvement on iOS!)</li>
+<li>Site no longer falls on its face if you give a non-integer (or nil) for 'days lead time' in goal alert settings. #bugfix (from a while ago)</li>
+<li>We were sometimes/rarely double counting Sleep as Android time; now disallowing records on same day with same start time. #bugfix</li>
+<li>Fixed a sort of off-by-one problem w/ "days lead time" for do-less goals. Zero days lead time means zeno alerts start when you're orange.</li>
+    <!-- [and leadtime=-1 turns off zeno polling, just like for do-more] -->
+<li>Changing goal units made Runkeeper goals stop updating. That was super dumb. But we fixed it! Update gunits to heart's delight. #bugfix</li>
+<li>Were silently failing to do anything for GmailZero if you made the query blank; now default to the standard "in:inbox AND is:read" #bugfix</li>
+<li>Were failing to regenerate graphs and tell the Android app about changes to deadlines immediately which got goals into weird states. #bugfix</li>
+    <!-- [also we now regenerate graphs for all goals that use defaults when the default deadline changes, which could count as another UVI] -->
+<li>After upgrading from literally the oldest documented version of the Stripe API (from 2011) we broke & then fixed our payment UI. #bugfix</li>
+<li><strong>If you had multiple IFTTT recipes triggering for the same Add Datapoint event, only one would actually trigger. #bugfix See <a href="http://forum.beeminder.com/t/ifttt-channel-is-live/765/34">forum discussion</a></strong></li>
+<li><strong>New IFTTT macro for counting words in Trigger Ingredients: WORDCOUNT[] See <a href="http://forum.beeminder.com/t/ifttt-macros/804">forum discussion</a></strong></li>
+<li>Tweaks to bot emails (pre-vs-ul, link, next check), CSS in blog header (HT Malcolm Ocean), alignment w/ Misfit on <a href="https://www.beeminder.com/services">beeminder.com/services</a></li>
+    <!-- 1. Tweaks to bot emails (pre instead of ul, changed link text and hovertext for graph URL)
+         2. Fixed CSS in blog header (HT malcolm)
+         3. Fixed alignment on https://www.beeminder.com/services (misfit was too big), Fixed CSS -->
+<li><strong>By popular demand, a similar IFTTT macro, CHARCOUNT[], for Japanese and Chinese language learners</strong></li>
+<li>Another improvement to the API that was needed for the iOS app: can now query and set use_defaults (grep for it at <a href="http://beeminder.com/api">beeminder.com/api</a>)</li>
+<li>We were originally regenerating all your graphs that use defaults when you changed anything; now doing that smarter / more conservatively</li>
+    <!-- [only rebrains goals if the deadline was updated (otherwise no need)] -->
+<li>New aggday method "nonzero" for plotting a 1 only if there exist any non-zero datapoints. <a href="http://forum.beeminder.com/t/documentation-of-aggregation-methods-would-be-nice/549/4">documentation of aggday methods</a></li>
+<li>Creating a goal via API w/ coordinates of road start specified (1st row of roadall) works as expected now. HT Malcolm Ocean and <a href="http://complice.co">Complice</a></li>
+    <!-- [it returns the road you specified immediately in the API response instead of having it as [null,null,null] until the goal is beebrained] -->
+<li><strong>Beeminder Android app version 2.5! Checkmarks on widgets showing data already entered for the day, visual indicator for unsync'd data, ...</strong></li>
+<li><strong>Beedroid 2/9: Now locally buffers datapoint deletions and updates in case you have a flaky connection. And fixes related to stale data.</strong></li>
+<li>Beedroid 3/9: The Beeminder icon on the urgent goals widget launches the app. (This is from version 2.4.3)</li>
+<li>Beedroid 4/9: If you have tons of data we now only load some of it (performance/reliability reasons), link you to website for the rest</li>
+<li>Beedroid 5/9: Fixes with eep day notifications, Tasker, and TagTime notifications, decreased unnecessary server hits on syncing</li>
+<li>Beedroid 6/9: Bugfix with stale goals hanging around, and fixed various rare(ish?) crashes</li>
+<li>Beedroid 7/9: Bugfixes with notifications near goal date, proper updates of existing notifications. (This is from version 2.4.2)</li>
+<li><strong>Beedroid 8/9: Fixed a race condition with summary widget, weaselproofing of autodata goal (no more loophole of manual editing in app)</strong></li>
+<li>Beedroid 9/9: Eliminated road dial (kind of a negative UVI but we crammed a gazillion real ones in these 9 tweets so...)</li>
+<li>Clarifying text on tabs for dialing/ratcheting road; also a warning about ratcheting to an eep day if you derailed yesterday. #mini ×2</li>
+<li><strong>Ratcheting for do-less goals (including autoratcheting for premium folks) now work in terms of goal units, not days. HT <a href="http://twitter.com/chipmanaged">@chipmanaged</a></strong></li>
+    <!-- [Separate UVI to say how that also fixes the nasty bug with do-less autoratcheting? no. Tweaks to the UI to accommodate this? nah.] -->
+<li><strong>Beeminder iOS app version 4.2! Graphs now appear in Today widget along with bare min, and several other things in the next 6 tweets... (1/7)</strong></li>
+<li><strong>BeemiOS does zeno polling! Adjust individual and default notification settings in-app (known bug: can't change deadline on an eep day) (2/7)</strong></li>
+<li>BeemiOS: When changing reminder settings in the app you're changing them for website too; was broken at first but now works. #bugfix (3/7)</li>
+<li><strong>BeemiOS: The reload button on the goal screen triggers a refresh of autodata. (4/7)</strong></li>
+<li>BeemiOS: Fixed the dreaded spinner bug. And Arabic numerals (the real ones, not the western-derived ones) were broken. #bugfix ×2 (5/7)</li>
+<li><strong>BeemiOS: Added a ":" button to allow for data input in HH:MM format (6/7)</strong></li>
+<li>BeemiOS: Data entry now defaults to the previous day if it's after midnight but before the deadline. (7/7)</li>
+</ol>
+
+<h3>2015-Dec-01 to 2015-Dec-31</h3>
+
+<ol>
+<li>We made a new kind of coupon code for Cyber Monday where you get the 2nd period free. <a href="http://blog.beeminder.com/cybermonday">blog.beeminder.com/cybermonday</a></li>
+<li>Made it way more obvious when you're using a coupon for a premium plan, by highlighting the coupon description in an green alert box</li>
+<li>Now give nice explanatory error msg instead of a blank stare if you give a <a href="http://rescuetime.com">RescueTime</a> "key code" instead of full key when creating a goal</li>
+<li>Fixed the "next check is at" in zeno emails -- since putting it back recently we were giving it in server time, not user time (facepalm) #bugfix</li>
+<li>Fixed the "hey you just snoozed your deadline" email that we send out if you move your deadline further away on an eep day (facepalm again) #bugfix</li>
+    <!-- [template was missing due to refactoring facepalm] -->
+<li>Fixed a bug affecting do-less goals with goal total & rate specified that made us throw an ugly 500 error if you tried to ratchet #bugfix</li>
+    <!-- [we were looking for future rows by iterating through comparing current day with the time in the road row, so blank final date was causing a nil comparison error] -->
+<li>Introduced a bug where, for rare email clients, we'd re-add your "Recent datapoints" as new data when you replied to the email bot. #bugfix</li>
+<li>3rd party app devs can send users to specific URLs on beeminder.com w/out the user being intercepted by a login screen: <a href="https://www.beeminder.com/api#redirectuser">beeminder.com/api#redirectuser</a></li>
+    <!-- [if user/show gets redirect param, redirect to url -- app/controllers/api/v1/users_controller.rb] -->
+<li>Other updates to our API docs (<a href="http://beeminder.com/api">beeminder.com/api</a>): not calling IFTTT "about to be launched" and purging the unused "sendmail" param</li>
+<li>No longer give permissions error (for users w/out premium plan) when slug is included but unchanged in API goal update. #bugfix HT <a href="http://twitter.com/diwajd">@diwajd</a></li>
+<li>We were accidentally still sending iOS people 9am notifications regardless of (and in addition to) their zeno settings. #bugfix</li>
+<li>Ratcheting do-less goals would no-op on the 1st day of the goal. #bugfix</li>
+    <!-- [an error w/ operator precedence, so that if the very first section of the road (the stuff "before today") was blank, then we'd do nothing] -->
+<li>Error message for "username too long" now tells you what the limit is (it's 20). #mini HT Alex Guzey</li>
+<li>Changed the text the archive countdown shows after it hits zero. Now gives an indication that it might (annoyingly) take a bit to kick in.</li>
+<li>We broke (2 months ago as part of javascript graphs) and then fixed the Quick Add feature that updates "+N Due by Y" text in gallery #bugfix</li>
+    <!-- [removed a js date helper lib that was conflicting with mpld3, not noticing that we were in fact using some helper functions from it. so i added a getDayName & getMonthName helper fn to our js file http://forum.beeminder.com/t/quick-add-doesnt-update-the-text-part/735] -->
+<li>Uncheck "start flat" when restarting ⇒ road dial appears like it's supposed to (broke this months ago :/ "start flat" was no-op) #bugfix</li>
+    <!-- [we were just giving an infinite flat road despite saying no to 'starting flat'] -->
+<li>Remember <a href="https://twitter.com/beemuvi/status/511667442121076736">when we fixed a trailing whitespace bug in sign-up</a>a? Well the other day <a href="http://twitter.com/faireness" title="Yes, the founders' 8-year-old daughter">@faireness</a> noticed we still werent stripping whitespace when you actually log in :/ #bugfix</li>
+<li>We now remember who IFTTT recipes run for so if there's an auth problem later we can email you to tell you the recipe stopped working</li>
+    <!-- [trigger_identity] -->
+<li><strong>Embarrassing #bugfix in deadman switch (stops charging you if go inactive): don't count activity on archived goals from autodata like Zapier</strong></li>
+<li>Fixed a mangled error message (and made it spell things out better) about trying to move your deadline earlier on a beemergency day. #mini</li>
+    <!-- ["Deadline cannot be moved into the past, since this goal is in the red currently, and that would derail you. Please finish your task for the day first."] -->
+<li>If you de-authed Android/iOS apps we weren't cleaning up after ourselves and failed horribly/invisibly if you later tried to re-add. #bugfix</li>
+    <!-- [remove cached access token for beedroid/ios if auth is revoked. e.g. i removed beedroid, and then submitted datapoints.. it was infinite infinibee, with nice helpful red state letting me know it was still trying to send, but never succeeds] -->
+<li>Can now always move your deadline earlier on an eep day as long as still before the deadline (timezone issue; only failed sometimes) #bugfix</li>
+<li>Similar bug with snoozing your deadline; now always respects the 6-hour window on an eep day. #bugfix</li>
+</ol>
+
+<h3>2016-Jan-01 to 2016-Apr-29</h3>
+
+<ol>
+<li>In goal default settings if you tried to submit the form with no leadtime or no alertstart or no deadline it would give a 500 error #bugfix</li>
+<li>Typo fix in hovertext in footer (thx Caitlin Patton!) & <a href="http://beeminder.com/api">beeminder.com/api</a> documentation updates re: roadall not road_dial, & daystamp</li>
+    <!-- [point to the replacement for road_dial in the road dial endpoint description, and mention that you can include daystamp when creating datapoints (but that timestamp overrides)] -->
+<li><strong>Guess what we (@andrewpbrett to be specific) made? A Beeminder Slackbot! http://dreev.es/slackbot Has rough edges (feedback pls!) but works!</strong></li>
+<li>Bug in <a href="http://beeminder.com/featured">beeminder.com/featured</a> - would sometimes give 500 error & other times not show actual 24 most recently updated graphs #bugfix</li>
+<li>Both recent data and fine print now say "public" or "private" w/ link to change it (<a href="http://forum.beeminder.com/t/feature-request-private-public-indicator/447">forum post</a>)</li>
+<li>Got rid of superfluous subheading for "Recent Data". Added hovertext for New Data and Advanced Entry tabs. HT Edith Beerdsen #mini ×2</li>
+<li>Informative error if goalslug taken etc (<a href="http://forum.beeminder.com/t/uninformative-error-message-when-creating-duplicate-goal/1712">forum post</a>) (another thing we broke in the great javascript refactor a year ago) #bugfix</li>
+<li>API #bugfix thanks to Malcolm Ocean & <a href="complice.co">Complice</a>: Now the deauth callback actually works so 3rd-party apps know when user revokes auth</li>
+<li><strong>IFTTT Improvements!</strong>
+<ol>
+<li>New Zeno Trigger lets Beeminder hound you via any medium connectable to IFTTT (flash your lights, Slack, you name it)</li>
+<li>"N safe days" IFTTT Trigger now lets you say "less than"/"equal to"/"greater than". Handy for, eg, rewarding yourself for more buffer.</li>
+<li>Don't laugh but we now have an @IFTTT "Charge me" Action in case you want to instantly sting yourself for going to a bar or something.</li>
+</ol></li>
+<li>In Withings goal creation: if out of freebees we were both not requiring a pledge and not redirecting to your goal after creation. #bugfix</li>
+<li>Some small improvements, #bugfix's, robustifications of the Beeminder Slackbot, like actually refreshing the graph when you add a datapoint</li>
+<li>And a big improvement to the Beeminder Slackbot: it now does zeno reminders! <a href="http://slackminder.com">slackminder.com</a> (Still pretty beta though)</li>
+<li>Removed deadline from terrifyingly advanced settings since it's now in reminders and fixed the link to deadline under the countdown #mini</li>
+<li>We now send all reminders as push notifications on iOS (not just eep-day zenos). Fixed brief bug where it would wrongly say "eep" on those.</li>
+<li>Made the deauth buttons on <a href="https://www.beeminder.com/settings/apps">beeminder.com/settings/apps</a> not squished together. Email/SMS bot no longer says "Emergency" in scarequotes. #mini ×2</li>
+<li>Fixed a case of ugly line wrapping in reminder settings; doc #bugfix with platonic goal types in hovertext in custom goal settings #mini ×2</li>
+<li>Didn't affect many people but fixed a bug that would leave the "goal is frozen" banner on goals even after updating payment info. #bugfix</li>
+<li><strong>We now ask you for your current/recent weight (with option to auto-fetch it!) when creating Withings goals. So much nicer!</strong></li>
+<li>Getting explicit starting weight also fixes bad bug that often caused insta-derails when importing Withings data on goal creation. #bugfix</li>
+<li>Beeminder Slackbot: it was showing the least recent instead of most recent datapoints, and all instances would fail if one did. #bugfix ×2</li>
+<li>New box in the blog sidebar for newbees and overhauled the User's Guide for New Bees post, linked to therefrom. <a href="http://blog.beeminder.com">blog.beeminder.com</a></li>
+<li>The calendar date pickers for take-a-break let you pick the same end-date as start-date, then complained at you. Now it's less dumb. #mini</li>
+<li>If you had to re-auth Skritter (maybe some others) we were failing to remove error flag & wouldn't automatically resume fetching #bugfix</li>
+    <!-- [were already doing this for some specific autod types, but i also made the code better so that this will just happen for new types we add, so also infra] -->
+<li>Fixed a bug on <a href="http://scribeminder.com">scribeminder.com</a> that prevented connecting to Beeminder if you weren't using HTTPS. Also, forced HTTPS. #bugfix</li>
+<li><strong>Improvements to our Habitica integration for completed To-Dos!</strong>
+<ol><li>Every To-Do is its own datapoint with task text as the comment...</li>
+<li>Habitica "More Completed To-Dos" goals are now auto-summing instead of odometer-style</li>
+<li>No longer any hoops to jump through when deleting completed To-Dos in Habitica; Beeminder remembers everything!</li>
+<li>The Habitica integration has a 7-day window where changing To-Dos (ie uncompleting them) is reflected in Beeminder #statuteoflimitations</li>
+</ol></li>
+<li>Trivial yet maybe a big deal: Lots of confusion about initial flat spot (eg, bot doesn't bug you for ~9 days) so default now is no flat week</li>
+<li>Now two sections of statistics in the sidebar: for datapoints & for the yellow brick road. Added 2 new data stats so far: mean & mean delta.</li>
+<li>Mean and Mean Delta in data stats box now interpolate gaps in data, making Mean Delta comparable to daily rate of the yellow brick road</li>
+<li>Changed #statuteoflimitations for RescueTime integration from 2 and from Skritter from 4 to 7 days. Hooray for (a bit more) consistency!</li>
+<li>Moving deadline out of adv. settings caused bug that prevented graph from refreshing (eg updating watermark) when changing deadline. #bugfix</li>
+    <!-- [cf https://twitter.com/beemuvi/status/664593997491544064 & https://twitter.com/beemuvi/status/688107679814778880] -->
+<li>Were unwittingly removing & re-adding Garmin sleep datapoints every time; made IFTTT "Added Data" Trigger go batshit. #bugfix HT Markos Giannopoulos</li>
+    <!-- [every time we checked for data] -->
+<li>If you edited your sleep start time in the Misfit app we'd treat it as a new datapoint & overcount your sleep! #bugfix HT Caitlin Patton</li>
+    <!-- [uniqifying based on start time not good] -->
+<li>Introduced a bug w/ zeno alerts: after sending the 1st one of the day were accidentally sending them every 5 minutes for some of you #bugfix</li>
+<li>We moved the settings for how often you get beemails from "Reminders/Defaults" to "Personal Info" (tweetstorm re: reminders settings soon!)</li>
+<li>Better composition of zeno alert. Gives number of days till deadline instead of day of week if &gt;7days away, like in graph watermark. #mini</li>
+    <!-- if tdiff < 24
+           text = "Eep! #{self.title} needs #{self.baremin} by #{countdown.strftime("%R")}."
+         elsif tdiff > 24*7
+           text = "#{self.title} needs #{self.baremin} in #{tdiff/24} days"
+         else
+           text = "#{self.title} needs #{self.baremin} by #{countdown.strftime("%a at %R")}."
+         end -->
+<li>Multiple improvements to the Beeminder Slack bot: choose for each goal whether the bot DMs you or posts to a channel or both.</li>
+<li>And a #bugfix with the Slack bot that made it (sometimes? briefly?) ignore those settings and DM you anyway.</li>
+    <!-- [stop spurious slack dms https://github.com/beeminder/beeminder/commit/2a154d523f2f22a7ccdaeffb2e1b20cd609220a3] -->
+<li><strong>Big change to reminder settings: no more inheriting from defaults; instead there's a button (in advanced settings) to reset to defaults</strong></li>
+<li><strong>Equally big change: choose any subset of ways to get reminded for each goal {email, sms, ios, android, slack DM, slack channel, webhook}</strong></li>
+<li><strong>Did we mention you can get reminded via webhook now! Also documented as part of the <a href="http://beeminder.com/api">API</a>.</strong></li>
+<li><strong>Nice compact table of all reminder settings for all goals. Handy for setting up <a href="http://blog.beeminder.com/waterfalls">waterfalls</a>.</strong></li>
+<li>Various #bugfix's & tweaks along the way with all that, like breaking & fixing updating of defaults from iOS, making the table pretty, ...</li>
+<li>... changes to the CSS in settings, button copy ("Save Goal Specific Settings"), tooltips, better error-checking w/ webhooks. #mini ×6+</li>
+<li>And one more cheap one: We now ellipsify long goal slugs so they don't mess up the nice compact table of reminder settings. #mini</li>
+<li>One last small one that we just deployed: a horizontal line in the compact table of reminder settings demarcating the backburner goals</li>
+    <!-- [can't remember why i made a note about "For Do Less goals this winds up using n * daily rate to proxy..."] -->
+<li><strong>Our RescueTime integration is markedly slicker: no need to paste your API key to authorize Beeminder to access your RescueTime data</strong></li>
+<li>Other improvements to RescueTime integration: check do-more by default (which fixed a related bug) & no week of safety buffer by default</li>
+<li>One more RescueTime #bugfix: the new hotness broke data fetching for newly created goals for a few days (emailed everyone affected)</li>
+<li>How long should something be broke before fixing counts as UVI? Staggering amount broken+fixed in last 24hours: IFTTT triggers, SMS bot, ...</li>
+<li>... html emails, many autodata integrations, clobbered settings, UI icons, google oauth, passwd resets. Upgrades are hard. Cc <a href="http://twitter.com/beemstat">@beemstat</a></li>
+<li>Changing rate units works again. And fixed last bug w/ IFTTT triggers. We think that's everything from the hairy server upgrade!  #bugfix ×2</li>
+<li><strong>Finally fixed pagination on the All Data page. Embarrassing how long that was all glitchy! #bugfix & finally a net UVI from the big upgrade</strong></li>
+<li>Another thing we broke with the upgrade: Android app stopped automatically staying in sync with the website. Now fixed. #bugfix</li>
+<li>Hopefully last UVI for #bugfix's from the upgrade: dial-it-in position, checkmarks for data entered today, saving changes in reminders table</li>
+    <!-- [slightly different syntax for fields_for: fixes bug with fwomp page not saving individual goal changes - the goal name wasn't getting included in the fieldset]
+      [fix dial-it-in position? https://github.com/beeminder/beeminder/commit/5861831958f0e88e880113f16938739af8ab68cd]
+      [bugfix: checkmarks for "data entered today" not showing up in the gallery (or persisting in the dashboard)] -->
+<li>We rearranged goal settings a bit, moving things betw Basic & Advanced (was a while ago; we're improving @bmndr faster thn we cn twt abt it)</li>
+    <!-- [http://forum.beeminder.com/t/on-privacy-vs-expectations/1900]
+      [settings rearranging https://github.com/beeminder/beeminder/compare/2a154d523f2f...0efccf656a85]
+      [We rearranged goal settings a bit, moving things between Basics and Terrifyingly Advanced. And private back to Basics by popular demand.] -->
+<li>Mini-UVIs: Typo fix ("was as least one error"), stick to "reminders" vs "alerts", "team" copy for Slack, tooltip misplaced HT <a href="http://twitter.com/chriswaterguy">@chriswaterguy</a></li>
+    <!-- [http://forum.beeminder.com/t/confusing-pop-up-next-to-derail-time-setting/1905 HT @chriswaterguy #mini] -->
+<li><strong>New dashboard! It's still in flux and not the default view yet but it's available at <a href="http://beeminder.com/dashboard">beeminder.com/dashboard</a> (tweetstorm to follow!)</strong></li>
+<li>Many improvements to the dashboard since it went live, like checkmarks for added data, which we'll pack into 8 UVI tweets tho really over 20</li>
+<li>Dashboard has itty-bitty thumbnail of graph, countdown format remembers your pref, integers like 1 not 1.0, safe days for do-less, …</li>
+<li>… widen the dashboard so it fits comments, myriad tweaks like right-aligning $-amounts & fixing padding, tab index #bugfix (twice), …</li>
+<li>… remove comment after submission, bugfix w/ no goals in gallery, last datapoint timestamp on hover over checkmark or lack thereof, …</li>
+<li>… submit button as tab index, put link to dashboard above Quick Add, last comment as placeholder text, #bugfix w/ "fetch data" button, …</li>
+<li>… #bugfix w/ showing the previous datapoint comment as placeholder text: now shows previous comment unless it's the "initial datapoint" one.</li>
+<li>And that's just the UVIs since we linked to it in the UI, not everything <a href="http://forum.beeminder.com/t/new-feature-dashboard-view/1904">discussed in the forum</a> like sorting, ellipses, etc</li>
+<li>Android app was taking too long to notice when graph was done refreshing. (Long story with long queues.) Now much snappier! HT <a href="http://twitter.com">@faireness</a></li>
+    <!-- [run beedroid push inline if api && has_android] -->
+<li>#bugfix w/ RescueTime for about 4 days around Feb 25: new goals were created fine but weren't importing your RescueTime history like usual</li>
+    <!-- [inc syntax error in rescuetime importer: https://github.com/beeminder/beeminder/commit/c38c806ee62e073f226af7bcd3d311c5e7010329] -->
+<li><strong>The graph now shows <a href="http://forum.beeminder.com/t/restarting-odometer-to-non-zero-value/299/17">odometer resets as black vertical dotted lines</a></strong></li>
+<li>SMS choice in reminder settings failing to stick; we broke <a href="http://beeminder.com/featured">beeminder.com/featured</a> & /home/featured legacy alias. #bugfix ×2 HT <a href="http://twitter.com/chipmanaged">@chipmanaged</a></li>
+    <!-- [wantssms bug & /home/featured 500'd] -->
+<li>We also added "Featured" to the navbar (links at the top of every Beeminder page) & put "feature me" back in Basic Settings. HT <a href="http://twitter.com/SayHiNeil">@SayHiNeil</a></li>
+<li>Criteria for inclusion in <a href="http://beeminder.com/featured">beeminder.com/featured</a> now: 28 most recently updated active undeadbeated goals (that opted in to being featured)</li>
+<li>Way faster load time for /featured. Ok that's kinda part of prev UVI so we'll add: fixed wrapping on beemail settings for non-premium people</li>
+<li>Yet another thing we broke in the big Mongoid upgrade: auto-detection of timezone for new users signing up. #bugfix</li>
+<li>Some people had so many odometer resets that all the dotted lines looked hideous. Now they're more subtle. #mini</li>
+<li>Bug with DB queries/indices/caching was making <a href="http://beeminder.com/dashboard">beeminder.com/dashboard</a> unusably slow (yes, related to Mongoid upgrade again). #bugfix</li>
+<li>Stopped timing out when Garmin pushes a big chunk of data to us, which was causing big delays in Garmin graphs getting updated. #bugfix</li>
+<li>Rearranged navbar, changed "sign in" to "log in" everywhere (too easy to confuse "sign in"/"sign up"), updated/added hovertexts on links</li>
+<li>Months ago we introduced a subtle bug in Take-A-Break that made it silently fail if you manually typed dates that weren't allowed. #bugfix</li>
+<li>Beeminder used to hang for many seconds whenever we deployed code. Ponied up for Passenger Enterprise w/ rolling restarts so now it doesn't!</li>
+<li><strong>New goal creation wizard! So many improvements! Starting at the beginning: the initial page is more compact, eg, Zapier on own page (1 of 9)</strong></li>
+<li>Better UI for picking goalname aka goal slug (deemphasizing goal title etc now since that's in flux) (2 of 9)</li>
+<li>The UI for picking the rate to commit to now lets you choose daily/weekly/monthly without going to settings after the fact (3 of 9)</li>
+<li>You can now choose both the initial pledge and the pledge cap as part of goal creation (4 of 9)</li>
+<li><strong>Instead of just choosing whether to have a week of initial flat spot, you can choose any number of days of safety buffer (5 of 9)</strong></li>
+<li>After the goal's created you land on a goal configuration screen w/ all the settings we think you should review for new goals (6 of 9)</li>
+<li><strong>Most exciting part: No longer any limit on how many goals can start at the $0 pledge level. Concept of "freebees" is obsolete! (7 of 9)</strong></li>
+<li><strong>Instead, we now impose limit on how many goals you can create before required to add credit card (commitment-wall, not paywall) (8 of 9)</strong></li>
+<li>Edited <a href="http://beeminder.com/money">beeminder.com/money</a> and the glossary and old blog post about freebees and various places in the UI referring to freebees (9 of 9)</li>
+<li>Fixed the blue-on-black text in the "credible threat" banner, removed horrendous text shadow for popups #mini ×2</li>
+<li>#bugfix w/ auto-adjusted copy in goal deletion dialog depending on if you already added credit card (used to be freebee-related)</li>
+<li>A bunch of tweaks, copyedits, and more detail on <a href="http://beeminder.com/zapier">beeminder.com/zapier</a> (our Zapier landing page, aka zapminder.com)</li>
+<li>Added "private goal" & "public data" settings to goal creation wizard. Minimizing surprises about what's public by default!</li>
+<li>When you enable iOS notifications in the app we now (actually as of a few weeks ago) turn it on in the web interface too #savedyouaclick</li>
+<li><strong>We made a much prettier landing page for our Fitbit integration, more like other more recent autodata integrations: <a href="http://beeminder.com/fitbit">beeminder.com/fitbit</a></strong></li>
+<li><strong>Not just aesthetic improvements to our Fitbit landing page: the goal creation UI is better, pre-fills sensible choices for goalname & rate</strong></li>
+<li>Mongoid upgrade broke the "re-scale your graph" feature in kinda insidious way (now #bugfix'd & manually cleaned up data of those affected)</li>
+<li>From Feb 23 - Mar 30 we silently failed to save all attempts to weaselproof oneself! Serious #bugfix (so sorry; please check the box again!)</li>
+    <!-- [We *may* painstakingly reconstruct from server logs; so far we've decided not to] -->
+<li><strong>We finally got the stupid "/goals/" out of everyone's URLs which was making one of the cofounders twitch for the last 5 years</strong></li>
+<li>We now show an actual helpful error if you (accidentally?) revoke Beeminder's access to your RescueTime data. #bugfix</li>
+<li>Pretty delete button w/ feedback/confirmation popup works in Settings same as graph page now. Bonus UVI(s): fixing autodata goal creation.</li>
+    <!-- [New goalwizard caused most autodata goal creation to fail! Fixed all but skritter/misfit/habitica on mar28, got those last 3 on apr8 #bugfix] -->
+<li>Several dashboard tweaks/fixes like bigger thumbnail of graph (on left now) and added link to dashboard in top navbar</li>
+<li>Nicer interaction w/ the "Beeminder can't be a credible threat till you add a credit card" banner, & only show it once email is confirmed</li>
+<li>We now include a list of Things You Should Know about beeminding on the empty dashboard/gallery page, similar to the commitwall webcopy</li>
+<li>Lots of changes to the popup that warns you that by adding a credit card you're on the hook for everything eg links to adjust existing goals</li>
+<li>Updates to <a href="http://beeminder.com/faq">beeminder.com/faq</a> (where to find example goals, point to Life category in forum, broken link to TagTime Minder)</li>
+<li>Changed legit check email copy to point out you can drop the pledge, dial the road, or archive from the goal page (w/ another link to it)</li>
+<li>1/ Myriad tweaks/fixes/improvements to new goal creation: not allowing zero rates (or negative for do-less), css tweaks, better hovertexts, </li>
+<li>2/ disallow initial pledge &gt; pledge cap & inconsistent private/public combinations, #bugfix w/ updating the button text based on pledge, </li>
+<li>3/ actually saving your choice of rate units & some other fields (#bugfix), prompt for credit card when shortcircuiting from $0, </li>
+<li>4/ #bugfix w/ showing "commit to" vs "limit" label (HT Brent Yorgey), redirect to goal page after setup, nicer errors for bad goalnames, </li>
+<li>5/ replaced "start now" checkbox w/ just a field to fill in for how much initial safety buffer & #bugfix w/ specifying it for weightloss,</li>
+<li>6/ added link to go back & change goal type from 2nd screen of goal wizard, #bugfix w/ reusing goalnames of deleted goals</li>
+<li>7/ That was at least 16 UVIs which we're counting as 6 (now 7). You're welcome. It's our penance for getting so far behind!</li>
+<li>Slightly obscure #bugfix with Supporters: error if the supporter tried to follow confirmation link for a goal that no longer existed</li>
+    <!-- [don't 500 in confmail if supporter isn't following anything] -->
+<li>Slack's icon was missing if you added it on <a href="http://beeminder.com/services">beeminder.com/services</a> #bugfix</li>
+<li>Fixed spurious warning on 1st press of "fetch data" in dashboard #bugfix <a href="http://forum.beeminder.com/t/dashboard/2075">But another dashboard bug still at large</a></li>
+<li>Added a delete button for apps you create at <a href="http://beeminder.com/apps">beeminder.com/apps</a> (HT Uluc Saranli) But still haven't gotten to <a href="http://expost.padm.us/byebyebee">our byebyebee spec</a></li>
+<li>Additional #bugfix's related to cleaning up the /goals/ in old URLs, like thumbnail of graphs pointing to wrong version of the image</li>
+<li>There was an obscure Gmail error ("delgation denied") that we silently failed on with GmailZero. Now we actually tell you about it. #bugfix</li>
+<li>Embarrassing: We learned that signing up with Twitter had been broken since like February. Finally fixed as of a week or so ago! #bugfix</li>
+    <!-- [omniauth twitter fix: save service info; had do with twitter not pass us an email address] -->
+<li>Curly (non-ascii) quotes no longer break the SMS bot! #bugfix HT <a href="http://twitter.com/chipmanaged">@chipmanaged</a></li>
+<li>Initial safety buffer setting now more... true (and we say "days until derailing" not "days of safety buffer" to reduce the ambiguity)</li>
+<li><strong>New feature! If you weaselproof a goal you can no longer delete it in the first week! HT <a href="http://twitter.com/chipmanaged">@chipmanaged</a> (again)</strong></li>
+<li>Fixed 2 grievous bugs w/ our IFTTT triggers: (1) "datapoint added" triggers now always trigger exactly once per recipe, ... #bugfix</li>
+<li>(2) Trigger for "datapoint added" could cause false derails if you were down to the wire. #bugfix</li>
+<li>From apr 4 to apr 14 you couldn't authorize 3rd parties to access your data on Beeminder (broke IFTTT/Zapier/beemind.me/etc). Big #bugfix</li>
+    <!-- [bugfixes in oauth2-provider gem] -->
+<li>Mini #bugfix ×3: UVIs since you last beeminded & other things using lastactive date broke, datapoints temporarily sorting wrong in Beedroid</li>
+<li>If you retroratched the same day you derailed on a do-more goal we were frequently giving an ugly error. #bugfix</li>
+<li>Newly created Withings goals were failing to fetch data for about 10 days after our big Mongoid upgrade. #bugfix (& fixed up those affected)</li>
+<li>And an unrelated Withings #bugfix: deadline-related bug meant autofetch could occasionally miss datapoints if you had nightowl deadline</li>
+<li>Small improvement to RescueTime goals (fixed coordinates of start of road) so you can't insta-derail yourself when you edit past data, etc</li>
+<li><strong>(1/3) Beedroid (Beeminder Android app) Ver 2.6! Sign up in the app! Sort of create goals (via website but don't need to sign in separately)!</strong></li>
+<li><strong>(2/3) Edit goal settings (same deal)! Swipe down to refresh! Actually get notifications for backburner goals. And a bunch of other #bugfix's:</strong></li>
+<li>(3/3) Fixing bad error messages on login/signup failure, proper handling of deleted goals or changed goalnames, handle +'s in email addresses</li>
+<li>Minis: RescueTime icon didn't have "RescueTime" next to it, broke & then fixed unsubscribe links (!), made unsub links not expire.</li>
+<li>What we used to call "slug" is now universally called "goalname" (no space, like "username")</li>
+</ol>
+
+<h3>2016-Apr-30 to 2016-Jul-19</h3>
+
+<ol>
+<li>If you clicked an unsubscribe link when logged in as another user then we gave an opaque error instead of telling you what was what #bugfix</li>
+<li>iOS app version 4.3!
+<ol>
+<li>No longer crashes when you log in w/ Facebook or hangs when you log in with Google #bugfix</li>
+<li>And we no longer crash if adding a datapoint times out or otherwise returns an error #bugfix</li>
+<li>Finally, you can now pull to refresh your goal gallery even if you have a small number of goals #mini</li>
+</ol></li>
+<li>Mini UVIs: Added Duolingo Russian phrase, better URLs for some settings like /reminders/username, alphabetized autodata icons in goal wizard</li>
+<li>Moved deadline setting (needs to always be near zeno start time), fixed Fitbit push notifications (should be faster again) #mini ×2</li>
+<li>CSV/TSV export now has iso8601 dates (both humans & machines rejoice!) and additional columns: daystamp, createdat, deadline</li>
+<li>And added a header row to the CSV/TSV to name the columns, and now we name the file with the user/goalname instead of just "datapoints.csv"</li>
+<li>When you add a datapoint with a comment to the dashboard, we immediately replace the placeholder text in the comment box. #mini</li>
+<li>In goal creation, require & actually use given current value for odometer goals (we were initially ignoring it altogether! #bugfix) #mini</li>
+<li>Fixed an ugly error on the dashboard that you'd see if one of your goals had no datapoints #mini #bugfix</li>
+<li>Better URLs for goal settings tabs: /settings, /reminders, /supporters, /terrifying, /datapoints</li>
+<li>Added a notice to beeminder.com/sleep about how you need the SleepCloud Backup add-on for Sleep As Android for like $1/year</li>
+<li>If your data's public then the public should see All Data link but not settings etc tabs (even though they, correctly, didn't work) #bugfix</li>
+<li>Standardized across all integrations the error message for when we can't fetch autodata, with link to go reauthorize us. #mini</li>
+<li><strong>We made our Complice integration official, with fancy landing page and everything! <a href="http://beeminder.com/complice">beeminder.com/complice</a></strong></li>
+<li>Goals would go missing from the dashboard as soon as they hit the deadline and until the derailment was processed. #bugfix</li>
+<li>Beedroid #bugfix: sign-up in app acted like it failed despite succeeding (& then you had no way to log in to it, it was a mess, albeit rare)</li>
+<li>We were giving a spurious error when you first signed up or logged in (related to authenticity tokens). #bugfix #oldie</li>
+    <!-- [devise bug, don't try to verify authenticity tokens in sign in and sign up, because there is no session expected to verify] -->
+<li>RescueTime goal creation is now consistent with normal goal creation in making you enter a credit card after N goals created. #bugfix</li>
+<li>RunKeeper #bugfix: we were rejecting activities w/out a distance even for time/calories/etc where it doesn't make sense to enforce that.</li>
+<li>Barely user-visible but giving bad query params for pagination on All Data could cause 500 errors and now just nicely 404s. #mini #bugfix</li>
+<li>Fixed (at least improved a lot?) the problem that was making people have to keep logging in again #bugfix (let us know if you see it still!)</li>
+<li><strong>New premium feature: Weekends Off! <a href="http://blog.beeminder.com/weekends/">blog.beeminder.com/weekends</a></strong></li>
+<li>Weekends-off is now maximally lenient: you can decide at the last second to take the weekend off. (We'll monitor for abuse of this!)</li>
+<li>Beebot (our Slack bot) no longer crashes when you add an emoji reaction to a message. #bugfix</li>
+<li>More on our Slack bot: Can now send messages to beebot (eg "list" or a goalname) and it lists your most urgent goals or adds datapoints</li>
+<li>Fancy Slack bot landing page with documentation now at <a href="https://www.beeminder.com/addtoslack">beeminder.com/addtoslack</a> aka slackminder.com</li>
+<li>Fixed things like our Slack bot not being able to auth to multiple teams. <a href="http://forum.beeminder.com/t/beebot-beeminder-slack-bot-update/2152">forum post</a> #bugfix</li>
+<li><strong>Slackminder now includes a /charge command. You can say "charge me $X in N minutes unless I ___". See also <a href="http://blog.beeminder.com/mustdo">blog.beeminder.com/mustdo</a></strong></li>
+<li><strong><a href="http://slackminder.com">Slackminder</a> has goodies built in like dice rolls and sealed bid auctions cuz @dreev & @thatgirl & @andrewpbrett are huge nerds</strong></li>
+<li><strong>Slackminder has a built-in pomodoro timer that can automatically send data to Beeminder via a /tock command! See <a href="http://blog.beeminder.com/tocks">blog.beeminder.com/tocks</a></strong></li>
+<li><strong>Slackminder open source! With that we'll stop counting UVIs to Slack bot even tho there're lots more we could list! <a href="http://github.com/beeminder/beebot">github.com/beeminder/beebot</a></strong></li>
+<li>Minis: placeholder text for slack channel zenos, #bugfix w/ RescueTime redirect after goal creation, always show hovertext for services</li>
+<li>We now always consistently use the units chosen in RunKeeper goal creation no matter what units you say in RunKeeper #bugfix HT <a href="http://twitter.com/chipmanaged">@chipmanaged</a></li>
+<li>Redirected an ancient Withings FAQ page to our Withings integration landing page. <a href="http://beeminder.com/withings">beeminder.com/withings</a> #mini</li>
+<li>Importing of existing data for new RescueTime/Draft/Withings/GmailZero/GitHub/Jawbone/Epson/Misfit goals was broken for 2 months (!) #bugfix</li>
+<li>Tweaked weaselproof-me wording, and bugfixes w/ weekends-off (like so it actually works; fixed manually for everyone affected)</li>
+<li>More Rails modernization: asset pipeline theoretically speeds things up. Not sure it has but also involved breaking & fixing many URLs.</li>
+<li>Made Misfit integration use standard statute of limitations on syncing data (1 week). Fixed bug for people who didn't sync for &gt;30 days.</li>
+<li>Another rare RescueTime bug left over from the switch to auth'ing w/out pasting API key, led to failing to fetch data on new goals. #bugfix</li>
+<li>The countdown timers for archiving & pledge stepdowns would sometimes fail to start if the page wasn't fully loaded. #bugfix</li>
+<li>One of the many bugs fixed as part of asset pipeline but we'll count it as one more UVI since it has a <a href="http://forum.beeminder.com/t/countdown-in-embedded-goals-is-broken/2261">forum thread</a></li>
+<li>Improved/fixed algorithm that decides when the bee buzzes while importing, preparing your graph (was super busted for new goals for awhile)</li>
+    <!-- [bee did something to improve things, but also broke things so for a long time newly created goals would end up perma-opaque] -->
+<li>Made legacy redirects for images so we don't break hotlinks out there, unbroke the images of our pretty faces in <a href="http://beeminder.com/aboutus">beeminder.com/aboutus</a></li>
+<li><strong>Road Editor! Enabled for Plan Bee and above as of June 17. <a href="http://blog.beeminder.com/road/">blog.beeminder.com/road</a></strong></li>
+<li>We no longer ignore the last row (the one equivalent to the traditional road dial) in the road editor. #bugfix</li>
+<li>Related/similar #bugfix: The last row of the road editor now lets you specify any 2-of-3 of goal-value-rate (other rows ought to but don't)</li>
+<li>If you break your road with the road editor we add a button above it to restore it to its last unbroken state.</li>
+<li>Last UVI related to asset pipeline: tooltips were broken for a while #bugfix -- And improved the error messages in the road editor #mini</li>
+<li>Race condition (either related to multiple Fitbit goals or push notifications + polling) made us lose your Fitbit auth sometimes. #bugfix</li>
+<li>It's embarrassing how many things like this we've missed: we caught another previously uncaught RescueTime error (401) & alert the user now</li>
+<li>We now include the "Things You Must Know" copy from <a href="http://blog.beeminder.com/creditcard">blog.beeminder.com/creditcard</a> in the email we send out for each new goal you create</li>
+    <!-- https://github.com/beeminder/beeminder/commit/f288fe006829776f1f4e57583afbf08487cf6bb1 -->
+<li>In the "Charge me" action in our IFTTT channel, we failed to strip whitespace from the charge amount & would wrongly complain "NaN". #bugfix</li>
+<li>Another #bugfix: when emailing you about errors like that we now show you the actual values from IFTTT, not failed attempts to parse them</li>
+<li>If you downgrade from premium and no longer have the SMS perk we fall back to email (and we fixed related copy in the UI)</li>
+<li>Got rid of an old banner wrongly telling weaselproofed people who were archiving a goal in the first week that they could instead delete it</li>
+<li>Improved our Fitbit integration landing page: cute contract image, and got "fitbitminder.com" domain</li>
+<li>Error-checking fail w/ goal creation wizard: trying to use a previously used goalname led to mysterious failures. #bugfix</li>
+<li>We now honor the units specified in Fitbit instead of always creating new weight loss goals in kilograms. #bugfix HT <a href="http://twitter.com/dyang">@dyang</a></li>
+<li>Due to recent refactoring we started ignoring the 'start with a week of safety buffer' option for RescueTime goals. #bugfix</li>
+</ol>
+  
+<h3>2016-Jul-20 to 2016-Sep-21</h3>
+
+<ol>
+<li>Copy tweak in ThingsYouMustKnow (change/charge/adjustment was easy to misread). Added weekends-off, road editor to beeminder.com/premium #mini ×2</li>
+<li>A thing we broke with the last Rails upgrade: we weren't automatically getting the user's timezone on signup. #bugfix</li>
+<li>The weekends-off feature was giving you fridays off as well for do-less goals. #bugfix</li>
+<li>When improving our URL scheme in May we broke unsubscribe links for mass mails, noticed when sending next monthly beemail last week. #bugfix</li>
+<li>Road editor up-sprucing: added link to gory details, nixed redundant "add row" button, aligned the various inputs better.</li>
+<li>If whittling down Habitica To-Dos we now use your low-water mark of the day ⇒ no surprise derails from adding new To-dos before deadline</li>
+<li>The road editor was rejecting roads if the final row had just goal value (or goal total) and rate specified (ie, no date). #bugfix</li>
+<li><strong><a href="http://slackminder.com">Slackminder</a> has a built-in karmabot (do "/karma help")! And additional mini Habitica fix: no more delays in 1st fetch of day.</strong></li>
+<li>New road editor bug from when we spruced it up: it was duplicating the initial road row if you submitted multiple times in a row. #bugfix</li>
+<li>TagTime ping notifier in Slack bot ("/tagtime on") & turns out when we thought we fixed <a href="https://twitter.com/beemuvi/status/685623126156152832">the deauth callback thing</a> we broke it instead</li>
+<li>If the author of an app you authorized to access your beeswax deletes it we now remove it from <a href="https://www.beeminder.com/settings/apps">beeminder.com/settings/apps</a> (& no erroring out)</li>
+<li>SMS bot reminders more concise after initial reminder on an eep day. Eg, "Eep! +3 in &lt;30m for pushups ($5)"</li>
+<li>The SMS bot now has a better welcome message, has START as an alias for ACTIVATE, and responds to HELP with helpfulness.</li>
+<li>More tweaks to the SMS bot: Say "added" datapoint, not "updated". And we now give the time remaining in minutes at the end, not just "&lt;1h".</li>
+<li>Previous Habitica #bugfix in fact broke it worse. :facepalm: Fixed the fix now. Bonus UVI: Fixed the redundant headers in <a href="http://forum.beeminder.com">forum.beeminder.com</a>.</li>
+<li>#bugfix in API: give a nice error instead of a 500 if you submit a malformed daystamp for a datapoint. HT Malcolm Ocean of <a href="http://complice.co">Complice</a>.</li>
+<li>We'd missed a bunch of cases of "sign in" &rarr; "log in". Also fixed a typo in the beemail descriptions. #mini</li>
+<li>Added tooltip for Complice on the front page, moved the copy around in the "getting reminder about your..." email & added link to goal</li>
+<li>Links to goals in reminder emails now use "beeminder.com/user/goal" as the anchor text instead of goal title (which is now the title text)</li>
+    <!-- [Since we now deemphasize goal descriptions (titles) in favor of one-word goalnames, we now link to them that way in reminder emails] -->
+<li><strong>Premium plans revamp! Hopefully you don't view this as a negative UVI but it's part of ensuring Beeminder thrives for many more years, so...</strong></li>
+<li><strong>Beeminder now has a charity option! It's a premium perk to opt in to donating half your pledges to Watsi, EFF, or Give Directly</strong></li>
+<li><a href="http://beeminder.com/premium">beeminder.com/premium</a> is now viewable even if you're not logged in (the "Add Plan" buttons become "Sign Up")</li>
+<li>Similarly, if you're logged in but haven't added a credit card then the buttons say "Add Payment Method"</li>
+<li>New premium FAQ at the bottom of <a href="http://beeminder.com/premium">beeminder.com/premium</a> and moved the Exquisitely Fair Slider below the plan blurbs</li>
+<li>We now treat Core Beeminder (ie, the $0/month plan) as one of the plans. And btw, we're retiring the Beekeeper lifecoaching program. RIP.</li>
+<li>Now clearer how to switch between plans: plan you're on highlighted, says "currently subscribed", can click "downgrade" to downgrade, etc.</li>
+<li>Lifetime subscriptions are clearer. Rather than just disabling the plan button it says "lifetime subscribed".</li>
+<li>We tested when to make you add a credit card (commit-wall, not paywall), found earlier is better so now we do that after 1 or 2 goals</li>
+<li>Made a button on the new paywall to request additional free goals if you need more time to experiment or already pay lots in pledges</li>
+<li>Added a link to <a href="http://beeminder.com/premium">beeminder.com/premium</a> in the top navigation bar, and edits in the FAQ etc to get in line with premium changes</li>
+<li>Made the "discount please" button on beeminder.com/premium do something more sensible if you're not logged in (like telling you to do so)</li>
+<li>Changed the features listed for Core Beeminder in beeminder.com/premium based on <a href="http://forum.beeminder.com/t/mega-feature-list/2378">this poll</a></li>
+<li>Speaking of dangling carrots, the charities weren't clickable for Beemium people when we first deployed this. HT <a href="https://plus.google.com/+KennHamm">Kenn Hamm</a></li>
+<li>Plugged leak in the commit-wall: creating various autodata goals circumvented the prompt to add your credit card before creating more goals</li>
+<li>Replaced another instance of our janky credit card form with Stripe's elegant one, on the /premium page when you click Add Payment</li>
+<li>Forgot html_safe in zeno emails so were sending literal "&lt;a href='...." etc. #bugfix HT Markos Giannopoulos</li>
+<li>Added link to datapoints on archived goals. No need to hide data, though still can't edit/delete it. <a href="http://forum.beeminder.com/t/negative-values-in-hours-goals/1561/3">HT Kenn Hamm again</a></li>
+<li>Minis on beeminder.com/premium: Link to new blog post, clicking Sign Up button pops up a popup to sign up (but redirects you away after)</li>
+<li>Another tiny one: Lifetime subscribers to legacy plans now see the plan description even if they've upgraded to another plan</li>
+<li>Closed couple loopholes that let you apply discount coupons to legacy plans; also updates & additions ("Loophole idea!") to the premium FAQ</li>
+<li>In the premium revamp, introduced a bug that prevented creation of weight gain goals. This is America so it took a while to notice. #bugfix</li>
+    <!-- [was rearranging code, temporarily lost the goal type params (yaw, dir, etc) for them] -->
+<li>The first time you push the "more free goals" button we just give you one automatically. Not sure how we feel about that, but, experiments!</li>
+<li>And added a comment box with the "more free goals" & "discount please" buttons, for stating your case (and giving us much-needed feedback!)</li>
+<li>If you came to /premium w/ a coupon code we'd forget it after page reload after clicking a button to add a plan. Coupon worked but.. #bugfix</li>
+<li>Another bug in /premium with how pricing was displayed (when on a legacy plan, it looked like Infinibee cost more than Bee Plus) #bugfix</li>
+<li>Y'know how weasel-proofed goals aren't deletable in the first week like normal? Buggily, the archive button wasn't working either. #bugfix</li>
+<li>In some thankfully rare cases, if you chose Slack DM for zeno alerts, they'd not show up (forgot to make sure DM channel was open) #bugfix</li>
+<li>#bugfix in Habitica more-Todos goal creation: would start road at 0 but credit you w/ all to-dos ever completed =&gt; unreasonably big buffer</li>
+<li>Bugfix of the #bugfix (HT <a href="http://twitter.com/lady_alys">Alys</a> for both): accidentally truncated Habitica goals to start from today (manually fixed everyone affected)</li>
+<li>We updated/clarified the list of weasel restrictions in goal settings: no editing or manually adding data to autodata goal, no deleting</li>
+<li>Bug w/ downgrading premium plans if you had a coupon discount: we failed to apply it! Gulp! #bugfix HT <a href="http://twitter.com/my9goofie">@my9goofie</a> (Manually did refunds)</li>
+<li>Fixed our dumb Facebook share button (on the goal pages) that's been broken for we-don't-know-how-long. HT <a href="http://twitter.com/florismk">@florismk</a></li>
+<li>Another embarrassing one: 1st attempt (Jul 4) to fix broken image links (rails asset pipeline) left several broken that we just now #bugfix'd</li>
+    <!-- [twitter integration landing page header image, fatcyclist contest logo, hr scroll in landing pages and ajax loader spinner, mini todoist/pocket/foursquare logos on zapier page, ie 5 beecat] -->
+<li>We improved the Facebook share button: shows both goalname & title if different, & to round out this tiny UVI: fixed a typo in goal settings</li>
+<li>Facebook sharing #bugfix: it was picking the wrong image because we tried to specify the thumbnail which isn't on the page being shared</li>
+<li>Moved the discount slider back to the top and added an FAQ item to <a href="http://beeminder.com/premium">beeminder.com/premium</a></li>
+<li><strong>If you're not premium we strip html tags from your "about me" blurb & add a nofollow to the "personal url" when linked under your avatar</strong></li>
+<li>#bugfix w/ creating Skritter goals: worked around changes on Skritter side. Now at least works smoothly if already logged in to Skritter.</li>
+<li>Rounding bug w/ applying coupons for premium plans could make displayed price a whole dollar off :/ #bugfix HT Markos Giannopoulos</li>
+<li>When you create a goal w/ the API you can now specify the data source (manual, api, ifttt, zapier). HT Malcolm Ocean & <a href="http://complice.co">Complice</a></li>
+<li>Instead of just strongly suggesting it (via banner) we now force you to confirm your email before letting you give us your credit card</li>
+<li>(1 of 3) More helpful unsubscribe link! Sends you to a page with a big red button, is clear about what happens if you press it, ...</li>
+<li>(2 of 3) ... still tells you what's up if you visit the link multiple times, doesn't try to redirect to goal gallery, tells you your beemail ...</li>
+<li>(3 of 3) ... subscription level and number of active goals, and the button helpfully goes away on that page once it's done its job.</li>
+<li>Forcing email confirmation before adding credit card spawned couple bugs for grandfathered users, not allowing changing cc, etc #bugfix</li>
+</ol>
+
+<pre>
+-------- 2016 Sep 21 -----------------------------------------------------------------------------------------
+X ULK On the email unsubscribe page, "you have N active goals" now links to your gallery in case you forgot what you were once beeminding #mini
+X PFQ New premium FAQs about upgrading and downgrading and exquisite fairness, with new links and hovertext. https://www.beeminder.com/premium
+X SCL Crazy mongoid bug made rescale feature break, rarely. Probable #bugfix deployed plus instrumentation so we'll know for sure if happens again
+      [sometimes we would scale some datapoints multiple times, resulting in totally fubared goals. trying sorting datapoints first?]
+* IAR Failed/frozen goals (with the skull & crossbones) can now be instantly archived. Sorry we were so uptight about that for so long!
+X ABT Added our new Minister of the Exterior, @anomalily, to our About Us page. http://beeminder.com/aboutus Welcome Lillian! http://blog.beeminder.com/anomalily
+X ALY More cleanup of http://beeminder.com/aboutus & finally added @lady_alys who's been helping us w/ support & @habitica integration for a long time
+X TWT Slightly more sophisticated error checking in our Twitter goal setup: give an error if the user doesn't exist or their tweets are protected.
+X SM1 If you downgraded and lost the SMS bot perk, we'd get horribly confused and not let you save user settings anymore. #bugfix
+X SM2 SMS bot improvement: until you activate your phone number we give a link to resend the activation text message
+X SM3 Can now add a phone number even if you don't use the SMS bot (and we'll actually text/call if you derail at $810+ & don't respond to email)
+      ["maybe you are just hoping we'll give you a call to chat?" says bee]
+X ALL In case you have too many past pledges to show, we made a button that emails you the whole enchilada, in json format.
+X AL2 Got rid of superfluous fields in past pledges export and added a CSV version as well as JSON
+X BOT Email bot no longer silently (well, it was calling in us humans to intervene) fails on data-like datapoints that're not actually parsable
+X SPM Several fixes to decrease chances of bot emails getting spamboxed. More user-visible part: truncate quoting of probable spam in bot replies.
+X FUT Fixed, de-duped, and rearranged footer links. #mini
+X PRX Fixed a bug in how prices of lower premium plans were displayed to people already on a higher lifetime plan (now just says "$N/A"). #bugfix
+X PR2 Also on http://beeminder.com/premium: stopped confusingly saying "$0" for the lifetime plan you already have, plus new FAQ item & hovertexts
+X AS1 Moved all the graph images to S3: makes a noticeable difference in how fast goal galleries load & expected to even improve server stability
+X AS2 Better security: nonce URLs for graph images and thumbnails actually expire (totally new ones each time the graph is generated)
+X GAL Seemingly #mini UVI that's part of something huge: we now disallow the goalname "gallery" (part of getting best of all worlds w/ redesign)
+* B01 Bee-yootiful new redesign! Massive number of UVIs in this. Here begins a tweetstorm of the most noteworthy! (1/26)
+* B02 The Data tab is much nicer, lets you load all datapoints on one page, sort by any column, and it all happens right below the graph
+X B03 Editing data in the data table is also much nicer: you can just edit in place without first clicking a button
+X B04 And import/export and rescaling of data is now all below the data
+* B05 There's a button to delete your whole account if less than a week old or no active goals. The rest of http://expost.padm.us/byebyebee coming later.
+* B06 Table of reminder settings for all goals can sort by goal, deadline, zenostart, etc. Nice for setting up waterfalls: http://blog.beeminder.com/waterfalls
+* B07 Togglable buttons telling you the bare min or hard cap you need in terms of either the delta or the absolute number.
+X B08 The buttons for delta vs absolute (and for absolute vs "t minus" deadline time) remember which way you like them per goal
+* B09 Handy asterisk on the pledge telling you when you've hit your pledge cap, plus clearer indicator of pending pledge step-down
+* B10 New dashboard lets you expand/collapse individual goals (pro-tip: use it like a to-do list, collapsing when done with a goal for the day)
+X B11 You can now choose today vs yesterday when entering data from the dashboard.
+X B12 For autodata goals on the dashboard we have the icon for the data source and a nice hexagonal "force a fetch of more data" button
+X B13 Data entry now shows the goal units (not to mention all the increased prettiness, but that applies everywhere)
+X B14 The banner messages that appear at the top are much nicer, disappearing when it makes sense to and persisting otherwise
+* B15 Arguably a negative UVI but since we're drastically undercounting anyway: we killed the auto-quit feature. It was deeply unbeemindery!
+X B16 The Data tab is updated immediately when you add data and there's a "stats out of date" warning as a stopgap instead of just being stale
+* B17 You can now instantly delete goals from your gallery of archived goals
+X B18 So much confusing stuff now out of newbees' line of sight but all still conveniently acceessible in the tabs below the graph
+* B19 Tagging! Manage tags at http://beeminder.com/tags & then filter your dashboard via url-hacking, eg bmndr•com/user#tag or #!tag to exclude
+X B20 Tagging is multiple UVIs' worth so we'll use this tweet to say that, yes, a real UI is coming. Current version subsumes backburnering.
+* B21 Negative UVI but it was really a confusing, dangerous feature: backburnering is dead. Tag things "backburner" & filter them out instead!
+X B22 We now use the live time-bomb countdown for goals within a week of derailing and say "months" & "years" for goals with far deadlines
+X B23 Final row of the road editor is insta-updated when using the normal road dial (was moot in old design but nice having these on same page)
+X B24 New, helpful placeholder text in fields in the goal creation wizard
+X B25 We separated reminder defaults from other goal defaults. Two submit buttons on one page separated by lots of scrolling was a mess.
+X B26 Huge amount of aesthetic improvements & UI tweaks, hexagonal buttons, etc etc. This concludes the main tweetstorm for the redesign! (26/26)
+X HAB Redesign broke @habitica goal creation briefly! Newly created goals were failing to pick up new To-dos. #bugfix
+X C01 We now actually make sure the repo you want to mind exists and that you have access to it when you create a Gitminder goal
+X FUL When we launched the redesign we showed your full name in the public version of your gallery; that was a bad choice and we undid it that day
+X C02 In Withings goal creation we now validate that you give us an initial weight (though this seems to not work in Safari, frustratingly) #mini
+X TOG We now remember which goals on the dashboard you expanded/collapsed (& #bugfix today: it used to not work if you started from all-expanded)
+X C03 Smarter use of "Sun night", "tomorrow", etc in deadline blurbs. Eg, saying "tomorrow" instead of "Sun" if within 24 hours of the deadline.
+X TOT Fixed several cases (eg, the help text for the Due By table) of saying Value instead of Total or vice versa. #mini
+X C04 When you check or uncheck the Pessimistic Presumptive checkbox it instantly saves the setting and tells you so. Other settings to follow.
+X MIN More things we forgot to include in the redesign tweetstorm: stepper buttons for datapoint values etc, displaying far future dates in years.
+X CCR If you loaded the goal page and there was no previous datapoint then we were giving a 500 error. #bugfix
+X 500 Similarly when there was an error preventing the graph from generating. We'll say this UVI covers all similar bugs introduced by redesign.
+X LDP Small API improvement: Goal object now includes last_datapoint [TODO: document it]
+X SL1 We did several things with goalnames and descriptions: 1) descriptions viewable as tooltips on the dashboard;
+X SL2 2) We now ask for both goalname (previously known as "slug") and description (previously "title") when creating goals;
+* SL3 3) You can edit the description at any time at the top of the goal page;
+* SL4 4) Finally, to get as close as we're going to for now to the best of all worlds: click to toggle between goalname/description on dashboard
+* SL5 Almost forgot the biggest sluggy UVI: Anyone can edit their goalname any time (w/ big warning about breaking URLs and IFTTT recipes etc)
+X FX1 Tweetstorm about the flurry of bugfixes since deploying the redesign: We broke an embarrassing number of things! 1/5
+X FX2 We're fixing them as fast as we can and normally each individual #bugfix would be totally fair game as a separate UVI. 2/5
+X FX3 But we were insufficiently careful when deploying the redesign, so, as self-punishment (& due to overwhelm at the sheer number of UVIs) 3/5
+X FX4 ...we're not going to count anything else up to today that the redesign broke, other than this tweetstorm's worth: 4/5
+X FX5 ...which includes broken links, broken features like changing passwords, missing settings, backburner-goal brokenness in iOS, etc etc. 5/5
+* SAF There's no longer any limit on the number of days of initial safety buffer when creating a goal
+X MIN Collection of #mini UVIs: Ellipses for long goalnames, header for data entry box, more readable data table when it's not editable
+X RED If you accidentally try to submit a datapoint without filling in the value it now turns the field red so it's nice and obvious what happened
+X MIN Fixed some cases in alerts where we used the old "title" (what's now the goal description) to identify goals instead of the goalname #bugfix
+X RAT Changing the rate units in the road dial now does the arithmetic for you, like turning 7/week into 1/day, immediately, before hitting submit
+X TAG Minis: Query tags case-insensitively, road editor from Commitment to Settings tab, #bugfix's w/ submit button & enforcing ratchet bounds
+X BRI A kludge but a very noticeable improvement: we no longer let you insta-derail yourself by ratcheting the day after derailing
+X MIN Minis: 1. when showing the goalname, show goal description as hovertext; 2. jump straight to 1 when clicking the plus for datapoint value
+X TWT The hashtag-minding part of our Twitter integration was broken since forever (workaround was via IFTTT) but is now fixed. #bugfix
+* URL URLminder is an official integration! Automatically mind wordcounts of documents at any publicly accessible URLs. http://blog.beeminder.com/urlminder
+* UM2 We magically turn links to google docs into the plaintext version for URLminder so we get the real wordcount without extraneous html
+* NAN New NaNoWriMo landing page with buttons for automatic and manual tracking: https://www.beeminder.com/nanowrimo
+X CAP If you have a pledge stepdown scheduled you can set the pledge cap to what it's stepping down to; removed most of the confusing interactions
+X ASO If you create a goal with only post-dated data we now give a more elucidating error about why we can't show you a graph. #mini
+X MIN Fixed old instance of calling Habitica HabitRPG in bot email, fixed bug that made us miss points on Duolingo for Norwegian. #bugfix
+X MIS Mostly fixed the problem with missing graph images on the dashboard (but it still happens occasionally...). #bugfix #mostly #staytuned
+X IFT When we email you about an error in an IFTTT recipe we now include a link to the errant recipe. Handy!
+X MIN Fixed a 500 error when restarting an old GmailZero goal from before Google oauth params changed. Now backwards compatible. #bugfix #mini
+X THM Made the thumbnails collapse nicely even when the infinibee is buzzing on top of them (and keep buzzing in collapsed form)
+X TH2 Thumbnails also clickable even when infinibee buzzing (especially nice now that goalnames/goalblurbs toggle instead of linking to goal page)
+X TOG If goalname & blurb are same except case, don't toggle betw them on dashboard (looked like we'd implemented idiotic case-toggling feature!)
+X GRN If a goal is coasting (will hit goal value by goal date even if you do/report nothing) we now show it green w/ the correct wording. #bugfix
+X RTW Fixed longstanding bug that would sometimes insta-derail you when importing old RescueTime & Withings data when creating goals. #bugfix
+X FIT Dumb #bugfix w/ Fitbit goal creation: gave error if you didn't change the default settings. (ps: bugs intro'd by redesign count again now)
+-------- 2016 Dec 1  -----------------------------------------------------------------------------------------
+X CAS If a goalname's disallowed (eg "gallery" or existing goalnames) also disallow uppercase variants like "Gallery" or things break. #bugfix
+X MIN Embarrassingly there was a full month after the redesign when we set everyone's default timezone to US Eastern time. #bugfix
+X MON We rewrote the copy at http://beeminder.com/money which was a little broken since the Infinibee premium revamp. #mini
+X GMZ GmailZero #bugfix in which we were fetching your initial inbox count but then starting your road at 0 anyway for a while.
+X GAR Our Garmin stepcounts were sometimes too low. Garmin's granular API didn't agree with its summary data. We now use summary. #bugfix
+X MIN Fixed small bug with plus/minus buttons for data entry on odometer goals, and fixed a link to reminder settings in bot emails. #bugfix 
+X BLS By popular demand: our blog has a (@duckduckgo) searchbox. Seek & ye shall find. Dark days of adding "beeminder blog" to a web search: over!
+X GOO Yet another bug from redesign: If you signed up via Google oauth and then created a Do More goal we'd create it as a GmailZero goal. #bugfix
+X DEL Fixed an intermittent bug where you'd hit archive & the goal would mysteriously not archive if a previous goal w/ that name existed. #bugfix
+X HAB Nasty bug with our @habitica integration: all the Fewer To-Dos goals were being created as Do Mores (redesign bug). #bugfix
+X HA2 And a separate bug w/ our @habitica integration: for Do More goals we were starting the yellow brick road too high by 1 To-Do. #bugfix
+X IOS Version 4.4 of the Beeminder iOS app is live! Most important for brand new users: you can now create a Beeminder account from it.
+X IO2 Also in the new version of the iOS app: a Reset Data button to reload all goals, no more backburner dividing line, ...
+X IO3 Version 4.4 of iOS app cont'd: Bug fixes in push notifications, & you can tap Create Goal to go to the website pre-logged-in to create goals
+X MIN Marginally better "doom text" for weight loss; bigger body font; made 3rd-party font library local cuz it was killing response time. #mini
+X CSS Fixed broken CSS on various autodata landing pages and the unsubscribe page
+X GLN Fixed bunch of cases where we used goal description instead of goalname, which to some people's chagrin is now the universal goal identifier
+X PLE Fixed a bug involving the pledge amount being in two places. Now it's still in commitment settings too but pops up the same modal. #bugfix
+X PSW Moved password to separate section in settings which fixed bug w/ some browsers that wouldn't let you change settings w/o changing password
+X MON For over a month after the redesign we had a bug that let you sometimes create pledgeless goals w/out a premium plan. Gasp! #bugfix
+X AUT If you sent auth token but didn't specify the user we 500'd even tho w/ auth token it had to be you that you're requesting for. API #bugfix
+X IOB Critical #bugfix w/ iOS app that made us fail to push reminders under some mysterious circumstances involving frozen/archived goals
+X DPN Fixed a couple small bugs with trying to get a premium plan without being initially logged in. #bugfix HT @pennockd
+      [https://trello.com/c/xMMP1Out/738-very-hard-to-get-a-premium-plan-without-a-credit-card-already-on-file
+       https://trello.com/c/ehlCv3V3/737-can-t-get-a-premium-plan-if-not-logged-in-garden-path-bug]
+------- 2017 Jan 1 ---------------------------------------------------------------------------------------------------------------------------------
+X NPL Fixed a case of showing the wrong new pledge amount in the legit check email if you had auto-increasing pledges turned off. #bugfix
+      [https://github.com/beeminder/beeminder/commit/720f3f05a9a6608171349cc449521798ba6b89e8
+       https://trello.com/c/aB2lyvJa/726-pledge-cap-no-autoincrease]
+X IPL Fixed checkbox that was acting like expand/collapse instead of a checkbox for whether to auto-increase pledges when you derail. mini #bugfix
+X MIN Mini #bugfix w/ pointlessly clickable things when viewing other people's graphs. Also cleaned up CSS bugs on some landing pages.
+X DEA If you set a default deadline we were accidentally applying that to autodata goals that don't support arbitrary deadlines. #bugfix
+X BUT Avoided a bunch of confusion by nixing the instant-archive buttons in the dashboard for frozen/completed goals; all done from goal pages now
+X IOC Don't mention "safe days" in bot email subject when it exceeds days till goal end date. Also iOS notifications now make the default sound.
+X RED Removed now-meaningless backburner line in reminder settings, and brought back all autodata settings that got lost in the redesign
+X MIN Mini UVIs: We now refresh graph after updating weekends-off, higher-res Duolingo logo, more obvious link to change goal date / goal total
+X FRO Added button on goal page to archive frozen goals. Bonus #mini UVI: datapoint value is cleared when you submit it on dashboard.
+X STP Pledge stepper now indicates when it hits its limit (eg, you can't pledge more than $2430). #mini
+X FIT One more thing we broke in the redesign: we weren't allowing a negative rate for Fitbit net calories goals. #bugfix
+X TMZ We now use your chosen timezone in your Beeminder settings for showing "today"/"yesterday", not whatever your browser thinks. #bugfix
+X PLE Fixed a 500 error for the case of opening the pledge popup for a goal (maybe just on archived goals?) with no credit card on file. #bugfix
+X XMM UI improvement: x-max can't be in the past and x-min can't be in the future. #mini
+X GMA You can now change the default GmailZero query when creating GmailZero goals, instead of having to go digging in settings afterwards.
+X ARC On /archived it says "No archived goals!"if you have none. And on the front page, link to autodata landing pages, not goal creation. #mini 
+X YAX This counts as a UVI but we're not yet happy with the interaction between goal units & things like y-axis label: http://forum.beeminder.com/t/y-axis-label-didnt-update-in-graph-after-changed-in-settings/2652
+X ADL We're now consistent for all autodata goal creation in giving you the option to start with an arbitrary amount of safety buffer
+X TOD We're obviously very behind on UVI tweets because we're just getting to our official Todoist integration! http://blog.beeminder.com/todoist/
+X FIT All Fitbit goals were getting created as Do More (or failing altogether?) for 2 months after we launched the redesign. #bugfix
+X BLA Fixed a couple UI bugs with changing goalnames (& #bugfix w/ using numbers as goalnames). http://forum.beeminder.com/t/how-to-change-goal-url/2818
+X HID Another embarrassing thing we broke w/ redesign: If you said "hide y-axis" for a while we weren't also hiding stats that leaked that info.
+X END We now show the expanded road dial (w/ end date & end value as well as rate) if the goal is ending within 30 days (too magical?)
+X GIT Gitminder goal creation now handles the case revoked Beeminder's authorization on GitHub (& maybe other cases of bad GitHub credentials)
+X BAN More tweaks to error banners so that important ones don't get obscured. #mini
+X GM2 UI tweak in Gitminder goal creation: automatically switch the radio button to specific repository if you start to type one. #mini
+X MIN More #mini UVIs: nixed superfluous logged in/out banners, fixed links to create goals on ifthismindthat.com and zapminder.com
+X HEA Mini #bugfix / UI-polish with expanding/collapsing the goals: if you do it to all of them one by one you can still undo w/ 1 click in header
+X DAS We used to magically re-sort the dashboard when you entered data but that turned out to be a bad idea; now you can click "DEADLINE" to do so
+------- 2017 Feb 10 ------------------------------------------------------------------------------------------------------------------------------
+X FOC Previous UVI also fixed a nasty focus bug when entering data in succession in dashboard. Also related: we killed reverse sorting.
+X FIN Custom fine print for goals is publicly visible again and we allow hyperlinks. http://forum.beeminder.com/t/link-in-fine-print/2976/1
+X CAP Used to be that every time we autoratched (automatically capping safety buffer) the graph would get stuck w/ buzzy bee for 5-10min. #bugfix
+X TAB We can now link directly to specific tabs in account settings, eg, https://www.beeminder.com/settings/account#account-details
+X GMZ Thing we broke like a year ago: when fetching your initial GmailZero count, if it's too big to fetch, we once again tell you that. #bugfix
+X API API #bugfix: the requestid param only did worked as advertised for creating single datapoints, not create_all. HT John Swanson
+      [When creating a datapoint via API, sending requestid param is supposed to make it act like an UPSERT, but this was broken in the create_all (multi-create) endpoint. so it would still work to make sure you weren't creating duplicate datapoints, but it wouldn't update an existing datapoint if you passed in updated parameters with the same requestid]
+X URL Fixed a bug in the URLminder magic that lets us fetch the plaintext version of a Google doc. https://www.beeminder.com/nanowrimo #bugfix
+X CMW Fixed a bug that meant we wouldn't show you even landing pages of some autodata integrations if you hadn't entered a credit card. #bugfix
+* SEC We added "make private" to "new goal settings" in account settings if you want all new goals to default to private http://forum.beeminder.com/t/please-let-me-default-new-goals-to-private/2880
+* HMM For goals denominated in hours we now display amounts in HH:MM in most places on the website.
+X RUN Fixed a nasty bug w/ road dial where we'd mess up the last segment of your road when you changed the rate units (daily/weekly/etc). #bugfix
+X SHM Fixed a 500-error involving displaying bare-mins as HH:MM for ended goals. Also stopped showing HH:MM:SS in recent data. #bugfix
+X MIN Somewhat smarter rounding and don't show integers as X.00. And another #mini #bugfix with sometimes showing "++HH:MM" instead of "+HH:MM"
+X JSD A bunch of small improvements to our datapoint format checker. You can see all the crazy example parsings at http://d.gomix.me
+X TWE Made the navigation header not annoyingly large. Also: tweaks to http://beeminder.com/aboutus: Capitalize "Hours", make our titles fit on 1 line.
+X SHR More #mini UVIs: shrunk annoyingly large navigation header, made archived gallery show 4 across, link to archive in gallery view.
+X BUT And a super #mini one: made the pledge box not have an "i'm a button" shadow if you're looking at someone else's goal so it's not clickable
+X SRT [We made dashboard sorting always pick the sensible order (increasing time to derailment, decreasing pledge, etc).] [not merged yet]
+X TRL In goal settings for Trello goals we now link to the actual board that we're pulling data from.
+X SLG We now show both the goalname and the description (the latter in a tiny font) on the dashboard. No more confusing toggling (for goalnames)!
+X MIN Fixed missing newline in text under graph thumbnails in gallery view. #mini #bugfix #redesign And show full goal description as hovertext.
+X TMZ When you had non-midnight deadlines for a goal we'd sometimes show you the wrong date for adding new data. #redesign #bugfix
+X URM #bugfix in URLminder: don't add a new datapoint every single time we check, only when wordcount has actually changed https://www.beeminder.com/new#urlminder
+X PRM Added a new premium FAQ item at http://beeminder.com/premium. Includes my ill-advised murder joke. #yolo #mini
+X BKG #bugfix kind of: the dates used for the add-data form were being too clever and magically updating when your deadline hit; caused confusion!
+X IOS #bugfix: The iPhone beemergency badge icon didn't show up unless you remembered to manually launch the app every single day. HT Paul Schmidt
+X AWS I guess we'll count this: We now have an informative static image to show in place of graphs in case Amazon goes down and won't show them...
+X FAP Super facepalmy bug made us forget toggle states (countdown vs time, expanded vs not, etc) on dashboard after visiting new goal page #bugfix
+X GOC #bugfix w/ goal wizard that'd occasionally/rarely give a blank page when creating a goal (related to bad state from previous goal creation)
+X AND At some point our push notifications for the Android app broke which made graphs appear to be regenerating forever. #bugfix #firebase
+X MIN #mini UVIs: new Epson logo, made table in the middle of http://beeminder.com/api not ugly (#redesign), tweaked flash banner for premium plans
+X TOD We now have proper error handling for losing authorization to read a user's Todoist data #mini #bugfix
+X ROM We now support Romanian as one of the languages you can beemind learning on Duolingo!
+X FIT We added "number of activities" as a thing you can beemind via @Fitbit (& removed "very active time" since Fitbit doesn't support that now)
+X SML We made the goal descriptions smaller because we're very opinionated about people focusing on the goalnames as the main identifiers of goals
+X JMP We again let you jump from $0 to $5 pledged (even without the Beemium plan that lets you jump to any amount). #bugfix #redesign-regression
+* CAN Feature! We trust our users so much that when you update a failed payment method you can actually pick which charges should be retried!
+X INT iPhone app couldn't handle safety buffer &gt;32767 days so now we cap it at that. Also fixed a redesign regression as part of prev UVI. #bugfix
+X JOB We made our jobs page -- https://www.beeminder.com/jobs -- less out of date and embarrassing! And added a little "need help?" footer link.
+X TAB Fixed a bug where sometimes the tabs below the graph would be completely blank until you reloaded the page. #bugfix
+X MIN Added link to forum post which explains the aggday custom goal setting. & Fitbit "number activities" was buggy for the 1st 11 days. #bugfix
+X MLG We fixed our SMTP/DNS/whatever settings so outgoing mail doesn't say "sent via mailgun dot org" in Gmail. #mini HT our CEO's mother
+X QUE We made updates via the website & Android & iOS all have higher priority which noticeably improved graph regeneration times (tho still bad)
+X GBT We fixed some annoying things with the guest access (for beemium people) to our dev chat: URLs work now, and disconnects handled better
+X TRC Fixed a bug in the dashboard where quickly tripleclicking the goal would show the add data form below the collapsed goal. #bugfix
+X SWA We now support Swahili in @duolingo! And a #mini UVI: Tooltips in the header of the big table for setting reminders for all goals at once.
+X DTT Fixed the hovertext for datapoints to always show the relevant metadata and not redundantly repeat the comment as hovertext. #mini
+X REP Email replies when you add data via the bot now never totally fail to send if we can't fetch one of the random tips of the day. #bugfix
+* URM You can now see and update the list of URLminder URLs in your goal settings. Makes URLminder much more useful! https://www.beeminder.com/nanowrimo
+* URD Also URLminder now supports arbitrary deadlines!
+X FNT Fixed a big with strange font sizes of goalnames on the dashboard. #bugfix http://forum.beeminder.com/t/strange-font-sizes-on-dashboard/3043
+X FBA Fixed a bug with creating new Fitbit number-of-activities goal. The initial import of last week of data could insta-derail you. #bugfix
+------ 2017 Apr 1 --------------------------------------------------------------------------------------------------------------------------------
+* DRO URLminder now magically fixes Dropbox links so you can beemind wordcount for any plaintext document you have sync'd with Dropbox
+X GES #bugfix for the +/- stepper buttons for Garmin & Epson goal creation: hitting the "-" button would increase the value. Negation is tricky!
+X FB2 Another #bugfix with Fitbit number-of-activities goals: we used the wrong endpoint and only got ones added via the website not devices
+* MON We upgraded our db & got graph regen times back down to ~5s. Phew! Now we may have to work on mass-editing of goals http://forum.beeminder.com/t/februarys-annoyingness-straw-poll/2995
+X EXP We changed the smoothing constant for the purple line from .1 to .25. http://forum.beeminder.com/t/any-way-to-control-exponential-moving-average-history/2938/7?u=dreev
+X URL We made a proper landing page for URLminder: http://beeminder.com/urlminder
+X UM2 We now always fix Dropbox and Google Docs links when you add/edit them in Settings, not just when first creating the goal.
+X BMM Goals created via http://beemind.me now act like proper autodata goals and magically fetch data before zeno'ing instead of just hourly!
+      https://twitter.com/beemuvi/status/850135561683652608
+o TWT Our Twitter hashtag-minding integration was case-sensitive with the hashtags but Twitter search results aren't so now we're not either!
+      https://twitter.com/beemuvi/status/850483794507255808
+o DOT We now allow dots in the names you give 3rd-party apps that use the Beeminder API, and we no longer let you change those names! #consistency
+      https://twitter.com/beemuvi/status/850484164356841472
+o URL We added a link to our newbee-friendly blog post about beeminding writing to the URLminder landing page. http://beeminder.com/urlminder #mini
+      https://twitter.com/beemuvi/status/850484239959076864
+o SER Fixed our redirect from beeminder.com/services to point to https://www.beeminder.com/settings/account#account-permissions #mini
+      https://twitter.com/beemuvi/status/850484557644087296
+o FOR Simplified http://forum.beeminder.com header, added an infinibee linking to Beeminder. (other improvements purely from Discourse don't count)
+      https://twitter.com/beemuvi/status/852306113424801792
+o MIN Fixed a typo and added an FAQ item to http://beeminder.com/premium about the SMS bot being US-only #mini
+      https://twitter.com/beemuvi/status/852307170427191297
+o SMS Also we now link to the FAQ item about SMS being US-only in the actual SMS settings, something we lost in the #redesign
+      https://twitter.com/beemuvi/status/852317002890792961
+
+</pre>
+  
+</main>
+
+<script src="https://code.jquery.com/jquery-2.2.1.min.js"
+        integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+        crossorigin="anonymous"></script>
+<script src="/client.js"></script>
+
+</body>
+</html>
