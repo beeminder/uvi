@@ -16,4 +16,4 @@ Also it would be nice if it were easy to totally migrate away from Twitter in th
 ## TODO LIST
 
 1. Better CSS so it doesn't look so ugly (Bootstrap?)
-2. Link to jump to the bottom
+2. Link to jump to the bottom (or top-post the whole thing)
