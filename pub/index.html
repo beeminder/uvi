@@ -8,9 +8,9 @@
 <html>
 <head>
 <title>Beeminder Changelog</title>
-<meta name="description" content="TODO">
+<meta name="description" content="List of all User-Visible Improvements to Beeminder since 2011 Feb 20">
 <link id="favicon" rel="icon" 
-      href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+      href="http://doc.beeminder.com/favicon.ico" type="image/x-icon">
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -1263,6 +1263,26 @@ o MIN Fixed a typo and added an FAQ item to http://beeminder.com/premium about t
       https://twitter.com/beemuvi/status/852307170427191297
 o SMS Also we now link to the FAQ item about SMS being US-only in the actual SMS settings, something we lost in the #redesign
       https://twitter.com/beemuvi/status/852317002890792961
+o LH1 Closing another loophole: we now don't let you delete a goal that has a pending charge
+      https://twitter.com/beemuvi/status/853029611386552321
+o LH2 Also closed loophole where if you archived a goal & the archive took effect after derailing but before charging you, we wouldn't charge you
+      https://twitter.com/beemuvi/status/853029721499590656
+o LH3 And to minimize surprises, when you insta-archive a goal after derailing we warn you if there's a pending charge that'll still happen
+      https://twitter.com/beemuvi/status/854120852920516609
+o DLU Safety buffer auto-trimming for do-less now asks for how much buffer you want in terms of, eg, cups of coffee (not days like do-more). #mini
+      https://twitter.com/beemuvi/status/854457099840921600
+* CAB Big API improvement! 3rd-party apps can specify an autofetch callback so Beeminder tells them when to autofetch instead of polling
+      https://twitter.com/beemuvi/status/854829206009593856
+o DOC Added documentation of the autofetch callback URL in beeminder.com/api (grep "autofetch") plus some other API docs cleanup
+      https://twitter.com/beemuvi/status/854829557307719680
+o LNK And we now link nicely to the docs from beeminder.com/apps/new (milking this for 3 UVIs but it's a big deal guys!!)
+      https://twitter.com/beemuvi/status/854829661095723008
+o CB2 Another improvement for 3rd-party apps: you can explicitly register your app as the datasource for any goal. http://blog.beeminder.com/autofetch
+      https://twitter.com/beemuvi/status/855528876302192640
+<!-- 
+STAGED: ------10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140  
+-->
+
 
 </pre>
   
