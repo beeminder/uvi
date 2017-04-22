@@ -225,7 +225,7 @@ var Grailbird = function (type, date, data) {
   (function(exports) {
     exports.base = {
       init: function () {
-        $('.navbar-search .search-query').attr('placeholder', 'Search all Tweets');
+        $('.navbar-search .search-query').attr('placeholder', 'Search all UVI tweets');
         this.buildNavigation();
         this.displayTweets(0);
       },
