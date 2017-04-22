@@ -1,3 +1,5 @@
+var PHEXT = 'Search all UVI tweets'; // placeholder text for search box
+
 var Grailbird = function (type, date, data) {
   Grailbird.data = Grailbird.data || {};
   Grailbird.data[type+'_'+date] = data;
@@ -225,7 +227,7 @@ var Grailbird = function (type, date, data) {
   (function(exports) {
     exports.base = {
       init: function () {
-        $('.navbar-search .search-query').attr('placeholder', 'Search all UVI tweets');
+        $('.navbar-search .search-query').attr('placeholder', PHEXT);
         this.buildNavigation();
         this.displayTweets(0);
       },
