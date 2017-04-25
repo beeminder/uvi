@@ -1,19 +1,106 @@
-/* global Grailbird */ // keep ESLint happy
-
-Grailbird.data.tweets_2011_02 = 
+Grailbird.data.tweets_2016_05 = 
  [ {
-  //"source" : "\u003Ca href=\"http:\/\/twitter.com\" rel=\"nofollow\"\u003ETwitter Web Client\u003C\/a\u003E",
+  "source" : "\u003Ca href=\"http:\/\/twitter.com\" rel=\"nofollow\"\u003ETwitter Web Client\u003C\/a\u003E",
+  "entities" : {
+    "user_mentions" : [ ],
+    "media" : [ ],
+    "hashtags" : [ {
+      "text" : "mini",
+      "indices" : [ 91, 96 ]
+    }, {
+      "text" : "bugfix",
+      "indices" : [ 97, 104 ]
+    } ],
+    "urls" : [ ]
+  },
+  "geo" : { },
+  "id_str" : "736237547894931461",
+  "text" : "Fixed an ugly error on the dashboard that you'd see if one of your goals had no datapoints #mini #bugfix",
+  "id" : 736237547894931461,
+  "created_at" : "2016-05-27 16:48:04 +0000",
+  "user" : {
+    "name" : "Beeminder Dogfood",
+    "screen_name" : "beemuvi",
+    "protected" : false,
+    "id_str" : "255132533",
+    "profile_image_url_https" : "https:\/\/pbs.twimg.com\/profile_images\/1249896638\/dogbee_normal.jpg",
+    "id" : 255132533,
+    "verified" : false
+  }
+}, {
+  "source" : "\u003Ca href=\"http:\/\/twitter.com\" rel=\"nofollow\"\u003ETwitter Web Client\u003C\/a\u003E",
+  "entities" : {
+    "user_mentions" : [ ],
+    "media" : [ ],
+    "hashtags" : [ {
+      "text" : "bugfix",
+      "indices" : [ 127, 134 ]
+    }, {
+      "text" : "mini",
+      "indices" : [ 136, 141 ]
+    } ],
+    "urls" : [ ]
+  },
+  "geo" : { },
+  "id_str" : "735712629767864320",
+  "text" : "In goal creation, require &amp; actually use given current value for odometer goals (we were initially ignoring it altogether! #bugfix) #mini",
+  "id" : 735712629767864320,
+  "created_at" : "2016-05-26 06:02:14 +0000",
+  "user" : {
+    "name" : "Beeminder Dogfood",
+    "screen_name" : "beemuvi",
+    "protected" : false,
+    "id_str" : "255132533",
+    "profile_image_url_https" : "https:\/\/pbs.twimg.com\/profile_images\/1249896638\/dogbee_normal.jpg",
+    "id" : 255132533,
+    "verified" : false
+  }
+}, {
+  "source" : "\u003Ca href=\"http:\/\/twitter.com\" rel=\"nofollow\"\u003ETwitter Web Client\u003C\/a\u003E",
+  "entities" : {
+    "user_mentions" : [ ],
+    "media" : [ ],
+    "hashtags" : [ {
+      "text" : "mini",
+      "indices" : [ 122, 127 ]
+    }, {
+      "text" : "oldie",
+      "indices" : [ 128, 134 ]
+    } ],
+    "urls" : [ ]
+  },
+  "geo" : { },
+  "id_str" : "735330340861054976",
+  "text" : "When you add a datapoint with a comment to the dashboard, we immediately replace the placeholder text in the comment box. #mini #oldie",
+  "id" : 735330340861054976,
+  "created_at" : "2016-05-25 04:43:09 +0000",
+  "user" : {
+    "name" : "Beeminder Dogfood",
+    "screen_name" : "beemuvi",
+    "protected" : false,
+    "id_str" : "255132533",
+    "profile_image_url_https" : "https:\/\/pbs.twimg.com\/profile_images\/1249896638\/dogbee_normal.jpg",
+    "id" : 255132533,
+    "verified" : false
+  }
+}, {
+  "source" : "\u003Ca href=\"http:\/\/twitter.com\" rel=\"nofollow\"\u003ETwitter Web Client\u003C\/a\u003E",
   "entities" : {
     "user_mentions" : [ ],
     "media" : [ ],
     "hashtags" : [ ],
     "urls" : [ ]
   },
+  "in_reply_to_status_id_str" : "735022724901281792",
   "geo" : { },
-  "id_str" : "41201771376418816",
-  "text" : "Made all rates consistently use the specified units in the JSON output.",
-  "id" : 41201771376418816,
-  "created_at" : "2011-02-25 18:24:02 +0000",
+  "id_str" : "735022938462687232",
+  "in_reply_to_user_id" : 255132533,
+  "text" : "And added a header row to the CSV\/TSV to name the columns, and now we name the file with the user\/goalname instead of just \"datapoints.csv\"",
+  "id" : 735022938462687232,
+  "in_reply_to_status_id" : 735022724901281792,
+  "created_at" : "2016-05-24 08:21:39 +0000",
+  "in_reply_to_screen_name" : "beemuvi",
+  "in_reply_to_user_id_str" : "255132533",
   "user" : {
     "name" : "Beeminder Dogfood",
     "screen_name" : "beemuvi",
@@ -32,10 +119,41 @@ Grailbird.data.tweets_2011_02 =
     "urls" : [ ]
   },
   "geo" : { },
-  "id_str" : "41201736186216448",
-  "text" : "Check out the stats at the bottom of your graph page now; much nicer!",
-  "id" : 41201736186216448,
-  "created_at" : "2011-02-25 18:23:54 +0000",
+  "id_str" : "735022724901281792",
+  "text" : "CSV\/TSV export now has iso8601 dates (both humans &amp; machines rejoice!) and additional columns: daystamp, createdat, deadline",
+  "id" : 735022724901281792,
+  "created_at" : "2016-05-24 08:20:48 +0000",
+  "user" : {
+    "name" : "Beeminder Dogfood",
+    "screen_name" : "beemuvi",
+    "protected" : false,
+    "id_str" : "255132533",
+    "profile_image_url_https" : "https:\/\/pbs.twimg.com\/profile_images\/1249896638\/dogbee_normal.jpg",
+    "id" : 255132533,
+    "verified" : false
+  }
+}, {
+  "source" : "\u003Ca href=\"http:\/\/twitter.com\" rel=\"nofollow\"\u003ETwitter Web Client\u003C\/a\u003E",
+  "entities" : {
+    "user_mentions" : [ {
+      "name" : "Fitbit",
+      "screen_name" : "fitbit",
+      "indices" : [ 72, 79 ],
+      "id_str" : "17424053",
+      "id" : 17424053
+    } ],
+    "media" : [ ],
+    "hashtags" : [ {
+      "text" : "mini",
+      "indices" : [ 124, 129 ]
+    } ],
+    "urls" : [ ]
+  },
+  "geo" : { },
+  "id_str" : "734274358227566593",
+  "text" : "Moved deadline setting (needs to always be near zeno start time), fixed @fitbit push notifications (should be faster again) #mini \u00D72",
+  "id" : 734274358227566593,
+  "created_at" : "2016-05-22 06:47:03 +0000",
   "user" : {
     "name" : "Beeminder Dogfood",
     "screen_name" : "beemuvi",
@@ -54,10 +172,10 @@ Grailbird.data.tweets_2011_02 =
     "urls" : [ ]
   },
   "geo" : { },
-  "id_str" : "41138773358149632",
-  "text" : "JSON output has timestamps in unixtime. (Plus introduced and then fixed a bug; not sure if we should count that.)",
-  "id" : 41138773358149632,
-  "created_at" : "2011-02-25 14:13:42 +0000",
+  "id_str" : "733953053569650688",
+  "text" : "Mini UVIs: Added Duolingo Russian phrase, better URLs for some settings like \/reminders\/username, alphabetized autodata icons in goal wizard",
+  "id" : 733953053569650688,
+  "created_at" : "2016-05-21 09:30:18 +0000",
   "user" : {
     "name" : "Beeminder Dogfood",
     "screen_name" : "beemuvi",
@@ -72,14 +190,22 @@ Grailbird.data.tweets_2011_02 =
   "entities" : {
     "user_mentions" : [ ],
     "media" : [ ],
-    "hashtags" : [ ],
+    "hashtags" : [ {
+      "text" : "mini",
+      "indices" : [ 99, 104 ]
+    } ],
     "urls" : [ ]
   },
+  "in_reply_to_status_id_str" : "733085064947499008",
   "geo" : { },
-  "id_str" : "40656544131457024",
-  "text" : "Add \".json\" to your graph URL to get graph params & output as JSON. Eg http:\/\/bmndr.com\/d\/meta.json (will work after your next datapoint)",
-  "id" : 40656544131457024,
-  "created_at" : "2011-02-24 06:17:30 +0000",
+  "id_str" : "733085133817978885",
+  "in_reply_to_user_id" : 255132533,
+  "text" : "3\/ Finally, you can now pull to refresh your goal gallery even if you have a small number of goals #mini",
+  "id" : 733085133817978885,
+  "in_reply_to_status_id" : 733085064947499008,
+  "created_at" : "2016-05-19 00:01:30 +0000",
+  "in_reply_to_screen_name" : "beemuvi",
+  "in_reply_to_user_id_str" : "255132533",
   "user" : {
     "name" : "Beeminder Dogfood",
     "screen_name" : "beemuvi",
@@ -94,14 +220,22 @@ Grailbird.data.tweets_2011_02 =
   "entities" : {
     "user_mentions" : [ ],
     "media" : [ ],
-    "hashtags" : [ ],
+    "hashtags" : [ {
+      "text" : "bugfix",
+      "indices" : [ 88, 95 ]
+    } ],
     "urls" : [ ]
   },
+  "in_reply_to_status_id_str" : "733084981812158464",
   "geo" : { },
-  "id_str" : "40267278511648768",
-  "text" : "Rudimentary stats at bottom of graph pages.",
-  "id" : 40267278511648768,
-  "created_at" : "2011-02-23 04:30:41 +0000",
+  "id_str" : "733085064947499008",
+  "in_reply_to_user_id" : 255132533,
+  "text" : "2\/ And we no longer crash if adding a datapoint times out or otherwise returns an error #bugfix",
+  "id" : 733085064947499008,
+  "in_reply_to_status_id" : 733084981812158464,
+  "created_at" : "2016-05-19 00:01:14 +0000",
+  "in_reply_to_screen_name" : "beemuvi",
+  "in_reply_to_user_id_str" : "255132533",
   "user" : {
     "name" : "Beeminder Dogfood",
     "screen_name" : "beemuvi",
@@ -116,102 +250,17 @@ Grailbird.data.tweets_2011_02 =
   "entities" : {
     "user_mentions" : [ ],
     "media" : [ ],
-    "hashtags" : [ ],
+    "hashtags" : [ {
+      "text" : "bugfix",
+      "indices" : [ 130, 137 ]
+    } ],
     "urls" : [ ]
   },
   "geo" : { },
-  "id_str" : "39739599475576832",
-  "text" : "Set up http:\/\/bmndr.com\/meta\/uvi to force ourselves to average at least 1 user-visible improvement (UVI) per day (certain exemptions apply).",
-  "id" : 39739599475576832,
-  "created_at" : "2011-02-21 17:33:53 +0000",
-  "user" : {
-    "name" : "Beeminder Dogfood",
-    "screen_name" : "beemuvi",
-    "protected" : false,
-    "id_str" : "255132533",
-    "profile_image_url_https" : "https:\/\/pbs.twimg.com\/profile_images\/1249896638\/dogbee_normal.jpg",
-    "id" : 255132533,
-    "verified" : false
-  }
-}, {
-  "source" : "\u003Ca href=\"http:\/\/twitter.com\" rel=\"nofollow\"\u003ETwitter Web Client\u003C\/a\u003E",
-  "entities" : {
-    "user_mentions" : [ ],
-    "media" : [ ],
-    "hashtags" : [ ],
-    "urls" : [ ]
-  },
-  "geo" : { },
-  "id_str" : "39442308222943232",
-  "text" : "As predicted: bug fix! Suppressed oversuppressing of reminder emails.",
-  "id" : 39442308222943232,
-  "created_at" : "2011-02-20 21:52:33 +0000",
-  "user" : {
-    "name" : "Beeminder Dogfood",
-    "screen_name" : "beemuvi",
-    "protected" : false,
-    "id_str" : "255132533",
-    "profile_image_url_https" : "https:\/\/pbs.twimg.com\/profile_images\/1249896638\/dogbee_normal.jpg",
-    "id" : 255132533,
-    "verified" : false
-  }
-}, {
-  "source" : "\u003Ca href=\"http:\/\/twitter.com\" rel=\"nofollow\"\u003ETwitter Web Client\u003C\/a\u003E",
-  "entities" : {
-    "user_mentions" : [ ],
-    "media" : [ ],
-    "hashtags" : [ ],
-    "urls" : [ ]
-  },
-  "geo" : { },
-  "id_str" : "39410628175200256",
-  "text" : "Now suppressing reminder emails if you already entered something. (If buggy the bug fixes also count as UVIs! Purposefully super generous.)",
-  "id" : 39410628175200256,
-  "created_at" : "2011-02-20 19:46:40 +0000",
-  "user" : {
-    "name" : "Beeminder Dogfood",
-    "screen_name" : "beemuvi",
-    "protected" : false,
-    "id_str" : "255132533",
-    "profile_image_url_https" : "https:\/\/pbs.twimg.com\/profile_images\/1249896638\/dogbee_normal.jpg",
-    "id" : 255132533,
-    "verified" : false
-  }
-}, {
-  "source" : "\u003Ca href=\"http:\/\/twitter.com\" rel=\"nofollow\"\u003ETwitter Web Client\u003C\/a\u003E",
-  "entities" : {
-    "user_mentions" : [ ],
-    "media" : [ ],
-    "hashtags" : [ ],
-    "urls" : [ ]
-  },
-  "geo" : { },
-  "id_str" : "39405230130991104",
-  "text" : "Added ridiculous dog-dressed-as-a-bee picture. Yes, \"improvement\" is allowed to be in big fat scare quotes.",
-  "id" : 39405230130991104,
-  "created_at" : "2011-02-20 19:25:13 +0000",
-  "user" : {
-    "name" : "Beeminder Dogfood",
-    "screen_name" : "beemuvi",
-    "protected" : false,
-    "id_str" : "255132533",
-    "profile_image_url_https" : "https:\/\/pbs.twimg.com\/profile_images\/1249896638\/dogbee_normal.jpg",
-    "id" : 255132533,
-    "verified" : false
-  }
-}, {
-  "source" : "\u003Ca href=\"http:\/\/twitter.com\" rel=\"nofollow\"\u003ETwitter Web Client\u003C\/a\u003E",
-  "entities" : {
-    "user_mentions" : [ ],
-    "media" : [ ],
-    "hashtags" : [ ],
-    "urls" : [ ]
-  },
-  "geo" : { },
-  "id_str" : "39402430655373312",
-  "text" : "Created this twitter acct to log user-visible improvements (UVIs) to Beeminder. (Yes, this is a UVI. Everything counts no matter how small!)",
-  "id" : 39402430655373312,
-  "created_at" : "2011-02-20 19:14:06 +0000",
+  "id_str" : "733084981812158464",
+  "text" : "1\/ iOS app version 4.3! (couple weeks old now) No longer crashes when you log in w\/ Facebook or hangs when you log in with Google #bugfix",
+  "id" : 733084981812158464,
+  "created_at" : "2016-05-19 00:00:54 +0000",
   "user" : {
     "name" : "Beeminder Dogfood",
     "screen_name" : "beemuvi",

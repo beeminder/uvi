@@ -15,13 +15,10 @@ Also it would be nice if it were easy to totally migrate away from Twitter in th
 
 ## TODO LIST
 
-1. Better CSS so it doesn't look so ugly (maybe just Bootstrap like the twitter export uses)
-2. Link to jump to the bottom (or top-post the whole thing)
+1. Link to jump to the bottom (or top-post the whole thing)
 
 ## Twitter Export README
 
 * The Twitter export data is in the the pub/twex directory
 * The JSON export contains a full representation of your Tweets as returned by v1.1 of the Twitter API. See https://dev.twitter.com/docs/api/1.1 for more information.
 * The JSON export is also used to power the archive browser interface (index.html).
-
-[export 1717]
