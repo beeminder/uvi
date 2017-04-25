@@ -1,7 +1,7 @@
 {
 
 "name": "beemuvi",
-"version": "1.0.0",
+"version": "1.0.1",
 "description": "Beeminder's Changelog",
 "main": "server.js",
 "scripts": { "start": "node server.js" },
