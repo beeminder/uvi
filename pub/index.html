@@ -20,7 +20,7 @@
 </head>
 <body>
 <header>
-<h1>Beeminder Changelog <font size="-1">(<a href="#latest">latest &darr;</a>)</font></h1>
+<h1>Beeminder Changelog <font size="-1">(<a href="#latest">latest&darr;</a>)</font></h1>
 </header>
 
 <main>
@@ -33,7 +33,9 @@ var bicon = // tiny twitter birdie icon
 // Wrap bare URLs in string s with <a href>
 function linkify(s) {
   if (/\<a href\=/.test(s)) { return s } // must be already linkified
-  return s.replace(/https?:\/\/(?:www\.)?([\w\-\.!~#?&=+\*\'"(),\/]+)/g, '<a href="$&">$1</a>')
+  // maybe also do @bob -> <a href="http://twitter.com/bob">@bob</a>
+  return s.replace(/https?:\/\/(?:www\.)?([\w\-\.!~#?&=+\*\'"(),\/]+)/g, 
+                   '<a href="$&">$1</a>')
 }
 
 // Helper function to generate the hovertext based on date d, deploy date dd, 
@@ -119,14 +121,14 @@ Despite the one derailment we've continued uninterrupted for
 days (over 6 years!) and counting.
 </p>
 
-<h3>2011 February 20+:</h3>
+<h3>2011 February 20+</h3>
 
 From our first public UVI in 2011 through 2014 June 18 we only logged our UVIs by tweeting them
 (<a href="http://twitter.com/beemuvi">@beemuvi</a>).
 But since we fully expect to outlive Twitter we 
 <a href="twex">exported everything and are hosting the archive here</a>.
   
-<h3>2014 June 19+:</h3>
+<h3>2014 June 19+</h3>
 
 <ol>
 <li>Custom color palette for graphs means they're like 1/2 the filesize or less (8-bit vs 24-bit, but look identical). Faster, less bandwith!</li>
@@ -770,7 +772,7 @@ But since we fully expect to outlive Twitter we
 <li>Similar bug with snoozing your deadline; now always respects the 6-hour window on an eep day. #bugfix</li>
 </ol>
 
-<h3>2016 January 1+:</h3>
+<h3>2016 January 1+</h3>
 
 <ol>
 <li>In goal default settings if you tried to submit the form with no leadtime or no alertstart or no deadline it would give a 500 error #bugfix</li>
@@ -949,7 +951,7 @@ But since we fully expect to outlive Twitter we
 <li>What we used to call "slug" is now universally called "goalname" (no space, like "username")</li>
 </ol>
 
-<h3>2016 April 30+:</h3>
+<h3>2016 April 30+</h3>
 
 <ol>
 <li>If you clicked an unsubscribe link when logged in as another user then we gave an opaque error instead of telling you what was what #bugfix</li>
@@ -1021,7 +1023,7 @@ But since we fully expect to outlive Twitter we
 <li>Due to recent refactoring we started ignoring the 'start with a week of safety buffer' option for RescueTime goals. #bugfix</li>
 </ol>
   
-<h3>2016 July 20+:</h3>
+<h3>2016 July 20+</h3>
 
 <ol>
 <li>Copy tweak in ThingsYouMustKnow (change/charge/adjustment was easy to misread). Added weekends-off, road editor to beeminder.com/premium #mini ×2</li>
@@ -1094,208 +1096,383 @@ But since we fully expect to outlive Twitter we
 <li>Forcing email confirmation before adding credit card spawned couple bugs for grandfathered users, not allowing changing cc, etc #bugfix</li>
 </ol>
 
-<h3>2016 September 21+:</h3>
+<h3>2016 September 21+</h3>
 
-<pre>
-X ULK On the email unsubscribe page, "you have N active goals" now links to your gallery in case you forgot what you were once beeminding #mini
-X PFQ New premium FAQs about upgrading and downgrading and exquisite fairness, with new links and hovertext. https://www.beeminder.com/premium
-X SCL Crazy mongoid bug made rescale feature break, rarely. Probable #bugfix deployed plus instrumentation so we'll know for sure if happens again
-      [sometimes we would scale some datapoints multiple times, resulting in totally fubared goals. trying sorting datapoints first?]
-* IAR Failed/frozen goals (with the skull & crossbones) can now be instantly archived. Sorry we were so uptight about that for so long!
-X ABT Added our new Minister of the Exterior, @anomalily, to our About Us page. http://beeminder.com/aboutus Welcome Lillian! http://blog.beeminder.com/anomalily
-X ALY More cleanup of http://beeminder.com/aboutus & finally added @lady_alys who's been helping us w/ support & @habitica integration for a long time
-X TWT Slightly more sophisticated error checking in our Twitter goal setup: give an error if the user doesn't exist or their tweets are protected.
-X SM1 If you downgraded and lost the SMS bot perk, we'd get horribly confused and not let you save user settings anymore. #bugfix
-X SM2 SMS bot improvement: until you activate your phone number we give a link to resend the activation text message
-X SM3 Can now add a phone number even if you don't use the SMS bot (and we'll actually text/call if you derail at $810+ & don't respond to email)
-      ["maybe you are just hoping we'll give you a call to chat?" says bee]
-X ALL In case you have too many past pledges to show, we made a button that emails you the whole enchilada, in json format.
-X AL2 Got rid of superfluous fields in past pledges export and added a CSV version as well as JSON
-X BOT Email bot no longer silently (well, it was calling in us humans to intervene) fails on data-like datapoints that're not actually parsable
-X SPM Several fixes to decrease chances of bot emails getting spamboxed. More user-visible part: truncate quoting of probable spam in bot replies.
-X FUT Fixed, de-duped, and rearranged footer links. #mini
-X PRX Fixed a bug in how prices of lower premium plans were displayed to people already on a higher lifetime plan (now just says "$N/A"). #bugfix
-X PR2 Also on http://beeminder.com/premium: stopped confusingly saying "$0" for the lifetime plan you already have, plus new FAQ item & hovertexts
-X AS1 Moved all the graph images to S3: makes a noticeable difference in how fast goal galleries load & expected to even improve server stability
-X AS2 Better security: nonce URLs for graph images and thumbnails actually expire (totally new ones each time the graph is generated)
-X GAL Seemingly #mini UVI that's part of something huge: we now disallow the goalname "gallery" (part of getting best of all worlds w/ redesign)
-* B01 Bee-yootiful new redesign! Massive number of UVIs in this. Here begins a tweetstorm of the most noteworthy! (1/26)
-* B02 The Data tab is much nicer, lets you load all datapoints on one page, sort by any column, and it all happens right below the graph
-X B03 Editing data in the data table is also much nicer: you can just edit in place without first clicking a button
-X B04 And import/export and rescaling of data is now all below the data
-* B05 There's a button to delete your whole account if less than a week old or no active goals. The rest of http://expost.padm.us/byebyebee coming later.
-* B06 Table of reminder settings for all goals can sort by goal, deadline, zenostart, etc. Nice for setting up waterfalls: http://blog.beeminder.com/waterfalls
-* B07 Togglable buttons telling you the bare min or hard cap you need in terms of either the delta or the absolute number.
-X B08 The buttons for delta vs absolute (and for absolute vs "t minus" deadline time) remember which way you like them per goal
-* B09 Handy asterisk on the pledge telling you when you've hit your pledge cap, plus clearer indicator of pending pledge step-down
-* B10 New dashboard lets you expand/collapse individual goals (pro-tip: use it like a to-do list, collapsing when done with a goal for the day)
-X B11 You can now choose today vs yesterday when entering data from the dashboard.
-X B12 For autodata goals on the dashboard we have the icon for the data source and a nice hexagonal "force a fetch of more data" button
-X B13 Data entry now shows the goal units (not to mention all the increased prettiness, but that applies everywhere)
-X B14 The banner messages that appear at the top are much nicer, disappearing when it makes sense to and persisting otherwise
-* B15 Arguably a negative UVI but since we're drastically undercounting anyway: we killed the auto-quit feature. It was deeply unbeemindery!
-X B16 The Data tab is updated immediately when you add data and there's a "stats out of date" warning as a stopgap instead of just being stale
-* B17 You can now instantly delete goals from your gallery of archived goals
-X B18 So much confusing stuff now out of newbees' line of sight but all still conveniently acceessible in the tabs below the graph
-* B19 Tagging! Manage tags at http://beeminder.com/tags & then filter your dashboard via url-hacking, eg bmndr•com/user#tag or #!tag to exclude
-X B20 Tagging is multiple UVIs' worth so we'll use this tweet to say that, yes, a real UI is coming. Current version subsumes backburnering.
-* B21 Negative UVI but it was really a confusing, dangerous feature: backburnering is dead. Tag things "backburner" & filter them out instead!
-X B22 We now use the live time-bomb countdown for goals within a week of derailing and say "months" & "years" for goals with far deadlines
-X B23 Final row of the road editor is insta-updated when using the normal road dial (was moot in old design but nice having these on same page)
-X B24 New, helpful placeholder text in fields in the goal creation wizard
-X B25 We separated reminder defaults from other goal defaults. Two submit buttons on one page separated by lots of scrolling was a mess.
-X B26 Huge amount of aesthetic improvements & UI tweaks, hexagonal buttons, etc etc. This concludes the main tweetstorm for the redesign! (26/26)
-X HAB Redesign broke @habitica goal creation briefly! Newly created goals were failing to pick up new To-dos. #bugfix
-X C01 We now actually make sure the repo you want to mind exists and that you have access to it when you create a Gitminder goal
-X FUL When we launched the redesign we showed your full name in the public version of your gallery; that was a bad choice and we undid it that day
-X C02 In Withings goal creation we now validate that you give us an initial weight (though this seems to not work in Safari, frustratingly) #mini
-X TOG We now remember which goals on the dashboard you expanded/collapsed (& #bugfix today: it used to not work if you started from all-expanded)
-X C03 Smarter use of "Sun night", "tomorrow", etc in deadline blurbs. Eg, saying "tomorrow" instead of "Sun" if within 24 hours of the deadline.
-X TOT Fixed several cases (eg, the help text for the Due By table) of saying Value instead of Total or vice versa. #mini
-X C04 When you check or uncheck the Pessimistic Presumptive checkbox it instantly saves the setting and tells you so. Other settings to follow.
-X MIN More things we forgot to include in the redesign tweetstorm: stepper buttons for datapoint values etc, displaying far future dates in years.
-X CCR If you loaded the goal page and there was no previous datapoint then we were giving a 500 error. #bugfix
-X 500 Similarly when there was an error preventing the graph from generating. We'll say this UVI covers all similar bugs introduced by redesign.
-X LDP Small API improvement: Goal object now includes last_datapoint [TODO: document it]
-X SL1 We did several things with goalnames and descriptions: 1) descriptions viewable as tooltips on the dashboard;
-X SL2 2) We now ask for both goalname (previously known as "slug") and description (previously "title") when creating goals;
-* SL3 3) You can edit the description at any time at the top of the goal page;
-* SL4 4) Finally, to get as close as we're going to for now to the best of all worlds: click to toggle between goalname/description on dashboard
-* SL5 Almost forgot the biggest sluggy UVI: Anyone can edit their goalname any time (w/ big warning about breaking URLs and IFTTT recipes etc)
-X FX1 Tweetstorm about the flurry of bugfixes since deploying the redesign: We broke an embarrassing number of things! 1/5
-X FX2 We're fixing them as fast as we can and normally each individual #bugfix would be totally fair game as a separate UVI. 2/5
-X FX3 But we were insufficiently careful when deploying the redesign, so, as self-punishment (& due to overwhelm at the sheer number of UVIs) 3/5
-X FX4 ...we're not going to count anything else up to today that the redesign broke, other than this tweetstorm's worth: 4/5
-X FX5 ...which includes broken links, broken features like changing passwords, missing settings, backburner-goal brokenness in iOS, etc etc. 5/5
-* SAF There's no longer any limit on the number of days of initial safety buffer when creating a goal
-X MIN Collection of #mini UVIs: Ellipses for long goalnames, header for data entry box, more readable data table when it's not editable
-X RED If you accidentally try to submit a datapoint without filling in the value it now turns the field red so it's nice and obvious what happened
-X MIN Fixed some cases in alerts where we used the old "title" (what's now the goal description) to identify goals instead of the goalname #bugfix
-X RAT Changing the rate units in the road dial now does the arithmetic for you, like turning 7/week into 1/day, immediately, before hitting submit
-X TAG Minis: Query tags case-insensitively, road editor from Commitment to Settings tab, #bugfix's w/ submit button & enforcing ratchet bounds
-X BRI A kludge but a very noticeable improvement: we no longer let you insta-derail yourself by ratcheting the day after derailing
-X MIN Minis: 1. when showing the goalname, show goal description as hovertext; 2. jump straight to 1 when clicking the plus for datapoint value
-X TWT The hashtag-minding part of our Twitter integration was broken since forever (workaround was via IFTTT) but is now fixed. #bugfix
-* URL URLminder is an official integration! Automatically mind wordcounts of documents at any publicly accessible URLs. http://blog.beeminder.com/urlminder
-* UM2 We magically turn links to google docs into the plaintext version for URLminder so we get the real wordcount without extraneous html
-* NAN New NaNoWriMo landing page with buttons for automatic and manual tracking: https://www.beeminder.com/nanowrimo
-X CAP If you have a pledge stepdown scheduled you can set the pledge cap to what it's stepping down to; removed most of the confusing interactions
-X ASO If you create a goal with only post-dated data we now give a more elucidating error about why we can't show you a graph. #mini
-X MIN Fixed old instance of calling Habitica HabitRPG in bot email, fixed bug that made us miss points on Duolingo for Norwegian. #bugfix
-X MIS Mostly fixed the problem with missing graph images on the dashboard (but it still happens occasionally...). #bugfix #mostly #staytuned
-X IFT When we email you about an error in an IFTTT recipe we now include a link to the errant recipe. Handy!
-X MIN Fixed a 500 error when restarting an old GmailZero goal from before Google oauth params changed. Now backwards compatible. #bugfix #mini
-X THM Made the thumbnails collapse nicely even when the infinibee is buzzing on top of them (and keep buzzing in collapsed form)
-X TH2 Thumbnails also clickable even when infinibee buzzing (especially nice now that goalnames/goalblurbs toggle instead of linking to goal page)
-X TOG If goalname & blurb are same except case, don't toggle betw them on dashboard (looked like we'd implemented idiotic case-toggling feature!)
-X GRN If a goal is coasting (will hit goal value by goal date even if you do/report nothing) we now show it green w/ the correct wording. #bugfix
-X RTW Fixed longstanding bug that would sometimes insta-derail you when importing old RescueTime & Withings data when creating goals. #bugfix
-X FIT Dumb #bugfix w/ Fitbit goal creation: gave error if you didn't change the default settings. (ps: bugs intro'd by redesign count again now)
-</pre>
+<ol><div id="2016sep"/></ol>
+<script>gen("2016sep", [{
+"n": 2043,
+"t": "On the email unsubscribe page, \"you have N active goals\" now links to your gallery in case you forgot what you were once beeminding #mini",
+}, { // ------------------------------------------------------------------------
+"t": "New premium FAQs about upgrading and downgrading and exquisite fairness, with new links and hovertext. https://www.beeminder.com/premium",
+}, { // ------------------------------------------------------------------------
+"t": "Crazy mongoid bug made rescale feature break, rarely. Probable #bugfix deployed plus instrumentation so we'll know for sure if happens again",
+"c": "sometimes we would scale some datapoints multiple times, resulting in totally fubared goals. trying sorting datapoints first?",
+}, { // ------------------------------------------------------------------------
+"f": true, "t": "Failed/frozen goals (with the skull & crossbones) can now be instantly archived. Sorry we were so uptight about that for so long!",
+}, { // ------------------------------------------------------------------------
+"t": "Added our new Minister of the Exterior, @anomalily, to our About Us page. http://beeminder.com/aboutus Welcome Lillian! http://blog.beeminder.com/anomalily",
+}, { // ------------------------------------------------------------------------
+"t": "More cleanup of http://beeminder.com/aboutus & finally added @lady_alys who's been helping us w/ support & @habitica integration for a long time",
+}, { // ------------------------------------------------------------------------
+"t": "Slightly more sophisticated error checking in our Twitter goal setup: give an error if the user doesn't exist or their tweets are protected.",
+}, { // ------------------------------------------------------------------------
+"t": "If you downgraded and lost the SMS bot perk, we'd get horribly confused and not let you save user settings anymore. #bugfix",
+}, { // ------------------------------------------------------------------------
+"t": "SMS bot improvement: until you activate your phone number we give a link to resend the activation text message",
+}, { // ------------------------------------------------------------------------
+"t": "Can now add a phone number even if you don't use the SMS bot (and we'll actually text/call if you derail at $810+ & don't respond to email)",
+"c": "'maybe you are just hoping we'll give you a call to chat?' says bee]",
+}, { // ------------------------------------------------------------------------
+"t": "In case you have too many past pledges to show, we made a button that emails you the whole enchilada, in json format.",
+}, { // ------------------------------------------------------------------------
+"t": "Got rid of superfluous fields in past pledges export and added a CSV version as well as JSON",
+}, { // ------------------------------------------------------------------------
+"t": "Email bot no longer silently (well, it was calling in us humans to intervene) fails on data-like datapoints that're not actually parsable",
+}, { // ------------------------------------------------------------------------
+"t": "Several fixes to decrease chances of bot emails getting spamboxed. More user-visible part: truncate quoting of probable spam in bot replies.",
+}, { // ------------------------------------------------------------------------
+"t": "Fixed, de-duped, and rearranged footer links. #mini",
+}, { // ------------------------------------------------------------------------
+"t": "Fixed a bug in how prices of lower premium plans were displayed to people already on a higher lifetime plan (now just says \"$N/A\"). #bugfix",
+}, { // ------------------------------------------------------------------------
+"t": "Also on http://beeminder.com/premium: stopped confusingly saying \"$0\" for the lifetime plan you already have, plus new FAQ item & hovertexts",
+}, { // ------------------------------------------------------------------------
+"t": "Moved all the graph images to S3: makes a noticeable difference in how fast goal galleries load & expected to even improve server stability",
+}, { // ------------------------------------------------------------------------
+"t": "Better security: nonce URLs for graph images and thumbnails actually expire (totally new ones each time the graph is generated)",
+}, { // ------------------------------------------------------------------------
+"t": "Seemingly #mini UVI that's part of something huge: we now disallow the goalname \"gallery\" (part of getting best of all worlds w/ redesign)",
+}, { // ------------------------------------------------------------------------
+"f": true, "t": "Bee-yootiful new redesign! Massive number of UVIs in this. Here begins a tweetstorm of the most noteworthy! (1/26)",
+}, { // ------------------------------------------------------------------------
+"f": true, "t": "The Data tab is much nicer, lets you load all datapoints on one page, sort by any column, and it all happens right below the graph",
+}, { // ------------------------------------------------------------------------
+"t": "Editing data in the data table is also much nicer: you can just edit in place without first clicking a button",
+}, { // ------------------------------------------------------------------------
+"t": "And import/export and rescaling of data is now all below the data",
+}, { // ------------------------------------------------------------------------
+"f": true, "t": "There's a button to delete your whole account if less than a week old or no active goals. The rest of http://expost.padm.us/byebyebee coming later.",
+}, { // ------------------------------------------------------------------------
+"f": true, "t": "Table of reminder settings for all goals can sort by goal, deadline, zenostart, etc. Nice for setting up waterfalls: http://blog.beeminder.com/waterfalls",
+}, { // ------------------------------------------------------------------------
+"f": true, "t": "Togglable buttons telling you the bare min or hard cap you need in terms of either the delta or the absolute number.",
+}, { // ------------------------------------------------------------------------
+"t": "The buttons for delta vs absolute (and for absolute vs \"t minus\" deadline time) remember which way you like them per goal",
+}, { // ------------------------------------------------------------------------
+"f": true, "t": "Handy asterisk on the pledge telling you when you've hit your pledge cap, plus clearer indicator of pending pledge step-down",
+}, { // ------------------------------------------------------------------------
+"f": true, "t": "New dashboard lets you expand/collapse individual goals (pro-tip: use it like a to-do list, collapsing when done with a goal for the day)",
+}, { // ------------------------------------------------------------------------
+"t": "You can now choose today vs yesterday when entering data from the dashboard.",
+}, { // ------------------------------------------------------------------------
+"t": "For autodata goals on the dashboard we have the icon for the data source and a nice hexagonal \"force a fetch of more data\" button",
+}, { // ------------------------------------------------------------------------
+"t": "Data entry now shows the goal units (not to mention all the increased prettiness, but that applies everywhere)",
+}, { // ------------------------------------------------------------------------
+"t": "The banner messages that appear at the top are much nicer, disappearing when it makes sense to and persisting otherwise",
+}, { // ------------------------------------------------------------------------
+"f": true, "t": "Arguably a negative UVI but since we're drastically undercounting anyway: we killed the auto-quit feature. It was deeply unbeemindery!",
+}, { // ------------------------------------------------------------------------
+"t": "The Data tab is updated immediately when you add data and there's a \"stats out of date\" warning as a stopgap instead of just being stale",
+}, { // ------------------------------------------------------------------------
+"f": true, "t": "You can now instantly delete goals from your gallery of archived goals",
+}, { // ------------------------------------------------------------------------
+"t": "So much confusing stuff now out of newbees' line of sight but all still conveniently acceessible in the tabs below the graph",
+}, { // ------------------------------------------------------------------------
+"f": true, "t": "Tagging! Manage tags at http://beeminder.com/tags & then filter your dashboard via url-hacking, eg bmndr•com/user#tag or #!tag to exclude",
+}, { // ------------------------------------------------------------------------
+"t": "Tagging is multiple UVIs' worth so we'll use this tweet to say that, yes, a real UI is coming. Current version subsumes backburnering.",
+}, { // ------------------------------------------------------------------------
+"f": true, "t": "Negative UVI but it was really a confusing, dangerous feature: backburnering is dead. Tag things \"backburner\" & filter them out instead!",
+}, { // ------------------------------------------------------------------------
+"t": "We now use the live time-bomb countdown for goals within a week of derailing and say \"months\" & \"years\" for goals with far deadlines",
+}, { // ------------------------------------------------------------------------
+"t": "Final row of the road editor is insta-updated when using the normal road dial (was moot in old design but nice having these on same page)",
+}, { // ------------------------------------------------------------------------
+"t": "New, helpful placeholder text in fields in the goal creation wizard",
+}, { // ------------------------------------------------------------------------
+"t": "We separated reminder defaults from other goal defaults. Two submit buttons on one page separated by lots of scrolling was a mess.",
+}, { // ------------------------------------------------------------------------
+"t": "Huge amount of aesthetic improvements & UI tweaks, hexagonal buttons, etc etc. This concludes the main tweetstorm for the redesign! (26/26)",
+}, { // ------------------------------------------------------------------------
+"t": "Redesign broke @habitica goal creation briefly! Newly created goals were failing to pick up new To-dos. #bugfix",
+}, { // ------------------------------------------------------------------------
+"t": "We now actually make sure the repo you want to mind exists and that you have access to it when you create a Gitminder goal",
+}, { // ------------------------------------------------------------------------
+"t": "When we launched the redesign we showed your full name in the public version of your gallery; that was a bad choice and we undid it that day",
+}, { // ------------------------------------------------------------------------
+"t": "In Withings goal creation we now validate that you give us an initial weight (though this seems to not work in Safari, frustratingly) #mini",
+}, { // ------------------------------------------------------------------------
+"t": "We now remember which goals on the dashboard you expanded/collapsed (& #bugfix today: it used to not work if you started from all-expanded)",
+}, { // ------------------------------------------------------------------------
+"t": "Smarter use of \"Sun night\", \"tomorrow\", etc in deadline blurbs. Eg, saying \"tomorrow\" instead of \"Sun\" if within 24 hours of the deadline.",
+}, { // ------------------------------------------------------------------------
+"t": "Fixed several cases (eg, the help text for the Due By table) of saying Value instead of Total or vice versa. #mini",
+}, { // ------------------------------------------------------------------------
+"t": "When you check or uncheck the Pessimistic Presumptive checkbox it instantly saves the setting and tells you so. Other settings to follow.",
+}, { // ------------------------------------------------------------------------
+"t": "More things we forgot to include in the redesign tweetstorm: stepper buttons for datapoint values etc, displaying far future dates in years.",
+}, { // ------------------------------------------------------------------------
+"t": "If you loaded the goal page and there was no previous datapoint then we were giving a 500 error. #bugfix",
+}, { // ------------------------------------------------------------------------
+"t": "Similarly when there was an error preventing the graph from generating. We'll say this UVI covers all similar bugs introduced by redesign.",
+}, { // ------------------------------------------------------------------------
+"t": "Small API improvement: Goal object now includes last_datapoint [TODO: document it]",
+}, { // ------------------------------------------------------------------------
+"t": "We did several things with goalnames and descriptions: 1) descriptions viewable as tooltips on the dashboard;",
+}, { // ------------------------------------------------------------------------
+"t": "2) We now ask for both goalname (previously known as \"slug\") and description (previously \"title\") when creating goals;",
+}, { // ------------------------------------------------------------------------
+"f": true, "t": "3) You can edit the description at any time at the top of the goal page;",
+}, { // ------------------------------------------------------------------------
+"f": true, "t": "4) Finally, to get as close as we're going to for now to the best of all worlds: click to toggle between goalname/description on dashboard",
+}, { // ------------------------------------------------------------------------
+"f": true, "t": "Almost forgot the biggest sluggy UVI: Anyone can edit their goalname any time (w/ big warning about breaking URLs and IFTTT recipes etc)",
+}, { // ------------------------------------------------------------------------
+"t": "Tweetstorm about the flurry of bugfixes since deploying the redesign: We broke an embarrassing number of things! 1/5",
+}, { // ------------------------------------------------------------------------
+"t": "We're fixing them as fast as we can and normally each individual #bugfix would be totally fair game as a separate UVI. 2/5",
+}, { // ------------------------------------------------------------------------
+"t": "But we were insufficiently careful when deploying the redesign, so, as self-punishment (& due to overwhelm at the sheer number of UVIs) 3/5",
+}, { // ------------------------------------------------------------------------
+"t": "...we're not going to count anything else up to today that the redesign broke, other than this tweetstorm's worth: 4/5",
+}, { // ------------------------------------------------------------------------
+"t": "...which includes broken links, broken features like changing passwords, missing settings, backburner-goal brokenness in iOS, etc etc. 5/5",
+}, { // ------------------------------------------------------------------------
+"f": true, "t": "There's no longer any limit on the number of days of initial safety buffer when creating a goal",
+}, { // ------------------------------------------------------------------------
+"t": "Collection of #mini UVIs: Ellipses for long goalnames, header for data entry box, more readable data table when it's not editable",
+}, { // ------------------------------------------------------------------------
+"t": "If you accidentally try to submit a datapoint without filling in the value it now turns the field red so it's nice and obvious what happened",
+}, { // ------------------------------------------------------------------------
+"t": "Fixed some cases in alerts where we used the old \"title\" (what's now the goal description) to identify goals instead of the goalname #bugfix",
+}, { // ------------------------------------------------------------------------
+"t": "Changing the rate units in the road dial now does the arithmetic for you, like turning 7/week into 1/day, immediately, before hitting submit",
+}, { // ------------------------------------------------------------------------
+"t": "Minis: Query tags case-insensitively, road editor from Commitment to Settings tab, #bugfix's w/ submit button & enforcing ratchet bounds",
+}, { // ------------------------------------------------------------------------
+"t": "A kludge but a very noticeable improvement: we no longer let you insta-derail yourself by ratcheting the day after derailing",
+}, { // ------------------------------------------------------------------------
+"t": "Minis: 1. when showing the goalname, show goal description as hovertext; 2. jump straight to 1 when clicking the plus for datapoint value",
+}, { // ------------------------------------------------------------------------
+"t": "The hashtag-minding part of our Twitter integration was broken since forever (workaround was via IFTTT) but is now fixed. #bugfix",
+}, { // ------------------------------------------------------------------------
+"f": true, "t": "URLminder is an official integration! Automatically mind wordcounts of documents at any publicly accessible URLs. http://blog.beeminder.com/urlminder",
+}, { // ------------------------------------------------------------------------
+"f": true, "t": "We magically turn links to google docs into the plaintext version for URLminder so we get the real wordcount without extraneous html",
+}, { // ------------------------------------------------------------------------
+"f": true, "t": "New NaNoWriMo landing page with buttons for automatic and manual tracking: https://www.beeminder.com/nanowrimo",
+}, { // ------------------------------------------------------------------------
+"t": "If you have a pledge stepdown scheduled you can set the pledge cap to what it's stepping down to; removed most of the confusing interactions",
+}, { // ------------------------------------------------------------------------
+"t": "If you create a goal with only post-dated data we now give a more elucidating error about why we can't show you a graph. #mini",
+}, { // ------------------------------------------------------------------------
+"t": "Fixed old instance of calling Habitica HabitRPG in bot email, fixed bug that made us miss points on Duolingo for Norwegian. #bugfix",
+}, { // ------------------------------------------------------------------------
+"t": "Mostly fixed the problem with missing graph images on the dashboard (but it still happens occasionally...). #bugfix #mostly #staytuned",
+}, { // ------------------------------------------------------------------------
+"t": "When we email you about an error in an IFTTT recipe we now include a link to the errant recipe. Handy!",
+}, { // ------------------------------------------------------------------------
+"t": "Fixed a 500 error when restarting an old GmailZero goal from before Google oauth params changed. Now backwards compatible. #bugfix #mini",
+}, { // ------------------------------------------------------------------------
+"t": "Made the thumbnails collapse nicely even when the infinibee is buzzing on top of them (and keep buzzing in collapsed form)",
+}, { // ------------------------------------------------------------------------
+"t": "Thumbnails also clickable even when infinibee buzzing (especially nice now that goalnames/goalblurbs toggle instead of linking to goal page)",
+}, { // ------------------------------------------------------------------------
+"t": "If goalname & blurb are same except case, don't toggle betw them on dashboard (looked like we'd implemented idiotic case-toggling feature!)",
+}, { // ------------------------------------------------------------------------
+"t": "If a goal is coasting (will hit goal value by goal date even if you do/report nothing) we now show it green w/ the correct wording. #bugfix",
+}, { // ------------------------------------------------------------------------
+"t": "Fixed longstanding bug that would sometimes insta-derail you when importing old RescueTime & Withings data when creating goals. #bugfix",
+}, { // ------------------------------------------------------------------------
+"t": "Dumb #bugfix w/ Fitbit goal creation: gave error if you didn't change the default settings. (ps: bugs intro'd by redesign count again now)",
+}])</script>
 
 <h3>2016 December</h3>
 
-<pre>
-X CAS If a goalname's disallowed (eg "gallery" or existing goalnames) also disallow uppercase variants like "Gallery" or things break. #bugfix
-X MIN Embarrassingly there was a full month after the redesign when we set everyone's default timezone to US Eastern time. #bugfix
-X MON We rewrote the copy at http://beeminder.com/money which was a little broken since the Infinibee premium revamp. #mini
-X GMZ GmailZero #bugfix in which we were fetching your initial inbox count but then starting your road at 0 anyway for a while.
-X GAR Our Garmin stepcounts were sometimes too low. Garmin's granular API didn't agree with its summary data. We now use summary. #bugfix
-X MIN Fixed small bug with plus/minus buttons for data entry on odometer goals, and fixed a link to reminder settings in bot emails. #bugfix 
-X BLS By popular demand: our blog has a (@duckduckgo) searchbox. Seek & ye shall find. Dark days of adding "beeminder blog" to a web search: over!
-X GOO Yet another bug from redesign: If you signed up via Google oauth and then created a Do More goal we'd create it as a GmailZero goal. #bugfix
-X DEL Fixed an intermittent bug where you'd hit archive & the goal would mysteriously not archive if a previous goal w/ that name existed. #bugfix
-X HAB Nasty bug with our @habitica integration: all the Fewer To-Dos goals were being created as Do Mores (redesign bug). #bugfix
-X HA2 And a separate bug w/ our @habitica integration: for Do More goals we were starting the yellow brick road too high by 1 To-Do. #bugfix
-X IOS Version 4.4 of the Beeminder iOS app is live! Most important for brand new users: you can now create a Beeminder account from it.
-X IO2 Also in the new version of the iOS app: a Reset Data button to reload all goals, no more backburner dividing line, ...
-X IO3 Version 4.4 of iOS app cont'd: Bug fixes in push notifications, & you can tap Create Goal to go to the website pre-logged-in to create goals
-X MIN Marginally better "doom text" for weight loss; bigger body font; made 3rd-party font library local cuz it was killing response time. #mini
-X CSS Fixed broken CSS on various autodata landing pages and the unsubscribe page
-X GLN Fixed bunch of cases where we used goal description instead of goalname, which to some people's chagrin is now the universal goal identifier
-X PLE Fixed a bug involving the pledge amount being in two places. Now it's still in commitment settings too but pops up the same modal. #bugfix
-X PSW Moved password to separate section in settings which fixed bug w/ some browsers that wouldn't let you change settings w/o changing password
-X MON For over a month after the redesign we had a bug that let you sometimes create pledgeless goals w/out a premium plan. Gasp! #bugfix
-X AUT If you sent auth token but didn't specify the user we 500'd even tho w/ auth token it had to be you that you're requesting for. API #bugfix
-X IOB Critical #bugfix w/ iOS app that made us fail to push reminders under some mysterious circumstances involving frozen/archived goals
-X DPN Fixed a couple small bugs with trying to get a premium plan without being initially logged in. #bugfix HT @pennockd
-      [https://trello.com/c/xMMP1Out/738-very-hard-to-get-a-premium-plan-without-a-credit-card-already-on-file
-       https://trello.com/c/ehlCv3V3/737-can-t-get-a-premium-plan-if-not-logged-in-garden-path-bug]
-</pre>
+<ol><div id="2016dec"/></ol>
+<script>gen("2016dec", [{
+"n": 2135, 
+"t": "If a goalname's disallowed (eg \"gallery\" or existing goalnames) also disallow uppercase variants like \"Gallery\" or things break. #bugfix",
+}, { // ------------------------------------------------------------------------
+"t": "Embarrassingly there was a full month after the redesign when we set everyone's default timezone to US Eastern time. #bugfix",
+}, { // ------------------------------------------------------------------------
+"t": "We rewrote the copy at http://beeminder.com/money which was a little broken since the Infinibee premium revamp. #mini",
+}, { // ------------------------------------------------------------------------
+"t": "GmailZero #bugfix in which we were fetching your initial inbox count but then starting your road at 0 anyway for a while.",
+}, { // ------------------------------------------------------------------------
+"t": "Our Garmin stepcounts were sometimes too low. Garmin's granular API didn't agree with its summary data. We now use summary. #bugfix",
+}, { // ------------------------------------------------------------------------
+"t": "Fixed small bug with plus/minus buttons for data entry on odometer goals, and fixed a link to reminder settings in bot emails. #bugfix ",
+}, { // ------------------------------------------------------------------------
+"t": "By popular demand: our blog has a (@duckduckgo) searchbox. Seek & ye shall find. Dark days of adding \"beeminder blog\" to a web search: over!",
+}, { // ------------------------------------------------------------------------
+"t": "Yet another bug from redesign: If you signed up via Google oauth and then created a Do More goal we'd create it as a GmailZero goal. #bugfix",
+}, { // ------------------------------------------------------------------------
+"t": "Fixed an intermittent bug where you'd hit archive & the goal would mysteriously not archive if a previous goal w/ that name existed. #bugfix",
+}, { // ------------------------------------------------------------------------
+"t": "Nasty bug with our @habitica integration: all the Fewer To-Dos goals were being created as Do Mores (redesign bug). #bugfix",
+}, { // ------------------------------------------------------------------------
+"t": "And a separate bug w/ our @habitica integration: for Do More goals we were starting the yellow brick road too high by 1 To-Do. #bugfix",
+}, { // ------------------------------------------------------------------------
+"f": true,
+"t": "Version 4.4 of the Beeminder iOS app is live! Most important for brand new users: you can now create a Beeminder account from it.",
+}, { // ------------------------------------------------------------------------
+"t": "Also in the new version of the iOS app: a Reset Data button to reload all goals, no more backburner dividing line, ...",
+}, { // ------------------------------------------------------------------------
+"t": "Version 4.4 of iOS app cont'd: Bug fixes in push notifications, & you can tap Create Goal to go to the website pre-logged-in to create goals",
+}, { // ------------------------------------------------------------------------
+"t": "Marginally better \"doom text\" for weight loss; bigger body font; made 3rd-party font library local cuz it was killing response time. #mini",
+}, { // ------------------------------------------------------------------------
+"t": "Fixed broken CSS on various autodata landing pages and the unsubscribe page",
+}, { // ------------------------------------------------------------------------
+"t": "Fixed bunch of cases where we used goal description instead of goalname, which to some people's chagrin is now the universal goal identifier",
+}, { // ------------------------------------------------------------------------
+"t": "Fixed a bug involving the pledge amount being in two places. Now it's still in commitment settings too but pops up the same modal. #bugfix",
+}, { // ------------------------------------------------------------------------
+"t": "Moved password to separate section in settings which fixed bug w/ some browsers that wouldn't let you change settings w/o changing password",
+}, { // ------------------------------------------------------------------------
+"t": "For over a month after the redesign we had a bug that let you sometimes create pledgeless goals w/out a premium plan. Gasp! #bugfix",
+}, { // ------------------------------------------------------------------------
+"t": "If you sent auth token but didn't specify the user we 500'd even tho w/ auth token it had to be you that you're requesting for. API #bugfix",
+}, { // ------------------------------------------------------------------------
+"t": "Critical #bugfix w/ iOS app that made us fail to push reminders under some mysterious circumstances involving frozen/archived goals",
+}, { // ------------------------------------------------------------------------
+"t": "Fixed a couple small bugs with trying to get a premium plan without being initially logged in. #bugfix HT @pennockd",
+"c": "[https://trello.com/c/xMMP1Out/738-very-hard-to-get-a-premium-plan-without-a-credit-card-already-on-file https://trello.com/c/ehlCv3V3/737-can-t-get-a-premium-plan-if-not-logged-in-garden-path-bug]",
+}])</script>
 
-<h3>2017 January 1+:</h3>
+<h3>2017 January</h3>
+<ol><div id="2017jan"/></ol>
+<script>gen("2017jan", [{
+"n": 2158,
+"t": "Fixed a case of showing the wrong new pledge amount in the legit check email if you had auto-increasing pledges turned off. #bugfix",
+"c": "[https://github.com/beeminder/beeminder/commit/720f3f05a9a6608171349cc449521798ba6b89e8 https://trello.com/c/aB2lyvJa/726-pledge-cap-no-autoincrease]",
+}, { // ------------------------------------------------------------------------
+"t": "Fixed checkbox that was acting like expand/collapse instead of a checkbox for whether to auto-increase pledges when you derail. mini #bugfix",
+}, { // ------------------------------------------------------------------------
+"t": "Mini #bugfix w/ pointlessly clickable things when viewing other people's graphs. Also cleaned up CSS bugs on some landing pages.",
+}, { // ------------------------------------------------------------------------
+"t": "If you set a default deadline we were accidentally applying that to autodata goals that don't support arbitrary deadlines. #bugfix",
+}, { // ------------------------------------------------------------------------
+"t": "Avoided a bunch of confusion by nixing the instant-archive buttons in the dashboard for frozen/completed goals; all done from goal pages now",
+}, { // ------------------------------------------------------------------------
+"t": "Don't mention \"safe days\" in bot email subject when it exceeds days till goal end date. Also iOS notifications now make the default sound.",
+}, { // ------------------------------------------------------------------------
+"t": "Removed now-meaningless backburner line in reminder settings, and brought back all autodata settings that got lost in the redesign",
+}, { // ------------------------------------------------------------------------
+"t": "Mini UVIs: We now refresh graph after updating weekends-off, higher-res Duolingo logo, more obvious link to change goal date / goal total",
+}, { // ------------------------------------------------------------------------
+"t": "Added button on goal page to archive frozen goals. Bonus #mini UVI: datapoint value is cleared when you submit it on dashboard.",
+}, { // ------------------------------------------------------------------------
+"t": "Pledge stepper now indicates when it hits its limit (eg, you can't pledge more than $2430). #mini",
+}, { // ------------------------------------------------------------------------
+"t": "One more thing we broke in the redesign: we weren't allowing a negative rate for Fitbit net calories goals. #bugfix",
+}, { // ------------------------------------------------------------------------
+"t": "We now use your chosen timezone in your Beeminder settings for showing \"today\"/\"yesterday\", not whatever your browser thinks. #bugfix",
+}, { // ------------------------------------------------------------------------
+"t": "Fixed a 500 error for the case of opening the pledge popup for a goal (maybe just on archived goals?) with no credit card on file. #bugfix",
+}, { // ------------------------------------------------------------------------
+"t": "UI improvement: x-max can't be in the past and x-min can't be in the future. #mini",
+}, { // ------------------------------------------------------------------------
+"t": "You can now change the default GmailZero query when creating GmailZero goals, instead of having to go digging in settings afterwards.",
+}, { // ------------------------------------------------------------------------
+"t": "On /archived it says \"No archived goals!\" if you have none. And on the front page, link to autodata landing pages, not goal creation. #mini",
+}, { // ------------------------------------------------------------------------
+"t": "This counts as a UVI but we're not yet happy with the interaction between goal units & things like y-axis label: http://forum.beeminder.com/t/y-axis-label-didnt-update-in-graph-after-changed-in-settings/2652",
+}, { // ------------------------------------------------------------------------
+"t": "We're now consistent for all autodata goal creation in giving you the option to start with an arbitrary amount of safety buffer",
+}])</script>
 
-<pre>
-X NPL Fixed a case of showing the wrong new pledge amount in the legit check email if you had auto-increasing pledges turned off. #bugfix
-      [https://github.com/beeminder/beeminder/commit/720f3f05a9a6608171349cc449521798ba6b89e8
-       https://trello.com/c/aB2lyvJa/726-pledge-cap-no-autoincrease]
-X IPL Fixed checkbox that was acting like expand/collapse instead of a checkbox for whether to auto-increase pledges when you derail. mini #bugfix
-X MIN Mini #bugfix w/ pointlessly clickable things when viewing other people's graphs. Also cleaned up CSS bugs on some landing pages.
-X DEA If you set a default deadline we were accidentally applying that to autodata goals that don't support arbitrary deadlines. #bugfix
-X BUT Avoided a bunch of confusion by nixing the instant-archive buttons in the dashboard for frozen/completed goals; all done from goal pages now
-X IOC Don't mention "safe days" in bot email subject when it exceeds days till goal end date. Also iOS notifications now make the default sound.
-X RED Removed now-meaningless backburner line in reminder settings, and brought back all autodata settings that got lost in the redesign
-X MIN Mini UVIs: We now refresh graph after updating weekends-off, higher-res Duolingo logo, more obvious link to change goal date / goal total
-X FRO Added button on goal page to archive frozen goals. Bonus #mini UVI: datapoint value is cleared when you submit it on dashboard.
-X STP Pledge stepper now indicates when it hits its limit (eg, you can't pledge more than $2430). #mini
-X FIT One more thing we broke in the redesign: we weren't allowing a negative rate for Fitbit net calories goals. #bugfix
-X TMZ We now use your chosen timezone in your Beeminder settings for showing "today"/"yesterday", not whatever your browser thinks. #bugfix
-X PLE Fixed a 500 error for the case of opening the pledge popup for a goal (maybe just on archived goals?) with no credit card on file. #bugfix
-X XMM UI improvement: x-max can't be in the past and x-min can't be in the future. #mini
-X GMA You can now change the default GmailZero query when creating GmailZero goals, instead of having to go digging in settings afterwards.
-X ARC On /archived it says "No archived goals!"if you have none. And on the front page, link to autodata landing pages, not goal creation. #mini 
-X YAX This counts as a UVI but we're not yet happy with the interaction between goal units & things like y-axis label: http://forum.beeminder.com/t/y-axis-label-didnt-update-in-graph-after-changed-in-settings/2652
-X ADL We're now consistent for all autodata goal creation in giving you the option to start with an arbitrary amount of safety buffer
-X TOD We're obviously very behind on UVI tweets because we're just getting to our official Todoist integration! http://blog.beeminder.com/todoist/
-X FIT All Fitbit goals were getting created as Do More (or failing altogether?) for 2 months after we launched the redesign. #bugfix
-X BLA Fixed a couple UI bugs with changing goalnames (& #bugfix w/ using numbers as goalnames). http://forum.beeminder.com/t/how-to-change-goal-url/2818
-X HID Another embarrassing thing we broke w/ redesign: If you said "hide y-axis" for a while we weren't also hiding stats that leaked that info.
-X END We now show the expanded road dial (w/ end date & end value as well as rate) if the goal is ending within 30 days (too magical?)
-X GIT Gitminder goal creation now handles the case revoked Beeminder's authorization on GitHub (& maybe other cases of bad GitHub credentials)
-X BAN More tweaks to error banners so that important ones don't get obscured. #mini
-X GM2 UI tweak in Gitminder goal creation: automatically switch the radio button to specific repository if you start to type one. #mini
-X MIN More #mini UVIs: nixed superfluous logged in/out banners, fixed links to create goals on ifthismindthat.com and zapminder.com
-X HEA Mini #bugfix / UI-polish with expanding/collapsing the goals: if you do it to all of them one by one you can still undo w/ 1 click in header
-X DAS We used to magically re-sort the dashboard when you entered data but that turned out to be a bad idea; now you can click "DEADLINE" to do so
-</pre>
-
-<h3>2017 February 10+:</h3>
-
-<pre>
-X FOC Previous UVI also fixed a nasty focus bug when entering data in succession in dashboard. Also related: we killed reverse sorting.
-X FIN Custom fine print for goals is publicly visible again and we allow hyperlinks. http://forum.beeminder.com/t/link-in-fine-print/2976/1
-X CAP Used to be that every time we autoratched (automatically capping safety buffer) the graph would get stuck w/ buzzy bee for 5-10min. #bugfix
-X TAB We can now link directly to specific tabs in account settings, eg, https://www.beeminder.com/settings/account#account-details
-X GMZ Thing we broke like a year ago: when fetching your initial GmailZero count, if it's too big to fetch, we once again tell you that. #bugfix
-X API API #bugfix: the requestid param only did worked as advertised for creating single datapoints, not create_all. HT John Swanson
-      [When creating a datapoint via API, sending requestid param is supposed to make it act like an UPSERT, but this was broken in the create_all (multi-create) endpoint. so it would still work to make sure you weren't creating duplicate datapoints, but it wouldn't update an existing datapoint if you passed in updated parameters with the same requestid]
-X URL Fixed a bug in the URLminder magic that lets us fetch the plaintext version of a Google doc. https://www.beeminder.com/nanowrimo #bugfix
-X CMW Fixed a bug that meant we wouldn't show you even landing pages of some autodata integrations if you hadn't entered a credit card. #bugfix
-* SEC We added "make private" to "new goal settings" in account settings if you want all new goals to default to private http://forum.beeminder.com/t/please-let-me-default-new-goals-to-private/2880
-* HMM For goals denominated in hours we now display amounts in HH:MM in most places on the website.
-X RUN Fixed a nasty bug w/ road dial where we'd mess up the last segment of your road when you changed the rate units (daily/weekly/etc). #bugfix
-X SHM Fixed a 500-error involving displaying bare-mins as HH:MM for ended goals. Also stopped showing HH:MM:SS in recent data. #bugfix
-X MIN Somewhat smarter rounding and don't show integers as X.00. And another #mini #bugfix with sometimes showing "++HH:MM" instead of "+HH:MM"
-X JSD A bunch of small improvements to our datapoint format checker. You can see all the crazy example parsings at http://d.gomix.me
-X TWE Made the navigation header not annoyingly large. Also: tweaks to http://beeminder.com/aboutus: Capitalize "Hours", make our titles fit on 1 line.
-X SHR More #mini UVIs: shrunk annoyingly large navigation header, made archived gallery show 4 across, link to archive in gallery view.
-X BUT And a super #mini one: made the pledge box not have an "i'm a button" shadow if you're looking at someone else's goal so it's not clickable
-X SRT [We made dashboard sorting always pick the sensible order (increasing time to derailment, decreasing pledge, etc).] [not merged yet]
-X TRL In goal settings for Trello goals we now link to the actual board that we're pulling data from.
-X SLG We now show both the goalname and the description (the latter in a tiny font) on the dashboard. No more confusing toggling (for goalnames)!
-X MIN Fixed missing newline in text under graph thumbnails in gallery view. #mini #bugfix #redesign And show full goal description as hovertext.
-X TMZ When you had non-midnight deadlines for a goal we'd sometimes show you the wrong date for adding new data. #redesign #bugfix
-X URM #bugfix in URLminder: don't add a new datapoint every single time we check, only when wordcount has actually changed https://www.beeminder.com/new#urlminder
-X PRM Added a new premium FAQ item at http://beeminder.com/premium. Includes my ill-advised murder joke. #yolo #mini
-X BKG #bugfix kind of: the dates used for the add-data form were being too clever and magically updating when your deadline hit; caused confusion!
-X IOS #bugfix: The iPhone beemergency badge icon didn't show up unless you remembered to manually launch the app every single day. HT Paul Schmidt
-X AWS I guess we'll count this: We now have an informative static image to show in place of graphs in case Amazon goes down and won't show them...
-X FAP Super facepalmy bug made us forget toggle states (countdown vs time, expanded vs not, etc) on dashboard after visiting new goal page #bugfix
-</pre>
+<h3>2017 February </h3>
+<ol><div id="2017feb"/></ol>
+<script>gen("2017feb", [{
+"n": 2176,
+"t": "We're obviously very behind on UVI tweets because we're just getting to our official Todoist integration! http://blog.beeminder.com/todoist/",
+}, { // ------------------------------------------------------------------------
+"t": "All Fitbit goals were getting created as Do More (or failing altogether?) for 2 months after we launched the redesign. #bugfix",
+}, { // ------------------------------------------------------------------------
+"t": "Fixed a couple UI bugs with changing goalnames (& #bugfix w/ using numbers as goalnames). http://forum.beeminder.com/t/how-to-change-goal-url/2818",
+}, { // ------------------------------------------------------------------------
+"t": "Another embarrassing thing we broke w/ redesign: If you said \"hide y-axis\" for a while we weren't also hiding stats that leaked that info.",
+}, { // ------------------------------------------------------------------------
+"t": "We now show the expanded road dial (w/ end date & end value as well as rate) if the goal is ending within 30 days (too magical?)",
+}, { // ------------------------------------------------------------------------
+"t": "Gitminder goal creation now handles the case revoked Beeminder's authorization on GitHub (& maybe other cases of bad GitHub credentials)",
+}, { // ------------------------------------------------------------------------
+"t": "More tweaks to error banners so that important ones don't get obscured. #mini",
+}, { // ------------------------------------------------------------------------
+"t": "UI tweak in Gitminder goal creation: automatically switch the radio button to specific repository if you start to type one. #mini",
+}, { // ------------------------------------------------------------------------
+"t": "More #mini UVIs: nixed superfluous logged in/out banners, fixed links to create goals on ifthismindthat.com and zapminder.com",
+}, { // ------------------------------------------------------------------------
+"t": "Mini #bugfix / UI-polish with expanding/collapsing the goals: if you do it to all of them one by one you can still undo w/ 1 click in header",
+}, { // ------------------------------------------------------------------------
+"t": "We used to magically re-sort the dashboard when you entered data but that turned out to be a bad idea; now you can click \"DEADLINE\" to do so",
+}, { // ------------------------------------------------------------------------
+"t": "Previous UVI also fixed a nasty focus bug when entering data in succession in dashboard. Also related: we killed reverse sorting.",
+}, { // ------------------------------------------------------------------------
+"t": "Custom fine print for goals is publicly visible again and we allow hyperlinks. http://forum.beeminder.com/t/link-in-fine-print/2976/1",
+}, { // ------------------------------------------------------------------------
+"t": "Used to be that every time we autoratched (automatically capping safety buffer) the graph would get stuck w/ buzzy bee for 5-10min. #bugfix",
+}, { // ------------------------------------------------------------------------
+"t": "We can now link directly to specific tabs in account settings, eg, https://www.beeminder.com/settings/account#account-details",
+}, { // ------------------------------------------------------------------------
+"t": "Thing we broke like a year ago: when fetching your initial GmailZero count, if it's too big to fetch, we once again tell you that. #bugfix",
+}, { // ------------------------------------------------------------------------
+"t": "API #bugfix: the requestid param only did worked as advertised for creating single datapoints, not create_all. HT John Swanson",
+"c": "When creating a datapoint via API, sending requestid param is supposed to make it act like an UPSERT, but this was broken in the create_all (multi-create) endpoint. so it would still work to make sure you weren't creating duplicate datapoints, but it wouldn't update an existing datapoint if you passed in updated parameters with the same requestid",
+}, { // ------------------------------------------------------------------------
+"t": "Fixed a bug in the URLminder magic that lets us fetch the plaintext version of a Google doc. https://www.beeminder.com/nanowrimo #bugfix",
+}, { // ------------------------------------------------------------------------
+"t": "Fixed a bug that meant we wouldn't show you even landing pages of some autodata integrations if you hadn't entered a credit card. #bugfix",
+}, { // ------------------------------------------------------------------------
+"f": true,
+"t": "We added \"make private\" to \"new goal settings\" in account settings if you want all new goals to default to private http://forum.beeminder.com/t/please-let-me-default-new-goals-to-private/2880",
+}, { // ------------------------------------------------------------------------
+"f": true,
+"t": "For goals denominated in hours we now display amounts in HH:MM in most places on the website.",
+}, { // ------------------------------------------------------------------------
+"t": "Fixed a nasty bug w/ road dial where we'd mess up the last segment of your road when you changed the rate units (daily/weekly/etc). #bugfix",
+}, { // ------------------------------------------------------------------------
+"t": "Fixed a 500-error involving displaying bare-mins as HH:MM for ended goals. Also stopped showing HH:MM:SS in recent data. #bugfix",
+}, { // ------------------------------------------------------------------------
+"t": "Somewhat smarter rounding and don't show integers as X.00. And another #mini #bugfix with sometimes showing \"++HH:MM\" instead of \"+HH:MM\"",
+}, { // ------------------------------------------------------------------------
+"t": "A bunch of small improvements to our datapoint format checker. You can see all the crazy example parsings at http://d.gomix.me",
+}, { // ------------------------------------------------------------------------
+"t": "Made the navigation header not annoyingly large. Also: tweaks to http://beeminder.com/aboutus: Capitalize \"Hours\", make our titles fit on 1 line.",
+}, { // ------------------------------------------------------------------------
+"t": "More #mini UVIs: shrunk annoyingly large navigation header, made archived gallery show 4 across, link to archive in gallery view.",
+}, { // ------------------------------------------------------------------------
+"t": "And a super #mini one: made the pledge box not have an \"i'm a button\" shadow if you're looking at someone else's goal so it's not clickable",
+}, { // ------------------------------------------------------------------------
+"t": "In goal settings for Trello goals we now link to the actual board that we're pulling data from.",
+}, { // ------------------------------------------------------------------------
+"t": "We now show both the goalname and the description (the latter in a tiny font) on the dashboard. No more confusing toggling (for goalnames)!",
+}, { // ------------------------------------------------------------------------
+"t": "Fixed missing newline in text under graph thumbnails in gallery view. #mini #bugfix #redesign And show full goal description as hovertext.",
+}, { // ------------------------------------------------------------------------
+"t": "When you had non-midnight deadlines for a goal we'd sometimes show you the wrong date for adding new data. #redesign #bugfix",
+}, { // ------------------------------------------------------------------------
+"t": "#bugfix in URLminder: don't add a new datapoint every single time we check, only when wordcount has actually changed https://www.beeminder.com/new#urlminder",
+}, { // ------------------------------------------------------------------------
+"t": "Added a new premium FAQ item at http://beeminder.com/premium. Includes my ill-advised murder joke. #yolo #mini",
+}, { // ------------------------------------------------------------------------
+"t": "#bugfix kind of: the dates used for the add-data form were being too clever and magically updating when your deadline hit; caused confusion!",
+}, { // ------------------------------------------------------------------------
+"t": "#bugfix: The iPhone beemergency badge icon didn't show up unless you remembered to manually launch the app every single day. HT Paul Schmidt",
+}, { // ------------------------------------------------------------------------
+"t": "I guess we'll count this: We now have an informative static image to show in place of graphs in case Amazon goes down and won't show them...",
+}])</script>
 
 <h3>2017 March</h3>
 <ol><div id="2017mar"/></ol>
 <script>gen("2017mar", [{
+"n": 2213,
+"td": "2017-03-01",
+"t": "Super facepalmy bug made us forget toggle states (countdown vs time, expanded vs not, etc) on dashboard after visiting new goal page #bugfix",
+}, { // ------------------------------------------------------------------------
 "n": 2214,
 "t": "#bugfix w/ goal wizard that'd occasionally/rarely give a blank page when creating a goal (related to bad state from previous goal creation)",
 }, { // ------------------------------------------------------------------------
@@ -1426,19 +1603,25 @@ X FAP Super facepalmy bug made us forget toggle states (countdown vs time, expan
 "f": true,
 "t": "beeminder.com/changelog now points to an archive of all 2261 (as of this one) Beeminder UVIs!",
 "u": "https://twitter.com/beemuvi/status/855570654602473476", // TODO: figure out why twitter thinks it's just 2259
-"date": "2017-04-21",
+"d": "2017-04-21",
 }, { // ------------------------------------------------------------------------
 "t": "A bunch of improvements to the styling, layout, and webcopy for beeminder.com/changelog -- it's almost pretty now, at least up to mid-2016",
 "u": "https://twitter.com/beemuvi/status/856657403521126400",
 "d": "2017-04-24",
+}, { // ------------------------------------------------------------------------
+"t": "Prettified the rest of beeminder.com/changelog and made http://beeminder.com/changelog#latest link to the bottom of the page",
+"u": "https://twitter.com/beemuvi/status/857019759874850817",
+"d": "2017-04-25",
+"c": "Got rid of all the stuff dumped between <pre> tags",
 }])</script>
 
 <a id="latest"></a>
 
 <!-- 
+"u": "https://twitter.com/beemuvi/status/857019759874850817",
 STAGED: ------10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140  
-"t": "A bunch more fussing with our shiny new changelog like making http://beeminder.com/changelog#latest link to the bottom of the page",
-"ddate": "2017-04-24",
+}, { // ------------------------------------------------------------------------
+"t": "[We made dashboard sorting always pick the sensible order (increasing time to derailment, decreasing pledge, etc).] [not merged yet]",
 -->
   
 </main>
