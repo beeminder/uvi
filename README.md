@@ -15,8 +15,7 @@ Also it would be nice if it were easy to totally migrate away from Twitter in th
 
 ## TODO LIST
 
-1. Format all the UVIs currently in <pre> tags
-2. Merge in the UVIs that are currently only in the Twitter archive
+1. Merge in the UVIs that are currently only in the Twitter archive
 
 ## Twitter Export README
 

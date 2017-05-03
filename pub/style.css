@@ -1,9 +1,12 @@
 body {
   font-family: verdana, sans-serif;
   /* font-family: "Lucida Console", Monaco, monospace; */
-  margin: 25px;
+  margin: 30px;
 }
 
 li {
-  margin-bottom: 1px;
+  margin-bottom: 4px;
+  margin-top:    4px;
+  margin-left:   22px;
+  margin-right:  22px;
 }
