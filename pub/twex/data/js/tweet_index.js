@@ -1,3 +1,5 @@
+// sum of tweet_counts is 2259
+
 var tweet_index =  [ {
   "file_name" : "data\/js\/tweets\/2017_04.js",
   "year" : 2017,
