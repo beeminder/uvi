@@ -271,26 +271,40 @@ var batch2017apr = [{
 "d": "2017-04-28",
 "u": "https://twitter.com/beemuvi/status/858095193718796288",
 }, { // ------------------------------------------------------------------------
+"n": 2268,
 "x": "Changed countdown format to be like \"1h 30m 59s\" (makes the difference from time-of-day more obvious) & no seconds if 2 or more days left",
 "d": "2017-04-28",
 "t": "2017-04-28",
 "u": "https://twitter.com/beemuvi/status/858095475467079681",
 }, { // ------------------------------------------------------------------------
+"n": 2269,
 "x": "Changed default format for time-to-derailment on dashboard to day/date instead of countdown; lots of simultaneous countdowns is nerveracking",
 "d": "2017-04-28",
 "u": "https://twitter.com/beemuvi/status/858098808311357441",
 }]
 
 var batch2017may = [ {
+"n": 2270,
 "x": "Fixed broken image for blog post on front page; trimmed whitespace when not displaying seconds; fixed formatting bug in API docs. #mini ×3",
 "t": "2017-05-02",
 "u": "https://twitter.com/beemuvi/status/859557387643961345",
 "c": "We can't figuring out what that formatting bug actually was from looking at the commit so hopefully that's not lies. Fortunately it's a 3-for-1 UVI so there's an error margin!",
+}, { // ------------------------------------------------------------------------
+"n": 2271,
+"x": "We were failing to update Todoist goals if you deleted the parent project of a project you had Beeminder tracking. #bugfix",
+"u": "https://twitter.com/beemuvi/status/859918078896783360",
+"d": "2017-04-28",
+"t": "2017-05-03",
+}, { // ------------------------------------------------------------------------
+"x": "If you (ie, a 3rd-party app developer) tried to set your app as the datasource for a goal we were giving a 500 error. #bugfix",
+"u": "https://twitter.com/beemuvi/status/859918808428855296",
+"d": "2017-05-01",
+"t": "2017-05-03",
+"c": "Thanks Sergii Kalinchuk",
 }]
 
 /*
 STAGED: ------10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140  
-}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 CANDIDATES: --10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140  
 "x": "[We made dashboard sorting always pick the sensible order (increasing time to derailment, decreasing pledge, etc).] [not merged yet]",

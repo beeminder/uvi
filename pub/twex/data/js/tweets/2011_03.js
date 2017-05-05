@@ -77,7 +77,7 @@ Grailbird.data.tweets_2011_03 =
     "urls" : [ ]
   },
   "geo" : { },
-  "id_str" : "52575318518665216",
+  "id_str" : "52575318518665216", 
   "text" : "Fixed a tiny inconsistency in the layout of the navigation bar on personal gallery pages like http:\/\/bmndr.com\/bd thanks to @thatgirl.",
   "id" : 52575318518665216,
   "created_at" : "2011-03-29 03:38:27 +0000",
