@@ -10,6 +10,34 @@ let fs = require('fs')
 app.use(express.static('pub'))
 app.listen(process.env.PORT, () => console.log('UVI app is running'))
 
+// Take tweet text and escape quotes and expand URLs
+function fixt(t, urls) {
+
+}
+/* TODO: expand URLs like so: {
+  "source" : "",
+  "entities" : {
+    "user_mentions" : [ ],
+    "media" : [ ],
+    "hashtags" : [ {
+      "text" : "mini",
+      "indices" : [ 94, 99 ]
+    } ],
+    "urls" : [ {
+      "indices" : [ 38, 61 ],
+      "url" : "https:\/\/t.co\/arZxzvSs86",
+      "expanded_url" : "http:\/\/beeminder.com\/premium",
+      "display_url" : "beeminder.com\/premium"
+    } ]
+  },
+  "geo" : { },
+  "id_str" : "852307170427191297",
+  "text" : "Fixed a typo and added an FAQ item to https:\/\/t.co\/arZxzvSs86 about the SMS bot being US-only #mini",
+  "id" : 852307170427191297,
+  "created_at" : "2017-04-12 23:47:19 +0000",
+  "user" : { }
+} */
+
 // --------------------------------- 80chars ---------------------------------->
 // This is basically just a script we can run by GET'ing this magic route.
 // It slurps up all the tweets from the Twitter export and writes them to a new
@@ -42,8 +70,9 @@ app.get("/magic-import-route", (req, resp) => {
         let rs = t.retweeted_status
         let id = rs ? rs.id_str     : t.id_str
         let ca = rs ? rs.created_at : t.created_at
+        let tt = rs ? `RT @${rs.user.screen_name}: ${rs.text}` : t.text
         s += '{\n'
-        s += `"x": "${t.text.replace(/\"/g, '\\"')}",\n`
+        s += `"x": "${tt.replace(/\"/g, '\\"')}",\n`
         s += `"u": "${TWURL}/${id}",\n`
         s += `"t": "${ca}",\n`
         s += '"c": "(auto-imported from Twitter)",\n'
@@ -59,29 +88,3 @@ app.get("/magic-import-route", (req, resp) => {
 })
 // --------------------------------- 80chars ---------------------------------->
 
-/* TODO: expand URLs like so:
-
-{
-  "source" : "",
-  "entities" : {
-    "user_mentions" : [ ],
-    "media" : [ ],
-    "hashtags" : [ {
-      "text" : "mini",
-      "indices" : [ 94, 99 ]
-    } ],
-    "urls" : [ {
-      "indices" : [ 38, 61 ],
-      "url" : "https:\/\/t.co\/arZxzvSs86",
-      "expanded_url" : "http:\/\/beeminder.com\/premium",
-      "display_url" : "beeminder.com\/premium"
-    } ]
-  },
-  "geo" : { },
-  "id_str" : "852307170427191297",
-  "text" : "Fixed a typo and added an FAQ item to https:\/\/t.co\/arZxzvSs86 about the SMS bot being US-only #mini",
-  "id" : 852307170427191297,
-  "created_at" : "2017-04-12 23:47:19 +0000",
-  "user" : { }
-}
-*/
