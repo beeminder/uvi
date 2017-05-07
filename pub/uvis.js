@@ -296,15 +296,38 @@ var batch2017may = [ {
 "d": "2017-04-28",
 "t": "2017-05-03",
 }, { // ------------------------------------------------------------------------
+"n": 2272,
 "x": "If you (ie, a 3rd-party app developer) tried to set your app as the datasource for a goal we were giving a 500 error. #bugfix",
 "u": "https://twitter.com/beemuvi/status/859918808428855296",
 "d": "2017-05-01",
 "t": "2017-05-03",
 "c": "Thanks Sergii Kalinchuk",
+}, { // ------------------------------------------------------------------------
+"n": 2273,
+"f": true,
+"x": "We converted our <a href=\"http://beeminder.com/api\">API docs</a> to the vastly prettier <a href=\"http://lord.github.io/slate/\">Slate</a> and can also accept pull requests (<a href=\"http://github.com/beeminder/slate\">github.com/beeminder/apidocs</a>)!",
+"u": "https://twitter.com/beemuvi/status/860280146913247232",
+"d": "2017-05-04",
+"t": "2017-05-04",
+"c": "Redirecting to GitHub Pages for now. UPDATE: fixed the link since we renamed the repository from 'slate' to 'apidocs'.",
+}, { // ------------------------------------------------------------------------
+"n": 2274,
+"x": "api.beeminder.com is now the canonical URL for the <a href=\"http://beeminder.com/api\">API docs</a> (still hosting it on github.io but we don't redirect to that URL now)",
+"u": "https://twitter.com/beemuvi/status/860641008882556928",
+"d": "2017-05-05",
+"t": "2017-05-05",
+"c": "Added a CNAME to beeminder.github.io/apidocs. Also got rid of the wildcard subdomain entry so notathing.beeminder.com just fails to resolve now instead of redirecting to www.beeminder.com.",
+}, { // ------------------------------------------------------------------------
+"n": 2275,
+"x": "Added clarification and warning about auth_tokens vs access_tokens to the API docs. Also fixed some typos. #mini",
+"u": "https://twitter.com/beemuvi/status/860641116105744385",
+"d": "2017-05-04",
+"t": "2017-05-05",
 }]
 
 /*
 STAGED: ------10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140  
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 CANDIDATES: --10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140  
 "x": "[We made dashboard sorting always pick the sensible order (increasing time to derailment, decreasing pledge, etc).] [not merged yet]",

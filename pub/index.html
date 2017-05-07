@@ -334,7 +334,7 @@ while we gradually convert all that and move it to this page so everything is in
 <li><strong>A new aggday type: triangle. Described in a <a href="http://forum.beeminder.com/t/triangular-beeminding-for-tracking-alcohol-consumption/543">forum thread</a>. Huge HT <a href="http://twitter.com/DRMacIver">@DRMacIver</a>.</strong></li>
 <li>From Jan 30 to Feb 26 HabitRPG goal creation gave cryptic errors in place of graph image at first (tho goal got created) #bugfix</li>
 <li>Explanatory text and visual improvements in <a href="http://beeminder.com/apps">beeminder.com/apps</a>. HT <a href="http://twitter.com/instigate_it">@instigate_it</a> who's been a huge help with API hacking lately.</li>
-<li>Added hint "(Did you mix up auth_token and access_token?)" to an API error message and added two more aggday functions: square and clocky</li>
+<li><a name="1474"></a>Added hint "(Did you mix up auth_token and access_token?)" to an API error message and added two more aggday functions: square and clocky</li>
 <li>To catch infinite loops w/ our new (beta only still) IFTTT triggers (or other autodata schemes) there's now a cap of 144 datapoints per day</li>
 <li>Important #bugfix in drawing the graph after a derailment where it could fail to <a href="http://blog.beeminder.com/glossary/#flatline">flatline</a> past the derail day</li>
 <li><strong>Now over-achievers can have every day be an eep day too! (on Do More goals, set 'Max Safety' to 0 just like manual ratchets) #planbeeperqs</strong></li>
@@ -1476,23 +1476,17 @@ while we gradually convert all that and move it to this page so everything is in
 <h3>2017 April</h3>
 <ol><div id="2017apr"/></ol>
 <script>gen("2017apr", batch2017apr)</script>
-
   
 <h3>2017 May</h3>
 <ol><div id="2017may"/></ol>
 <script>gen("2017may", batch2017may)</script>
 
-<ol><div id="2017tmp"/></ol>
-<script>gen("2017tmp", [{
-"n": 2273,
-"f": true,
-"x": "We converted our <a href=\"http://beeminder.com/api\">API docs</a> to the vastly prettier <a href=\"http://lord.github.io/slate/\">Slate</a> and can also accept pull requests (<a href=\"http://github.com/beeminder/slate\">github.com/beeminder/slate</a>)!",
-"u": "https://twitter.com/beemuvi/status/860280146913247232",
-"d": "2017-05-04",
-"t": "2017-04-04",
-"c": "Redirecting to GitHub Pages for now",
-}])</script>
 <!-- add new UVIs to pub/uvis.js -->
+
+<!-- 
+ideas:
+1. fix FAQ copy: "form below your graph"
+-->
 
 <a id="latest"></a>
   
