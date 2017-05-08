@@ -310,7 +310,7 @@ var batch2011apr = [{
 "c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 52,
-"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: Case Study: Martin's Renovating. http://blog.bmndr.com/martin (Not the most exciting post but we gotta hew to http://bmndr.com/meta/blog !)",
+"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: Case Study: Martin's Renovating. http://blog.beeminder.com/martin (Not the most exciting post but we gotta hew to http://bmndr.com/meta/blog !)",
 "u": "https://twitter.com/bmndr/status/57138849540878337",
 "t": "2011-04-10 17:52:17 +0000",
 "c": "(auto-imported from Twitter)",
@@ -340,7 +340,7 @@ var batch2011apr = [{
 "c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 57,
-"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: What happens when you drive blind: http://blog.bmndr.com/blind #withings",
+"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: What happens when you drive blind: http://blog.beeminder.com/blind #withings",
 "u": "https://twitter.com/bmndr/status/60192281906520064",
 "t": "2011-04-19 04:05:32 +0000",
 "c": "(auto-imported from Twitter)",
@@ -526,7 +526,7 @@ var batch2011apr = [{
 "c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 88,
-"x": "Oh, and added a tagline to the front page and fixed the domain http://blog.bmndr.com and various fixes to legacy URLs.",
+"x": "Oh, and added a tagline to the front page and fixed the domain http://blog.beeminder.com and various fixes to legacy URLs.",
 "u": "https://twitter.com/beemuvi/status/64486842740899841",
 "t": "2011-05-01 00:30:36 +0000",
 "c": "(auto-imported from Twitter)",
@@ -547,7 +547,7 @@ var batch2011may = [
 "c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 91,
-"x": "New blog post: Is there a danger of unintended consequences of Beeminder contracts? http://blog.bmndr.com/unintended",
+"x": "New blog post: Is there a danger of unintended consequences of Beeminder contracts? http://blog.beeminder.com/unintended",
 "u": "https://twitter.com/beemuvi/status/72504640234725376",
 "t": "2011-05-23 03:30:27 +0000",
 "c": "(auto-imported from Twitter)",
@@ -604,7 +604,7 @@ var batch2011may = [
 var batch2011jun = [
 {
 "n": 100,
-"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: Going all soup-nazi on our users: http://blog.bmndr.com/akratics #akrasia",
+"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: Going all soup-nazi on our users: http://blog.beeminder.com/akratics #akrasia",
 "u": "https://twitter.com/bmndr/status/75774306155630593",
 "t": "2011-06-01 04:02:57 +0000",
 "c": "(auto-imported from Twitter)",
@@ -664,10 +664,9 @@ var batch2011jun = [
 "c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 110,
-"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: Blog post about some competition: <a href=\"https://twitter.com/TimeCarrot\">@TimeCarrot</a> = <a href=\"https://twitter.com/stickK\">@stickK</a> + <a href=\"https://twitter.com/rescuetime\">@rescuetime</a>. <a href=\"http://blog.bmndr.com/timecarrot\">blog.bmndr.com/timecarrot</a>",
+"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: Blog post about some competition: <a href=\"https://twitter.com/TimeCarrot\">@TimeCarrot</a> = <a href=\"https://twitter.com/stickK\">@stickK</a> + <a href=\"https://twitter.com/rescuetime\">@rescuetime</a>. <a href=\"http://blog.beeminder.com/timecarrot\">blog.beeminder.com/timecarrot</a>",
 "u": "https://twitter.com/bmndr/status/79385765548797952",
 "t": "2011-06-11 03:13:36 +0000",
-"c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 111,
 "x": "You should never again see Beeminder say \"1 more days\".",
@@ -712,7 +711,7 @@ var batch2011jun = [
 "c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 118,
-"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: BMNDR vs StickK: <a href=\"http://blog.bmndr.com/stickk\">blog.bmndr.com/stickk</a> Guest post by Josh Jordan (@bumbledraven).",
+"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: BMNDR vs StickK: <a href=\"http://blog.beeminder.com/stickk\">blog.beeminder.com/stickk</a> Guest post by Josh Jordan (@bumbledraven).",
 "u": "https://twitter.com/bmndr/status/81224613429915648",
 "t": "2011-06-16 05:00:31 +0000",
 "c": "(auto-imported from Twitter)",
@@ -793,7 +792,7 @@ var batch2011jun = [
 var batch2011jul = [
 {
 "n": 131,
-"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: Commitment contracts with maximal flexibility: Beeminder's Force Majeure Clause. <a href=\"http://blog.bmndr.com/sos\">blog.bmndr.com/sos</a> #akrasia",
+"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: Commitment contracts with maximal flexibility: Beeminder's Force Majeure Clause. <a href=\"http://blog.beeminder.com/sos\">blog.beeminder.com/sos</a> #akrasia",
 "u": "https://twitter.com/bmndr/status/86901351812055040",
 "t": "2011-07-01 20:57:51 +0000",
 "c": "(auto-imported from Twitter)",
@@ -865,7 +864,7 @@ var batch2011jul = [
 "c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 143,
-"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: The Magical Widening Yellow Brick Road. <a href=\"http://blog.bmndr.com/roadwidth\">blog.bmndr.com/roadwidth</a>",
+"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: The Magical Widening Yellow Brick Road. <a href=\"http://blog.beeminder.com/roadwidth\">blog.beeminder.com/roadwidth</a>",
 "u": "https://twitter.com/bmndr/status/90193364825292800",
 "t": "2011-07-10 22:59:08 +0000",
 "c": "(auto-imported from Twitter)",
@@ -925,7 +924,7 @@ var batch2011jul = [
 "c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 153,
-"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: Akratics Anonymous is now a google group: <a href=\"http://blog.bmndr.com/akratics\">blog.bmndr.com/akratics</a> <a href=\"http://groups.google.com/group/akratics\">groups.google.com/group/akratics</a>",
+"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: Akratics Anonymous is now a google group: <a href=\"http://blog.beeminder.com/akratics\">blog.beeminder.com/akratics</a> <a href=\"http://groups.google.com/group/akratics\">groups.google.com/group/akratics</a>",
 "u": "https://twitter.com/bmndr/status/93839728394244096",
 "t": "2011-07-21 00:28:29 +0000",
 "c": "(auto-imported from Twitter)",
@@ -949,7 +948,7 @@ var batch2011jul = [
 "c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 157,
-"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: \"Sometimes it seems like a hard workout makes me gain weight. My question is: WTF?\" <a href=\"http://blog.bmndr.com/backfiring\">blog.bmndr.com/backfiring</a>",
+"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: \"Sometimes it seems like a hard workout makes me gain weight. My question is: WTF?\" <a href=\"http://blog.beeminder.com/backfiring\">blog.beeminder.com/backfiring</a>",
 "u": "https://twitter.com/bmndr/status/96068670190657536",
 "t": "2011-07-27 04:05:30 +0000",
 "c": "(auto-imported from Twitter)",
@@ -1213,7 +1212,7 @@ var batch2011aug = [
 var batch2011sep = [
 {
 "n": 200,
-"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: New blog post: The Road Dial and the Akrasia Horizon. <a href=\"http://blog.bmndr.com/dial\">blog.bmndr.com/dial</a> (commitment devices with maximal flexibility)",
+"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: New blog post: The Road Dial and the Akrasia Horizon. <a href=\"http://blog.beeminder.com/dial\">blog.beeminder.com/dial</a> (commitment devices with maximal flexibility)",
 "u": "https://twitter.com/bmndr/status/109114106589614080",
 "t": "2011-09-01 04:03:24 +0000",
 "c": "(auto-imported from Twitter)",
@@ -1297,7 +1296,7 @@ var batch2011sep = [
 "c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 214,
-"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: The naming of Beeminder: <a href=\"http://blog.bmndr.com/beenamer\">blog.bmndr.com/beenamer</a> (and the story of its former name, Kibotzer)",
+"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: The naming of Beeminder: <a href=\"http://blog.beeminder.com/beenamer\">blog.beeminder.com/beenamer</a> (and the story of its former name, Kibotzer)",
 "u": "https://twitter.com/bmndr/status/114856760296210432",
 "t": "2011-09-17 00:22:40 +0000",
 "c": "(auto-imported from Twitter)",
@@ -1321,10 +1320,9 @@ var batch2011sep = [
 "c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 218,
-"x": "You can now talk to the Beeminder bot via text message: <a href=\"http://blog.bmndr.com/textbot?secretpreview\">blog.bmndr.com/textbot?secretpreview</a>",
+"x": "You can now talk to the Beeminder bot via text message: <a href=\"http://blog.beeminder.com/textbot\">blog.beeminder.com/textbot</a>",
 "u": "https://twitter.com/beemuvi/status/116644972001902592",
 "t": "2011-09-21 22:48:23 +0000",
-"c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 219,
 "x": "The whole site uses SSL now. No longer can your enemies sniff your net traffic and modify your weight to make you go off your road.",
@@ -1534,7 +1532,7 @@ var batch2011oct = [
 "c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 253,
-"x": "New blog post <a href=\"http://blog.bmndr.com/launch\">blog.bmndr.com/launch</a> & RT <a href=\"https://twitter.com/bmndr\">@bmndr</a> Beeminder in 3tweets: It's like <a href=\"https://twitter.com/stickK\">@stickK</a> -- cash commitment contracts to force yourself to...",
+"x": "New blog post <a href=\"http://blog.beeminder.com/launch\">blog.beeminder.com/launch</a> & RT <a href=\"https://twitter.com/bmndr\">@bmndr</a> Beeminder in 3tweets: It's like <a href=\"https://twitter.com/stickK\">@stickK</a> -- cash commitment contracts to force yourself to...",
 "u": "https://twitter.com/beemuvi/status/124278038010662914",
 "t": "2011-10-13 00:19:27 +0000",
 "c": "(auto-imported from Twitter)",
@@ -1552,7 +1550,7 @@ var batch2011oct = [
 "c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 256,
-"x": "3 bugfixes: dealing w/ blank lines in data form, letters entered as phone number, bug pointed out by <a href=\"https://twitter.com/pennockd\">@pennockd</a> at <a href=\"http://blog.bmndr.com/launch\">blog.bmndr.com/launch</a>",
+"x": "3 bugfixes: dealing w/ blank lines in data form, letters entered as phone number, bug pointed out by <a href=\"https://twitter.com/pennockd\">@pennockd</a> at <a href=\"http://blog.beeminder.com/launch\">blog.beeminder.com/launch</a>",
 "u": "https://twitter.com/beemuvi/status/125276333772247041",
 "t": "2011-10-15 18:26:20 +0000",
 "c": "(auto-imported from Twitter)",
@@ -1570,7 +1568,7 @@ var batch2011oct = [
 "c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 259,
-"x": "Blogspam was showing up with javascript off. Thanks to <a href=\"https://twitter.com/pjeby\">@pjeby</a> for pointing it out at <a href=\"http://blog.bmndr.com/dial\">blog.bmndr.com/dial</a>",
+"x": "Blogspam was showing up with javascript off. Thanks to <a href=\"https://twitter.com/pjeby\">@pjeby</a> for pointing it out at <a href=\"http://blog.beeminder.com/dial\">blog.beeminder.com/dial</a>",
 "u": "https://twitter.com/beemuvi/status/126402530077978625",
 "t": "2011-10-18 21:01:26 +0000",
 "c": "(auto-imported from Twitter)",
@@ -1588,7 +1586,7 @@ var batch2011oct = [
 "c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 262,
-"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: New blog post: The Want-Can-Will Test for Akrasia <a href=\"http://blog.bmndr.com/wantcanwill\">blog.bmndr.com/wantcanwill</a>",
+"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: New blog post: The Want-Can-Will Test for Akrasia <a href=\"http://blog.beeminder.com/wantcanwill\">blog.beeminder.com/wantcanwill</a>",
 "u": "https://twitter.com/bmndr/status/128320027890954240",
 "t": "2011-10-24 04:00:53 +0000",
 "c": "(auto-imported from Twitter)",
@@ -1651,7 +1649,7 @@ var batch2011nov = [
 "c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 272,
-"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: Chunky Time: how and why you can beemind things you only do in sporadic chunks of time. <a href=\"http://blog.bmndr.com/chunky\">blog.bmndr.com/chunky</a>",
+"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: Chunky Time: how and why you can beemind things you only do in sporadic chunks of time. <a href=\"http://blog.beeminder.com/chunky\">blog.beeminder.com/chunky</a>",
 "u": "https://twitter.com/bmndr/status/132141970561843200",
 "t": "2011-11-03 17:07:55 +0000",
 "c": "(auto-imported from Twitter)",
@@ -3286,7 +3284,7 @@ var batch2012aug = [
 "c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 540,
-"x": "No more insecure content on front page (images from blog.bmndr), proper thumbnails, hover text, ...",
+"x": "No more insecure content on front page (images from blog.beeminder), proper thumbnails, hover text, ...",
 "u": "https://twitter.com/beemuvi/status/234459975592865792",
 "t": "2012-08-12 01:23:08 +0000",
 "c": "(auto-imported from Twitter)",
