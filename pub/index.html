@@ -54,15 +54,36 @@ days (over 6 years!) and counting...
 <script src="/uvis.js"></script>
 <script src="/import.js"></script>
 
-<h3>2011 February</h3>
-<ol><div id="2011feb"/></ol>
-<script>gen("2011feb", batch2011feb)</script>
+<div id="2011feb"/><script>genbatch(2011,  2)</script>
+<div id="2011mar"/><script>genbatch(2011,  3)</script>
+<div id="2011apr"/><script>genbatch(2011,  4)</script>
+<div id="2011may"/><script>genbatch(2011,  5)</script>
+<div id="2011jun"/><script>genbatch(2011,  6)</script>
+<div id="2011jul"/><script>genbatch(2011,  7)</script>
+<div id="2011aug"/><script>genbatch(2011,  8)</script>
+<div id="2011sep"/><script>genbatch(2011,  9)</script>
+<div id="2011oct"/><script>genbatch(2011, 10)</script>
+<div id="2011nov"/><script>genbatch(2011, 11)</script>
+<div id="2011dec"/><script>genbatch(2011, 12)</script>
 
-<h3>2011 March</h3>
-<ol><div id="2011mar"/></ol>
-<script>gen("2011mar", batch2011mar)</script>
-  
-<h3>OMG Where Did Three Years Of UVIs Go??</h3>
+<div id="2012jan"/><script>genbatch(2012,  1)</script>
+<div id="2012feb"/><script>genbatch(2012,  2)</script>
+<div id="2012mar"/><script>genbatch(2012,  3)</script>
+<div id="2012apr"/><script>genbatch(2012,  4)</script>
+<div id="2012may"/><script>genbatch(2012,  5)</script>
+<div id="2012jun"/><script>genbatch(2012,  6)</script>
+<div id="2012jul"/><script>genbatch(2012,  7)</script>
+<div id="2012aug"/><script>genbatch(2012,  8)</script>
+<div id="2012sep"/><script>genbatch(2012,  9)</script>
+<div id="2012oct"/><script>genbatch(2012, 10)</script>
+<div id="2012nov"/><script>genbatch(2012, 11)</script>
+<div id="2012dec"/><script>genbatch(2012, 12)</script>
+
+<!--
+<div id="2012jan"/><script>genbatch(2012, 1)</script>
+-->
+
+<h3>OMG Where Did The UVIs From 2013-2014 Go??</h3>
 
 From our first public UVI in 2011 through 2014 June 18 we only logged our UVIs by tweeting them
 (<a href="http://twitter.com/beemuvi" title="We still do, in case you want follow this Twitter feed and see our daily improvements to Beeminder. For less frequent and generally more interesting announcement, try our main Twitter account, @bmndr.">@beemuvi</a>).
@@ -439,7 +460,7 @@ while we gradually convert all that and move it to this page so everything is in
 <li><strong>Official Misfit integration! Our blog post here: <a href="http://blog.beeminder.com/misfit">blog.beeminder.com/misfit</a> -- and look at us in their partner gallery: <a href="https://build.misfit.com/partners">build.misfit.com/partners</a></strong></li>
 <li><strong>Misfit integration features: beemind amount of sleep or steps. Option to import last month's worth of data when you create the goal.</strong></li>
 <li><strong>Finally, we use Misfit's push API so Beeminder updates your graph (roughly) as soon you sync your Shine/Flash</strong></li>
-<!-- [when/why do you have to refresh on Beeminder? -- you shouldn't in theory. though i don't know *how* quickly they push data out. There might be a delay? like IFTTT "automatically" syncs, but you still have to wait 15 minutes] -->
+<!-- [when/why do you have to refresh on Beeminder? -- you shouldn't in theory. though i don't know *how* quickly they push data out. There might be a delay? like IFTTT "automatically" syncs, but you still have to wait 16 minutes] -->
 <li>Have lots of goals/datapoints? Should see up to 50% faster syncs in the Android app (was partly responsible for server issues last week too)</li>
 <!-- [api users controller is still one of the slowest transactions, but now the slow calls are ~600ms as opposed to ~3000ms] -->
 <li>Goals w/ deadline after midnight would wind up w/ datapoints off-by-one-day if you re-scaled them (bottom of advanced settings) #bugfix</li>
@@ -1484,10 +1505,6 @@ while we gradually convert all that and move it to this page so everything is in
 
 <!-- add new UVIs to pub/uvis.js -->
 
-<!-- 
-ideas:
-1. fix FAQ copy: "form below your graph"
--->
 
 <a id="latest"></a>
   

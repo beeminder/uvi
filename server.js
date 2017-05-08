@@ -2,7 +2,6 @@
 
 const PATH = 'pub/twex/data/js/tweets' // filesystem path to Twitter's export
 const TURL = 'https://twitter.com/'
-const BURL = TURL + 'beemuvi'
 const MONA = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', // month array
               'jul', 'aug', 'sep', 'oct', 'nov', 'dec']
 
@@ -128,11 +127,12 @@ app.get("/magic-import-route", (req, resp) => {
         let rs = t.retweeted_status
         let id = rs ? rs.id_str     : t.id_str
         let ca = rs ? rs.created_at : t.created_at
+        let un = rs ? rs.user.screen_name : t.user.screen_name
         let tt = rendertweet(t)
         s += '{\n'
         s += `"n": ${n += 1},\n`
         s += `"x": "${escape(tt)}",\n`
-        s += `"u": "${BURL}/status/${id}",\n`
+        s += `"u": "${TURL}${un}/status/${id}",\n`
         s += `"t": "${ca}",\n`
         s += '"c": "(auto-imported from Twitter)",\n'
         s += '}, /' + '*'.repeat(73) + '/ '
