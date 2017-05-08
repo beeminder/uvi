@@ -2,7 +2,6 @@
 
 const PATH = 'pub/twex/data/js/tweets' // filesystem path to Twitter's export
 const TURL = 'https://twitter.com/'
-const BURL = TURL + 'beemuvi'
 const MONA = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', // month array
               'jul', 'aug', 'sep', 'oct', 'nov', 'dec']
 
@@ -11,7 +10,10 @@ let app = express()
 let fs = require('fs')
 
 app.use(express.static('pub'))
-app.listen(process.env.PORT, () => console.log('UVI app is running'))
+let listener = app.listen(process.env.PORT, () => {
+  console.log('UVI app is running on port ' + listener.address().port)
+})
+
 
 // Replace URLs with full versions based on object from tweet.entities.urls
 // Twitter supplies a display_url but it's sometimes truncated which is lame.
@@ -125,11 +127,12 @@ app.get("/magic-import-route", (req, resp) => {
         let rs = t.retweeted_status
         let id = rs ? rs.id_str     : t.id_str
         let ca = rs ? rs.created_at : t.created_at
+        let un = rs ? rs.user.screen_name : t.user.screen_name
         let tt = rendertweet(t)
         s += '{\n'
         s += `"n": ${n += 1},\n`
         s += `"x": "${escape(tt)}",\n`
-        s += `"u": "${BURL}/${id}",\n`
+        s += `"u": "${TURL}${un}/status/${id}",\n`
         s += `"t": "${ca}",\n`
         s += '"c": "(auto-imported from Twitter)",\n'
         s += '}, /' + '*'.repeat(73) + '/ '

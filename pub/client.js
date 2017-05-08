@@ -4,15 +4,21 @@ const TURL = 'https://twitter.com/';
 const BURL = TURL + 'beemuvi';
 const BICON = // tiny twitter birdie icon
      'https://cdn.glitch.com/048f1230-830a-4702-9106-1d28c7e8a2c9%2Fbirdie.png';
+const MONA = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', // month array
+              'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
+const MONAF = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
+               'August', 'September', 'October', 'November', 'December'];
 
 var n = 0; // global variable counting the UVIs as we generate them
 
 // Wrap bare URLs in string s with "a href" tags; also Twitter @-mentions
 function linkify(s) {
-  if (/\<a href\=/.test(s)) { return s } // must be already linkified
-  s = s.replace(/https?:\/\/(?:www\.)?([\w\-\.!~#?&=+\*\'"(),\/]+)/g, 
-                '<a href="$&">$1</a>');
-  s = s.replace(/@(\w+)\b/g, '<a href="https://twitter.com/$1">@$1</a>');
+  // Find URLs that seem to be bare, not part of an a-href already, or for some
+  // other reason having quotation marks or an html tag right before the http:
+  s= s.replace(/([^"'>]|^)(https?:\/\/(?:www\.)?([\w\-\.!~#?&=+\*\'"(),\/]+))/g,
+               '$1<a href="$2">$3</a>'); // 1 preceding char, 2 full url, 3 url
+  s= s.replace(/([^"'>]|^)@(\w+)\b/g, 
+               '$1<a href="https://twitter.com/$2">@$2</a>');
   return s
 }
 
@@ -59,8 +65,19 @@ function genli(uvi) {
 }
 
 // Generate html for the ordered list of UVIs
+// Deprecated.
 function gen(id, l) {
   var d = document.getElementById(id);
   l.forEach(function(x) { d.insertAdjacentHTML('beforeend', genli(x)) })
+}
+
+// Generate html for a batch of UVIs including the year/month header
+function genbatch(year, mon) {
+  var d = document.getElementById(year + MONA[mon-1]);
+  var batch = eval("batch" + year + MONA[mon-1]);
+  d.insertAdjacentHTML('beforeend', '<h3>'+year+' '+MONAF[mon-1]+'</h3>');
+  var s = '';
+  batch.forEach(function(x) { s += genli(x) })
+  d.insertAdjacentHTML('beforeend', '\n<ol>' + s + '</ol>\n')
 }
 // --------------------------------- 80chars ---------------------------------->
