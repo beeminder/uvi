@@ -1622,10 +1622,9 @@ var batch2011oct = [
 "c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 268,
-"x": "New beeminder taglines in rotation: <a href=\"http://yootles.com/expost/beeminder-taglines\">yootles.com/expost/beeminder-taglines</a> (latest: make a beeline for your goal)",
+"x": "New Beeminder taglines in rotation: <a href=\"http://doc.beeminder.com/beeminder-taglines\">doc.beeminder.com/beeminder-taglines</a> (latest: make a beeline for your goal)",
 "u": "https://twitter.com/beemuvi/status/130403856705265664",
 "t": "2011-10-29 22:01:16 +0000",
-"c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 269,
 "x": "When you're signed in you see (under your avatar) the total amount you have pledged towards how many yellow brick roads. HT Rodrigo Belo",
@@ -7496,363 +7495,293 @@ var batch2014jun = [
 "c": "TODO: numbered 1262 in non-Twitter version",
 }, /*************************************************************************/ {
 "n": 1231,
-"x": "Also live from Indie Web Camp: <a href=\"http://indieauth.com\">Indieauth</a> supports Beeminder! Add your personal URL and it's shown on your gallery page as a rel=me link",
+"x": "Also live from Indie Web Camp: <a href=\"http://indieauth.com\">Indieauth</a> supports Beeminder! Add your personal URL and it's shown on your gallery page as a rel=me link [orig1263]",
 "u": "https://twitter.com/beemuvi/status/483401706932170752",
 "t": "2014-06-30 00:08:42 +0000",
 "c": "TODO: numbered 1263 in non-Twitter version",
 }, /* --------------------------------------------------------- end 2014jun */ ]
 
-/* 2014 June 19+ TODOMERGE
-"x": "<strong>Android app v2.3.3: better widget creation, somewhat rare but important bugfix w/ date display, other tweaks/fixes; see changelog in the app</strong>",
-"c": "TODO: numbered 1250 in non-Twitter version",
-"x": "Two Sleep As Android bugfixes: don't prematurely show pledge form (on create); fetch since we last saw data, rather than since today #bugfix",
-"c": "TODO: numbered 1251 in non-Twitter version",
-"x": "Mini-UVIs: Typo in pledge cap settings (HT Yonah Sienna), nice error if Code School user 404s, adapted to a minor change in <a href=\"http://blog.beeminder.com/habitrpg\">HabitRPG</a>'s API",
-"c": "TODO: numbered 1252 in non-Twitter version",
-"x": "Critical #bugfix w/ surprisingly few people affected: regex error counted PPRs as active datapoints and the deadman switch wasn't activating",
-"c": "TODO: numbered 1253 in non-Twitter version",
-"x": "Moved and prettied up the All Data link again since people were still commonly unaware of its existence. PSA: you can edit/export past data!",
-"c": "TODO: numbered 1254 in non-Twitter version",
-*/
-
-/*
-<li value="1264">If you had a credit card on file we&#8217;d sometimes send you to the payment page instead of the restart page for goals that were frozen. #bugfix HT <a href="http://luciamerlo.com/">Lucia Merlo</a></li>
-<li>If you archived all your goals we&#8217;d show you the newbee splash page even when you tried to view your archived goals. #bugfix HT Llucille Petersen and Josh McFarland</li>
-<li>It was briefly impossible to create new weight &amp; inbox goals (new goal units field was both hidden and required! #bugfix) HT <a href="http://twitter.com/awarenesss">@awarenesss</a></li>
-<li>Tappable tooltips! And goal units now used in y-axis label, and fixed countdown javascript for <a href="http://beeminder.com/widgets">goal widgets</a> HT Kyle Marek-Spartz</li>
-<li>The &#8220;Take A Break&#8221; feature now also shows you currently scheduled upcoming breaks!</li>
-<li>If you have a <a href="http://beeminder.com/premium">Beeminder premium plan</a> then <a href="http://blog.beeminder.com/glossary#retroratchet">Retroratchet</a> lets you make it be an eep day Right Now</li>
-<li>We briefly broke <a href="http://beeminder.com/widgets">goal widgets</a> again when we did <a href="https://twitter.com/beeminfra/status/486374945656541184" title="From our 'infrahancement' beeminding">this refactoring</a>. Fixed now. #bugfix</li>
-<li>Got over our carrot-dangliness paranoia &amp; just say &#8220;premium only&#8221; for custom goals &amp; configurable retroratchet. Updated <a href="http://beeminder.com/premium">beeminder.com/premium</a> too.</li>
-<li>Sometimes (rarely) we&#8217;d fail to pick up data for newly created <a href="http://beeminder.com/runkeeper">RunKeeper</a> goals (eg, if you manually add activities for a prev day) #bugfix</li>
-<li>One more #bugfix w/ adding new pledges: we were still making it impossible to add a pledge after un-archiving a successful unpledged goal</li>
-<li>We accidentally were making you double-confirm goal deletion until recently (modal popped up &amp; then the javascript &#8220;are you sure?&#8221; as well)</li>
-<li>Retroratchet made things better &amp; less buggy for Do More but mostly made things worse for Do Less. Reverted to old way for Do Less. #bugfix</li>
-<li>If you have the Plan Bee or higher premium plan you can now change your goal URLs (careful about breaking links please!)</li>
-<li>Goal wizard form validation much nicer: they&#8217;re actually next to the field that&#8217;s in error. Also units updates in real time, &#8220;__ per week&#8221;.</li>
-<li>Added <a href="http://github.com/alice0meta">Alice Monday</a> and <a href="http://github.com/eendividi">Chris Goodman</a> to the <a href="http://beeminder.com/aboutus">About Us</a> page</li>
-<li>Guilt-trip email if you stop beeminding and we auto-cancel your subscription, in case you didn&#8217;t mean to let that happen</li>
-<li>Some time ago <a href="http://bethaknee.com">Bethany</a> ditched our default avatars, citing ugliness. Today we added a new default avatar. Note the use of negative space.</li>
-<li>&#8220;Feature me&#8221; feature in goal settings adds you to <a href="http://beeminder.com/featured">public gallery</a>. Thanks awesome people on <a href="http://blog.beeminder.com/akratics">Akratics Anonymous</a>.</li>
-<li>We were asking for a password on social sign-up (facebook, google, etc) since late April when we refactored sign-up code. Thanks <a href="http://geekportfolio.com/">Ryan Moore</a>. #bugfix </li>
-<li>Bugfix where we&#8217;d sometimes/rarely give a 500 error if you deleted all your recent datapoints and then tried to resume a frozen goal.</li>
-<li>Webcopy tweaks, tooltips for things like explaining safety buffer for Do Less goals &amp; auto-canceling subscriptions on <a href="http://beeminder.com/premium">beeminder.com/premium</a>.</li>
-<li>We no longer add <a href="http://beeminder.com/duolingo">Duolingo</a> datapoints if no change from previous day (important so we know if you go MIA so we can flip the deadman switch).</li>
-<li>When adding a pledge the first time we were getting the credit card info then failing to actually add the pledge (moneyburning #bugfix).</li>
-<li>Vastly slicker form for getting credit card details when you first add a pledge, thanks to <a href="https://stripe.com/checkout">Stripe Checkout</a>.</li>
-<li>Big changes to freebees and deleting goals! First UVI: We now show number of freebees remaining in the sidebar.</li>
-<li><strong>When you delete a goal, we ask you why and if it&#8217;s for technical reasons, we give back the <a href="http://blog.beeminder.com/glossary#freebee" title="A freebee is a goal that starts at $0 pledged">freebee</a>.</strong></li>
-<li>Scrapped &#8220;add a pledge&#8221; vs &#8220;commit later&#8221; (ie, no option to add a pledge when creating a goal &#8212; if you have a freebee left you&#8217;re using it).</li>
-<li>Fancy dynamic text depending on which option you pick in the goal deletion dialog. (This stuff is all spec&#8217;d out at <a href="http://expost.padm.us/freebee">expost.padm.us/freebee</a>.)</li>
-<li>Fixed link to glossary in deletion dialog (and tweaked &#8220;why are you deleting this?&#8221; webcopy). #bugfix</li>
-<li>The popup to confirm you&#8217;re on the hook for all goals after adding credit card was too easily dismissable; now mimics [Stripe] Checkout.</li>
-<li>Truncated the goal titles and added tooltip about archiving in the &#8220;archive any of these active goals you&#8217;re not serious about&#8221; popup.</li>
-<li>Get credit card first (thanks again Stripe), then send the user to unfreeze a goal (improvement over the mixed messages on unfreeze page)&#8230;</li>
-<li>&#8230;which let us simplify the unfreeze page and remove a bunch of text from it (because nobody ever reads on the internet).</li>
-<li>We show the text about giving back freebees only if you do or might have freebees remaining; see &#8220;deletables&#8221; in <a href="http://expost.padm.us/freebee">expost.padm.us/freebees</a>.</li>
-<li>Fixed moneyburning lunacy where we used to increment freebees every time you added a pledge so lots of people wouldn&#8217;t ever actually run out.</li>
-<li>Error handling for failure to save credit card info (not great error handling but it does indicate this to the user now).</li>
-<li>Answering the goal deletion dialog generates an email to us (part of <a href="http://expost.padm.us/freebee">expost.padm.us/freebee</a> which we&#8217;re now done tweeting about!).</li>
-<li>Removed the needless error checks preventing craziness like aggday=mean for autosumming goals since crazy people like Alex Schell wanted it!</li>
-<li><strong>Deadman switch now never treats you as still active if you have an autodata source reporting flatlined data. Same for <a href="http://blog.beeminder.com/autocancel">blog.beeminder.com/autocancel</a>.</strong></li>
-<li>Tiny UVI: we now always say, eg, &#8220;$5&#8221; instead of &#8220;$5.0&#8221;. We told <a href="https://twitter.com/slothbear">@slothbear</a> we&#8217;d pay him $5.0 if we didn&#8217;t fix that by tomorrow. #bugfix</li>
-<li>Fixed formatting in the Guilt Trip email (for premium people who go MIA) and made human-friendly phrasing like &#8220;Bee Lite every month&#8221;.</li>
-<li>Letting you start creating a goal before signing up confused people for no real benefit. Now you have to sign up first.</li>
-<li>Chinese users can now use Alipay instead of a credit card. (One of many UVIs thanks to <a href="https://stripe.com/checkout">Stripe Checkout</a>; cf #7.) UPDATE: Oops, we have to do something more before this is live!</li>
-<li>Quickly clicking the +/- buttons in the newbee data form triggered a double-click, highlighting the buttons. Ugly. Thanks <a href="http://truesoftwaretesting.com/">True Software Testing</a>. #bugfix</li>
-<li>The clickable tooltip thing for the Archive Goal button in settings (as opposed to main graph screen) works now. #bugfix</li>
-<li>Deadman #bugfix introduced a bug: Gmailzero needs a datapoint even if count&#8217;s unchanged; inbox size more like weight than like eg CodeSchool.</li>
-<li>When graph&#8217;s stuck generating we no longer throw up our hands like &#8220;the server is melting; email support?&#8221; &amp; instead give a &#8220;try now&#8221; button.</li>
-<li>Better / less snarky categories for goal deletion reasons: technical reasons (beeminder messed up), confusion, abusing loophole, and other. </li>
-<li>The <a href="http://blog.beeminder.com/glossary/#flatline">flatlined datapoint</a> is now shown as a rightward-pointing triangle (zoom in to see!).</li>
-<li>Also if the official, aggregated datapoint for the day does not have a corresponding actual datapoint (eg, aggday=mean) it&#8217;s shown hollow.</li>
-<li><strong>Intern Chris&#8217;s Twitter integration is live at <a href="http://beeminder.com/twitter">beeminder.com/twitter</a></strong> (and date bug that it had when we first deployed it is now fixed).</li>
-<li>Dutch is now supported in Duolingo &#8212; Hoezee! &#8212; and now you can beemind it &#8212; Hoezee^2!</li>
-<li>Incorrectly hidden modal on goal page left its ghost &#8220;on top of&#8221; the settings cog making it unclickable! Thanks <a href="http://twitter.com/aaronpk">Aaron Parecki</a> and <a href="http://twitter.com/peterhurford">Peter Hurford</a>. #bugfix</li>
-<li><strong>Time and day of derailment now shown under the countdown timer; another prereq for <a href="http://expost.padm.us/midnight">Generalized Midnight</a> (most are behind the scenes).</strong></li>
-<li>Better date picker that lets you select month and year with dropdowns so you neither have to type the date by hand nor click month by month.</li>
-<li>The datapoint that counts (like the min for weightloss goals; cf &#8220;aggday&#8221; setting) is shown bigger than the others; future ones ghostlike.</li>
-<li>Errors displayed on graphs no longer overflow on both sides; other tweaks like road starts flush w/ axes, tick marks not covered up by aura.</li>
-<li>Introduced a bug where the bull&#8217;s eye showed up underneath the YBR, visible since the road was translucent, but ugly. Fixed now. #bugfix</li>
-<li>Fixed an (embarrassing, money burning) bug where we retried charges before saving new credit card, thus trying them against old one. #bugfix</li>
-<li>We were not handling malformed dates nicely in the road dial and other places. #bugfix (also broken x-min, etc briefly; now fixed as well)</li>
-<li>In newbee data form, we now always default to previous datapoint, not zero and especially not the broken thing we used to do for odom goals.</li>
-<li><strong>Various <a href="http://beeminder.com/rescuetime">RescueTime</a> integration improvements:</strong>
+/* 2014 yomerge TODO
+"x": "Get credit card first (thanks again Stripe), then send the user to unfreeze a goal (improvement over the mixed messages on unfreeze page)&#8230;", "c": "TODO: numbered 1295 in non-Twitter version",
+"x": "&#8230;which let us simplify the unfreeze page and remove a bunch of text from it (because nobody ever reads on the internet).", "c": "TODO: numbered 1296 in non-Twitter version",
+"x": "We show the text about giving back freebees only if you do or might have freebees remaining; see &#8220;deletables&#8221; in <a href=\"http://doc.beeminder.com/freebee\">doc.beeminder.com/freebees</a>.", "c": "TODO: numbered 1297 in non-Twitter version",
+"x": "Fixed moneyburning lunacy where we used to increment freebees every time you added a pledge so lots of people wouldn't ever actually run out.", "c": "TODO: numbered 1298 in non-Twitter version",
+"x": "Error handling for failure to save credit card info (not great error handling but it does indicate this to the user now).", "c": "TODO: numbered 1299 in non-Twitter version",
+"x": "Answering the goal deletion dialog generates an email to us (part of <a href=\"http://doc.beeminder.com/freebee\">doc.beeminder.com/freebee</a> which we're now done tweeting about!).", "c": "TODO: numbered 1300 in non-Twitter version",
+"x": "Removed the needless error checks preventing craziness like aggday=mean for autosumming goals since crazy people like Alex Schell wanted it!", "c": "TODO: numbered 1301 in non-Twitter version",
+"x": "<strong>Deadman switch now never treats you as still active if you have an autodata source reporting flatlined data. Same for <a href=\"http://blog.beeminder.com/autocancel\">blog.beeminder.com/autocancel</a>.</strong>", "c": "TODO: numbered 1302 in non-Twitter version",
+"x": "Tiny UVI: we now always say, eg, &#8220;$5&#8221; instead of &#8220;$5.0&#8221;. We told <a href=\"https://twitter.com/slothbear\">@slothbear</a> we'd pay him $5.0 if we didn't fix that by tomorrow. #bugfix", "c": "TODO: numbered 1303 in non-Twitter version",
+"x": "Fixed formatting in the Guilt Trip email (for premium people who go MIA) and made human-friendly phrasing like &#8220;Bee Lite every month&#8221;.", "c": "TODO: numbered 1304 in non-Twitter version",
+"x": "Letting you start creating a goal before signing up confused people for no real benefit. Now you have to sign up first.", "c": "TODO: numbered 1305 in non-Twitter version",
+"x": "Chinese users can now use Alipay instead of a credit card. (One of many UVIs thanks to <a href=\"https://stripe.com/checkout\">Stripe Checkout</a>; cf #7.) UPDATE: Oops, we have to do something more before this is live!", "c": "TODO: numbered 1306 in non-Twitter version",
+"x": "Quickly clicking the +/- buttons in the newbee data form triggered a double-click, highlighting the buttons. Ugly. Thanks <a href=\"http://truesoftwaretesting.com/\">True Software Testing</a>. #bugfix", "c": "TODO: numbered 1307 in non-Twitter version",
+"x": "The clickable tooltip thing for the Archive Goal button in settings (as opposed to main graph screen) works now. #bugfix", "c": "TODO: numbered 1308 in non-Twitter version",
+"x": "Deadman #bugfix introduced a bug: Gmailzero needs a datapoint even if count's unchanged; inbox size more like weight than like eg CodeSchool.", "c": "TODO: numbered 1309 in non-Twitter version",
+"x": "When graph's stuck generating we no longer throw up our hands like &#8220;the server is melting; email support?&#8221; &amp; instead give a &#8220;try now&#8221; button.", "c": "TODO: numbered 1310 in non-Twitter version",
+"x": "Better / less snarky categories for goal deletion reasons: technical reasons (beeminder messed up), confusion, abusing loophole, and other. ", "c": "TODO: numbered 1311 in non-Twitter version",
+"x": "The <a href=\"http://blog.beeminder.com/glossary/#flatline\">flatlined datapoint</a> is now shown as a rightward-pointing triangle (zoom in to see!).", "c": "TODO: numbered 1312 in non-Twitter version",
+"x": "Also if the official, aggregated datapoint for the day does not have a corresponding actual datapoint (eg, aggday=mean) it's shown hollow.", "c": "TODO: numbered 1313 in non-Twitter version",
+"x": "<strong>Intern Chris's Twitter integration is live at <a href=\"http://beeminder.com/twitter\">beeminder.com/twitter</a></strong> (and date bug that it had when we first deployed it is now fixed).", "c": "TODO: numbered 1314 in non-Twitter version",
+"x": "Dutch is now supported in Duolingo &#8212; Hoezee! &#8212; and now you can beemind it &#8212; Hoezee^2!", "c": "TODO: numbered 1315 in non-Twitter version",
+"x": "Incorrectly hidden modal on goal page left its ghost &#8220;on top of&#8221; the settings cog making it unclickable! Thanks <a href=\"http://twitter.com/aaronpk\">Aaron Parecki</a> and <a href=\"http://twitter.com/peterhurford\">Peter Hurford</a>. #bugfix", "c": "TODO: numbered 1316 in non-Twitter version",
+"x": "<strong>Time and day of derailment now shown under the countdown timer; another prereq for <a href=\"http://doc.beeminder.com/midnight\">Generalized Midnight</a> (most are behind the scenes).</strong>", "c": "TODO: numbered 1317 in non-Twitter version",
+"x": "Better date picker that lets you select month and year with dropdowns so you neither have to type the date by hand nor click month by month.", "c": "TODO: numbered 1318 in non-Twitter version",
+"x": "The datapoint that counts (like the min for weightloss goals; cf &#8220;aggday&#8221; setting) is shown bigger than the others; future ones ghostlike.", "c": "TODO: numbered 1319 in non-Twitter version",
+"x": "Errors displayed on graphs no longer overflow on both sides; other tweaks like road starts flush w/ axes, tick marks not covered up by aura.", "c": "TODO: numbered 1320 in non-Twitter version",
+"x": "Introduced a bug where the bull's eye showed up underneath the YBR, visible since the road was translucent, but ugly. Fixed now. #bugfix", "c": "TODO: numbered 1321 in non-Twitter version",
+"x": "Fixed an (embarrassing, money burning) bug where we retried charges before saving new credit card, thus trying them against old one. #bugfix", "c": "TODO: numbered 1322 in non-Twitter version",
+"x": "We were not handling malformed dates nicely in the road dial and other places. #bugfix (also broken x-min, etc briefly; now fixed as well)", "c": "TODO: numbered 1323 in non-Twitter version",
+"x": "In newbee data form, we now always default to previous datapoint, not zero and especially not the broken thing we used to do for odom goals.", "c": "TODO: numbered 1324 in non-Twitter version",
+"x": "<strong>Various <a href=\"http://beeminder.com/rescuetime\">RescueTime</a> integration improvements:</st", "c": "TODO: numbered 1325 in non-Twitter version",
 <ul>
-<li>OMG don&#8217;t wait 45 seconds before redirecting to the newly created goal. #bugfix</li>
-<li>Still do the check for if it&#8217;s a productive vs unproductive time goal even if no RescueTime data yet to extrapolate a rate from. #bugfix</li>
-<li>Show the &#8220;we&#8217;re importing your RescueTime data, this could take a minute&#8221; as soon as the user submits, not <em>after</em> the wait and redirect.</li>
+<li>OMG don't wait 45 seconds before redirecting to the newly created goal. #bugfix</li>
+<li>Still do the check for if it's a productive vs unproductive time goal even if no RescueTime data yet to extrapolate a rate from. #bugfix</li>
+<li>Show the &#8220;we're importing your RescueTime data, this could take a minute&#8221; as soon as the user submits, not <em>after</em> the wait and redirect.</li>
 <li>Force user to pledge if no freebees left; incidentally also fixes the 404 after creating the RescueTime goal if no freebees left.</li>
 </ul></li>
-<li value="1329">We weren&#8217;t removing the &#8220;hey this goal is frozen because you haven&#8217;t added a credit card yet!&#8221; banner after you add your credit card. #bugfix</li>
-<li>Another #bugfix with email bot parsing, this time with non-ascii / non-standard whitespace from Airmail on OSX. Thanks <a href="https://twitter.com/deadsunrise">@deadsunrise</a>.</li>
-<li>Our batch of RescueTime improvements introduced a bug for people with unlimited freebees wherein goals were not saved. Thanks <a href="http://twitter.com/kathyreid">Kathy Reid</a>. #bugfix</li>
-<li>Previous bugfix for people w/ unlimited freebees briefly borked the goal creation wizard for everyone <em>w/out</em> unlimited freebees. #bugfix</li>
-<li>The purple steppy line had a glitch where it would jump to the start of the yellow brick road even if that didn&#8217;t make sense. #bugfix</li>
-<li>The y-axis now always starts at zero when there&#8217;s an initial datapoint of zero. #bugfix &amp; Bonus UVI: <strong>a &#8220;share your graph on Facebook&#8221; button</strong>.</li>
-<li>Added <a href="https://www.beeminder.com/faq#qdcl">deadbeat flag</a> to the <a href="http://beeminder.com/api">API</a> output for the user resource.</li>
-<li>If we do the &#8220;deadbeat&#8221; thing to your account because your credit card fails, we now automatically undo it when the automatic retry succeeds.</li>
-<li>If third party authentication (eg &#8220;sign in w/ Google!&#8221;) fails, give an error message when user is returned to Beeminder, instead of 404ing.</li>
-<li>When Google&#8217;s notification server flakes out (for Android push notifications) we try again in a few seconds. #bugfix (or #robustnessfix)</li>
-<li><strong><a href="https://play.google.com/store/apps/details?id=com.beeminder.beeminder">Android app version 2.3</a>!</strong> Goal search interface and fixes/improvements to notifications and other fixes (see changelog in the app for more)</li>
-<li>Countdown to derailment defaulted to midnight if graph wasn&#8217;t yet generated (or had errors) which was lies. Now just doesn&#8217;t show countdown.</li>
-<li>We now canonicalize phone numbers when you add them so we can find you again to confirm your number (SMS bot is still US-only unfortunately).</li>
-<li>#bugfix w/ editing Twitter goal settings: ignore &#8216;#&#8217; part of hashtag if user includes it; also consistency in pluralization of &#8220;hashtag&#8221;.</li>
-<li>Introduced a bug that made us fail to increment freebees when goals were deleted for technical reasons; #bugfix&#8217;d it, gave back the freebees.</li>
-<li>Recent Duolingo updates caused an error for us; #bugfix&#8217;d it but currently can&#8217;t get your points count if you change your native language.</li>
-<li>Small improvements to <a href="http://beeminder.com/duolingo">Duolingo</a> integration: default goal date is +18 months, updates for Irish &amp; Danish, better error. Thanks Jan Bogaerts.</li>
-<li>#bugfix like #43 but in the take-a-break tab; &amp; tiny Twitterminder fix: &#8220;This data autogenerated from Twitter user .&#8221;</li>
-<li>Not sure when we broke this or if, G-d forbid, always was this way but when you pick username, trailing spaces weren&#8217;t trim&#8217;d. Thanks <a href="http://colinmarc.com/">Colin Marc</a> #bugfix </li>
-<li>We updated Google oauth recently and it broke sign-in via Google on Android (now getting numeric ids instead of email address). #bugfix</li>
-<li>Better table of contents in API documentation.</li>
-<li>Slight improvement to weightloss countdown: be explicit about counting down &#8220;Time Left until [Wrong Lane] vs [Derailment]&#8221;.</li>
-<li>Tiny UVIs: Flatlined triangle datapoint always shows up on top of others, &amp; plot width adjusts better for crazy huge numbers on the y-axis.</li>
-<li>We added a way to collect basic stats on (specifically weightloss) users. Please update &#8212; For Science! (Also #bugfix: you actually can update.)</li>
-<li>Was impossible to create a <a href="http://beeminder.com/jawbone">Jawbone</a> goal if no freebees left. Kept sending you to auth jawbone in an infinite loop. Thanks <a href="http://janabeck.com/">Jana Beck</a>. #bugfix</li>
-<li>#bugfix with case-sensitive email comparison in <a href="http://gitminder.com">Gitminder</a> (GitHub canonicalizes email addresses but your local git config does not).</li>
-<li><strong>API&#8217;s &#8220;roadall&#8221; in the Goal resource lets you make <em>arbitrary changes</em> to the yellow brick road (except not easier between now and + 1 week).</strong></li>
-<li><strong>Pledge caps! Instead of just being able to turn on or off auto-increasing pledges you can pre-specify a pledge cap in goal settings.</strong></li>
-<li><strong>Legit check email now warns you if you hit your pledge cap and points you to goal settings to change it</strong> (cleaned up the copy a bit too)</li>
-<li>If you got an error changing advanced settings for Trello or Twitter goal the Trello/Twitter info on the page wd cause a 500 error #bugfix</li>
-<li>Dubious improvement except in helping w/ waitlisting by scaring more people off: <a href="http://beeminder.com/premium">Beekeeper</a> has additional $256 setup fee</li>
-<li>Tweaked webcopy in goal settings for pledge caps and made it point to the <a href="http://blog.beeminder.com/pledgecaps">new blog post about it</a> (&amp; road dial tweak)</li>
-<li><strong>You can now buy 10 freebees (goals that start with $0 pledged) for $1, which we also <a href="http://blog.beeminder.com/freebees">blogged about</a></strong></li>
-<li>The page that <a href="https://twitter.com/beemuvi/status/363174766372331520">shows you an ewok</a> if you're using an old version of Internet Explorer now points you to whatbrowser.org</li>
-<li>Fixed a bug w/ retrying failed charges too many times; fewer failed charges littering up <a href="http://beeminder.com/pledges">your pledges</a>  #bugfix</li>
-<li>Fixed Withings goal creation bug we <a href="https://twitter.com/beeminfra/status/516106310165987328">cause</a>. Now you can create Withings goals again! (yikes) HT <a href="http://twitter.com/MaybiusStrip">@MaybiusStrip</a></li>
-<li>Fixed RunKeeper goal creation bug: we'd let you submit without selecting any type of activity to track, and then we'd crash #bugfix</li>
-<li>Put the "Σ" back, showing/explaining about auto-summing. Unrelated, but too small for separate UVI: updated <a href="http://beeminder.com/money">beeminder.com/money</a> HT Geoff</li>
-<li><strong>New Discourse forum: <a href="http://forum.beeminder.com">forum.beeminder.com</a> -- Announced here: <a href="http://blog.beeminder.com/discourse">blog.beeminder.com/discourse</a></strong></li>
-<li>For user stats (on weight loss goals) we handle imperial units submitted like 5'6" or 5.5 feet. We drew the line there; no cubits, etc.</li>
-<li>User (weightloss) stats #bugfix: fixed a 500 error after submitting if you were updating on an archived goal. (But why would you do that?)</li>
-<li>One more (silly) stats #bugfix: if you use inches we were decrementing your waist/height every time you submitted the form. #bestdietever</li>
-<li>Another casualty of <a href="https://twitter.com/beeminfra/status/516106310165987328">goal wizard refactoring</a> ... Withings #bugfix w/ new goals: we were also failing to fetch new data for those goals</li>
-<li>#bugfix: remember datapoint sort order on delete (previously fixed for edits) and, when changing the sort order, remember page you were on</li>
-<li>We added a header to <a href="http://forum.beeminder.com">forum.beeminder.com</a> that links to Beeminder. (It's less obtrusive when you scroll; could still use work tho.)</li>
-<li>Better images for the contracts on our integrations pages: <a href="http://gmailzero.com">gmailzero.com</a>, <a href="http://gitminder.com">gitminder.com</a>, <a href="http://beeminder.com/duolingo">beeminder.com/duolingo</a>, etc</li>
-<li>Do-less goal creation buglets: "Commit to AT MOST" &amp; the (i) after "Set your upper limit..." was wrapping to a new line #bugfix</li>
-<li><strong><a href="http://blog.beeminder.com/habitrpg">HabitRPG integration!</a></strong></li>
-<li>HabitRPG integration #bugfix: Negative rates (like for beeminding remaining To-dos) broke the goal creation form.</li>
-<li>The API's now robust (moreso, at least) to newlines in comments of datapoints. Turns them into \n's instead of dying. Matters for Zapier...</li>
-<li><strong><a href="http://blog.beeminder.com/deadlines">New Feature and Veritable Paradigm Shift: Arbitrary Deadlines!</a></strong></li>
-<li>Missed a few hardcoded instances of the string "midnight" (our rushed launch of arbitrary deadlines promises to be a fertile UVI source!)</li>
-<li>Much <a href="https://s3.amazonaws.com/uploads.hipchat.com/27248/766489/PxLTFw55TtVuz7k/upload.png">nicer logos</a> for autodata integrations. #alice</li>
-<li>In arbitrary deadline interface, we made it more clear that deadline is akrasia-proofed &amp; your change is happening in a week, not right now</li>
-<li>Tweaks &amp; #bugfix in HabitRPG integration: default to "More To-Dos completed" &amp; don't let you select neither! (&amp; introduced&amp;fixed bug w/ tags)</li>
-<li><strong>Important <a href="https://play.google.com/store/apps/details?id=com.beeminder.beeminder">new version of the Beeminder Android app (v2.3.1r2)</a> with bugfixes for arbitrary deadlines.</strong></li>
-<li>Android app also now handles different screen sizes, including tablets, better. Nicer visuals, longer list of recent datapoints.</li>
-<li>And Android app has better/faster updating of the widgets. And did we mention the arbitrary deadlines bugfixes? There were lots of those! oy</li>
-<li>Fixed the create_all call in the API #bugfix. Remaining bugs from the aftermath of arbitrary deadlines <a href="http://forum.beeminder.com/t/arbitrary-deadlines-buglist/195">in the forum</a></li>
-<li>Fixed the checkmarks in the goal gallery showing if you've entered data that day (they were confused about what "that day" meant) #bugfix</li>
-<li><strong>Deadlines are now shown in the goal gallery &amp; on the watermarks of the graphs themselves. So much easier to keep on top of what's due when!</strong></li>
-<li>The new watermarks show deadline time if eep day, day of the week of eep day if within 7 days, or number of days till derailment otherwise.</li>
-<li>Tweak to our HabitRPG integration: we don't count Challenge To-Dos -- you may now join and leave Challenges with impunity!</li>
-<li>And HabitRPG integration #bugfix: were overwriting intermediate datapoints (not wrong but more data = better + needed for odometer feature)</li>
-<li>One more #bugfix with HabitRPG integration: goal creation was failing for people who had tasks predating a change to HabitRPG Challenges</li>
-<li>When Fitbit switched to ssl-only we updated for existing goals but not for users newly authorizing. Fixed now! #bugfix HT <a href="http://twitter.com/annafun">@annafung</a></li>
-<li>Fixed the "no data" error when creating new goals after midnight but before deadline. #bugfix (like the 8th one with arbitrary deadlines)</li>
-<li>Default deadline for new goals is now midnight. Tweaked the watermarks to make them more visible. Forum link in footer. Deadline copy tweaks.</li>
-<li>Oh and we <strong>totally dropped the akrasia-proofing so you can change deadlines willy-nilly</strong>. Not sure if improvement but last tweet was 4-in-1...</li>
-<li>Fixed autoratchet trigger condition (was maybe pretty much broken since deadlines feature for many people, due to 3am deadline...) #bugfix</li>
-<li>If you added a <a href="http://blog.beeminder.com/supporters/">Supporter</a> with a '+' in their email address, we didn't handle it right. #bugfix</li>
-<li>Fixed the last critical bug from arbitrary deadlines: dates no longer change when you edit datapoints. #bugfix (<a href="http://forum.beeminder.com/t/arbitrary-deadlines-buglist/195">forum post</a>)</li>
-<li>Just kidding, 1 more important #bugfix w/ arbitrary deadlines: zeno polling wasn't polling after midnight (then broke &amp; fixed it 2 new ways)</li>
-<li>Mini UVIs: Higher contrast text in blog section on frontpage; HabitRPG API fields wide enough so the spinny thing won't overlap the text </li>
-<li>Hadn't had gzip turned on for "application/json" which means 60% reduction in data usage for the Android &amp; iPhone apps &amp; other API consumers (EDIT: when the apps support it)</li>
-<li><strong>We just launched our official Zapier integration, which means 100s of new autodata sources you can beemind! So huge! <a href="http://blog.beeminder.com/zapier">blog.beeminder.com/zapier</a></strong></li>
-<li><strong>Version 3.1 of <a href="https://itunes.apple.com/us/app/beeminder/id551869729">our iPhone app</a>! Bug fixes with dates, added min to get to each lane of road, goal rate on gallery screen; last update up top</strong></li>
-<li>And then BeemiOS version 3.1.1 also fixes a crashing bug for iOS 7 users (sorry!) and adds layout fixes and double-tap to zoom out graph.</li>
-<li>We're gradually transitioning from <a href="http://uservoice.beeminder.com">uservoice.beeminder.com</a> to <a href="http://forum.beeminder.com/c/bugabee">forum.beeminder.com</a> (link to forum now in site header)</li>
-<li>Terrifyingly Advanced Settings now has a "Data source" field, automatically set to Zapier for Zapier-mediated autodata goals. Yay <a href="http://zapier.com">Zapier</a>!</li>
-<li>In <a href="http://gitminder.com">Gitminder</a>: we now track Creates plus Pushes towards your count (GitHub gives them different event codes, &amp; we'd been excluding Creates)</li>
-<li>Arbitrary deadlines #bugfix from a while ago: pessimistic presumptive datapoints sometimes failed to get replaced due to date confusion</li>
-<li>In the stats we collect in the sidebar for weightloss, don't bug out if errors in the graph, and don't allow 0 for waist size. #bugfix</li>
-<li>We now always send you a reminder even for goals that have errors! #bugfix</li>
-<li>Subtle but important bug with reaching goaldate and not refreshing the graph, leading to bugginess trying to restart the goal later. #bugfix</li>
-<li value="1415">Mini-UVIs: better beekeeper blurb at <a href="http://beeminder.com/premium">beeminder.com/premium</a> & fixed /start icon centering (and added <a href="http://blog.beeminder.com/sleep">Sleep as Android</a>!)</li>
+"x": "We weren't removing the &#8220;hey this goal is frozen because you haven't added a credit card yet!&#8221; banner after you add your credit card. #bugfix", "c": "TODO: numbered 1329 in non-Twitter version",
+"x": "Another #bugfix with email bot parsing, this time with non-ascii / non-standard whitespace from Airmail on OSX. Thanks <a href=\"https://twitter.com/deadsunrise\">@deadsunrise</a>.", "c": "TODO: numbered 1330 in non-Twitter version",
+"x": "Our batch of RescueTime improvements introduced a bug for people with unlimited freebees wherein goals were not saved. Thanks <a href=\"http://twitter.com/kathyreid\">Kathy Reid</a>. #bugfix", "c": "TODO: numbered 1331 in non-Twitter version",
+"x": "Previous bugfix for people w/ unlimited freebees briefly borked the goal creation wizard for everyone <em>w/out</em> unlimited freebees. #bugfix", "c": "TODO: numbered 1332 in non-Twitter version",
+"x": "The purple steppy line had a glitch where it would jump to the start of the yellow brick road even if that didn't make sense. #bugfix", "c": "TODO: numbered 1333 in non-Twitter version",
+"x": "The y-axis now always starts at zero when there's an initial datapoint of zero. #bugfix &amp; Bonus UVI: <strong>a &#8220;share your graph on Facebook&#8221; button</strong>.", "c": "TODO: numbered 1334 in non-Twitter version",
+"x": "Added <a href=\"https://www.beeminder.com/faq#qdcl\">deadbeat flag</a> to the <a href=\"http://beeminder.com/api\">API</a> output for the user resource.", "c": "TODO: numbered 1335 in non-Twitter version",
+"x": "If we do the &#8220;deadbeat&#8221; thing to your account because your credit card fails, we now automatically undo it when the automatic retry succeeds.", "c": "TODO: numbered 1336 in non-Twitter version",
+"x": "If third party authentication (eg &#8220;sign in w/ Google!&#8221;) fails, give an error message when user is returned to Beeminder, instead of 404ing.", "c": "TODO: numbered 1337 in non-Twitter version",
+"x": "When Google's notification server flakes out (for Android push notifications) we try again in a few seconds. #bugfix (or #robustnessfix)", "c": "TODO: numbered 1338 in non-Twitter version",
+"x": "<strong><a href=\"https://play.google.com/store/apps/details?id=com.beeminder.beeminder\">Android app version 2.3</a>!</strong> Goal search interface and fixes/improvements to notifications and other fixes (see changelog in the app for more)", "c": "TODO: numbered 1339 in non-Twitter version",
+"x": "Countdown to derailment defaulted to midnight if graph wasn't yet generated (or had errors) which was lies. Now just doesn't show countdown.", "c": "TODO: numbered 1340 in non-Twitter version",
+"x": "We now canonicalize phone numbers when you add them so we can find you again to confirm your number (SMS bot is still US-only unfortunately).", "c": "TODO: numbered 1341 in non-Twitter version",
+"x": "#bugfix w/ editing Twitter goal settings: ignore '#' part of hashtag if user includes it; also consistency in pluralization of &#8220;hashtag&#8221;.", "c": "TODO: numbered 1342 in non-Twitter version",
+"x": "Introduced a bug that made us fail to increment freebees when goals were deleted for technical reasons; #bugfix'd it, gave back the freebees.", "c": "TODO: numbered 1343 in non-Twitter version",
+"x": "Recent Duolingo updates caused an error for us; #bugfix'd it but currently can't get your points count if you change your native language.", "c": "TODO: numbered 1344 in non-Twitter version",
+"x": "Small improvements to <a href=\"http://beeminder.com/duolingo\">Duolingo</a> integration: default goal date is +18 months, updates for Irish &amp; Danish, better error. Thanks Jan Bogaerts.", "c": "TODO: numbered 1345 in non-Twitter version",
+"x": "#bugfix like #43 but in the take-a-break tab; &amp; tiny Twitterminder fix: &#8220;This data autogenerated from Twitter user .&#8221;", "c": "TODO: numbered 1346 in non-Twitter version",
+"x": "Not sure when we broke this or if, G-d forbid, always was this way but when you pick username, trailing spaces weren't trim'd. Thanks <a href=\"http://colinmarc.com/\">Colin Marc</a> #bugfix ", "c": "TODO: numbered 1347 in non-Twitter version",
+"x": "We updated Google oauth recently and it broke sign-in via Google on Android (now getting numeric ids instead of email address). #bugfix", "c": "TODO: numbered 1348 in non-Twitter version",
+"x": "Better table of contents in API documentation.", "c": "TODO: numbered 1349 in non-Twitter version",
+"x": "Slight improvement to weightloss countdown: be explicit about counting down &#8220;Time Left until [Wrong Lane] vs [Derailment]&#8221;.", "c": "TODO: numbered 1350 in non-Twitter version",
+"x": "Tiny UVIs: Flatlined triangle datapoint always shows up on top of others, &amp; plot width adjusts better for crazy huge numbers on the y-axis.", "c": "TODO: numbered 1351 in non-Twitter version",
+"x": "We added a way to collect basic stats on (specifically weightloss) users. Please update &#8212; For Science! (Also #bugfix: you actually can update.)", "c": "TODO: numbered 1352 in non-Twitter version",
+"x": "Was impossible to create a <a href=\"http://beeminder.com/jawbone\">Jawbone</a> goal if no freebees left. Kept sending you to auth jawbone in an infinite loop. Thanks <a href=\"http://janabeck.com/\">Jana Beck</a>. #bugfix", "c": "TODO: numbered 1353 in non-Twitter version",
+"x": "#bugfix with case-sensitive email comparison in <a href=\"http://gitminder.com\">Gitminder</a> (GitHub canonicalizes email addresses but your local git config does not).", "c": "TODO: numbered 1354 in non-Twitter version",
+"x": "<strong>API's &#8220;roadall&#8221; in the Goal resource lets you make <em>arbitrary changes</em> to the yellow brick road (except not easier between now and + 1 week).</strong>", "c": "TODO: numbered 1355 in non-Twitter version",
+"x": "<strong>Pledge caps! Instead of just being able to turn on or off auto-increasing pledges you can pre-specify a pledge cap in goal settings.</strong>", "c": "TODO: numbered 1356 in non-Twitter version",
+"x": "<strong>Legit check email now warns you if you hit your pledge cap and points you to goal settings to change it</strong> (cleaned up the copy a bit too)", "c": "TODO: numbered 1357 in non-Twitter version",
+"x": "If you got an error changing advanced settings for Trello or Twitter goal the Trello/Twitter info on the page wd cause a 500 error #bugfix", "c": "TODO: numbered 1358 in non-Twitter version",
+"x": "Dubious improvement except in helping w/ waitlisting by scaring more people off: <a href=\"http://beeminder.com/premium\">Beekeeper</a> has additional $256 setup fee", "c": "TODO: numbered 1359 in non-Twitter version",
+"x": "Tweaked webcopy in goal settings for pledge caps and made it point to the <a href=\"http://blog.beeminder.com/pledgecaps\">new blog post about it</a> (&amp; road dial tweak)", "c": "TODO: numbered 1360 in non-Twitter version",
+"x": "<strong>You can now buy 10 freebees (goals that start with $0 pledged) for $1, which we also <a href=\"http://blog.beeminder.com/freebees\">blogged about</a></strong>", "c": "TODO: numbered 1361 in non-Twitter version",
+"x": "The page that <a href=\"https://twitter.com/beemuvi/status/363174766372331520\">shows you an ewok</a> if you're using an old version of Internet Explorer now points you to whatbrowser.org", "c": "TODO: numbered 1362 in non-Twitter version",
+"x": "Fixed a bug w/ retrying failed charges too many times; fewer failed charges littering up <a href=\"http://beeminder.com/pledges\">your pledges</a>  #bugfix", "c": "TODO: numbered 1363 in non-Twitter version",
+"x": "Fixed Withings goal creation bug we <a href=\"https://twitter.com/beeminfra/status/516106310165987328\">cause</a>. Now you can create Withings goals again! (yikes) HT <a href=\"http://twitter.com/MaybiusStrip\">@MaybiusStrip</a>", "c": "TODO: numbered 1364 in non-Twitter version",
+"x": "Fixed RunKeeper goal creation bug: we'd let you submit without selecting any type of activity to track, and then we'd crash #bugfix", "c": "TODO: numbered 1365 in non-Twitter version",
+"x": "Put the "Σ" back, showing/explaining about auto-summing. Unrelated, but too small for separate UVI: updated <a href=\"http://beeminder.com/money\">beeminder.com/money</a> HT Geoff", "c": "TODO: numbered 1366 in non-Twitter version",
+"x": "<strong>New Discourse forum: <a href=\"http://forum.beeminder.com\">forum.beeminder.com</a> -- Announced here: <a href=\"http://blog.beeminder.com/discourse\">blog.beeminder.com/discourse</a></strong>", "c": "TODO: numbered 1367 in non-Twitter version",
+"x": "For user stats (on weight loss goals) we handle imperial units submitted like 5'6" or 5.5 feet. We drew the line there; no cubits, etc.", "c": "TODO: numbered 1368 in non-Twitter version",
+"x": "User (weightloss) stats #bugfix: fixed a 500 error after submitting if you were updating on an archived goal. (But why would you do that?)", "c": "TODO: numbered 1369 in non-Twitter version",
+"x": "One more (silly) stats #bugfix: if you use inches we were decrementing your waist/height every time you submitted the form. #bestdietever", "c": "TODO: numbered 1370 in non-Twitter version",
+"x": "Another casualty of <a href=\"https://twitter.com/beeminfra/status/516106310165987328\">goal wizard refactoring</a> ... Withings #bugfix w/ new goals: we were also failing to fetch new data for those goals", "c": "TODO: numbered 1371 in non-Twitter version",
+"x": "#bugfix: remember datapoint sort order on delete (previously fixed for edits) and, when changing the sort order, remember page you were on", "c": "TODO: numbered 1372 in non-Twitter version",
+"x": "We added a header to <a href=\"http://forum.beeminder.com\">forum.beeminder.com</a> that links to Beeminder. (It's less obtrusive when you scroll; could still use work tho.)", "c": "TODO: numbered 1373 in non-Twitter version",
+"x": "Better images for the contracts on our integrations pages: <a href=\"http://gmailzero.com\">gmailzero.com</a>, <a href=\"http://gitminder.com\">gitminder.com</a>, <a href=\"http://beeminder.com/duolingo\">beeminder.com/duolingo</a>, etc", "c": "TODO: numbered 1374 in non-Twitter version",
+"x": "Do-less goal creation buglets: "Commit to AT MOST" &amp; the (i) after "Set your upper limit..." was wrapping to a new line #bugfix", "c": "TODO: numbered 1375 in non-Twitter version",
+"x": "<strong><a href=\"http://blog.beeminder.com/habitrpg\">HabitRPG integration!</a></strong>", "c": "TODO: numbered 1376 in non-Twitter version",
+"x": "HabitRPG integration #bugfix: Negative rates (like for beeminding remaining To-dos) broke the goal creation form.", "c": "TODO: numbered 1377 in non-Twitter version",
+"x": "The API's now robust (moreso, at least) to newlines in comments of datapoints. Turns them into \n's instead of dying. Matters for Zapier...", "c": "TODO: numbered 1378 in non-Twitter version",
+"x": "<strong><a href=\"http://blog.beeminder.com/deadlines\">New Feature and Veritable Paradigm Shift: Arbitrary Deadlines!</a></strong>", "c": "TODO: numbered 1379 in non-Twitter version",
+"x": "Missed a few hardcoded instances of the string "midnight" (our rushed launch of arbitrary deadlines promises to be a fertile UVI source!)", "c": "TODO: numbered 1380 in non-Twitter version",
+"x": "Much <a href=\"https://s3.amazonaws.com/uploads.hipchat.com/27248/766489/PxLTFw55TtVuz7k/upload.png\">nicer logos</a> for autodata integrations. #alice", "c": "TODO: numbered 1381 in non-Twitter version",
+"x": "In arbitrary deadline interface, we made it more clear that deadline is akrasia-proofed &amp; your change is happening in a week, not right now", "c": "TODO: numbered 1382 in non-Twitter version",
+"x": "Tweaks &amp; #bugfix in HabitRPG integration: default to "More To-Dos completed" &amp; don't let you select neither! (&amp; introduced&amp;fixed bug w/ tags)", "c": "TODO: numbered 1383 in non-Twitter version",
+"x": "<strong>Important <a href=\"https://play.google.com/store/apps/details?id=com.beeminder.beeminder\">new version of the Beeminder Android app (v2.3.1r2)</a> with bugfixes for arbitrary deadlines.</strong>", "c": "TODO: numbered 1384 in non-Twitter version",
+"x": "Android app also now handles different screen sizes, including tablets, better. Nicer visuals, longer list of recent datapoints.", "c": "TODO: numbered 1385 in non-Twitter version",
+"x": "And Android app has better/faster updating of the widgets. And did we mention the arbitrary deadlines bugfixes? There were lots of those! oy", "c": "TODO: numbered 1386 in non-Twitter version",
+"x": "Fixed the create_all call in the API #bugfix. Remaining bugs from the aftermath of arbitrary deadlines <a href=\"http://forum.beeminder.com/t/arbitrary-deadlines-buglist/195\">in the forum</a>", "c": "TODO: numbered 1387 in non-Twitter version",
+"x": "Fixed the checkmarks in the goal gallery showing if you've entered data that day (they were confused about what "that day" meant) #bugfix", "c": "TODO: numbered 1388 in non-Twitter version",
+"x": "<strong>Deadlines are now shown in the goal gallery &amp; on the watermarks of the graphs themselves. So much easier to keep on top of what's due when!</strong>", "c": "TODO: numbered 1389 in non-Twitter version",
+"x": "The new watermarks show deadline time if eep day, day of the week of eep day if within 7 days, or number of days till derailment otherwise.", "c": "TODO: numbered 1390 in non-Twitter version",
+"x": "Tweak to our HabitRPG integration: we don't count Challenge To-Dos -- you may now join and leave Challenges with impunity!", "c": "TODO: numbered 1391 in non-Twitter version",
+"x": "And HabitRPG integration #bugfix: were overwriting intermediate datapoints (not wrong but more data = better + needed for odometer feature)", "c": "TODO: numbered 1392 in non-Twitter version",
+"x": "One more #bugfix with HabitRPG integration: goal creation was failing for people who had tasks predating a change to HabitRPG Challenges", "c": "TODO: numbered 1393 in non-Twitter version",
+"x": "When Fitbit switched to ssl-only we updated for existing goals but not for users newly authorizing. Fixed now! #bugfix HT <a href=\"http://twitter.com/annafun\">@annafung</a>", "c": "TODO: numbered 1394 in non-Twitter version",
+"x": "Fixed the "no data" error when creating new goals after midnight but before deadline. #bugfix (like the 8th one with arbitrary deadlines)", "c": "TODO: numbered 1395 in non-Twitter version",
+"x": "Default deadline for new goals is now midnight. Tweaked the watermarks to make them more visible. Forum link in footer. Deadline copy tweaks.", "c": "TODO: numbered 1396 in non-Twitter version",
+"x": "Oh and we <strong>totally dropped the akrasia-proofing so you can change deadlines willy-nilly</strong>. Not sure if improvement but last tweet was 4-in-1...", "c": "TODO: numbered 1397 in non-Twitter version",
+"x": "Fixed autoratchet trigger condition (was maybe pretty much broken since deadlines feature for many people, due to 3am deadline...) #bugfix", "c": "TODO: numbered 1398 in non-Twitter version",
+"x": "If you added a <a href=\"http://blog.beeminder.com/supporters/\">Supporter</a> with a '+' in their email address, we didn't handle it right. #bugfix", "c": "TODO: numbered 1399 in non-Twitter version",
+"x": "Fixed the last critical bug from arbitrary deadlines: dates no longer change when you edit datapoints. #bugfix (<a href=\"http://forum.beeminder.com/t/arbitrary-deadlines-buglist/195\">forum post</a>)", "c": "TODO: numbered 1400 in non-Twitter version",
+"x": "Just kidding, 1 more important #bugfix w/ arbitrary deadlines: zeno polling wasn't polling after midnight (then broke &amp; fixed it 2 new ways)", "c": "TODO: numbered 1401 in non-Twitter version",
+"x": "Mini UVIs: Higher contrast text in blog section on frontpage; HabitRPG API fields wide enough so the spinny thing won't overlap the text ", "c": "TODO: numbered 1402 in non-Twitter version",
+"x": "Hadn't had gzip turned on for "application/json" which means 60% reduction in data usage for the Android &amp; iPhone apps &amp; other API consumers (EDIT: when the apps support it)", "c": "TODO: numbered 1403 in non-Twitter version",
+"x": "<strong>We just launched our official Zapier integration, which means 100s of new autodata sources you can beemind! So huge! <a href=\"http://blog.beeminder.com/zapier\">blog.beeminder.com/zapier</a></strong>", "c": "TODO: numbered 1404 in non-Twitter version",
+"x": "<strong>Version 3.1 of <a href=\"https://itunes.apple.com/us/app/beeminder/id551869729\">our iPhone app</a>! Bug fixes with dates, added min to get to each lane of road, goal rate on gallery screen; last update up top</strong>", "c": "TODO: numbered 1405 in non-Twitter version",
+"x": "And then BeemiOS version 3.1.1 also fixes a crashing bug for iOS 7 users (sorry!) and adds layout fixes and double-tap to zoom out graph.", "c": "TODO: numbered 1406 in non-Twitter version",
+"x": "We're gradually transitioning from <a href=\"http://uservoice.beeminder.com\">uservoice.beeminder.com</a> to <a href=\"http://forum.beeminder.com/c/bugabee\">forum.beeminder.com</a> (link to forum now in site header)", "c": "TODO: numbered 1407 in non-Twitter version",
+"x": "Terrifyingly Advanced Settings now has a "Data source" field, automatically set to Zapier for Zapier-mediated autodata goals. Yay <a href=\"http://zapier.com\">Zapier</a>!", "c": "TODO: numbered 1408 in non-Twitter version",
+"x": "In <a href=\"http://gitminder.com\">Gitminder</a>: we now track Creates plus Pushes towards your count (GitHub gives them different event codes, &amp; we'd been excluding Creates)", "c": "TODO: numbered 1409 in non-Twitter version",
+"x": "Arbitrary deadlines #bugfix from a while ago: pessimistic presumptive datapoints sometimes failed to get replaced due to date confusion", "c": "TODO: numbered 1410 in non-Twitter version",
+"x": "In the stats we collect in the sidebar for weightloss, don't bug out if errors in the graph, and don't allow 0 for waist size. #bugfix", "c": "TODO: numbered 1411 in non-Twitter version",
+"x": "We now always send you a reminder even for goals that have errors! #bugfix", "c": "TODO: numbered 1412 in non-Twitter version",
+"x": "Subtle but important bug with reaching goaldate and not refreshing the graph, leading to bugginess trying to restart the goal later. #bugfix", "c": "TODO: numbered 1413 in non-Twitter version",
+"x": "Mini-UVIs: better beekeeper blurb at <a href=\"http://beeminder.com/premium\">beeminder.com/premium</a> & fixed /start icon centering (and added <a href=\"http://blog.beeminder.com/sleep\">Sleep as Android</a>!)", "c": "TODO: numbered 1414 in non-Twitter version",
 */
 
 var batch2014jul = [
 {
 "n": 1232,
-"x": "If you had a credit card on file we'd sometimes send you to the payment page instead of the restart page for goals that were frozen. #bugfix",
+"x": "If you had a credit card on file we'd sometimes send you to the payment page instead of the restart page for goals that were frozen. #bugfix HT <a href=\"http://luciamerlo.com/\">Lucia Merlo</a>", "c": "TODO: numbered 1264 in non-Twitter version",
 "u": "https://twitter.com/beemuvi/status/484106109293051904",
 "t": "2014-07-01 22:47:45 +0000",
-"c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 1233,
-"x": "If you archived all your goals we'd show you the newbee splash page even when you tried to view your archived goals. #bugfix HT lucille/josh",
+"x": "If you archived all your goals we'd show you the newbee splash page even when you tried to view your archived goals. #bugfix HT Lucille Petersen and Josh McFarland", "c": "TODO: numbered 1265 in non-Twitter version",
 "u": "https://twitter.com/beemuvi/status/484106398632919040",
 "t": "2014-07-01 22:48:54 +0000",
-"c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 1234,
-"x": "It was briefly impossible to create new weight &amp; inbox goals (new goal units field was both hidden and required! #bugfix) HT <a href=\"https://twitter.com/awarenesss\">@awarenesss</a>",
+"x": "It was briefly impossible to create new weight &amp; inbox goals (new goal units field was both hidden and required! #bugfix) HT <a href=\"http://twitter.com/awarenesss\">@awarenesss</a>", "c": "TODO: numbered 1266 in non-Twitter version",
 "u": "https://twitter.com/beemuvi/status/484471347305644032",
 "t": "2014-07-02 22:59:04 +0000",
-"c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 1235,
-"x": "Tappable tooltips! And goal units now used in y-axis label, and fixed countdown javascript for <a href=\"http://beeminder.com/widgets\">beeminder.com/widgets</a> HT Kyle Marek-Spartz",
+"x": "Tappable tooltips! And goal units now used in y-axis label, and fixed countdown javascript for <a href=\"http://beeminder.com/widgets\">goal widgets</a> HT Kyle Marek-Spartz", "c": "TODO: numbered 1267 in non-Twitter version",
 "u": "https://twitter.com/beemuvi/status/484471490956382208",
 "t": "2014-07-02 22:59:39 +0000",
-"c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 1236,
+"f": true,
 "x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: The \"Take A Break\" feature now also shows you currently scheduled upcoming breaks! (Straw poll: should take-a-break be a premium feature?)",
+"c": "TODO: numbered 1268 in non-Twitter version",
 "u": "https://twitter.com/bmndr/status/486990028183052288",
 "t": "2014-07-09 21:47:25 +0000",
-"c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 1237,
-"x": "If you have a Beeminder premium plan -- <a href=\"http://beeminder.com/premium\">beeminder.com/premium</a> -- then Retroratchet lets you make it be an eep day Right Now",
+"x": "If you have a <a href=\"http://beeminder.com/premium\">Beeminder premium plan</a> then <a href=\"http://blog.beeminder.com/glossary#retroratchet\">Retroratchet</a> lets you make it be an eep day Right Now", "c": "TODO: numbered 1269 in non-Twitter version",
 "u": "https://twitter.com/beemuvi/status/486991022916775937",
 "t": "2014-07-09 21:51:22 +0000",
-"c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 1238,
-"x": "We briefly broke <a href=\"http://beeminder.com/widgets\">beeminder.com/widgets</a> again when we did this: <a href=\"https://twitter.com/beeminfra/status/486374945656541184\">twitter.com/beeminfra/status/486374945656541184</a> Fixed now. #bugfix",
+"x": "We briefly broke <a href=\"http://beeminder.com/widgets\">goal widgets</a> again when we did <a href=\"https://twitter.com/beeminfra/status/486374945656541184\" title=\"From our 'infrahancement' beeminding\">some refactoring</a>. Fixed now. #bugfix", "c": "TODO: numbered 1270 in non-Twitter version",
 "u": "https://twitter.com/beemuvi/status/487337669249073152",
 "t": "2014-07-10 20:48:49 +0000",
-"c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 1239,
-"x": "Got over our carrot-dangliness paranoia; just say \"premium only\" for custom goals, configurable retroratchet. Updated <a href=\"http://beeminder.com/premium\">beeminder.com/premium</a>",
+"x": "Got over our carrot-dangliness paranoia &amp; just say &#8220;premium only&#8221; for custom goals &amp; configurable retroratchet. Updated <a href=\"http://beeminder.com/premium\">beeminder.com/premium</a> too.", "c": "TODO: numbered 1271 in non-Twitter version",
 "u": "https://twitter.com/beemuvi/status/487357940773314560",
 "t": "2014-07-10 22:09:22 +0000",
-"c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 1240,
-"x": "#bugfix: Sometimes (rarely) we'd fail to pick up data for newly created <a href=\"https://twitter.com/Runkeeper\">@Runkeeper</a> goals (eg, if you manually add activities for a prev day)",
+"x": "Sometimes (rarely) we'd fail to pick up data for newly created <a href=\"http://beeminder.com/runkeeper\">RunKeeper</a> goals (eg, if you manually add activities for a prev day) #bugfix", "c": "TODO: numbered 1272 in non-Twitter version",
 "u": "https://twitter.com/beemuvi/status/487359423094861824",
 "t": "2014-07-10 22:15:15 +0000",
-"c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 1241,
-"x": "One more #bugfix w/ adding new pledges: we were still making it impossible to add a pledge after un-archiving a successful unpledged goal",
+"x": "One more #bugfix w/ adding new pledges: we were still making it impossible to add a pledge after un-archiving a successful unpledged goal", "c": "TODO: numbered 1273 in non-Twitter version",
 "u": "https://twitter.com/beemuvi/status/487359627437170688",
 "t": "2014-07-10 22:16:04 +0000",
-"c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 1242,
-"x": "We accidentally were making you double-confirm goal deletion until recently (modal popped up &amp; then the javascript \"are you sure?\" as well)",
+"x": "We accidentally were making you double-confirm goal deletion until recently (modal popped up &amp; then the javascript &#8220;are you sure?&#8221; as well)", "c": "TODO: numbered 1274 in non-Twitter version",
 "u": "https://twitter.com/beemuvi/status/487359882585440257",
 "t": "2014-07-10 22:17:05 +0000",
-"c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 1243,
-"x": "Retroratchet made things better &amp; less buggy for Do More but mostly made things worse for Do Less. Reverted to old way for Do Less. #bugfix",
+"x": "Retroratchet made things better &amp; less buggy for Do More but mostly made things worse for Do Less. Reverted to old way for Do Less. #bugfix", "c": "TODO: numbered 1275 in non-Twitter version",
 "u": "https://twitter.com/beemuvi/status/487481696158105600",
 "t": "2014-07-11 06:21:07 +0000",
-"c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 1244,
-"x": "If you have the Plan Bee or higher premium plan you can now change your goal URLs (careful about breaking links please!)",
+"x": "If you have the Plan Bee or higher premium plan you can now change your goal URLs (careful about breaking links please!)", "c": "TODO: numbered 1276 in non-Twitter version",
 "u": "https://twitter.com/beemuvi/status/487674433192984576",
 "t": "2014-07-11 19:07:00 +0000",
-"c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 1245,
-"x": "Goal wizard form errors much nicer: they're actually next to the field that's in error. Also units updates in real time, \"__ per week\".",
+"x": "Goal wizard form validation/errors much nicer: they're actually next to the field that's in error. Also units updates in real time, &#8220;__ per week&#8221;.", "c": "TODO: numbered 1277 in non-Twitter version",
 "u": "https://twitter.com/beemuvi/status/488723960234639360",
 "t": "2014-07-14 16:37:26 +0000",
-"c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 1246,
-"x": "Guilt-trip email if you stop beeminding and we auto-cancel your premium subscription, in case you didn't mean to let that happen",
+"x": "Guilt-trip email if you stop beeminding and we auto-cancel your premium subscription, in case you didn't mean to let that happen", "c": "TODO: numbered 1279 in non-Twitter version",
 "u": "https://twitter.com/beemuvi/status/488725001353183232",
 "t": "2014-07-14 16:41:35 +0000",
-"c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 1247,
-"x": "Some time ago <a href=\"https://twitter.com/thatgirl\">@thatgirl</a> ditched our default avatars, citing ugliness. Today we added a new default avatar. Note the use of negative space.",
+"x": "Some time ago <a href=\"http://bethaknee.com\">Bethany</a> ditched our default avatars, citing ugliness. Today we added a new default avatar. Note the use of negative space.", "c": "TODO: numbered 1280 in non-Twitter version",
 "u": "https://twitter.com/beemuvi/status/488787098770489344",
 "t": "2014-07-14 20:48:20 +0000",
-"c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 1248,
-"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: Welcome to our official Support Czar and Worker Bee, Alice Monday [<a href=\"https://github.com/alice0meta\">github.com/alice0meta</a>] &amp; intern Chris Goodman: <a href=\"http://beeminder.com/aboutus\">beeminder.com/aboutus</a>",
+"x": "Added <a href=\"http://github.com/alice0meta\">Alice Monday</a> (Support Czar) and <a href=\"http://github.com/eendividi\">Chris Goodman</a> (intern) to the <a href=\"http://beeminder.com/aboutus\">About Us</a> page", "c": "TODO: numbered 1278 in non-Twitter version",
 "u": "https://twitter.com/bmndr/status/488790117734035456",
 "t": "2014-07-14 21:00:20 +0000",
-"c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 1249,
-"x": "\"Feature me\" feature in goal settings adds you to public gallery at <a href=\"http://beeminder.com/featured\">beeminder.com/featured</a> (HT awesome people on Akratics Anonymous)",
+"x": "&#8220;Feature me&#8221; feature in goal settings adds you to <a href=\"http://beeminder.com/featured\">public gallery</a>. Thanks awesome people on <a href=\"http://blog.beeminder.com/akratics\">Akratics Anonymous</a>.", "c": "TODO: numbered 1281 in non-Twitter version",
 "u": "https://twitter.com/beemuvi/status/490278986119774208",
 "t": "2014-07-18 23:36:33 +0000",
-"c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 1250,
-"x": "We were asking for a password on social sign-up (facebook, google, etc) since late April when we refactored sign-up code HT <a href=\"https://twitter.com/web007\">@web007</a> #bugfix",
+"x": "We were asking for a password on social sign-up (facebook, google, etc) since late April when we refactored sign-up code. Thanks <a href=\"http://geekportfolio.com/\">Ryan Moore</a>. #bugfix", "c": "TODO: numbered 1282 in non-Twitter version",
 "u": "https://twitter.com/beemuvi/status/492097840676495360",
 "t": "2014-07-24 00:04:02 +0000",
-"c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 1251,
-"x": "#bugfix where we'd sometimes/rarely give a 500 error if you deleted all your recent datapoints and then tried to resume a frozen goal",
+"x": "#bugfix where we'd sometimes/rarely give a 500 error if you deleted all your recent datapoints and then tried to resume a frozen goal.", "c": "TODO: numbered 1283 in non-Twitter version",
 "u": "https://twitter.com/beemuvi/status/492558480859885568",
 "t": "2014-07-25 06:34:27 +0000",
-"c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 1252,
-"x": "Webcopy tweaks, tooltips for things like explaining safety buffer for Do Less goals &amp; auto-canceling subscriptions on <a href=\"http://beeminder.com/premium\">beeminder.com/premium</a>",
+"x": "Webcopy tweaks, tooltips for things like explaining safety buffer for Do Less goals &amp; auto-canceling subscriptions on <a href=\"http://beeminder.com/premium\">beeminder.com/premium</a>.", "c": "TODO: numbered 1284 in non-Twitter version",
 "u": "https://twitter.com/beemuvi/status/492911259973464065",
 "t": "2014-07-26 05:56:16 +0000",
-"c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 1253,
-"x": "We no longer add <a href=\"https://twitter.com/duolingo\">@duolingo</a> datapoints if no change from previous day (important so we know if you go MIA so we can flip the deadman switch)",
+"x": "We no longer add <a href=\"http://beeminder.com/duolingo\">Duolingo</a> datapoints if no change from previous day (important so we know if you go MIA so we can flip the deadman switch).", "c": "TODO: numbered 1285 in non-Twitter version",
 "u": "https://twitter.com/beemuvi/status/493282315611561984",
 "t": "2014-07-27 06:30:43 +0000",
-"c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 1254,
-"x": "When adding a pledge the first time we were getting the credit card info then failing to actually add the pledge (moneyburning #bugfix)",
+"x": "When adding a pledge the first time we were getting the credit card info then failing to actually add the pledge (moneyburning #bugfix).", "c": "TODO: numbered 1286 in non-Twitter version",
 "u": "https://twitter.com/beemuvi/status/493643558553784321",
 "t": "2014-07-28 06:26:10 +0000",
-"c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 1255,
-"x": "Vastly slicker form for getting credit card details when you first add a pledge, thanks to <a href=\"https://twitter.com/stripe\">@stripe</a> Checkout",
+"x": "Vastly slicker form for getting credit card details when you first add a pledge, thanks to <a href=\"https://stripe.com/checkout\">Stripe Checkout</a>.", "c": "TODO: numbered 1287 in non-Twitter version",
 "u": "https://twitter.com/beemuvi/status/494005158628433922",
 "t": "2014-07-29 06:23:02 +0000",
-"c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 1256,
-"x": "Big changes to freebees and deleting goals now live! First UVI: We now show number of freebees remaining in the sidebar.",
+"f": true,
+"x": "Big changes to freebees and deleting goals! First UVI: We now show number of freebees remaining in the sidebar.", "c": "TODO: numbered 1288 in non-Twitter version",
 "u": "https://twitter.com/beemuvi/status/494372351580983296",
 "t": "2014-07-30 06:42:08 +0000",
-"c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 1257,
-"x": "When you delete a goal, we ask you why and if it's for technical reasons, we give back the freebee",
+"f": true,
+"x": "When you delete a goal, we ask you why and if it's for technical reasons, we give back the <a href=\"http://blog.beeminder.com/glossary#freebee\" title=\"A freebee is a goal that starts at $0 pledged\">freebee</a>.", "c": "TODO: numbered 1289 in non-Twitter version",
 "u": "https://twitter.com/beemuvi/status/494381549257629696",
 "t": "2014-07-30 07:18:41 +0000",
-"c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 1258,
-"x": "Scrapped \"add a pledge\" vs \"commit later\" (ie, no option to add a pledge when creating a goal -- if you have a freebee left you're using it)",
+"x": "Scrapped &#8220;add a pledge&#8221; vs &#8220;commit later&#8221; (ie, no option to add a pledge when creating a goal &#8212; if you have a freebee left you're using it).", "c": "TODO: numbered 1290 in non-Twitter version",
 "u": "https://twitter.com/beemuvi/status/494382201899741184",
 "t": "2014-07-30 07:21:16 +0000",
-"c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 1259,
-"x": "Fancy dynamic text depending on which option you pick in the goal deletion dialog. (This stuff is all spec'd out at <a href=\"http://doc.beeminder.com/freebee\">doc.beeminder.com/freebee</a>)",
+"x": "Fancy dynamic text depending on which option you pick in the goal deletion dialog. (This stuff is all spec'd out at <a href=\"http://doc.beeminder.com/freebee\">doc.beeminder.com/freebee</a>.)", "c": "TODO: numbered 1291 in non-Twitter version",
 "u": "https://twitter.com/beemuvi/status/494383734682947584",
 "t": "2014-07-30 07:27:22 +0000",
-"c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 1260,
-"x": "Fixed link to glossary in deletion dialog (and tweaked \"why are you deleting this?\" webcopy) #bugfix",
+"x": "Fixed link to glossary in deletion dialog (and tweaked &#8220;why are you deleting this?&#8221; webcopy). #bugfix", "c": "TODO: numbered 1292 in non-Twitter version",
 "u": "https://twitter.com/beemuvi/status/494628615837863936",
 "t": "2014-07-30 23:40:26 +0000",
-"c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 1261,
-"x": "The popup to confirm you're on the hook for all goals after adding credit card was too easily dismissable; now mimics Stripe Checkout",
+"x": "The popup to confirm you're on the hook for all goals after adding credit card was too easily dismissable; now mimics [Stripe] Checkout.", "c": "TODO: numbered 1293 in non-Twitter version",
 "u": "https://twitter.com/beemuvi/status/494628810759741440",
 "t": "2014-07-30 23:41:12 +0000",
-"c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 1262,
 "x": "Truncated the goal titles and added tooltip about archiving in the \"archive any of these active goals you're not serious about\" popup",
@@ -8731,34 +8660,35 @@ var batch2014dec = [
 "c": "TODO: numbered 1249 in non-Twitter version",
 }, /*************************************************************************/ {
 "n": 1405,
+"f": true,
 "x": "Android app v2.3.3: better widget creation, somewhat rare but important bugfix w/ date display, other tweaks/fixes; see changelog in the app",
 "u": "https://twitter.com/beemuvi/status/548594743782158336",
 "t": "2014-12-26 21:42:33 +0000",
-"c": "(auto-imported from Twitter)",
+"c": "TODO: numbered 1250 in non-Twitter version",
 }, /*************************************************************************/ {
 "n": 1406,
 "x": "Two Sleep As Android bugfixes: don't prematurely show pledge form (on create); fetch since we last saw data, rather than since today #bugfix",
 "u": "https://twitter.com/beemuvi/status/548728719175450626",
 "t": "2014-12-27 06:34:56 +0000",
-"c": "(auto-imported from Twitter)",
+"c": "TODO: numbered 1251 in non-Twitter version",
 }, /*************************************************************************/ {
 "n": 1407,
-"x": "Mini-UVIs: Typo in pledge cap settings (HT Yonah Sienna), nice error if <a href=\"https://twitter.com/codeschool\">@codeschool</a> user 404s, adapted to a minor change in <a href=\"https://twitter.com/habitrpg\">@habitrpg</a>'s API",
+"x": "Mini-UVIs: Typo in pledge cap settings (HT Yonah Sienna), nice error if Code School user 404s, adapted to a minor change in <a href=\"http://blog.beeminder.com/habitrpg\">HabitRPG</a>'s API [UPDATE: HabitRPG is now Habitica]",
 "u": "https://twitter.com/beemuvi/status/549330593322786816",
 "t": "2014-12-28 22:26:34 +0000",
-"c": "(auto-imported from Twitter)",
+"c": "TODO: numbered 1252 in non-Twitter version",
 }, /*************************************************************************/ {
 "n": 1408,
 "x": "Critical #bugfix w/ surprisingly few people affected: regex error counted PPRs as active datapoints and the deadman switch wasn't activating",
 "u": "https://twitter.com/beemuvi/status/549633432696160256",
 "t": "2014-12-29 18:29:56 +0000",
-"c": "(auto-imported from Twitter)",
+"c": "TODO: numbered 1253 in non-Twitter version",
 }, /*************************************************************************/ {
 "n": 1409,
 "x": "Moved and prettied up the All Data link again since people were still commonly unaware of its existence. PSA: you can edit/export past data!",
 "u": "https://twitter.com/beemuvi/status/550049889124487170",
 "t": "2014-12-30 22:04:47 +0000",
-"c": "(auto-imported from Twitter)",
+"c": "TODO: numbered 1254 in non-Twitter version",
 }, /*************************************************************************/ {
 "n": 1410,
 "x": "Mini-UVIs: better beekeeper blurb at <a href=\"http://beeminder.com/premium\">beeminder.com/premium</a> &amp; fixed /start icon centering (and added Sleep as Android!)",

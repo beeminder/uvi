@@ -1,7 +1,5 @@
 // UVIs converted from Twitter export
 
-
-
 var import2015jan = [
 {
 "n": 1411,
