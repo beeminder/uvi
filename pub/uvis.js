@@ -8859,6 +8859,19 @@ var batch2017may = [ {
 "u": "https://twitter.com/beemuvi/status/861725549445627904",
 "d": "2017-05-08",
 "t": "2017-05-08",
+}, { // ------------------------------------------------------------------------
+"n": 2277,
+"x": "If you have SMS turned on but we can't SMS you cuz you didn't finish activating your phone number we now say so in the fallback email alert",
+"u": "https://twitter.com/beemuvi/status/862094048592515072",
+"d": "2017-05-09",
+"t": "2017-05-09",
+}, { // ------------------------------------------------------------------------
+"n": 2278,
+"x": "URLminder (and other autodata!) goals now do a re-fetch of data after you change settings, e.g. add/remove a URL or whatever.",
+"u": "https://twitter.com/beemuvi/status/862094296391991296",
+"d": "2017-05-09",
+"t": "2017-05-09",
+"c": "https://trello.com/c/VAaWDa4y/824-fetch-data-when-changing-urlminder-urls-in-goal-settings",
 }, /* --------------------------------------------------------- end 2017may */ ]
 
 /*
@@ -8874,5 +8887,6 @@ iOS 4.5 is uploading now (2017 may 7):
 "x": "[We made dashboard sorting always pick the sensible order (increasing time to derailment, decreasing pledge, etc).] [not merged yet]",
 IDEAS: -------10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140  
 1. fix FAQ copy: "form below your graph"
+2. easy UVI from chelsea: https://trello.com/c/OKjDZJ3Q/811-email-user-when-a-service-authorization-expires
 -->
 */
