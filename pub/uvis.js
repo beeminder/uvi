@@ -8923,6 +8923,12 @@ var batch2017may = [ {
 "u": "https://twitter.com/beemuvi/status/860641116105744385",
 "d": "2017-05-04",
 "t": "2017-05-05",
+}, { // ------------------------------------------------------------------------
+"n": 2276,
+"x": "Fixed 2 links on http://beeminder.com/api and got rid of the search box since it was much worse than just grepping the page. #mini",
+"u": "https://twitter.com/beemuvi/status/861725549445627904",
+"d": "2017-05-08",
+"t": "2017-05-08",
 }, /* --------------------------------------------------------- end 2017may */ ]
 
 /*
