@@ -8872,6 +8872,12 @@ var batch2017may = [ {
 "d": "2017-05-09",
 "t": "2017-05-09",
 "c": "https://trello.com/c/VAaWDa4y/824-fetch-data-when-changing-urlminder-urls-in-goal-settings",
+}, { // ------------------------------------------------------------------------
+"n": 2279,
+"f": true,
+"x": "<a href=\"http://blog.beeminder.com/gtbee\">GTBee</a> now lets you start w/ any amt at risk, fits on any screen size w/out being pixelated, & simpler task creation by moving to own screen!",
+"u": "https://twitter.com/beemuvi/status/862452309032181760",
+"t": "2017-05-10",
 }, /* --------------------------------------------------------- end 2017may */ ]
 
 /*
