@@ -14,9 +14,12 @@ let listener = app.listen(process.env.PORT, () => {
   console.log('UVI app is running on port ' + listener.address().port)
 })
 
+// -----------------------------------------------------------------------------
+// TWITTER IMPORT CODE BELOW
+// -----------------------------------------------------------------------------
 
 // Replace URLs with full versions based on object from tweet.entities.urls
-// Twitter supplies a display_url but it's sometimes truncated which is lame.
+// Twitter supplies a display_url but it's sometimes truncated which is dumb.
 function replaceUrl(str, url) {
   let repl = '<a href="' + url.expanded_url + '">' 
     + url.expanded_url.replace(/^https?\:\/\/(?:www\.)?/, '') + '</a>'
@@ -259,7 +262,7 @@ const testtweets = [
     "verified" : false
   }
 },
-// 4. unicode character (TODO: unicode character before a shortened URL?)
+// 4. unicode character (unicode character *before* a shortened URL seems to work too but a test for that would be nice)
 {
   "source" : "\u003Ca href=\"http:\/\/twitter.com\" rel=\"nofollow\"\u003ETwitter Web Client\u003C\/a\u003E",
   "entities" : {

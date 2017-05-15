@@ -11,10 +11,10 @@ const MONAF = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
 
 var n = 0; // global variable counting the UVIs as we generate them
 
-// Wrap bare URLs in string s with "a href" tags; also Twitter @-mentions
-  // Could play it safe and not try to do any magic if there's already markup...
+// Wrap bare URLs in given string with "a href" tags; also Twitter @-mentions
+// (Could play it safe and not try to do any magic if there's already markup?)
 function linkify(s) {
-  var alreadyMarkup = /[^\\]<a/.test(s);
+  var alreadyMarkup = /[^\\]<a href/.test(s);
 
   // Find URLs that seem to be bare, not part of an a-href already, or for some
   // other reason having quotation marks or an html tag right before the http:
@@ -29,7 +29,7 @@ function linkify(s) {
   return s
 }
 
-// Add html to a featured tweet to make it bold/big
+// Add html to a featured tweet (given as a string) to make it bold/big
 function embolden(s) {
   if (!/<strong>/.test(s)) { s =  '<strong>' + s + '</strong>' }
   s = '<font size="+1">' + s + '</font>'

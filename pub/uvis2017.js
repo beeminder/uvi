@@ -368,12 +368,14 @@ var batch2017may = [ {
 "x": "(+) Version 4.5 of iOS app!",
 "u": "https://twitter.com/beemuvi/status/862791255087955968",
 "t": "2017-05-11",
+"c": "This isn't actually its own UVI, just a heading for 3 related UVIs",
 }, { // ------------------------------------------------------------------------
-"n": 2280, // sic! this and previous UVI are really the same UVI
+"n": 2280,
 "s": true,
 "x": "(1) Updated Today widget: you can now add (integer) data directly from the Today screen. And the really huge news...",
 "u": "https://twitter.com/beemuvi/status/862791255087955968",
 "t": "2017-05-11",
+"c": "NB: This and the parent UVI are both #2280 because they were tweeted as the same UVI",
 }, { // ------------------------------------------------------------------------
 "n": 2281,
 "s": true,
@@ -387,6 +389,12 @@ var batch2017may = [ {
 "x": "(3) The goal screen in the iOS app now includes a button to view the goal on mobile Safari.",
 "u": "https://twitter.com/beemuvi/status/862792205974478848",
 "t": "2017-05-11",
+}, { // ------------------------------------------------------------------------
+"n": 2283,
+"x": "Version 4.5.1 of the iOS app fixes a crash that was occurring with the Today screen if you had less than three Beeminder goals. #bugfix",
+"u": "https://twitter.com/beemuvi/status/864003196414377984",
+"d": "2017-05-12",
+"t": "2017-05-14",
 }, /* --------------------------------------------------------- end 2017may */ ]
 
 /*
