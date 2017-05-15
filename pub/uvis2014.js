@@ -1131,17 +1131,6 @@ var batch2014jun = [
 "t": "2014-06-30 00:08:42 +0000",
 "c": "NUM?: numbered 1263 in non-Twitter version",
 }, /* --------------------------------------------------------- end 2014jun */ ]
-// TODO: replace links to tweets -- \"https://twitter.com/beemuvi/status -- with anchor links to UVIs
-/* 2014 yyomerge TODO
-"x": "We're gradually transitioning from <a href=\"http://uservoice.beeminder.com\">uservoice.beeminder.com</a> to <a href=\"http://forum.beeminder.com/c/bugabee\">forum.beeminder.com</a> (link to forum now in site header)", "c": "NUM?: numbered 1407 in non-Twitter version",
-"x": "Terrifyingly Advanced Settings now has a "Data source" field, automatically set to Zapier for Zapier-mediated autodata goals. Yay <a href=\"http://zapier.com\">Zapier</a>!", "c": "NUM?: numbered 1408 in non-Twitter version",
-"x": "In <a href=\"http://gitminder.com\">Gitminder</a>: we now track Creates plus Pushes towards your count (GitHub gives them different event codes, &amp; we'd been excluding Creates)", "c": "NUM?: numbered 1409 in non-Twitter version",
-"x": "Arbitrary deadlines #bugfix from a while ago: pessimistic presumptive datapoints sometimes failed to get replaced due to date confusion", "c": "NUM?: numbered 1410 in non-Twitter version",
-"x": "In the stats we collect in the sidebar for weightloss, don't bug out if errors in the graph, and don't allow 0 for waist size. #bugfix", "c": "NUM?: numbered 1411 in non-Twitter version",
-"x": "We now always send you a reminder even for goals that have errors! #bugfix", "c": "NUM?: numbered 1412 in non-Twitter version",
-"x": "Subtle but important bug with reaching goaldate and not refreshing the graph, leading to bugginess trying to restart the goal later. #bugfix", "c": "NUM?: numbered 1413 in non-Twitter version",
-"x": "Mini-UVIs: better beekeeper blurb at <a href=\"http://beeminder.com/premium\">beeminder.com/premium</a> & fixed /start icon centering (and added <a href=\"http://blog.beeminder.com/sleep\">Sleep as Android</a>!)", "c": "NUM?: numbered 1414 in non-Twitter version",
-*/
 
 var batch2014jul = [
 {
@@ -1907,46 +1896,39 @@ var batch2014nov = [
 "t": "2014-11-21 21:27:37 +0000",
 }, /*************************************************************************/ {
 "n": 1375,
-"x": "We're gradually transitioning from <a href=\"http://uservoice.beeminder.com\">uservoice.beeminder.com</a> to <a href=\"http://forum.beeminder.com/c/bugabee\">forum.beeminder.com/c/bugabee</a> (link to forum now in site header)",
+"x": "We're gradually transitioning from <a href=\"http://uservoice.beeminder.com\">uservoice.beeminder.com</a> to <a href=\"http://forum.beeminder.com/c/bugabee\">forum.beeminder.com</a> (link to forum now in site header)", "c": "NUM?: numbered 1407 in non-Twitter version",
 "u": "https://twitter.com/beemuvi/status/535911568429420544",
 "t": "2014-11-21 21:44:09 +0000",
-"c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 1376,
-"x": "In Gitminder: we now track Creates plus Pushes towards your count (<a href=\"https://twitter.com/github\">@github</a> gives them different event codes, &amp; we'd been excluding Creates)",
+"x": "In <a href=\"http://gitminder.com\">Gitminder</a>: we now track Creates plus Pushes towards your count (GitHub gives them different event codes, &amp; we'd been excluding Creates)", "c": "NUM?: numbered 1409 in non-Twitter version",
 "u": "https://twitter.com/beemuvi/status/535912256559521793",
 "t": "2014-11-21 21:46:53 +0000",
-"c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 1377,
-"x": "Terrifyingly Advanced Settings now has a \"Data source\" field, automatically set to Zapier for Zapier-mediated autodata goals. Yay <a href=\"https://twitter.com/zapier\">@zapier</a>!",
+"x": "Terrifyingly Advanced Settings now has a \"Data source\" field, automatically set to Zapier for Zapier-mediated autodata goals. Yay <a href=\"http://zapier.com\">Zapier</a>!", "c": "NUM?: numbered 1408 in non-Twitter version",
 "u": "https://twitter.com/beemuvi/status/535913076894089216",
 "t": "2014-11-21 21:50:08 +0000",
-"c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 1378,
-"x": "Arbitrary deadlines #bugfix from a while ago: pessimistic presumptive datapoints sometimes failed to get replaced due to date confusion",
+"x": "Arbitrary deadlines #bugfix from a while ago: pessimistic presumptive datapoints sometimes failed to get replaced due to date confusion.", "c": "NUM?: numbered 1410 in non-Twitter version",
 "u": "https://twitter.com/beemuvi/status/535918302875226112",
 "t": "2014-11-21 22:10:54 +0000",
-"c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 1379,
-"x": "In the stats we collect in the sidebar for weightloss, don't bug out if errors in the graph, and don't allow 0 for waist size. #bugfix",
+"x": "In the stats we collect in the sidebar for weightloss, don't bug out if errors in the graph, and don't allow 0 for waist size. #bugfix", "c": "NUM?: numbered 1411 in non-Twitter version",
 "u": "https://twitter.com/beemuvi/status/535918564687892481",
 "t": "2014-11-21 22:11:57 +0000",
-"c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 1380,
-"x": "We now always send you a reminder even for goals that have errors! #bugfix",
+"x": "We now always send you a reminder even for goals that have errors! #bugfix", "c": "NUM?: numbered 1412 in non-Twitter version",
 "u": "https://twitter.com/beemuvi/status/535918925771309056",
 "t": "2014-11-21 22:13:23 +0000",
-"c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 1381,
-"x": "Subtle but important bug with reaching goaldate and not refreshing the graph, leading to bugginess trying to restart the goal later. #bugfix",
+"x": "Subtle but important bug with reaching goaldate and not refreshing the graph, leading to bugginess trying to restart the goal later. #bugfix", "c": "NUM?: numbered 1413 in non-Twitter version",
 "u": "https://twitter.com/beemuvi/status/535919777319882752",
 "t": "2014-11-21 22:16:46 +0000",
-"c": "(auto-imported from Twitter)",
 }, /*************************************************************************/ {
 "n": 1382,
 "x": "Custom color palette for graphs means they're like 1/2 the filesize or less (8-bit vs 24-bit, but look identical). Faster, less bandwidth!",
@@ -2124,8 +2106,9 @@ var batch2014dec = [
 "c": "NUM?: numbered 1254 in non-Twitter version",
 }, /*************************************************************************/ {
 "n": 1410,
-"x": "Mini-UVIs: better beekeeper blurb at <a href=\"http://beeminder.com/premium\">beeminder.com/premium</a> &amp; fixed /start icon centering (and added Sleep as Android!)",
+"x": "Mini-UVIs: better beekeeper blurb at <a href=\"http://beeminder.com/premium\">beeminder.com/premium</a> & fixed /start icon centering (and added <a href=\"http://blog.beeminder.com/sleep\">Sleep as Android</a>!)", 
 "u": "https://twitter.com/beemuvi/status/550450378991366144",
 "t": "2015-01-01 00:36:11 +0000",
-"c": "(auto-imported from Twitter)",
+"c": "NUM?: numbered 1414 in non-Twitter version",
 }, /* --------------------------------------------------------- end 2014dec */ ]
+

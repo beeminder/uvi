@@ -16,6 +16,7 @@ Also it would be nice if it were easy to totally migrate away from Twitter in th
 ## TODO LIST
 
 1. Merge in the UVIs that are currently only in the Twitter archive
+1. Replace links to tweets -- grep \"https://twitter.com/beemuvi/status -- with anchor links to UVIs
 
 ## Twitter Export README
 
