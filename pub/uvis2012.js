@@ -2246,5 +2246,5 @@ var batch2012dec = [
 "u": "https://twitter.com/beemuvi/status/285871945650679808",
 "t": "2012-12-31 22:15:57 +0000",
 "c": "(auto-imported from Twitter)",
-}, /* end 2012dec */ ]
+}, /* --------------------------------------------------------- end 2012dec */ ]
 

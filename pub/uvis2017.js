@@ -371,7 +371,6 @@ var batch2017may = [ {
 }, { // ------------------------------------------------------------------------
 "n": 2280, // sic! this and previous UVI are really the same UVI
 "s": true,
-"f": true,
 "x": "(1) Updated Today widget: you can now add (integer) data directly from the Today screen. And the really huge news...",
 "u": "https://twitter.com/beemuvi/status/862791255087955968",
 "t": "2017-05-11",

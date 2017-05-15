@@ -12,13 +12,27 @@ const MONAF = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
 var n = 0; // global variable counting the UVIs as we generate them
 
 // Wrap bare URLs in string s with "a href" tags; also Twitter @-mentions
+  // Could play it safe and not try to do any magic if there's already markup...
 function linkify(s) {
+  var alreadyMarkup = /[^\\]<a/.test(s);
+
   // Find URLs that seem to be bare, not part of an a-href already, or for some
   // other reason having quotation marks or an html tag right before the http:
   s= s.replace(/([^"'>]|^)(https?:\/\/(?:www\.)?([\w\-\.!~#?&=+\*\'"(),\/]+))/g,
                '$1<a href="$2">$3</a>'); // 1 preceding char, 2 full url, 3 url
-  s= s.replace(/([^"'>]|^)@(\w+)\b/g, 
-               '$1<a href="https://twitter.com/$2">@$2</a>');
+  // Don't try to do this magic if the string already had html because otherwise
+  // it breaks if there was an @-mention inside a title attribute:
+  if (!alreadyMarkup) {
+    s = s.replace(/([^"'>]|^)@(\w+)\b/g, 
+                  '$1<a href="https://twitter.com/$2">@$2</a>')
+  }
+  return s
+}
+
+// Add html to a featured tweet to make it bold/big
+function embolden(s) {
+  if (!/<strong>/.test(s)) { s =  '<strong>' + s + '</strong>' }
+  s = '<font size="+1">' + s + '</font>'
   return s
 }
 
@@ -49,9 +63,9 @@ function render(uvi) {
   if (!text) { text = "ERROR: "+JSON.stringify(uvi) }
   
   return '<a name="'+num+'"></a>'
-    + linkify(feat ? '<strong>'+text+'</strong>' : text)
+    + linkify(feat ? embolden(text) : text)
     + ' <a href="'+(twurl ? twurl : BURL)+'" title="'
-    + (subl ? '('+num+') ' : '') // TODO: check this
+    + (subl ? '(#'+num+') ' : '') 
     + genhov(date, twate, comment)
     + '">'
     + '<img src="'+BICON+'"/>'
@@ -64,7 +78,7 @@ function numbum(uvi) {
   uvi.n = uvi.n || n; // let uvi.n default to the global counter if not set
   if (uvi.n !== n) { // let the specified number usurp the counter but complain
     if (uvi.n === n-1 && uvi.s) {
-      console.log(`SUBLIST STARTING @ ${n-1}`);
+      console.log(`Sublist starting @ ${n-1}`);
     } else {
       console.log(`NUMBERING ERROR: ${n-1} -> ${uvi.n}`);
     }
@@ -87,20 +101,14 @@ function gen(id, l) {
   for (var i = 0; i < l.length; i += 1) {
     if (i < l.length-1 && l[i+1].s) { // a UVI with sub-UVIs!
       numbum(l[i]);
-      console.log(`START SUBLIST ${id}: ${l[i].n}${l[i].s ? 's' : ''} (${n})`);
-      console.log(`${l[i].x}`)
       // At this point, i points to the "header" UVI for the sublist
       var chunk = '<li value="'+l[i].n+'">' + render(l[i]) + '<ol>\n';
       i += 1; // Increment i to point to the first UVI in the sublist
-      for (; i < l.length && l[i].s; i += 1) { 
-        console.log(`${id}: ${l[i].n}${l[i].s ? 's' : ''} (${n})`);
-        chunk += genli(l[i]) 
-      }
+      for (; i < l.length && l[i].s; i += 1) { chunk += genli(l[i]) }
       // At this point, i points to the first UVI after the sublist is done
       i -= 1; // Scooch back to last UVI in sublist -- outer for-loop increments
       chunk += '\n</ol></li>\n';
       d.insertAdjacentHTML('beforeend', chunk);
-      console.log(`END SUBLIST (${n})`)
     }
     else { d.insertAdjacentHTML('beforeend', genli(l[i])) }
   }
@@ -108,7 +116,7 @@ function gen(id, l) {
 
 // Generate html for a batch of UVIs including the year/month header
 function genbatch(year, mon) {
-  console.log('DEBUG: '+year+'-'+mon);
+  //console.log('Generating html for '+year+'-'+mon+' batch');
   var d = document.getElementById(year + MONA[mon-1]);
   var l = eval("batch" + year + MONA[mon-1]);
   d.insertAdjacentHTML('beforeend', '<h3>'+year+' '+MONAF[mon-1]+'</h3>');
@@ -118,19 +126,13 @@ function genbatch(year, mon) {
   for (var i = 0; i < l.length; i += 1) {
     if (i < l.length-1 && l[i+1].s) { // a UVI with sub-UVIs!
       numbum(l[i]);
-      console.log(`START SUBLIST ${year}-${mon}: ${l[i].n}${l[i].s?'s':''} (${n})`);
-      console.log(`${l[i].x}`)
       // At this point, i points to the "header" UVI for the sublist
       s += '<li value="'+l[i].n+'">' + render(l[i]) + '<ul>\n';
       i += 1; // Increment i to point to the first UVI in the sublist
-      for (; i < l.length && l[i].s; i += 1) { 
-        console.log(`${year}-${mon}: ${l[i].n}${l[i].s ? 's' : ''} (${n})`);
-        s += genli(l[i]) 
-      }
+      for (; i < l.length && l[i].s; i += 1) { s += genli(l[i]) }
       // At this point, i points to the first UVI after the sublist is done
       i -= 1; // Scooch back to last UVI in sublist -- outer for-loop increments
       s += '\n</ul></li>\n';
-      console.log(`END SUBLIST (${n})`)
     }
     else { s += genli(l[i]) }
   }
