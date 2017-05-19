@@ -810,18 +810,28 @@ var batch2017may = [ {
 "d": "2017-05-16",
 "t": "2017-05-18",
 "c": "Part of PayPal deploy",
+}, { // ------------------------------------------------------------------------
+"n": 2288,
+"x": "Apple Health is now listed as an integration on https://www.beeminder.com/new with a link to (a draft of) instructions for setting it up",
+"u": "https://twitter.com/beemuvi/status/865704379856207872",
+"d": "2017-05-19",
+"t": "2017-05-19",
+}, { // ------------------------------------------------------------------------
+"n": 2289,
+"x": "Nixed \"red archive button\" copy (cuz it's not red anymore) + version 4.5.2 of the iOS app: #bugfix for a crash that happened in obscure situations", 
+"u": "https://twitter.com/beemuvi/status/865704826541178880",
+"t": "2017-05-19",
+"c": "Copy fix was May 20 and beemiOS 4.5.2 should hit the app store May 21",
 }, /* --------------------------------------------------------- end 2017may */ ]
 
 var staged = [ {
 /*
 * We seem to have had a regression from https://twitter.com/beemuvi/statuses/777766624296251396 which is now fixed for real? #redesign?
 * fixed some (most? many?) of the thing where flash banner shows up again after you leave current page and go to another page [maybe this mostly only happens for admins?]
-* don't say "red archive button"
 */
 }, /* ---------------------------------------------------------- end staged */ ]
 /*
 STAGED: ------10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140  
-}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 CANDIDATES: --10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140  
