@@ -1452,8 +1452,7 @@ var batch2014aug = [
 "t": "2014-08-24 20:14:49 +0000",
 }, /*************************************************************************/ {
 "n": 1293,
-"f": true, // TODO: sublist
-"x": "Various <a href=\"http://beeminder.com/rescuetime\">RescueTime</a> integration improvements:",
+"x": "(+) Various <a href=\"http://beeminder.com/rescuetime\">RescueTime</a> integration improvements:",
 "u": "https://twitter.com/beemuvi/status/504076977548955648",
 "t": "2014-08-26 01:24:51 +0000",
 "c": "NUM?: numbered 1325 in non-Twitter version; and there was a sublist for the 4 RescueTime improvements",

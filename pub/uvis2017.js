@@ -788,7 +788,7 @@ var batch2017may = [ {
 "t": "2017-05-14",
 }, { // ------------------------------------------------------------------------
 "n": 2284,
-"x": "The footer of the website (including links to mobile apps!) has been missing since October when viewed on mobile devices. #bugfix #redesign",
+"x": "The footer of the website (including links to mobile apps!) has been missing since October when viewed on mobile devices. #bugfix #redesign #facepalm",
 "u": "https://twitter.com/beemuvi/status/864628931139219457",
 "c": "[recreated from Andy's 'mobile' branch]",
 }, { // ------------------------------------------------------------------------
@@ -796,10 +796,32 @@ var batch2017may = [ {
 "x": "Added error checking to the goal creation API call for the pledge parameter so you can only start at pledges the user is allowed to start at",
 "u": "https://twitter.com/beemuvi/status/864629166339112960",
 "c": "HT Sergii Kalinchuk",
+}, { // ------------------------------------------------------------------------
+"n": 2286,
+"x": "We were previously only alerting you about a failed credit card payment if it was for a derailment. Now we do so for API charges, IFTTT, etc.",
+"u": "https://twitter.com/beemuvi/status/864989541416837120",
+"d": "2017-05-16",
+"t": "2017-05-17",
+"c": "Part of PayPal deploy; and what about premium payments??",
+}, { // ------------------------------------------------------------------------
+"n": 2287,
+"x": "We no longer show the \"Beeminder can't be a credible threat until you add a credit card\" banner if you're already on the payments page. #mini",
+"u": "https://twitter.com/beemuvi/status/865271047813070848",
+"d": "2017-05-16",
+"t": "2017-05-18",
+"c": "Part of PayPal deploy",
 }, /* --------------------------------------------------------- end 2017may */ ]
 
+var staged = [ {
+/*
+* We seem to have had a regression from https://twitter.com/beemuvi/statuses/777766624296251396 which is now fixed for real? #redesign?
+* fixed some (most? many?) of the thing where flash banner shows up again after you leave current page and go to another page [maybe this mostly only happens for admins?]
+* don't say "red archive button"
+*/
+}, /* ---------------------------------------------------------- end staged */ ]
 /*
 STAGED: ------10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140  
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 CANDIDATES: --10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140  
