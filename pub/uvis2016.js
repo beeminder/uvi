@@ -1486,220 +1486,181 @@ var batch2016aug = [
 "c": "(auto-imported from Twitter as #2019)",
 }, /*************************************************************************/ ]
 
-/*
-"n": 2043,
-"x": "On the email unsubscribe page, \"you have N active goals\" now links to your gallery in case you forgot what you were once beeminding #mini",
-}, { // ------------------------------------------------------------------------
-"n": 2044,
-"x": "New premium FAQs about upgrading and downgrading and exquisite fairness, with new links and hovertext. https://www.beeminder.com/premium",
-}, { // ------------------------------------------------------------------------
-"n": 2045,
-"x": "Crazy mongoid bug made rescale feature break, rarely. Probable #bugfix deployed plus instrumentation so we'll know for sure if happens again",
-"c": "sometimes we would scale some datapoints multiple times, resulting in totally fubared goals. trying sorting datapoints first?",
-}, { // ------------------------------------------------------------------------
-"n": 2046,
-"f": true, "x": "Failed/frozen goals (with the skull & crossbones) can now be instantly archived. Sorry we were so uptight about that for so long!",
-}, { // ------------------------------------------------------------------------
-"n": 2047,
-"x": "Added our new Minister of the Exterior, @anomalily, to our About Us page. http://beeminder.com/aboutus Welcome Lillian! http://blog.beeminder.com/anomalily",
-}, { // ------------------------------------------------------------------------
-"n": 2048,
-"x": "More cleanup of http://beeminder.com/aboutus & finally added @lady_alys who's been helping us w/ support & @habitica integration for a long time",
-}, { // ------------------------------------------------------------------------
-"n": 2049,
-"x": "Slightly more sophisticated error checking in our Twitter goal setup: give an error if the user doesn't exist or their tweets are protected.",
-}, { // ------------------------------------------------------------------------
-"n": 2050,
-"x": "If you downgraded and lost the SMS bot perk, we'd get horribly confused and not let you save user settings anymore. #bugfix",
-}, { // ------------------------------------------------------------------------
-"n": 2051,
-"x": "SMS bot improvement: until you activate your phone number we give a link to resend the activation text message",
-}, { // ------------------------------------------------------------------------
-"n": 2052,
-"x": "Can now add a phone number even if you don't use the SMS bot (and we'll actually text/call if you derail at $810+ & don't respond to email)",
-"c": "'maybe you are just hoping we'll give you a call to chat?' says bee]",
-}, { // ------------------------------------------------------------------------
-"n": 2053,
-"x": "In case you have too many past pledges to show, we made a button that emails you the whole enchilada, in json format.",
-}, { // ------------------------------------------------------------------------
-"n": 2054,
-"x": "Got rid of superfluous fields in past pledges export and added a CSV version as well as JSON",
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-*/
+// TODO: bookmark for where we're at with merging. all past this point good.
 
 var batch2016sep = [
 {
-"n": 2020,
+"n": 2021, 
 "x": "If you came to /premium w/ a coupon code we'd forget it after page reload after clicking a button to add a plan. Coupon worked but.. #bugfix",
 "u": "https://twitter.com/beemuvi/status/771607780054532096",
 "t": "2016-09-02 07:16:45 +0000",
 "c": "(auto-imported from Twitter as #2020)",
 }, /*************************************************************************/ {
-"n": 2021,
+"n": 2022, 
 "x": "Another bug in /premium with how pricing was displayed (when on a legacy plan, it looked like Infinibee cost more than Bee Plus) #bugfix",
 "u": "https://twitter.com/beemuvi/status/771925882810302464",
 "t": "2016-09-03 04:20:46 +0000",
 "c": "(auto-imported from Twitter as #2021)",
 }, /*************************************************************************/ {
-"n": 2022,
+"n": 2023, 
 "x": "Y'know how weasel-proofed goals aren't deletable in the first week like normal? Buggily, the archive button wasn't working either. #bugfix",
 "u": "https://twitter.com/beemuvi/status/772311543614550016",
 "t": "2016-09-04 05:53:15 +0000",
 "c": "(auto-imported from Twitter as #2022)",
 }, /*************************************************************************/ {
-"n": 2023,
+"n": 2024, 
 "x": "In some thankfully rare cases, if you chose Slack DM for zeno alerts, they'd not show up (forgot to make sure DM channel was open) #bugfix",
 "u": "https://twitter.com/beemuvi/status/772658195756032000",
 "t": "2016-09-05 04:50:43 +0000",
 "c": "(auto-imported from Twitter as #2023)",
 }, /*************************************************************************/ {
-"n": 2024,
-"x": "#bugfix in <a href=\"https://twitter.com/habitica\">@habitica</a> more-Todos goal creation: would start road at 0 but credit you w/ all to-dos ever completed =&gt; unreasonably big buffer",
+"n": 2025, 
+"x": "#bugfix in Habitica more-Todos goal creation: would start road at 0 but credit you w/ all to-dos ever completed =&gt; unreasonably big buffer",
 "u": "https://twitter.com/beemuvi/status/773049396191649792",
 "t": "2016-09-06 06:45:13 +0000",
 "c": "(auto-imported from Twitter as #2024)",
 }, /*************************************************************************/ {
-"n": 2025,
-"x": "Bugfix of the #bugfix (HT <a href=\"https://twitter.com/lady_alys\">@lady_alys</a> for both): accidentally truncated <a href=\"https://twitter.com/habitica\">@habitica</a> goals to start from today; manually fixed everyone affected",
+"n": 2026, 
+"x": "Bugfix of the #bugfix (HT <a href=\"http://twitter.com/lady_alys\">Alys</a> for both): accidentally truncated Habitica goals to start from today (manually fixed everyone affected)",
 "u": "https://twitter.com/beemuvi/status/773049802867118081",
 "t": "2016-09-06 06:46:50 +0000",
 "c": "(auto-imported from Twitter as #2025)",
 }, /*************************************************************************/ {
-"n": 2026,
+"n": 2027, 
 "x": "We updated/clarified the list of weasel restrictions in goal settings: no editing or manually adding data to autodata goals, no deleting",
 "u": "https://twitter.com/beemuvi/status/773783822588448770",
 "t": "2016-09-08 07:23:34 +0000",
 "c": "(auto-imported from Twitter as #2026)",
 }, /*************************************************************************/ {
-"n": 2027,
+"n": 2028, 
 "x": "Bug w/ downgrading premium plans if you had a coupon discount: we failed to apply it! Gulp! #bugfix HT <a href=\"https://twitter.com/my9goofie\">@my9goofie</a> (And manually did refunds)",
 "u": "https://twitter.com/beemuvi/status/774145964860841985",
 "t": "2016-09-09 07:22:35 +0000",
 "c": "(auto-imported from Twitter as #2027)",
 }, /*************************************************************************/ {
-"n": 2028,
+"n": 2029, 
 "x": "Fixed our dumb Facebook share button (on the goal pages) that's been broken for we-don't-know-how-long. HT <a href=\"https://twitter.com/florismk\">@florismk</a>",
 "u": "https://twitter.com/beemuvi/status/774484198786605056",
 "t": "2016-09-10 05:46:36 +0000",
 "c": "(auto-imported from Twitter as #2028)",
 }, /*************************************************************************/ {
-"n": 2029,
-"x": "Another embarrassing one: 1st attempt (7/04) to fix broken image links (rails asset pipeline) left several broken that we just now #bugfix'd",
+"n": 2030, 
+"x": "Another embarrassing one: 1st attempt (Jul 4) to fix broken image links (rails asset pipeline) left several broken that we just now #bugfix'd",
 "u": "https://twitter.com/beemuvi/status/774807459848257536",
 "t": "2016-09-11 03:11:08 +0000",
-"c": "(auto-imported from Twitter as #2029)",
+"c": "(auto-imported from Twitter as #2029) Twitter integration landing page header image, fatcyclist contest logo, hr scroll in landing pages and ajax loader spinner, mini todoist/pocket/foursquare logos on zapier page, ie 5 beecat",
 }, /*************************************************************************/ {
-"n": 2030,
+"n": 2031, 
 "x": "We improved the Facebook share button: shows both goalname &amp; title if different, &amp; to round out this tiny UVI: fixed a typo in goal settings",
 "u": "https://twitter.com/beemuvi/status/775224782824419328",
 "t": "2016-09-12 06:49:25 +0000",
 "c": "(auto-imported from Twitter as #2030)",
 }, /*************************************************************************/ {
-"n": 2031,
+"n": 2032, 
 "x": "Facebook sharing #bugfix: it was picking the wrong image because we tried to specify the thumbnail which isn't on the page being shared",
 "u": "https://twitter.com/beemuvi/status/775224831130292225",
 "t": "2016-09-12 06:49:37 +0000",
 "c": "(auto-imported from Twitter as #2031)",
 }, /*************************************************************************/ {
-"n": 2032,
+"n": 2033, 
 "x": "Moved the discount slider back to the top and added an FAQ item to <a href=\"http://beeminder.com/premium\">beeminder.com/premium</a>",
 "u": "https://twitter.com/beemuvi/status/775947850924429312",
 "t": "2016-09-14 06:42:38 +0000",
 "c": "(auto-imported from Twitter as #2032)",
 }, /*************************************************************************/ {
-"n": 2033,
+"n": 2034, 
+"f": true,
 "x": "If you're not premium we strip html tags from your \"about me\" blurb &amp; add a nofollow to the \"personal url\" when linked under your avatar",
 "u": "https://twitter.com/beemuvi/status/776319466418253824",
 "t": "2016-09-15 07:19:18 +0000",
 "c": "(auto-imported from Twitter as #2033)",
 }, /*************************************************************************/ {
-"n": 2034,
-"x": "#bugfix w/ creating <a href=\"https://twitter.com/SkritterHQ\">@SkritterHQ</a> goals: worked around changes on Skritter side. Now at least works smoothly if already logged in to Skritter.",
+"n": 2035, 
+"x": "#bugfix w/ creating Skritter goals: worked around changes on Skritter side. Now at least works smoothly if already logged in to Skritter.",
 "u": "https://twitter.com/beemuvi/status/776662919727591424",
 "t": "2016-09-16 06:04:04 +0000",
 "c": "(auto-imported from Twitter as #2034)",
 }, /*************************************************************************/ {
-"n": 2035,
+"n": 2036, 
 "x": "Rounding bug w/ applying coupons for premium plans could make displayed price a whole dollar off :/ #bugfix HT Markos Giannopoulos",
 "u": "https://twitter.com/beemuvi/status/777023647395393536",
 "t": "2016-09-17 05:57:28 +0000",
 "c": "(auto-imported from Twitter as #2035)",
 }, /*************************************************************************/ {
-"n": 2036,
-"x": "When you create a goal w/ the API you can now specify the data source (manual, api, ifttt, zapier). HT <a href=\"https://twitter.com/Malcolm_Ocean\">@Malcolm_Ocean</a> &amp; <a href=\"https://twitter.com/CompliceGoals\">@CompliceGoals</a>",
+"n": 2037, 
+"x": "When you create a goal w/ the API you can now specify the data source (manual, api, ifttt, zapier). HT Malcolm Ocean &amp; <a href=\"http://complice.co\">Complice</a>",
 "u": "https://twitter.com/beemuvi/status/777398670006247424",
 "t": "2016-09-18 06:47:40 +0000",
 "c": "(auto-imported from Twitter as #2036)",
 }, /*************************************************************************/ {
-"n": 2037,
+"n": 2038, 
 "x": "Instead of just strongly suggesting it (via banner) we now force you to confirm your email before letting you give us your credit card",
 "u": "https://twitter.com/beemuvi/status/777766624296251396",
 "t": "2016-09-19 07:09:48 +0000",
 "c": "(auto-imported from Twitter as #2037)",
 }, /*************************************************************************/ {
-"n": 2038,
-"x": "1/ More helpful unsubscribe link! Sends you to a page with a big red button, is clear about what happens if you press it, ...",
+"n": 2039, 
+"x": "(1 of 3) More helpful unsubscribe link! Sends you to a page with a big red button, is clear about what happens if you press it, ...",
 "u": "https://twitter.com/beemuvi/status/778131408841805824",
 "t": "2016-09-20 07:19:19 +0000",
 "c": "(auto-imported from Twitter as #2038)",
 }, /*************************************************************************/ {
-"n": 2039,
-"x": "2/ ... still tells you what's up if you visit the link multiple times, doesn't try to redirect to goal gallery, tells you your beemail ...",
+"n": 2040, 
+"x": "(2 of 3) ... still tells you what's up if you visit the link multiple times, doesn't try to redirect to goal gallery, tells you your beemail ...",
 "u": "https://twitter.com/beemuvi/status/778131459097976832",
 "t": "2016-09-20 07:19:31 +0000",
 "c": "(auto-imported from Twitter as #2039)",
 }, /*************************************************************************/ {
-"n": 2040,
-"x": "3/ ... subscription level and number of active goals, and the button helpfully goes away on that page once it's done its job.",
+"n": 2041, 
+"x": "(3 of 3) ... subscription level and number of active goals, and the button helpfully goes away on that page once it's done its job.",
 "u": "https://twitter.com/beemuvi/status/778131521186238465",
 "t": "2016-09-20 07:19:46 +0000",
 "c": "(auto-imported from Twitter as #2040)",
 }, /*************************************************************************/ {
-"n": 2041,
+"n": 2042, 
 "x": "Forcing email confirmation before adding credit card spawned a couple bugs for grandfathered users, not allowing changing cc, etc #bugfix",
 "u": "https://twitter.com/beemuvi/status/778737476361867264",
 "t": "2016-09-21 23:27:37 +0000",
 "c": "(auto-imported from Twitter as #2041)",
 }, /*************************************************************************/ {
-"n": 2042,
+"n": 2043,
 "x": "On the email unsubscribe page, \"you have N active goals\" now links to your gallery in case you forgot what you were once beeminding. #mini",
 "u": "https://twitter.com/beemuvi/status/779595720781246464",
 "t": "2016-09-24 08:17:58 +0000",
 "c": "(auto-imported from Twitter as #2042)",
 }, /*************************************************************************/ {
-"n": 2043,
-"x": "New premium FAQs about upgrading and downgrading and exquisite fairness, with new links and hovertext. <a href=\"https://www.beeminder.com/premium\">beeminder.com/premium</a>",
+"n": 2044,
+"x": "New premium FAQs about upgrading and downgrading and exquisite fairness, with new links and hovertext. https://www.beeminder.com/premium",
 "u": "https://twitter.com/beemuvi/status/779633627164323840",
 "t": "2016-09-24 10:48:36 +0000",
 "c": "(auto-imported from Twitter as #2043)",
 }, /*************************************************************************/ {
-"n": 2044,
+"n": 2045,
 "x": "Crazy mongoid bug made rescale feature break, rarely. Probable #bugfix deployed plus instrumentation so we'll know for sure if happens again",
 "u": "https://twitter.com/beemuvi/status/780275616167829504",
 "t": "2016-09-26 05:19:38 +0000",
-"c": "(auto-imported from Twitter as #2044)",
+"c": "(auto-imported from Twitter as #2044) Sometimes we would scale some datapoints multiple times, resulting in totally fubared goals. Trying sorting datapoints first?",
 }, /*************************************************************************/ {
-"n": 2045,
+"n": 2046,
+"f": true, 
 "x": "Failed/frozen goals (with the skull &amp; crossbones) can now be instantly archived. Sorry we were so uptight about that for so long!",
 "u": "https://twitter.com/beemuvi/status/780660643099652096",
 "t": "2016-09-27 06:49:35 +0000",
 "c": "(auto-imported from Twitter as #2045)",
 }, /*************************************************************************/ {
-"n": 2046,
+"n": 2047,
 "x": "Added our new Minister of the Exterior, <a href=\"https://twitter.com/anomalily\">@anomalily</a>, to our About Us page. <a href=\"http://beeminder.com/aboutus\">beeminder.com/aboutus</a> Welcome Lillian! <a href=\"http://blog.beeminder.com/anomalily\">blog.beeminder.com/anomalily</a>",
 "u": "https://twitter.com/beemuvi/status/781055660259770368",
 "t": "2016-09-28 08:59:15 +0000",
 "c": "(auto-imported from Twitter as #2046)",
 }, /*************************************************************************/ {
-"n": 2047,
+"n": 2048,
 "x": "More cleanup of <a href=\"http://beeminder.com/aboutus\">beeminder.com/aboutus</a> &amp; finally added <a href=\"https://twitter.com/lady_alys\">@lady_alys</a> who's been helping us w/ support &amp; <a href=\"https://twitter.com/habitica\">@habitica</a> integration for a long time",
 "u": "https://twitter.com/beemuvi/status/781384851177951232",
 "t": "2016-09-29 06:47:20 +0000",
 "c": "(auto-imported from Twitter as #2047)",
 }, /*************************************************************************/ {
-"n": 2048,
+"n": 2049,
 "x": "Slightly more sophisticated error checking in our Twitter goal setup: give an error if the user doesn't exist or their tweets are protected.",
 "u": "https://twitter.com/beemuvi/status/781756110168481792",
 "t": "2016-09-30 07:22:35 +0000",
@@ -1708,31 +1669,31 @@ var batch2016sep = [
 
 var batch2016oct = [
 {
-"n": 2049,
+"n": 2050,
 "x": "If you downgraded and lost the SMS bot perk, we'd get horribly confused and not let you save user settings anymore. #bugfix",
 "u": "https://twitter.com/beemuvi/status/782117460610736129",
 "t": "2016-10-01 07:18:28 +0000",
 "c": "(auto-imported from Twitter as #2049)",
 }, /*************************************************************************/ {
-"n": 2050,
+"n": 2051,
 "x": "SMS bot improvement: until you activate your phone number we give a link to resend the activation text message",
 "u": "https://twitter.com/beemuvi/status/782468026872369152",
 "t": "2016-10-02 06:31:29 +0000",
 "c": "(auto-imported from Twitter as #2050)",
 }, /*************************************************************************/ {
-"n": 2051,
+"n": 2052,
 "x": "Can now add a phone number even if you don't use the SMS bot (and we'll actually text/call if you derail at $810+ &amp; don't respond to email)",
 "u": "https://twitter.com/beemuvi/status/782827289096491008",
 "t": "2016-10-03 06:19:04 +0000",
-"c": "(auto-imported from Twitter as #2051)",
+"c": "(auto-imported from Twitter as #2051) 'maybe you are just hoping we'll give you a call to chat?' says bee", // TODO: double-quotes in hovertext?
 }, /*************************************************************************/ {
-"n": 2052,
+"n": 2053,
 "x": "In case you have too many past pledges to show, we made a button that emails you the whole enchilada, in json format.",
 "u": "https://twitter.com/beemuvi/status/783196192574312448",
 "t": "2016-10-04 06:44:58 +0000",
 "c": "(auto-imported from Twitter as #2052)",
 }, /*************************************************************************/ {
-"n": 2053,
+"n": 2054,
 "x": "Got rid of superfluous fields in past pledges export and added a CSV version as well as JSON",
 "u": "https://twitter.com/beemuvi/status/783530646643863552",
 "t": "2016-10-05 04:53:58 +0000",

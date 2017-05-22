@@ -1,4 +1,3 @@
-
 var batch2017jan = [{
 "n": 2158,
 "x": "Fixed a case of showing the wrong new pledge amount in the legit check email if you had auto-increasing pledges turned off. #bugfix",
@@ -688,7 +687,7 @@ var batch2017apr = [{
 "u": "https://twitter.com/beemuvi/status/858098808311357441",
 }, /* --------------------------------------------------------- end 2017apr */ ]
 
-var batch2017may = [ {
+var batch2017may = [{
 "n": 2270,
 "x": "Fixed broken image for blog post on front page; trimmed whitespace when not displaying seconds; fixed formatting bug in API docs. #mini ×3",
 "t": "2017-05-02",
@@ -821,11 +820,16 @@ var batch2017may = [ {
 "x": "Nixed \"red archive button\" copy (cuz it's not red anymore) + version 4.5.2 of the iOS app: #bugfix for a crash that happened in obscure situations", 
 "u": "https://twitter.com/beemuvi/status/865704826541178880",
 "t": "2017-05-19",
-"c": "Copy fix was May 20 and beemiOS 4.5.2 should hit the app store May 21",
+"c": "Copy fix was May 18 and beemiOS 4.5.2 should hit the app store May 21",
 }, /* --------------------------------------------------------- end 2017may */ ]
 
-var staged = [ {
+var staged = [{
 /*
+"f": true,
+"x": "The Undo button for the Road Editor is now available for an hour after you make a change to the road so you can revert bad changes.
+"d": "2017-05-19",
+http://forum.beeminder.com/t/road-editor-isnt-really-useful-right-now/3051
+* some Mysterious Mystery with javascript double submit button with road editor?
 * We seem to have had a regression from https://twitter.com/beemuvi/statuses/777766624296251396 which is now fixed for real? #redesign?
 * fixed some (most? many?) of the thing where flash banner shows up again after you leave current page and go to another page [maybe this mostly only happens for admins?]
 */
