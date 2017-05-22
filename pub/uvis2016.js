@@ -1102,6 +1102,21 @@ var batch2016jun = [
 "c": "(auto-imported from Twitter as #1956)",
 }, /*************************************************************************/ ]
 
+/* VIM MACROS FOR MERGING W/ TWITTER EXPORT 
+Dump macro in register x to current line: "xp
+Put current line back into register x:    "xyy
+Turn line of html to json:
+dt"xf"x:.,.s/"/\\"/ge0i"n": 	f>xi, "x": "	$xxxxxa",	0j
+Move line of json to matching uvi assuming unique snippet found:
+jmzkddnkkpf,lli	jdd'z0
+*/
+
+/*
+html: 1958-1988
+twex: 1958-1987 = The countdown - If the author 
+
+*/
+
 var batch2016jul = [
 {
 "n": 1957,
@@ -1291,202 +1306,204 @@ var batch2016jul = [
 "c": "(auto-imported from Twitter as #1987)",
 }, /*************************************************************************/ ]
 
+// TODO: bookmark for where we're at with merging. all past this point good.
+
 var batch2016aug = [
 {
-"n": 1988,
+"n": 1989, 
 "x": "SMS bot reminders more concise after initial reminder on an eep day. Eg, \"Eep! +3 in &lt;30m for pushups ($5)\"",
 "u": "https://twitter.com/beemuvi/status/760015554497290244",
 "t": "2016-08-01 07:33:23 +0000",
 "c": "(auto-imported from Twitter as #1988)",
 }, /*************************************************************************/ {
-"n": 1989,
+"x": 1990, 
 "x": "The SMS bot now has a better welcome message, has START as an alias for ACTIVATE, and responds to HELP with helpfulness.",
 "u": "https://twitter.com/beemuvi/status/760393285445627904",
 "t": "2016-08-02 08:34:21 +0000",
 "c": "(auto-imported from Twitter as #1989)",
 }, /*************************************************************************/ {
-"n": 1990,
+"n": 1991, 
 "x": "More tweaks to the SMS bot: Say \"added\" datapoint, not \"updated\". And we now give the time remaining in minutes at the end, not just \"&lt;1h\".",
 "u": "https://twitter.com/beemuvi/status/760740480384634880",
 "t": "2016-08-03 07:33:59 +0000",
 "c": "(auto-imported from Twitter as #1990)",
 }, /*************************************************************************/ {
-"n": 1991,
-"x": "Last <a href=\"https://twitter.com/habitica\">@habitica</a> #bugfix in fact broke it worse. Facepalm. Fixed f'real now. Bonus UVI: Fixed the redundant headers in <a href=\"http://forum.beeminder.com\">forum.beeminder.com</a>",
+"n": 1992, 
+"x": "Previous Habitica #bugfix in fact broke it worse. :facepalm: Fixed the fix now. Bonus UVI: Fixed the redundant headers in http://forum.beeminder.com",
 "u": "https://twitter.com/beemuvi/status/761175823860719616",
 "t": "2016-08-04 12:23:53 +0000",
 "c": "(auto-imported from Twitter as #1991)",
 }, /*************************************************************************/ {
-"n": 1992,
-"x": "#bugfix in API: give a nice error instead of a 500 if you submit a malformed daystamp for a datapoint. HT <a href=\"https://twitter.com/Malcolm_Ocean\">@Malcolm_Ocean</a> of <a href=\"https://twitter.com/CompliceGoals\">@CompliceGoals</a>",
+"n": 1993, 
+"x": "#bugfix in API: give a nice error instead of a 500 if you submit a malformed daystamp for a datapoint. HT Malcolm Ocean of <a href=\"http://complice.co\">Complice</a>.",
 "u": "https://twitter.com/beemuvi/status/761463694123372544",
 "t": "2016-08-05 07:27:46 +0000",
 "c": "(auto-imported from Twitter as #1992)",
 }, /*************************************************************************/ {
-"n": 1993,
-"x": "We'd missed a bunch of cases of \"sign in\" -&gt; \"log in\". Also fixed a typo in the beemail descriptions. #mini",
+"n": 1994, 
+"x": "We'd missed a bunch of cases of \"sign in\" &rarr; \"log in\". Also fixed a typo in the beemail descriptions. #mini",
 "u": "https://twitter.com/beemuvi/status/761853169940914177",
 "t": "2016-08-06 09:15:24 +0000",
 "c": "(auto-imported from Twitter as #1993)",
 }, /*************************************************************************/ {
-"n": 1994,
-"x": "Added tooltip for <a href=\"https://twitter.com/CompliceGoals\">@CompliceGoals</a> on the front page, moved the copy around in the \"getting reminder about your...\" email &amp; added link to goal",
+"n": 1995, 
+"x": "Added tooltip for Complice on the front page, moved the copy around in the \"getting reminder about your...\" email &amp; added link to goal",
 "u": "https://twitter.com/beemuvi/status/762147325804371968",
 "t": "2016-08-07 04:44:17 +0000",
 "c": "(auto-imported from Twitter as #1994)",
 }, /*************************************************************************/ {
-"n": 1995,
-"x": "Links to goals in reminder emails now use \"<a href=\"http://beeminder.com/user/goal\">beeminder.com/user/goal</a>\" as the anchor text instead of goal title (which is now the title text)",
+"n": 1996, 
+"x": "Links to goals in reminder emails now use \"beeminder.com/user/goal\" as the anchor text instead of goal title (which is now the title text)",
 "u": "https://twitter.com/beemuvi/status/762559724394913792",
 "t": "2016-08-08 08:03:00 +0000",
-"c": "(auto-imported from Twitter as #1995)",
+"c": "(auto-imported from Twitter as #1995) Since we now deemphasize goal descriptions (titles) in favor of one-word goalnames, we now link to them that way in reminder emails",
 }, /*************************************************************************/ {
-"n": 1996,
+"n": 1997, 
+"f": true,
 "x": "Premium plans revamp! Hopefully you don't view this as a negative UVI but it's part of ensuring Beeminder thrives for many more years, so...",
 "u": "https://twitter.com/beemuvi/status/762936334801514496",
 "t": "2016-08-09 08:59:31 +0000",
 "c": "(auto-imported from Twitter as #1996)",
 }, /*************************************************************************/ {
-"n": 1997,
+"n": 1998, 
+"f": true,
 "x": "Beeminder now has a charity option! It's a premium perk to opt in to donating half your pledges to <a href=\"https://twitter.com/watsi\">@watsi</a>, <a href=\"https://twitter.com/EFF\">@EFF</a>, or <a href=\"https://twitter.com/Give_Directly\">@Give_Directly</a>",
 "u": "https://twitter.com/beemuvi/status/762936415097229312",
 "t": "2016-08-09 08:59:50 +0000",
 "c": "(auto-imported from Twitter as #1997)",
 }, /*************************************************************************/ {
-"n": 1998,
+"n": 1999, 
 "x": "<a href=\"http://beeminder.com/premium\">beeminder.com/premium</a> is now viewable even if you're not logged in (the \"Add Plan\" buttons become \"Sign Up\")",
 "u": "https://twitter.com/beemuvi/status/762996355669172226",
 "t": "2016-08-09 12:58:01 +0000",
 "c": "(auto-imported from Twitter as #1998)",
 }, /*************************************************************************/ {
-"n": 1999,
+"n": 2000, 
 "x": "Similarly, if you're logged in but haven't added a credit card then the buttons say \"Add Payment Method\"",
 "u": "https://twitter.com/beemuvi/status/762996407544389632",
 "t": "2016-08-09 12:58:14 +0000",
 "c": "(auto-imported from Twitter as #1999)",
 }, /*************************************************************************/ {
-"n": 2000,
+"n": 2001, 
 "x": "New premium FAQ at the bottom of <a href=\"http://beeminder.com/premium\">beeminder.com/premium</a> and moved the Exquisitely Fair Slider below the plan blurbs",
 "u": "https://twitter.com/beemuvi/status/762996493967994880",
 "t": "2016-08-09 12:58:34 +0000",
 "c": "(auto-imported from Twitter as #2000)",
 }, /*************************************************************************/ {
-"n": 2001,
+"n": 2002, 
 "x": "We now treat Core Beeminder (ie, the $0/month plan) as one of the plans. And btw, we're retiring the Beekeeper lifecoaching program. RIP.",
 "u": "https://twitter.com/beemuvi/status/762996583432531969",
 "t": "2016-08-09 12:58:55 +0000",
 "c": "(auto-imported from Twitter as #2001)",
 }, /*************************************************************************/ {
-"n": 2002,
+"n": 2003, 
 "x": "Now clearer how to switch between plans: plan you're on highlighted, says \"currently subscribed\", can click \"downgrade\" to downgrade, etc.",
 "u": "https://twitter.com/beemuvi/status/762996710020833281",
 "t": "2016-08-09 12:59:26 +0000",
 "c": "(auto-imported from Twitter as #2002)",
 }, /*************************************************************************/ {
-"n": 2003,
+"n": 2004, 
 "x": "Lifetime subscriptions are clearer. Rather than just disabling the plan button it says \"lifetime subscribed\".",
 "u": "https://twitter.com/beemuvi/status/762996781709799425",
 "t": "2016-08-09 12:59:43 +0000",
 "c": "(auto-imported from Twitter as #2003)",
 }, /*************************************************************************/ {
-"n": 2004,
+"n": 2005, 
 "x": "We tested when to make you add a credit card (commit-wall, not paywall), found earlier is better so now we do that after 1 or 2 goals",
 "u": "https://twitter.com/beemuvi/status/762996857484169216",
 "t": "2016-08-09 13:00:01 +0000",
 "c": "(auto-imported from Twitter as #2004)",
 }, /*************************************************************************/ {
-"n": 2005,
+"n": 2006, 
 "x": "Made a button on the new paywall to request additional free goals if you need more time to experiment or already pay lots in pledges",
 "u": "https://twitter.com/beemuvi/status/762996924035108864",
 "t": "2016-08-09 13:00:17 +0000",
 "c": "(auto-imported from Twitter as #2005)",
 }, /*************************************************************************/ {
-"n": 2006,
-"x": "Added a link to <a href=\"http://beeminder.com/premium\">beeminder.com/premium</a> in the top navigation bar, and edits in the FAQ etc to get in line with premium changes",
+"n": 2007, 
+"x": "Added a link to http://beeminder.com/premium in the top navigation bar, and edits in the FAQ etc to get in line with premium changes",
 "u": "https://twitter.com/beemuvi/status/762997033825280001",
 "t": "2016-08-09 13:00:43 +0000",
 "c": "(auto-imported from Twitter as #2006)",
 }, /*************************************************************************/ {
-"n": 2007,
-"x": "Made the \"discount please\" button on <a href=\"http://beeminder.com/premium\">beeminder.com/premium</a> do something more sensible if you're not logged in (like telling you to do so)",
+"n": 2008, 
+"x": "Made the \"discount please\" button on beeminder.com/premium do something more sensible if you're not logged in (like telling you to do so)",
 "u": "https://twitter.com/beemuvi/status/763194453100113921",
 "t": "2016-08-10 02:05:11 +0000",
 "c": "(auto-imported from Twitter as #2007)",
 }, /*************************************************************************/ {
-"n": 2008,
-"x": "Changed the features listed for Core Beeminder in <a href=\"http://beeminder.com/premium\">beeminder.com/premium</a> based on this poll: <a href=\"http://forum.beeminder.com/t/mega-feature-list/2378\">forum.beeminder.com/t/mega-feature-list/2378</a>",
+"n": 2009, 
+"x": "Changed the features listed for Core Beeminder in beeminder.com/premium based on <a href=\"http://forum.beeminder.com/t/mega-feature-list/2378\">a forum poll</a>",
 "u": "https://twitter.com/beemuvi/status/763195005838123008",
 "t": "2016-08-10 02:07:23 +0000",
 "c": "(auto-imported from Twitter as #2008)",
 }, /*************************************************************************/ {
-"n": 2009,
-"x": "Speaking of dangling carrots, the charities weren't clickable in Beemium when we first deployed this. HT Kenn Hamm <a href=\"https://plus.google.com/+KennHamm\">plus.google.com/+KennHamm</a>",
+"n": 2010, 
+"x": "Speaking of dangling carrots, the charities weren't clickable for Beemium people when we first deployed this. HT <a href=\"https://plus.google.com/+KennHamm\">Kenn Hamm</a>",
 "u": "https://twitter.com/beemuvi/status/763260696700198912",
 "t": "2016-08-10 06:28:25 +0000",
 "c": "(auto-imported from Twitter as #2009)",
 }, /*************************************************************************/ {
-"n": 2010,
+"n": 2011, 
 "x": "Plugged leak in the commit-wall: creating various autodata goals circumvented the prompt to add your credit card before creating more goals",
 "u": "https://twitter.com/beemuvi/status/763949494270504961",
 "t": "2016-08-12 04:05:27 +0000",
 "c": "(auto-imported from Twitter as #2010)",
 }, /*************************************************************************/ {
-"n": 2011,
-"x": "Replaced another instance of our janky credit card form with <a href=\"https://twitter.com/stripe\">@stripe</a>'s elegant one, on the /premium page when you click Add Payment",
+"n": 2012, 
+"x": "Replaced another instance of our janky credit card form with Stripe's elegant one, on the /premium page when you click Add Payment",
 "u": "https://twitter.com/beemuvi/status/763949611048239104",
 "t": "2016-08-12 04:05:55 +0000",
 "c": "(auto-imported from Twitter as #2011)",
 }, /*************************************************************************/ {
-"n": 2012,
+"n": 2013, 
 "x": "Forgot html_safe in zeno emails so were sending literal \"&lt;a href='....\" etc. #bugfix HT Markos Giannopoulos",
 "u": "https://twitter.com/beemuvi/status/763949678626942977",
 "t": "2016-08-12 04:06:11 +0000",
 "c": "(auto-imported from Twitter as #2012)",
 }, /*************************************************************************/ {
-"n": 2013,
-"x": "Added link to datapoints on archived goals. No need to hide data, though still can't edit/delete it. HT Kenn Hamm <a href=\"http://forum.beeminder.com/t/negative-values-in-hours-goals/1561/3\">forum.beeminder.com/t/negative-values-in-hours-goals/1561/3</a>",
+"n": 2014, 
+"x": "Added link to datapoints on archived goals. No need to hide data, though still can't edit/delete it. <a href=\"http://forum.beeminder.com/t/negative-values-in-hours-goals/1561/3\">HT Kenn Hamm again</a>",
 "u": "https://twitter.com/beemuvi/status/763950101463076865",
 "t": "2016-08-12 04:07:52 +0000",
 "c": "(auto-imported from Twitter as #2013)",
 }, /*************************************************************************/ {
-"n": 2014,
-"x": "Minis on <a href=\"http://beeminder.com/premium\">beeminder.com/premium</a>: Link to new blog post, clicking Sign Up button pops up a popup to sign up (but redirects you away after)",
+"n": 2015, 
+"x": "Minis on beeminder.com/premium: Link to new blog post, clicking Sign Up button pops up a popup to sign up (but redirects you away after)",
 "u": "https://twitter.com/beemuvi/status/769330598787768320",
 "t": "2016-08-27 00:28:02 +0000",
 "c": "(auto-imported from Twitter as #2014)",
 }, /*************************************************************************/ {
-"n": 2015,
+"n": 2016, 
 "x": "Another tiny one: Lifetime subscribers to legacy plans now see the plan description even if they've upgraded to another plan",
 "u": "https://twitter.com/beemuvi/status/769330965340487680",
 "t": "2016-08-27 00:29:30 +0000",
 "c": "(auto-imported from Twitter as #2015)",
 }, /*************************************************************************/ {
-"n": 2016,
+"n": 2017, 
 "x": "Closed couple loopholes that let you apply discount coupons to legacy plans; also updates &amp; additions (\"Loophole idea!\") to the premium FAQ",
 "u": "https://twitter.com/beemuvi/status/770113213212090369",
 "t": "2016-08-29 04:17:52 +0000",
 "c": "(auto-imported from Twitter as #2016)",
 }, /*************************************************************************/ {
-"n": 2017,
+"n": 2018, 
 "x": "In the premium revamp, introduced a bug that prevented creation of weight gain goals. This is America so it took a while to notice. #bugfix",
 "u": "https://twitter.com/beemuvi/status/770527288135999488",
 "t": "2016-08-30 07:43:15 +0000",
-"c": "(auto-imported from Twitter as #2017)",
+"c": "(auto-imported from Twitter as #2017) Was rearranging code, temporarily lost the goal type params (yaw, dir, etc) for them",
 }, /*************************************************************************/ {
-"n": 2018,
+"n": 2019, 
 "x": "The first time you push the \"more free goals\" button we just give you one automatically. Not sure how we feel about that, but, experiments!",
 "u": "https://twitter.com/beemuvi/status/770842372926087168",
 "t": "2016-08-31 04:35:17 +0000",
 "c": "(auto-imported from Twitter as #2018)",
 }, /*************************************************************************/ {
-"n": 2019,
+"n": 2020, 
 "x": "And added a comment box with the \"more free goals\" &amp; \"discount please\" buttons, for stating your case (and giving us much-needed feedback!)",
 "u": "https://twitter.com/beemuvi/status/770842479268499456",
 "t": "2016-08-31 04:35:43 +0000",
 "c": "(auto-imported from Twitter as #2019)",
 }, /*************************************************************************/ ]
-
-// TODO: bookmark for where we're at with merging. all past this point good.
 
 var batch2016sep = [
 {

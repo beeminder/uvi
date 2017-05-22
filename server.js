@@ -1,10 +1,5 @@
 'use strict';
 
-const PATH = 'pub/twex/data/js/tweets' // filesystem path to Twitter's export
-const TURL = 'https://twitter.com/'
-const MONA = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', // month array
-              'jul', 'aug', 'sep', 'oct', 'nov', 'dec']
-
 let express = require('express')
 let app = express()
 let fs = require('fs')
@@ -17,6 +12,11 @@ let listener = app.listen(process.env.PORT, () => {
 // -----------------------------------------------------------------------------
 // TWITTER IMPORT CODE BELOW
 // -----------------------------------------------------------------------------
+
+const PATH = 'pub/twex/data/js/tweets' // filesystem path to Twitter's export
+const TURL = 'https://twitter.com/'
+const MONA = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', // month array
+              'jul', 'aug', 'sep', 'oct', 'nov', 'dec']
 
 // Replace URLs with full versions based on object from tweet.entities.urls
 // Twitter supplies a display_url but it's sometimes truncated which is dumb.
