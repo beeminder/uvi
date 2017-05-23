@@ -828,13 +828,20 @@ var batch2017may = [{
 "u": "https://twitter.com/beemuvi/status/866776780954140674",
 "d": "2017-05-19",
 "t": "2017-05-22",
+"c": "Also the Mysterious Mystery with double-submit that might've been user-visible",
+}, { // ------------------------------------------------------------------------
+"n": 2291,
+"x": "Dashboard sorting is now stable, meaning it breaks ties in favor of how things are currently sorted. HT @PhilipHellyer",
+"u": "https://twitter.com/beemuvi/status/867120030101553153",
+"d": "2017-05-20",
+"t": "2017-05-23",
+"c": "Also some refactoring to make opinionated sorting simpler",
 }, /* --------------------------------------------------------- end 2017may */ ]
 
 var staged = [{
 }, /* ---------------------------------------------------------- end staged */ ]
 /*
 STAGED: ------10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140  
-"x": "We made dashboard sorting always pick the sensible order (increasing time to derailment, decreasing pledge, etc). Also stable sorting.",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 CANDIDATES: --10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140  

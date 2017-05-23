@@ -748,95 +748,15 @@ There should be no gap when we're done!
 <li value="1914">(3/3) Fixing bad error messages on login/signup failure, proper handling of deleted goals or changed goalnames, handle +'s in email addresses</li>
 <li value="1915">Minis: RescueTime icon didn't have "RescueTime" next to it, broke &amp; then fixed unsubscribe links (!), made unsub links not expire.</li>
 <li value="1916">What we used to call "slug" is now universally called "goalname" (no space, like "username")</li>
-</ol>
-
-<h3>2016 April 30+</h3>
-
-<ol>
 <li value="1917">If you clicked an unsubscribe link when logged in as another user then we gave an opaque error instead of telling you what was what #bugfix</li>
-<li value="1918">iOS app version 4.3!
-<ol>
-<li>No longer crashes when you log in w/ Facebook or hangs when you log in with Google #bugfix</li>
-<li>And we no longer crash if adding a datapoint times out or otherwise returns an error #bugfix</li>
-<li>Finally, you can now pull to refresh your goal gallery even if you have a small number of goals #mini</li>
-</ol></li>
-<li value="1921">Mini UVIs: Added Duolingo Russian phrase, better URLs for some settings like /reminders/username, alphabetized autodata icons in goal wizard</li>
-<li value="1922">Moved deadline setting (needs to always be near zeno start time), fixed Fitbit push notifications (should be faster again) #mini ×2</li>
-<li value="1923">CSV/TSV export now has iso8601 dates (both humans &amp; machines rejoice!) and additional columns: daystamp, createdat, deadline</li>
-<li value="1924">And added a header row to the CSV/TSV to name the columns, and now we name the file with the user/goalname instead of just "datapoints.csv"</li>
-<li value="1925">When you add a datapoint with a comment to the dashboard, we immediately replace the placeholder text in the comment box. #mini</li>
-<li value="1926">In goal creation, require &amp; actually use given current value for odometer goals (we were initially ignoring it altogether! #bugfix) #mini</li>
-<li value="1927">Fixed an ugly error on the dashboard that you'd see if one of your goals had no datapoints #mini #bugfix</li>
-<li value="1928">Better URLs for goal settings tabs: /settings, /reminders, /supporters, /terrifying, /datapoints</li>
-<li value="1929">Added a notice to beeminder.com/sleep about how you need the SleepCloud Backup add-on for Sleep As Android for like $1/year</li>
-<li value="1930">If your data's public then the public should see All Data link but not settings etc tabs (even though they, correctly, didn't work) #bugfix</li>
-<li value="1931">Standardized across all integrations the error message for when we can't fetch autodata, with link to go reauthorize us. #mini</li>
-<li value="1932"><strong>We made our Complice integration official, with fancy landing page and everything! <a href="http://beeminder.com/complice">beeminder.com/complice</a></strong></li>
-<li value="1933">Goals would go missing from the dashboard as soon as they hit the deadline and until the derailment was processed. #bugfix</li>
-<li value="1934">Beedroid #bugfix: sign-up in app acted like it failed despite succeeding (& then you had no way to log in to it, it was a mess, albeit rare)</li>
-<li value="1935">We were giving a spurious error when you first signed up or logged in (related to authenticity tokens). #bugfix #oldie</li>
-    <!-- [devise bug, don't try to verify authenticity tokens in sign in and sign up, because there is no session expected to verify] -->
-<li value="1936">RescueTime goal creation is now consistent with normal goal creation in making you enter a credit card after N goals created. #bugfix</li>
-<li value="1937">RunKeeper #bugfix: we were rejecting activities w/out a distance even for time/calories/etc where it doesn't make sense to enforce that.</li>
-<li value="1938">Barely user-visible but giving bad query params for pagination on All Data could cause 500 errors and now just nicely 404s. #mini #bugfix</li>
-<li value="1939">Fixed (at least improved a lot?) the problem that was making people have to keep logging in again #bugfix (let us know if you see it still!)</li>
-<li value="1940"><strong>New premium feature: Weekends Off! <a href="http://blog.beeminder.com/weekends/">blog.beeminder.com/weekends</a></strong></li>
-<li value="1941">Weekends-off is now maximally lenient: you can decide at the last second to take the weekend off. (We'll monitor for abuse of this!)</li>
-<li value="1942">Beebot (our Slack bot) no longer crashes when you add an emoji reaction to a message. #bugfix</li>
-<li value="1943">More on our Slack bot: Can now send messages to beebot (eg "list" or a goalname) and it lists your most urgent goals or adds datapoints</li>
-<li value="1944">Fancy Slack bot landing page with documentation now at <a href="https://www.beeminder.com/addtoslack">beeminder.com/addtoslack</a> aka slackminder.com</li>
-<li value="1945">Fixed things like our Slack bot not being able to auth to multiple teams. <a href="http://forum.beeminder.com/t/beebot-beeminder-slack-bot-update/2152">forum post</a> #bugfix</li>
-<li value="1946"><strong>Slackminder now includes a /charge command. You can say "charge me $X in N minutes unless I ___". See also <a href="http://blog.beeminder.com/mustdo">blog.beeminder.com/mustdo</a></strong></li>
-<li value="1947"><strong><a href="http://slackminder.com">Slackminder</a> has goodies built in like dice rolls and sealed bid auctions cuz @dreev &amp; @thatgirl &amp; @andrewpbrett are huge nerds</strong></li>
-<li value="1948"><strong>Slackminder has a built-in pomodoro timer that can automatically send data to Beeminder via a /tock command! See <a href="http://blog.beeminder.com/tocks">blog.beeminder.com/tocks</a></strong></li>
-<li value="1949"><strong>Slackminder open source! With that we'll stop counting UVIs to Slack bot even tho there're lots more we could list! <a href="http://github.com/beeminder/beebot">github.com/beeminder/beebot</a></strong></li>
-<li value="1950">Minis: placeholder text for slack channel zenos, #bugfix w/ RescueTime redirect after goal creation, always show hovertext for services</li>
-<li value="1951">We now always consistently use the units chosen in RunKeeper goal creation no matter what units you say in RunKeeper #bugfix HT <a href="http://twitter.com/chipmanaged">@chipmanaged</a></li>
-<li value="1952">Redirected an ancient Withings FAQ page to our Withings integration landing page. <a href="http://beeminder.com/withings">beeminder.com/withings</a> #mini</li>
-<li value="1953">Importing of existing data for new RescueTime/Draft/Withings/GmailZero/GitHub/Jawbone/Epson/Misfit goals was broken for 2 months (!) #bugfix</li>
-<li value="1954">Tweaked weaselproof-me wording, and bugfixes w/ weekends-off (like so it actually works; fixed manually for everyone affected)</li>
-<li value="1955">More Rails modernization: asset pipeline theoretically speeds things up. Not sure it has but also involved breaking &amp; fixing many URLs.</li>
-<li value="1956">Made Misfit integration use standard statute of limitations on syncing data (1 week). Fixed bug for people who didn't sync for &gt;30 days.</li>
-<li value="1957">Another rare RescueTime bug left over from the switch to auth'ing w/out pasting API key, led to failing to fetch data on new goals. #bugfix</li>
 </ol>
 
-<h3>2016 July</h3>
-<ol>
-<li value="1958">The countdown timers for archiving &amp; pledge stepdowns would sometimes fail to start if the page wasn't fully loaded. #bugfix</li>
-<li value="1959">One of the many bugs fixed as part of asset pipeline but we'll count it as one more UVI since it has a <a href="http://forum.beeminder.com/t/countdown-in-embedded-goals-is-broken/2261">forum thread</a></li>
-<li value="1960">Improved/fixed algorithm that decides when the bee buzzes while importing, preparing your graph (was super busted for new goals for awhile)</li>
-    <!-- [bee did something to improve things, but also broke things so for a long time newly created goals would end up perma-opaque] -->
-<li value="1961">Made legacy redirects for images so we don't break hotlinks out there, unbroke the images of our pretty faces in <a href="http://beeminder.com/aboutus">beeminder.com/aboutus</a></li>
-<li value="1962"><strong>Road Editor! Enabled for Plan Bee and above as of June 17. <a href="http://blog.beeminder.com/road/">blog.beeminder.com/road</a></strong></li>
-<li value="1963">We no longer ignore the last row (the one equivalent to the traditional road dial) in the road editor. #bugfix</li>
-<li value="1964">Related/similar #bugfix: The last row of the road editor now lets you specify any 2-of-3 of goal-value-rate (other rows ought to but don't)</li>
-<li value="1965">If you break your road with the road editor we add a button above it to restore it to its last unbroken state.</li>
-<li value="1966">Last UVI related to asset pipeline: tooltips were broken for a while #bugfix -- And improved the error messages in the road editor #mini</li>
-<li value="1967">Race condition (either related to multiple Fitbit goals or push notifications + polling) made us lose your Fitbit auth sometimes. #bugfix</li>
-<li value="1968">It's embarrassing how many things like this we've missed: we caught another previously uncaught RescueTime error (401) &amp; alert the user now</li>
-<li value="1969">We now include the "Things You Must Know" copy from <a href="http://blog.beeminder.com/creditcard">blog.beeminder.com/creditcard</a> in the email we send out for each new goal you create</li>
-    <!-- https://github.com/beeminder/beeminder/commit/f288fe006829776f1f4e57583afbf08487cf6bb1 -->
-<li value="1970">In the "Charge me" action in our IFTTT channel, we failed to strip whitespace from the charge amount &amp; would wrongly complain "NaN". #bugfix</li>
-<li value="1971">Another #bugfix: when emailing you about errors like that we now show you the actual values from IFTTT, not failed attempts to parse them</li>
-<li value="1972">If you downgrade from premium and no longer have the SMS perk we fall back to email (and we fixed related copy in the UI)</li>
-<li value="1973">Got rid of an old banner wrongly telling weaselproofed people who were archiving a goal in the first week that they could instead delete it</li>
-<li value="1974">Improved our Fitbit integration landing page: cute contract image, and got "fitbitminder.com" domain</li>
-<li value="1975">Error-checking fail w/ goal creation wizard: trying to use a previously used goalname led to mysterious failures. #bugfix</li>
-<li value="1976">We now honor the units specified in Fitbit instead of always creating new weight loss goals in kilograms. #bugfix HT <a href="http://twitter.com/dyang">@dyang</a></li>
-<li value="1977">Due to recent refactoring we started ignoring the 'start with a week of safety buffer' option for RescueTime goals. #bugfix</li>
-<li value="1978">Copy tweak in ThingsYouMustKnow (change/charge/adjustment was easy to misread). Added weekends-off, road editor to beeminder.com/premium #mini ×2</li>
-<li value="1979">A thing we broke with the last Rails upgrade: we weren't automatically getting the user's timezone on signup. #bugfix</li>
-<li value="1980">The weekends-off feature was giving you fridays off as well for do-less goals. #bugfix</li>
-<li value="1981">When improving our URL scheme in May we broke unsubscribe links for mass mails, noticed when sending next monthly beemail last week. #bugfix</li>
-<li value="1982">Road editor up-sprucing: added link to gory details, nixed redundant "add row" button, aligned the various inputs better.</li>
-<li value="1983">If whittling down Habitica To-Dos we now use your low-water mark of the day ⇒ no surprise derails from adding new To-dos before deadline</li>
-<li value="1984">The road editor was rejecting roads if the final row had just goal value (or goal total) and rate specified (ie, no date). #bugfix</li>
-<li value="1985"><strong><a href="http://slackminder.com">Slackminder</a> has a built-in karmabot (do "/karma help")! And additional mini Habitica fix: no more delays in 1st fetch of day.</strong></li>
-<li value="1986">New road editor bug from when we spruced it up: it was duplicating the initial road row if you submitted multiple times in a row. #bugfix</li>
-<li value="1987">TagTime ping notifier in Slack bot ("/tagtime on") &amp; turns out when we thought we fixed <a href="https://twitter.com/beemuvi/status/685623126156152832">the deauth callback thing</a> we broke it instead</li>
-<li value="1988">If the author of an app you authorized to access your beeswax deletes it we now remove it from <a href="https://www.beeminder.com/settings/apps">beeminder.com/settings/apps</a> (& no erroring out)</li>
-</ol>
+<!-- HTML: 1918(iOS app 4.3) to 1927(Fixed an ugly) -->
+<!-- JSON: 1917(1/ iOS app) to 1926(Fixed an ugly) -->
 
+<div id="2016may"/><script>genbatch(2016,  5)</script>
+<div id="2016jun"/><script>genbatch(2016,  6)</script>
+<div id="2016jul"/><script>genbatch(2016,  7)</script>
 <div id="2016aug"/><script>genbatch(2016,  8)</script>
 <div id="2016sep"/><script>genbatch(2016,  9)</script>
 <div id="2016oct"/><script>genbatch(2016, 10)</script>
