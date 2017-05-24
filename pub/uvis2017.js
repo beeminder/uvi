@@ -835,7 +835,7 @@ var batch2017may = [{
 "u": "https://twitter.com/beemuvi/status/867120030101553153",
 "d": "2017-05-20",
 "t": "2017-05-23",
-"c": "Also some refactoring to make opinionated sorting simpler",
+"c": "Also some refactoring to make opinionated sorting simpler; also more opinionated, for instance sorting by losedate, then pledge, and then slug so that the goals with the highest pledges appear at the top of their losedate cohort",
 }, /* --------------------------------------------------------- end 2017may */ ]
 
 var staged = [{
