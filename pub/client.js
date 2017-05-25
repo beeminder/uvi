@@ -1,5 +1,17 @@
 'use strict';
+
 // --------------------------------- 80chars ---------------------------------->
+// Return the value for the given key in the querystring. Not currently used.
+function getQueryParam(key) {
+  var v = false;
+  window.location.search.substring(1).split("&").some(function(s) {
+    var pair = s.split("=");
+    if (pair[0] === key) { v = pair[1]; return true }
+    return false;
+  });
+  return v;
+}
+
 const TURL = 'https://twitter.com/';
 const BURL = TURL + 'beemuvi';
 const BICON = // tiny twitter birdie icon
@@ -8,6 +20,7 @@ const MONA = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', // month array
               'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
 const MONAF = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
                'August', 'September', 'October', 'November', 'December'];
+const NOTES = eval(getQueryParam('shownotes'));
 
 var n = 0; // global variable counting the UVIs as we generate them
 
@@ -55,37 +68,31 @@ function genhov(d, t, c) { // if just d's given let it be ambiguous
   return s
 }
 
-// Return the value for the given key in the querystring. Not currently used.
-function getQueryParam(key) {
-  window.location.search.substring(1).split("&").forEach(function(s) {
-    var pair = s.split("=");
-    if (pair[0] === key) { return pair[1] }
-  });
-  return false;
-}
-
 // Takes UVI object and generates the html version, with anchor link
 function render(uvi) {
-  var num     = uvi.n;        // n: the number of the UVI (can omit if prev+1)
-  var subl    = uvi.s;        // s: whether to put this UVI in a sublist
-  var feat    = uvi.f;        // f: whether to highlight the UVI (boolean)
-  var text    = uvi.x;        // x: the full text of the UVI
-  var twurl   = uvi.u;        // u: URL of the tweet
-  var date    = uvi.d;        // d: date the UVI was deployed
-  var twate   = uvi.t;        // t: date the UVI was tweeted
-  var comment = uvi.c;        // c: notes to selves / hovertext on link to tweet
+  var num   = uvi.n; // n: the number of the UVI (can omit if prev+1)
+  var subl  = uvi.s; // s: whether to put this UVI in a sublist
+  var feat  = uvi.f; // f: whether to highlight the UVI (boolean)
+  var text  = uvi.x; // x: the full text of the UVI
+  var twurl = uvi.u; // u: URL of the tweet
+  var date  = uvi.d; // d: date the UVI was deployed
+  var twate = uvi.t; // t: date the UVI was tweeted
+  var note  = uvi.c; // c: comment / note to selves / hovertext on link to tweet
   
   if (!text) { text = "ERROR: "+JSON.stringify(uvi) }
+  else { text = linkify(feat ? embolden(text) : text) }
+  if (!note) { note = '' }
   
-  return '<a name="'+num+'"></a>'           // anchor link for the UVI number
-    + linkify(feat ? embolden(text) : text) // full text w/ URLS linkified
-    + ' <a href="'+(twurl ? twurl : BURL)+'" title="' // start birdie icon
+  return '<a name="'+num+'"></a>'              // anchor link for the UVI number
+    + text                                     // full text w/ URLS linkified
+    + ' <a href="'+(twurl ? twurl : BURL)+'" title="'       // start birdie icon
     + (subl ? '(#'+num+') ' : '') 
-    + genhov(date, twate, comment)
+    + genhov(date, twate, note)
     + '">'
     + '<img src="'+BICON+'"/>'
-    + '</a>'                                          // end birdie icon
-    + ' <span class="note" style="display:none;">'+(comment || '')+'</span>'
+    + '</a>'                                                // end birdie icon
+    + ' <span class="note"'+(NOTES ? '' : ' style="display:none;"')+'>'
+    + linkify(note)+'</span>'
 }
 
 // Update the global UVI counter and make sure uvi.n is set 
@@ -133,25 +140,3 @@ function genbatch(year, mon) {
   d.insertAdjacentHTML('beforeend', '\n<ol>\n' + s + '</ol>\n')
 }
 // --------------------------------- 80chars ---------------------------------->
-
-
-// Generate html for the ordered list of UVIs. NOT USED.
-function gen(id, l) {
-  var d = document.getElementById(id);
-  // If we didn't need to deal with sublists we could just use this line:
-  // l.forEach(function(x) { d.insertAdjacentHTML('beforeend', genli(x)) })
-  for (var i = 0; i < l.length; i += 1) {
-    if (i < l.length-1 && l[i+1].s) { // a UVI with sub-UVIs!
-      numbum(l[i]);
-      // At this point, i points to the "header" UVI for the sublist
-      var chunk = '<li value="'+l[i].n+'">' + render(l[i]) + '<ol>\n';
-      i += 1; // Increment i to point to the first UVI in the sublist
-      for (; i < l.length && l[i].s; i += 1) { chunk += genli(l[i]) }
-      // At this point, i points to the first UVI after the sublist is done
-      i -= 1; // Scooch back to last UVI in sublist -- outer for-loop increments
-      chunk += '\n</ol></li>\n';
-      d.insertAdjacentHTML('beforeend', chunk);
-    }
-    else { d.insertAdjacentHTML('beforeend', genli(l[i])) }
-  }
-}

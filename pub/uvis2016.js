@@ -1690,7 +1690,7 @@ var batch2016sep = [
 "x": "Instead of just strongly suggesting it (via banner) we now force you to confirm your email before letting you give us your credit card",
 "u": "https://twitter.com/beemuvi/status/777766624296251396",
 "t": "2016-09-19 07:09:48 +0000",
-"c": "(auto-imported from Twitter as #2037)",
+"c": "(auto-imported from Twitter as #2037) Soon afterwards we broke this as part of the #redesign :(",
 }, /*************************************************************************/ {
 "n": 2039, 
 "x": "(1 of 3) More helpful unsubscribe link! Sends you to a page with a big red button, is clear about what happens if you press it, ...",
