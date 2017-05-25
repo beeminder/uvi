@@ -648,7 +648,7 @@ var batch2017apr = [{
 "x": "Prettified the rest of beeminder.com/changelog and made http://beeminder.com/changelog#latest link to the bottom of the page",
 "u": "https://twitter.com/beemuvi/status/857019759874850817",
 "d": "2017-04-25",
-"c": "Got rid of all the stuff dumped between <pre> tags",
+"c": "Got rid of all the stuff dumped between &lt;pre&gt; tags",
 }, { // ------------------------------------------------------------------------
 "n": 2264,
 "x": "Fixed a bug in the road editor that rejected the road if you got rid of everything except the start and end. #bugfix (<a href=\"https://trello.com/c/cnLvtiu5/818-road-editor-bug-removing-flat-spot\">Trello card</a>)",
@@ -835,18 +835,31 @@ var batch2017may = [{
 "u": "https://twitter.com/beemuvi/status/867120030101553153",
 "d": "2017-05-20",
 "t": "2017-05-23",
-"c": "Also some refactoring to make opinionated sorting simpler",
+"c": "Also some refactoring to make opinionated sorting simpler; also more opinionated, for instance sorting by losedate, then pledge, and then slug so that the goals with the highest pledges appear at the top of their losedate cohort",
+}, { // ------------------------------------------------------------------------
+"n": 2292,
+"x": "Stopped confusingly showing 2 buttons (one disabled) for each plan on http://beeminder.com/premium if you hadn't confirmed your email address",
+"u": "https://twitter.com/beemuvi/status/867516336355725312",
+"d": "2017-05-16",
+"t": "2017-05-24",
+"c": "Part of PayPal deploy. There was a disabled button that said 'add card' and then below it a second button that said 'resend confirmation email' so we got rid of the disabled one altogether [https://github.com/beeminder/beeminder/commit/d44b6229a98dfcb286dfeafbee5b41b6cedde63d]",
+}, { // ------------------------------------------------------------------------
+"n": 2293,
+"x": "We had a regression of <a href=\"#2038\">#2038</a> which is now fixed for real! #redesign-regression",
+"u": "https://twitter.com/beemuvi/status/867527470454407168",
+"d": "2017-05-16",
+"t": "2017-05-24",
+"c": "Part of PayPal deploy. We were disallowing it from the 'credible threat' banner, and were disallowing on premium page and on commitwall page, but not on the actual payments page itself. [original commit = https://github.com/beeminder/beeminder/commit/bbbaf6bf8e4e9ade59df70ef04cbc9e3e952c401 and new commit = https://github.com/beeminder/beeminder/commit/618787d83dcefb803a01af876ca7a41527411dc4]",
 }, /* --------------------------------------------------------- end 2017may */ ]
 
 var staged = [{
 }, /* ---------------------------------------------------------- end staged */ ]
+
 /*
 STAGED: ------10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140  
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 CANDIDATES: --10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140  
-* some Mysterious Mystery with javascript double submit button with road editor?
-* We seem to have had a regression from https://twitter.com/beemuvi/statuses/777766624296251396 which is now fixed for real? #redesign?
 * fixed some (most? many?) of the thing where flash banner shows up again after you leave current page and go to another page [maybe this mostly only happens for admins?]
 IDEAS: -------10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140  
 1. fix FAQ copy: "form below your graph"
