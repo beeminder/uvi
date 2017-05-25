@@ -850,6 +850,12 @@ var batch2017may = [{
 "d": "2017-05-16",
 "t": "2017-05-24",
 "c": "Part of PayPal deploy. We were disallowing it from the 'credible threat' banner, and were disallowing on premium page and on commitwall page, but not on the actual payments page itself. [original commit = https://github.com/beeminder/beeminder/commit/bbbaf6bf8e4e9ade59df70ef04cbc9e3e952c401 and new commit = https://github.com/beeminder/beeminder/commit/618787d83dcefb803a01af876ca7a41527411dc4]",
+}, { // ------------------------------------------------------------------------
+"n": 2294,
+"x": "We introduced a bug (part of upcoming PayPal integration) where we'd give a 500 error on your goal page if you had a pledge stepdown pending. #bugfix",
+"u": "https://twitter.com/beemuvi/status/867885487918329856",
+"t": "2017-05-25",
+"c": "Something with dollars() vs centsible() and only affected one person before we caught it."
 }, /* --------------------------------------------------------- end 2017may */ ]
 
 var staged = [{
@@ -857,7 +863,6 @@ var staged = [{
 
 /*
 STAGED: ------10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140  
-}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 CANDIDATES: --10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140  
 * fixed some (most? many?) of the thing where flash banner shows up again after you leave current page and go to another page [maybe this mostly only happens for admins?]
