@@ -172,7 +172,7 @@ There should be no gap when we're done!
 <!-- ...before you'd actually filled out the form -->
 <li>3 #mini UVIs: added hovertext for Buzz on front page, improved it for integrations, added username to subject of account confirmation emails</li>
 <li>Epson: Fixed date issues that could cause missed activities, time zone issue, &amp; aggregating multiple datapoints for a single day. #bugfix ×3</li>
-<!-- [epson dates: fixed an error with start-date in api call for steps endpoint, and to use date of last-fetched activity for the activities endpoint (runsense) -- so if you have a lag in updating your data we don't miss any activities.]
+<!-- [epson dates: fixed an error with start-date in api call for steps endpoint, and to use date of last-fetched activity for the activities endpoint (runsense) - so if you have a lag in updating your data we don't miss any activities.]
      [epson steps/sleep: aggregate the day's data into one datapoint, a la fitbit &amp; jawbone. (this one is questionable since you were the only one to ever encounter it, and i'd have done this from the beginning if i'd actually tested stuff in dev or read the docs more closely)]
      [epson times: use the user's timezone when giving clarifying time-of-day that the event started, or the datapoint was added.] -->
 <li><strong>Eek! We let you change the road dial on frozen goals, which usually led to insta-derail. Now: force you to use the restart button! #bugfix</strong></li>
@@ -301,7 +301,7 @@ There should be no gap when we're done!
 <li><strong>Official Misfit integration! Our blog post here: <a href="http://blog.beeminder.com/misfit">blog.beeminder.com/misfit</a> -- and look at us in their partner gallery: <a href="https://build.misfit.com/partners">build.misfit.com/partners</a></strong></li>
 <li><strong>Misfit integration features: beemind amount of sleep or steps. Option to import last month's worth of data when you create the goal.</strong></li>
 <li><strong>Finally, we use Misfit's push API so Beeminder updates your graph (roughly) as soon you sync your Shine/Flash</strong></li>
-<!-- [when/why do you have to refresh on Beeminder? -- you shouldn't in theory. though i don't know *how* quickly they push data out. There might be a delay? like IFTTT "automatically" syncs, but you still have to wait 16 minutes] -->
+<!-- [when/why do you have to refresh on Beeminder? you shouldn't in theory. though i don't know *how* quickly they push data out. There might be a delay? like IFTTT 'automatically' syncs, but you still have to wait 16 minutes] -->
 <li>Have lots of goals/datapoints? Should see up to 50% faster syncs in the Android app (was partly responsible for server issues last week too)</li>
 <!-- [api users controller is still one of the slowest transactions, but now the slow calls are ~600ms as opposed to ~3000ms] -->
 <li>Goals w/ deadline after midnight would wind up w/ datapoints off-by-one-day if you re-scaled them (bottom of advanced settings) #bugfix</li>
@@ -576,95 +576,8 @@ There should be no gap when we're done!
 <li>Similar bug with snoozing your deadline; now always respects the 6-hour window on an eep day. #bugfix</li>
 </ol>
 
-<h3>2016 January 1+</h3>
-
-<ol>
-<li value="1777">In goal default settings if you tried to submit the form with no leadtime or no alertstart or no deadline it would give a 500 error #bugfix</li>
-<li value="1778">Typo fix in hovertext in footer (thx Caitlin Patton!) &amp; <a href="http://beeminder.com/api">beeminder.com/api</a> documentation updates re: roadall not road_dial, &amp; daystamp</li>
-    <!-- [point to the replacement for road_dial in the road dial endpoint description, and mention that you can include daystamp when creating datapoints (but that timestamp overrides)] -->
-<li value="1779"><strong>Guess what we (@andrewpbrett to be specific) made? A Beeminder Slackbot! http://dreev.es/slackbot Has rough edges (feedback pls!) but works!</strong></li>
-<li value="1780">Bug in <a href="http://beeminder.com/featured">beeminder.com/featured</a> - would sometimes give 500 error &amp; other times not show actual 24 most recently updated graphs #bugfix</li>
-<li value="1781">Both recent data and fine print now say "public" or "private" w/ link to change it (<a href="http://forum.beeminder.com/t/feature-request-private-public-indicator/447">forum post</a>)</li>
-<li value="1782">Got rid of superfluous subheading for "Recent Data". Added hovertext for New Data and Advanced Entry tabs. HT Edith Beerdsen #mini ×2</li>
-<li value="1783">Informative error if goalslug taken etc (<a href="http://forum.beeminder.com/t/uninformative-error-message-when-creating-duplicate-goal/1712">forum post</a>) (another thing we broke in the great javascript refactor a year ago) #bugfix</li>
-<li value="1784">API #bugfix thanks to Malcolm Ocean &amp; <a href="complice.co">Complice</a>: Now the deauth callback actually works so 3rd-party apps know when user revokes auth</li>
-<li value="1785"><strong>IFTTT Improvements!</strong>
-<ul>
-<li>New Zeno Trigger lets Beeminder hound you via any medium connectable to IFTTT (flash your lights, Slack, you name it)</li>
-<li>"N safe days" IFTTT Trigger now lets you say "less than"/"equal to"/"greater than". Handy for, eg, rewarding yourself for more buffer.</li>
-<li>Don't laugh but we now have an @IFTTT "Charge me" Action in case you want to instantly sting yourself for going to a bar or something.</li>
-</ul></li>
-<li value="1788">In Withings goal creation: if out of freebees we were both not requiring a pledge and not redirecting to your goal after creation. #bugfix</li>
-<li value="1789">Some small improvements, #bugfix's, robustifications of the Beeminder Slackbot, like actually refreshing the graph when you add a datapoint</li>
-<li value="1790">And a big improvement to the Beeminder Slackbot: it now does zeno reminders! <a href="http://slackminder.com">slackminder.com</a> (Still pretty beta though)</li>
-<li value="1791">Removed deadline from terrifyingly advanced settings since it's now in reminders and fixed the link to deadline under the countdown #mini</li>
-<li value="1792">We now send all reminders as push notifications on iOS (not just eep-day zenos). Fixed brief bug where it would wrongly say "eep" on those.</li>
-<li value="1793">Made the deauth buttons on <a href="https://www.beeminder.com/settings/apps">beeminder.com/settings/apps</a> not squished together. Email/SMS bot no longer says "Emergency" in scarequotes. #mini ×2</li>
-<li value="1794">Fixed a case of ugly line wrapping in reminder settings; doc #bugfix with platonic goal types in hovertext in custom goal settings #mini ×2</li>
-<li value="1795">Didn't affect many people but fixed a bug that would leave the "goal is frozen" banner on goals even after updating payment info. #bugfix</li>
-<li value="1796"><strong>We now ask you for your current/recent weight (with option to auto-fetch it!) when creating Withings goals. So much nicer!</strong></li>
-<li value="1797">Getting explicit starting weight also fixes bad bug that often caused insta-derails when importing Withings data on goal creation. #bugfix</li>
-<li value="1798">Beeminder Slackbot: it was showing the least recent instead of most recent datapoints, and all instances would fail if one did. #bugfix ×2</li>
-<li value="1799">New box in the blog sidebar for newbees and overhauled the User's Guide for New Bees post, linked to therefrom. <a href="http://blog.beeminder.com">blog.beeminder.com</a></li>
-<li value="1800">The calendar date pickers for take-a-break let you pick the same end-date as start-date, then complained at you. Now it's less dumb. #mini</li>
-<li value="1801">If you had to re-auth Skritter (maybe some others) we were failing to remove error flag &amp; wouldn't automatically resume fetching #bugfix</li>
-    <!-- [were already doing this for some specific autod types, but i also made the code better so that this will just happen for new types we add, so also infra] -->
-<li value="1802">Fixed a bug on <a href="http://scribeminder.com">scribeminder.com</a> that prevented connecting to Beeminder if you weren't using HTTPS. Also, forced HTTPS. #bugfix</li>
-<li value="1803"><strong>Improvements to our Habitica integration for completed To-Dos!</strong>
-<ul><li>Every To-Do is its own datapoint with task text as the comment...</li>
-<li>Habitica "More Completed To-Dos" goals are now auto-summing instead of odometer-style</li>
-<li>No longer any hoops to jump through when deleting completed To-Dos in Habitica; Beeminder remembers everything!</li>
-<li>The Habitica integration has a 7-day window where changing To-Dos (ie uncompleting them) is reflected in Beeminder #statuteoflimitations</li>
-</ul></li>
-<li value="1807">Trivial yet maybe a big deal: Lots of confusion about initial flat spot (eg, bot doesn't bug you for ~9 days) so default now is no flat week</li>
-<li value="1808">Now two sections of statistics in the sidebar: for datapoints &amp; for the yellow brick road. Added 2 new data stats so far: mean &amp; mean delta.</li>
-<li value="1809">Mean and Mean Delta in data stats box now interpolate gaps in data, making Mean Delta comparable to daily rate of the yellow brick road</li>
-<li value="1810">Changed #statuteoflimitations for RescueTime integration from 2 and from Skritter from 4 to 7 days. Hooray for (a bit more) consistency!</li>
-<li value="1811">Moving deadline out of adv. settings caused bug that prevented graph from refreshing (eg updating watermark) when changing deadline. #bugfix</li>
-    <!-- [cf https://twitter.com/beemuvi/status/664593997491544064 &amp; https://twitter.com/beemuvi/status/688107679814778880] -->
-<li value="1812">Were unwittingly removing &amp; re-adding Garmin sleep datapoints every time; made IFTTT "Added Data" Trigger go batshit. #bugfix HT Markos Giannopoulos</li>
-    <!-- [every time we checked for data] -->
-<li value="1813">If you edited your sleep start time in the Misfit app we'd treat it as a new datapoint &amp; overcount your sleep! #bugfix HT Caitlin Patton</li>
-    <!-- [uniqifying based on start time not good] -->
-<li value="1814">Introduced a bug w/ zeno alerts: after sending the 1st one of the day were accidentally sending them every 5 minutes for some of you #bugfix</li>
-<li value="1815">We moved the settings for how often you get beemails from "Reminders/Defaults" to "Personal Info" (tweetstorm re: reminders settings soon!)</li>
-<li value="1816">Better composition of zeno alert. Gives number of days till deadline instead of day of week if &gt;7days away, like in graph watermark. #mini</li>
-    <!-- if tdiff < 24
-           text = "Eep! #{self.title} needs #{self.baremin} by #{countdown.strftime("%R")}."
-         elsif tdiff > 24*7
-           text = "#{self.title} needs #{self.baremin} in #{tdiff/24} days"
-         else
-           text = "#{self.title} needs #{self.baremin} by #{countdown.strftime("%a at %R")}."
-         end -->
-<li value="1817">Multiple improvements to the Beeminder Slack bot: choose for each goal whether the bot DMs you or posts to a channel or both.</li>
-<li value="1818">And a #bugfix with the Slack bot that made it (sometimes? briefly?) ignore those settings and DM you anyway.</li>
-    <!-- [stop spurious slack dms https://github.com/beeminder/beeminder/commit/2a154d523f2f22a7ccdaeffb2e1b20cd609220a3] -->
-<li value="1819"><strong>Big change to reminder settings: no more inheriting from defaults; instead there's a button (in advanced settings) to reset to defaults</strong></li>
-<li value="1820"><strong>Equally big change: choose any subset of ways to get reminded for each goal {email, sms, ios, android, slack DM, slack channel, webhook}</strong></li>
-<li value="1821"><strong>Did we mention you can get reminded via webhook now! Also documented as part of the <a href="http://beeminder.com/api">API</a>.</strong></li>
-<li value="1822"><strong>Nice compact table of all reminder settings for all goals. Handy for setting up <a href="http://blog.beeminder.com/waterfalls">waterfalls</a>.</strong></li>
-<li value="1823">Various #bugfix's &amp; tweaks along the way with all that, like breaking &amp; fixing updating of defaults from iOS, making the table pretty, ...</li>
-<li value="1824">... changes to the CSS in settings, button copy ("Save Goal Specific Settings"), tooltips, better error-checking w/ webhooks. #mini ×6+</li>
-<li value="1825">And one more cheap one: We now ellipsify long goal slugs so they don't mess up the nice compact table of reminder settings. #mini</li>
-<li value="1826">One last small one that we just deployed: a horizontal line in the compact table of reminder settings demarcating the backburner goals</li>
-    <!-- [can't remember why i made a note about "For Do Less goals this winds up using n * daily rate to proxy..."] -->
-<li value="1827"><strong>Our RescueTime integration is markedly slicker: no need to paste your API key to authorize Beeminder to access your RescueTime data</strong></li>
-<li value="1828">Other improvements to RescueTime integration: check do-more by default (which fixed a related bug) &amp; no week of safety buffer by default</li>
-<li value="1829">One more RescueTime #bugfix: the new hotness broke data fetching for newly created goals for a few days (emailed everyone affected)</li>
-<li value="1830">How long should something be broke before fixing counts as UVI? Staggering amount broken+fixed in last 24hours: IFTTT triggers, SMS bot, ...</li>
-<li value="1831">... html emails, many autodata integrations, clobbered settings, UI icons, google oauth, passwd resets. Upgrades are hard. Cc <a href="http://twitter.com/beemstat">@beemstat</a></li>
-<li value="1832">Changing rate units works again. And fixed last bug w/ IFTTT triggers. We think that's everything from the hairy server upgrade!  #bugfix ×2</li>
-<li value="1833"><strong>Finally fixed pagination on the All Data page. Embarrassing how long that was all glitchy! #bugfix &amp; finally a net UVI from the big upgrade</strong></li>
-<li value="1834">Another thing we broke with the upgrade: Android app stopped automatically staying in sync with the website. Now fixed. #bugfix</li>
-<li value="1835">Hopefully last UVI for #bugfix's from the upgrade: dial-it-in position, checkmarks for data entered today, saving changes in reminders table</li>
-    <!-- [slightly different syntax for fields_for: fixes bug with fwomp page not saving individual goal changes - the goal name wasn't getting included in the fieldset]
-      [fix dial-it-in position? https://github.com/beeminder/beeminder/commit/5861831958f0e88e880113f16938739af8ab68cd]
-      [bugfix: checkmarks for "data entered today" not showing up in the gallery (or persisting in the dashboard)] -->
-</ol>
-
-<!-- JSON: 1835(We rearranged) - 1867(Edited money) -->
-<!-- HTML: 1836(We rearranged) - 1868(Edited money) -->
-
+<div id="2016jan"/><script>genbatch(2016,  1)</script>
+<div id="2016feb"/><script>genbatch(2016,  2)</script>
 <div id="2016mar"/><script>genbatch(2016,  3)</script>
 <div id="2016apr"/><script>genbatch(2016,  4)</script>
 <div id="2016may"/><script>genbatch(2016,  5)</script>

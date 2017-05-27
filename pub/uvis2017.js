@@ -856,6 +856,20 @@ var batch2017may = [{
 "u": "https://twitter.com/beemuvi/status/867885487918329856",
 "t": "2017-05-25",
 "c": "Something with dollars() vs centsible() and only affected one person before we caught it."
+}, { // ------------------------------------------------------------------------
+"n": 2295,
+"x": "We now automatically email you if Beeminder loses its authorization to fetch your data from an autodata integration",
+"u": "https://twitter.com/beemuvi/status/868245706133221376",
+"d": "2017-05-17",
+"t": "2017-05-26",
+"c": "https://trello.com/c/OKjDZJ3Q/811-email-user-when-a-service-authorization-expires https://github.com/beeminder/beeminder/commit/3688bcc826cb679cb4049e48174828db362e06de",
+}, { // ------------------------------------------------------------------------
+"n": 2296,
+"x": "Change in the Habitica API that we now handle for when a user's API key changes (or user's account deleted). Failed silently before! #bugfix",
+"u": "https://twitter.com/beemuvi/status/868245842485891072",
+"d": "2017-05-23",
+"t": "2017-05-26",
+"c": "https://github.com/beeminder/beeminder/commit/26adb8cde4fd61b70a01f63eb30887b8bf740c97",
 }, /* --------------------------------------------------------- end 2017may */ ]
 
 var staged = [{
@@ -863,6 +877,8 @@ var staged = [{
 
 /*
 STAGED: ------10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140  
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 CANDIDATES: --10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140  
 * fixed some (most? many?) of the thing where flash banner shows up again after you leave current page and go to another page [maybe this mostly only happens for admins?]

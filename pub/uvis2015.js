@@ -2638,3 +2638,18 @@ var batch2015dec = [
 "c": "(auto-imported from Twitter) NUM?: numbered 1778 in non-Twitter version",
 }, /* --------------------------------------------------------- end 2015dec */ ]
 
+/* VIM MACROS FOR MERGING W/ TWITTER EXPORT 
+Dump macro in register x to current line: "xp
+Put current line back into register x:    "xyy
+(h) Turn line of html to json:
+0dt"xf"x:.,.s/"/\\"/ge0i"n": 	f>xi, "x": "	$xxxxxa",	0j
+(m) Move line of json to matching uvi assuming unique snippet found:
+jmzkddnkkpf,lli	jdd'z0
+*/
+
+/*
+<!-- JSON: 1776(In goal default) - 1805(7-day window) -->
+<!-- HTML: 1777(In goal default) - 1806(7-day window) -->
+*/
+
+// TODO: bookmark for where we're at with merging. all past this point good.
