@@ -544,38 +544,6 @@ There should be no gap when we're done!
 <h3>2015 December</h3>
 
 <ol>
-<li value="1754">We made a new kind of coupon code for Cyber Monday where you get the 2nd period free. <a href="http://blog.beeminder.com/cybermonday">blog.beeminder.com/cybermonday</a></li>
-<li value="1755">Made it way more obvious when you're using a coupon for a premium plan, by highlighting the coupon description in an green alert box</li>
-<li value="1756">Now give nice explanatory error msg instead of a blank stare if you give a <a href="http://rescuetime.com">RescueTime</a> "key code" instead of full key when creating a goal</li>
-<li value="1757">Fixed the "next check is at" in zeno emails -- since putting it back recently we were giving it in server time, not user time (facepalm) #bugfix</li>
-<li value="1758">Fixed the "hey you just snoozed your deadline" email that we send out if you move your deadline further away on an eep day (facepalm again) #bugfix</li>
-    <!-- [template was missing due to refactoring facepalm] -->
-<li value="1759">Fixed a bug affecting do-less goals with goal total &amp; rate specified that made us throw an ugly 500 error if you tried to ratchet #bugfix</li>
-    <!-- [we were looking for future rows by iterating through comparing current day with the time in the road row, so blank final date was causing a nil comparison error] -->
-<li value="1760">Introduced a bug where, for rare email clients, we'd re-add your "Recent datapoints" as new data when you replied to the email bot. #bugfix</li>
-<li value="1761">3rd party app devs can send users to specific URLs on beeminder.com w/out the user being intercepted by a login screen: <a href="https://www.beeminder.com/api#redirectuser">beeminder.com/api#redirectuser</a></li>
-    <!-- [if user/show gets redirect param, redirect to url: app/controllers/api/v1/users_controller.rb] -->
-<li value="1762">Other updates to our API docs (<a href="http://beeminder.com/api">beeminder.com/api</a>): not calling IFTTT "about to be launched" and purging the unused "sendmail" param</li>
-<li value="1763">No longer give permissions error (for users w/out premium plan) when slug is included but unchanged in API goal update. #bugfix HT <a href="http://twitter.com/diwajd">@diwajd</a></li>
-<li value="1764">We were accidentally still sending iOS people 9am notifications regardless of (and in addition to) their zeno settings. #bugfix</li>
-<li value="1765">Ratcheting do-less goals would no-op on the 1st day of the goal. #bugfix</li>
-    <!-- [an error w/ operator precedence, so that if the very first section of the road (the stuff "before today") was blank, then we'd do nothing] -->
-<li value="1766">Error message for "username too long" now tells you what the limit is (it's 20). #mini HT Alex Guzey</li>
-<li value="1767">Changed the text the archive countdown shows after it hits zero. Now gives an indication that it might (annoyingly) take a bit to kick in.</li>
-<li value="1768">We broke (2 months ago as part of javascript graphs) and then fixed the Quick Add feature that updates "+N Due by Y" text in gallery #bugfix</li>
-    <!-- [removed a js date helper lib that was conflicting with mpld3, not noticing that we were in fact using some helper functions from it. so i added a getDayName &amp; getMonthName helper fn to our js file http://forum.beeminder.com/t/quick-add-doesnt-update-the-text-part/735] -->
-<li value="1769">Uncheck "start flat" when restarting ⇒ road dial appears like it's supposed to (broke this months ago :/ "start flat" was no-op) #bugfix</li>
-    <!-- [we were just giving an infinite flat road despite saying no to 'starting flat'] -->
-<li value="1770">Remember <a href="https://twitter.com/beemuvi/status/511667442121076736">when we fixed a trailing whitespace bug in sign-up</a>a? Well the other day <a href="http://twitter.com/faireness" title="Yes, the founders' 8-year-old daughter">@faireness</a> noticed we still werent stripping whitespace when you actually log in :/ #bugfix</li>
-<li value="1771">We now remember who IFTTT recipes run for so if there's an auth problem later we can email you to tell you the recipe stopped working</li>
-    <!-- [trigger_identity] -->
-<li value="1772"><strong>Embarrassing #bugfix in deadman switch (stops charging you if go inactive): don't count activity on archived goals from autodata like Zapier</strong></li>
-<li value="1773">Fixed a mangled error message (and made it spell things out better) about trying to move your deadline earlier on a beemergency day. #mini</li>
-    <!-- ["Deadline cannot be moved into the past, since this goal is in the red currently, and that would derail you. Please finish your task for the day first."] -->
-<li value="1774">If you de-authed Android/iOS apps we weren't cleaning up after ourselves and failed horribly/invisibly if you later tried to re-add. #bugfix</li>
-    <!-- [remove cached access token for beedroid/ios if auth is revoked. e.g. i removed beedroid, and then submitted datapoints.. it was infinite infinibee, with nice helpful red state letting me know it was still trying to send, but never succeeds] -->
-<li value="1775">Can now always move your deadline earlier on an eep day as long as still before the deadline (timezone issue; only failed sometimes) #bugfix</li>
-<li value="1776">Similar bug with snoozing your deadline; now always respects the 6-hour window on an eep day. #bugfix</li>
 </ol>
 
 <div id="2016jan"/><script>genbatch(2016,  1)</script>
