@@ -57,6 +57,7 @@ function embolden(s) {
 
 // Helper to generate the hovertext given deploy date d, tweet date t, comment c
 function genhov(d, t, c) { // if just d's given let it be ambiguous 
+  c = c.replace(/\"/g, '&quot;');
   var s;
   if      (!d && !t) { s = '' }
   else if (!d && t)  { s = 'Tweeted '+t }
