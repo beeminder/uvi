@@ -877,6 +877,13 @@ var staged = [{
 
 /*
 STAGED: ------10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140  
+paypal deploy caused a bug where your goal pages would 500 after adding your credit card (sometimes)
+[it only happened sometimes, because it was a timing issue:
+ 1) add credit card to stripe
+ 2) queue up pledges job
+ 3) save user
+but if 2 got executed immediately, before the user got saved, then error. otherwise no error]
+a case of failing loudly being very helpful, because it was a pretty nasty bug, but we caught it right away for the handful of people who encountered it
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------

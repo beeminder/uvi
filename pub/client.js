@@ -118,7 +118,6 @@ function genli(uvi) {
 
 // Generate html for a batch of UVIs including the year/month header
 function genbatch(year, mon) {
-  //console.log('Generating html for '+year+'-'+mon+' batch');
   var d = document.getElementById(year + MONA[mon-1]);
   var l = eval("batch" + year + MONA[mon-1]);
   d.insertAdjacentHTML('beforeend', '<h3>'+year+' '+MONAF[mon-1]+'</h3>');
