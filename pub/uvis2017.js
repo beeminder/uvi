@@ -870,6 +870,12 @@ var batch2017may = [{
 "d": "2017-05-23",
 "t": "2017-05-26",
 "c": "https://github.com/beeminder/beeminder/commit/26adb8cde4fd61b70a01f63eb30887b8bf740c97",
+}, { // ------------------------------------------------------------------------
+"n": 2297,
+"x": "Fixed bug that (rarely but nastily) caused a 500 error on goal pages after adding a credit card. #bugfix",
+"u": "https://twitter.com/beemuvi/status/869335845521637377",
+"t": "2017-05-29",
+"c": "Part of PayPal deploy. This was a timing issue: 1) add credit card to stripe; 2) queue up pledges job; 3) save user. But if 2 got executed immediately, before the user got saved, then error. Otherwise no error. A case of failing loudly being very helpful, because it was a pretty nasty bug, but we caught it right away for the handful of people who encountered it.",
 }, /* --------------------------------------------------------- end 2017may */ ]
 
 var staged = [{
@@ -877,13 +883,6 @@ var staged = [{
 
 /*
 STAGED: ------10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140  
-paypal deploy caused a bug where your goal pages would 500 after adding your credit card (sometimes)
-[it only happened sometimes, because it was a timing issue:
- 1) add credit card to stripe
- 2) queue up pledges job
- 3) save user
-but if 2 got executed immediately, before the user got saved, then error. otherwise no error]
-a case of failing loudly being very helpful, because it was a pretty nasty bug, but we caught it right away for the handful of people who encountered it
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
