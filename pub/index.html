@@ -495,56 +495,10 @@ There should be no gap when we're done!
 <li value="1716">Broke Skritter goal creation: Skritterland requires 4am end-of-day which didn't play nice w/ new default deadlines. #bugfix</li>
 <li value="1717">Fixed a rare problem with adding duplicate datapoints submitted by email (related to email retries). Now check message ID to de-dup. #bugfix</li>
 <li value="1718">Patch for IFTTT add datapoint TOD (time-of-day) macro to turn 12-hour time of day strings to 24-hour (like add 12 if it's PM... and &lt;12)</li>
-<li value="1719">Renamed defaults tab to 'Reminders/Defaults', rearranged/edited "new goal" email copy, tooltip for "-1" in indiv. alert settings #mini ×3</li>
-    <!-- [tooltip was already done in the default settings section] -->
-<li value="1720">Added leadtime and alertstart to the API -- <a href="http://beeminder.com/api">beeminder.com/api</a> (Thx Andy Brett; &amp; this portends big reminders improvement on iOS!)</li>
-<li value="1721">Site no longer falls on its face if you give a non-integer (or nil) for 'days lead time' in goal alert settings. #bugfix (from a while ago)</li>
-<li value="1722">We were sometimes/rarely double counting Sleep as Android time; now disallowing records on same day with same start time. #bugfix</li>
-<li value="1723">Fixed a sort of off-by-one problem w/ "days lead time" for do-less goals. Zero days lead time means zeno alerts start when you're orange.</li>
-    <!-- [and leadtime=-1 turns off zeno polling, just like for do-more] -->
-<li value="1724">Changing goal units made Runkeeper goals stop updating. That was super dumb. But we fixed it! Update gunits to heart's delight. #bugfix</li>
-<li value="1725">Were silently failing to do anything for GmailZero if you made the query blank; now default to the standard "in:inbox AND is:read" #bugfix</li>
-<li value="1726">Were failing to regenerate graphs and tell the Android app about changes to deadlines immediately which got goals into weird states. #bugfix</li>
-    <!-- [also we now regenerate graphs for all goals that use defaults when the default deadline changes, which could count as another UVI] -->
-<li value="1727">After upgrading from literally the oldest documented version of the Stripe API (from 2011) we broke &amp; then fixed our payment UI. #bugfix</li>
-<li value="1728"><strong>If you had multiple IFTTT recipes triggering for the same Add Datapoint event, only one would actually trigger. #bugfix See <a href="http://forum.beeminder.com/t/ifttt-channel-is-live/765/34">forum discussion</a></strong></li>
-<li value="1729"><strong>New IFTTT macro for counting words in Trigger Ingredients: WORDCOUNT[] See <a href="http://forum.beeminder.com/t/ifttt-macros/804">forum discussion</a></strong></li>
-<li value="1730">Tweaks to bot emails (pre-vs-ul, link, next check), CSS in blog header (HT Malcolm Ocean), alignment w/ Misfit on <a href="https://www.beeminder.com/services">beeminder.com/services</a></li>
-    <!-- 1. Tweaks to bot emails (pre instead of ul, changed link text and hovertext for graph URL)
-         2. Fixed CSS in blog header (HT malcolm)
-         3. Fixed alignment on https://www.beeminder.com/services (misfit was too big), Fixed CSS -->
-<li value="1731"><strong>By popular demand, a similar IFTTT macro, CHARCOUNT[], for Japanese and Chinese language learners</strong></li>
-<li value="1732">Another improvement to the API that was needed for the iOS app: can now query and set use_defaults (grep for it at <a href="http://beeminder.com/api">beeminder.com/api</a>)</li>
-<li value="1733">We were originally regenerating all your graphs that use defaults when you changed anything; now doing that smarter / more conservatively</li>
-    <!-- [only rebrains goals if the deadline was updated (otherwise no need)] -->
-<li value="1734">New aggday method "nonzero" for plotting a 1 only if there exist any non-zero datapoints. <a href="http://forum.beeminder.com/t/documentation-of-aggregation-methods-would-be-nice/549/4">documentation of aggday methods</a></li>
-<li value="1735">Creating a goal via API w/ coordinates of road start specified (1st row of roadall) works as expected now. HT Malcolm Ocean and <a href="http://complice.co">Complice</a></li>
-    <!-- [it returns the road you specified immediately in the API response instead of having it as [null,null,null] until the goal is beebrained] -->
-<li value="1736"><strong>Beeminder Android app version 2.5! Checkmarks on widgets showing data already entered for the day, visual indicator for unsync'd data, ...</strong></li>
-<li value="1737"><strong>Beedroid 2/9: Now locally buffers datapoint deletions and updates in case you have a flaky connection. And fixes related to stale data.</strong></li>
-<li value="1738">Beedroid 3/9: The Beeminder icon on the urgent goals widget launches the app. (This is from version 2.4.3)</li>
-<li value="1739">Beedroid 4/9: If you have tons of data we now only load some of it (performance/reliability reasons), link you to website for the rest</li>
-<li value="1740">Beedroid 5/9: Fixes with eep day notifications, Tasker, and TagTime notifications, decreased unnecessary server hits on syncing</li>
-<li value="1741">Beedroid 6/9: Bugfix with stale goals hanging around, and fixed various rare(ish?) crashes</li>
-<li value="1742">Beedroid 7/9: Bugfixes with notifications near goal date, proper updates of existing notifications. (This is from version 2.4.2)</li>
-<li value="1743"><strong>Beedroid 8/9: Fixed a race condition with summary widget, weaselproofing of autodata goal (no more loophole of manual editing in app)</strong></li>
-<li value="1744">Beedroid 9/9: Eliminated road dial (kind of a negative UVI but we crammed a gazillion real ones in these 9 tweets so...)</li>
-<li value="1745">Clarifying text on tabs for dialing/ratcheting road; also a warning about ratcheting to an eep day if you derailed yesterday. #mini ×2</li>
-<li value="1746"><strong>Ratcheting for do-less goals (including autoratcheting for premium folks) now work in terms of goal units, not days. HT <a href="http://twitter.com/chipmanaged">@chipmanaged</a></strong></li>
-    <!-- [Separate UVI to say how that also fixes the nasty bug with do-less autoratcheting? no. Tweaks to the UI to accommodate this? nah.] -->
-<li value="1747"><strong>Beeminder iOS app version 4.2! Graphs now appear in Today widget along with bare min, and several other things in the next 6 tweets... (1/7)</strong></li>
-<li value="1748"><strong>BeemiOS does zeno polling! Adjust individual and default notification settings in-app (known bug: can't change deadline on an eep day) (2/7)</strong></li>
-<li value="1749">BeemiOS: When changing reminder settings in the app you're changing them for website too; was broken at first but now works. #bugfix (3/7)</li>
-<li value="1750"><strong>BeemiOS: The reload button on the goal screen triggers a refresh of autodata. (4/7)</strong></li>
-<li value="1751">BeemiOS: Fixed the dreaded spinner bug. And Arabic numerals (the real ones, not the western-derived ones) were broken. #bugfix ×2 (5/7)</li>
-<li value="1752"><strong>BeemiOS: Added a ":" button to allow for data input in HH:MM format (6/7)</strong></li>
-<li value="1753">BeemiOS: Data entry now defaults to the previous day if it's after midnight but before the deadline. (7/7)</li>
 </ol>
 
-<h3>2015 December</h3>
-
-<ol>
-</ol>
+<div id="2015nov"/><script>genbatch(2015, 11)</script>
+<div id="2015dec"/><script>genbatch(2015, 12)</script>
 
 <div id="2016jan"/><script>genbatch(2016,  1)</script>
 <div id="2016feb"/><script>genbatch(2016,  2)</script>

@@ -1,6 +1,3 @@
-/*
-*/
-
 var batch2015jan = [
 {
 "n": 1411,
@@ -1873,219 +1870,6 @@ var batch2015oct = [
 "c": "[twttr#1717]",
 }, /*************************************************************************/ ]
 
-var batch2015nov = [
-{
-"n": 1718,
-"x": "Renamed defaults tab to 'Reminders/Defaults', rearranged/edited \"new goal\" email copy, tooltip for \"-1\" in indiv. alert settings #mini ×3",
-"u": "https://twitter.com/beemuvi/status/662058385496391680",
-"t": "2015-11-05 00:06:34 +0000",
-"c": "[twttr#1718]",
-}, /*************************************************************************/ {
-"n": 1719,
-"x": "Added leadtime and alertstart to the API -- <a href=\"http://beeminder.com/api\">beeminder.com/api</a> (Thx <a href=\"https://twitter.com/andrewpbrett\">@andrewpbrett</a>; &amp; this portends big reminders improvement on iOS!)",
-"u": "https://twitter.com/beemuvi/status/662431715596480513",
-"t": "2015-11-06 00:50:03 +0000",
-"c": "[twttr#1719]",
-}, /*************************************************************************/ {
-"n": 1720,
-"x": "Site no longer falls on its face if you give a non-integer (or nil) for 'days lead time' in goal alert settings. #bugfix (from a while ago)",
-"u": "https://twitter.com/beemuvi/status/662763714001526784",
-"t": "2015-11-06 22:49:17 +0000",
-"c": "[twttr#1720]",
-}, /*************************************************************************/ {
-"n": 1721,
-"x": "We were sometimes/rarely double counting Sleep as Android time; now disallowing records on same day with same start time. #bugfix",
-"u": "https://twitter.com/beemuvi/status/663148628115001344",
-"t": "2015-11-08 00:18:48 +0000",
-"c": "[twttr#1721]",
-}, /*************************************************************************/ {
-"n": 1722,
-"x": "Fixed a sort of off-by-one problem w/ \"days lead time\" for do-less goals. Zero days lead time means zeno alerts start when you're orange.",
-"u": "https://twitter.com/beemuvi/status/663503159382269953",
-"t": "2015-11-08 23:47:35 +0000",
-"c": "[twttr#1722]",
-}, /*************************************************************************/ {
-"n": 1723,
-"x": "Changing goal units made <a href=\"https://twitter.com/Runkeeper\">@Runkeeper</a> goals stop updating. That was super dumb. But we fixed it! Update gunits to heart's delight. #bugfix",
-"u": "https://twitter.com/beemuvi/status/663881644114231296",
-"t": "2015-11-10 00:51:32 +0000",
-"c": "[twttr#1723]",
-}, /*************************************************************************/ {
-"n": 1724,
-"x": "Were silently failing to do anything for GmailZero if you made the query blank; now default to the standard \"in:inbox AND is:read\" #bugfix",
-"u": "https://twitter.com/beemuvi/status/663970755533647872",
-"t": "2015-11-10 06:45:38 +0000",
-"c": "[twttr#1724]",
-}, /*************************************************************************/ {
-"n": 1725,
-"x": "Were failing to regenerate graphs and tell the Android app about changes to deadlines immediately which got goals into weird states. #bugfix",
-"u": "https://twitter.com/beemuvi/status/664593997491544064",
-"t": "2015-11-12 00:02:11 +0000",
-"c": "[twttr#1725]",
-}, /*************************************************************************/ {
-"n": 1726,
-"x": "After upgrading from literally the oldest documented version of the <a href=\"https://twitter.com/stripe\">@stripe</a> API (from 2011) we broke &amp; then fixed our payment UI. #bugfix",
-"u": "https://twitter.com/beemuvi/status/664594325884522497",
-"t": "2015-11-12 00:03:29 +0000",
-"c": "[twttr#1726]",
-}, /*************************************************************************/ {
-"n": 1727,
-"x": "If you had multiple IFTTT recipes triggering for the same Add Datapoint event, only 1 would actually trigger #bugfix <a href=\"http://forum.beeminder.com/t/ifttt-channel-is-live/765/34\">forum.beeminder.com/t/ifttt-channel-is-live/765/34</a>",
-"u": "https://twitter.com/beemuvi/status/665330796161462272",
-"t": "2015-11-14 00:49:57 +0000",
-"c": "[twttr#1727]",
-}, /*************************************************************************/ {
-"n": 1728,
-"x": "New <a href=\"https://twitter.com/IFTTT\">@IFTTT</a> macro for counting words in Trigger Ingredients: WORDCOUNT[] <a href=\"http://forum.beeminder.com/t/ifttt-macros/804\">forum.beeminder.com/t/ifttt-macros/804</a>",
-"u": "https://twitter.com/beemuvi/status/665665463355969536",
-"t": "2015-11-14 22:59:48 +0000",
-"c": "[twttr#1728]",
-}, /*************************************************************************/ {
-"n": 1729,
-"x": "Tweaks to bot emails (pre-vs-ul, link, next check), CSS in blog header (HT <a href=\"https://twitter.com/Malcolm_Ocean\">@Malcolm_Ocean</a>), alignment w/ Misfit on <a href=\"https://www.beeminder.com/services\">beeminder.com/services</a>",
-"u": "https://twitter.com/beemuvi/status/666055004344578048",
-"t": "2015-11-16 00:47:42 +0000",
-"c": "[twttr#1729]",
-}, /*************************************************************************/ {
-"n": 1730,
-"x": "By popular demand, a similar <a href=\"https://twitter.com/IFTTT\">@IFTTT</a> macro, CHARCOUNT[], for Japanese and Chinese language learners",
-"u": "https://twitter.com/beemuvi/status/666416814637780996",
-"t": "2015-11-17 00:45:24 +0000",
-"c": "[twttr#1730]",
-}, /*************************************************************************/ {
-"n": 1731,
-"x": "Another improvement to the API that was needed for the iOS app: can now query and set use_defaults (grep for it at <a href=\"http://beeminder.com/api\">beeminder.com/api</a>)",
-"u": "https://twitter.com/beemuvi/status/666767536692695040",
-"t": "2015-11-17 23:59:03 +0000",
-"c": "[twttr#1731]",
-}, /*************************************************************************/ {
-"n": 1732,
-"x": "We were originally regenerating all your graphs that use defaults when you changed anything; now doing that smarter / more conservatively",
-"u": "https://twitter.com/beemuvi/status/666768244749918208",
-"t": "2015-11-18 00:01:52 +0000",
-"c": "[twttr#1732]",
-}, /*************************************************************************/ {
-"n": 1733,
-"x": "New aggday method \"nonzero\" for plotting a 1 only if there exist any non-zero datapoints <a href=\"http://forum.beeminder.com/t/documentation-of-aggregation-methods-would-be-nice/549/4\">forum.beeminder.com/t/documentation-of-aggregation-methods-would-be-nice/549/4</a>",
-"u": "https://twitter.com/beemuvi/status/667499535933964288",
-"t": "2015-11-20 00:27:45 +0000",
-"c": "[twttr#1733]",
-}, /*************************************************************************/ {
-"n": 1734,
-"x": "Creating a goal via API w/ coordinates of road start specified (1st row of roadall) works as expected now. HT <a href=\"https://twitter.com/Malcolm_Ocean\">@Malcolm_Ocean</a> <a href=\"https://twitter.com/CompliceGoals\">@CompliceGoals</a>",
-"u": "https://twitter.com/beemuvi/status/667851359660601345",
-"t": "2015-11-20 23:45:46 +0000",
-"c": "[twttr#1734]",
-}, /*************************************************************************/ {
-"n": 1735,
-"x": "Beeminder Android app version 2.5! Checkmarks on widgets showing data already entered for the day, visual indicator for unsync'd data, ...",
-"u": "https://twitter.com/beemuvi/status/668221790544523264",
-"t": "2015-11-22 00:17:44 +0000",
-"c": "[twttr#1735]",
-}, /*************************************************************************/ {
-"n": 1736,
-"x": "Beedroid 2/9: Now locally buffers datapoint deletions and updates in case you have a flaky connection. And fixes related to stale data.",
-"u": "https://twitter.com/beemuvi/status/668221910417731584",
-"t": "2015-11-22 00:18:13 +0000",
-"c": "[twttr#1736]",
-}, /*************************************************************************/ {
-"n": 1737,
-"x": "Beedroid 3/9: The Beeminder icon on the urgent goals widget launches the app. (This is from version 2.4.3)",
-"u": "https://twitter.com/beemuvi/status/668221945045889024",
-"t": "2015-11-22 00:18:21 +0000",
-"c": "[twttr#1737]",
-}, /*************************************************************************/ {
-"n": 1738,
-"x": "Beedroid 4/9: If you have tons of data we now only load some of it (performance/reliability reasons), link you to website for the rest",
-"u": "https://twitter.com/beemuvi/status/668221989702623232",
-"t": "2015-11-22 00:18:31 +0000",
-"c": "[twttr#1738]",
-}, /*************************************************************************/ {
-"n": 1739,
-"x": "Beedroid 5/9: Fixes with eep day notifications, Tasker, and TagTime notifications, decreased unnecessary server hits on syncing",
-"u": "https://twitter.com/beemuvi/status/668222028520919040",
-"t": "2015-11-22 00:18:41 +0000",
-"c": "[twttr#1739]",
-}, /*************************************************************************/ {
-"n": 1740,
-"x": "Beedroid 6/9: Bugfix with stale goals hanging around, and fixed various rare(ish?) crashes",
-"u": "https://twitter.com/beemuvi/status/668222068098383872",
-"t": "2015-11-22 00:18:50 +0000",
-"c": "[twttr#1740]",
-}, /*************************************************************************/ {
-"n": 1741,
-"x": "Beedroid 7/9: Bugfixes with notifications near goal date, proper updates of existing notifications. (This is from version 2.4.2)",
-"u": "https://twitter.com/beemuvi/status/668222100415471617",
-"t": "2015-11-22 00:18:58 +0000",
-"c": "[twttr#1741]",
-}, /*************************************************************************/ {
-"n": 1742,
-"x": "Beedroid 8/9: Fixed a race condition with summary widget, weaselproofing of autodata goal (no more loophole of manual editing in app)",
-"u": "https://twitter.com/beemuvi/status/668222140856991744",
-"t": "2015-11-22 00:19:08 +0000",
-"c": "[twttr#1742]",
-}, /*************************************************************************/ {
-"n": 1743,
-"x": "Beedroid 9/9: Eliminated road dial (kind of a negative UVI but we crammed a gazillion real ones in these 9 tweets so...)",
-"u": "https://twitter.com/beemuvi/status/668222186734223360",
-"t": "2015-11-22 00:19:18 +0000",
-"c": "[twttr#1743]",
-}, /*************************************************************************/ {
-"n": 1744,
-"x": "Clarifying text on tabs for dialing/ratcheting road; also a warning about ratcheting to an eep day if you derailed yesterday. #mini ×2",
-"u": "https://twitter.com/beemuvi/status/669029160497451009",
-"t": "2015-11-24 05:45:56 +0000",
-"c": "[twttr#1744]",
-}, /*************************************************************************/ {
-"n": 1745,
-"x": "Ratcheting for do-less goals (including autoratcheting for premium folks) now work in terms of goal units, not days. HT <a href=\"https://twitter.com/chipmanaged\">@chipmanaged</a>",
-"u": "https://twitter.com/beemuvi/status/669969979228291072",
-"t": "2015-11-26 20:04:25 +0000",
-"c": "[twttr#1745]",
-}, /*************************************************************************/ {
-"n": 1746,
-"x": "Beeminder iOS app version 4.2! Graphs now appear in Today widget along with bare min, and several other things in the next 6 tweets... (1/7)",
-"u": "https://twitter.com/beemuvi/status/671405966919901187",
-"t": "2015-11-30 19:10:31 +0000",
-"c": "[twttr#1746]",
-}, /*************************************************************************/ {
-"n": 1747,
-"x": "BeemiOS does zeno polling! Adjust individual and default notification settings in-app (known bug: can't change deadline on an eep day) (2/7)",
-"u": "https://twitter.com/beemuvi/status/671406023337484288",
-"t": "2015-11-30 19:10:44 +0000",
-"c": "[twttr#1747]",
-}, /*************************************************************************/ {
-"n": 1748,
-"x": "BeemiOS: When changing reminder settings in the app you're changing them for website too; was broken at first but now works. #bugfix (3/7)",
-"u": "https://twitter.com/beemuvi/status/671406104837021696",
-"t": "2015-11-30 19:11:04 +0000",
-"c": "[twttr#1748]",
-}, /*************************************************************************/ {
-"n": 1749,
-"x": "BeemiOS: The reload button on the goal screen triggers a refresh of autodata. (4/7)",
-"u": "https://twitter.com/beemuvi/status/671406151641231360",
-"t": "2015-11-30 19:11:15 +0000",
-"c": "[twttr#1749]",
-}, /*************************************************************************/ {
-"n": 1750,
-"x": "BeemiOS: Fixed the dreaded spinner bug. And Arabic numerals (the real ones, not the western-derived ones) were broken. #bugfix ×2 (5/7)",
-"u": "https://twitter.com/beemuvi/status/671406217856708608",
-"t": "2015-11-30 19:11:31 +0000",
-"c": "[twttr#1750]",
-}, /*************************************************************************/ {
-"n": 1751,
-"x": "BeemiOS: Added a \":\" button to allow for data input in HH:MM format (6/7)",
-"u": "https://twitter.com/beemuvi/status/671406270658822144",
-"t": "2015-11-30 19:11:43 +0000",
-"c": "[twttr#1751]",
-}, /*************************************************************************/ {
-"n": 1752,
-"x": "BeemiOS: Data entry now defaults to the previous day if it's after midnight but before the deadline. (7/7)",
-"u": "https://twitter.com/beemuvi/status/671406325482594304",
-"t": "2015-11-30 19:11:56 +0000",
-"c": "[twttr#1752] NUM?: numbered 1756 in non-Twitter version",
-}, /*************************************************************************/ ]
-
 /* VIM MACROS FOR MERGING W/ TWITTER EXPORT 
 Dump macro in register x to current line: "xp
 Put current line back into register x:    "xyy
@@ -2097,38 +1881,243 @@ Put current line back into register x:    "xyy
 0dt"xf"x:.,.s/"/\\"/ge0i"n": 	f>xi, "x": "	$xxxxxa",	0/<li
 (m) Move line of json to matching uvi assuming unique snippet found:
 jmzkddnkkpf,lli	jdd'z0
+(c) Also move the comment down:
+jmzkddn/"c":pkJhhdt[xi l~$xxxxxa",'z
+(u) Unlinkify a URL (get rid of a-href) from opening '<':
+dth.f\dt>.x
+(s) Remove <strong> tags and say "f":true instead:
+0/<strong>dt>x/<\/strong>dt>x0O"f": true,j0
 */
 
 /*
-<!-- JSON: 1753(new kind of coupon) - 1775(Similar bug with) -->
-<!-- HTML: 1754(new kind of coupon) - 1776(Similar bug with) -->
-"n": 1759, "x": "Fixed a bug affecting do-less goals with goal total &amp; rate specified that made us throw an ugly 500 error if you tried to ratchet #bugfix",
-    <!-- [we were looking for future rows by iterating through comparing current day with the time in the road row, so blank final date was causing a nil comparison error] -->
-"n": 1760, "x": "Introduced a bug where, for rare email clients, we'd re-add your \"Recent datapoints\" as new data when you replied to the email bot. #bugfix",
-"n": 1761, "x": "3rd party app devs can send users to specific URLs on beeminder.com w/out the user being intercepted by a login screen: <a href=\"https://www.beeminder.com/api#redirectuser\">beeminder.com/api#redirectuser</a>",
-    <!-- [if user/show gets redirect param, redirect to url: app/controllers/api/v1/users_controller.rb] -->
-"n": 1762, "x": "Other updates to our API docs (<a href=\"http://beeminder.com/api\">beeminder.com/api</a>): not calling IFTTT \"about to be launched\" and purging the unused \"sendmail\" param",
-"n": 1763, "x": "No longer give permissions error (for users w/out premium plan) when slug is included but unchanged in API goal update. #bugfix HT <a href=\"http://twitter.com/diwajd\">@diwajd</a>",
-"n": 1764, "x": "We were accidentally still sending iOS people 9am notifications regardless of (and in addition to) their zeno settings. #bugfix",
-"n": 1765, "x": "Ratcheting do-less goals would no-op on the 1st day of the goal. #bugfix",
-    <!-- [an error w/ operator precedence, so that if the very first section of the road (the stuff "before today") was blank, then we'd do nothing] -->
-"n": 1766, "x": "Error message for \"username too long\" now tells you what the limit is (it's 20). #mini HT Alex Guzey",
-"n": 1767, "x": "Changed the text the archive countdown shows after it hits zero. Now gives an indication that it might (annoyingly) take a bit to kick in.",
-"n": 1768, "x": "We broke (2 months ago as part of javascript graphs) and then fixed the Quick Add feature that updates \"+N Due by Y\" text in gallery #bugfix",
-    <!-- [removed a js date helper lib that was conflicting with mpld3, not noticing that we were in fact using some helper functions from it. so i added a getDayName &amp; getMonthName helper fn to our js file http://forum.beeminder.com/t/quick-add-doesnt-update-the-text-part/735] -->
-"n": 1769, "x": "Uncheck \"start flat\" when restarting ⇒ road dial appears like it's supposed to (broke this months ago :/ \"start flat\" was no-op) #bugfix",
-    <!-- [we were just giving an infinite flat road despite saying no to 'starting flat'] -->
-"n": 1770, "x": "Remember <a href=\"https://twitter.com/beemuvi/status/511667442121076736\">when we fixed a trailing whitespace bug in sign-up</a>a? Well the other day <a href=\"http://twitter.com/faireness\" title=\"Yes, the founders' 8-year-old daughter\">@faireness</a> noticed we still werent stripping whitespace when you actually log in :/ #bugfix",
-"n": 1771, "x": "We now remember who IFTTT recipes run for so if there's an auth problem later we can email you to tell you the recipe stopped working",
-    <!-- [trigger_identity] -->
-"n": 1772, "x": "<strong>Embarrassing #bugfix in deadman switch (stops charging you if go inactive): don't count activity on archived goals from autodata like Zapier</strong>",
-"n": 1773, "x": "Fixed a mangled error message (and made it spell things out better) about trying to move your deadline earlier on a beemergency day. #mini",
-    <!-- ["Deadline cannot be moved into the past, since this goal is in the red currently, and that would derail you. Please finish your task for the day first."] -->
-"n": 1774, "x": "If you de-authed Android/iOS apps we weren't cleaning up after ourselves and failed horribly/invisibly if you later tried to re-add. #bugfix",
-    <!-- [remove cached access token for beedroid/ios if auth is revoked. e.g. i removed beedroid, and then submitted datapoints.. it was infinite infinibee, with nice helpful red state letting me know it was still trying to send, but never succeeds] -->
-"n": 1775, "x": "Can now always move your deadline earlier on an eep day as long as still before the deadline (timezone issue; only failed sometimes) #bugfix",
-"n": 1776, "x": "Similar bug with snoozing your deadline; now always respects the 6-hour window on an eep day. #bugfix",
+<!-- JSON: 1718(Renamed defaults) - 1752(beemios data entry) -->
+<!-- HTML: 1719(Renamed defaults) - 1753(beemios data entry) -->
+
 */
+
+var batch2015nov = [
+{
+"n": 1719,
+"x": "Renamed defaults tab to 'Reminders/Defaults', rearranged/edited \"new goal\" email copy, tooltip for \"-1\" in indiv. alert settings #mini ×3",
+"u": "https://twitter.com/beemuvi/status/662058385496391680",
+"t": "2015-11-05 00:06:34 +0000",
+"c": "[twttr#1718] Tooltip was already done in the default settings section",
+}, /*************************************************************************/ {
+"n": 1720, 
+"x": "Added leadtime and alertstart to the API -- http://beeminder.com/api (Thx Andy Brett; &amp; this portends big reminders improvement on iOS!)",
+"u": "https://twitter.com/beemuvi/status/662431715596480513",
+"t": "2015-11-06 00:50:03 +0000",
+"c": "[twttr#1719]",
+}, /*************************************************************************/ {
+"n": 1721, 
+"x": "Site no longer falls on its face if you give a non-integer (or nil) for 'days lead time' in goal alert settings. #bugfix (from a while ago)",
+"u": "https://twitter.com/beemuvi/status/662763714001526784",
+"t": "2015-11-06 22:49:17 +0000",
+"c": "[twttr#1720]",
+}, /*************************************************************************/ {
+"n": 1722, 
+"x": "We were sometimes/rarely double counting Sleep as Android time; now disallowing records on same day with same start time. #bugfix",
+"u": "https://twitter.com/beemuvi/status/663148628115001344",
+"t": "2015-11-08 00:18:48 +0000",
+"c": "[twttr#1721]",
+}, /*************************************************************************/ {
+"n": 1723, 
+"x": "Fixed a sort of off-by-one problem w/ \"days lead time\" for do-less goals. Zero days lead time means zeno alerts start when you're orange.",
+"u": "https://twitter.com/beemuvi/status/663503159382269953",
+"t": "2015-11-08 23:47:35 +0000",
+"c": "[twttr#1722] And leadtime=-1 turns off zeno polling, just like for do-more",
+}, /*************************************************************************/ {
+"n": 1724, 
+"x": "Changing goal units made Runkeeper goals stop updating. That was super dumb. But we fixed it! Update gunits to heart's delight. #bugfix",
+"u": "https://twitter.com/beemuvi/status/663881644114231296",
+"t": "2015-11-10 00:51:32 +0000",
+"c": "[twttr#1723]",
+}, /*************************************************************************/ {
+"n": 1725, 
+"x": "Were silently failing to do anything for GmailZero if you made the query blank; now default to the standard \"in:inbox AND is:read\" #bugfix",
+"u": "https://twitter.com/beemuvi/status/663970755533647872",
+"t": "2015-11-10 06:45:38 +0000",
+"c": "[twttr#1724]",
+}, /*************************************************************************/ {
+"n": 1726, 
+"x": "Were failing to regenerate graphs and tell the Android app about changes to deadlines immediately which got goals into weird states. #bugfix",
+"u": "https://twitter.com/beemuvi/status/664593997491544064",
+"t": "2015-11-12 00:02:11 +0000",
+"c": "[twttr#1725] Also we now regenerate graphs for all goals that use defaults when the default deadline changes, which could count as another UVI",
+}, /*************************************************************************/ {
+"n": 1727, 
+"x": "After upgrading from literally the oldest documented version of the Stripe API (from 2011) we broke &amp; then fixed our payment UI. #bugfix",
+"u": "https://twitter.com/beemuvi/status/664594325884522497",
+"t": "2015-11-12 00:03:29 +0000",
+"c": "[twttr#1726]",
+}, /*************************************************************************/ {
+"n": 1728, 
+"f": true,
+"x": "If you had multiple IFTTT recipes triggering for the same Add Datapoint event, only one would actually trigger. #bugfix See <a href=\"http://forum.beeminder.com/t/ifttt-channel-is-live/765/34\">forum discussion</a>",
+"u": "https://twitter.com/beemuvi/status/665330796161462272",
+"t": "2015-11-14 00:49:57 +0000",
+"c": "[twttr#1727]",
+}, /*************************************************************************/ {
+"n": 1729, 
+"f": true,
+"x": "New IFTTT macro for counting words in Trigger Ingredients: WORDCOUNT[] See <a href=\"http://forum.beeminder.com/t/ifttt-macros/804\">forum discussion</a>",
+"u": "https://twitter.com/beemuvi/status/665665463355969536",
+"t": "2015-11-14 22:59:48 +0000",
+"c": "[twttr#1728]",
+}, /*************************************************************************/ {
+"n": 1730, 
+"x": "Tweaks to bot emails (pre-vs-ul, link, next check), CSS in blog header (HT Malcolm Ocean), alignment w/ Misfit on https://www.beeminder.com/services",
+"u": "https://twitter.com/beemuvi/status/666055004344578048",
+"t": "2015-11-16 00:47:42 +0000",
+"c": "[twttr#1729] 1. Tweaks to bot emails (pre instead of ul, changed link text and hovertext for graph URL); 2. Fixed CSS in blog header (HT malcolm); 3. Fixed alignment on /services (misfit was too big)",
+}, /*************************************************************************/ {
+"n": 1731, 
+"f": true,
+"x": "By popular demand, a similar IFTTT macro, CHARCOUNT[], for Japanese and Chinese language learners",
+"u": "https://twitter.com/beemuvi/status/666416814637780996",
+"t": "2015-11-17 00:45:24 +0000",
+"c": "[twttr#1730]",
+}, /*************************************************************************/ {
+"n": 1732, 
+"x": "Another improvement to the API that was needed for the iOS app: can now query and set use_defaults (grep for it at <a href=\"http://beeminder.com/api\">beeminder.com/api</a>)",
+"u": "https://twitter.com/beemuvi/status/666767536692695040",
+"t": "2015-11-17 23:59:03 +0000",
+"c": "[twttr#1731]",
+}, /*************************************************************************/ {
+"n": 1733, 
+"x": "We were originally regenerating all your graphs that use defaults when you changed anything; now doing that smarter / more conservatively",
+"u": "https://twitter.com/beemuvi/status/666768244749918208",
+"t": "2015-11-18 00:01:52 +0000",
+"c": "[twttr#1732] Only rebrains goals if the deadline was updated (otherwise no need)",
+}, /*************************************************************************/ {
+"n": 1734, 
+"x": "New aggday method \"nonzero\" for plotting a 1 only if there exist any non-zero datapoints. <a href=\"http://forum.beeminder.com/t/documentation-of-aggregation-methods-would-be-nice/549/4\">documentation of aggday methods</a>",
+"u": "https://twitter.com/beemuvi/status/667499535933964288",
+"t": "2015-11-20 00:27:45 +0000",
+"c": "[twttr#1733]",
+}, /*************************************************************************/ {
+"n": 1735, 
+"x": "Creating a goal via API w/ coordinates of road start specified (1st row of roadall) works as expected now. HT Malcolm Ocean and <a href=\"http://complice.co\">Complice</a>",
+"u": "https://twitter.com/beemuvi/status/667851359660601345",
+"t": "2015-11-20 23:45:46 +0000",
+"c": "[twttr#1734] It returns the road you specified immediately in the API response instead of having it as [null,null,null] until the goal is beebrained",
+}, /*************************************************************************/ {
+"n": 1736, 
+"f": true,
+"x": "Beeminder Android app version 2.5! Checkmarks on widgets showing data already entered for the day, visual indicator for unsync'd data, ...",
+"u": "https://twitter.com/beemuvi/status/668221790544523264",
+"t": "2015-11-22 00:17:44 +0000",
+"c": "[twttr#1735]",
+}, /*************************************************************************/ {
+"n": 1737, 
+"f": true,
+"x": "Beedroid 2/9: Now locally buffers datapoint deletions and updates in case you have a flaky connection. And fixes related to stale data.",
+"u": "https://twitter.com/beemuvi/status/668221910417731584",
+"t": "2015-11-22 00:18:13 +0000",
+"c": "[twttr#1736]",
+}, /*************************************************************************/ {
+"n": 1738, 
+"x": "Beedroid 3/9: The Beeminder icon on the urgent goals widget launches the app. (This is from version 2.4.3)",
+"u": "https://twitter.com/beemuvi/status/668221945045889024",
+"t": "2015-11-22 00:18:21 +0000",
+"c": "[twttr#1737]",
+}, /*************************************************************************/ {
+"n": 1739, 
+"x": "Beedroid 4/9: If you have tons of data we now only load some of it (performance/reliability reasons), link you to website for the rest",
+"u": "https://twitter.com/beemuvi/status/668221989702623232",
+"t": "2015-11-22 00:18:31 +0000",
+"c": "[twttr#1738]",
+}, /*************************************************************************/ {
+"n": 1740, 
+"x": "Beedroid 5/9: Fixes with eep day notifications, Tasker, and TagTime notifications, decreased unnecessary server hits on syncing",
+"u": "https://twitter.com/beemuvi/status/668222028520919040",
+"t": "2015-11-22 00:18:41 +0000",
+"c": "[twttr#1739]",
+}, /*************************************************************************/ {
+"n": 1741, 
+"x": "Beedroid 6/9: Bugfix with stale goals hanging around, and fixed various rare(ish?) crashes",
+"u": "https://twitter.com/beemuvi/status/668222068098383872",
+"t": "2015-11-22 00:18:50 +0000",
+"c": "[twttr#1740]",
+}, /*************************************************************************/ {
+"n": 1742, 
+"x": "Beedroid 7/9: Bugfixes with notifications near goal date, proper updates of existing notifications. (This is from version 2.4.2)",
+"u": "https://twitter.com/beemuvi/status/668222100415471617",
+"t": "2015-11-22 00:18:58 +0000",
+"c": "[twttr#1741]",
+}, /*************************************************************************/ {
+"n": 1743, 
+"f": true,
+"x": "Beedroid 8/9: Fixed a race condition with summary widget, weaselproofing of autodata goal (no more loophole of manual editing in app)",
+"u": "https://twitter.com/beemuvi/status/668222140856991744",
+"t": "2015-11-22 00:19:08 +0000",
+"c": "[twttr#1742]",
+}, /*************************************************************************/ {
+"n": 1744, 
+"x": "Beedroid 9/9: Eliminated road dial (kind of a negative UVI but we crammed a gazillion real ones in these 9 tweets so...)",
+"u": "https://twitter.com/beemuvi/status/668222186734223360",
+"t": "2015-11-22 00:19:18 +0000",
+"c": "[twttr#1743]",
+}, /*************************************************************************/ {
+"n": 1745, 
+"x": "Clarifying text on tabs for dialing/ratcheting road; also a warning about ratcheting to an eep day if you derailed yesterday. #mini ×2",
+"u": "https://twitter.com/beemuvi/status/669029160497451009",
+"t": "2015-11-24 05:45:56 +0000",
+"c": "[twttr#1744]",
+}, /*************************************************************************/ {
+"n": 1746, 
+"f": true,
+"x": "Ratcheting for do-less goals (including autoratcheting for premium folks) now work in terms of goal units, not days. HT <a href=\"https://twitter.com/chipmanaged\">@chipmanaged</a>",
+"u": "https://twitter.com/beemuvi/status/669969979228291072",
+"t": "2015-11-26 20:04:25 +0000",
+"c": "[twttr#1745] separate UVI to say how that also fixes the nasty bug with do-less autoratcheting? no. Tweaks to the UI to accommodate this? nah.",
+}, /*************************************************************************/ {
+"n": 1747, 
+"f": true,
+"x": "Beeminder iOS app version 4.2! Graphs now appear in Today widget along with bare min, and several other things in the next 6 tweets... (1/7)",
+"u": "https://twitter.com/beemuvi/status/671405966919901187",
+"t": "2015-11-30 19:10:31 +0000",
+"c": "[twttr#1746]",
+}, /*************************************************************************/ {
+"n": 1748, 
+"f": true,
+"x": "BeemiOS does zeno polling! Adjust individual and default notification settings in-app (known bug: can't change deadline on an eep day) (2/7)",
+"u": "https://twitter.com/beemuvi/status/671406023337484288",
+"t": "2015-11-30 19:10:44 +0000",
+"c": "[twttr#1747]",
+}, /*************************************************************************/ {
+"n": 1749, 
+"x": "BeemiOS: When changing reminder settings in the app you're changing them for website too; was broken at first but now works. #bugfix (3/7)",
+"u": "https://twitter.com/beemuvi/status/671406104837021696",
+"t": "2015-11-30 19:11:04 +0000",
+"c": "[twttr#1748]",
+}, /*************************************************************************/ {
+"n": 1750, 
+"f": true,
+"x": "BeemiOS: The reload button on the goal screen triggers a refresh of autodata. (4/7)",
+"u": "https://twitter.com/beemuvi/status/671406151641231360",
+"t": "2015-11-30 19:11:15 +0000",
+"c": "[twttr#1749]",
+}, /*************************************************************************/ {
+"n": 1751, 
+"x": "BeemiOS: Fixed the dreaded spinner bug. And Arabic numerals (the real ones, not the western-derived ones) were broken. #bugfix ×2 (5/7)",
+"u": "https://twitter.com/beemuvi/status/671406217856708608",
+"t": "2015-11-30 19:11:31 +0000",
+"c": "[twttr#1750]",
+}, /*************************************************************************/ {
+"n": 1752, 
+"f": true,
+"x": "BeemiOS: Added a \":\" button to allow for data input in HH:MM format (6/7)",
+"u": "https://twitter.com/beemuvi/status/671406270658822144",
+"t": "2015-11-30 19:11:43 +0000",
+"c": "[twttr#1751]",
+}, /*************************************************************************/ {
+"n": 1753, 
+"x": "BeemiOS: Data entry now defaults to the previous day if it's after midnight but before the deadline. (7/7)",
+"u": "https://twitter.com/beemuvi/status/671406325482594304",
+"t": "2015-11-30 19:11:56 +0000",
+"c": "[twttr#1752] [orign#1756]",
+}, /*************************************************************************/ ]
 
 var batch2015dec = [
 {
@@ -2136,7 +2125,7 @@ var batch2015dec = [
 "x": "We made a new kind of coupon code for Cyber Monday where you get the 2nd period free. http://blog.beeminder.com/cybermonday",
 "u": "https://twitter.com/beemuvi/status/674686273093656576",
 "t": "2015-12-09 20:25:17 +0000",
-"c": "[twtter#1753] NUM?: numbered 1756 in non-Twitter version",
+"c": "[twtter#1753] [orign#1756]",
 }, /*************************************************************************/ {
 "n": 1755, 
 "x": "Made it way more obvious when you're using a coupon for a premium plan, by highlighting the coupon description in an green alert box",
@@ -2162,114 +2151,114 @@ var batch2015dec = [
 "t": "2015-12-12 04:54:33 +0000",
 "c": "[twttr#1757] Template was missing due to refactoring facepalm",
 }, /*************************************************************************/ {
-"n": 1758,
+"n": 1759, 
 "x": "Fixed a bug affecting do-less goals with goal total &amp; rate specified that made us throw an ugly 500 error if you tried to ratchet #bugfix",
 "u": "https://twitter.com/beemuvi/status/676301754233851905",
 "t": "2015-12-14 07:24:37 +0000",
-"c": "[twttr#1758]",
+"c": "[twttr#1758] We were looking for future rows by iterating through comparing current day with the time in the road row, so blank final date was causing a nil comparison error",
 }, /*************************************************************************/ {
-"n": 1759,
+"n": 1760, 
 "x": "Introduced a bug where, for rare email clients, we'd re-add your \"Recent datapoints\" as new data when you replied to the email bot. #bugfix",
 "u": "https://twitter.com/beemuvi/status/676913869831409665",
 "t": "2015-12-15 23:56:57 +0000",
 "c": "[twttr#1759]",
 }, /*************************************************************************/ {
-"n": 1760,
-"x": "3rd party app developers can send users to specific bmndr URLs w/out the user being intercepted by a login screen: <a href=\"https://www.beeminder.com/api#redirectuser\">beeminder.com/api#redirectuser</a>",
+"n": 1761, 
+"x": "3rd party app devs can send users to specific URLs on beeminder.com w/out the user being intercepted by a login screen: https://www.beeminder.com/api#redirectuser",
 "u": "https://twitter.com/beemuvi/status/677287165047341056",
 "t": "2015-12-17 00:40:18 +0000",
-"c": "[twttr#1760]",
+"c": "[twttr#1760] If user/show gets redirect param, redirect to url: app/controllers/api/v1/users_controller.rb",
 }, /*************************************************************************/ {
-"n": 1761,
-"x": "Other updates to our API docs (<a href=\"http://beeminder.com/api\">beeminder.com/api</a>): not calling IFTTT \"about to be launched\" and purging the unused \"sendmail\" param",
+"n": 1762, 
+"x": "Other updates to our <a href=\"http://beeminder.com/api\">API docs</a>: not calling IFTTT \"about to be launched\" and purging the unused \"sendmail\" param",
 "u": "https://twitter.com/beemuvi/status/677287307888562176",
 "t": "2015-12-17 00:40:52 +0000",
 "c": "[twttr#1761]",
 }, /*************************************************************************/ {
-"n": 1762,
+"n": 1763, 
 "x": "No longer give permissions error (for users w/out premium plan) when slug is included but unchanged in API goal update. #bugfix HT <a href=\"https://twitter.com/diwajd\">@diwajd</a>",
 "u": "https://twitter.com/beemuvi/status/677973178371604480",
 "t": "2015-12-18 22:06:16 +0000",
 "c": "[twttr#1762]",
 }, /*************************************************************************/ {
-"n": 1763,
+"n": 1764, 
 "x": "We were accidentally still sending iOS people 9am notifications regardless of (and in addition to) their zeno settings. #bugfix",
 "u": "https://twitter.com/beemuvi/status/678310698040987648",
 "t": "2015-12-19 20:27:27 +0000",
 "c": "[twttr#1763]",
 }, /*************************************************************************/ {
-"n": 1764,
+"n": 1765, 
 "x": "Ratcheting do-less goals would no-op on the 1st day of the goal. #bugfix",
 "u": "https://twitter.com/beemuvi/status/678735708413026304",
 "t": "2015-12-21 00:36:17 +0000",
-"c": "[twttr#1764]",
+"c": "[twttr#1764] An error w/ operator precedence, so that if the very first section of the road (the stuff \"before today\") was blank, then we'd do nothing",
 }, /*************************************************************************/ {
-"n": 1765,
+"n": 1766, 
 "x": "Error message for \"username too long\" now tells you what the limit is (it's 20). #mini HT Alex Guzey",
 "u": "https://twitter.com/beemuvi/status/679094528293359616",
 "t": "2015-12-22 00:22:07 +0000",
 "c": "[twttr#1765]",
 }, /*************************************************************************/ {
-"n": 1766,
+"n": 1767, 
 "x": "Changed the text the archive countdown shows after it hits zero. Now gives an indication that it might (annoyingly) take a bit to kick in.",
 "u": "https://twitter.com/beemuvi/status/679444948563804160",
 "t": "2015-12-22 23:34:33 +0000",
 "c": "[twttr#1766]",
 }, /*************************************************************************/ {
-"n": 1767,
+"n": 1768, 
 "x": "We broke (2 months ago as part of javascript graphs) and then fixed the Quick Add feature that updates \"+N Due by Y\" text in gallery #bugfix",
 "u": "https://twitter.com/beemuvi/status/679826975502929921",
 "t": "2015-12-24 00:52:36 +0000",
-"c": "[twttr#1767]",
+"c": "[twttr#1767] Removed a js date helper lib that was conflicting with mpld3, not noticing that we were in fact using some helper functions from it. Added a getDayName &amp; getMonthName helper fn to our js file. http://forum.beeminder.com/t/quick-add-doesnt-update-the-text-part/735",
 }, /*************************************************************************/ {
-"n": 1768,
+"n": 1769, 
 "x": "Uncheck \"start flat\" when restarting ⇒ road dial appears like it's supposed to (broke this months ago :/ \"start flat\" was no-op) #bugfix",
 "u": "https://twitter.com/beemuvi/status/680167141341937664",
 "t": "2015-12-24 23:24:18 +0000",
-"c": "[twttr#1768]",
+"c": "[twttr#1768] We were just giving an infinite flat road despite saying no to 'starting flat'",
 }, /*************************************************************************/ {
-"n": 1769,
-"x": "Remember <a href=\"https://twitter.com/beemuvi/status/511667442121076736\">twitter.com/beemuvi/status/511667442121076736</a>? Well on Tue <a href=\"https://twitter.com/faireness\">@faireness</a> noticed we still werent stripping whitespace when you actually log in :/ #bugfix",
+"n": 1770, 
+"x": "Remember <a href=\"https://twitter.com/beemuvi/status/511667442121076736\">when we fixed a trailing whitespace bug in sign-up</a>? Well the other day <a href=\"http://twitter.com/faireness\" title=\"Yes, the founders' 8-year-old daughter\">@faireness</a> noticed we still werent stripping whitespace when you actually log in :/ #bugfix",
 "u": "https://twitter.com/beemuvi/status/680543998302240768",
 "t": "2015-12-26 00:21:47 +0000",
 "c": "[twttr#1769]",
 }, /*************************************************************************/ {
-"n": 1770,
-"x": "We now remember who <a href=\"https://twitter.com/IFTTT\">@IFTTT</a> recipes run for so if there's an auth problem later we can email you to tell you the recipe stopped working",
+"n": 1771, 
+"x": "We now remember who IFTTT recipes run for so if there's an auth problem later we can email you to tell you the recipe stopped working",
 "u": "https://twitter.com/beemuvi/status/680903325550645248",
 "t": "2015-12-27 00:09:38 +0000",
-"c": "[twttr#1770]",
+"c": "[twttr#1770] trigger_identity",
 }, /*************************************************************************/ {
-"n": 1771,
+"n": 1772, 
+"f": true,
 "x": "Embarrassing #bugfix in deadman switch (stops charging you if go inactive): don't count activity on archived goals from autodata like Zapier",
 "u": "https://twitter.com/beemuvi/status/681249970515619841",
 "t": "2015-12-27 23:07:04 +0000",
 "c": "[twttr#1771]",
 }, /*************************************************************************/ {
-"n": 1772,
+"n": 1773, 
 "x": "Fixed a mangled error message (and made it spell things out better) about trying to move your deadline earlier on a beemergency day. #mini",
 "u": "https://twitter.com/beemuvi/status/681384790826733568",
 "t": "2015-12-28 08:02:48 +0000",
 "c": "[twttr#1772]",
+    <!-- ["Deadline cannot be moved into the past, since this goal is in the red currently, and that would derail you. Please finish your task for the day first."] -->
 }, /*************************************************************************/ {
-"n": 1773,
+"n": 1774, 
 "x": "If you de-authed Android/iOS apps we weren't cleaning up after ourselves and failed horribly/invisibly if you later tried to re-add. #bugfix",
 "u": "https://twitter.com/beemuvi/status/681995988408479745",
 "t": "2015-12-30 00:31:29 +0000",
-"c": "[twttr#1773]",
+"c": "[twttr#1773] Remove cached access token for beedroid/ios if auth is revoked. e.g. i removed beedroid, and then submitted datapoints.. it was infinite infinibee, with nice helpful red state letting me know it was still trying to send, but never succeeds",
 }, /*************************************************************************/ {
-"n": 1774,
+"n": 1775, 
 "x": "Can now always move your deadline earlier on an eep day as long as still before the deadline (timezone issue; only failed sometimes) #bugfix",
 "u": "https://twitter.com/beemuvi/status/682344715392385025",
 "t": "2015-12-30 23:37:12 +0000",
 "c": "[twttr#1774]",
 }, /*************************************************************************/ {
-"n": 1775,
+"n": 1776, 
 "x": "Similar bug with snoozing your deadline; now always respects the 6-hour window on an eep day. #bugfix",
 "u": "https://twitter.com/beemuvi/status/682344758262415360",
 "t": "2015-12-30 23:37:22 +0000",
-"c": "[twttr#1775] NUM?: numbered 1778 in non-Twitter version",
+"c": "[twttr#1775] [orign#1778]",
 }, /* --------------------------------------------------------- end 2015dec */ ]
 
-
-// TODO: bookmark for where we're at with merging. all past this point good.
