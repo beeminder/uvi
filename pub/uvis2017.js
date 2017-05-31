@@ -878,7 +878,7 @@ var batch2017may = [{
 "c": "Part of PayPal deploy. This was a timing issue: 1) add credit card to stripe; 2) queue up pledges job; 3) save user. But if 2 got executed immediately, before the user got saved, then error. Otherwise no error. A case of failing loudly being very helpful, because it was a pretty nasty bug, but we caught it right away for the handful of people who encountered it.",
 }, { // ------------------------------------------------------------------------
 "n": 2298,
-"x": "We broke the ability to start goals with $0 pledges for 5 days. #bugfix http://forum.beeminder.com/t/pledge-upgrade-on-startup/3193",
+"x": "We broke the ability to start goals with $0 pledges for 5 days. #bugfix #regression http://forum.beeminder.com/t/pledge-upgrade-on-startup/3193",
 "u": "https://twitter.com/beemuvi/status/869704026933174272",
 "d": "2017-05-21",
 "t": "2017-05-30",
