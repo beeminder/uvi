@@ -876,6 +876,13 @@ var batch2017may = [{
 "u": "https://twitter.com/beemuvi/status/869335845521637377",
 "t": "2017-05-29",
 "c": "Part of PayPal deploy. This was a timing issue: 1) add credit card to stripe; 2) queue up pledges job; 3) save user. But if 2 got executed immediately, before the user got saved, then error. Otherwise no error. A case of failing loudly being very helpful, because it was a pretty nasty bug, but we caught it right away for the handful of people who encountered it.",
+}, { // ------------------------------------------------------------------------
+"n": 2298,
+"x": "We'd broken the ability to start goals with $0 pledges since the redesign! #bugfix #redesign-regression http://forum.beeminder.com/t/pledge-upgrade-on-startup/3193",
+"u": "https://twitter.com/beemuvi/status/869704026933174272",
+"d": "2017-05-21",
+"t": "2017-05-30",
+"c": "Spec for how this was supposed to work: http://blog.beeminder.com/deathtofreebees/ & Commit that fixed it again: https://github.com/beeminder/beeminder/commit/8be93db3376a1c24c5e88cc7597ef4712edec9fe",
 }, /* --------------------------------------------------------- end 2017may */ ]
 
 var staged = [{
@@ -883,7 +890,7 @@ var staged = [{
 
 /*
 STAGED: ------10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140  
-}, { // ------------------------------------------------------------------------
+GTBee 1.4 is out http://forum.beeminder.com/t/gtbee/3209
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 CANDIDATES: --10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140  
