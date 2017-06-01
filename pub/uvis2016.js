@@ -7,7 +7,7 @@ var batch2016jan = [
 "x": "Typo fix in hovertext in footer (thx Caitlin Patton!) &amp; http://beeminder.com/api documentation updates re: roadall not road_dial, &amp; daystamp",
 "u": "https://twitter.com/beemuvi/status/683449083822903296",
 "t": "2016-01-03 00:45:34 +0000",
-"c": "[twttr#1777] Point to the replacement for road_dial in the road dial endpoint description, and mention that you can include daystamp when creating datapoints (but that timestamp overrides)",
+"c": "Point to the replacement for road_dial in the road dial endpoint description, and mention that you can include daystamp when creating datapoints (but that timestamp overrides)",
 }, /*************************************************************************/ {
 "n": 1778,
 "f": true,
@@ -124,7 +124,7 @@ var batch2016jan = [
 "x": "If you had to re-auth Skritter (maybe some others) we were failing to remove error flag &amp; wouldn't automatically resume fetching #bugfix",
 "u": "https://twitter.com/beemuvi/status/691792309885784065",
 "t": "2016-01-26 01:18:34 +0000",
-"c": "[twttr#1800] Were already doing this for some specific autod types, but i also made the code better so that this will just happen for new types we add, so also infra",
+"c": "Were already doing this for some specific autod types, but i also made the code better so that this will just happen for new types we add, so also infra",
 }, /*************************************************************************/ {
 "n": 1801, 
 "x": "Fixed a bug on http://scribeminder.com that prevented connecting to Beeminder if you weren't using HTTPS. Also, forced HTTPS. #bugfix",
@@ -185,17 +185,17 @@ var batch2016feb = [
 "x": "Moving deadline out of adv. settings caused bug that prevented graph from refreshing (eg updating watermark) when changing deadline. #bugfix",
 "u": "https://twitter.com/beemuvi/status/695503269271990272",
 "t": "2016-02-05 07:04:35 +0000",
-"c": "[twttr#1810] cf https://twitter.com/beemuvi/status/664593997491544064 &amp; https://twitter.com/beemuvi/status/688107679814778880",
+"c": "cf https://twitter.com/beemuvi/status/664593997491544064 &amp; https://twitter.com/beemuvi/status/688107679814778880",
 }, /*************************************************************************/ {
 "x": "Were unwittingly removing &amp; re-adding Garmin sleep datapoints every time; made IFTTT \"Added Data\" Trigger go batshit. #bugfix HT Markos Giannopoulos",
 "u": "https://twitter.com/beemuvi/status/695862707631689728",
 "t": "2016-02-06 06:52:52 +0000",
-"c": "[twttr#1811] Every time we checked for data",
+"c": "Every time we checked for data",
 }, /*************************************************************************/ {
 "x": "If you edited your sleep start time in the Misfit app we'd treat it as a new datapoint &amp; overcount your sleep! #bugfix HT Caitlin Patton",
 "u": "https://twitter.com/beemuvi/status/695862896459276288",
 "t": "2016-02-06 06:53:37 +0000",
-"c": "[twttr#1812] Uniqifying based on start time not good",
+"c": "Uniqifying based on start time not good",
 }, /*************************************************************************/ {
 "x": "Introduced a bug w/ zeno alerts: after sending the 1st one of the day were accidentally sending them every 5 minutes for some of you #bugfix",
 "u": "https://twitter.com/beemuvi/status/696594684160790528",
@@ -208,7 +208,7 @@ var batch2016feb = [
 "x": "Better composition of zeno alert. Gives number of days till deadline instead of day of week if &gt;7days away, like in graph watermark. #mini",
 "u": "https://twitter.com/beemuvi/status/697415236521820160",
 "t": "2016-02-10 13:42:04 +0000",
-"c": "[twttr#1815] This is in the alert_text function in the goal model",
+"c": "This is in the alert_text function in the goal model",
 }, /*************************************************************************/ {
 "x": "Multiple improvements to the Beeminder Slack bot: choose for each goal whether the bot DMs you or posts to a channel or both.",
 "u": "https://twitter.com/beemuvi/status/697672025071083520",
@@ -217,7 +217,7 @@ var batch2016feb = [
 "x": "And a #bugfix with the Slack bot that made it (sometimes? briefly?) ignore those settings and DM you anyway.",
 "u": "https://twitter.com/beemuvi/status/697672251240415232",
 "t": "2016-02-11 06:43:21 +0000",
-"c": "[twttr#1817] Stop spurious slack dms https://github.com/beeminder/beeminder/commit/2a154d523f2f22a7ccdaeffb2e1b20cd609220a3",
+"c": "Stop spurious slack dms https://github.com/beeminder/beeminder/commit/2a154d523f2f22a7ccdaeffb2e1b20cd609220a3",
 }, /*************************************************************************/ {
 "f": true,
 "x": "Big change to reminder settings: no more inheriting from defaults; instead there's a button (in advanced settings) to reset to defaults",
@@ -254,7 +254,7 @@ var batch2016feb = [
 "x": "One last small one that we just deployed: a horizontal line in the compact table of reminder settings demarcating the backburner goals",
 "u": "https://twitter.com/beemuvi/status/698052819392147456",
 "t": "2016-02-12 07:55:35 +0000",
-"c": "[twttr#1825] Can't remember why I made a note about 'For Do Less goals this winds up using n * daily rate to proxy...'",
+"c": "Can't remember why I made a note about 'For Do Less goals this winds up using n * daily rate to proxy...'",
 }, /*************************************************************************/ {
 "f": true,
 "x": "Our RescueTime integration is markedly slicker: no need to paste your API key to authorize Beeminder to access your RescueTime data",
@@ -293,7 +293,7 @@ var batch2016feb = [
 "x": "Hopefully last UVI for #bugfix's from the upgrade: dial-it-in position, checkmarks for data entered today, saving changes in reminders table",
 "u": "https://twitter.com/beemuvi/status/704226556357378048",
 "t": "2016-02-29 08:47:49 +0000",
-"c": "[twttr#1834] Slightly different syntax for fields_for: fixes bug with fwomp page not saving individual goal changes - the goal name wasn't getting included in the fieldset. Fix dial-it-in position? https://github.com/beeminder/beeminder/commit/5861831958f0e88e880113f16938739af8ab68cd Bugfix: checkmarks for 'data entered today' not showing up in the gallery (or persisting in the dashboard)",
+"c": "Slightly different syntax for fields_for: fixes bug with fwomp page not saving individual goal changes - the goal name wasn't getting included in the fieldset. Fix dial-it-in position? https://github.com/beeminder/beeminder/commit/5861831958f0e88e880113f16938739af8ab68cd Bugfix: checkmarks for 'data entered today' not showing up in the gallery (or persisting in the dashboard)",
 }, /*************************************************************************/ ]
 
 var batch2016mar = [
@@ -301,12 +301,12 @@ var batch2016mar = [
 "x": "We rearranged goal settings a bit, moving things betw Basic &amp; Advanced (was a while ago; we're improving @bmndr faster thn we cn twt abt it)",
 "u": "https://twitter.com/beemuvi/status/704616863175606272",
 "t": "2016-03-01 10:38:45 +0000",
-"c": "[twttr#1835] [http://forum.beeminder.com/t/on-privacy-vs-expectations/1900] [settings rearranging https://github.com/beeminder/beeminder/compare/2a154d523f2f...0efccf656a85] [And private back to Basics by popular demand.]",
+"c": "[http://forum.beeminder.com/t/on-privacy-vs-expectations/1900] [settings rearranging https://github.com/beeminder/beeminder/compare/2a154d523f2f...0efccf656a85] [And private back to Basics by popular demand.]",
 }, /*************************************************************************/ {
 "x": "Mini-UVIs: Typo fix (\"was as least one error\"), stick to \"reminders\" vs \"alerts\", \"team\" copy for Slack, tooltip misplaced HT <a href=\"https://twitter.com/chriswaterguy\">@chriswaterguy</a>",
 "u": "https://twitter.com/beemuvi/status/704978561942331394",
 "t": "2016-03-02 10:36:01 +0000",
-"c": "[twttr#1836] [http://forum.beeminder.com/t/confusing-pop-up-next-to-derail-time-setting/1905 HT @chriswaterguy #mini]",
+"c": "[http://forum.beeminder.com/t/confusing-pop-up-next-to-derail-time-setting/1905 HT @chriswaterguy #mini]",
 }, /*************************************************************************/ {
 "f": true,
 "x": "New dashboard! It's still in flux and not the default view yet but it's available at http://beeminder.com/dashboard (tweetstorm to follow!)",
@@ -344,12 +344,12 @@ var batch2016mar = [
 "x": "Android app was taking too long to notice when graph was done refreshing. (Long story with long queues.) Now much snappier! HT <a href=\"https://twitter.com/faireness\">@faireness</a>",
 "u": "https://twitter.com/beemuvi/status/708203601751973888",
 "t": "2016-03-11 08:11:11 +0000",
-"c": "[twttr#1845] Run beedroid push inline if api && has_android",
+"c": "Run beedroid push inline if api && has_android",
 }, /*************************************************************************/ {
 "x": "#bugfix w/ RescueTime for about 4 days around Feb 25: new goals were created fine but weren't importing your RescueTime history like usual",
 "u": "https://twitter.com/beemuvi/status/708537898895671297",
 "t": "2016-03-12 06:19:33 +0000",
-"c": "[twttr#1846] [inc syntax error in rescuetime importer: https://github.com/beeminder/beeminder/commit/c38c806ee62e073f226af7bcd3d311c5e7010329]",
+"c": "[inc syntax error in rescuetime importer: https://github.com/beeminder/beeminder/commit/c38c806ee62e073f226af7bcd3d311c5e7010329]",
 }, /*************************************************************************/ {
 "f": true,
 "x": "The graph now shows <a href=\"http://forum.beeminder.com/t/restarting-odometer-to-non-zero-value/299/17\">odometer resets as black vertical dotted lines</a>",
@@ -359,7 +359,7 @@ var batch2016mar = [
 "x": "SMS choice in reminder settings failing to stick; we broke http://beeminder.com/featured &amp; /home/featured legacy alias. #bugfix ×2 HT @chipmanaged",
 "u": "https://twitter.com/beemuvi/status/709270903738118144",
 "t": "2016-03-14 06:52:15 +0000",
-"c": "[twttr#1848] wantssms bug &amp; /home/featured 500'd", 
+"c": "wantssms bug &amp; /home/featured 500'd", 
 }, /*************************************************************************/ {
 "x": "We also added \"Featured\" to the navbar (links at the top of every Beeminder page) &amp; put \"feature me\" back in Basic Settings. HT @SayHiNeil",
 "u": "https://twitter.com/beemuvi/status/709271244550463488",
@@ -507,13 +507,13 @@ var batch2016apr = [
 "x": "From Feb 23 - Mar 30 we silently failed to save all attempts to weaselproof oneself! Serious #bugfix (so sorry; please check the box again!)",
 "u": "https://twitter.com/beemuvi/status/719039708047613952",
 "t": "2016-04-10 05:50:00 +0000",
-"c": "[twttr#1876] We *may* painstakingly reconstruct from server logs; so far we've decided not to",
+"c": "We *may* painstakingly reconstruct from server logs; so far we've decided not to",
 }, /*************************************************************************/ {
 "f": true,
 "x": "We finally got the stupid \"/goals/\" out of everyone's URLs which was making one of the cofounders twitch for the last 5 years",
 "u": "https://twitter.com/beemuvi/status/719752138683846657",
 "t": "2016-04-12 05:00:56 +0000",
-"c": "[twttr#1877] It was dreev",
+"c": "It was dreev",
 }, /*************************************************************************/ {
 "x": "We now show an actual helpful error if you (accidentally?) revoke Beeminder's access to your RescueTime data. #bugfix",
 "u": "https://twitter.com/beemuvi/status/720162933158711296",
@@ -522,7 +522,7 @@ var batch2016apr = [
 "x": "Pretty delete button w/ feedback/confirmation popup works in Settings same as graph page now. Bonus UVI(s): fixing autodata goal creation.",
 "u": "https://twitter.com/beemuvi/status/720495576740196353",
 "t": "2016-04-14 06:15:06 +0000",
-"c": "[twttr#1879] New goalwizard caused most autodata goal creation to fail! Fixed all but skritter/misfit/habitica on mar28, got those last 3 on apr8 #bugfix",
+"c": "New goalwizard caused most autodata goal creation to fail! Fixed all but skritter/misfit/habitica on mar28, got those last 3 on apr8 #bugfix",
 }, /*************************************************************************/ {
 "x": "Several dashboard tweaks/fixes like bigger thumbnail of graph (on left now) and added link to dashboard in top navbar",
 "u": "https://twitter.com/beemuvi/status/720910981535150081",
@@ -602,7 +602,7 @@ var batch2016apr = [
 "x": "Slightly obscure #bugfix with Supporters: ugly error if the supporter tried to follow confirmation link for a goal that no longer existed",
 "u": "https://twitter.com/beemuvi/status/723399141536108544",
 "t": "2016-04-22 06:32:50 +0000",
-"c": "[twttr#1893] Don't 500 in confmail if supporter isn't following anything",
+"c": "Don't 500 in confmail if supporter isn't following anything",
 }, /*************************************************************************/ {
 "n": 1894, 
 "x": "Slack's icon was missing if you added it on <a href=\"http://beeminder.com/services\">beeminder.com/services</a> #bugfix",
@@ -628,7 +628,7 @@ var batch2016apr = [
 "x": "Embarrassing: We learned that signing up with Twitter had been broken since like February. Finally fixed as of a week or so ago! #bugfix",
 "u": "https://twitter.com/beemuvi/status/724464095135571968",
 "t": "2016-04-25 05:04:34 +0000",
-"c": "[twttr#1899] Omniauth twitter fix: save service info; had to do with twitter not passing us an email address",
+"c": "Omniauth twitter fix: save service info; had to do with twitter not passing us an email address",
 }, /*************************************************************************/ {
 "x": "Curly (non-ascii) quotes no longer break the SMS bot! #bugfix HT <a href=\"https://twitter.com/chipmanaged\">@chipmanaged</a>",
 "u": "https://twitter.com/beemuvi/status/724464529132806145",
@@ -665,7 +665,7 @@ var batch2016apr = [
 "x": "From apr 4 to apr 14 you couldn't authorize 3rd parties to access your data on Beeminder (broke IFTTT/Zapier/beemind.me/etc). Big #bugfix",
 "u": "https://twitter.com/beemuvi/status/725607479350960128",
 "t": "2016-04-28 08:47:58 +0000",
-"c": "[twttr#1905] Bugfixes in oauth2-provider gem",
+"c": "Bugfixes in oauth2-provider gem",
 }, /*************************************************************************/ {
 "n": 1906, 
 "x": "Mini #bugfix ×3: UVIs since you last beeminded &amp; other things using lastactive date broke, datapoints temporarily sorting wrong in Beedroid",
@@ -737,14 +737,14 @@ var batch2016may = [
 "x": "(+) iOS app version 4.3!",
 "u": "https://twitter.com/beemuvi/status/733084981812158464",
 "t": "2016-05-19 00:00:54 +0000",
-"c": "[twttr#1917] Tweeted this a couple weeks late",
+"c": "Tweeted this a couple weeks late",
 }, /*************************************************************************/ {
 "n": 1917,
 "s": true,
 "x": "(1) No longer crashes when you log in w/ Facebook or hangs when you log in with Google #bugfix",
 "u": "https://twitter.com/beemuvi/status/733084981812158464",
 "t": "2016-05-19 00:00:54 +0000",
-"c": "[twttr#1917] Tweeted this a couple weeks late",
+"c": "Tweeted this a couple weeks late",
 }, /*************************************************************************/ {
 "n": 1918,
 "s": true,
@@ -822,7 +822,7 @@ var batch2016jun = [
 "x": "We were giving a spurious error when you first signed up or logged in (related to authenticity tokens). #bugfix #oldie",
 "u": "https://twitter.com/beemuvi/status/740440414524702720",
 "t": "2016-06-08 07:08:46 +0000",
-"c": "[twttr#1934] devise bug, don't try to verify authenticity tokens in sign in and sign up, because there is no session expected to verify",
+"c": "devise bug, don't try to verify authenticity tokens in sign in and sign up, because there is no session expected to verify",
 }, /*************************************************************************/ {
 "x": "RescueTime goal creation is now consistent with normal goal creation in making you enter a credit card after N goals created. #bugfix",
 "u": "https://twitter.com/beemuvi/status/740784512859275264",
@@ -931,7 +931,7 @@ var batch2016jul = [
 "x": "Improved/fixed algorithm that decides when the bee buzzes while importing, preparing your graph (was super busted for new goals for awhile)",
 "u": "https://twitter.com/beemuvi/status/749487179789791232",
 "t": "2016-07-03 06:17:23 +0000",
-"c": "[twttr#1959] Bee did something to improve things, but also broke things so for a long time newly created goals would end up perma-opaque",
+"c": "Bee did something to improve things, but also broke things so for a long time newly created goals would end up perma-opaque",
 }, /*************************************************************************/ {
 "x": "Made legacy redirects for images so we don't break hotlinks out there, unbroke the images of our pretty faces in <a href=\"http://beeminder.com/aboutus\">beeminder.com/aboutus</a>",
 "u": "https://twitter.com/beemuvi/status/749877893451309056",
@@ -970,7 +970,7 @@ var batch2016jul = [
 "x": "We now include the \"Things You Must Know\" copy from <a href=\"http://blog.beeminder.com/creditcard\">blog.beeminder.com/creditcard</a> in the email we send out for each new goal you create",
 "u": "https://twitter.com/beemuvi/status/752761131702247424",
 "t": "2016-07-12 07:06:54 +0000",
-"c": "[twttr#1968] https://github.com/beeminder/beeminder/commit/f288fe006829776f1f4e57583afbf08487cf6bb1",
+"c": "https://github.com/beeminder/beeminder/commit/f288fe006829776f1f4e57583afbf08487cf6bb1",
 }, /*************************************************************************/ {
 "x": "In the \"Charge me\" action in our IFTTT channel, we failed to strip whitespace from the charge amount &amp; would wrongly complain \"NaN\". #bugfix",
 "u": "https://twitter.com/beemuvi/status/753184014966493184",
@@ -1084,7 +1084,7 @@ var batch2016aug = [
 "x": "Links to goals in reminder emails now use \"beeminder.com/user/goal\" as the anchor text instead of goal title (which is now the title text)",
 "u": "https://twitter.com/beemuvi/status/762559724394913792",
 "t": "2016-08-08 08:03:00 +0000",
-"c": "[twttr#1995] Since we now deemphasize goal descriptions (titles) in favor of one-word goalnames, we now link to them that way in reminder emails",
+"c": "Since we now deemphasize goal descriptions (titles) in favor of one-word goalnames, we now link to them that way in reminder emails",
 }, /*************************************************************************/ {
 "f": true,
 "x": "Premium plans revamp! Hopefully you don't view this as a negative UVI but it's part of ensuring Beeminder thrives for many more years, so...",
@@ -1175,7 +1175,7 @@ var batch2016aug = [
 "x": "In the premium revamp, introduced a bug that prevented creation of weight gain goals. This is America so it took a while to notice. #bugfix",
 "u": "https://twitter.com/beemuvi/status/770527288135999488",
 "t": "2016-08-30 07:43:15 +0000",
-"c": "[twttr#2017] Was rearranging code, temporarily lost the goal type params (yaw, dir, etc) for them",
+"c": "Was rearranging code, temporarily lost the goal type params (yaw, dir, etc) for them",
 }, /*************************************************************************/ {
 "x": "The first time you push the \"more free goals\" button we just give you one automatically. Not sure how we feel about that, but, experiments!",
 "u": "https://twitter.com/beemuvi/status/770842372926087168",
@@ -1227,7 +1227,7 @@ var batch2016sep = [
 "x": "Another embarrassing one: 1st attempt (Jul 4) to fix broken image links (rails asset pipeline) left several broken that we just now #bugfix'd",
 "u": "https://twitter.com/beemuvi/status/774807459848257536",
 "t": "2016-09-11 03:11:08 +0000",
-"c": "[twttr#2029] Twitter integration landing page header image, fatcyclist contest logo, hr scroll in landing pages and ajax loader spinner, mini todoist/pocket/foursquare logos on zapier page, ie 5 beecat",
+"c": "Twitter integration landing page header image, fatcyclist contest logo, hr scroll in landing pages and ajax loader spinner, mini todoist/pocket/foursquare logos on zapier page, ie 5 beecat",
 }, /*************************************************************************/ {
 "x": "We improved the Facebook share button: shows both goalname &amp; title if different, &amp; to round out this tiny UVI: fixed a typo in goal settings",
 "u": "https://twitter.com/beemuvi/status/775224782824419328",
@@ -1261,7 +1261,7 @@ var batch2016sep = [
 "x": "Instead of just strongly suggesting it (via banner) we now force you to confirm your email before letting you give us your credit card",
 "u": "https://twitter.com/beemuvi/status/777766624296251396",
 "t": "2016-09-19 07:09:48 +0000",
-"c": "[twttr#2037] Soon afterwards we broke this as part of the #redesign :(",
+"c": "Soon afterwards we broke this as part of the #redesign :(",
 }, /*************************************************************************/ {
 "x": "(1 of 3) More helpful unsubscribe link! Sends you to a page with a big red button, is clear about what happens if you press it, ...",
 "u": "https://twitter.com/beemuvi/status/778131408841805824",
@@ -1290,7 +1290,7 @@ var batch2016sep = [
 "x": "Crazy mongoid bug made rescale feature break, rarely. Probable #bugfix deployed plus instrumentation so we'll know for sure if happens again",
 "u": "https://twitter.com/beemuvi/status/780275616167829504",
 "t": "2016-09-26 05:19:38 +0000",
-"c": "[twttr#2044] Sometimes we would scale some datapoints multiple times, resulting in totally fubared goals. Trying sorting datapoints first?",
+"c": "Sometimes we would scale some datapoints multiple times, resulting in totally fubared goals. Trying sorting datapoints first?",
 }, /*************************************************************************/ {
 "f": true, 
 "x": "Failed/frozen goals (with the skull &amp; crossbones) can now be instantly archived. Sorry we were so uptight about that for so long!",
@@ -1323,7 +1323,7 @@ var batch2016oct = [
 "x": "Can now add a phone number even if you don't use the SMS bot (and we'll actually text/call if you derail at $810+ &amp; don't respond to email)",
 "u": "https://twitter.com/beemuvi/status/782827289096491008",
 "t": "2016-10-03 06:19:04 +0000",
-"c": "[twttr#2051] \"maybe you are just hoping we'll give you a call to chat?\" says bee",
+"c": "\"maybe you are just hoping we'll give you a call to chat?\" says bee",
 }, /*************************************************************************/ {
 "x": "In case you have too many past pledges to show, we made a button that emails you the whole enchilada, in json format.",
 "u": "https://twitter.com/beemuvi/status/783196192574312448",
@@ -1337,48 +1337,45 @@ var batch2016oct = [
 "x": "Email bot no longer silently (well, it was calling in us humans to intervene) fails on data-like datapoints that're not actually parsable",
 "u": "https://twitter.com/beemuvi/status/783914905028001792",
 "t": "2016-10-06 06:20:52 +0000",
+"c": "[twttr#2054] The tweeting mishap in the next UVI means there's an 8-month period, till #2300, of Twitter's numbers being off by one.",
 }, /*************************************************************************/ {
 "n": 2055,
 "x": "Several fixes to decrease chances of bot emails getting spamboxed. More user-visible part: truncate quoting of probable spam in bot replies.",
 "d": "2016-10-05",
 "t": "2017-05-31",
 "u": "https://twitter.com/beemuvi/status/870167377983422464",
-"c": "We forgot to tweet this when we logged it as a UVI! We eventually figured it out when collecting all our UVIs at beeminder.com/changelog and tweeted it 8 months late. https://github.com/beeminder/beeminder/commit/0274613b68c4c55612e9260442477c9aa6fee945",
+"c": "[twttr#2299] We forgot to tweet this when we logged it as a UVI! We eventually figured it out when collecting all our UVIs at beeminder.com/changelog and tweeted it 8 months late. https://github.com/beeminder/beeminder/commit/0274613b68c4c55612e9260442477c9aa6fee945",
 }, /*************************************************************************/ {
 "n": 2056,
 "x": "Fixed, de-duped, and rearranged footer links. #mini",
 "u": "https://twitter.com/beemuvi/status/784632670592524288",
 "t": "2016-10-08 05:53:01 +0000",
+"c": "[twttr#2055] Twitter's numbers are off by one for 8 months starting here until #2300.",
 }, /*************************************************************************/ {
 "n": 2057,
 "x": "Fixed a bug in how prices of lower premium plans were displayed to people already on a higher lifetime plan (now just says \"$N/A\"). #bugfix",
 "u": "https://twitter.com/beemuvi/status/785028579427913729",
 "t": "2016-10-09 08:06:13 +0000",
-"c": "[twttr#2056]",
 }, /*************************************************************************/ {
 "n": 2058,
 "x": "Also on <a href=\"http://beeminder.com/premium\">beeminder.com/premium</a>: stopped confusingly saying \"$0\" for the lifetime plan you already have. Plus handy new FAQ item &amp; hovertexts",
 "u": "https://twitter.com/beemuvi/status/785388803145936896",
 "t": "2016-10-10 07:57:37 +0000",
-"c": "[twttr#2057]",
 }, /*************************************************************************/ {
 "n": 2059,
 "x": "Moved all the graph images to S3: makes a noticeable difference in how fast goal galleries load &amp; expected to even improve server stability",
 "u": "https://twitter.com/beemuvi/status/785737333110894593",
 "t": "2016-10-11 07:02:33 +0000",
-"c": "[twttr#2058]",
 }, /*************************************************************************/ {
 "n": 2060,
 "x": "Better security: nonce URLs for graph images and thumbnails actually expire (totally new ones each time the graph is generated)",
 "u": "https://twitter.com/beemuvi/status/785968617158434816",
 "t": "2016-10-11 22:21:35 +0000",
-"c": "[twttr#2059]",
 }, /*************************************************************************/ {
 "n": 2061,
 "x": "Seemingly #mini UVI that's part of something huge: we now disallow the goalname \"gallery\" (part of getting best of all worlds w/ redesign)",
 "u": "https://twitter.com/beemuvi/status/786458410040512512",
 "t": "2016-10-13 06:47:51 +0000",
-"c": "[twttr#2060]",
 }, /*************************************************************************/ {
 "n": 2062,
 "f": true, 
@@ -1392,186 +1389,151 @@ var batch2016oct = [
 "x": "The Data tab is much nicer, lets you load all datapoints on one page, sort by any column, and it all happens right below the graph",
 "u": "https://twitter.com/beemuvi/status/786880506579128321",
 "t": "2016-10-14 10:45:06 +0000",
-"c": "[twttr#2062]",
 }, /*************************************************************************/ {
 "x": "Editing data in the data table is also much nicer: you can just edit in place without first clicking a button",
 "u": "https://twitter.com/beemuvi/status/786880572165459968",
 "t": "2016-10-14 10:45:22 +0000",
-"c": "[twttr#2063]",
 }, /*************************************************************************/ {
 "x": "And import/export and rescaling of data is now all below the data",
 "u": "https://twitter.com/beemuvi/status/786880653937696768",
 "t": "2016-10-14 10:45:42 +0000",
-"c": "[twttr#2064]",
 }, /*************************************************************************/ {
 "f": true, 
 "x": "There's a button to delete your whole account if less than a week old or no active goals. The rest of <a href=\"http://doc.beeminder.com/byebyebee\">doc.beeminder.com/byebyebee</a> coming later.",
 "u": "https://twitter.com/beemuvi/status/786880716357242880",
 "t": "2016-10-14 10:45:56 +0000",
-"c": "[twttr#2065]",
 }, /*************************************************************************/ {
 "f": true, 
 "x": "Table of reminder settings for all goals can sort by goal, deadline, zenostart, etc. Nice for setting up waterfalls: http://blog.beeminder.com/waterfalls",
 "u": "https://twitter.com/beemuvi/status/786880786796470277",
 "t": "2016-10-14 10:46:13 +0000",
-"c": "[twttr#2066]",
 }, /*************************************************************************/ {
 "f": true, 
 "x": "Togglable buttons telling you the bare min or hard cap you need in terms of either the delta or the absolute number.",
 "u": "https://twitter.com/beemuvi/status/786880846280007680",
 "t": "2016-10-14 10:46:27 +0000",
-"c": "[twttr#2067]",
 }, /*************************************************************************/ {
 "x": "The buttons for delta vs absolute (and for absolute vs \"t minus\" deadline time) remember which way you like them per goal",
 "u": "https://twitter.com/beemuvi/status/786880910599663616",
 "t": "2016-10-14 10:46:43 +0000",
-"c": "[twttr#2068]",
 }, /*************************************************************************/ {
 "f": true, 
 "x": "Handy asterisk on the pledge telling you when you've hit your pledge cap, plus clearer indicator of pending pledge step-down",
 "u": "https://twitter.com/beemuvi/status/786881022365274112",
 "t": "2016-10-14 10:47:09 +0000",
-"c": "[twttr#2069]",
 }, /*************************************************************************/ {
 "f": true, 
 "x": "New dashboard lets you expand/collapse individual goals (pro-tip: use it like a to-do list, collapsing when done with a goal for the day)",
 "u": "https://twitter.com/beemuvi/status/786881087771291649",
 "t": "2016-10-14 10:47:25 +0000",
-"c": "[twttr#2070]",
 }, /*************************************************************************/ {
 "x": "You can now choose today vs yesterday when entering data from the dashboard.",
 "u": "https://twitter.com/beemuvi/status/786881149297582080",
 "t": "2016-10-14 10:47:40 +0000",
-"c": "[twttr#2071]",
 }, /*************************************************************************/ {
 "x": "For autodata goals on the dashboard we have the icon for the data source and a nice hexagonal \"force a fetch of more data\" button",
 "u": "https://twitter.com/beemuvi/status/786881244835352576",
 "t": "2016-10-14 10:48:02 +0000",
-"c": "[twttr#2072]",
 }, /*************************************************************************/ {
 "x": "Data entry now shows the goal units (not to mention all the increased prettiness, but that applies everywhere)",
 "u": "https://twitter.com/beemuvi/status/786881301190062083",
 "t": "2016-10-14 10:48:16 +0000",
-"c": "[twttr#2073]",
 }, /*************************************************************************/ {
 "x": "The banner messages that appear at the top are much nicer, disappearing when it makes sense to and persisting otherwise",
 "u": "https://twitter.com/beemuvi/status/786881426809458688",
 "t": "2016-10-14 10:48:46 +0000",
-"c": "[twttr#2074]",
 }, /*************************************************************************/ {
 "f": true, 
 "x": "Arguably a negative UVI but since we're drastically undercounting anyway: we killed the auto-quit feature. It was deeply unbeemindery!",
 "u": "https://twitter.com/beemuvi/status/786881519465828352",
 "t": "2016-10-14 10:49:08 +0000",
-"c": "[twttr#2075]",
 }, /*************************************************************************/ {
 "x": "The Data tab is updated immediately when you add data and there's a \"stats out of date\" warning as a stopgap instead of just being stale",
 "u": "https://twitter.com/beemuvi/status/786881593432346624",
 "t": "2016-10-14 10:49:26 +0000",
-"c": "[twttr#2076]",
 }, /*************************************************************************/ {
 "f": true, 
 "x": "You can now instantly delete goals from your gallery of archived goals",
 "u": "https://twitter.com/beemuvi/status/786881673879093248",
 "t": "2016-10-14 10:49:45 +0000",
-"c": "[twttr#2077]",
 }, /*************************************************************************/ {
 "x": "So much confusing stuff now out of newbees' line of sight but all still conveniently acceessible in the tabs below the graph",
 "u": "https://twitter.com/beemuvi/status/786881734113583104",
 "t": "2016-10-14 10:49:59 +0000",
-"c": "[twttr#2078]",
 }, /*************************************************************************/ {
 "f": true, 
 "x": "Tagging! Manage tags at http://beeminder.com/tags &amp; then filter your dashboard via url-hacking, eg bmndr.com/user#tag or #!tag to exclude",
 "u": "https://twitter.com/beemuvi/status/786881906780450816",
 "t": "2016-10-14 10:50:40 +0000",
-"c": "[twttr#2079]",
 }, /*************************************************************************/ {
 "x": "Tagging is multiple UVIs' worth so we'll use this tweet to say that, yes, a real UI is coming. Current version subsumes backburnering.",
 "u": "https://twitter.com/beemuvi/status/786881988267417600",
 "t": "2016-10-14 10:51:00 +0000",
-"c": "[twttr#2080]",
 }, /*************************************************************************/ {
 "f": true, 
 "x": "Negative UVI but it was really a confusing, dangerous feature: backburnering is dead. Tag things \"backburner\" &amp; filter them out instead!",
 "u": "https://twitter.com/beemuvi/status/786882069049675776",
 "t": "2016-10-14 10:51:19 +0000",
-"c": "[twttr#2081]",
 }, /*************************************************************************/ {
 "x": "We now use the live time-bomb countdown for goals within a week of derailing and say \"months\" &amp; \"years\" for goals with far deadlines",
 "u": "https://twitter.com/beemuvi/status/786882164671389696",
 "t": "2016-10-14 10:51:42 +0000",
-"c": "[twttr#2082]",
 }, /*************************************************************************/ {
 "x": "Final row of the road editor is insta-updated when using the normal road dial (was moot in old design but nice having these on same page)",
 "u": "https://twitter.com/beemuvi/status/786882239460024320",
 "t": "2016-10-14 10:52:00 +0000",
-"c": "[twttr#2083]",
 }, /*************************************************************************/ {
 "x": "New, helpful placeholder text in fields in the goal creation wizard",
 "u": "https://twitter.com/beemuvi/status/786883231844970496",
 "t": "2016-10-14 10:55:56 +0000",
-"c": "[twttr#2084]",
 }, /*************************************************************************/ {
 "x": "We separated reminder defaults from other goal defaults. Two submit buttons on one page separated by lots of scrolling was a mess.",
 "u": "https://twitter.com/beemuvi/status/786883283455913984",
 "t": "2016-10-14 10:56:09 +0000",
-"c": "[twttr#2085]",
 }, /*************************************************************************/ {
 "x": "Huge amount of aesthetic improvements &amp; UI tweaks, hexagonal buttons, etc etc. This concludes the main tweetstorm for the redesign! (26/26)",
 "u": "https://twitter.com/beemuvi/status/786883348081745922",
 "t": "2016-10-14 10:56:24 +0000",
-"c": "[twttr#2086]",
 }, /*************************************************************************/ {
 "x": "Redesign broke <a href=\"https://twitter.com/habitica\">@habitica</a> goal creation briefly! Newly created goals were failing to pick up new To-dos. #bugfix",
 "u": "https://twitter.com/beemuvi/status/787560786491084800",
 "t": "2016-10-16 07:48:18 +0000",
-"c": "[twttr#2087]",
 }, /*************************************************************************/ {
 "x": "We now actually make sure the repo you want to mind exists and that you have access to it when you create a Gitminder goal",
 "u": "https://twitter.com/beemuvi/status/788966010711748608",
 "t": "2016-10-20 04:52:09 +0000",
-"c": "[twttr#2088]",
 }, /*************************************************************************/ {
 "x": "When we launched the redesign we showed your full name in the public version of your gallery; that was a bad choice and we undid it that day",
 "u": "https://twitter.com/beemuvi/status/788967288862978048",
 "t": "2016-10-20 04:57:14 +0000",
-"c": "[twttr#2089]",
 }, /*************************************************************************/ {
 "x": "In Withings goal creation we now validate that you give us an initial weight (though this seems to not work in Safari, frustratingly) #mini",
 "u": "https://twitter.com/beemuvi/status/789330172512055296",
 "t": "2016-10-21 04:59:12 +0000",
-"c": "[twttr#2090]",
 }, /*************************************************************************/ {
 "x": "We now remember which goals on the dashboard you expanded/collapsed (&amp; #bugfix today: it used to not work if you started from all-expanded)",
 "u": "https://twitter.com/beemuvi/status/789690493659590656",
 "t": "2016-10-22 04:51:00 +0000",
-"c": "[twttr#2091]",
 }, /*************************************************************************/ {
 "x": "Smarter use of \"Sun night\", \"tomorrow\", etc in deadline blurbs. Eg, saying \"tomorrow\" instead of \"Sun\" if within 24 hours of the deadline.",
 "u": "https://twitter.com/beemuvi/status/790054778101387268",
 "t": "2016-10-23 04:58:32 +0000",
-"c": "[twttr#2092]",
 }, /*************************************************************************/ {
 "x": "Fixed several cases (eg, the help text for the Due By table) of saying Value instead of Total or vice versa. #mini",
 "u": "https://twitter.com/beemuvi/status/790412051285962752",
 "t": "2016-10-24 04:38:12 +0000",
-"c": "[twttr#2093]",
 }, /*************************************************************************/ {
 "x": "When you check or uncheck the Pessimistic Presumptive checkbox it instantly saves the setting and tells you so. Other settings to follow.",
 "u": "https://twitter.com/beemuvi/status/790777828337823745",
 "t": "2016-10-25 04:51:40 +0000",
-"c": "[twttr#2094]",
 }, /*************************************************************************/ {
 "x": "More things we forgot to include in the redesign tweetstorm: stepper buttons for datapoint values etc, displaying far future dates in years.",
 "u": "https://twitter.com/beemuvi/status/791502519142801408",
 "t": "2016-10-27 04:51:20 +0000",
-"c": "[twttr#2095]",
 }, /*************************************************************************/ {
 "x": "If you loaded the goal page and there was no previous datapoint then we were giving a 500 error. #bugfix",
 "u": "https://twitter.com/beemuvi/status/791867035282124800",
 "t": "2016-10-28 04:59:48 +0000",
-"c": "[twttr#2096]",
 }, /*************************************************************************/ {
 "n": 2098,
 "x": "Similarly when there was an error preventing the graph from generating. We'll say this UVI covers all similar bugs introduced by redesign.",
@@ -1586,30 +1548,25 @@ var batch2016oct = [
 "x": "We did several things with goalnames and descriptions: 1) descriptions viewable as tooltips on the dashboard;",
 "u": "https://twitter.com/beemuvi/status/792953782065737728",
 "t": "2016-10-31 04:58:08 +0000",
-"c": "[twttr#2099]",
 }, /*************************************************************************/ {
 "x": "2) We now ask for both goalname (previously known as \"slug\") and description (previously \"title\") when creating goals;",
 "u": "https://twitter.com/beemuvi/status/792953923518668800",
 "t": "2016-10-31 04:58:42 +0000",
-"c": "[twttr#2100]",
 }, /*************************************************************************/ {
 "f": true, 
 "x": "3) You can edit the description at any time at the top of the goal page;",
 "u": "https://twitter.com/beemuvi/status/792954026505621504",
 "t": "2016-10-31 04:59:06 +0000",
-"c": "[twttr#2101]",
 }, /*************************************************************************/ {
 "f": true, 
 "x": "4) Finally, to get as close as we're going to for now to the best of all worlds: click to toggle between goalname/description on dashboard",
 "u": "https://twitter.com/beemuvi/status/792954127340843008",
 "t": "2016-10-31 04:59:30 +0000",
-"c": "[twttr#2102]",
 }, /*************************************************************************/ {
 "f": true, 
 "x": "Almost forgot the biggest sluggy UVI: Anyone can edit their goalname any time (w/ big warning about breaking URLs and IFTTT recipes etc)",
 "u": "https://twitter.com/beemuvi/status/792955327108960257",
 "t": "2016-10-31 05:04:17 +0000",
-"c": "[twttr#2103]",
 }, /* --------------------------------------------------------- end 2016oct */ ]
 
 var batch2016nov = [
@@ -1617,146 +1574,118 @@ var batch2016nov = [
 "x": "Tweetstorm about the flurry of bugfixes since deploying the redesign: We broke an embarrassing number of things! 1/5",
 "u": "https://twitter.com/beemuvi/status/795689384238403584",
 "t": "2016-11-07 18:08:27 +0000",
-"c": "[twttr#2104]",
 }, /*************************************************************************/ {
 "x": "We're fixing them as fast as we can and normally each individual #bugfix would be totally fair game as a separate UVI. 2/5",
 "u": "https://twitter.com/beemuvi/status/795689428626702336",
 "t": "2016-11-07 18:08:37 +0000",
-"c": "[twttr#2105]",
 }, /*************************************************************************/ {
 "x": "But we were insufficiently careful when deploying the redesign, so, as self-punishment (&amp; due to overwhelm at the sheer number of UVIs) 3/5",
 "u": "https://twitter.com/beemuvi/status/795689487636393984",
 "t": "2016-11-07 18:08:51 +0000",
-"c": "[twttr#2106]",
 }, /*************************************************************************/ {
 "x": "...we're not going to count anything else up to today that the redesign broke, other than this tweetstorm's worth: 4/5",
 "u": "https://twitter.com/beemuvi/status/795689536902742016",
 "t": "2016-11-07 18:09:03 +0000",
-"c": "[twttr#2107]",
 }, /*************************************************************************/ {
 "x": "...which includes broken links, broken features like changing passwords, missing settings, backburner-goal brokenness in iOS, etc etc. 5/5",
 "u": "https://twitter.com/beemuvi/status/795689611276079104",
 "t": "2016-11-07 18:09:21 +0000",
-"c": "[twttr#2108]",
 }, /*************************************************************************/ {
 "f": true, 
 "x": "There's no longer any limit on the number of days of initial safety buffer when creating a goal",
 "u": "https://twitter.com/beemuvi/status/796593746171330560",
 "t": "2016-11-10 06:02:03 +0000",
-"c": "[twttr#2109]",
 }, /*************************************************************************/ {
 "x": "Collection of #mini UVIs: Ellipses for long goalnames, header for data entry box, more readable data table when it's not editable",
 "u": "https://twitter.com/beemuvi/status/796594154193174528",
 "t": "2016-11-10 06:03:41 +0000",
-"c": "[twttr#2110]",
 }, /*************************************************************************/ {
 "x": "If you accidentally try to submit a datapoint without filling in the value it now turns the field red so it's nice and obvious what happened",
 "u": "https://twitter.com/beemuvi/status/796951453675888640",
 "t": "2016-11-11 05:43:27 +0000",
-"c": "[twttr#2111]",
 }, /*************************************************************************/ {
 "x": "Fixed some cases in alerts where we used the old \"title\" (what's now the goal description) to identify goals instead of the goalname #bugfix",
 "u": "https://twitter.com/beemuvi/status/797316222979190784",
 "t": "2016-11-12 05:52:55 +0000",
-"c": "[twttr#2112]",
 }, /*************************************************************************/ {
 "x": "Changing the rate units in the road dial now does the arithmetic for you, like turning 7/week into 1/day, immediately, before hitting submit",
 "u": "https://twitter.com/beemuvi/status/797316266113384448",
 "t": "2016-11-12 05:53:05 +0000",
-"c": "[twttr#2113]",
 }, /*************************************************************************/ {
 "x": "Minis: Query tags case-insensitively, road editor from Commitment to Settings tab, #bugfix's w/ submit button &amp; enforcing ratchet bounds",
 "u": "https://twitter.com/beemuvi/status/797386111844634624",
 "t": "2016-11-12 10:30:38 +0000",
-"c": "[twttr#2114]",
 }, /*************************************************************************/ {
 "x": "A kludge but a very noticeable improvement: we no longer let you insta-derail yourself by ratcheting the day after derailing",
 "u": "https://twitter.com/beemuvi/status/798029264482205696",
 "t": "2016-11-14 05:06:17 +0000",
-"c": "[twttr#2115]",
 }, /*************************************************************************/ {
 "x": "Minis: 1. when showing the goalname, show goal description as hovertext; 2. jump straight to 1 when clicking the plus for datapoint value",
 "u": "https://twitter.com/beemuvi/status/798029346191523840",
 "t": "2016-11-14 05:06:37 +0000",
-"c": "[twttr#2116]",
 }, /*************************************************************************/ {
 "x": "The hashtag-minding part of our Twitter integration was broken since forever (workaround was via IFTTT) but is now fixed. #bugfix",
 "u": "https://twitter.com/beemuvi/status/798400706684325888",
 "t": "2016-11-15 05:42:16 +0000",
-"c": "[twttr#2117]",
 }, /*************************************************************************/ {
 "f": true, 
 "x": "URLminder is an official integration! Automatically mind wordcounts of documents at any publicly accessible URLs. http://blog.beeminder.com/urlminder",
 "u": "https://twitter.com/beemuvi/status/798403764730335232",
 "t": "2016-11-15 05:54:25 +0000",
-"c": "[twttr#2118]",
 }, /*************************************************************************/ {
 "f": true, 
 "x": "We magically turn links to google docs into the plaintext version for URLminder so we get the real wordcount without extraneous html",
 "u": "https://twitter.com/beemuvi/status/798753369590415361",
 "t": "2016-11-16 05:03:38 +0000",
-"c": "[twttr#2119]",
 }, /*************************************************************************/ {
 "f": true, 
 "x": "New NaNoWriMo landing page with buttons for automatic and manual tracking: https://www.beeminder.com/nanowrimo",
 "u": "https://twitter.com/beemuvi/status/798946296245538816",
 "t": "2016-11-16 17:50:15 +0000",
-"c": "[twttr#2120]",
 }, /*************************************************************************/ {
 "x": "If you have a pledge stepdown scheduled you can set the pledge cap to what it's stepping down to; removed most of the confusing interactions",
 "u": "https://twitter.com/beemuvi/status/798946475661082624",
 "t": "2016-11-16 17:50:58 +0000",
-"c": "[twttr#2121]",
 }, /*************************************************************************/ {
 "x": "If you create a goal with only post-dated data we now give a more elucidating error about why we can't show you a graph. #mini",
 "u": "https://twitter.com/beemuvi/status/798946847561682944",
 "t": "2016-11-16 17:52:26 +0000",
-"c": "[twttr#2122]",
 }, /*************************************************************************/ {
 "x": "Fixed old instance of calling Habitica HabitRPG in bot email, fixed bug that made us miss points on Duolingo for Norwegian. #bugfix",
 "u": "https://twitter.com/beemuvi/status/799842000199557124",
 "t": "2016-11-19 05:09:27 +0000",
-"c": "[twttr#2123]",
 }, /*************************************************************************/ {
 "x": "Mostly fixed the problem with missing graph images on the dashboard (but it still happens occasionally...). #bugfix #mostly #staytuned",
 "u": "https://twitter.com/beemuvi/status/799843648477085698",
 "t": "2016-11-19 05:16:00 +0000",
-"c": "[twttr#2124]",
 }, /*************************************************************************/ {
 "x": "When we email you about an error in an IFTTT recipe we now include a link to the errant recipe. Handy!",
 "u": "https://twitter.com/beemuvi/status/799843707377762304",
 "t": "2016-11-19 05:16:14 +0000",
-"c": "[twttr#2125]",
 }, /*************************************************************************/ {
 "x": "Fixed a 500 error when restarting an old GmailZero goal from before Google oauth params changed. Now backwards compatible. #bugfix #mini",
 "u": "https://twitter.com/beemuvi/status/800570829587156992",
 "t": "2016-11-21 05:25:34 +0000",
-"c": "[twttr#2126]",
 }, /*************************************************************************/ {
 "x": "Made the thumbnails collapse nicely even when the infinibee is buzzing on top of them (and keep buzzing in collapsed form)",
 "u": "https://twitter.com/beemuvi/status/800941534828867585",
 "t": "2016-11-22 05:58:37 +0000",
-"c": "[twttr#2127]",
 }, /*************************************************************************/ {
 "x": "Thumbnails also clickable even when infinibee buzzing (especially nice now that goalnames/goalblurbs toggle instead of linking to goal page)",
 "u": "https://twitter.com/beemuvi/status/801209403680534530",
 "t": "2016-11-22 23:43:02 +0000",
-"c": "[twttr#2128]",
 }, /*************************************************************************/ {
 "x": "If goalname &amp; blurb are same except case, don't toggle betw them on dashboard (looked like we'd implemented idiotic case-toggling feature!)",
 "u": "https://twitter.com/beemuvi/status/801665146833682432",
 "t": "2016-11-24 05:53:59 +0000",
-"c": "[twttr#2129]",
 }, /*************************************************************************/ {
 "x": "If a goal is coasting (will hit goal value by goal date even if you do/report nothing) we now show it green w/ the correct wording. #bugfix",
 "u": "https://twitter.com/beemuvi/status/803477367284854784",
 "t": "2016-11-29 05:55:06 +0000",
-"c": "[twttr#2130]",
 }, /*************************************************************************/ {
 "x": "Fixed longstanding bug that would sometimes insta-derail you when importing old RescueTime &amp; Withings data when creating goals. #bugfix",
 "u": "https://twitter.com/beemuvi/status/803839253209841664",
 "t": "2016-11-30 05:53:07 +0000",
-"c": "[twttr#2131]",
 }, /* --------------------------------------------------------- end 2016nov */ ]
 
 var batch2016dec = [
@@ -1764,122 +1693,100 @@ var batch2016dec = [
 "x": "Dumb #bugfix w/ Fitbit goal creation: gave error if you didn't change the default settings. (ps: bugs intro'd by redesign count again now)",
 "u": "https://twitter.com/beemuvi/status/804203048876707840",
 "t": "2016-12-01 05:58:42 +0000",
-"c": "[twttr#2132]",
 }, /*************************************************************************/ {
 "x": "If a goalname's disallowed (eg \"gallery\" or existing goalnames) also disallow uppercase variants like \"Gallery\" or things break. #bugfix",
 "u": "https://twitter.com/beemuvi/status/804563392736309249",
 "t": "2016-12-02 05:50:35 +0000",
-"c": "[twttr#2133]",
 }, /*************************************************************************/ {
 "x": "Embarrassingly there was a full month after the redesign when we set everyone's default timezone to US Eastern time. #bugfix",
 "u": "https://twitter.com/beemuvi/status/805932011823058944",
 "t": "2016-12-06 00:28:59 +0000",
-"c": "[twttr#2134]",
 }, /*************************************************************************/ {
 "x": "We rewrote the copy at http://beeminder.com/money which was a little broken since the Infinibee premium revamp. #mini",
 "u": "https://twitter.com/beemuvi/status/806291684287840256",
 "t": "2016-12-07 00:18:12 +0000",
-"c": "[twttr#2135]",
 }, /*************************************************************************/ {
 "x": "GmailZero #bugfix in which we were fetching your initial inbox count but then starting your road at 0 anyway for a while.",
 "u": "https://twitter.com/beemuvi/status/806623799793725440",
 "t": "2016-12-07 22:17:54 +0000",
-"c": "[twttr#2136]",
 }, /*************************************************************************/ {
 "x": "Our Garmin stepcounts were sometimes too low. Garmin's granular API didn't agree with its summary data. We now use summary. #bugfix",
 "u": "https://twitter.com/beemuvi/status/806623898062028800",
 "t": "2016-12-07 22:18:18 +0000",
-"c": "[twttr#2137]",
 }, /*************************************************************************/ {
 "x": "Fixed small bug with plus/minus buttons for data entry on odometer goals, and fixed a link to reminder settings in bot emails. #bugfix",
 "u": "https://twitter.com/beemuvi/status/807388679672995841",
 "t": "2016-12-10 00:57:16 +0000",
-"c": "[twttr#2138]",
 }, /*************************************************************************/ {
 "x": "By popular demand: our blog has a (<a href=\"https://twitter.com/duckduckgo\">@duckduckgo</a>) searchbox. Seek &amp; ye shall find. Dark days of adding \"beeminder blog\" to a web search: over!",
 "u": "https://twitter.com/beemuvi/status/807738794199764993",
 "t": "2016-12-11 00:08:30 +0000",
-"c": "[twttr#2139]",
 }, /*************************************************************************/ {
 "x": "Yet another bug from redesign: If you signed up via Google oauth and then created a Do More goal we'd create it as a GmailZero goal. #bugfix",
 "u": "https://twitter.com/beemuvi/status/808022048647712768",
 "t": "2016-12-11 18:54:03 +0000",
-"c": "[twttr#2140]",
 }, /*************************************************************************/ {
 "x": "Fixed an intermittent bug where you'd hit archive &amp; the goal would mysteriously not archive if a previous goal w/ that name existed. #bugfix",
 "u": "https://twitter.com/beemuvi/status/808476512085123072",
 "t": "2016-12-13 00:59:55 +0000",
-"c": "[twttr#2141]",
 }, /*************************************************************************/ {
 "x": "Nasty bug with our <a href=\"https://twitter.com/habitica\">@habitica</a> integration: all the Fewer To-Dos goals were being created as Do Mores (redesign bug). #bugfix",
 "u": "https://twitter.com/beemuvi/status/808837896882921472",
 "t": "2016-12-14 00:55:56 +0000",
-"c": "[twttr#2142]",
 }, /*************************************************************************/ {
 "x": "And a separate bug w/ our <a href=\"https://twitter.com/habitica\">@habitica</a> integration: for Do More goals we were starting the yellow brick road too high by 1 To-Do. #bugfix",
 "u": "https://twitter.com/beemuvi/status/808840093418983424",
 "t": "2016-12-14 01:04:40 +0000",
-"c": "[twttr#2143]",
 }, /*************************************************************************/ {
 "f": true,
 "x": "Version 4.4 of the Beeminder iOS app is live! Most important for brand new users: you can now create a Beeminder account from it.",
 "u": "https://twitter.com/beemuvi/status/809560659608244224",
 "t": "2016-12-16 00:47:56 +0000",
-"c": "[twttr#2144]",
 }, /*************************************************************************/ {
+"n": 2146,
 "x": "Also in the new version of the iOS app: a Reset Data button to reload all goals, no more backburner dividing line, ...",
 "u": "https://twitter.com/beemuvi/status/809560694211260416",
 "t": "2016-12-16 00:48:05 +0000",
-"c": "[twttr#2145] (numbered 2146 in non-Twitter version)",
 }, /*************************************************************************/ {
 "x": "Version 4.4 of iOS app cont'd: Bug fixes in push notifications, &amp; you can tap Create Goal to go to the website pre-logged-in to create goals.",
 "u": "https://twitter.com/beemuvi/status/809560747353067521",
 "t": "2016-12-16 00:48:17 +0000",
-"c": "[twttr#2146]",
 }, /*************************************************************************/ {
 "x": "Marginally better \"doom text\" for weight loss; bigger body font; made 3rd-party font library local cuz it was killing response time. #mini",
 "u": "https://twitter.com/beemuvi/status/810592247695757312",
 "t": "2016-12-18 21:07:06 +0000",
-"c": "[twttr#2147]",
 }, /*************************************************************************/ {
 "x": "Fixed broken CSS on various autodata landing pages and the unsubscribe page.",
 "u": "https://twitter.com/beemuvi/status/811013054733303808",
 "t": "2016-12-20 00:59:14 +0000",
-"c": "[twttr#2148]",
 }, /*************************************************************************/ {
 "x": "Fixed bunch of cases where we used goal description instead of goalname, which to some people's chagrin is now the universal goal identifier.",
 "u": "https://twitter.com/beemuvi/status/811359054354214912",
 "t": "2016-12-20 23:54:07 +0000",
-"c": "[twttr#2149]",
 }, /*************************************************************************/ {
 "x": "Fixed a bug involving the pledge amount being in two places. Now it's still in commitment settings too but pops up the same modal. #bugfix",
 "u": "https://twitter.com/beemuvi/status/811359151787884544",
 "t": "2016-12-20 23:54:30 +0000",
-"c": "[twttr#2150]",
 }, /*************************************************************************/ {
 "x": "Moved password to separate section in settings which fixed bug w/ some browsers that wouldn't let you change settings w/o changing password",
 "u": "https://twitter.com/beemuvi/status/811359256058310656",
 "t": "2016-12-20 23:54:55 +0000",
-"c": "[twttr#2151]",
 }, /*************************************************************************/ {
 "x": "For over a month after the redesign we had a bug that let you sometimes create pledgeless goals w/out a premium plan. Gasp! #bugfix",
 "u": "https://twitter.com/beemuvi/status/812460206638514177",
 "t": "2016-12-24 00:49:42 +0000",
-"c": "[twttr#2152]",
 }, /*************************************************************************/ {
 "x": "If you sent auth token but didn't specify the user we 500'd even tho w/ auth token it had to be you that you're requesting for. API #bugfix",
 "u": "https://twitter.com/beemuvi/status/812819049545539585",
 "t": "2016-12-25 00:35:37 +0000",
-"c": "[twttr#2153]",
 }, /*************************************************************************/ {
 "x": "Critical #bugfix w/ iOS app that made us fail to push reminders under some mysterious circumstances involving frozen/archived goals.",
 "u": "https://twitter.com/beemuvi/status/813162766903099392",
 "t": "2016-12-25 23:21:26 +0000",
-"c": "[twttr#2154]",
 }, /*************************************************************************/ {
+"n": 2156,
 "x": "Fixed a couple small bugs with trying to get a premium plan without being initially logged in. #bugfix HT <a href=\"https://twitter.com/pennockd\">@pennockd</a>",
 "u": "https://twitter.com/beemuvi/status/813549465457958912",
 "t": "2016-12-27 00:58:02 +0000",
-"c": "[twttr#2155]",
 }, /* --------------------------------------------------------- end 2016dec */ ]
 
