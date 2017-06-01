@@ -19,5 +19,3 @@ Also it would be nice if it were easy to totally migrate away from Twitter in th
 1. Codemod (fixed bug, bugfixed, `bug.*fix`, etc) -> append '#bugfix'
 1. Pick featured UVIs through June 2013 when we started doing that
 1. Filtering options like only showing bugfixes, non-bugfixes, featured, etc
-1. Get rid of all the [foo#123] tags
-

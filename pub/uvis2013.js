@@ -158,7 +158,7 @@ var batch2013feb = [
 "t": "2013-02-12 06:06:53 +0000",
 "c": "",
 }, /*************************************************************************/ {
-"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: Precommit to Recommit: The Third Great Beeminder Epiphany. <a href=\"http://j.mp/X6pesD\">j.mp/X6pesD</a> (blog post about a new feature + nudge psychology)",
+"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: Precommit to Recommit: The Third Great Beeminder Epiphany. http://blog.beeminder.com/recommit/ (blog post about a new feature + nudge psychology)",
 "u": "https://twitter.com/bmndr/status/301505557293056000",
 "t": "2013-02-13 01:38:21 +0000",
 "c": "",
@@ -657,7 +657,7 @@ var batch2013may = [
 "t": "2013-05-18 04:45:38 +0000",
 "c": "",
 }, /*************************************************************************/ {
-"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: New version of the Beeminder Android app: Simplified goal screen, faster sync, and bug fixes: <a href=\"http://j.mp/19KMT80\">j.mp/19KMT80</a>",
+"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: New version of the Beeminder Android app: Simplified goal screen, faster sync, and bug fixes: https://play.google.com/store/apps/details?id=com.beeminder.beeminder",
 "u": "https://twitter.com/bmndr/status/335775579611729923",
 "t": "2013-05-18 15:15:11 +0000",
 "c": "",
@@ -677,10 +677,10 @@ var batch2013may = [
 "t": "2013-05-22 17:56:48 +0000",
 "c": "",
 }, /*************************************************************************/ {
-"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: RT <a href=\"https://twitter.com/duolingo\">@duolingo</a>: Cool! Now you can use Beeminder to keep up your streak on Duolingo: <a href=\"http://j.mp/16fa4ep\">j.mp/16fa4ep</a>",
+"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: RT <a href=\"https://twitter.com/duolingo\">@duolingo</a>: Cool! Now you can use Beeminder to keep up your streak on Duolingo: http://blog.beeminder.com/duolingo/",
 "u": "https://twitter.com/bmndr/status/338044698461614081",
 "t": "2013-05-24 21:31:51 +0000",
-"c": "",
+"c": "This was huge for us, having Duolingo tweet about us",
 }, /*************************************************************************/ {
 "x": "Bugfix: Archived goals weren't getting cleanly/properly ended; was a problem when unarchiving/restarting <a href=\"https://trello.com/card/ending-archived-goals/4f079dbc30a67d1864012d6b/618\">trello.com/card/ending-archived-goals/4f079dbc30a67d1864012d6b/618</a>",
 "u": "https://twitter.com/beemuvi/status/338514125044973568",
@@ -835,7 +835,7 @@ var batch2013jun = [
 "t": "2013-06-23 19:39:30 +0000",
 "c": "",
 }, /*************************************************************************/ {
-"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: Zeno polling! <a href=\"http://j.mp/1aIpJlP\">j.mp/1aIpJlP</a> (New blog post about a new Beeminder feature, plus another crash of ineptitude mea culpa)",
+"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: Zeno polling! http://blog.beeminder.com/zeno (New blog post about a new Beeminder feature, plus another crash of ineptitude mea culpa)",
 "u": "https://twitter.com/bmndr/status/349260505120116736",
 "t": "2013-06-24 20:19:28 +0000",
 "c": "",
@@ -1493,7 +1493,7 @@ var batch2013oct = [
 "t": "2013-10-31 06:26:48 +0000",
 "c": "",
 }, /*************************************************************************/ {
-"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: Announcing <a href=\"https://twitter.com/gooddraft\">@gooddraft</a> integration and other <a href=\"https://twitter.com/NaNoWriMo\">@NaNoWriMo</a> goodies: <a href=\"http://j.mp/1ctqymm\">j.mp/1ctqymm</a>",
+"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: Announcing <a href=\"https://twitter.com/gooddraft\">@gooddraft</a> integration and other <a href=\"https://twitter.com/NaNoWriMo\">@NaNoWriMo</a> goodies: http://blog.beeminder.com/draft/",
 "u": "https://twitter.com/bmndr/status/396108080783839232",
 "t": "2013-11-01 02:55:00 +0000",
 "c": "",

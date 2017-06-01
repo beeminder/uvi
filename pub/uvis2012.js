@@ -1274,7 +1274,7 @@ var batch2012sep = [
 "t": "2012-09-12 21:42:34 +0000",
 "c": "",
 }, /*************************************************************************/ {
-"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: New blog post: Failing your Goals with Beeminder (guest post on Anki and Habitualization by Paul Fenwick (<a href=\"https://twitter.com/pjf\">@pjf</a>)): <a href=\"http://j.mp/Q8GmLg\">j.mp/Q8GmLg</a>",
+"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: New blog post: Failing your Goals with Beeminder (guest post on Anki and Habitualization by Paul Fenwick (<a href=\"https://twitter.com/pjf\">@pjf</a>)): http://blog.beeminder.com/habits/",
 "u": "https://twitter.com/bmndr/status/246673189005049858",
 "t": "2012-09-14 18:14:05 +0000",
 "c": "",
@@ -1299,7 +1299,7 @@ var batch2012sep = [
 "t": "2012-09-19 22:31:12 +0000",
 "c": "",
 }, /*************************************************************************/ {
-"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: We're moving to <a href=\"https://twitter.com/trello\">@trello</a> to track our To-Dos and all our boards are wide open to the public: <a href=\"http://j.mp/P3UlSN\">j.mp/P3UlSN</a>",
+"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: We're moving to <a href=\"https://twitter.com/trello\">@trello</a> to track our To-Dos and all our boards are wide open to the public: https://trello.com/beeminder",
 "u": "https://twitter.com/bmndr/status/248900791098810368",
 "t": "2012-09-20 21:45:47 +0000",
 "c": "",
@@ -1334,7 +1334,7 @@ var batch2012sep = [
 "t": "2012-09-21 22:58:22 +0000",
 "c": "",
 }, /*************************************************************************/ {
-"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: New blog post about Gmail Zero: Beeminding Your Inbox -- <a href=\"http://j.mp/TgiNGR\">j.mp/TgiNGR</a> (with source code and everything) cc <a href=\"https://twitter.com/dyang\">@dyang</a>",
+"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: New blog post about Gmail Zero: Beeminding Your Inbox -- http://blog.beeminder.com/gmailzero/ (with source code and everything) cc <a href=\"https://twitter.com/dyang\">@dyang</a>",
 "u": "https://twitter.com/bmndr/status/249527266219016193",
 "t": "2012-09-22 15:15:10 +0000",
 "c": "",
@@ -1374,7 +1374,7 @@ var batch2012sep = [
 "t": "2012-09-29 05:30:02 +0000",
 "c": "",
 }, /*************************************************************************/ {
-"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: New blog post, sort of piling on the <a href=\"https://twitter.com/MongoDB\">@MongoDB</a> hatefest: Destroy All! <a href=\"http://j.mp/PC8PcM\">j.mp/PC8PcM</a>",
+"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: New blog post, sort of piling on the <a href=\"https://twitter.com/MongoDB\">@MongoDB</a> hatefest: Destroy All! http://blog.beeminder.com/mongo/",
 "u": "https://twitter.com/bmndr/status/252426373807869952",
 "t": "2012-09-30 15:15:12 +0000",
 "c": "",
@@ -1387,7 +1387,7 @@ var batch2012oct = [
 "t": "2012-10-03 07:09:03 +0000",
 "c": "",
 }, /*************************************************************************/ {
-"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: New on <a href=\"https://twitter.com/bmndr\">@bmndr</a> blog: The One Must-Do Task Each Day. Ingeniously simple productivity scheme IMHO! <a href=\"http://j.mp/POTshn\">j.mp/POTshn</a> &amp; <a href=\"http://j.mp/UbLCo4\">j.mp/UbLCo4</a>",
+"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: New on <a href=\"https://twitter.com/bmndr\">@bmndr</a> blog: The One Must-Do Task Each Day. Ingeniously simple productivity scheme IMHO! http://blog.beeminder.com/mustdo/ &amp; http://markforster.squarespace.com/blog/2012/10/3/the-one-must-do-task-each-day.html",
 "u": "https://twitter.com/bmndr/status/253513579247058944",
 "t": "2012-10-03 15:15:22 +0000",
 "c": "",
@@ -1437,7 +1437,7 @@ var batch2012oct = [
 "t": "2012-10-11 19:38:49 +0000",
 "c": "",
 }, /*************************************************************************/ {
-"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: Happy First Birthday to Beeminder! <a href=\"http://j.mp/Pw1cJb\">j.mp/Pw1cJb</a>",
+"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: Happy First Birthday to Beeminder! http://blog.beeminder.com/one/",
 "u": "https://twitter.com/bmndr/status/257632900156096514",
 "t": "2012-10-15 00:04:04 +0000",
 "c": "",
@@ -1502,15 +1502,17 @@ var batch2012oct = [
 "t": "2012-10-25 18:35:26 +0000",
 "c": "",
 }, /*************************************************************************/ {
-"x": "Fixed some mainly cosmetic glitches with the new goal form: <a href=\"https://trello.com/c/vDRlKe0m\">trello.com/c/vDRlKe0m</a> &amp; <a href=\"https://trello.com/c/p3jLkc66\">trello.com/c/p3jLkc66</a> (more awesmness frm <a href=\"https://twitter.com/andrewpbrett\">@andrewpbrett</a>)",
+"x": "Fixed some mainly cosmetic glitches with the new goal form: <a href=\"https://trello.com/c/vDRlKe0m\">trello.com/c/vDRlKe0m</a> &amp; <a href=\"https://trello.com/c/p3jLkc66\">trello.com/c/p3jLkc66</a> (more awesomeness frm <a href=\"https://twitter.com/andrewpbrett\">@andrewpbrett</a>)",
 "u": "https://twitter.com/beemuvi/status/261537360766976001",
 "t": "2012-10-25 18:39:00 +0000",
 "c": "",
 }, /*************************************************************************/ {
-"x": "Single biggest UVI tweet ever: Android app -- <a href=\"https://play.google.com/store/apps/details?id=com.beeminder.beeminder\">play.google.com/store/apps/details?id=com.beeminder.beeminder</a> -- and iPhone app -- <a href=\"https://itunes.apple.com/us/app/beeminder/id551869729\">itunes.apple.com/us/app/beeminder/id551869729</a> -- officially launched!",
+"n": 619,
+"f": true,
+"x": "Single biggest UVI tweet ever: <a href=\"https://play.google.com/store/apps/details?id=com.beeminder.beeminder\">Android app</a> and <a href=\"https://itunes.apple.com/us/app/beeminder/id551869729\">iPhone app</a> officially launched!",
 "u": "https://twitter.com/beemuvi/status/261926023090810880",
 "t": "2012-10-26 20:23:24 +0000",
-"c": "",
+"c": "Note from the future: not sure why we didn't make those at least 2 distinct UVIs!",
 }, /*************************************************************************/ {
 "x": "Fixed a bug where changing your goal date when inside the akrasia horizon made it flatten the road back to last dialing.  HT <a href=\"https://twitter.com/jmillikin\">@jmillikin</a>",
 "u": "https://twitter.com/beemuvi/status/262084333806952448",
@@ -1522,10 +1524,11 @@ var batch2012oct = [
 "t": "2012-10-29 19:07:40 +0000",
 "c": "",
 }, /*************************************************************************/ {
-"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: Beeminder ♥ <a href=\"https://twitter.com/trello\">@trello</a>: <a href=\"http://j.mp/Q2zaWe\">j.mp/Q2zaWe</a> (announcing Trello integration). On Hacker News: <a href=\"http://j.mp/RjokWI\">j.mp/RjokWI</a>",
+"f": true,
+"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: Beeminder ♥ <a href=\"https://twitter.com/trello\">@trello</a>: http://blog.beeminder.com/trello/ (announcing Trello integration)",
 "u": "https://twitter.com/bmndr/status/263020079527120896",
 "t": "2012-10-29 20:50:48 +0000",
-"c": "",
+"c": "Originally linked to Hacker News thread but there were zero comments on it, so.",
 }, /*************************************************************************/ {
 "x": "Bug fix in breadcrumb navigation if you were on a goal page that wasn't your own (on beeminder/alice/foo would link to beeminder/you/foo)",
 "u": "https://twitter.com/beemuvi/status/263054637693825024",
@@ -1550,7 +1553,7 @@ var batch2012oct = [
 
 var batch2012nov = [
 {
-"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: Beemind Your NaNoWriMo Progress: <a href=\"http://j.mp/Q9iNXI\">j.mp/Q9iNXI</a> #nanowrimo",
+"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: Beemind Your NaNoWriMo Progress: http://blog.beeminder.com/nanowrimo/ #nanowrimo",
 "u": "https://twitter.com/bmndr/status/264086297239486465",
 "t": "2012-11-01 19:27:34 +0000",
 "c": "",
@@ -1560,7 +1563,7 @@ var batch2012nov = [
 "t": "2012-11-02 00:15:16 +0000",
 "c": "",
 }, /*************************************************************************/ {
-"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: Big improvements to the <a href=\"https://twitter.com/bmndr\">@bmndr</a> Android app: <a href=\"http://j.mp/QbItTJ\">j.mp/QbItTJ</a> . And big improvements &amp; key bugfix for ios5 coming in ~1wk for iPhone.",
+"x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: Big improvements to the <a href=\"https://twitter.com/bmndr\">@bmndr</a> Android app: https://play.google.com/store/apps/details?id=com.beeminder.beeminder . And big improvements &amp; key bugfix for ios5 coming in ~1wk for iPhone.",
 "u": "https://twitter.com/bmndr/status/264459002929373185",
 "t": "2012-11-02 20:08:34 +0000",
 "c": "",
