@@ -1,24 +1,3 @@
-/* VIM MACROS FOR MERGING W/ TWITTER EXPORT 
-Dump macro in register x to current line: "xp
-Put current line back into register x:    "xyy
-(v) Set the value attribute in the HTML to prev+1
-?<lif"lyw/<lillli value="	pa"/<li
-(w) Set the value attribute in the HTML to next-1 
-/<lif"lyw?<linllli value="	pa"	?<lin
-(h) Turn line of html to json:
-0dt"xf"x:.,.s/"/\\"/ge0i"n": 	f>xi, "x": "	$xxxxxa",	0/<li
-(j) Turn html comment to json:
-0dt<:.,.s/"/\\"/gei  "c": "$a",0/<!--n
-(m) Move line of json to matching uvi assuming unique snippet found:
-jmzkddnkkpf,lli	jdd'z0
-(c) Also move the comment down:
-jmzkddn/"c":pkJhhdt[xi l~$xxxxxa",'z
-(u) Unlinkify a URL (get rid of a-href) from opening '<':
-dth.f\dt>.x
-(s) Remove <strong> tags and say "f":true instead:
-0/<strong>dt>x/<\/strong>dt>x0O"f": true,j0
-*/
-
 var batch2015jan = [
 {
 "n": 1411,
@@ -125,7 +104,7 @@ var batch2015jan = [
 "t": "2015-01-21 23:04:32 +0000",
   "c": "<!-- [Led to going from orange => derailed instead of orange => red.] -->",
 }, /*************************************************************************/ {
-"x": "Reminder time &amp; deadline time accept time of day like \"2300\" now, &amp; error rather than die on bad input. Related to <a href=\"https://twitter.com/beemuvi/status/537117900004679680\">previous UVI</a>",
+"x": "Reminder time &amp; deadline time accept time of day like \"2300\" now, &amp; error rather than die on bad input. Related to UVI#1383.",
 "u": "https://twitter.com/beemuvi/status/559454036085055489",
 "t": "2015-01-25 20:53:31 +0000",
 }, /*************************************************************************/ {
@@ -151,7 +130,7 @@ var batch2015jan = [
 "t": "2015-01-30 21:04:38 +0000",
 "c": "Smart-submit a la https://twitter.com/beemuvi/status/344335764101926912",
 }, /*************************************************************************/ {
-"x": "Do some actual input validation on \"roadall\" in the API. HT <a href=\"http://twitter.com/chipmanaged\">@chipmanaged</a> Cf <a href=\"https://twitter.com/beemuvi/status/513396851031441409\">previous UVI</a>",
+"x": "Do some actual input validation on \"roadall\" in the API. HT <a href=\"http://twitter.com/chipmanaged\">@chipmanaged</a>. Cf UVI#1323.",
 "u": "https://twitter.com/beemuvi/status/561673097351155714",
 "t": "2015-01-31 23:51:16 +0000",
 }, /*************************************************************************/ ]
@@ -431,7 +410,7 @@ var batch2015apr = [
 "u": "https://twitter.com/beemuvi/status/584107586334535680",
 "t": "2015-04-03 21:37:55 +0000",
 }, /*************************************************************************/ {
-"x": "More prettying/concising of the \"allow this app to access your beeswax\" page [<a href=\"https://twitter.com/beemuvi/status/567469096522883072\">previous UVI</a>] and blog post authors back on front page",
+"x": "More prettying/concising of the \"allow this app to access your beeswax\" page (UVI#1457), and blog post authors back on front page",
 "u": "https://twitter.com/beemuvi/status/584475725396193280",
 "t": "2015-04-04 22:00:46 +0000",
 }, /*************************************************************************/ {
@@ -642,7 +621,7 @@ var batch2015may = [
 "u": "https://twitter.com/beemuvi/status/601895550665904128",
 "t": "2015-05-22 23:40:56 +0000",
 }, /*************************************************************************/ {
-"x": "We did this a long time ago (<a href=\"https://twitter.com/beemuvi/status/390955734386483201\">buzzing infinibee UVI</a>) then partially broke it. Should now consistently time out. #bugfix",
+"x": "We did this a long time ago (buzzing infinibee, UVI#971) then partially broke it. Should now consistently time out. #bugfix",
 "u": "https://twitter.com/beemuvi/status/602250658088030208",
 "t": "2015-05-23 23:12:00 +0000",
 "c": "Sadness because there's still periods of extreme slowness for this to happen in the first place. There's probably a way to word this that sounds more positive.",
@@ -817,7 +796,7 @@ var batch2015jun = [
 "u": "https://twitter.com/beemuvi/status/614713586493984768",
 "t": "2015-06-27 08:35:14 +0000",
 }, /*************************************************************************/ {
-"x": "Minor #bugfix w/ default y-axis label: lost units when we fixed <a href=\"https://twitter.com/beemuvi/status/603686534982819843\">this pluralization thing</a>. HT @instigate_it",
+"x": "Minor #bugfix w/ default y-axis label: lost units when we fixed a pluralization thing (UVI#1557). HT @instigate_it",
 "u": "https://twitter.com/beemuvi/status/615254613520855040",
 "t": "2015-06-28 20:25:05 +0000",
 }, /*************************************************************************/ {
@@ -1052,7 +1031,7 @@ var batch2015aug = [
 "t": "2015-08-23 06:21:36 +0000",
 "c": "We'd previously only had this come up when you clicked Cancel on a pending archive",
 }, /*************************************************************************/ {
-"x": "If you forget to hit submit on the quick-add form (right side of goal gallery) it now actually warns you. #bugfix Cf <a href=\"https://twitter.com/beemuvi/status/476413103765073920\">previous UVI</a>",
+"x": "If you forget to hit submit on the quick-add form (right side of goal gallery) it now actually warns you. #bugfix Cf UVI#1211",
 "u": "https://twitter.com/beemuvi/status/635724177966653440",
 "t": "2015-08-24 08:03:49 +0000",
 }, /*************************************************************************/ {
@@ -1528,15 +1507,14 @@ var batch2015nov = [
 
 var batch2015dec = [
 {
+"n": 1753,
 "x": "We made a new kind of coupon code for Cyber Monday where you get the 2nd period free. http://blog.beeminder.com/cybermonday",
 "u": "https://twitter.com/beemuvi/status/674686273093656576",
 "t": "2015-12-09 20:25:17 +0000",
-"c": "[twtter#1753]",
 }, /*************************************************************************/ {
 "x": "Made it way more obvious when you're using a coupon for a premium plan, by highlighting the coupon description in an green alert box",
 "u": "https://twitter.com/beemuvi/status/674710396679294976",
 "t": "2015-12-09 22:01:08 +0000",
-"c": "[twtter#1754]",
 }, /*************************************************************************/ {
 "x": "Now give nice explanatory error msg instead of a blank stare if you give a <a href=\"http://rescuetime.com\">RescueTime</a> \"key code\" instead of full key when creating a goal",
 "u": "https://twitter.com/beemuvi/status/675120449760665603",
@@ -1600,7 +1578,7 @@ var batch2015dec = [
 "t": "2015-12-24 23:24:18 +0000",
 "c": "We were just giving an infinite flat road despite saying no to 'starting flat'",
 }, /*************************************************************************/ {
-"x": "Remember <a href=\"https://twitter.com/beemuvi/status/511667442121076736\">when we fixed a trailing whitespace bug in sign-up</a>? Well the other day <a href=\"http://twitter.com/faireness\" title=\"Yes, the founders' 8-year-old daughter\">@faireness</a> noticed we still werent stripping whitespace when you actually log in :/ #bugfix",
+"x": "Remember when we fixed a trailing whitespace bug in sign-up (UVI#1315)? Well the other day <a href=\"http://twitter.com/faireness\" title=\"Yes, the founders' 8-year-old daughter\">@faireness</a> noticed we still weren't stripping whitespace when you actually log in :/ #bugfix",
 "u": "https://twitter.com/beemuvi/status/680543998302240768",
 "t": "2015-12-26 00:21:47 +0000",
 }, /*************************************************************************/ {

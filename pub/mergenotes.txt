@@ -1,0 +1,21 @@
+/* VIM MACROS FOR MERGING W/ TWITTER EXPORT 
+Dump macro in register x to current line: "xp
+Put current line back into register x:    "xyy
+(v) Set the value attribute in the HTML to prev+1
+?<lif"lyw/<lillli value="	pa"/<li
+(w) Set the value attribute in the HTML to next-1 
+/<lif"lyw?<linllli value="	pa"	?<lin
+(h) Turn line of html to json:
+0dt"xf"x:.,.s/"/\\"/ge0i"n": 	f>xi, "x": "	$xxxxxa",	0/<li
+(j) Turn html comment to json:
+0dt<:.,.s/"/\\"/gei  "c": "$a",0/<!--n
+(m) Move line of json to matching uvi assuming unique snippet found:
+jmzkddnkkpf,lli	jdd'z0
+(c) Also move the comment down:
+jmzkddn/"c":pkJhhdt[xi l~$xxxxxa",'z
+(u) Unlinkify a URL (get rid of a-href) from opening '<':
+dth.f\dt>.x
+(s) Remove <strong> tags and say "f":true instead:
+0/<strong>dt>x/<\/strong>dt>x0O"f": true,j0
+*/
+
