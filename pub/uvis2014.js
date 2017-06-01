@@ -179,7 +179,7 @@ var batch2014feb = [
 "u": "https://twitter.com/beemuvi/status/433856965958041600",
 "t": "2014-02-13 06:55:36 +0000",
 }, /*************************************************************************/ {
-"x": "Re: \"+x in n days\" UVI <a href=\"https://twitter.com/beemuvi/status/433134540047933440\">twitter.com/beemuvi/status/433134540047933440</a> Don't do it for autosumming do-more/less goals. It's confusing/ugly: \"(limit: +3 today (12))\"",
+"x": "Re: \"+x in n days\" (UVI#1087): Don't do it for autosumming do-more/less goals. It's confusing/ugly: \"(limit: +3 today (12))\"",
 "u": "https://twitter.com/beemuvi/status/434216001572323328",
 "t": "2014-02-14 06:42:16 +0000",
 }, /*************************************************************************/ {
@@ -536,7 +536,7 @@ var batch2014may = [
 "u": "https://twitter.com/beemuvi/status/465000126180626432",
 "t": "2014-05-10 05:27:24 +0000",
 }, /*************************************************************************/ {
-"x": "Our <a href=\"https://twitter.com/rescuetime\">@rescuetime</a> integration now rechecks last 3 days of data at midnight or if you hit refresh button, like <a href=\"https://twitter.com/fitbit\">@fitbit</a>: <a href=\"https://twitter.com/beemuvi/status/425877497658372096\">twitter.com/beemuvi/status/425877497658372096</a>",
+"x": "Our <a href=\"https://twitter.com/rescuetime\">@rescuetime</a> integration now rechecks last 3 days of data at midnight or if you hit refresh button, like <a href=\"https://twitter.com/fitbit\">@fitbit</a>: UVI#1067",
 "u": "https://twitter.com/beemuvi/status/465393430441369600",
 "t": "2014-05-11 07:30:15 +0000",
 }, /*************************************************************************/ {
@@ -584,7 +584,7 @@ var batch2014may = [
 "u": "https://twitter.com/beemuvi/status/469052015528935424",
 "t": "2014-05-21 09:48:09 +0000",
 }, /*************************************************************************/ {
-"x": "Allow short-circuiting from $0 to $5 for anyone (have to be Beemium to short-circuit beyond $5 per <a href=\"https://twitter.com/beemuvi/status/468169991909826560\">twitter.com/beemuvi/status/468169991909826560</a>)",
+"x": "Allow short-circuiting from $0 to $5 for anyone (have to be Beemium to short-circuit beyond $5 per UVI#1184)",
 "u": "https://twitter.com/beemuvi/status/469387989513433089",
 "t": "2014-05-22 08:03:12 +0000",
 }, /*************************************************************************/ {
@@ -592,7 +592,7 @@ var batch2014may = [
 "u": "https://twitter.com/beemuvi/status/470106915326799873",
 "t": "2014-05-24 07:39:57 +0000",
 }, /*************************************************************************/ {
-"x": "We now remember sort order, page num when u edit/delete datapoints. (Bonus UVI: <a href=\"https://twitter.com/beemuvi/status/466012472239861760\">twitter.com/beemuvi/status/466012472239861760</a> works for editing datapoints too)",
+"x": "We now remember sort order, page num when u edit/delete datapoints. (Bonus UVI: UVI#1179 works for editing datapoints too)",
 "u": "https://twitter.com/beemuvi/status/470107028824670208",
 "t": "2014-05-24 07:40:24 +0000",
 }, /*************************************************************************/ {
@@ -735,7 +735,7 @@ var batch2014jun = [
 "u": "https://twitter.com/beemuvi/status/482222649813106688",
 "t": "2014-06-26 18:03:33 +0000",
 }, /*************************************************************************/ {
-"x": "Had a bug for 10 days where you couldn't up from 0 &rarr; $5 if you'd added a credit card prior to <a href=\"https://twitter.com/beemuvi/status/477576353236004864\">this UVI</a> #bugfix #metabugfix HT <a href=\"http://twitter.com/mhartl\">@mhartl</a>",
+"x": "Had a bug for 10 days where you couldn't up from 0 &rarr; $5 if you'd added a credit card prior to UVI#1220. #bugfix #metabugfix HT <a href=\"http://twitter.com/mhartl\">@mhartl</a>",
 "u": "https://twitter.com/beemuvi/status/482226332076474369",
 "t": "2014-06-26 18:18:11 +0000",
 }, /*************************************************************************/ {

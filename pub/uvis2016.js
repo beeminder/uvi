@@ -1041,7 +1041,7 @@ var batch2016jul = [
 "u": "https://twitter.com/beemuvi/status/758935320658182144",
 "t": "2016-07-29 08:00:55 +0000",
 }, /*************************************************************************/ {
-"x": "TagTime ping notifier in Slack bot (\"/tagtime on\") &amp; turns out when we thought we fixed <a href=\"https://twitter.com/beemuvi/status/685623126156152832\">the deauth callback thing</a> we broke it instead",
+"x": "TagTime ping notifier in Slack bot (\"/tagtime on\") &amp; turns out when we thought we fixed the deauth callback thing (UVI#1783) we broke it instead",
 "u": "https://twitter.com/beemuvi/status/759282238680883205",
 "t": "2016-07-30 06:59:27 +0000",
 }, /*************************************************************************/ {

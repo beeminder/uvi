@@ -207,7 +207,7 @@ var batch2013feb = [
 "u": "https://twitter.com/beemuvi/status/306599567854563328",
 "t": "2013-02-27 03:00:07 +0000",
 }, /*************************************************************************/ {
-"x": "Bugfix: If your credit card had problems we weren't letting you switch to Chirpify/Paypal betw <a href=\"https://twitter.com/beemuvi/status/305467940906606592\">twitter.com/beemuvi/status/305467940906606592</a> &amp; now. HT <a href=\"https://twitter.com/pankajmore\">@pankajmore</a>",
+"x": "Bugfix: If your credit card had problems we weren't letting you switch to Chirpify/Paypal betw UVI#737 &amp; now. HT <a href=\"https://twitter.com/pankajmore\">@pankajmore</a>",
 "u": "https://twitter.com/beemuvi/status/306790306806890497",
 "t": "2013-02-27 15:38:03 +0000",
 }, /*************************************************************************/ ]
@@ -314,7 +314,7 @@ var batch2013mar = [
 "u": "https://twitter.com/beemuvi/status/317525921026428928",
 "t": "2013-03-29 06:37:33 +0000",
 }, /*************************************************************************/ {
-"x": "You can now choose to hide your data or keep it when you reset a goal, ie, \"fresh start\" option, as alluded to here: <a href=\"https://twitter.com/beemuvi/status/259050188054884352\">twitter.com/beemuvi/status/259050188054884352</a>",
+"x": "You can now choose to hide your data or keep it when you reset a goal, ie, \"fresh start\" option, as alluded to in UVI#608",
 "u": "https://twitter.com/beemuvi/status/317791306401337344",
 "t": "2013-03-30 00:12:06 +0000",
 }, /*************************************************************************/ {
@@ -421,7 +421,7 @@ var batch2013apr = [
 "u": "https://twitter.com/beemuvi/status/326768428214013953",
 "t": "2013-04-23 18:43:59 +0000",
 }, /*************************************************************************/ {
-"x": "Bugfix: Weird interactions with the aggday and plotall parameters. Related to but distinct from this: <a href=\"https://twitter.com/beemuvi/status/313540068264509440\">twitter.com/beemuvi/status/313540068264509440</a>",
+"x": "Bugfix: Weird interactions with the aggday and plotall parameters. Related to but distinct from UVI#757",
 "u": "https://twitter.com/beemuvi/status/327285608714207233",
 "t": "2013-04-25 04:59:04 +0000",
 }, /*************************************************************************/ {
@@ -544,8 +544,9 @@ var batch2013may = [
 "u": "https://twitter.com/beemuvi/status/337265805085528065",
 "t": "2013-05-22 17:56:48 +0000",
 }, /*************************************************************************/ {
+"f": true,
 "x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: RT <a href=\"https://twitter.com/duolingo\">@duolingo</a>: Cool! Now you can use Beeminder to keep up your streak on Duolingo: http://blog.beeminder.com/duolingo/",
-"u": "https://twitter.com/bmndr/status/338044698461614081",
+"u": "https://twitter.com/duolingo/status/338031045582663680",
 "t": "2013-05-24 21:31:51 +0000",
 "c": "This was huge for us, having Duolingo tweet about us",
 }, /*************************************************************************/ {
@@ -592,7 +593,7 @@ var batch2013jun = [
 "u": "https://twitter.com/beemuvi/status/341426963786907648",
 "t": "2013-06-03 05:31:46 +0000",
 }, /*************************************************************************/ {
-"x": "<a href=\"https://twitter.com/beemuvi\">@beemuvi</a> Now for RunKeeper as well, ie, we tell you if Beeminder lost authorization to access your RunKeeper data",
+"x": "Re: UVI#833: Now for RunKeeper as well, ie, we tell you if Beeminder lost authorization to access your RunKeeper data",
 "u": "https://twitter.com/beemuvi/status/341804771499454464",
 "t": "2013-06-04 06:33:02 +0000",
 }, /*************************************************************************/ {
@@ -749,7 +750,7 @@ var batch2013jul = [
 "u": "https://twitter.com/beemuvi/status/355489334171934720",
 "t": "2013-07-12 00:50:36 +0000",
 }, /*************************************************************************/ {
-"x": "Bugfix: don't send spurious password changed email immediately after signup (happening since about <a href=\"https://twitter.com/beemuvi/status/335515064960425986\">twitter.com/beemuvi/status/335515064960425986</a> embarrassingly)",
+"x": "Bugfix: don't send spurious password changed email immediately after signup (happening since about UVI#819 embarrassingly)",
 "u": "https://twitter.com/beemuvi/status/355764911441317890",
 "t": "2013-07-12 19:05:39 +0000",
 }, /*************************************************************************/ {
@@ -940,7 +941,7 @@ var batch2013aug = [
 "u": "https://twitter.com/beemuvi/status/372322378379837440",
 "t": "2013-08-27 11:39:07 +0000",
 }, /*************************************************************************/ {
-"x": "Another bugfix similar to <a href=\"https://twitter.com/beemuvi/status/369959319623577602\">twitter.com/beemuvi/status/369959319623577602</a> where the amount in the legit check was wrong if there was a pending pledge stepdown",
+"x": "Another bugfix similar to UVI#918 where the amount in the legit check was wrong if there was a pending pledge stepdown",
 "u": "https://twitter.com/beemuvi/status/372326133556977665",
 "t": "2013-08-27 11:54:02 +0000",
 }, /*************************************************************************/ {
@@ -1273,9 +1274,11 @@ var batch2013nov = [
 "u": "https://twitter.com/beemuvi/status/401975856106455041",
 "t": "2013-11-17 07:31:27 +0000",
 }, /*************************************************************************/ {
-"x": "To commemorate 1000 UVIs, our 1001st UVI is announcing <a href=\"https://twitter.com/beeminfra\">@beeminfra</a>, just like UVI #1 was announcing <a href=\"https://twitter.com/beemuvi\">@beemuvi</a>: <a href=\"https://twitter.com/beemuvi/status/39402430655373312\">twitter.com/beemuvi/status/39402430655373312</a>",
+"n": 1002,
+"x": "To commemorate 1000 UVIs, our 1001st [actually 1002nd] UVI is announcing <a href=\"https://twitter.com/beeminfra\">@beeminfra</a>, just like UVI#1 was announcing <a href=\"https://twitter.com/beemuvi\">@beemuvi</a>",
 "u": "https://twitter.com/beemuvi/status/402340154599170049",
 "t": "2013-11-18 07:39:02 +0000",
+"c": "Our numbering was wrong when we tweeted this",
 }, /*************************************************************************/ {
 "x": "Weasels for life! No takebacks if you call yourself out as a weasel (\"weasel-proof me\" in graph settings).",
 "u": "https://twitter.com/beemuvi/status/402341061185384449",

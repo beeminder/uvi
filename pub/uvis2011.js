@@ -879,7 +879,7 @@ var batch2011sep = [
 "u": "https://twitter.com/bmndr/status/114856760296210432",
 "t": "2011-09-17 00:22:40 +0000",
 }, /*************************************************************************/ {
-"x": "Bug fix: Leniency rule for weight loss graphs -- <a href=\"https://twitter.com/beemuvi/status/102479495788888065\">twitter.com/beemuvi/status/102479495788888065</a> -- could cause a discontinuity in the yellow brick road when you reset",
+"x": "Bug fix: Leniency rule for weight loss graphs (UVI#181) could cause a discontinuity in the yellow brick road when you reset",
 "u": "https://twitter.com/beemuvi/status/115457769993281536",
 "t": "2011-09-18 16:10:52 +0000",
 }, /*************************************************************************/ {
@@ -1224,7 +1224,7 @@ var batch2011dec = [
 "u": "https://twitter.com/beemuvi/status/145908703852363776",
 "t": "2011-12-11 16:52:00 +0000",
 }, /*************************************************************************/ {
-"x": "This UVI was overzealous: <a href=\"https://twitter.com/beemuvi/status/137744215198285824\">twitter.com/beemuvi/status/137744215198285824</a> We now let the browser cache thumbnails unless they've actually changed.",
+"x": "UVI#283 was overzealous. We now let the browser cache thumbnails unless they've actually changed.",
 "u": "https://twitter.com/beemuvi/status/146313032212037632",
 "t": "2011-12-12 19:38:39 +0000",
 }, /*************************************************************************/ {
