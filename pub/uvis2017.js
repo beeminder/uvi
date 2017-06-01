@@ -445,7 +445,7 @@ var batch2017apr = [{
 "x": "We now always fix Dropbox and Google Docs links when you add/edit them in Settings, not just when first creating the goal.",
 "u": "https://twitter.com/beemuvi/status/849771959273443328",
 "t": "2017-04-05 23:53:17 +0000",
-"c": "[twttr#2242] [bmndr#2243]",
+"c": "[twttr#2242]",
 }, { // ------------------------------------------------------------------------
 "x": "Goals created via <a href=\"http://beemind.me\">Beemind.me</a> now act like proper autodata goals and magically fetch data before zeno'ing instead of just hourly!",
 "u": "https://twitter.com/beemuvi/status/850135561683652608",
