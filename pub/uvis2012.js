@@ -163,7 +163,7 @@ var batch2012feb = [
 "u": "https://twitter.com/beemuvi/status/170397970854981632",
 "t": "2012-02-17 06:43:36 +0000",
 }, /*************************************************************************/ {
-"x": "Nasty bugfix: Ever since <a href=\"https://twitter.com/beemuvi/status/168248028396929024\">twitter.com/beemuvi/status/168248028396929024</a> the Forgot Password link required you to sign in. #catch22",
+"x": "Nasty bugfix: Ever since UVI#358 the Forgot Password link required you to sign in. #catch22",
 "u": "https://twitter.com/beemuvi/status/171052927425843202",
 "t": "2012-02-19 02:06:10 +0000",
 }, /*************************************************************************/ {

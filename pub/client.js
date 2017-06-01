@@ -31,6 +31,7 @@ document.getElementById("shownotes").onclick = function() {
 }
 
 // Wrap bare URLs in given string with "a href" tags; also Twitter @-mentions
+// and UVI#123 -> <a href="#123">UVI#123</a>
 // (Could play it safe and not try to do any magic if there's already markup?)
 function linkify(s) {
   var alreadyMarkup = /[^\\]<a href/.test(s);
@@ -45,6 +46,7 @@ function linkify(s) {
     s = s.replace(/([^"'>]|^)@(\w+)\b/g, 
                   '$1<a href="https://twitter.com/$2">@$2</a>')
   }
+  s = s.replace(/UVI#(\d+)/g, '<a href="#$1">UVI#$1</a>');
   return s
 }
 
