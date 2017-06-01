@@ -680,7 +680,7 @@ var batch2013may = [
 "x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: RT <a href=\"https://twitter.com/duolingo\">@duolingo</a>: Cool! Now you can use Beeminder to keep up your streak on Duolingo: http://blog.beeminder.com/duolingo/",
 "u": "https://twitter.com/bmndr/status/338044698461614081",
 "t": "2013-05-24 21:31:51 +0000",
-"c": "",
+"c": "This was huge for us, having Duolingo tweet about us",
 }, /*************************************************************************/ {
 "x": "Bugfix: Archived goals weren't getting cleanly/properly ended; was a problem when unarchiving/restarting <a href=\"https://trello.com/card/ending-archived-goals/4f079dbc30a67d1864012d6b/618\">trello.com/card/ending-archived-goals/4f079dbc30a67d1864012d6b/618</a>",
 "u": "https://twitter.com/beemuvi/status/338514125044973568",
