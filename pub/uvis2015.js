@@ -30,7 +30,6 @@ var batch2015jan = [
 "x": "We finally actually have a radio button for Do More vs Do Less when creating <a href=\"http://blog.beeminder.com/rescuetime\">Rescuetime goals</a>!",
 "u": "https://twitter.com/beemuvi/status/551154954871013376",
 "t": "2015-01-02 23:15:55 +0000",
-"c": "",
 }, /*************************************************************************/ {
 "x": "Bugfix in Sleep as Android integration where we might've missed the first day's data after goal creation. #bugfix",
 "u": "https://twitter.com/beemuvi/status/551630272522117120",
