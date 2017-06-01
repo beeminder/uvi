@@ -875,7 +875,7 @@ var batch2017may = [{
 "x": "Fixed bug that (rarely but nastily) caused a 500 error on goal pages after adding a credit card. #bugfix",
 "u": "https://twitter.com/beemuvi/status/869335845521637377",
 "t": "2017-05-29",
-"c": "Part of PayPal deploy. This was a timing issue: 1) add credit card to stripe; 2) queue up pledges job; 3) save user. But if 2 got executed immediately, before the user got saved, then error. Otherwise no error. A case of failing loudly being very helpful, because it was a pretty nasty bug, but we caught it right away for the handful of people who encountered it.",
+"c": "Part of PayPal deploy. This was a timing issue: 1) add credit card to stripe; 2) queue up pledges job; 3) save user. But if 2 got executed immediately, before the user got saved, then error. Otherwise no error. A case of failing loudly being very helpful, because it was a pretty nasty bug, but we caught it right away for the handful of people who encountered it. https://github.com/beeminder/beeminder/commit/5870c47a862aa6c2e2204778516526f351d36ec0",
 }, { // ------------------------------------------------------------------------
 "n": 2298,
 "x": "We broke the ability to start goals with $0 pledges for 5 days. #bugfix #regression http://forum.beeminder.com/t/pledge-upgrade-on-startup/3193",
@@ -883,6 +883,20 @@ var batch2017may = [{
 "d": "2017-05-21",
 "t": "2017-05-30",
 "c": "Originally mistakenly tweeted as being a redesign regression. Spec for how this was supposed to work: http://blog.beeminder.com/deathtofreebees/ & Commit that fixed it again: https://github.com/beeminder/beeminder/commit/8be93db3376a1c24c5e88cc7597ef4712edec9fe",
+}, { // ------------------------------------------------------------------------
+"n": 2299,
+"x": "Handling timeouts from 3rd party autofetch urls (eg Beemind.me): retry couple times then show user an error message (like w/ other autodata)",
+"u": "https://twitter.com/beemuvi/status/870065420086136832",
+"d": "2017-05-25",
+"t": "2017-05-31",
+"c": "https://github.com/beeminder/beeminder/commit/ebed9c3edc1e1f749592d93d03d6050ea69b6f16",
+}, { // ------------------------------------------------------------------------
+"n": 2300,
+"x": "We now notice if a Twitter account we're autofetching tweet counts from gets deleted (or becomes private) & show an error, not silently fail",
+"u": "https://twitter.com/beemuvi/status/870066574660481024",
+"d": "2017-05-25",
+"t": "2017-05-31",
+"c": "https://github.com/beeminder/beeminder/commit/bcd878d52a938fd1b407e109e9c430a0252ceeed",
 }, /* --------------------------------------------------------- end 2017may */ ]
 
 var staged = [{
@@ -890,9 +904,12 @@ var staged = [{
 
 /*
 STAGED: ------10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140  
-GTBee 1.4 is out http://forum.beeminder.com/t/gtbee/3209
 }, { // ------------------------------------------------------------------------
+"x": GTBee 1.4 is out http://forum.beeminder.com/t/gtbee/3209
+- Show a list of completed tasks
+- Zeno notifications for tasks: instead of 1 day and 1 hour ahead of time, notifications increase in frequency as the deadline approaches.
 }, { // ------------------------------------------------------------------------
+
 CANDIDATES: --10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140  
 * fixed some (most? many?) of the thing where flash banner shows up again after you leave current page and go to another page [maybe this mostly only happens for admins?]
 IDEAS: -------10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140  
