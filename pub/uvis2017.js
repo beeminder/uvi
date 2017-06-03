@@ -430,11 +430,11 @@ var batch2017apr = [{
 }, { // ------------------------------------------------------------------------
 "n": 2260,
 "f": true,
-"x": "beeminder.com/changelog now points to an archive of all 2261 (as of this one) Beeminder UVIs!",
+"x": "beeminder.com/changelog now points to an archive of all 2260 (as of this one) Beeminder UVIs!",
 "u": "https://twitter.com/beemuvi/status/855570654602473476",
 "d": "2017-04-21",
 "t": "2017-04-21 23:55:14 +0000",
-"c": "[twttr#2259]",
+"c": "[twttr#2259] This originally said 2261 but there had been a numbering error; 2260 is correct.",
 }, { // ------------------------------------------------------------------------
 "x": "A bunch of improvements to the styling, layout, and webcopy for beeminder.com/changelog -- it's almost pretty now, at least up to mid-2016",
 "u": "https://twitter.com/beemuvi/status/856657403521126400",
@@ -671,23 +671,58 @@ var batch2017may = [{
 "c": "[twttr#2298] https://github.com/beeminder/beeminder/commit/bcd878d52a938fd1b407e109e9c430a0252ceeed",
 }, /* --------------------------------------------------------- end 2017may */ ]
 
-var staged = [{
-}, /* ---------------------------------------------------------- end staged */ ]
+var batch2017jun = [{
+"n": 2300,
+"x": "<a href=\"http://blog.beeminder.com/gtbee\">GTBee</a> 1.4! It now shows you your list of your completed tasks (only starting from when you upgrade though) http://forum.beeminder.com/t/gtbee/3209",
+"u": "https://twitter.com/beemuvi/status/870427512588730368",
+"d": "2017-05-30",
+"t": "2017-06-01",
+"c": "[twttr#2300] Twitter numbers should match again from now on!",
+}, { // ------------------------------------------------------------------------
+"n": 2301,
+"x": "GTBee now does <a href=\"http://blog.beeminder.com/zeno/\">Zeno polling</a>, hounding you more and more frequently as your deadline approaches, not just at T minus 1 day & T minus 1 hour",
+"u": "https://twitter.com/beemuvi/status/870428073975361536",
+"d": "2017-05-30",
+"t": "2017-06-01",
+"c": "https://trello.com/c/Ak9g8hPN/46-zeno-polling",
+}, { // ------------------------------------------------------------------------
+"n": 2302,
+"x": "We revamped the layout of <a href=\"http://beeminder.com/premium\">/premium</a>, mainly making it much easier to compare the different perqs between plans (not separated in boxes)",
+"u": "https://twitter.com/beemuvi/status/870774547380711424",
+"d": "2017-05-26",
+"t": "2017-06-02",
+}, { // ------------------------------------------------------------------------
+"n": 2303,
+"x": "Also changed the styling of the discount slider and colors and moved things like coupon alerts and discount amounts to be more noticeable",
+"u": "https://twitter.com/beemuvi/status/870774928441724929",
+"d": "2017-05-26",
+"t": "2017-06-02",
+"c": "buttons and titles and disables oh my",
+}, { // ------------------------------------------------------------------------
+"n": 2304,
+"x": "And a #bugfix we caught later: fixing the hover effects on links and buttons in the popups for changing plans",
+"u": "https://twitter.com/beemuvi/status/870775233866735617",
+"d": "2017-05-26",
+"t": "2017-06-02",
+}, /* --------------------------------------------------------- end 2017jun */ ]
+
 
 /*
 STAGED: ------10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140  
 }, { // ------------------------------------------------------------------------
-"n": 2300,
-"x": GTBee 1.4 is out http://forum.beeminder.com/t/gtbee/3209
-- Show a list of completed tasks
-- Zeno notifications for tasks: instead of 1 day and 1 hour ahead of time, notifications increase in frequency as the deadline approaches.
-"c": "[twttr#2300] Twitter numbers should match again from now on!",
+"x": "One more for http://beeminder.com/premium: legacy plans aren't displayed jankily anymore [TODO: and clearly indicate their legacy-ness]
+"d": "2017-05-26",
+"t": "2017-06-XX",
 }, { // ------------------------------------------------------------------------
-
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 CANDIDATES: --10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140  
 * fixed some (most? many?) of the thing where flash banner shows up again after you leave current page and go to another page [maybe this mostly only happens for admins?]
 IDEAS: -------10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140  
 1. fix FAQ copy: "form below your graph"
-2. easy UVI from chelsea: https://trello.com/c/OKjDZJ3Q/811-email-user-when-a-service-authorization-expires
+2. github issues tagged UVI & PEA
 -->
 */
+
+var staged = [{
+}, /* ---------------------------------------------------------- end staged */ ]
