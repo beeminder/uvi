@@ -1,20 +1,18 @@
 See index.html for the background about User-Visible Improvements (UVIs).
 
-Goals for this Glitch app:
+Currently the interface for adding new UVIs to the changelog is to manually append them to pub/uvis2017.js and manually go tweet them and paste in the URL of the tweet. 
+Oh and we also manually update the bmndr.com/meta/uvi graph.
 
-1. A numbered list of all 2252+ UVIs, with date and link to the corresponding tweet.
-2. An easy way to add new UVIs.
+More automation would obviously be nice.
 
-Initially we'll do #2 by just manually tweeting each UVI and also pasting it into this Glitch app as well.
-
-It might not be worth trying to duplicate Twitter's interface and automatically tweeting. 
+But it might not be worth trying to duplicate Twitter's interface and automatically tweeting. 
 There are too many things like expanding @-mentions and telling you how many characters you have left (accounting for shortened URLs) that wouldn't work as well outside of Twitter.
 
-Also it would be nice if it were easy to totally migrate away from Twitter in the future if we wanted to.
 
 ## TODO LIST
 
-1. Show tweet times in Pacific instead of UTC
-1. Codemod (fixed bug, bugfixed, `bug.*fix`, etc) -> append '#bugfix'
+1. Show tweet times in Pacific (Central before 2012 Feb?) instead of UTC
+1. Codemod .*bug.* -> append '#bugfix'
 1. Pick featured UVIs through June 2013 when we started doing that
 1. Filtering options like only showing bugfixes, non-bugfixes, featured, etc
+1. Little icon next to the birdie icon for permalinks to tweets

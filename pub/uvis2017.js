@@ -632,9 +632,9 @@ var batch2017may = [{
 "n": 2294,
 "x": "We now automatically email you if Beeminder loses its authorization to fetch your data from an autodata integration",
 "u": "https://twitter.com/beemuvi/status/868245706133221376",
-"d": "2017-05-17",
+"d": "2017-05-29",
 "t": "2017-05-26",
-"c": "https://trello.com/c/OKjDZJ3Q/811-email-user-when-a-service-authorization-expires https://github.com/beeminder/beeminder/commit/3688bcc826cb679cb4049e48174828db362e06de",
+"c": "Originally deployed what we thought was the fix on May 17 and then we fixed it for real on May 29. https://trello.com/c/OKjDZJ3Q/811-email-user-when-a-service-authorization-expires https://github.com/beeminder/beeminder/commit/3688bcc826cb679cb4049e48174828db362e06de https://github.com/beeminder/beeminder/commit/c65f6b28368c2c6a2aff4061a44f5b2bd821ac47",
 }, { // ------------------------------------------------------------------------
 "n": 2295,
 "x": "Change in the Habitica API that we now handle for when a user's API key changes (or user's account deleted). Failed silently before! #bugfix",
@@ -679,50 +679,472 @@ var batch2017jun = [{
 "t": "2017-06-01",
 "c": "[twttr#2300] Twitter numbers should match again from now on!",
 }, { // ------------------------------------------------------------------------
-"n": 2301,
 "x": "GTBee now does <a href=\"http://blog.beeminder.com/zeno/\">Zeno polling</a>, hounding you more and more frequently as your deadline approaches, not just at T minus 1 day & T minus 1 hour",
 "u": "https://twitter.com/beemuvi/status/870428073975361536",
 "d": "2017-05-30",
 "t": "2017-06-01",
 "c": "https://trello.com/c/Ak9g8hPN/46-zeno-polling",
 }, { // ------------------------------------------------------------------------
-"n": 2302,
 "x": "We revamped the layout of <a href=\"http://beeminder.com/premium\">/premium</a>, mainly making it much easier to compare the different perqs between plans (not separated in boxes)",
 "u": "https://twitter.com/beemuvi/status/870774547380711424",
 "d": "2017-05-26",
 "t": "2017-06-02",
 }, { // ------------------------------------------------------------------------
-"n": 2303,
 "x": "Also changed the styling of the discount slider and colors and moved things like coupon alerts and discount amounts to be more noticeable",
 "u": "https://twitter.com/beemuvi/status/870774928441724929",
 "d": "2017-05-26",
 "t": "2017-06-02",
 "c": "buttons and titles and disables oh my",
 }, { // ------------------------------------------------------------------------
-"n": 2304,
 "x": "And a #bugfix we caught later: fixing the hover effects on links and buttons in the popups for changing plans",
 "u": "https://twitter.com/beemuvi/status/870775233866735617",
 "d": "2017-05-26",
 "t": "2017-06-02",
+}, { // ------------------------------------------------------------------------
+"x": "One more for http://beeminder.com/premium: legacy plans aren't displayed jankily anymore, and clearly indicate their legacy-ness",
+"u": "https://twitter.com/beemuvi/status/871865301863772161",
+"d": "2017-05-26",
+"t": "2017-06-05",
+}, { // ------------------------------------------------------------------------
+"x": "Advanced data entry #bugfix / robustification: don't count empty lines as bad datapoints and don't submit if all whitespace",
+"u": "https://twitter.com/beemuvi/status/871876091434094592",
+"d": "2017-05-27",
+"t": "2017-06-05",
+"c": "https://github.com/beeminder/beeminder/commit/b29f091d57a3ffdefd022cafe973f3ecc99330d6",
+}, { // ------------------------------------------------------------------------
+"x": "Yet more fussing with http://beeminder.com/premium: styling of zebra striping, more compact/consistent buttons, margins, boldness. #mini",
+"u": "https://twitter.com/beemuvi/status/871882051741392896",
+"d": "2017-06-05",
+"t": "2017-06-05",
+}, { // ------------------------------------------------------------------------
+"x": "Partial fix for #redesign-regression of UVI#555 (needs to also do this when navigating between tabs)",
+"u": "https://twitter.com/beemuvi/status/872600836311875584",
+"t": "2017-06-07",
+"c": "https://github.com/beeminder/beeminder/commit/72f2d255c6fc4ffe787d434ce0296b35664669c9",
+}, { // ------------------------------------------------------------------------
+"x": "Added warning about UI inconsistency in showing exponential road rates as fraction vs percentage. Will be moot when we kill exp roads! #mini",
+"u": "https://twitter.com/beemuvi/status/872601677378932737",
+"t": "2017-06-07",
+"c": "\"Warning: The UI is currently inconsistent in showing the rate as a fraction vs percentage. Tell us (support@beeminder.com) if this causes confusion!\"",
+}, { // ------------------------------------------------------------------------
+"f": true,
+"x": "We now indicate (on both dashboard and goal pages) when a goal is scheduled to be archived (<a href=\"http://forum.beeminder.com/t/derail-while-marked-for-archival/3150/5?u=dreev\">forum post</a>)",
+"u": "https://twitter.com/beemuvi/status/872965681884442624",
+"d": "2017-06-07",
+"t": "2017-06-08",
+}, { // ------------------------------------------------------------------------
+"x": "Since the archiving indicators was like 3 UVIs we'll use up a tweet to mention a trivial one: the copyright in the footer now says 2011-2017 #mini",
+"u": "https://twitter.com/beemuvi/status/872968226262482944",
+"d": "2017-06-07",
+"t": "2017-06-08",
+}, { // ------------------------------------------------------------------------
+"x": "#bugfix with our Jawbone integration: if you edit your sleep data we were then treating the edit as a new datapoint and double counting",
+"u": "https://twitter.com/beemuvi/status/874408199213817858",
+"d": "2017-05-30",
+"t": "2017-06-12",
+"c": "https://github.com/beeminder/beeminder/commit/d35747eb2f9f9d37d7426098fdeee2247a286a79",
+}, { // ------------------------------------------------------------------------
+"x": "Charges created via the API (eg: GTBee and IFTTT Actions) now have a default note if you don't give one, like \"alice via IFTTT\"",
+"u": "https://twitter.com/beemuvi/status/874408307271671808",
+"d": "2017-06-02",
+"t": "2017-06-12",
+"c": "https://github.com/beeminder/beeminder/commit/d9f55faef2cf9b94fac1b0287b0e352a15b10423",
+}, { // ------------------------------------------------------------------------
+"x": "Fixed up our CSS for http://beeminder.com/aboutus & for http://beeminder.com/donate (the latter lost its paragraph spacing etc during the #redesign). #bugfix",
+"u": "https://twitter.com/beemuvi/status/874776424267210753",
+"d": "2017-06-07",
+"t": "2017-06-13",
+}, { // ------------------------------------------------------------------------
+"x": "iOS app 4.5.3 fixed a crash on iPhones 5 &amp; older that would happen when trying to display bare min amounts for some goals. #bugfix",
+"u": "https://twitter.com/beemuvi/status/874780859311693824",
+"d": "2017-06-09",
+"t": "2017-06-13",
+}, { // ------------------------------------------------------------------------
+"x": "Improved the font and line spacing and widths of the sections of http://beeminder.com/api (basically emulating <a href=\"https://stripe.com/docs/api\">stripe.com/docs/api</a>)",
+"u": "https://twitter.com/beemuvi/status/874823283748687874",
+"t": "2017-06-13",
+"c": "Thanks Sergii Kalinchuk! Also added link to http://github.com/beeminder",
+}, { // ------------------------------------------------------------------------
+"x": "#bugfix where, when updating a deadline on goal page and there was an error, we'd redirect you to the main reminders page. Now we don't!",
+"u": "https://twitter.com/beemuvi/status/875475264481902593",
+"d": "2017-06-12",
+"t": "2017-06-15",
+"c": "HT Chelsea. https://trello.com/c/v1yuLb0a/775-updating-deadline-from-goal-page-redirected-to-reminders",
+}, { // ------------------------------------------------------------------------
+"x": "We now email you a receipt for premium subscriptions (<a href=\"http://forum.beeminder.com/t/invoice-receipt-for-premium/2856\">forum thread</a>)",
+"u": "https://twitter.com/beemuvi/status/875477921158144001",
+"d": "2017-06-14",
+"t": "2017-06-15",
+"c": "And we don't even charge 100X the amount you agreed to!",
+}, { // ------------------------------------------------------------------------
+"x": "User-visible but dubious to call an improvement from user perspective: We now set the \"<a href=\"https://www.beeminder.com/faq#qdcl\">deadbeat flag</a>\" if a premium payment fails.",
+"u": "https://twitter.com/beemuvi/status/875480383365586944",
+"d": "2017-06-14",
+"t": "2017-06-15",
+}, { // ------------------------------------------------------------------------
+"x": "Removed a redundant \"Data source\" subheading that was appearing on the Settings tab for some autodata goals. Visual #bugfix HT @lady_alys",
+"u": "https://twitter.com/beemuvi/status/880185294426849280",
+"d": "2017-06-28",
+"t": "2017-06-28",
+"c": "https://github.com/beeminder/beeminder/pull/110",
+}, { // ------------------------------------------------------------------------
+"x": "Not sure this is better since min weight is arguably truer weight but by principle of least surprise, weight gain goals now use max weight",
+"u": "https://twitter.com/beemuvi/status/880212138572234752",
+"d": "2017-06-13",
+"t": "2017-06-28",
+"c": "Set aggday=max for gainer goals. HT Chelsea",
+}, { // ------------------------------------------------------------------------
+"x": "Made <a href=\"http://bmndr.com/cla\">bmndr.com/cla</a>, modeled on Discourse's. Nixed \"via the API\" in the \"you're being charged\" email (cuz it's not always true; IFTTT, etc)",
+"u": "https://twitter.com/beemuvi/status/880555748719083526",
+"t": "2017-06-29",
+}, { // ------------------------------------------------------------------------
+"n": 2323,
+"x": "Added Japanese to our @duolingo integration! (And another #mini #bugfix: properly pluralize \"months\" in the \"you're being charged\" emails)",
+"u": "https://twitter.com/beemuvi/status/880556299032735744",
+"t": "2017-06-29",
+}, { // ------------------------------------------------------------------------
+"n": 2324,
+"x": "(+) Version 4.6 of the iOS app!",
+"u": "https://twitter.com/beemuvi/status/880558126352678912",
+}, { // ------------------------------------------------------------------------
+"n": 2324,
+"s": true,
+"x": "(1) #bugfix for the mystery of the duplicate datapoints",
+"u": "https://twitter.com/beemuvi/status/880558126352678912",
+}, { // ------------------------------------------------------------------------
+"n": 2325,
+"s": true,
+"f": true,
+"x": "(2) New metrics for Apple Health goals! Now tracking mindful minutes, sleep, time in bed, and water consumption.",
+"u": "https://twitter.com/beemuvi/status/880558238944468992",
+}, { // ------------------------------------------------------------------------
+"n": 2326,
+"s": true,
+"x": "(3) No longer crashing on older models of the iPad. #bugfix",
+"u": "https://twitter.com/beemuvi/status/880558372751265792",
 }, /* --------------------------------------------------------- end 2017jun */ ]
 
+var batch2017jul = [{
+"n": 2327,
+"x": "Trello #bugfix HT @richarmstrong: goal creation now nicely handles the case that Beeminder's authorization to read your Trello data expired",
+"u": "https://twitter.com/beemuvi/status/882010906703482881",
+"t": "2017-07-03",
+"c": "When you created a new Trello goal we were failing uglily before",
+}, { // ------------------------------------------------------------------------
+"x": "Copy &amp; CSS improvements to our <a href=\"http://beeminder.com/trello\">Trello landing page</a>; compacted feature list on http://beeminder.com/premium to get the buttons above the fold",
+"u": "https://twitter.com/beemuvi/status/882012003241295872",
+"t": "2017-07-03",
+}, { // ------------------------------------------------------------------------
+"n": 2329,
+"x": "For autodata goals, we now send you back to the right place in goal creation after authorizing us to read your data. #bugfix",
+"u": "https://twitter.com/beemuvi/status/882373190017720320",
+"d": "2017-07-02",
+"t": "2017-07-04",
+"c": "Probably broke this at some point after #2092. We were having you pick configuration stuff for your, eg, Runkeeper goal and then making you start over from scratch when you returned from the oauth step! https://github.com/beeminder/beeminder/commit/90313ab7622617ce378f39e9aa717a2ce8e922a8",
+}, { // ------------------------------------------------------------------------
+"x": "Brief bug exposed by UVI#2329: were creating extra spurious Todoist goals (if you'd auth'd Todoist) when you created any other goal. #bugfix",
+"u": "https://twitter.com/beemuvi/status/882373353465552896",
+"d": "2017-07-02",
+"t": "2017-07-04",
+"c": "We were loading todoist labels & tags for anyone who'd authorized todoist every time they loaded the new goal page. This resulted in sometimes overwriting stored autodata info, and you got a surprise todoist goal. Fixed it so we no longer make extra calls to the todoist api, but only go and fetch your data once you've selected todoist goal type. https://github.com/beeminder/beeminder/commit/c1c653ef2b5bef23be785fd7c86cc22b56b04fc5",
+}, { // ------------------------------------------------------------------------
+"x": "For Runkeeper auto-fetching, if we saw no previous auto-entered data we sometimes missed your most recent datapoint. #bugfix",
+"u": "https://twitter.com/beemuvi/status/882738250032455680",
+"d": "2017-07-01",
+"t": "2017-07-05",
+"c": "If there wasn't an 'auto-entered via runkeeper' datapoint then we'd fall back to just getting data for today, instead of since the last datapoint. https://github.com/beeminder/beeminder/commit/d00d6b540f0f54a706365dc12c2a4ac1ea025299",
+}, { // ------------------------------------------------------------------------
+"x": "The data import section now explains about including username/goalname in the subject for the email bot (& prefills it for the mailto link)",
+"u": "https://twitter.com/beemuvi/status/882740888404754432",
+"d": "2017-07-03",
+"t": "2017-07-05",
+}, { // ------------------------------------------------------------------------
+"f": true,
+"x": "We now support PayPal in addition to credit cards! (So many people have been asking for this, for years. Sorry it took so long!)",
+"u": "https://twitter.com/beemuvi/status/882781510708809728",
+"d": "2017-07-03",
+"t": "2017-07-05",
+"c": "Bee says she’s not actually sorry because it was kind of awful and maybe what we’re actually sorry about is that we caved and did it all instead of staying Stripe-only!",
+}, { // ------------------------------------------------------------------------
+"x": "We made http://beeminder.com/pact to help @PactApp users migrate to Beeminder now that Pact is shutting down :(",
+"u": "https://twitter.com/beemuvi/status/884551717789892608",
+"t": "2017-07-10",
+}, { // ------------------------------------------------------------------------
+"x": "We're now finally showing amounts for timey-wimey goals as HH:MM consistently in the bot emails",
+"u": "https://twitter.com/beemuvi/status/884556643945467904",
+"t": "2017-07-10",
+"c": "We got most of these back in January but didn't get the email subjects till now! https://github.com/beeminder/beeminder/commit/df0a4cf34590de616add4345b133dca3e26d5773?w=1",
+}, { // ------------------------------------------------------------------------
+"x": "Also show HH:MM in iOS app. And fixed a bug that that introduced where we briefly showed deadlines as offset from midnight in seconds! #bugfix",
+"u": "https://twitter.com/beemuvi/status/884923571067392001",
+"t": "2017-07-11",
+"c": "The iOS part of this is also from January. https://github.com/beeminder/beeminder/commit/51392f57ec7c4ebe163179da1b51a95d21c28883 https://github.com/beeminder/beeminder/commit/4ef48d8d0ea4cb95dca1c53e9cf3c8e539acb4cc",
+}, { // ------------------------------------------------------------------------
+"x": "We now redirect http://beeminder.com/reminders to beeminder.com/reminders/USERNAME (this mostly matters for pointing people there in support)",
+"u": "https://twitter.com/beemuvi/status/885270523961237504",
+"t": "2017-07-12",
+}, { // ------------------------------------------------------------------------
+"n": 2338,
+"x": "Fixed goal description wrapping ugliness for long descriptions when looking at other users' goals (or logged out viewing your own). #bugfix",
+"u": "https://twitter.com/beemuvi/status/885285350742007808",
+"t": "2017-07-12",
+"c": "It was getting covered by the graph image, now it just truncates with an ellipsis after one line",
+}, { // ------------------------------------------------------------------------
+"n": 2339,
+"x": "Also fixed goal description shortness for your own goals (was only showing ~210px's worth) and #bugfix w/ not showing pencil icon after edit",
+"u": "https://twitter.com/beemuvi/status/885600764877447168",
+"t": "2017-07-13",
+"c": "Now resizes to show all of the description up to one full line, then truncates with an ellipsis as well",
+}, { // ------------------------------------------------------------------------
+"n": 2340,
+"x": "(+) Version 4.7 of the iOS app!",
+"u": "https://twitter.com/beemuvi/status/886000652295430144",
+"d": "2017-07-12",
+"t": "2017-07-14",
+}, { // ------------------------------------------------------------------------
+"n": 2340,
+"s": true,
+"x": "(1) #bugfix for Apple Health weight goals not updating with new data (<a href=\"http://forum.beeminder.com/t/apple-health-not-updating-weight/3203\">forum thread</a>)",
+"u": "https://twitter.com/beemuvi/status/886000652295430144",
+"d": "2017-07-12",
+"t": "2017-07-14",
+}, { // ------------------------------------------------------------------------
+"n": 2341,
+"s": true,
+"x": "(2) #bugfix for multiple metrics appearing to be selected when pairing",
+"u": "https://twitter.com/beemuvi/status/886000765747077120",
+"d": "2017-07-12",
+"t": "2017-07-14",
+}, { // ------------------------------------------------------------------------
+"n": 2342,
+"s": true,
+"x": "(3) #bugfix for goals paired to Apple Health not updating after reinstalling the app",
+"u": "https://twitter.com/beemuvi/status/886000891769126912",
+"d": "2017-07-12",
+"t": "2017-07-14",
+}, { // ------------------------------------------------------------------------
+"n": 2343,
+"x": "We put back the lost link to the secret chat URL for Beemium subscribers that we lost in UVI#2328. HT @mimercha",
+"u": "https://twitter.com/beemuvi/status/887458804584988672",
+"t": "2017-07-18",
+}, { // ------------------------------------------------------------------------
+"x": "For <a href=\"http://gitminder.com\">Gitminder</a> we ask for the GitHub repo name. If you give us the whole URL we now parse out the name instead of confusingly failing. #mini",
+"u": "https://twitter.com/beemuvi/status/887820965345763330",
+"t": "2017-07-19",
+"c": "If you gave the full URL to the repo, rather than just username/reponame, we'd fail like \"hey, it doesn't look like you have access to that repo\" (because we were just doing string comparison on the list of your repos and the string you gave us to check), and the only clue you had that we wanted only \"username/repo\" was in the placeholder text for the input. So now we just strip out the http etc if they're there in the string given, because regex technology is great. https://github.com/beeminder/beeminder/commit/d2ced448426b2a93ee1b0518d1e34150dfe9250f",
+}, { // ------------------------------------------------------------------------
+"x": "Exception to UVI#2294 &mdash; we don't bug you about that if you're not a monthly active user",
+"u": "https://twitter.com/beemuvi/status/887822576180895744",
+"d": "2017-07-13",
+"t": "2017-07-19",
+}, { // ------------------------------------------------------------------------
+"x": "#bugfix in recent data display where we we'd interpret HH:MM times as times of day and show things like \"24:00\" as \"0:00\". HT @mimercha",
+"u": "https://twitter.com/beemuvi/status/888183200463245313",
+"d": "2017-07-13",
+"t": "2017-07-20",
+"c": "https://github.com/beeminder/beeminder/commit/6c933b2004496c5c446b7a75f35fca28d206bfad",
+}, { // ------------------------------------------------------------------------
+"x": "Fixed a typo in the API docs and made the URL prefixes consistent (<a href=\"http://forum.beeminder.com/t/typo-in-putgoal-api-documentation/3359\">forum thread</a>)",
+"u": "https://twitter.com/beemuvi/status/888548995701784579",
+"t": "2017-07-21",
+}, { // ------------------------------------------------------------------------
+"x": "Other API docs #mini's: deprecated \"panic\" param out of docs, clarify what happens if submitting new runits &amp; new road (roadall) together",
+"u": "https://twitter.com/beemuvi/status/889623883707551745",
+"d": "2017-07-21",
+"t": "2017-07-24",
+"c": "The \"panic\" param is now just undocumented. And the clarification is that the road has to be in terms of the old runits",
+}, { // ------------------------------------------------------------------------
+"x": "If you tried to have a road segment with inferred end date in the road editor, we'd silently fail to update the graph anymore. #bugfix",
+"u": "https://twitter.com/beemuvi/status/889624283244265473",
+"d": "2017-07-19",
+"t": "2017-07-24",
+}, { // ------------------------------------------------------------------------
+"x": "#mini's: fixed new bug caused by UVI#2339, copyedits to http://beeminder.com/pact, Beemium chat link on http://beeminder.com/contact",
+"u": "https://twitter.com/beemuvi/status/889985838263574528",
+"t": "2017-07-25",
+"c": "Wouldn't have been crazy to call this 3 UVIs. https://github.com/beeminder/beeminder/commit/c853c32a1a3ca2a94eff20cca33ff06938e6e0eb",
+}, { // ------------------------------------------------------------------------
+"x": "Another #mini: cleaned up our username validator to disallow usernames we need to reserve and unreserve some we don't need after all",
+"u": "https://twitter.com/beemuvi/status/889986698955833344",
+"d": "2017-07-14",
+"t": "2017-07-25",
+"c": "This one's quite cheap but it makes up for the previous one! https://github.com/beeminder/beeminder/commit/7ed5176ee417321fbf4df5f3c3fe34061a06534c",
+}, { // ------------------------------------------------------------------------
+"n": 2352,
+"x": "The road editor in Settings (premium only) now shows rate units",
+"u": "https://twitter.com/beemuvi/status/890359165670928386",
+"d": "2017-07-20",
+"t": "2017-07-26",
+"c": "https://github.com/beeminder/beeminder/commit/580a279fee08652491d550437f4a1496165cdb41",
+}, { // ------------------------------------------------------------------------
+"n": 2353,
+"x": "The \"roadall\" API call now accepts daystamps like \"2017-07-27\" or \"20170727\" as well as timestamps. Updated http://beeminder.com/api as well. (<a href=\"http://forum.beeminder.com/t/beeminder-api-roadall-documentation/2070/10?u=dreev\">forum post</a>)",
+"u": "https://twitter.com/beemuvi/status/890705555546718208",
+"t": "2017-07-27",
+}, { // ------------------------------------------------------------------------
+"n": 2354,
+"x": "UVI#2353 was mostly true over a year ago (but not logged here). Added: #bugfix that made hyphenless daystamps not be interpreted as timestamps",
+"u": "https://twitter.com/beemuvi/status/890705898225651716",
+"d": "2017-07-19",
+"t": "2017-07-27",
+"c": "https://github.com/beeminder/beeminder/commit/dc0cc6ca552b385fe1c5306342cd1355499de341",
+}, { // ------------------------------------------------------------------------
+"x": "GTBee version 1.4.1 fixed a bug with some crazy integer overflow that made the sting show up as $-311 if you specified $1000. HT @roberthopman #bugfix",
+"u": "https://twitter.com/beemuvi/status/892166061293883392",
+"d": "2017-06-25",
+"t": "2017-07-31",
+}, { // ------------------------------------------------------------------------
+"x": "GTBee version 1.5! Fix for notifications not arriving (you're now prompted to allow notifications to remind you when tasks are coming due). #bugfix",
+"u": "https://twitter.com/beemuvi/status/892166169129435136",
+"d": "2017-07-25",
+"t": "2017-07-31",
+}, { // ------------------------------------------------------------------------
+"x": "GTBee 1.5 also makes the app icon badged with the number of tasks you have to complete (<a href=\"http://forum.beeminder.com/t/gtbee/3209/21\">forum thread</a>)",
+"u": "https://twitter.com/beemuvi/status/892166272162582529",
+"d": "2017-07-25",
+"t": "2017-07-31",
+}, /* --------------------------------------------------------- end 2017jul */ ]
+
+var batch2017aug = [{
+"x": "Most of a #bugfix for duplicate datapoints on Apple Health: script to remove them server-side (<a href=\"http://forum.beeminder.com/t/duplicates-from-apple-health-steps/3365\">forum thread</a>)",
+"u": "https://twitter.com/beemuvi/status/892896042231799809",
+"t": "2017-08-02",
+"c": "https://github.com/beeminder/beeminder/commit/91ac3e7f2563c1dac1703040c2f9fccf0c7bf47b",
+}, { // ------------------------------------------------------------------------
+"x": "#bugfix in API docs that made backtick-quoted things in square brackets not display, and goal attributes table was all wrong. HT Chelsea",
+"u": "https://twitter.com/beemuvi/status/892896664121298944",
+"t": "2017-08-02",
+}, { // ------------------------------------------------------------------------
+"x": "Garmin sleep goal setup fixed the defaults so you wouldn't end up with a 10000 hours/day sleep goal if you breezed through. #bugfix",
+"u": "https://twitter.com/beemuvi/status/893239910089371649",
+"t": "2017-08-03",
+}, { // ------------------------------------------------------------------------
+"x": "Bigger Garmin #bugfix: we weren't fetching sleep time at all ever for newly created sleep goals since the #redesign #facepalm",
+"u": "https://twitter.com/beemuvi/status/893580490589982720",
+"t": "2017-08-04",
+"c": "https://github.com/beeminder/beeminder/commit/c8661877ca0a6540b7a88303ffe51e8fdec71003",
+}, { // ------------------------------------------------------------------------
+"x": "#bugfix in Garmin integration after migrating to their new API: we were unfairly rounding down to a whole number of hours!",
+"u": "https://twitter.com/beemuvi/status/894705971074707456",
+"d": "2017-08-02",
+"t": "2017-08-07",
+"c": "Specifically, we were doing integer division on durations, so you'd run for 45 minutes, which garmin reports to us in seconds, and then converting it to hours to plot it for you, we'd come up with 0 hours running, 2700 integer-divide 3600 == 0",
+}, { // ------------------------------------------------------------------------
+"x": "#bugfix in our Draft data import for new goals: imported last 7 entries instead of last 7 days and could result in insta-derails",
+"u": "https://twitter.com/beemuvi/status/894707351151824896",
+"d": "2017-07-31",
+"t": "2017-08-07",
+}, { // ------------------------------------------------------------------------
+"x": "The <a href=\"http://slackminder.com\">Slack bot</a>'s intentionally obtuse about any private goals it's bugging you about in public channels, but shouldn't've been in DMs. #bugfix HT @nitrogen",
+"u": "https://twitter.com/beemuvi/status/895046508340330496",
+"d": "2017-08-04",
+"t": "2017-08-08",
+"c": "https://github.com/beeminder/beeminder/commit/a7faba459464d26a35e72497013ac835752fffb5",
+}, { // ------------------------------------------------------------------------
+"x": "We made schedule-a-break less confusing by making the lower bound inclusive, no need to yell at you about making it be \"at least one day\"",
+"u": "https://twitter.com/beemuvi/status/895432344647090176",
+"t": "2017-08-09",
+"c": "https://github.com/beeminder/beeminder/commit/476cbd37fa8cd7870419a2107bed0f5fa23b2762",
+}, { // ------------------------------------------------------------------------
+"x": "And UVI#2365 means we could drop the confusing warning about making the start date the day before the break & making 1-day breaks as if 2 days",
+"u": "https://twitter.com/beemuvi/status/895432520577069057",
+"t": "2017-08-09",
+"c": "Arguably this is slightly less mathematically elegant but it's what people expect so we're pretty sure this is a win. And Chelsea told us to do it and she's pretty much always right.",
+}, { // ------------------------------------------------------------------------
+"x": "Alphabetized the sites &amp; categories in RescueTime goal setup (so you can find what you're looking for amongst the slew of sites) HT Chelsea",
+"u": "https://twitter.com/beemuvi/status/895794767384027136",
+"t": "2017-08-10",
+}, { // ------------------------------------------------------------------------
+"x": "Removed references to 'mannequins' and updating your measurements from the weight goal reminders (we were running a study that's done now) HT Chelsea",
+"u": "https://twitter.com/beemuvi/status/895795050344361985",
+"t": "2017-08-10",
+}, { // ------------------------------------------------------------------------
+"x": "We now fill in the signed-in user’s email address in the beeminder.com/contact form (if there is a signed-in user). HT Chelsea",
+"u": "https://twitter.com/beemuvi/status/896153491214712832",
+"t": "2017-08-11",
+}, { // ------------------------------------------------------------------------
+"x": "Also in the contact form: we now actually give an error message if there’s a problem and the message isn’t sent. :( #bugfix #redesign",
+"u": "https://twitter.com/beemuvi/status/896153821755228160",
+"t": "2017-08-11",
+"c": "There was a confirmation if your message is sent, but failure was silent"
+}, { // ------------------------------------------------------------------------
+"x": "Added Active Time tracking to Garmin for a more general activity metric than steps w/o having to have one of their GPS gadgets. HT @adamwwolf",
+"u": "https://twitter.com/beemuvi/status/896489273582510080",
+"t": "2017-08-12",
+}, { // ------------------------------------------------------------------------
+"x": "Garmin #mini: it was ambiguous in the goal setup wizard what unit of measure is for Activity time tracking so we added \"Total Time (hours)\"",
+"u": "https://twitter.com/beemuvi/status/896489792556351489",
+"t": "2017-08-12",
+"c": "This may also be confusing / ambiguous between 'activity time tracking', and 'active time tracking' which we just added...",
+}, { // ------------------------------------------------------------------------
+"x": "Habitica integration now tracks completed Dailies either with To-Dos or separately (for now, only if your CustomDayStart time is midnight)",
+"u": "https://twitter.com/beemuvi/status/898581063835844609",
+"t": "2017-08-18",
+}, { // ------------------------------------------------------------------------
+"x": "We now have a (barebones) curl and ruby tab on http://beeminder.com/api  with a pointer to other API libraries on github",
+"u": "https://twitter.com/beemuvi/status/898584988332859392",
+"t": "2017-08-18",
+}, { // ------------------------------------------------------------------------
+"x": "Curl examples at http://beeminder.com/api now all give full/correct curl syntax and include 'auth_token=abc123' as placeholder for authentication params",
+"u": "https://twitter.com/beemuvi/status/900240374412845056",
+"t": "2017-08-22",
+}, { // ------------------------------------------------------------------------
+"x": "More improvements to beeminder.com/api: bug fixes with the tabs and added an actual Ruby example",
+"u": "https://twitter.com/beemuvi/status/900601250516946944",
+"t": "2017-08-23",
+}, { // ------------------------------------------------------------------------
+"x": "#bugfix in the new Garmin active time tracking: our numbers now match the numbers on your device / in Garmin Connect. HT @adamwolf again",
+"u": "https://twitter.com/beemuvi/status/900858770233987073",
+"t": "2017-08-24",
+"c": "They count moderateIntensity + 2*vigorousIntensity because the CDC et al \"recommend at least 150 minutes per week of moderate intensity activity, such as brisk walking, or 75 minutes per week of vigorous intensity activity, such as running.\"",
+}, { // ------------------------------------------------------------------------
+"x": "We no longer refer to \"unfreezing\" a goal. It's just \"restarting\" now. Eg, in http://beeminder.com/faq and http://blog.beeminder.com/glossary #mini",
+"u": "https://twitter.com/beemuvi/status/901232060165087232",
+"t": "2017-08-25",
+"c": "https://github.com/beeminder/beeminder/issues/105",
+}, { // ------------------------------------------------------------------------
+"x": "Other #mini copyfixes in http://beeminder.com/faq  like \"form below your graph\" (now next to your graph) &amp; typo fix in http://beeminder.com/pact",
+"u": "https://twitter.com/beemuvi/status/901233420411346945",
+"t": "2017-08-25",
+"c": "https://github.com/beeminder/beeminder/issues/106 &amp; https://github.com/beeminder/beeminder/issues/116",
+}, { // ------------------------------------------------------------------------
+"x": "Dumb #bugfix: our <a href=\"http://beeminder.com/donate\">donate button</a> was redirecting to beta.beeminder.com after a successful donation. HT @adamwolf",
+"u": "https://twitter.com/beemuvi/status/901236706115858432",
+"t": "2017-08-25",
+"c": "https://github.com/beeminder/beeminder/issues/118",
+}, /* --------------------------------------------------------- end 2017aug */ ]
+
+var staged = [
+ /* ---------------------------------------------------------- end staged */ ]
+var l = eval('staged')
 
 /*
 STAGED: ------10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140  
 }, { // ------------------------------------------------------------------------
-"x": "One more for http://beeminder.com/premium: legacy plans aren't displayed jankily anymore [TODO: and clearly indicate their legacy-ness]
-"d": "2017-05-26",
-"t": "2017-06-XX",
+"x": "Include the transaction description on your payments page (/payment) for peple using PayPal.",
+"u": "",
+"t": "",
+"c": "",
+}, { // ------------------------------------------------------------------------
+"x": "Also correctly indicate the transaction status. (we weren't correctly showing if a transaction was declined)",
+"u": "",
+"t": "",
+"c": "",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 CANDIDATES: --10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140  
-* fixed some (most? many?) of the thing where flash banner shows up again after you leave current page and go to another page [maybe this mostly only happens for admins?]
+* fixed some (most? many?) of the thing where flash banner shows up again after you leave current page and go to another page 
+  [maybe this mostly only happens for admins?]
 IDEAS: -------10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140  
 1. fix FAQ copy: "form below your graph"
 2. github issues tagged UVI & PEA
 -->
 */
 
-var staged = [{
-}, /* ---------------------------------------------------------- end staged */ ]
+

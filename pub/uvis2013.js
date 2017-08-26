@@ -1435,7 +1435,7 @@ var batch2013dec = [
 "u": "https://twitter.com/beemuvi/status/416028927048433665",
 "t": "2013-12-26 02:13:20 +0000",
 }, /*************************************************************************/ {
-"x": "SMS reminders weren't checking they had current info for today (if scheduled for early morning they could go out w/ yesterday's goal status)",
+"x": "SMS reminders weren't checking they had current info for today (if scheduled for early morning they could go out w/ yesterday's goal status). #bugfix",
 "u": "https://twitter.com/beemuvi/status/416459537697103872",
 "t": "2013-12-27 06:44:25 +0000",
 }, /*************************************************************************/ {
@@ -1451,6 +1451,7 @@ var batch2013dec = [
 "u": "https://twitter.com/beemuvi/status/417553974250590208",
 "t": "2013-12-30 07:13:19 +0000",
 }, /*************************************************************************/ {
+"n": 1045,
 "x": "Welcome Erica Edelman, our new Head Beekeeper! (She moved to Portland for this and everything.) The UVI is she's on <a href=\"http://beeminder.com/aboutus\">beeminder.com/aboutus</a>",
 "u": "https://twitter.com/beemuvi/status/417911877629259776",
 "t": "2013-12-31 06:55:30 +0000",
