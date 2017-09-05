@@ -268,6 +268,7 @@ var batch2017mar = [{
 "x": "Feature! We trust our users so much that when you update a failed payment method you can actually pick which charges should be retried!",
 "u": "https://twitter.com/beemuvi/status/841394559523344385",
 "t": "2017-03-13 21:04:30 +0000",
+"c": "https://github.com/beeminder/beeminder/issues/93",
 }, { // ------------------------------------------------------------------------
 "x": "iPhone app couldn't handle safety buffer &gt;32767 days so now we cap it at that. Also fixed a redesign regression as part of prev UVI. #bugfix",
 "u": "https://twitter.com/beemuvi/status/841401764553277440",
@@ -1112,24 +1113,67 @@ var batch2017aug = [{
 "u": "https://twitter.com/beemuvi/status/901236706115858432",
 "t": "2017-08-25",
 "c": "https://github.com/beeminder/beeminder/issues/118",
+}, { // ------------------------------------------------------------------------
+"x": "We now include the transaction description on your payments page -- beeminder.com/payment -- for people using PayPal",
+"u": "https://twitter.com/beemuvi/status/902418235726761984",
+"t": "2017-08-28",
+}, { // ------------------------------------------------------------------------
+"x": "And PayPal #bugfix: correctly indicate the transaction status (we weren't correctly showing if a transaction was declined)",
+"u": "https://twitter.com/beemuvi/status/902418439075012608",
+"t": "2017-08-28",
+"c": "not correctly including status meant that a failed payment would show up as \"paid\"",
+}, { // ------------------------------------------------------------------------
+"x": "Another PayPal integration #bugfix: Adding PayPal wouldn't remove the deadbeat flag on your account. Now it does.",
+"u": "https://twitter.com/beemuvi/status/902418618326982656",
+"t": "2017-08-28",
+}, { // ------------------------------------------------------------------------
+"x": "We now indicate that all datapoints are loaded (instead of just disabling button) when all datapoints are loaded. #mini",
+"u": "https://twitter.com/beemuvi/status/903040341879676928",
+"d": "2017-08-28",
+"t": "2017-08-30",
+"c": "By Chelsea. https://github.com/beeminder/beeminder/commit/a908409863aee3c7fc5bf957194c09f1bf2e2829",
+}, { // ------------------------------------------------------------------------
+"x": "A bunch of fixes and tweaks to the CSS for the take-a-break interface -- sane fonts and spacing and the error messages show up in red",
+"u": "https://twitter.com/beemuvi/status/903045000191131648",
+"d": "2017-08-28",
+"t": "2017-08-30",
+"c": "By Chelsea. https://github.com/beeminder/beeminder/commit/1234b6d6150389d8c2775f71f7e9a35230b2bc88 & https://github.com/beeminder/beeminder/commit/7f50484cf7d4ea16a55c0dcd799ac32074ec3088 & https://trello.com/c/7qUPiAK5/795-more-prominent-error-messages-in-take-a-break",
 }, /* --------------------------------------------------------- end 2017aug */ ]
 
-var staged = [
- /* ---------------------------------------------------------- end staged */ ]
-var l = eval('staged')
+var batch2017sep = [ {
+"x": "Better client-side validation of take-a-break dates: added checks for trying to create breaks in the past or before the akrasia horizon",
+"u": "https://twitter.com/beemuvi/status/903764399457878016",
+"d": "2017-08-28",
+"t": "2017-09-01",
+"c": "By Chelsea. https://github.com/beeminder/beeminder/commit/18b2c324904324bb45ad6d005c7ebb643429c80b",
+}, { // ------------------------------------------------------------------------
+"x": "We no longer let you enable Slack notifications without having Slack authorized. #bugfix",
+"u": "https://twitter.com/beemuvi/status/903764635031003136",
+"d": "2017-08-28",
+"t": "2017-09-01",
+"c": "By Chelsea. https://github.com/beeminder/beeminder/commit/a00c5965b2e5ccc7d45dd8fb076b57f11f4b0113",  
+}, { // ------------------------------------------------------------------------
+"x": "Added link to http://help.beeminder.com on the contact page, and updated a bunch of other links throughout the site to point to the help site",
+"u": "https://twitter.com/beemuvi/status/904847651497099264",
+"d": "2017-08-28",
+"t": "2017-09-04",
+"c": "By Chelsea. https://github.com/beeminder/beeminder/commit/38f7ca8818fa763c9c85b8c0e4b961da6ac74c21 & https://github.com/beeminder/beeminder/commit/9951b7c19ea0e2552c290d48d237c905031d0ccb & https://github.com/beeminder/beeminder/commit/3dec346a8be4e7e800025dd4eb49a5b1eae48296 & https://github.com/beeminder/beeminder/commit/2a43d381cf7e0f364ef64da8f55d2b6c1d24aefe & https://github.com/beeminder/beeminder/commit/5e6ef9749c0c72577d9b1c8fe8320d6015078edc",
+}, { // ------------------------------------------------------------------------
+"x": "Arranged goal types on goal creation page so Do More/Less vertically aligned, Odometer less front-and-center, descriptions clearer/conciser",
+"u": "https://twitter.com/beemuvi/status/904847930967728128",
+"d": "2017-08-28",
+"t": "2017-09-04",
+"c": "By Chelsea. https://github.com/beeminder/beeminder/commit/bdee1043c5e2670ccaebe39a442efc9e0a17ffd4 & https://github.com/beeminder/beeminder/commit/54bbb9c163fff6ec8d785ae9b00df39b9a6d8530",
+}, /* --------------------------------------------------------- end 2017sep */ ]
+
+var staged = [ { // note: sub-UVIs not allowed here in staging
+"x": "Bugfix in Habitica Dailies: we'd switch your completed Dailies for yesterday to 0 if your timezone was sufficiently far ahead of server time",
+"c": "The tasks all have the same ID in Habitica, because they just schedule them to be repeated, so we add the current date to the ID... but then if your day rolls over to tomorrow while the server is still on yesterday, we were comparing your fresh unchecked To-Dos against yesterday's completed ones and marking them as undone!",
+}, /* ---------------------------------------------------------- end staged */ ]
 
 /*
-STAGED: ------10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140  
+METASTAGED: --10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140  
 }, { // ------------------------------------------------------------------------
-"x": "Include the transaction description on your payments page (/payment) for peple using PayPal.",
-"u": "",
-"t": "",
-"c": "",
-}, { // ------------------------------------------------------------------------
-"x": "Also correctly indicate the transaction status. (we weren't correctly showing if a transaction was declined)",
-"u": "",
-"t": "",
-"c": "",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
