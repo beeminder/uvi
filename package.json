@@ -1,20 +1,24 @@
 {
-
-"name": "beemuvi",
-"version": "1.0.1",
-"description": "Beeminder's Changelog",
-"main": "server.js",
-"scripts": { "start": "node server.js" },
-"dependencies": {
-  "express": "^4.15.2"
-},
-"engines": { "node": "6.10.x" },
-"repository": { "url": "glitch/uvi" },
-"license": "MIT",
-"keywords": [
-  "node",
-  "glitch",
-  "beeminder"
-]
-
+  "name": "beemuvi",
+  "version": "1.0.1",
+  "description": "Beeminder's Changelog",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.15.3"
+  },
+  "engines": {
+    "node": "6.x"
+  },
+  "repository": {
+    "url": "glitch/uvi"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "beeminder"
+  ]
 }

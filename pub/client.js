@@ -14,8 +14,8 @@ function getQueryParam(key) {
 
 const TURL = 'https://twitter.com/';
 const BURL = TURL + 'beemuvi';
-const BICON = // tiny twitter birdie icon
-     'https://cdn.glitch.com/048f1230-830a-4702-9106-1d28c7e8a2c9%2Fbirdie.png';
+//const BICON = // tiny twitter birdie icon
+//     'https://cdn.glitch.com/048f1230-830a-4702-9106-1d28c7e8a2c9%2Fbirdie.png';
 const MONA = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', // month array
               'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
 const MONAF = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
@@ -47,14 +47,14 @@ function linkify(s) {
                   '$1<a href="https://twitter.com/$2">@$2</a>')
   }
   s = s.replace(/UVI#(\d+)/g, '<a href="#$1">UVI#$1</a>');
-  return s
+  return s;
 }
 
 // Add html to a featured tweet (given as a string) to make it bold/big
 function embolden(s) {
   if (!/<strong>/.test(s)) { s =  '<strong>' + s + '</strong>' }
   s = '<font size="+1">' + s + '</font>'
-  return s
+  return s;
 }
 
 // Helper to generate the hovertext given deploy date d, tweet date t, comment c
@@ -68,7 +68,7 @@ function genhov(d, t, c) { // if just d's given let it be ambiguous
   else               { s = 'Deployed '+d+', tweeted '+t }
   if (c && s) { s += '\n'+c }
   else if (c) { s = c }
-  return s
+  return s;
 }
 
 // Takes UVI object and generates the html version, with anchor link
@@ -85,17 +85,22 @@ function render(uvi) {
   if (!text) { text = "ERROR: "+JSON.stringify(uvi) }
   else { text = linkify(feat ? embolden(text) : text) }
   if (!note) { note = '' }
-  
+  var hovt = 'title="' + (subl ? '(#'+num+') ' : '') + genhov(date, twate, note) + '"'
+
   return '<a name="'+num+'"></a>'              // anchor link for the UVI number
     + text                                     // full text w/ URLS linkified
-    + ' <a href="'+(twurl ? twurl : BURL)+'" title="'       // start birdie icon
-    + (subl ? '(#'+num+') ' : '') 
-    + genhov(date, twate, note)
-    + '">'
-    + '<img src="'+BICON+'"/>'
-    + '</a>'                                                // end birdie icon
+    + ' <a href="'+(twurl ? twurl : BURL)+'" '+hovt+'>'
+    + '<i class="fa fa-twitter" style="color:#BFBFBF"></i></a>'
+    //+ ' <a href="'+(twurl ? twurl : BURL)+'" title="'       // start birdie icon
+    //+ (subl ? '(#'+num+') ' : '') 
+    //+ genhov(date, twate, note)
+    //+ '">'
+    //+ '<img src="'+BICON+'"/>'
+    //+ '</a>'                                                // end birdie icon
+    + ' <a href="http://beeminder.com/changelog#'+num+'">'
+    + '<i class="fa fa-link" style="color:#BFBFBF" '+hovt+'></i></a>'
     + ' <span class="note"'+(NOTES ? '' : ' style="display:none;"')+'>'
-    + linkify(note)+'</span>'
+    + linkify(note)+'</span>';
 }
 
 // Update the global UVI counter and make sure uvi.n is set 
@@ -104,18 +109,19 @@ function numbum(uvi) {
   uvi.n = uvi.n || n; // let uvi.n default to the global counter if not set
   if (uvi.n !== n) { // let the specified number usurp the counter but complain
     if (uvi.n === n-1 && uvi.s) {
-      console.log(`Sublist starting @ ${n-1}`);
+      //console.log(`Sublist starting @ ${n-1}`);
     } else {
       console.log(`NUMBERING ERROR: ${n-1} -> ${uvi.n}`);
+      alert      (`NUMBERING ERROR: ${n-1} -> ${uvi.n}`);
     }
-    n = uvi.n 
+    n = uvi.n;
   }
 }
 
 // Takes UVI object and generates the html <li> element
 function genli(uvi) {
   numbum(uvi) 
-  return '<li value="'+uvi.n+'">' + render(uvi) + '</li>\n'
+  return '<li value="'+uvi.n+'">' + render(uvi) + '</li>\n';
 }
 
 // Generate html for a batch of UVIs including the year/month header
@@ -139,6 +145,20 @@ function genbatch(year, mon) {
     }
     else { s += genli(l[i]) }
   }
-  d.insertAdjacentHTML('beforeend', '\n<ol>\n' + s + '</ol>\n')
+  d.insertAdjacentHTML('beforeend', '\n<ol>\n' + s + '</ol>\n');
 }
+
+// Generate html for the batch of staged UVIs (no header)
+function genstaged() {
+  var d = document.getElementById('stg');
+  var l = eval('staged');
+  console.log("DEBUG2: ", l);
+  if (l.length > 0) {
+    d.insertAdjacentHTML('beforeend', "<h3>Staged (not official until they're both tweeted and deployed)</h3>");
+    var s = '';
+    l.forEach(function(x) { s += genli(x) })
+    d.insertAdjacentHTML('beforeend', '\n<ol>\n' + s + '</ol>\n');
+  }
+}
+
 // --------------------------------- 80chars ---------------------------------->
