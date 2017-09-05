@@ -15,7 +15,7 @@ function getQueryParam(key) {
 const TURL = 'https://twitter.com/';
 const BURL = TURL + 'beemuvi';
 //const BICON = // tiny twitter birdie icon
-//     'https://cdn.glitch.com/048f1230-830a-4702-9106-1d28c7e8a2c9%2Fbirdie.png';
+//   'https://cdn.glitch.com/048f1230-830a-4702-9106-1d28c7e8a2c9%2Fbirdie.png';
 const MONA = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', // month array
               'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
 const MONAF = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
@@ -85,7 +85,8 @@ function render(uvi) {
   if (!text) { text = "ERROR: "+JSON.stringify(uvi) }
   else { text = linkify(feat ? embolden(text) : text) }
   if (!note) { note = '' }
-  var hovt = 'title="' + (subl ? '(#'+num+') ' : '') + genhov(date, twate, note) + '"'
+  var hovt = 'title="' + (subl ? '(#'+num+') ' : '') 
+                       + genhov(date, twate, note) + '"'
 
   return '<a name="'+num+'"></a>'              // anchor link for the UVI number
     + text                                     // full text w/ URLS linkified
@@ -153,11 +154,14 @@ function genstaged() {
   var d = document.getElementById('stg');
   var l = eval('staged');
   console.log("DEBUG2: ", l);
-  if (l.length > 0) {
-    d.insertAdjacentHTML('beforeend', "<h3>Staged (not official until they're both tweeted and deployed)</h3>");
+  if (l.length > 0 && "x" in l[0]) {
+    d.insertAdjacentHTML('beforeend', 
+      "<h3 style=\"color:#BFBFBF\">"
+      +"<br>Staged UVIs (not official until tweeted as well as deployed)</h3>");
     var s = '';
     l.forEach(function(x) { s += genli(x) })
-    d.insertAdjacentHTML('beforeend', '\n<ol>\n' + s + '</ol>\n');
+    d.insertAdjacentHTML('beforeend', 
+                         '\n<ol style=\"color:#BFBFBF\">\n' + s + '</ol>\n');
   }
 }
 
