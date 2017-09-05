@@ -12,7 +12,6 @@ There are too many things like expanding @-mentions and telling you how many cha
 ## TODO LIST
 
 1. Show tweet times in Pacific (Central before 2012 Feb?) instead of UTC
-1. Codemod .*bug.* -> append '#bugfix'
+1. Codemod `.*bug.*` -> append '#bugfix'
 1. Pick featured UVIs through June 2013 when we started doing that
 1. Filtering options like only showing bugfixes, non-bugfixes, featured, etc
-1. Little icon next to the birdie icon for permalinks to tweets
