@@ -14,8 +14,6 @@ function getQueryParam(key) {
 
 const TURL = 'https://twitter.com/';
 const BURL = TURL + 'beemuvi';
-//const BICON = // tiny twitter birdie icon
-//   'https://cdn.glitch.com/048f1230-830a-4702-9106-1d28c7e8a2c9%2Fbirdie.png';
 const MONA = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', // month array
               'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
 const MONAF = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
@@ -92,12 +90,6 @@ function render(uvi) {
     + text                                     // full text w/ URLS linkified
     + ' <a href="'+(twurl ? twurl : BURL)+'" '+hovt+'>'
     + '<i class="fa fa-twitter" style="color:#BFBFBF"></i></a>'
-    //+ ' <a href="'+(twurl ? twurl : BURL)+'" title="'       // start birdie icon
-    //+ (subl ? '(#'+num+') ' : '') 
-    //+ genhov(date, twate, note)
-    //+ '">'
-    //+ '<img src="'+BICON+'"/>'
-    //+ '</a>'                                                // end birdie icon
     + ' <a href="http://beeminder.com/changelog#'+num+'">'
     + '<i class="fa fa-link" style="color:#BFBFBF" '+hovt+'></i></a>'
     + ' <span class="note"'+(NOTES ? '' : ' style="display:none;"')+'>'
