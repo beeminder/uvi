@@ -96,10 +96,12 @@ function render(uvi) {
                        + genhov(date, tate, note) + '"'
 
   var css = { // map website to css classes including font-awesome icon
-    'beeminder.com' : 'fa fa-link    icon',
-    'twitter.com'   : 'fa fa-twitter icon',
-    'github.com'    : 'fa fa-github  icon',
-    'trello.com'    : 'fa fa-trello  icon',
+    'beeminder.com'       : 'fa fa-link     icon',
+    'forum.beeminder.com' : 'fa fa-comments icon',
+    'twitter.com'         : 'fa fa-twitter  icon',
+    'github.com'          : 'fa fa-github   icon',
+    'trello.com'          : 'fa fa-trello   icon',
+    'dropbox.com'         : 'fa fa-dropbox  icon',
   };
 
   // start with anchor link and then the full text w/ URLs linkified
