@@ -124,7 +124,7 @@ var batch2016jan = [
 "x": "If you had to re-auth Skritter (maybe some others) we were failing to remove error flag &amp; wouldn't automatically resume fetching #bugfix",
 "u": "https://twitter.com/beemuvi/status/691792309885784065",
 "t": "2016-01-26 01:18:34 +0000",
-"c": "Were already doing this for some specific autod types, but i also made the code better so that this will just happen for new types we add, so also infra",
+"c": "Were already doing this for some specific autod types, but I also made the code better so that this will just happen for new types we add, so also infra",
 }, /*************************************************************************/ {
 "n": 1801, 
 "x": "Fixed a bug on http://scribeminder.com that prevented connecting to Beeminder if you weren't using HTTPS. Also, forced HTTPS. #bugfix",
@@ -215,9 +215,9 @@ var batch2016feb = [
 "t": "2016-02-11 06:42:27 +0000",
 }, /*************************************************************************/ {
 "x": "And a #bugfix with the Slack bot that made it (sometimes? briefly?) ignore those settings and DM you anyway.",
-"u": "https://twitter.com/beemuvi/status/697672251240415232",
+"u": ["https://twitter.com/beemuvi/status/697672251240415232",
+      "https://github.com/beeminder/beeminder/commit/2a154d523f2f22a7ccdaeffb2e1b20cd609220a3"],
 "t": "2016-02-11 06:43:21 +0000",
-"c": "Stop spurious slack dms https://github.com/beeminder/beeminder/commit/2a154d523f2f22a7ccdaeffb2e1b20cd609220a3",
 }, /*************************************************************************/ {
 "f": true,
 "x": "Big change to reminder settings: no more inheriting from defaults; instead there's a button (in advanced settings) to reset to defaults",
@@ -291,22 +291,26 @@ var batch2016feb = [
 "t": "2016-02-28 10:16:35 +0000",
 }, /*************************************************************************/ {
 "x": "Hopefully last UVI for #bugfix's from the upgrade: dial-it-in position, checkmarks for data entered today, saving changes in reminders table",
-"u": "https://twitter.com/beemuvi/status/704226556357378048",
+"u": ["https://twitter.com/beemuvi/status/704226556357378048",
+      "https://github.com/beeminder/beeminder/commit/5861831958f0e88e880113f16938739af8ab68cd"],
 "t": "2016-02-29 08:47:49 +0000",
-"c": "Slightly different syntax for fields_for: fixes bug with fwomp page not saving individual goal changes - the goal name wasn't getting included in the fieldset. Fix dial-it-in position? https://github.com/beeminder/beeminder/commit/5861831958f0e88e880113f16938739af8ab68cd Bugfix: checkmarks for 'data entered today' not showing up in the gallery (or persisting in the dashboard)",
+"c": "Slightly different syntax for fields_for: fixes bug with fwomp page not saving individual goal changes - the goal name wasn't getting included in the fieldset. Fix dial-it-in position? Bugfix: checkmarks for 'data entered today' not showing up in the gallery (or persisting in the dashboard)",
 }, /*************************************************************************/ ]
 
 var batch2016mar = [
 {
 "x": "We rearranged goal settings a bit, moving things betw Basic &amp; Advanced (was a while ago; we're improving @bmndr faster thn we cn twt abt it)",
-"u": "https://twitter.com/beemuvi/status/704616863175606272",
+"u": ["https://twitter.com/beemuvi/status/704616863175606272",
+      "http://forum.beeminder.com/t/on-privacy-vs-expectations/1900",
+      "https://github.com/beeminder/beeminder/compare/2a154d523f2f...0efccf656a85"],
 "t": "2016-03-01 10:38:45 +0000",
-"c": "[http://forum.beeminder.com/t/on-privacy-vs-expectations/1900] [settings rearranging https://github.com/beeminder/beeminder/compare/2a154d523f2f...0efccf656a85] [And private back to Basics by popular demand.]",
+"c": "And private back to Basics by popular demand"
 }, /*************************************************************************/ {
 "x": "Mini-UVIs: Typo fix (\"was as least one error\"), stick to \"reminders\" vs \"alerts\", \"team\" copy for Slack, tooltip misplaced HT <a href=\"https://twitter.com/chriswaterguy\">@chriswaterguy</a>",
-"u": "https://twitter.com/beemuvi/status/704978561942331394",
+"u": ["https://twitter.com/beemuvi/status/704978561942331394",
+      "http://forum.beeminder.com/t/confusing-pop-up-next-to-derail-time-setting/1905"],
 "t": "2016-03-02 10:36:01 +0000",
-"c": "[http://forum.beeminder.com/t/confusing-pop-up-next-to-derail-time-setting/1905 HT @chriswaterguy #mini]",
+"c": "HT @chriswaterguy #mini",
 }, /*************************************************************************/ {
 "f": true,
 "x": "New dashboard! It's still in flux and not the default view yet but it's available at http://beeminder.com/dashboard (tweetstorm to follow!)",
@@ -347,9 +351,10 @@ var batch2016mar = [
 "c": "Run beedroid push inline if api && has_android",
 }, /*************************************************************************/ {
 "x": "#bugfix w/ RescueTime for about 4 days around Feb 25: new goals were created fine but weren't importing your RescueTime history like usual",
-"u": "https://twitter.com/beemuvi/status/708537898895671297",
+"u": ["https://twitter.com/beemuvi/status/708537898895671297",
+      "https://github.com/beeminder/beeminder/commit/c38c806ee62e073f226af7bcd3d311c5e7010329"],
 "t": "2016-03-12 06:19:33 +0000",
-"c": "[inc syntax error in rescuetime importer: https://github.com/beeminder/beeminder/commit/c38c806ee62e073f226af7bcd3d311c5e7010329]",
+"c": "inc syntax error in rescuetime importer",
 }, /*************************************************************************/ {
 "f": true,
 "x": "The graph now shows <a href=\"http://forum.beeminder.com/t/restarting-odometer-to-non-zero-value/299/17\">odometer resets as black vertical dotted lines</a>",
@@ -968,9 +973,9 @@ var batch2016jul = [
 "t": "2016-07-08 23:14:18 +0000",
 }, /*************************************************************************/ {
 "x": "We now include the \"Things You Must Know\" copy from <a href=\"http://blog.beeminder.com/creditcard\">blog.beeminder.com/creditcard</a> in the email we send out for each new goal you create",
-"u": "https://twitter.com/beemuvi/status/752761131702247424",
+"u": ["https://twitter.com/beemuvi/status/752761131702247424",
+      "https://github.com/beeminder/beeminder/commit/f288fe006829776f1f4e57583afbf08487cf6bb1"],
 "t": "2016-07-12 07:06:54 +0000",
-"c": "https://github.com/beeminder/beeminder/commit/f288fe006829776f1f4e57583afbf08487cf6bb1",
 }, /*************************************************************************/ {
 "x": "In the \"Charge me\" action in our IFTTT channel, we failed to strip whitespace from the charge amount &amp; would wrongly complain \"NaN\". #bugfix",
 "u": "https://twitter.com/beemuvi/status/753184014966493184",
@@ -1343,8 +1348,9 @@ var batch2016oct = [
 "x": "Several fixes to decrease chances of bot emails getting spamboxed. More user-visible part: truncate quoting of probable spam in bot replies.",
 "d": "2016-10-05",
 "t": "2017-05-31",
-"u": "https://twitter.com/beemuvi/status/870167377983422464",
-"c": "[twttr#2299] We forgot to tweet this when we logged it as a UVI! We eventually figured it out when collecting all our UVIs at beeminder.com/changelog and tweeted it 8 months late. https://github.com/beeminder/beeminder/commit/0274613b68c4c55612e9260442477c9aa6fee945",
+"u": ["https://twitter.com/beemuvi/status/870167377983422464",
+      "https://github.com/beeminder/beeminder/commit/0274613b68c4c55612e9260442477c9aa6fee945"],
+"c": "[twttr#2299] We forgot to tweet this when we logged it as a UVI! We eventually figured it out when collecting all our UVIs at beeminder.com/changelog and tweeted it 8 months late.",
 }, /*************************************************************************/ {
 "n": 2056,
 "x": "Fixed, de-duped, and rearranged footer links. #mini",

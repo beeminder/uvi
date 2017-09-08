@@ -102,7 +102,7 @@ var batch2015jan = [
 "x": "Twitter autodata bug: last datapoint traveled forward in time if you hadn't tweeted anything new. HT <a href=\"https://twitter.com/gdedkins\">@gdedkins</a> #bugfix",
 "u": "https://twitter.com/beemuvi/status/558037456646590464",
 "t": "2015-01-21 23:04:32 +0000",
-  "c": "<!-- [Led to going from orange => derailed instead of orange => red.] -->",
+"c": "<!-- [Led to going from orange => derailed instead of orange => red.] -->",
 }, /*************************************************************************/ {
 "x": "Reminder time &amp; deadline time accept time of day like \"2300\" now, &amp; error rather than die on bad input. Related to UVI#1383.",
 "u": "https://twitter.com/beemuvi/status/559454036085055489",
@@ -644,9 +644,10 @@ var batch2015may = [
 "t": "2015-05-27 22:17:40 +0000",
 }, /*************************************************************************/ {
 "x": "Similar to the gallery blurbs for Do Less goals, non-autosumming (and w/o odom reset feature) goals now show the absolute bare min, not delta",
-"u": "https://twitter.com/beemuvi/status/604064764965191681",
+"u": ["https://twitter.com/beemuvi/status/604064764965191681",
+      "https://www.dropbox.com/s/ttg756ot309ekev/Screenshot%202015-05-21%2010.21.20.png?raw=1"],
 "t": "2015-05-28 23:20:37 +0000",
-"c": "https://www.dropbox.com/s/ttg756ot309ekev/Screenshot%202015-05-21%2010.21.20.png?dl=0 HT sean fellows (drtall) gusthecorgi.com",
+"c": "HT sean fellows (drtall) gusthecorgi.com",
 }, /*************************************************************************/ {
 "f": true,
 "x": "Official <a href=\"https://twitter.com/Misfit\">@Misfit</a> integration! Our blog post here: <a href=\"http://blog.beeminder.com/misfit\">blog.beeminder.com/misfit</a> -- and look at us in their partner gallery: <a href=\"https://build.misfit.com/partners\">build.misfit.com/partners</a>",
@@ -764,9 +765,9 @@ var batch2015jun = [
 "t": "2015-06-23 06:52:31 +0000",
 }, /*************************************************************************/ {
 "x": "Don't include secret goals (which show up only as masked bee, because secret) in <a href=\"http://beeminder.com/featured\">beeminder.com/featured</a> and warn if you try to set secr. and feat.",
-"u": "https://twitter.com/beemuvi/status/613610714276610048",
+"u": ["https://twitter.com/beemuvi/status/613610714276610048",
+      "http://forum.beeminder.com/t/secret-featured/886"],
 "t": "2015-06-24 07:32:49 +0000",
-"c": "http://forum.beeminder.com/t/secret-featured/886",
 }, /*************************************************************************/ {
 "x": "Our Skritter form -- <a href=\"http://beeminder.com/skritter\">beeminder.com/skritter</a> -- is now consistent that the metric is *time* studied, not points. #mini",
 "u": "https://twitter.com/beemuvi/status/613969830970916864",
@@ -868,7 +869,7 @@ var batch2015jul = [
 "x": "We were double-counting certain closed issues in Gitminder #bugfix (ie, issues closed betw midnight &amp; autodata fetch shortly after midnight)",
 "u": "https://twitter.com/beemuvi/status/622296611754881024",
 "t": "2015-07-18 06:47:28 +0000",
-"c": "We were counting up all the issues closed since midnight, but if the maint check doesn't run until 00:30 and there are additional issues closed btwn 00:00 and 00:30 when maintenance runs, then we'd count them for yesterday, and again tomorrow when we count up issues] -->",
+"c": "We were counting up all the issues closed since midnight, but if the maint check doesn't run until 00:30 and there are additional issues closed btwn 00:00 and 00:30 when maintenance runs, then we'd count them for yesterday, and again tomorrow when we count up issues",
 }, /*************************************************************************/ {
 "x": "If there was an auth error with your GmailZero token, we were only adding a 0 datapoint, not telling you it's broken. #bugfix",
 "u": "https://twitter.com/beemuvi/status/622668479749959680",
@@ -1054,7 +1055,7 @@ var batch2015aug = [
 "x": "Clarified error message and outlined the errored field in red in reset form when you don't give the reset value for the graph #bugfix",
 "u": "https://twitter.com/beemuvi/status/636784546508238849",
 "t": "2015-08-27 06:17:21 +0000",
-"c": "Occasional error for custom or weight loss restarts from success state. seemed to be unclear, however, given the rate that the error was occurring",
+"c": "Occasional error for custom or weight loss restarts from success state. Seemed to be unclear, however, given the rate that the error was occurring.",
 }, /*************************************************************************/ {
 "x": "Were accidentally requesting non-https version of useronboard widget which caused warnings, plus conditionally include it cuz faster #bugfix",
 "u": "https://twitter.com/beemuvi/status/637127676742909954",
@@ -1313,9 +1314,9 @@ var batch2015oct = [
 "c": "Fix 500 error from queue-for-refresh on new goals",
 }, /*************************************************************************/ {
 "x": "Were failing to respect user-set data source. We try to guess if it should be <a href=\"https://twitter.com/IFTTT\">@IFTTT</a> or <a href=\"https://twitter.com/zapier\">@zapier</a>, but if you change it back we leave it be.",
-"u": "https://twitter.com/beemuvi/status/659512705028493312",
+"u": ["https://twitter.com/beemuvi/status/659512705028493312",
+      "http://forum.beeminder.com/t/ifttt-and-manual-entry-fiasco/720/6?u=dreev"],
 "t": "2015-10-28 23:30:56 +0000",
-"c": "http://forum.beeminder.com/t/ifttt-and-manual-entry-fiasco/720/6?u=dreev",
 }, /*************************************************************************/ {
 "x": "If you deauthorized Beeminder from Jawbone or something else went wrong we were failing silently instead of throwing up the alert. #bugfix",
 "u": "https://twitter.com/beemuvi/status/659515293262188544",
@@ -1470,7 +1471,7 @@ var batch2015nov = [
 "x": "Ratcheting for do-less goals (including autoratcheting for premium folks) now work in terms of goal units, not days. HT <a href=\"https://twitter.com/chipmanaged\">@chipmanaged</a>",
 "u": "https://twitter.com/beemuvi/status/669969979228291072",
 "t": "2015-11-26 20:04:25 +0000",
-"c": "separate UVI to say how that also fixes the nasty bug with do-less autoratcheting? no. Tweaks to the UI to accommodate this? nah.",
+"c": "Separate UVI to say how that also fixes the nasty bug with do-less autoratcheting? no. Tweaks to the UI to accommodate this? nah.",
 }, /*************************************************************************/ {
 "f": true,
 "x": "Beeminder iOS app version 4.2! Graphs now appear in Today widget along with bare min, and several other things in the next 6 tweets... (1/7)",
@@ -1569,9 +1570,10 @@ var batch2015dec = [
 "t": "2015-12-22 23:34:33 +0000",
 }, /*************************************************************************/ {
 "x": "We broke (2 months ago as part of javascript graphs) and then fixed the Quick Add feature that updates \"+N Due by Y\" text in gallery #bugfix",
-"u": "https://twitter.com/beemuvi/status/679826975502929921",
+"u": ["https://twitter.com/beemuvi/status/679826975502929921",
+      "http://forum.beeminder.com/t/quick-add-doesnt-update-the-text-part/735"],
 "t": "2015-12-24 00:52:36 +0000",
-"c": "Removed a js date helper lib that was conflicting with mpld3, not noticing that we were in fact using some helper functions from it. Added a getDayName &amp; getMonthName helper fn to our js file. http://forum.beeminder.com/t/quick-add-doesnt-update-the-text-part/735",
+"c": "Removed a js date helper lib that was conflicting with mpld3, not noticing that we were in fact using some helper functions from it. Added a getDayName &amp; getMonthName helper fn to our js file.",
 }, /*************************************************************************/ {
 "x": "Uncheck \"start flat\" when restarting ⇒ road dial appears like it's supposed to (broke this months ago :/ \"start flat\" was no-op) #bugfix",
 "u": "https://twitter.com/beemuvi/status/680167141341937664",
