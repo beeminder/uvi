@@ -22,3 +22,7 @@ li {
   opacity: 0.35; /* Real browsers */
   filter: alpha(opacity = 35); /* MSIE */
 }
+
+.icon {
+  color:#BFBFBF;
+}
