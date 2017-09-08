@@ -156,12 +156,12 @@ function genstaged() {
   console.log("DEBUG2: ", l);
   if (l.length > 0 && "x" in l[0]) {
     d.insertAdjacentHTML('beforeend', 
-      "<h3 style=\"color:#BFBFBF\">"
+      "<h3 class=\"grayout\">"
       +"<br>Staged UVIs (not official until tweeted as well as deployed)</h3>");
     var s = '';
     l.forEach(function(x) { s += genli(x) })
     d.insertAdjacentHTML('beforeend', 
-                         '\n<ol style=\"color:#BFBFBF\">\n' + s + '</ol>\n');
+                         '\n<ol class=\"grayout\">\n' + s + '</ol>\n');
   }
 }
 

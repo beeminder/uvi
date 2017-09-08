@@ -1164,11 +1164,63 @@ var batch2017sep = [ {
 "d": "2017-08-28",
 "t": "2017-09-04",
 "c": "By Chelsea. https://github.com/beeminder/beeminder/commit/bdee1043c5e2670ccaebe39a442efc9e0a17ffd4 & https://github.com/beeminder/beeminder/commit/54bbb9c163fff6ec8d785ae9b00df39b9a6d8530",
+}, { // ------------------------------------------------------------------------
+"x": "Habitica Dailies #bugfix: we'd switch your completed Dailies for yesterday to 0 if your timezone was sufficiently far ahead of server time",
+"u": "https://twitter.com/beemuvi/status/905217285496774656",
+"t": "2017-09-05",
+"c": "The tasks all have the same ID in Habitica, because they just schedule them to be repeated, so we add the current date to the ID... but then if your day rolls over to tomorrow while the server is still on yesterday, we were comparing your fresh unchecked To-Dos against yesterday's completed ones and marking them as undone!",
+}, { // ------------------------------------------------------------------------
+"x": "Now show current lane width in custom settings even if it's automatically computed so it's easier to avoid instaderailing. HT @mgiannopoulos",
+"u": "https://twitter.com/beemuvi/status/905217491428810752",
+"t": "2017-09-05",
+"c": "By Chelsea. God it's going to be so good when YBHP makes this moot! https://github.com/beeminder/beeminder/commit/bee8ff4fc5e84555fd43d742d13f4b8683dfc689 & https://trello.com/c/PquXaEcP/685-show-current-lane-width-in-lane-width-field-even-if-not-explicitly-set",
+}, { // ------------------------------------------------------------------------
+"x": "We were accidentally not letting you archive a derailed goal without having a payment method on file. #bugfix",
+"u": "https://twitter.com/beemuvi/status/905573948577812480",
+"t": "2017-09-06",
+"c": "https://github.com/beeminder/beeminder/commit/90f4dbe0480f82dd9e5c7da7a04a6757cd818998"
+}, { // ------------------------------------------------------------------------
+"x": "We got rid of the \"unarchive\" option for archived goals because it was literally equivalent to \"restart\". #mini",
+"u": "https://twitter.com/beemuvi/status/905575139017867265",
+"t": "2017-09-06",
+}, { // ------------------------------------------------------------------------
+"n": 2394,
+"x": "Conciser &amp; larger: \"To restart this goal you must add a pledge, but we don't have a payment method from you yet\" #mini",
+"u": "https://twitter.com/beemuvi/status/905936393158852608",
+"t": "2017-09-07",
+}, { // ------------------------------------------------------------------------
+"n": 2395,
+"x": "(+) Multiple related #bugfix's w/ custom goals",
+"u": "https://twitter.com/beemuvi/status/905937798787510272",
+}, { // ------------------------------------------------------------------------
+"n": 2395,
+"s": true,
+"x": "(1) don't complain about no initial value and say \"today's weight\" (& assume 0 if none given)",
+"u": "https://twitter.com/beemuvi/status/905937798787510272",
+"t": "2017-09-07",
+// https://github.com/beeminder/beeminder/commit/1bcff25fbdda4c72a9990ea4137003386e88910b
+// https://trello.com/c/HYaIiAKy/816-todays-weight-is-required
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "(2) we were ignoring initial value if you provided it and starting custom roads at 0. #bugfix",
+"u": "https://twitter.com/beemuvi/status/905938030543831040",
+"t": "2017-09-07",
+// https://trello.com/c/oibIjJud/851-custom-goals-dont-start-at-given-initial-value
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "(3) we'd sometimes fail to ask for the initial value at all. (Probably more #bugfix's as well as part of cleaning up this mess.)",
+"u": "https://twitter.com/beemuvi/status/905938216343166976",
+"t": "2017-09-07",
+"c": "We didn't have a case in the code for custom goaltype so things were just falling through all these if statements with a mishmash result where the state of the form that you saw was reliant on whatever cruft was left in local storage. For example you'd see a different form if you'd clicked on DoMore earlier or not.",
+// https://trello.com/c/CCM9ySrV/768-make-custom-exponential-goal-creation-more-friendly
+}, { // ------------------------------------------------------------------------
+"x": "UVI#2384 caused a brief bug that yielded a 500 error when restarting some goals (not sure any actual user encountered it though!) #bugfix",
+"u": "https://twitter.com/beemuvi/status/905942976177647617",
+"c": "Something with empty bb hash",
+// https://github.com/beeminder/beeminder/commit/771f5954f0c2a12d77da040c036a33627266051a
 }, /* --------------------------------------------------------- end 2017sep */ ]
 
 var staged = [ { // note: sub-UVIs not allowed here in staging
-"x": "Bugfix in Habitica Dailies: we'd switch your completed Dailies for yesterday to 0 if your timezone was sufficiently far ahead of server time",
-"c": "The tasks all have the same ID in Habitica, because they just schedule them to be repeated, so we add the current date to the ID... but then if your day rolls over to tomorrow while the server is still on yesterday, we were comparing your fresh unchecked To-Dos against yesterday's completed ones and marking them as undone!",
 }, /* ---------------------------------------------------------- end staged */ ]
 
 /*
@@ -1176,6 +1228,10 @@ METASTAGED: --10--------20--------30--------40--------50--------60--------70----
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
+"x": "fix annoyingness where the clicking 'load all datapoints' would load the datapoints in nonsensical order",
+"x": "related: faster load times for 'load all datapoints', and use a default sort order (resolves some weirdness with clicking the heading multiple times before the sort is applied)",
+"t": "",
+"u": "",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
