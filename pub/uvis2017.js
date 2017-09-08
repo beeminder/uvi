@@ -1196,28 +1196,28 @@ var batch2017sep = [ {
 "n": 2395,
 "s": true,
 "x": "(1) don't complain about no initial value and say \"today's weight\" (& assume 0 if none given)",
-"u": "https://twitter.com/beemuvi/status/905937798787510272",
+"u": ["https://twitter.com/beemuvi/status/905937798787510272",
+      "https://github.com/beeminder/beeminder/commit/1bcff25fbdda4c72a9990ea4137003386e88910b",
+      "https://trello.com/c/HYaIiAKy/816-todays-weight-is-required"],
 "t": "2017-09-07",
-// https://github.com/beeminder/beeminder/commit/1bcff25fbdda4c72a9990ea4137003386e88910b
-// https://trello.com/c/HYaIiAKy/816-todays-weight-is-required
 }, { // ------------------------------------------------------------------------
 "s": true,
 "x": "(2) we were ignoring initial value if you provided it and starting custom roads at 0. #bugfix",
-"u": "https://twitter.com/beemuvi/status/905938030543831040",
+"u": ["https://twitter.com/beemuvi/status/905938030543831040",
+      "https://trello.com/c/oibIjJud/851-custom-goals-dont-start-at-given-initial-value"],
 "t": "2017-09-07",
-// https://trello.com/c/oibIjJud/851-custom-goals-dont-start-at-given-initial-value
 }, { // ------------------------------------------------------------------------
 "s": true,
 "x": "(3) we'd sometimes fail to ask for the initial value at all. (Probably more #bugfix's as well as part of cleaning up this mess.)",
-"u": "https://twitter.com/beemuvi/status/905938216343166976",
+"u": ["https://twitter.com/beemuvi/status/905938216343166976",
+      "https://trello.com/c/CCM9ySrV/768-make-custom-exponential-goal-creation-more-friendly"],
 "t": "2017-09-07",
 "c": "We didn't have a case in the code for custom goaltype so things were just falling through all these if statements with a mishmash result where the state of the form that you saw was reliant on whatever cruft was left in local storage. For example you'd see a different form if you'd clicked on DoMore earlier or not.",
-// https://trello.com/c/CCM9ySrV/768-make-custom-exponential-goal-creation-more-friendly
 }, { // ------------------------------------------------------------------------
 "x": "UVI#2384 caused a brief bug that yielded a 500 error when restarting some goals (not sure any actual user encountered it though!) #bugfix",
-"u": "https://twitter.com/beemuvi/status/905942976177647617",
+"u": ["https://twitter.com/beemuvi/status/905942976177647617",
+      "https://github.com/beeminder/beeminder/commit/771f5954f0c2a12d77da040c036a33627266051a"],
 "c": "Something with empty bb hash",
-// https://github.com/beeminder/beeminder/commit/771f5954f0c2a12d77da040c036a33627266051a
 }, /* --------------------------------------------------------- end 2017sep */ ]
 
 var staged = [ { // note: sub-UVIs not allowed here in staging

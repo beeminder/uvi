@@ -69,30 +69,45 @@ function genhov(d, t, c) { // if just d's given let it be ambiguous
   return s;
 }
 
+// Extract the hostname from a URL
+function domain(u) {
+  // var x = new URL(u); x.hostname // might be lot of overhead vs just a regex
+  var m = u.match(/\:\/\/(?:www\d?\.)?([^\/]+)/);
+  return m ? m[1] : '';
+}
+
 // Takes UVI object and generates the html version, with anchor link
 function render(uvi) {
   var num   = uvi.n; // n: the number of the UVI (can omit if prev+1)
   var subl  = uvi.s; // s: whether to put this UVI in a sublist
   var feat  = uvi.f; // f: whether to highlight the UVI (boolean)
   var text  = uvi.x; // x: the full text of the UVI
-  var twurl = uvi.u; // u: URL of the tweet
+  var urls  = uvi.u; // u: URLs for this UVI, like for the corresponding tweet
   var date  = uvi.d; // d: date the UVI was deployed
-  var twate = uvi.t; // t: date the UVI was tweeted
-  var note  = uvi.c; // c: comment / note to selves / hovertext on link to tweet
+  var tate  = uvi.t; // t: date the UVI was tweeted
+  var note  = uvi.c; // c: comment / note to selves / hovertext on permalink
   
   if (!text) { text = "ERROR: "+JSON.stringify(uvi) }
   else { text = linkify(feat ? embolden(text) : text) }
   if (!note) { note = '' }
+  if (urls.constructor !== Array) { urls = [urls] }
+  urls.unshift('http://beeminder.com/changelog#'+num);
   var hovt = 'title="' + (subl ? '(#'+num+') ' : '') 
-                       + genhov(date, twate, note) + '"'
+                       + genhov(date, tate, note) + '"'
 
-  return '<a name="'+num+'"></a>'              // anchor link for the UVI number
-    + text                                     // full text w/ URLS linkified
-    + ' <a href="'+(twurl ? twurl : BURL)+'" '+hovt+'>'
-    + '<i class="fa fa-twitter" style="color:#BFBFBF"></i></a>'
-    + ' <a href="http://beeminder.com/changelog#'+num+'">'
-    + '<i class="fa fa-link" style="color:#BFBFBF" '+hovt+'></i></a>'
-    + ' <span class="note"'+(NOTES ? '' : ' style="display:none;"')+'>'
+  var css = { // map website to css classes including font-awesome icon
+    'beeminder.com' : 'fa fa-link    icon',
+    'twitter.com'   : 'fa fa-twitter icon',
+    'github.com'    : 'fa fa-github  icon',
+    'trello.com'    : 'fa fa-trello  icon',
+  };
+
+  // start with anchor link and then the full text w/ URLs linkified
+  return '<a name="'+num+'"></a>' + text + ' '
+    + urls.map(function(u) {
+        return '<a href="'+u+'" '+hovt+'><i class="'+css[domain(u)]+'"></i></a>'
+      }).join(' ') + ' '
+    + '<span class="note"'+(NOTES ? '' : ' style="display:none;"')+'>'
     + linkify(note)+'</span>';
 }
 
@@ -105,7 +120,6 @@ function numbum(uvi) {
       //console.log(`Sublist starting @ ${n-1}`);
     } else {
       console.log(`NUMBERING ERROR: ${n-1} -> ${uvi.n}`);
-      alert      (`NUMBERING ERROR: ${n-1} -> ${uvi.n}`);
     }
     n = uvi.n;
   }
@@ -145,7 +159,6 @@ function genbatch(year, mon) {
 function genstaged() {
   var d = document.getElementById('stg');
   var l = eval('staged');
-  console.log("DEBUG2: ", l);
   if (l.length > 0 && "x" in l[0]) {
     d.insertAdjacentHTML('beforeend', 
       "<h3 class=\"grayout\">"
