@@ -23,6 +23,10 @@ li {
   filter: alpha(opacity = 35); /* MSIE */
 }
 
+.hidden {
+  display: none;
+}
+
 .icon {
   color:#BFBFBF;
 }

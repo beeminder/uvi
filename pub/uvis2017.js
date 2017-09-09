@@ -1229,6 +1229,7 @@ var batch2017sep = [ {
 "n": 2395,
 "x": "(+) Multiple related #bugfix's w/ custom goals",
 "u": "https://twitter.com/beemuvi/status/905937798787510272",
+"t": "2017-09-07",
 }, { // ------------------------------------------------------------------------
 "n": 2395,
 "s": true,
@@ -1254,10 +1255,15 @@ var batch2017sep = [ {
 "x": "UVI#2384 caused a brief bug that yielded a 500 error when restarting some goals (not sure any actual user encountered it though!) #bugfix",
 "u": ["https://twitter.com/beemuvi/status/905942976177647617",
       "https://github.com/beeminder/beeminder/commit/771f5954f0c2a12d77da040c036a33627266051a"],
+"t": "2017-09-07",
 "c": "Something with empty bb hash",
 }, /* --------------------------------------------------------- end 2017sep */ ]
 
 var staged = [ { // note: sub-UVIs not allowed here in staging
+"x": "Bee fixed the annoyingness where the clicking 'load all datapoints' would load the datapoints in nonsensical order",
+}, { // ------------------------------------------------------------------------
+"x": "Related: faster load times for 'load all datapoints', and we now use a default sort order (resolves some weirdness with clicking the heading multiple times before the sort is applied)",
+"u": ["https://github.com/beeminder/beeminder/issues/119#issuecomment-328223767"],
 }, /* ---------------------------------------------------------- end staged */ ]
 
 /*
@@ -1265,11 +1271,8 @@ METASTAGED: --10--------20--------30--------40--------50--------60--------70----
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-"x": "fix annoyingness where the clicking 'load all datapoints' would load the datapoints in nonsensical order",
-"x": "related: faster load times for 'load all datapoints', and use a default sort order (resolves some weirdness with clicking the heading multiple times before the sort is applied)",
 "t": "",
 "u": "",
-}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
