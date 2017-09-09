@@ -1,7 +1,7 @@
 'use strict';
-
 // --------------------------------- 80chars ---------------------------------->
-// Return the value for the given key in the querystring. Not currently used.
+
+// Return the value for the given key in the querystring
 function getQueryParam(key) {
   var v = false;
   window.location.search.substring(1).split("&").some(function(s) {
@@ -12,8 +12,6 @@ function getQueryParam(key) {
   return v;
 }
 
-const TURL = 'https://twitter.com/';
-const BURL = TURL + 'beemuvi';
 const MONA = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', // month array
               'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
 const MONAF = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
@@ -24,7 +22,7 @@ var n = 0; // global variable counting the UVIs as we generate them
 
 document.getElementById("shownotes").onclick = function() {
   Array.from(document.getElementsByClassName("note")).forEach(function(x) {
-    x.style.display = x.style.display === 'none' ? '' : 'none';
+    x.style.display = (x.style.display === 'none' ? '' : 'none')
   })
 }
 
@@ -90,6 +88,7 @@ function render(uvi) {
   if (!text) { text = "ERROR: "+JSON.stringify(uvi) }
   else { text = linkify(feat ? embolden(text) : text) }
   if (!note) { note = '' }
+  if (!urls) { urls = [] }
   if (urls.constructor !== Array) { urls = [urls] }
   urls.unshift('http://beeminder.com/changelog#'+num);
   var hovt = 'title="' + (subl ? '(#'+num+') ' : '') 
@@ -104,13 +103,13 @@ function render(uvi) {
     'dropbox.com'         : 'fa fa-dropbox  icon',
   };
 
-  // start with anchor link and then the full text w/ URLs linkified
-  return '<a name="'+num+'"></a>' + text + ' '
-    + urls.map(function(u) {
+  return '<a name="'+num+'"></a>'                        // anchor link
+    + text + ' '                                         // full text, linkified
+    + urls.map(function(u) {                             // icons as links
         return '<a href="'+u+'" '+hovt+'><i class="'+css[domain(u)]+'"></i></a>'
       }).join(' ') + ' '
-    + '<span class="note"'+(NOTES ? '' : ' style="display:none;"')+'>'
-    + linkify(note)+'</span>';
+    + '<span class="note'+(NOTES ? '' : ' hidden')+'">'
+    + linkify(note)+'</span>';                           // notes to selves
 }
 
 // Update the global UVI counter and make sure uvi.n is set 
@@ -157,8 +156,9 @@ function genbatch(year, mon) {
   d.insertAdjacentHTML('beforeend', '\n<ol>\n' + s + '</ol>\n');
 }
 
-// Generate html for the batch of staged UVIs (no header)
+// Generate html for the batch of staged UVIs (NB: sublists not allowed here)
 function genstaged() {
+  n = 0;
   var d = document.getElementById('stg');
   var l = eval('staged');
   if (l.length > 0 && "x" in l[0]) {

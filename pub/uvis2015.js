@@ -102,7 +102,7 @@ var batch2015jan = [
 "x": "Twitter autodata bug: last datapoint traveled forward in time if you hadn't tweeted anything new. HT <a href=\"https://twitter.com/gdedkins\">@gdedkins</a> #bugfix",
 "u": "https://twitter.com/beemuvi/status/558037456646590464",
 "t": "2015-01-21 23:04:32 +0000",
-"c": "<!-- [Led to going from orange => derailed instead of orange => red.] -->",
+"c": "Led to going from orange => derailed instead of orange => red.",
 }, /*************************************************************************/ {
 "x": "Reminder time &amp; deadline time accept time of day like \"2300\" now, &amp; error rather than die on bad input. Related to UVI#1383.",
 "u": "https://twitter.com/beemuvi/status/559454036085055489",

@@ -1,16 +1,16 @@
 {
   "name": "beemuvi",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Beeminder's Changelog",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.15.3"
+    "express": "^4.15.4"
   },
   "engines": {
-    "node": "6.x"
+    "node": "8"
   },
   "repository": {
     "url": "glitch/uvi"
