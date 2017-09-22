@@ -1099,6 +1099,7 @@ var batch2017aug = [{
 "t": "2017-08-12",
 "c": "This may also be confusing / ambiguous between 'activity time tracking', and 'active time tracking' which we just added...",
 }, { // ------------------------------------------------------------------------
+"f": true,
 "x": "Habitica integration now tracks completed Dailies either with To-Dos or separately (for now, only if your CustomDayStart time is midnight)",
 "u": "https://twitter.com/beemuvi/status/898581063835844609",
 "t": "2017-08-18",
@@ -1181,6 +1182,7 @@ var batch2017sep = [ {
 "t": "2017-09-01",
 "c": "By Chelsea",
 }, { // ------------------------------------------------------------------------
+"f": true,
 "x": "Added link to http://help.beeminder.com on the contact page, and updated a bunch of other links throughout the site to point to the help site",
 "u": ["https://twitter.com/beemuvi/status/904847651497099264",
       "https://github.com/beeminder/beeminder/commit/38f7ca8818fa763c9c85b8c0e4b961da6ac74c21",
@@ -1257,13 +1259,93 @@ var batch2017sep = [ {
       "https://github.com/beeminder/beeminder/commit/771f5954f0c2a12d77da040c036a33627266051a"],
 "t": "2017-09-07",
 "c": "Something with empty bb hash",
+}, { // ------------------------------------------------------------------------
+"x": "Bee fixed the annoyingness where clicking 'load all datapoints' would load the datapoints in nonsensical order. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/907345149683892224",
+      "https://github.com/beeminder/beeminder/pull/123",
+      "https://trello.com/c/LfK7nTvZ/369-load-all-datapoints-shuffles-them-up"],
+"t": "2017-09-11",
+}, { // ------------------------------------------------------------------------
+"x": "#bugfix with sorting by value in the Data tab, and we think but aren't sure that 'load all datapoints' got faster after these fixes",
+"u": ["https://twitter.com/beemuvi/status/907345476852187137",
+      "https://github.com/beeminder/beeminder/issues/119#issuecomment-328223767"],
+"t": "2017-09-11",
+}, { // ------------------------------------------------------------------------
+"x": "#bugfix in Garmin sleep integration: we were adding multiple datapoints for one day, rather than updating the current datapoint",
+"u": ["https://twitter.com/beemuvi/status/907732618833096704",
+      "https://github.com/beeminder/beeminder/commit/84e22e152093315939eb644e19c171bb684aba3d"],
+"t": "2017-09-12",
+}, { // ------------------------------------------------------------------------
+"x": "We updated the logos on the frontpage. Some logos changed altogether &amp; all of them looked a little crappy. Now they look non-crappy! #mini",
+"u": ["https://twitter.com/beemuvi/status/907733403964915712",
+      "https://github.com/beeminder/beeminder/issues/82"],
+"t": "2017-09-12",
+}, { // ------------------------------------------------------------------------
+"x": "If you hate typing, http://bmndr.co is a new alias &amp; other aliases work correctly now, always preserving the whole URL when redirecting to beeminder.com",
+"u": ["https://twitter.com/beemuvi/status/908098346694279168",
+     "https://github.com/beeminder/beeminder/issues/89"],
+"t": "2017-09-13",
+"c": "beeminder.com bminder.com bmndr.com bmndr.co kibotzer.com",
+}, { // ------------------------------------------------------------------------
+"x": "Increasing your pledge now causes the graph to refresh so you don't see the wrong amount in the watermark. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/908479576187142144",
+      "https://github.com/beeminder/beeminder/commit/ec7f390070ca46004a9f91200ea6e54d5872b120"],
+"t": "2017-09-14",
+"c": "Aka Beebrain refresh aka rebraining",
+}, { // ------------------------------------------------------------------------
+"x": "We now set the start of the road on goal creation, not infer it from the first datapoint. Fewer surprise derails when adding past data!",
+"u": ["https://twitter.com/beemuvi/status/908479718231384064",
+      "https://github.com/beeminder/beeminder/commit/a511a678046e5e537cf13b4c29b33c70b39e1109",
+      "https://github.com/beeminder/beeminder/commit/d70e08b73f8d6e35a3800bce73a03fa25be66191"],
+"t": "2017-09-14",
+"c": "Caused problems when adding historical data, or we imported it automatically for autodata goals. Does the latter justify a 2nd UVI for this?"
+}, { // ------------------------------------------------------------------------
+"x": "2 #mini UVIs: include query string when redirecting to beeminder.com/changelog?shownotes=1 & prettier zapminder.com landing page",
+"u": ["https://twitter.com/beemuvi/status/908831955906576384",
+      "https://github.com/beeminder/beeminder/commit/5b0cd7aa144ecb72f2a9fc76d6ec9ae0ade3b4c4",
+      "https://github.com/beeminder/beeminder/commit/b630d1c4c3e6fdcd3481dd0eaf950cca039466af",
+      "https://trello.com/c/I5YikOMp/758-zapier-landing-page"],
+"t": "2017-09-15",
+}, { // ------------------------------------------------------------------------
+"x": "We now send an email alert with debug info to you if your registered zeno webhook fails (used to say/do nothing)",
+"u": ["https://twitter.com/beemuvi/status/908832154167029765",
+      "https://github.com/beeminder/beeminder/issues/122"],
+"t": "2017-09-15",
+}, { // ------------------------------------------------------------------------
+"x": "#bugfix in UVI#2407: we were treating any non-200 response as \"failure\", even, e.g., 201 (successfully created). HT @samstokes",
+"u": ["https://twitter.com/beemuvi/status/909910864915980288",
+      "https://github.com/beeminder/beeminder/commit/189a7a6f808b368ecfc5bd4f7bcad83b84dc4fb7"],
+"t": "2017-09-18",
+}, { // ------------------------------------------------------------------------
+"f": true,
+"x": "Far superior road editor, by Uluc Saranli, in Javascript. Visual, interactive, available to all (not just premium): http://road.glitch.me",
+"u": ["https://twitter.com/beemuvi/status/910291401144909824"],
+"d": "2017-07-21",
+"t": "2017-09-19",
+}, { // ------------------------------------------------------------------------
+"x": "#bugfix in visual road editor: floating point comparison bug meant roads were sometimes wrongly rejected as invalid",
+"u": ["https://twitter.com/beemuvi/status/910291871137636352",
+      "https://github.com/beeminder/road"],
+"d": "2017-09-19",
+"t": "2017-09-19",
+}, { // ------------------------------------------------------------------------
+"x": "In the commitment tab aka road dial, we'd sometimes show the wrong inferred (grayed out) value when setting goaldate/value/rate. #bugfix #redesign",
+"u": ["https://twitter.com/beemuvi/status/910654150182027265",
+      "https://github.com/beeminder/beeminder/commit/1f54e7b1b331c2388149b2e6bee22acfa85e32c7"],
+"t": "2017-09-20",
+"c": "This was just in the javascript, not in what was actually submitted",
+}, { // ------------------------------------------------------------------------
+"x": "If your current rate was 0 &amp; you changed it from, eg, daily &rarr; weekly, we'd show 'NaN' for your rate (divide-by-zero error) #bugfix #redesign",
+"u": ["https://twitter.com/beemuvi/status/910657444291895297",
+      "https://github.com/beeminder/beeminder/commit/0c42c49c68815037827f837dd1d73730f5483119"],
+"t": "2017-09-20",
+}, { // ------------------------------------------------------------------------
+"x": "More road dial fixes: say 'Goal total' not 'Goal value' for cumulative goals, and fixed some bad rounding. #bugfix",
+"u": "https://twitter.com/beemuvi/status/911014350021844992",
+"t": "2017-09-21",
 }, /* --------------------------------------------------------- end 2017sep */ ]
 
 var staged = [ { // note: sub-UVIs not allowed here in staging
-"x": "Bee fixed the annoyingness where the clicking 'load all datapoints' would load the datapoints in nonsensical order",
-}, { // ------------------------------------------------------------------------
-"x": "Related: faster load times for 'load all datapoints', and we now use a default sort order (resolves some weirdness with clicking the heading multiple times before the sort is applied)",
-"u": ["https://github.com/beeminder/beeminder/issues/119#issuecomment-328223767"],
 }, /* ---------------------------------------------------------- end staged */ ]
 
 /*
@@ -1271,8 +1353,15 @@ METASTAGED: --10--------20--------30--------40--------50--------60--------70----
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-"t": "",
-"u": "",
+}, { // ------------------------------------------------------------------------
+help.beeminder.com itself, but probably the first time we tweeted about the links to it counted for the help site itself too
+}, { // ------------------------------------------------------------------------
+"x": "#bugfix in the rounding fix from UVI#2413 in the road dial. Also we had broken inferred rate etc for exponential roads. #bugfix #redesign"
+"x": "mini2: recent road dial inferring fixes also make it give correct values for exponential roads"
+// in the rate field i applied shownum to the value, but the steppers already do that, and shownum returns a string, so when you pass the outcome 
+// of shownum back into shownum, you get nil, and then we show "NaN" in the rate field if Rate is not grayed out
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -1286,5 +1375,3 @@ IDEAS: -------10--------20--------30--------40--------50--------60--------70----
 2. github issues tagged UVI & PEA
 -->
 */
-
-
