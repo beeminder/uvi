@@ -1,6 +1,9 @@
 'use strict';
 // --------------------------------- 80chars ---------------------------------->
 
+// StackOverflow says this is how you check if a hash is empty in ES5
+function isEmpty(obj) { return Object.keys(obj).length === 0 }
+
 // Return the value for the given key in the querystring
 function getQueryParam(key) {
   var v = false;
@@ -22,7 +25,7 @@ var n = 0; // global variable counting the UVIs as we generate them
 
 document.getElementById("shownotes").onclick = function() {
   Array.from(document.getElementsByClassName("note")).forEach(function(x) {
-    x.style.display = (x.style.display === 'none' ? '' : 'none')
+    x.classList.toggle("hidden")
   })
 }
 
@@ -114,6 +117,7 @@ function render(uvi) {
 
 // Update the global UVI counter and make sure uvi.n is set 
 function numbum(uvi) {
+  if (isEmpty(uvi)) { return }
   n += 1; // increment the global variable for the number of the UVI
   uvi.n = uvi.n || n; // let uvi.n default to the global counter if not set
   if (uvi.n !== n) { // let the specified number usurp the counter but complain
@@ -128,6 +132,7 @@ function numbum(uvi) {
 
 // Takes UVI object and generates the html <li> element
 function genli(uvi) {
+  if (isEmpty(uvi)) { return '' } // handy to have empty ones when staging them
   numbum(uvi) 
   return '<li value="'+uvi.n+'">' + render(uvi) + '</li>\n';
 }
@@ -161,7 +166,7 @@ function genstaged() {
   n = 0;
   var d = document.getElementById('stg');
   var l = eval('staged');
-  if (l.length > 0 && "x" in l[0]) {
+  if (l.some(function(x) { return !isEmpty(x) })) {
     d.insertAdjacentHTML('beforeend', 
       "<h3 class=\"grayout\">"
       +"<br>Staged UVIs (not official until tweeted as well as deployed)</h3>");

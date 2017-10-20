@@ -175,7 +175,7 @@ var batch2017feb = [{
 "u": "https://twitter.com/beemuvi/status/832320549879631872",
 "t": "2017-02-16 20:07:37 +0000",
 }, { // ------------------------------------------------------------------------
-"x": "A bunch of small improvements to our datapoint format checker. You can see all the crazy example parsings at http://d.gomix.me",
+"x": "A bunch of small improvements to our datapoint format checker. You can see all the crazy example parsings at http://d.glitch.me",
 "u": "https://twitter.com/beemuvi/status/832321317076504577",
 "t": "2017-02-16 20:10:40 +0000",
 }, { // ------------------------------------------------------------------------
@@ -1116,7 +1116,7 @@ var batch2017aug = [{
 "u": "https://twitter.com/beemuvi/status/900601250516946944",
 "t": "2017-08-23",
 }, { // ------------------------------------------------------------------------
-"x": "#bugfix in the new Garmin active time tracking: our numbers now match the numbers on your device / in Garmin Connect. HT @adamwolf again",
+"x": "#bugfix in the new Garmin active time tracking: our numbers now match the numbers on your device / in Garmin Connect. HT @adamwwolf again",
 "u": "https://twitter.com/beemuvi/status/900858770233987073",
 "t": "2017-08-24",
 "c": "They count moderateIntensity + 2*vigorousIntensity because the CDC et al \"recommend at least 150 minutes per week of moderate intensity activity, such as brisk walking, or 75 minutes per week of vigorous intensity activity, such as running.\"",
@@ -1132,7 +1132,7 @@ var batch2017aug = [{
       "https://github.com/beeminder/beeminder/issues/116"],
 "t": "2017-08-25",
 }, { // ------------------------------------------------------------------------
-"x": "Dumb #bugfix: our <a href=\"http://beeminder.com/donate\">donate button</a> was redirecting to beta.beeminder.com after a successful donation. HT @adamwolf",
+"x": "Dumb #bugfix: our <a href=\"http://beeminder.com/donate\">donate button</a> was redirecting to beta.beeminder.com after a successful donation. HT @adamwwolf",
 "u": ["https://twitter.com/beemuvi/status/901236706115858432",
       "https://github.com/beeminder/beeminder/issues/118"],
 "t": "2017-08-25",
@@ -1341,29 +1341,235 @@ var batch2017sep = [ {
 "t": "2017-09-20",
 }, { // ------------------------------------------------------------------------
 "x": "More road dial fixes: say 'Goal total' not 'Goal value' for cumulative goals, and fixed some bad rounding. #bugfix",
-"u": "https://twitter.com/beemuvi/status/911014350021844992",
+"u": ["https://twitter.com/beemuvi/status/911014350021844992",
+      "https://github.com/beeminder/beeminder/commit/ca823fda5183948a2460b620753e84bf920bcadd"],
 "t": "2017-09-21",
+}, { // ------------------------------------------------------------------------
+"x": "Fixed the rounding bugfix from UVI#2413 in the road dial. Also we had broken inferred rate etc for exponential roads. #bugfix #redesign",
+"u": ["https://twitter.com/beemuvi/status/911369725111709696",
+      "https://github.com/beeminder/beeminder/commit/624efc0545009c428c100c9babf5fa3a58da6f9e"],
+"t": "2017-09-22",
+"c": "In the rate field I applied shownum to the value, but the steppers already do that, and shownum returns a string, so when you pass the output of shownum back into shownum, you get nil, and then we show 'NaN' in the rate field if Rate is not grayed out",
+}, { // ------------------------------------------------------------------------
+"x": "Lots of improvements, additions, and copyediting to http://help.beeminder.com &mdash; 98 articles now!",
+"u": "https://twitter.com/beemuvi/status/911374737078489088",
+"t": "2017-09-22",
+"c": "Almost entirely by Chelsea. First announced in UVI#2388",
+}, { // ------------------------------------------------------------------------
+"x": "Removed \"mean\" option from the list of aggday methods for custom goals since it was redundant. Just \"true mean\" and \"uniquified mean\". #mini",
+"u": ["https://twitter.com/beemuvi/status/912461624883126277",
+      "http://forum.beeminder.com/t/documentation-of-aggregation-methods-would-be-nice/549/4?u=dreev",
+      "https://trello.com/c/xl4hODJX/842-deprecate-uniqmean-or-mean",
+      "https://github.com/beeminder/beeminder/commit/b2470570f264b224b3c096812fc2e6e94b2535f4"],
+"t": "2017-09-25",
+}, { // ------------------------------------------------------------------------
+"x": "We now link to http://help.beeminder.com in the footer, and the help page has its own fancy contact form",
+"u": ["https://twitter.com/beemuvi/status/912824358896230400",
+      "https://github.com/beeminder/beeminder/commit/e47aef1187bf06e664101c7d096f696afbe2f93a"],
+"t": "2017-09-26",
+}, { // ------------------------------------------------------------------------
+"x": "On goal pages for autodata, centered the icon and the refresh/sync button nicely. #mini HT @adamwwolf",
+"u": ["https://twitter.com/beemuvi/status/912830116228558848",
+      "https://github.com/beeminder/beeminder/commit/420fd422b129b989691048eece434fce0f5fa2fb"],
+"t": "2017-09-26",
+"c": "This is in the data box to the right of graphs. The sync icon was weirdly/uglily squished up together with the text.",
+}, { // ------------------------------------------------------------------------
+"x": "You can now edit what Todoist projects and labels your Beeminder goal is tracking at any time (in goal settings). HT wswld",
+"u": ["https://twitter.com/beemuvi/status/913190553218453504",
+      "https://github.com/beeminder/beeminder/commit/cfef19a89e53a68d2feae4f7a484794eb3359177",
+      "http://forum.beeminder.com/t/editing-todoist-goal/3497/3"],
+"t": "2017-09-27",
+}, { // ------------------------------------------------------------------------
+"x": "Fixed up the alignment of the labels/projects in Todoist goal creation so they look nicer. #mini",
+"u": ["https://twitter.com/beemuvi/status/913541417711968256",
+      "https://github.com/beeminder/beeminder/commit/c92f0d48146d5db8457e24da12ee1988e5a0d299"],
+"t": "2017-09-28",
+}, { // ------------------------------------------------------------------------
+"x": "Client-side checking for if a scheduled break was w/in the akrasia horizon was a little wrong. Now enforces exactly 7 days always. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/913545323041001472",
+      "https://github.com/beeminder/beeminder/commit/7406b89211a3234b0afcad27ae0509d9b208a7f3",
+      "https://github.com/beeminder/beeminder/commit/1ab25808590840736d4c8baf86c3115c7d2fea28"],
+"t": "2017-09-28",
+"c": "We were checking the bounds in the js, and because of how we were generating Dates in js (and because of timezones) we had this \
+thing where sometimes you’d be comparing a date-at-midnight (constructed by parsing a calendar date in string form) to a date \
+that’s constructed by adding days to the current time. \
+So we hedged against that by just using +6 days instead of +7, which made it OK-most-of-the-time-maybe-especially-in-US-timezones. \
+Now it's fixed for real.",
 }, /* --------------------------------------------------------- end 2017sep */ ]
 
+var batch2017oct = [ {
+"f": true,
+"n": 2422,
+"x": "(+) Improvements to restarting goals!",
+"u": ["https://twitter.com/beemuvi/status/915364844798304256",
+      "https://github.com/beeminder/beeminder/pull/129"],
+"t": "2017-10-03",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"n": 2422,
+"x": "(1) For starters, it's all way prettier and with lots of small UI/webcopy improvements...",
+"u": "https://twitter.com/beemuvi/status/915364844798304256",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "(2) We now ask for the rate you actually want (instead of starting with an infinitely flat road).",
+"u": "https://twitter.com/beemuvi/status/915365142447005696",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "(3) Restarting with an infinitely flat yellow brick road was especially broken for do-less goals. #bugfix",
+"u": "https://twitter.com/beemuvi/status/915366498801131520",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "(4) We now let you choose whether / how much safety buffer to (re)start with (and it does the right thing for do-less).",
+"u": "https://twitter.com/beemuvi/status/915367499750711296",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "(5) We give you the chance to reconsider your pledge cap (though you can always do this any time so it's just a UI thing).",
+"u": "https://twitter.com/beemuvi/status/915367926055628800",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "(6) We get the minimum pledge right, rather than force a $5 pledge for successful $0 goals, or for Beemium users. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/915369237941587968",
+      "https://trello.com/c/Hu1Myw0o/562-restarting-a-goal-with-0-pledge-and-0-cap-forces-you-to-up-the-pledge-to-5"],
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "(7) Got rid of the condescending \"are you sure?\" interface for the new pledge, which was especially broken ever since #redesign.",
+"u": "https://twitter.com/beemuvi/status/915369547116421120",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "(8) The graph is now zoomed in by default (t-min setting) to hide everything from before the restart.",
+"u": "https://twitter.com/beemuvi/status/915369927472594944",
+}, { // ------------------------------------------------------------------------
+"x": "If you unticked all your labels/projects in goal settings for Todoist goals you would get a 500 error when you submitted. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/917538322087518208",
+      "http://forum.beeminder.com/t/editing-todoist-goal/3497/6?u=dreev",
+      "https://github.com/beeminder/beeminder/commit/466f8c58e0a3465e6ace0d0da2b2c255885826c0"],
+}, { // ------------------------------------------------------------------------
+"x": "Premium folks now get a link to the fancy interactive road editor in the Settings tab of their goals. #mini",
+"u": ["https://twitter.com/beemuvi/status/917538417277263872",
+      "https://github.com/beeminder/beeminder/commit/b52d6a4cd833335b9d87e7730b37df17a1f1c72d"],
+}, { // ------------------------------------------------------------------------
+"x": "We closed a loophole with shortcircuiting pledges via the API (and via a weird browser/wifi glitch when mashing the submit button). #bugfix",
+"u": ["https://twitter.com/beemuvi/status/917893706241392640",
+      "https://github.com/beeminder/beeminder/commit/a7fdf20fb72808bb32cf40a514f1d05ca8c94382",
+      "https://github.com/beeminder/beeminder/commit/c27e155b363974c40783b867f444ad910c0a7a76"],
+"t": "2017-10-10",
+"d": "2017-10-10",
+"c": "The API call (which the web interface also uses underneath) now checks if you're actually allowed to shortcuit your pledge, i.e., you have a payment method on file and the right premium plan",
+}, { // ------------------------------------------------------------------------
+"x": "We're verrrrry gradually open-sourcing more parts of Beeminder and have various libraries and projects at github.com/beeminder -- enjoy!",
+"u": "https://twitter.com/beemuvi/status/917894313840803840",
+"t": "2017-10-10",
+"c": "This UVI is just for the collection itself, or the Beeminder organization on GitHub. Not sure how much of the stuff there could count as improvements to Beeminder in their own right.",
+}, { // ------------------------------------------------------------------------
+"x": "Added a warning about how you should specify your rate units as daily if you use the weekends-off feature",
+"u": ["https://twitter.com/beemuvi/status/918264680539234304",
+      "https://github.com/beeminder/beeminder/commit/c6576184ddbe63481381074529562afdc4b9385a"],
+"c": "If you say 2/week with weekends-off then what Beeminder thinks is that you want 2/7 per day, 5 days a week. Which is less than the 2/week you probably thought you were specifying. If we force you to convert it to a daily rate then you’re less likely to be surprised. You know you have to do 2/5 per day, 5 days a week, to get 2 per week total.",
+}, { // ------------------------------------------------------------------------
+"x": "Arithmetic in the road dial! You can say, eg, you want to do 7/5+1/14 for \"7 per 5 day week &amp; build a day of safety buffer every 14 days\"",
+"u": ["https://twitter.com/beemuvi/status/918265256840871936",
+      "https://github.com/beeminder/beeminder/commit/4d049bae3394f424c6c91c55490e5876532bf4f1",
+      "https://github.com/beeminder/beeminder/commit/b34719e307015a3745ec5197ca7636a53841c3b4"],
+"c": "Also in the re-scale tool, which previously could just do fractions. See UVI#1057.",
+}, { // ------------------------------------------------------------------------
+"x": "When you create a goal with goal units \"hours\" we default the \"Show data in HH:MM format\" setting to true.",
+"u": ["https://twitter.com/beemuvi/status/918623993363599360",
+      "https://github.com/beeminder/beeminder/commit/95e8172c3bd5d1d6229d11b0f57d056b289c8e05"],
+"d": "2017-10-12",
+"t": "2017-10-12",
+"c": "We used to magically use HH:MM format when gunits was \"hours\" (see UVI#1678) before we had a setting for that, which broke at some point, perhaps in the #redesign",
+}, { // ------------------------------------------------------------------------
+"n": 2437,
+"x": "Specifying goal units when you create a goal is no longer optional",
+"u": ["https://twitter.com/beemuvi/status/918625165780463616",
+      "https://github.com/beeminder/beeminder/commit/31d0166fdac4b6bd2cf0b780a9f49e5fe719bf5d"],
+"d": "2017-10-12",
+"t": "2017-10-12",
+}, { // ------------------------------------------------------------------------
+"n": 2438,
+"x": "(+) Road editor improvements at http://road.glitch.me",
+"u": "https://twitter.com/beemuvi/status/918981476628119552",
+}, { // ------------------------------------------------------------------------
+"n": 2438,
+"s": true,
+"x": "(1) There's a take-a-break interface!",
+"u": "https://twitter.com/beemuvi/status/918981476628119552",
+}, { // ------------------------------------------------------------------------
+"n": 2439,
+"s": true,
+"x": "(2) If you just want to change the amount you're committing to per day or per week there's a simple UI for that a la the classic road dial",
+"u": "https://twitter.com/beemuvi/status/918981985049047041",
+}, { // ------------------------------------------------------------------------
+"n": 2440,
+"s": true,
+"x": "(3) Fixed a timezone bug relating to the x-axis tick marks. Bonus UVI: Tweaks to the button styles and other CSS tweaks (thanks Bootstrap).",
+"u": ["https://twitter.com/beemuvi/status/918982136467677184",
+      "https://github.com/beeminder/road/pull/27",
+      "https://github.com/beeminder/road/pull/28"],
+}, { // ------------------------------------------------------------------------
+"x": "Arithmetic for datapoint values (eg, fractions, or a tally of things like \"3+2+4\") but just on the dashboard &amp; basic data entry form &amp Data tab so far",
+"u": ["https://twitter.com/beemuvi/status/920075291388608512",
+      "https://github.com/beeminder/beeminder/commit/cb72e30171e2c57c434c6fbd1dd2faedff38db70"],
+"d": "2017-10-16",
+"t": "2017-10-16",
+"c": "Ie, anywhere where you're entering a number in a single field. Does not work in advanced data entry and the email and sms and slack bots and IFTTT and the phone apps and... wow, there are a lot of ways to interact with Beeminder, eh?",
+}, { // ------------------------------------------------------------------------
+"x": "If your goal units are hours (technically even if they aren't) you can specify the steepness of your yellow brick road in HH:MM format",
+"u": ["https://twitter.com/beemuvi/status/920428372252958720",
+      "https://github.com/beeminder/beeminder/commit/3068d4f21e9c4b747cd9d5be057ebf65e0678738"],
+"d": "2017-10-17",
+"t": "2017-10-17",
+}, { // ------------------------------------------------------------------------
+"x": "Hovertexts on datapoints no longer go missing after clicking Load All Data. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/920433051078815745",
+      "https://github.com/beeminder/beeminder/issues/132"],
+"d": "2017-10-17",
+"t": "2017-10-17",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+"x": "Goals w/ earlybird deadlines (before midnight) wouldn't let you change them w/in 24 hours of the deadline instead of T-6 hours. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/920775105277345797",
+      "https://github.com/beeminder/beeminder/issues/42"],
+"d": "2017-10-18",
+"t": "2017-10-18",
+"c": "E.g., at 9pm the night before a 7pm beemergency you couldn't snooze the deadline. Since it was still the same calendar day, our validation was getting confused and thinking that your deadline was past, or less than 6 hours from now, so we shouldn't let you change it, but in fact the actual deadline was 22 hours in the future, not 2 hours in the past, in that example!",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+"x": "On the dashboard we no longer let you toggle to show your absolute amount due for auto-summing goals because it never makes sense and just adds confusion",
+"u": ["https://twitter.com/beemuvi/status/921163384770490368",
+      ],
+"d": "2017-10-19",
+"t": "2017-10-19",
+}, { // ------------------------------------------------------------------------
+"x": "The arithmetic magic would make you submit the value twice if you hit enter (it'd try to submit the raw expression the 1st time). #bugfix",
+"u": ["https://twitter.com/beemuvi/status/921163581932167169",
+      "https://github.com/beeminder/beeminder/commit/9afecae0d1f7ac776c24a088aa1d8069ccbe3e68"],
+"d": "2017-10-19",
+"t": "2017-10-19",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, /* --------------------------------------------------------- end 2017oct */ ]
+
 var staged = [ { // note: sub-UVIs not allowed here in staging
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, /* ---------------------------------------------------------- end staged */ ]
 
 /*
 METASTAGED: --10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140  
 }, { // ------------------------------------------------------------------------
+"x": "You can now beemind the most recently added languages on @duolingo: Korean and Czech. And High Valyrian because, y'know, nerds.
+}, { // ------------------------------------------------------------------------
+
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-help.beeminder.com itself, but probably the first time we tweeted about the links to it counted for the help site itself too
-}, { // ------------------------------------------------------------------------
-"x": "#bugfix in the rounding fix from UVI#2413 in the road dial. Also we had broken inferred rate etc for exponential roads. #bugfix #redesign"
-"x": "mini2: recent road dial inferring fixes also make it give correct values for exponential roads"
-// in the rate field i applied shownum to the value, but the steppers already do that, and shownum returns a string, so when you pass the outcome 
-// of shownum back into shownum, you get nil, and then we show "NaN" in the rate field if Rate is not grayed out
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "(9) Only potentially controversial change: you now have to add a payment method (not add a pledge) in order to restart a goal.
+      [this has been true for a while, not sure if we tweeted it / if it counts? 
+      "forces" => meaning, you cannot restart a frozen goal without adding a credit card. if it's successfully completed you could then restart it with a $0 pledge again, but must add a credit card first]
+"x": "NOT TRUE? ask for your current value for weight goals and inboxer type goals
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------

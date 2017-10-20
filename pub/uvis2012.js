@@ -588,9 +588,10 @@ var batch2012may = [
 "u": "https://twitter.com/beemuvi/status/207923864863387649",
 "t": "2012-05-30 19:58:07 +0000",
 }, /*************************************************************************/ {
-"x": "SMS bot now smarter, thanks to <a href=\"https://twitter.com/yegg\">@yegg</a>. You can specify any unique prefix of the goal slug. (SMS bot still only works in the US unfortunately)",
+"x": "SMS bot now smarter, thanks to <a href=\"https://twitter.com/yegg\">@yegg</a>. You can specify any unique prefix of the goalname. (SMS bot still only works in the US unfortunately)",
 "u": "https://twitter.com/beemuvi/status/207939608217001984",
 "t": "2012-05-30 21:00:40 +0000",
+"c": "When this was originally announced it was \"goal slug\" instead of \"goalname\" since that's what we called goalnames back then.",
 }, /*************************************************************************/ {
 "x": "Per <a href=\"http://beeminder.com/money\">beeminder.com/money</a> the default choice for pledge level is the next step up in the exponential schedule. Soon: pre-commit to re-commit",
 "u": "https://twitter.com/beemuvi/status/207961377166458882",
