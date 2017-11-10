@@ -20,5 +20,3 @@ from Roman Kuzmichev:
 
 I've looked at http://uvi.glitch.me/#2465 page, and it looks like you use `value`s in `li`s, not `id`s. Why?
 You would get jumping to anchor for free, and `:target` highlighting too.
-
-(also, you should probably close monthly divs, i.e. `<div id="2011feb"/><script>genbatch(2011,  2)</script>`**`</div>`** - my Chrome simply nests all months)

@@ -30,3 +30,7 @@ li {
 .icon {
   color:#BFBFBF;
 }
+
+:target {
+  background-color:#edff30;
+}
