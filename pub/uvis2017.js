@@ -1547,11 +1547,148 @@ var batch2017oct = [ {
 "d": "2017-10-19",
 "t": "2017-10-19",
 }, { // ------------------------------------------------------------------------
+"x": "You can now beemind the most recently added languages on @duolingo: Korean and Czech. And High Valyrian because, y'know, nerds.",
+"u": ["https://twitter.com/beemuvi/status/921525817145831424",
+      "https://github.com/beeminder/beeminder/commit/11e129decd21be2047fb0768ec7a9c9f71e7c552"],
+"d": "2017-10-20",
+"t": "2017-10-20",
 }, { // ------------------------------------------------------------------------
+"x": "The SMS bot is more clear and coherent in reporting errors now (including saying \"ERROR\" so it's nice and obvious)",
+"u": ["https://twitter.com/beemuvi/status/922609834658226177",
+      "https://github.com/beeminder/beeminder/commit/297ea29cd0aa5f928b99252b2b12aa4fded6e142"],
+"d": "2017-10-20",
+"t": "2017-10-23",
 }, { // ------------------------------------------------------------------------
+"x": "Fixed a race condition (that could derail you!) by no longer replacing existing Misfit datapoints that matched what Misfit API said. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/922613996653613056",
+      "https://github.com/beeminder/beeminder/commit/856af3c8490ecffebc8909462c2af2e9b5b8acef"],
+"d": "2017-10-23",
+"t": "2017-10-23",
+"c": "This was a two character change ('>' to '!=') and the full details of what all was going wrong and why and with what repercussions is in the commit message"
+}, { // ------------------------------------------------------------------------
+"x": "Previous fix also makes Misfit consistent w/ Fitbit in always treating Misfit's data as gospel, overwriting changes made Beeminder-side",
+"u": "https://twitter.com/beemuvi/status/922933878641139712",
+"d": "2017-10-23",
+"t": "2017-10-24",
+"c": "Maybe that mostly matters as an anti-cheating measure, always believing the autodata source, not your pathetic human entries. Of course if you edit your data at the source then Beeminder should always reflect that as well. The point is, Beeminder should always mirror the source of the data.",
+}, { // ------------------------------------------------------------------------
+"x": "Todoist integration #bugfix: goals weren't automatically recommitting when you derailed! HT @realchrisbutler",
+"u": ["https://twitter.com/beemuvi/status/922934004973674496",
+      "https://github.com/beeminder/beeminder/commit/2876cb7fc5e10936aee872022281bc25fe889a97"],
+"t": "2017-10-24",
+"c": "This is technical debt sadness because of how frickin complex/delicate the whole lifecycle of Beeminder goals is. Apparently don't save a goal in an autofetch callback or it will cause this no-automatic-recommit bug.",
+}, { // ------------------------------------------------------------------------
+"x": "Buttons now subtly change tint when the mouse is on them to help you notice that they're buttons. Nerdspeak: new hover effects.",
+"u": ["https://twitter.com/beemuvi/status/923337907217227776",
+      "https://github.com/beeminder/beeminder/commit/c338d6fe0f8855f0e957eddff9500280210f268b"],
+"d": "2017-10-25",
+"t": "2017-10-25",
+}, { // ------------------------------------------------------------------------
+"x": "3+ #mini UVIs: Typo fixes (HT <a href=\"https://www.graysonbraymorris.com/\">Grayson Bray Morris</a>); Blog sidebar defines \"akratic\"; Fixed redirect for http://uservoice.beeminder.com",
+"u": ["https://twitter.com/beemuvi/status/923696202629103616",
+      "https://github.com/beeminder/beeminder/commit/254e147beb79aee44ad886372ae1ccec74131b06",
+      "https://github.com/beeminder/beeminder/commit/656c2fc16bcc94448c4f1b3d906829c4fd5e389f"],
+"t": "2017-10-26",
+"c": "Grayson pointed out that capitalizing \"Doctor\" in \"Doctor's note\" looked wrong, though Bee was probably doing it on purpose, kind of A.A. Milne style. Anyway, we were also misspelling \"weaseling\" and \"weaseler\" and a mishap with Ruby's stupid capitalize() function made us not capitalize \"Beeminder\"! As for \"akratic\", we just added that that's the adjectival form of \"akrasia\" since we use both so much without defining them.",
+}, { // ------------------------------------------------------------------------
+"x": "Negative UVI :( Beedroid's Google sign-in broke so as a stopgap we published v2.6.1 that doesn't have the Google icon. HT @adamwwolf",
+"u": "https://twitter.com/beemuvi/status/924059454617747456",
+"d": "2017-10-27",
+"t": "2017-10-27",
+"c": "More than a hat-tip to Adam -- he actually dove in and made the change and recompiled and shipped this for us!"
+}, { // ------------------------------------------------------------------------
+"x": "Another #mini: we fixed more redirects so http://help.bmndr.co &amp; http://help.bmndr.com &amp; http://help.beeminder.com all point to the same place",
+"u": "https://twitter.com/beemuvi/status/924059785292496896",
+"d": "2017-10-27",
+"t": "2017-10-27",
+"c": "It's hosted on HelpScout but we can only use one CNAME so the others are redirects to help.beeminder.com",
+}, { // ------------------------------------------------------------------------
+"x": "And a big one, at least as measured by how much people've been wanting it: extra dates in dropdowns in the dashboard &amp; newbee data entry form",
+"u": ["https://twitter.com/beemuvi/status/924060257998979072",
+      "https://github.com/beeminder/beeminder/commit/599754dd0df137d5a4cee096b9c3a87c54d6b000"],
+"d": "2017-10-27",
+"t": "2017-10-27",
+}, { // ------------------------------------------------------------------------
+"x": "If you want a date further back, there's now also an \"Advanced Entry\" entry in the date dropdowns linking to goal page w/ the form expanded",
+"u": ["https://twitter.com/beemuvi/status/925492344245194752",
+      "https://github.com/beeminder/beeminder/commit/61ba3bf059f6ba14d0ef785db5c91dca7ce78f76",
+      "https://github.com/beeminder/beeminder/commit/7169ee3d900b29845c50d52e1001b6826ba84210",
+      "https://github.com/beeminder/beeminder/commit/5b35c8a4b0605eba0331b3f859d6991d767dcfeb"],
+"d": "2017-10-31",
+"t": "2017-10-31",
+"c": "Also the fact that there's now a deep link for the advanced entry form which is sort of a UVI itself, maybe, kind of.",
+}, { // ------------------------------------------------------------------------
+"x": "Fixed hover effect on some buttons that made text turn white instead of yellow on black. And some very minor color tweaking. #mini",
+"u": ["https://twitter.com/beemuvi/status/925496574716755968",
+      "https://github.com/beeminder/beeminder/commit/52204208ad755b8a86665f38947e17dc58e7b6e1"],
+"t": "2017-10-31",
+"c": "They are really a-tags that are just styled to look like buttons. And changed the yellow color for text on black to be a slightly paler shade of the same yellow, because of contrast and looking slightly better without actually looking like a different color."
 }, /* --------------------------------------------------------- end 2017oct */ ]
 
+var batch2017nov = [ {
+}, { // ------------------------------------------------------------------------
+"x": "Barely user-visible mass-mailer #bugfix: if you unsubscribe after an email is queued, we check again to make sure it's still ok to send",
+"u": ["https://twitter.com/beemuvi/status/925865728263143425",
+      "https://github.com/beeminder/beeminder/commit/5f1a6d2f8f713717365068d6f61982186136e657"],
+"t": "2017-11-01",
+"c": "We weren't using your current mail frequency when we went to send the massmail to you. Since large mailings take a long time, this meant that if you happen to decrease your mail freq in a certain window of time, we might send you an email anyway. Now we are more conservative and basically re-check that you still want, e.g., monthly mails before actually sending the mail",
+}, { // ------------------------------------------------------------------------
+"x": "<a href=\"http://road.glitch.me\">Road editor</a> improvements: better auto-scrolling & date highlighting in the table on the right as you hover over things in the graph",
+"u": "https://twitter.com/beemuvi/status/926230542256869376",
+}, { // ------------------------------------------------------------------------
+"x": "Even better: start of the road & the column headings stay put when scrolling & final road segment (aka road dial) is highlighted & stays put",
+"u": "https://twitter.com/beemuvi/status/926230654962032641",
+}, { // ------------------------------------------------------------------------
+"x": "Also in the <a href=\"http://road.glitch.me\">road editor</a>: got rid of the ugly checkboxes and made it so you can just click the fields to change which of the 3 is inferred",
+"u": "https://twitter.com/beemuvi/status/926231015575773184",
+}, { // ------------------------------------------------------------------------
+"x": "Also in http://road.glitch.me: a #bugfix w/ the day we show when it's before midnight but after the deadline, & don't show YBR before road start",
+"u": "https://twitter.com/beemuvi/status/926231319599861765",
+}, { // ------------------------------------------------------------------------
+"f": true,
+"x": "\"Save & Send a Test\" button in the goal reminder settings to send a test alert immediately via all your chosen channels. AKA zeno-me-now.",
+"d": "2017-11-03",
+"t": "2017-11-06",
+"u": ["https://twitter.com/beemuvi/status/927658354687688706",
+      "https://github.com/beeminder/beeminder/commit/a8237675c1a93ee6efa15be1c2df62363f1bbd0b"],
+"c": "Adds a \"force\" parameter to ensure it gets sent when the user is queueing it up manually like this, otherwise when it comes off the queue the system would notice that it's not time for a zeno and kill it.",
+}, { // ------------------------------------------------------------------------
+"x": "Added hovertext to help explain the zeno-me-now and fixed some hovertext with formatting problems on the front page. #mini &times;2",
+"d": "2017-11-07",
+"t": "2017-11-07",
+"u": ["https://twitter.com/beemuvi/status/928028820124213248",
+      "https://github.com/beeminder/beeminder/commit/6f28d5b8fc41501db9b4608a94375fda006ad8f0"],
+}, { // ------------------------------------------------------------------------
+"x": "We were rounding in the wrong places and there were cases where we could charge $1 more than what beeminder.com/premium said. #bugfix",
+"d": "2017-11-07",
+"u": ["https://twitter.com/beemuvi/status/928308589801783297",
+      "https://github.com/beeminder/beeminder/commit/75fd58abf794fc1fc7ebb6cc1e83333b27209fdd"],
+"c": "New rule, which should've been obvious all along: don't round charge amount the until last minute!",
+}, { // ------------------------------------------------------------------------
+"x": "In email that says, eg, \"subscription charge for 12 months of a infinibee sub...\" we now say \"a year\", \"an\", \"Infinibee\", etc. #mini #bugfix",
+"d": "2017-11-07",
+"u": ["https://twitter.com/beemuvi/status/928398469001224193",
+      "https://github.com/beeminder/beeminder/commit/acc64b4eedf9e932cd47ceef36cbebc042213c29"],
+}, { // ------------------------------------------------------------------------
+"x": "No more hard resets on graphs so you can always zoom out to see entire history and cumulative totals always include all data",
+"t": "2017-11-09",
+"u": ["https://twitter.com/beemuvi/status/928729684975632385",
+      "https://github.com/beeminder/beeminder/commit/5b43a25a767aceb320ee830f75375e00985eb539"],
+"c": "Ie, we finally fully purged the sadreset parameter, an important pre-req for YBHP. This is like UVI#1631 for everything.",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, /* --------------------------------------------------------- end 2017nov */ ]
+
+
 var staged = [ { // note: sub-UVIs not allowed here in staging
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -1560,16 +1697,22 @@ var staged = [ { // note: sub-UVIs not allowed here in staging
 /*
 METASTAGED: --10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140  
 }, { // ------------------------------------------------------------------------
-"x": "You can now beemind the most recently added languages on @duolingo: Korean and Czech. And High Valyrian because, y'know, nerds.
-}, { // ------------------------------------------------------------------------
-
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-"s": true,
-"x": "(9) Only potentially controversial change: you now have to add a payment method (not add a pledge) in order to restart a goal.
-      [this has been true for a while, not sure if we tweeted it / if it counts? 
-      "forces" => meaning, you cannot restart a frozen goal without adding a credit card. if it's successfully completed you could then restart it with a $0 pledge again, but must add a credit card first]
-"x": "NOT TRUE? ask for your current value for weight goals and inboxer type goals
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+"x": "NOT TRUE? ask for your current value for weight goals and inboxer type goals (part of restart revamp in Oct 2017)
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -1579,5 +1722,7 @@ CANDIDATES: --10--------20--------30--------40--------50--------60--------70----
 IDEAS: -------10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140  
 1. fix FAQ copy: "form below your graph"
 2. github issues tagged UVI & PEA
+3. better beemail unsubscribe with downpopped unsubscribe-all option
+4. save buttons ought to be disabled when there’s nothing to save. i think we used to do that in old.bmndr but maybe not.
 -->
 */
