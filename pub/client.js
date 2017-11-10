@@ -134,7 +134,7 @@ function numbum(uvi) {
 function genli(uvi) {
   if (isEmpty(uvi)) { return '' } // handy to have empty ones when staging them
   numbum(uvi) 
-  return '<li value="'+uvi.n+'">' + render(uvi) + '</li>\n';
+  return '<li value="'+uvi.n+'" id="'+uvi.n+'">' + render(uvi) + '</li>\n';
 }
 
 // Generate html for a batch of UVIs including the year/month header

@@ -30,3 +30,9 @@ li {
 .icon {
   color:#BFBFBF;
 }
+
+:target {
+  /* roman's original: #edff30 */
+  /* a little dark: #FFFF00 */
+  background-color: #FFFBCC;
+}
