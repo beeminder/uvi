@@ -32,5 +32,7 @@ li {
 }
 
 :target {
-  background-color:#edff30;
+  /* roman's original: #edff30 */
+  /* a little dark: #FFFF00 */
+  background-color: #FFFBCC;
 }
