@@ -8,6 +8,10 @@ More automation would obviously be nice.
 But it might not be worth trying to duplicate Twitter's interface and automatically tweeting. 
 There are too many things like expanding @-mentions and telling you how many characters you have left (accounting for shortened URLs) that wouldn't work as well outside of Twitter.
 
+Btw, since Twitter doubled its character limit we decided to self-impose 160 characters as the max length for a UVI.
+
+See tweets.glitch.me for how to import your Twitter archive into a progress log like this.
+
 
 ## TODO LIST
 
@@ -16,7 +20,6 @@ There are too many things like expanding @-mentions and telling you how many cha
 1. Pick featured UVIs through June 2013 when we started doing that
 1. Filtering options like only showing bugfixes, non-bugfixes, featured, etc
 
-from Roman Kuzmichev:
+## Acknowledgments
 
-I've looked at http://uvi.glitch.me/#2465 page, and it looks like you use `value`s in `li`s, not `id`s. Why?
-You would get jumping to anchor for free, and `:target` highlighting too.
+Thanks to Roman Kuzmichev for contributing the code to highlight UVIs when linked to as hyperlinks.

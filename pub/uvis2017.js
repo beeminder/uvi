@@ -140,7 +140,7 @@ var batch2017feb = [{
 "u": "https://twitter.com/beemuvi/status/831640403468120064",
 "t": "2017-02-14 23:04:57 +0000",
 }, { // ------------------------------------------------------------------------
-"x": "API #bugfix: the requestid param only did worked as advertised for creating single datapoints, not create_all. HT John Swanson",
+"x": "API #bugfix: the requestid param only worked as advertised for creating single datapoints, not create_all. HT John Swanson",
 "u": "https://twitter.com/beemuvi/status/831642893920018432",
 "t": "2017-02-14 23:14:51 +0000",
 "c": "When creating a datapoint via API, sending requestid param is supposed to make it act like an UPSERT, but this was broken in the create_all (multi-create) endpoint. so it would still work to make sure you weren't creating duplicate datapoints, but it wouldn't update an existing datapoint if you passed in updated parameters with the same requestid",
@@ -1676,12 +1676,137 @@ var batch2017nov = [ {
       "https://github.com/beeminder/beeminder/commit/5b43a25a767aceb320ee830f75375e00985eb539"],
 "c": "Ie, we finally fully purged the sadreset parameter, an important pre-req for YBHP. This is like UVI#1631 for everything.",
 }, { // ------------------------------------------------------------------------
+"x": "Now robust to temporary errors from Todoist's API, automatically retry data fetching. Less spurious zenos or need to manually hit refetch!",
+"d": "2017-11-02",
+"t": "2017-11-10",
+"u": ["https://twitter.com/beemuvi/status/928729684975632385",
+      "https://github.com/beeminder/beeminder/commit/a983a45802cb43f18f8b35e28272931ee7e20010"],
 }, { // ------------------------------------------------------------------------
+"x": "For our Habitica integration, the link to Custom Day Start and to get your credentials on Habitica changed so we updated the links! #mini",
+"u": ["https://twitter.com/beemuvi/status/930227037180063745",
+      "https://github.com/beeminder/beeminder/issues/109",
+      "https://github.com/beeminder/beeminder/commit/a520d47fffdb49f50344ce631a6e733098b13e40",
+      "https://github.com/beeminder/beeminder/commit/9c044cacabd315b2013740b00e07ef64a1ad5a4d"],
+"c": "By Chelsea and Alys"
 }, { // ------------------------------------------------------------------------
+"x": "Added a super basic captcha-like field to prevent spam signups (\"Prove you're a human by telling us what color the yellow brick road is\")",
+"d": "2017-11-13",
+"t": "2017-11-13",
+"u": ["https://twitter.com/beemuvi/status/930231723773763584",
+      "https://github.com/beeminder/beeminder/commit/d1f3492ef53cef75a83f90e7c6e30e136c9084ff"],
+"c": "Spoiler: it's yellow. This is a prelude to http://doc.bmndr.com/bsignups and to see if it starts filtering any dumb bots out and if they adapt",
 }, { // ------------------------------------------------------------------------
+"n": 2472,
+"x": "Version 4.8 of iOS app finally fully (?) fixes duplicate datapoints in Apple Health integration. And Mindful Minutes no longer overwrites data with zeros! #bugfix",
+"t": "2017-11-14",
+"u": ["https://twitter.com/beemuvi/status/930567584272891904",
+      "http://forum.beeminder.com/t/bug-fixes-for-apple-health-integration/3592?u=dreev"],
 }, { // ------------------------------------------------------------------------
+"n": 2473,
+"x": "We're killing off auto-widening roads! The 1st thing that means for users is that new weight loss goals ask \"What's the *most* your weight can change in 1 day?\"",
+"d": "2017-11-15",
+"t": "2017-11-15",
+"u": ["https://twitter.com/beemuvi/status/930960914840412161",
+      "https://github.com/beeminder/beeminder/commit/ac17f9e3c5a31f2f30883d4d9c7f5d85becf8495"],
 }, { // ------------------------------------------------------------------------
+"n": 2474,
+"f": true,
+"x": "Big change: New weight loss roads no longer have lanes! They have zero width but use the max fluctuation you specified to give you an initial safety buffer",
+"d": "2017-11-15",
+"t": "2017-11-15",
+"u": ["https://twitter.com/beemuvi/status/930961370706624512",
+      ],
+}, { // ------------------------------------------------------------------------
+"n": 2475,
+"x": "Remember UVI#181 & UVI#570? We've thrown away that whole \"weight loss leniency\" feature. Instead just specify the max fluctuation you think you'll need!",
+"t": "2017-11-16",
+"u": ["https://twitter.com/beemuvi/status/931309140026195968",
+      ],
+"c": "To clarify: UVI#2473 is adding the new feature where we ask the user for their max fluctuation (flux, we call it) and this UVI is killing the leniency feature (not needed since you're specifying flux)",
+}, { // ------------------------------------------------------------------------
+"x": "Next consequence of killing off auto-widening roads: the parameter called \"noisy\" is deprecated and removed from the API (see beeminder.com/api)",
+"t": "2017-11-17",
+"u": ["https://twitter.com/beemuvi/status/931686779320545280",
+      "https://github.com/beeminder/apidocs/commit/53fa80ab74b9ec7d97dd2d1852419011d41d8089"],
+}, { // ------------------------------------------------------------------------
+"x": "The white \"x\" that lets you close a flash message banner (e.g. \"Datapoint updated!\" or \"Error: Rate cannot be 0!\") now only shows up *after* the banner itself",
+"t": "2017-11-20",
+"u": ["https://twitter.com/beemuvi/status/932772700891766784",
+      ],
+"c": "I guess it looked weird (though wasn't always noticeable depending on the width of your browser window and what was behind id) for the X to show up first before the rest of the banner. Now it fades in after the banner.",
+}, { // ------------------------------------------------------------------------
+"x": "UVI#2471 broke sign-up in the Android app (we kind of forgot Beedroid could do that!) -- now fixed! #bugfix",
+"d": "2017-11-20",
+"t": "2017-11-20",
+"u": ["https://twitter.com/beemuvi/status/932773069520740353",
+      ],
+}, { // ------------------------------------------------------------------------
+"x": "And similar #bugfix for signing up with Google, Twitter, GitHub, and Facebook!",
+"t": "2017-11-21",
+"u": ["https://twitter.com/beemuvi/status/933130723774447616",
+      "https://github.com/beeminder/beeminder/commit/e29078c4ebe56b8f58b73b4644be53cd486117de"],
+"c": "We caught this one (oauth sign-up) before Beedroid sign-up and forgot to announce it here till after. In retrospect we'd probably combine them into one UVI but they were separate fixes in the code.",
+}, { // ------------------------------------------------------------------------
+"x": "Error alert banners (especially in goal creation) were really slow / delayed showing up; now they're not! #mini #bugfix",
+"u": ["https://twitter.com/beemuvi/status/933494356320722944",
+      ],
+}, { // ------------------------------------------------------------------------
+"x": "#mini 2-for-1: Made http://beeminder.com/faq stop telling lies about PayPal (like us not supporting it); you can now beemind Chinese on Duolingo (& 27 other languages)",
+"u": ["https://twitter.com/beemuvi/status/933494636559024128",
+      "https://github.com/beeminder/beeminder/commit/9c67cc78a645a4e8bd32fe511682a8dfb0f7f137"],
+}, { // ------------------------------------------------------------------------
+"x": "Fixed a margin on an error message in the sign-up UI; and we were briefly spelling 'subscription' as 'suscription' #bugfix #mini ×2",
+"d": "2017-11-15",
+"t": "2017-11-23",
+"u": ["https://twitter.com/beemuvi/status/933830289054420992",
+      "https://github.com/beeminder/beeminder/commit/e29078c4ebe56b8f58b73b4644be53cd486117de"],
+}, { // ------------------------------------------------------------------------
+"x": "Some refactoring of goalnames and goal descriptions caused a crash in the iPhone app when a goal description wasn't set. Now fixed! #bugfix",
+"d": "2017-11-27",
+"t": "2017-11-27",
+"u": ["https://twitter.com/beemuvi/status/935311188216356865",
+      "https://github.com/beeminder/beeminder/commit/076a5b4f1b573a7a45136aa5ae03a1670f6b456e?w=1"],
+}, { // ------------------------------------------------------------------------
+"x": "Made our Todoist integration follow the 7-day rule that applies to most other autodata sources. #bugfix for insta-derailing by editing old tasks on Todoist.",
+"d": "2017-11-28",
+"t": "2017-11-28",
+"u": ["https://twitter.com/beemuvi/status/935670749485920256",
+      ],
+}, { // ------------------------------------------------------------------------
+"x": "<a href=\"https://itunes.apple.com/us/app/beeminder/id551869729\">iOS app version 4.8.1</a>: Small #bugfix for some people with Apple Health goals that was crashing the app for people. Sorry about that!",
+"u": "https://twitter.com/beemuvi/status/935671275539775488",
+"t": "2017-11-28",
+}, { // ------------------------------------------------------------------------
+"x": "In Withings (now Nokia) goal creation, we forgot to ask for max daily fluctuation (UVI#2474) so new goals started you on the razor's edge. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/936035595087777792",
+      "https://github.com/beeminder/beeminder/commit/316649e1372746713455998e0d7ef374418e865e"],
+}, { // ------------------------------------------------------------------------
+"x": "When you click to force an auto-fetch of new data for autodata goals we add the datapoint to the list below the graph immediately. No page refresh needed.",
+"u": ["https://twitter.com/beemuvi/status/936036409642590208",
+      "https://github.com/beeminder/beeminder/commit/20a236d2b1eafc41b0456fe4db60c25383a913a1"],
+}, { // ------------------------------------------------------------------------
+"x": "URLminder would, in somewhat rare circumstances, record duplicate datapoints. #bugfix",
+"d": "2017-11-30",
+"t": "2017-11-30",
+"u": ["https://twitter.com/beemuvi/status/936390851483148288",
+      "https://github.com/beeminder/beeminder/commit/35e1e6151a0c36f19d75502ba7d82b307ba71a4f"],
+"c": "We were grabbing the latest datapoint and comparing the value, then only adding the new datapoint if the value changed. Except we were grabbing \"latest\" by the daystamp, not ID, which meant that we were getting the first datapoint from the most recent day, not the most recently entered. Meaning, if there were multiple datapoints for today you could get something where your datapoints are: 28 120, 28 120, 28 120, 28 100. The next time we'd go to look, we'd see 28 100 as the \"latest\" datapoint and add 120 again. I was surprised this wasn't rampant, but on looking at my own data, and at a bunch of URLminder data, convinced myself that we didn't see more of it because we don't check very frequently when you're not red, and then, for me, when I'm red and forcing refresh all the time, it's while I'm writing, so the count is climbing, so there aren't duplicates. I did confirm other instances of this in the wild, but it turns out to be fairly rare.",
 }, /* --------------------------------------------------------- end 2017nov */ ]
+
+var batch2017dec = [ {
+}, { // ------------------------------------------------------------------------
+"x": "Added rate units dropdown to RescueTime goal creation (had been static text, \"EACH WEEK\", but it was easy to miss and wind up confused). HT Louis Hong.",
+"t": "2017-12-01",
+"t": "2017-12-01",
+"u": ["https://twitter.com/beemuvi/status/936738717305266176",
+      "https://github.com/beeminder/beeminder/commit/e5a0c7780196a6904ba61b9429a4390d7e62cd94"],
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, /* --------------------------------------------------------- end 2017dec */ ]
 
 
 var staged = [ { // note: sub-UVIs not allowed here in staging
@@ -1694,8 +1819,43 @@ var staged = [ { // note: sub-UVIs not allowed here in staging
 }, { // ------------------------------------------------------------------------
 }, /* ---------------------------------------------------------- end staged */ ]
 
+/*******************************************************************************
+INFRAS WHILE AWAITING PROGLOGS GENERALIZATION: -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
+}, { // ------------------------------------------------------------------------
+"x": "Timezones, asof-null, sadedgy, sadreset, and inferred tini/vini all purged from Beebrain!",
+"u": "https://twitter.com/beeminfra/status/931291064794718208",
+}, { // ------------------------------------------------------------------------
+"x": "We improved our bee.sh script to give it a single command to deploy to all application servers",
+"u": "https://twitter.com/beeminfra/status/933784267540250625",
+}, { // ------------------------------------------------------------------------
+"x": "We updated our tests to deal with recent changes in registration and with weightloss goal creation. (UVIs #2471 & #2474 & friends)",
+"u": "https://twitter.com/beeminfra/status/936364866436132866",
+}, { // ------------------------------------------------------------------------
+
+don't make title required and then do javascript contortions to deal with it
+nilly email_freq fix in massmail jobs
+show admins the link to user's archive page in the user gallery
+
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+
+GROOVIES WHILE AWAITING PROGLOGS GENERALIZATION: -----50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
+}, { // ------------------------------------------------------------------------
+We secured a spot in IFTTT's monthly newsletter next month! (Specific action yesterday that makes this count as a new groovy was sending them a hi-res logo)
+https://twitter.com/beemgro/status/933050159621009410
+}, { // ------------------------------------------------------------------------
+Sent a cyber monday promotion to all monthly active non-premium users
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+*******************************************************************************/
+
 /*
-METASTAGED: --10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140  
+METASTAGED: --10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
+}, { // ------------------------------------------------------------------------
+MINI: more size options for plain beeminder infinibee logo at doc.beeminder.com/blogo, plus added a link to the page in /contact
+
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -1716,13 +1876,20 @@ METASTAGED: --10--------20--------30--------40--------50--------60--------70----
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-CANDIDATES: --10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140  
+CANDIDATES: --10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
 * fixed some (most? many?) of the thing where flash banner shows up again after you leave current page and go to another page 
   [maybe this mostly only happens for admins?]
-IDEAS: -------10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140  
+IDEAS: -------10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
 1. fix FAQ copy: "form below your graph"
 2. github issues tagged UVI & PEA
 3. better beemail unsubscribe with downpopped unsubscribe-all option
-4. save buttons ought to be disabled when there’s nothing to save. i think we used to do that in old.bmndr but maybe not.
+4. save buttons ought to be disabled when there’s nothing to save. i think we used to do that in old.bmndr but maybe not. [did not]
+5. allow entering HMS values like ":30" without a zero. HT Laurie Reeves
+
+louis:
+2. Need open-ended goals. Defaulting to +10yr looks like a bug.
+3. Road dial with out exes and pencils feels frustratingly broken when you don't know the rhyme or reason for how the grayed-out field changes. Critical regression from redesign.
+4. Even aside from that, dealing with the akrasia horizon constraint is opaque and frustrating. Dumbing down the full road editor can really backfire.
+
 -->
 */
