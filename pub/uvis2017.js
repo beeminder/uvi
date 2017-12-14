@@ -1771,7 +1771,7 @@ var batch2017nov = [ {
 "d": "2017-11-28",
 "t": "2017-11-28",
 "u": ["https://twitter.com/beemuvi/status/935670749485920256",
-      ],
+      "https://github.com/beeminder/beeminder/commit/24a8be19c2e58089e956da89801423d953c1dda0"],
 }, { // ------------------------------------------------------------------------
 "x": "<a href=\"https://itunes.apple.com/us/app/beeminder/id551869729\">iOS app version 4.8.1</a>: Small #bugfix for some people with Apple Health goals that was crashing the app for people. Sorry about that!",
 "u": "https://twitter.com/beemuvi/status/935671275539775488",
@@ -1795,14 +1795,82 @@ var batch2017nov = [ {
 
 var batch2017dec = [ {
 }, { // ------------------------------------------------------------------------
-"x": "Added rate units dropdown to RescueTime goal creation (had been static text, \"EACH WEEK\", but it was easy to miss and wind up confused). HT Louis Hong.",
+"x": "Added rate units dropdown to RescueTime goal creation (had been static text, \"EACH WEEK\", but it was easy to miss and wind up confused). HT Louis Hong",
 "t": "2017-12-01",
 "t": "2017-12-01",
 "u": ["https://twitter.com/beemuvi/status/936738717305266176",
       "https://github.com/beeminder/beeminder/commit/e5a0c7780196a6904ba61b9429a4390d7e62cd94"],
 }, { // ------------------------------------------------------------------------
+"x": "Cleaned up our so-called press kit, made a URL for it (<a href=\"http://beeminder.com/press\">beeminder.com/press</a>), and linked to it from http://beeminder.com/contact",
+"t": "2017-12-01",
+"t": "2017-12-01",
+"u": ["https://twitter.com/beemuvi/status/936743615203762176",
+      "https://github.com/beeminder/beeminder/commit/f4710a39243c5a8f7488d40c478638677c659f3e"],
 }, { // ------------------------------------------------------------------------
+"x": "And added max daily fluctuation to Fitbit goal creation (cf UVI#2474) #bugfix (Sorry to milk this for 3 UVIs -- Manual/Withings/Fitbit were each lots of work!)",
+"d": "2017-12-04",
+"u": ["https://twitter.com/beemuvi/status/937845140227375104",
+      "https://github.com/beeminder/beeminder/pull/137"],
+"c": "Plus Fitbit had extra problems where the data importer was overwriting the vini that was passed in.",
 }, { // ------------------------------------------------------------------------
+"x": "Fitbit weight loss goal creation now asks if you want pounds or stones or kilograms instead of trusting what's set in Fitbit, which sometimes caused problems",
+"u": ["https://twitter.com/beemuvi/status/938193688454246401",
+      "https://github.com/beeminder/beeminder/commit/a11856250aca660f6d4ab9814b2bd251bf2700e7"],
+}, { // ------------------------------------------------------------------------
+"x": "Gmailzero now allows arbitrary deadlines! So you nightowls can stay up late clearing your inboxes. Or the opposite: force yourself to do it by 5pm.",
+"d": "2017-12-05",
+"t": "2017-12-05",
+"u": ["https://twitter.com/beemuvi/status/938194418577768448",
+      "https://github.com/beeminder/beeminder/commit/4f4bebe586e1ea031805ce2ad1f77229e9eae06e"],
+}, { // ------------------------------------------------------------------------
+"x": "We now unset auto-ratchet (max safe days) if you cancel your premium plan. Not to be petty but it was kind of a bug because you can't update it w/o the plan!",
+"u": ["https://twitter.com/beemuvi/status/938572174385864704",
+      "https://github.com/beeminder/beeminder/commit/4f9325e4a1f46dbbce78a97cdc9450f32adaae6f"],
+"c": "HT Chelsea",
+}, { // ------------------------------------------------------------------------
+"x": "Tiny improvement to the API: dropped the alphanumeric restriction on requestids. See http://api.beeminder.com/#postdata",
+"d": "2017-12-07",
+"t": "2017-12-07",
+"u": "https://twitter.com/beemuvi/status/938933623071240192",
+"c": "It turns out everything already worked for non-alphanumeric requestids so all we actually did so far is updated the docs, but this also wants to be an infrahancement where we stop doing the convoluted thing with prepending the goalname (the reason we thought we needed the alphanumeric restriction in the first place).",
+}, { // ------------------------------------------------------------------------
+"x": "Fixed some broken CSS in the reset password form that had links showing up yellow-on-gray. #bugfix",
+"d": "2017-12-07",
+"t": "2017-12-07",
+"u": ["https://twitter.com/beemuvi/status/938933772635971584",
+      "https://github.com/beeminder/beeminder/issues/134"],
+}, { // ------------------------------------------------------------------------
+"x": "Fixed a wrapping problem on beeminder.com/overview #css #bugfix and tweaked the margins",
+"u": ["https://twitter.com/beemuvi/status/939298945368432640",
+      "https://github.com/beeminder/beeminder/commit/8e5060b5ed9711289d26e7262f0a3ecf7ed3906a"],
+}, { // ------------------------------------------------------------------------
+"x": "2 #mini UVI #bugfix's: fixed outdated \"below your graph\" copy in beeminder.com/faq, very brief 500 error from changes to our admin UI that leaked &amp; broke things",
+"u": ["https://twitter.com/beemuvi/status/939299381517283328",
+      "https://github.com/beeminder/beeminder/commit/1e216682bb467deb4959d06a5e6ec55f6324ed69",
+      "https://github.com/beeminder/beeminder/commit/c0c4b37a2c3a1cebfa5ed2ed3b8468ce045e15d6"],
+"c": "Changed to \"next to your graph\" -- that's been wrong since the redesign :/",
+}, { // ------------------------------------------------------------------------
+"x": "We replaced our Google-related logos on the front page with what their brand guidelines demand. #mini",
+"d": "2017-12-11",
+"t": "2017-12-11",
+"u": ["https://twitter.com/beemuvi/status/940384228583149568",
+      "https://github.com/beeminder/beeminder/commit/f8b70ef37413f4ae834f87ff22d81b425472d94c",
+      "https://github.com/beeminder/beeminder/commit/8fb557e85b66d241cd9a2b2557ddba3f21c1ed12"],
+}, { // ------------------------------------------------------------------------
+"x": "Added \"Very Productive/Unproductive\" categories to the list of things you can automatically beemind via @rescuetime",
+"u": ["https://twitter.com/beemuvi/status/940731458305458177",
+      "https://github.com/beeminder/beeminder/commit/d38d1a095f2803314cebe6dfdf01983c311a88dc"],
+}, { // ------------------------------------------------------------------------
+"x": "Jawbone/Fitbit/Misfit/Withings no longer autofetch and add data to goals that are frozen. Mostly this doesn't matter to users but can make restarting smoother.",
+"u": ["https://twitter.com/beemuvi/status/940731859499024384",
+      "https://github.com/beeminder/beeminder/commit/289a28c47a408c55cbc221e0e563a5384e9dfb12"],
+"c": "PS: Withings is now Nokia which we're mentioning here for future greppability.",
+}, { // ------------------------------------------------------------------------
+"x": "Since the #redesign in 2016 we've had the y-axis label auto-inferred from the goal units but it failed to account for changing auto-summing. Now manual again.",
+"u": ["https://twitter.com/beemuvi/status/941107681271492608",
+      "https://github.com/beeminder/beeminder/issues/88",
+      "http://forum.beeminder.com/t/y-axis-label-didnt-update-in-graph-after-changed-in-settings/2652"],
+"c": "Anti-magic principle",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -1831,11 +1899,17 @@ INFRAS WHILE AWAITING PROGLOGS GENERALIZATION: -------50--------60--------70----
 "x": "We updated our tests to deal with recent changes in registration and with weightloss goal creation. (UVIs #2471 & #2474 & friends)",
 "u": "https://twitter.com/beeminfra/status/936364866436132866",
 }, { // ------------------------------------------------------------------------
-
+"x": "Show admins the link to user's archived goals on their gallery page.",
+"u": "https://twitter.com/beeminfra/status/938891955823452161"
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 don't make title required and then do javascript contortions to deal with it
 nilly email_freq fix in massmail jobs
-show admins the link to user's archive page in the user gallery
+actually store maxflux
+#... (don't fetch autofetch data when we get e.g. a fitbit push) when the goal's frozen -- so we don't get airhorns about them
 
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -1846,6 +1920,15 @@ We secured a spot in IFTTT's monthly newsletter next month! (Specific action yes
 https://twitter.com/beemgro/status/933050159621009410
 }, { // ------------------------------------------------------------------------
 Sent a cyber monday promotion to all monthly active non-premium users
+https://twitter.com/beemgro/status/935594076287614976
+}, { // ------------------------------------------------------------------------
+Started a trial with Growsumo -- beeminder.growsumo.com -- as a possible way to outsource our referral program but it may be too pricey for us!
+https://twitter.com/beemgro/status/938130457329393664
+}, { // ------------------------------------------------------------------------
+Filled out a bunch of paperwork with Google so we count as a “verified developer”
+https://twitter.com/beemgro/status/940667311081512960
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 *******************************************************************************/
@@ -1853,8 +1936,6 @@ Sent a cyber monday promotion to all monthly active non-premium users
 /*
 METASTAGED: --10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
 }, { // ------------------------------------------------------------------------
-MINI: more size options for plain beeminder infinibee logo at doc.beeminder.com/blogo, plus added a link to the page in /contact
-
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -1862,17 +1943,6 @@ MINI: more size options for plain beeminder infinibee logo at doc.beeminder.com/
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-"x": "NOT TRUE? ask for your current value for weight goals and inboxer type goals (part of restart revamp in Oct 2017)
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -1880,16 +1950,15 @@ CANDIDATES: --10--------20--------30--------40--------50--------60--------70----
 * fixed some (most? many?) of the thing where flash banner shows up again after you leave current page and go to another page 
   [maybe this mostly only happens for admins?]
 IDEAS: -------10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
-1. fix FAQ copy: "form below your graph"
-2. github issues tagged UVI & PEA
-3. better beemail unsubscribe with downpopped unsubscribe-all option
-4. save buttons ought to be disabled when there’s nothing to save. i think we used to do that in old.bmndr but maybe not. [did not]
-5. allow entering HMS values like ":30" without a zero. HT Laurie Reeves
+2. better beemail unsubscribe with downpopped unsubscribe-all option
+3. save buttons ought to be disabled when there’s nothing to save. ~i think we used to do that in old.bmndr but maybe not.~ [did not]
+4. allow entering HMS values like ":30" without a zero. HT Laurie Reeves
+5. chris su, who's pretty amazing, has api docs feedback: http://forum.beeminder.com/t/typos-in-api-documentation/3359/5?u=dreev
+6. link to help.beeminder.com in the navbar? i guess it's already prominent in the footer, but lawrence said he couldn't find it when he hunted for it
+7. Louis: Need open-ended goals. Defaulting to +10yr looks like a bug.
+8. Louis: Road dial without exes and pencils feels frustratingly broken when you don't know the rhyme or reason for how the grayed-out field changes. Important redesign-regression.
+9. Louis: Even aside from that, dealing with the akrasia horizon constraint is opaque and frustrating. Dumbing down the full road editor can really backfire.
 
-louis:
-2. Need open-ended goals. Defaulting to +10yr looks like a bug.
-3. Road dial with out exes and pencils feels frustratingly broken when you don't know the rhyme or reason for how the grayed-out field changes. Critical regression from redesign.
-4. Even aside from that, dealing with the akrasia horizon constraint is opaque and frustrating. Dumbing down the full road editor can really backfire.
-
--->
+EASY: https://github.com/beeminder/beeminder/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+label%3AUVI+label%3APEA+
+HARD: https://github.com/beeminder/beeminder/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+label%3AUVI+-label%3APEA+
 */
