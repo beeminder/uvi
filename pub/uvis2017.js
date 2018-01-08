@@ -1872,93 +1872,73 @@ var batch2017dec = [ {
       "http://forum.beeminder.com/t/y-axis-label-didnt-update-in-graph-after-changed-in-settings/2652"],
 "c": "Anti-magic principle",
 }, { // ------------------------------------------------------------------------
+"x": "We stopped stupidly suggesting you could set your rate to 0 when restarting a goal if unsure what to set it to and now default to previous overall average rate",
+"d": "2017-12-14",
+"t": "2017-12-14",
+"u": ["https://twitter.com/beemuvi/status/941473483615113221",
+      "https://github.com/beeminder/beeminder/commit/63c59b4d9af4b684b73592abc93de67f2a1a35af"],
 }, { // ------------------------------------------------------------------------
+"x": "Another improvement to restarting frozen/finished/archived goals: for the value to restart at, for autodata goals, default to the most recent datapoint value",
+"d": "2017-12-14",
+"t": "2017-12-14",
+"u": ["https://twitter.com/beemuvi/status/941473527110103040",
+      "https://github.com/beeminder/beeminder/commit/de906039811be472d143ff7a850d56b0af4db069"],
 }, { // ------------------------------------------------------------------------
+"x": "Fixed a regex bug in our Slack bot's /charge command that could make it ignore the \"in so-many-minutes\" part &amp; charge you immediately. #bugfix HT Cameron Harris",
+"d": "2017-12-15",
+"t": "2017-12-15",
+"u": ["https://twitter.com/beemuvi/status/941832649768812544",
+      "https://github.com/beeminder/beebot/commit/d4899907f7a24b7e6e4d920e4ae314cb6a8fedea"],
+}, { // ------------------------------------------------------------------------
+"x": "We now ask for max fluctuation as part of restarting a frozen/archived/completed \"noisy\" goal. And show you the calculated \"90% variance\" as a default.",
+"u": ["https://twitter.com/beemuvi/status/942912731107045379",
+      "https://github.com/beeminder/beeminder/commit/d1077af06fc5eda0a43a907a90f3bb89cc9617e8"],
+}, { // ------------------------------------------------------------------------
+"x": "Also upon restarting an old-style supa-wide \"noisy\" (typically weight loss) goal we convert it to a zero-width razor road",
+"u": ["https://twitter.com/beemuvi/status/942912904310829056"],
+}, { // ------------------------------------------------------------------------
+"x": "Updated beeminder.com/faq to reflect changes in weight loss goals and to point to help.beeminder.com",
+"d": "2017-12-19",
+"t": "2017-12-19",
+"u": ["https://twitter.com/beemuvi/status/943280087285116928",
+      "https://github.com/beeminder/beeminder/commit/13e581532c3ec53a886f7f7447d9b18d363a8417"],
+}, { // ------------------------------------------------------------------------
+"x": "Edited the graph legend in light of weight loss changes and made other copy tweaks and made links in places like the legend open in new tabs more consistently",
+"d": "2017-12-19",
+"t": "2017-12-19",
+"u": ["https://twitter.com/beemuvi/status/943281859458244609",
+      "https://github.com/beeminder/beeminder/commit/e0d66a08d73b365414730519b48645dde9ec8418"],
+}, { // ------------------------------------------------------------------------
+"x": "We've gotten rid of \"noisy\" and \"exproad\" settings for all new goals. Fully purged from the UI and the API gives a friendly error if you try to use them.",
+"u": ["https://twitter.com/beemuvi/status/943628114508201984"],
+}, { // ------------------------------------------------------------------------
+"x": "Edited http://help.beeminder.com & the blog & the API docs to bring everything up to date with our killing of exponential and auto-widening yellow brick roads",
+"t": "2017-12-21",
+"u": ["https://twitter.com/beemuvi/status/944008877250453504",
+      "https://github.com/beeminder/beeminder/commit/5fc4887cfd58ba8d2f1da620f0e96cbd591a7746"],
+"c": "Also http://beeminder.com/contract if anyone still cared about that ancient document",
+}, { // ------------------------------------------------------------------------
+"x": "The \"bare min\" blurbs for do-less timey-wimey goals in the red were saying things like \"+-00:06\" if you were 6 minutes over instead of just \"-00:06\". #bugfix",
+"d": "2017-12-22",
+"t": "2017-12-22",
+"u": ["https://twitter.com/beemuvi/status/944303051027779584",
+      "https://github.com/beeminder/beeminder/issues/97"],
+}, { // ------------------------------------------------------------------------
+"x": "We now allow entering HH:MM:SS values like \":30\" without a zero before the colon. HT Laurie Reeves (Merry X-mas, Mom!)",
+"d": "2017-12-25",
+"t": "2017-12-25",
+"u": ["https://twitter.com/beemuvi/status/945446344939880449",
+      "https://github.com/beeminder/beeminder/commit/74e8d788176077a4b238d8090911f24709f9d5bd"],
+}, { // ------------------------------------------------------------------------
+"x": "Our opinionated tie-breaking (see UVI#2290's hovertext) for dashboard sorting was only happening when you 1st clicked a column header, not on page load. #bugfix",
+"d": "2017-12-25",
+"t": "2017-12-25",
+"u": ["https://twitter.com/beemuvi/status/945448020857913345",
+      "https://github.com/beeminder/beeminder/commit/69a669cb05b07f5ac5637c067b8455137d07f8c1"],
+}, { // ------------------------------------------------------------------------
+"x": "Fixed CSS problems in the Apps & API section of account settings so everything lines up <a href=\"https://user-images.githubusercontent.com/46881/34366518-8b3c3e3e-ea51-11e7-9247-b85f6f4978cf.png\">nicely now</a>",
+"d": "2017-12-26",
+"t": "2017-12-26",
+"u": ["https://twitter.com/beemuvi/status/945801122505093121",
+      "https://github.com/beeminder/beeminder/commit/e35e7ee9478dd486b3be61bdc2815ef119b195d0#commitcomment-26492468"],
 }, /* --------------------------------------------------------- end 2017dec */ ]
-
-
-var staged = [ { // note: sub-UVIs not allowed here in staging
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, /* ---------------------------------------------------------- end staged */ ]
-
-/*******************************************************************************
-INFRAS WHILE AWAITING PROGLOGS GENERALIZATION: -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
-}, { // ------------------------------------------------------------------------
-"x": "Timezones, asof-null, sadedgy, sadreset, and inferred tini/vini all purged from Beebrain!",
-"u": "https://twitter.com/beeminfra/status/931291064794718208",
-}, { // ------------------------------------------------------------------------
-"x": "We improved our bee.sh script to give it a single command to deploy to all application servers",
-"u": "https://twitter.com/beeminfra/status/933784267540250625",
-}, { // ------------------------------------------------------------------------
-"x": "We updated our tests to deal with recent changes in registration and with weightloss goal creation. (UVIs #2471 & #2474 & friends)",
-"u": "https://twitter.com/beeminfra/status/936364866436132866",
-}, { // ------------------------------------------------------------------------
-"x": "Show admins the link to user's archived goals on their gallery page.",
-"u": "https://twitter.com/beeminfra/status/938891955823452161"
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-don't make title required and then do javascript contortions to deal with it
-nilly email_freq fix in massmail jobs
-actually store maxflux
-#... (don't fetch autofetch data when we get e.g. a fitbit push) when the goal's frozen -- so we don't get airhorns about them
-
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-
-GROOVIES WHILE AWAITING PROGLOGS GENERALIZATION: -----50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
-}, { // ------------------------------------------------------------------------
-We secured a spot in IFTTT's monthly newsletter next month! (Specific action yesterday that makes this count as a new groovy was sending them a hi-res logo)
-https://twitter.com/beemgro/status/933050159621009410
-}, { // ------------------------------------------------------------------------
-Sent a cyber monday promotion to all monthly active non-premium users
-https://twitter.com/beemgro/status/935594076287614976
-}, { // ------------------------------------------------------------------------
-Started a trial with Growsumo -- beeminder.growsumo.com -- as a possible way to outsource our referral program but it may be too pricey for us!
-https://twitter.com/beemgro/status/938130457329393664
-}, { // ------------------------------------------------------------------------
-Filled out a bunch of paperwork with Google so we count as a “verified developer”
-https://twitter.com/beemgro/status/940667311081512960
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-*******************************************************************************/
-
-/*
-METASTAGED: --10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-CANDIDATES: --10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
-* fixed some (most? many?) of the thing where flash banner shows up again after you leave current page and go to another page 
-  [maybe this mostly only happens for admins?]
-IDEAS: -------10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
-2. better beemail unsubscribe with downpopped unsubscribe-all option
-3. save buttons ought to be disabled when there’s nothing to save. ~i think we used to do that in old.bmndr but maybe not.~ [did not]
-4. allow entering HMS values like ":30" without a zero. HT Laurie Reeves
-5. chris su, who's pretty amazing, has api docs feedback: http://forum.beeminder.com/t/typos-in-api-documentation/3359/5?u=dreev
-6. link to help.beeminder.com in the navbar? i guess it's already prominent in the footer, but lawrence said he couldn't find it when he hunted for it
-7. Louis: Need open-ended goals. Defaulting to +10yr looks like a bug.
-8. Louis: Road dial without exes and pencils feels frustratingly broken when you don't know the rhyme or reason for how the grayed-out field changes. Important redesign-regression.
-9. Louis: Even aside from that, dealing with the akrasia horizon constraint is opaque and frustrating. Dumbing down the full road editor can really backfire.
-
-EASY: https://github.com/beeminder/beeminder/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+label%3AUVI+label%3APEA+
-HARD: https://github.com/beeminder/beeminder/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+label%3AUVI+-label%3APEA+
-*/
