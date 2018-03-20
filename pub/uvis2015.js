@@ -128,7 +128,7 @@ var batch2015jan = [
 "x": "Mini UVIs: smart submit buttons for integrations, labels clickable for pledge cap radio buttons, wording of \"reached pledge cap\" #mini ×3",
 "u": "https://twitter.com/beemuvi/status/561268776629334016",
 "t": "2015-01-30 21:04:38 +0000",
-"c": "Smart-submit a la https://twitter.com/beemuvi/status/344335764101926912",
+"c": "Smart-submit a la UVI#843",
 }, /*************************************************************************/ {
 "x": "Do some actual input validation on \"roadall\" in the API. HT <a href=\"http://twitter.com/chipmanaged\">@chipmanaged</a>. Cf UVI#1323.",
 "u": "https://twitter.com/beemuvi/status/561673097351155714",

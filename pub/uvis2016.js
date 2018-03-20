@@ -185,7 +185,7 @@ var batch2016feb = [
 "x": "Moving deadline out of adv. settings caused bug that prevented graph from refreshing (eg updating watermark) when changing deadline. #bugfix",
 "u": "https://twitter.com/beemuvi/status/695503269271990272",
 "t": "2016-02-05 07:04:35 +0000",
-"c": "cf https://twitter.com/beemuvi/status/664593997491544064 &amp; https://twitter.com/beemuvi/status/688107679814778880",
+"c": "cf UVI#1725 &amp; UVI#1790",
 }, /*************************************************************************/ {
 "x": "Were unwittingly removing &amp; re-adding Garmin sleep datapoints every time; made IFTTT \"Added Data\" Trigger go batshit. #bugfix HT Markos Giannopoulos",
 "u": "https://twitter.com/beemuvi/status/695862707631689728",
