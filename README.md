@@ -1,11 +1,12 @@
 See index.html for the background about User-Visible Improvements (UVIs).
 
-Currently the interface for adding new UVIs to the changelog is to manually append them to pub/uvis2017.js and manually go tweet them and paste in the URL of the tweet. 
+Currently the interface for adding new UVIs to the changelog is to manually append them to pub/uvis2018.js and manually go tweet them and paste in the URL of the tweet. 
 Oh and we also manually update the bmndr.com/meta/uvi graph.
 
 More automation would obviously be nice.
+On the other hand we've been getting by this way for thousands of UVIs now.
 
-But it might not be worth trying to duplicate Twitter's interface and automatically tweeting. 
+It especially might not be worth trying to duplicate Twitter's interface and automatically tweeting. 
 There are too many things like expanding @-mentions and telling you how many characters you have left (accounting for shortened URLs) that wouldn't work as well outside of Twitter.
 
 Btw, since Twitter doubled its character limit we decided to self-impose 160 characters as the max length for a UVI.
