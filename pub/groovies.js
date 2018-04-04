@@ -48,11 +48,20 @@ var batch = [{
 "u": "https://twitter.com/beemgro/status/971834922708041728",
 "t": "2018-03-08",
 }, { // ------------------------------------------------------------------------
-"x": "Added a section to http://doc.bmndr.com/bsignups  in preparation to try something described on that page",
+"x": "Added a section to http://doc.bmndr.com/bsignups in preparation to try something described on that page",
 "u": "https://twitter.com/beemgro/status/974357745678802945",
 "t": "2018-03-15",
 }, { // ------------------------------------------------------------------------
+"x": "Sketched the path forward for a big improvement in onboarding related to goal units: http://doc.beeminder.com/units",
+"u": "https://twitter.com/beemgro/status/976891587450908672",
+"t": "2018-03-22",
+}, { // ------------------------------------------------------------------------
+"x": "Sketched a spec for better unsubscribe functionality, a prereq for a lot of onboarding/lifecycle-email improvements we're working on: doc.beeminder.com/unsubscribe",
+
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, /* ----------------------------------------------------------- end batch */ ]
+
 
 var staged = [ { // note: sub-entries not allowed here in staging
 }, /* ---------------------------------------------------------- end staged */ ]
