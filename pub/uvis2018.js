@@ -765,5 +765,8 @@ TOO LATE / TOO LAME
 */
 
 /* CHECKLIST FOR TWEETING UVIS
-
+1. Compose the JSON at the bottom of pub/uvis2018.js
+2. Copy to Twitter and tweet it
+3. Paste the URL of the tweet into the JSON
+4. Update Beeminder
 */
