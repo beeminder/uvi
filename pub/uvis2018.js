@@ -547,9 +547,77 @@ var batch2018mar = [{
       "https://github.com/beeminder/beeminder/commit/a6468b67763cb9c8edafe902304bc8446a0d1fcf"],
 "t": "2018-03-19",
 }, { // ------------------------------------------------------------------------
+"f": true,
+"n": 2598,
+"x": "(+) Beeminder Android App version 2.6.2!",
+"u": ["https://twitter.com/beemuvi/status/976239399057858560"],
+"d": "2018-03-08",
+"t": "2018-03-20",
+"c": "By Adam Wolf. First public Beedroid release in the Adam era.",
 }, { // ------------------------------------------------------------------------
+"n": 2598,
+"s": true,
+"x": "New feature: Play/pause buttons in the notifications for running timers",
+"u": ["https://twitter.com/beemuvi/status/976239570030219264"],
+"d": "2018-03-08",
+"t": "2018-03-20",
 }, { // ------------------------------------------------------------------------
+"s": true,
+"x": "Also removed username from the goal details if there is only one account signed in",
+"d": "2018-03-08",
+"t": "2018-03-20",
+"u": ["https://twitter.com/beemuvi/status/976239570030219264"],
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "Various other UI tweaks and fixes, like getting rid of the backburner setting since that doesn't exist since UVI#2082",
+"d": "2018-03-08",
+"t": "2018-03-20",
+"u": ["https://twitter.com/beemuvi/status/976239704570933248"],
+}, { // ------------------------------------------------------------------------
+"x": "Fixed a layout bug in the header of the forum (was messed up on mobile), and added a pointer to the colon shortcut in the help docs",
+"u": ["https://twitter.com/beemuvi/status/976952268917370881",
+      "http://forum.beeminder.com/t/layout-bug-in-forum-header-on-mobile/3803/1",
+      "https://help.beeminder.com/article/62-android-app"],
+"d": "2018-03-13",
+"t": "2018-03-22",
+"c": "Per UVI#1427 we don't get to count improvements to things like the forum where we don't have to lift a finger, but in this case we did have to lift a finger",
+}, { // ------------------------------------------------------------------------
+"x": "On the payments page, we added whitespace between credit card &amp; PayPal so it's more obvious which you're selecting when you click the radio button",
+"u": ["https://twitter.com/beemuvi/status/977307178406051841",
+      "https://github.com/beeminder/beeminder/issues/169"],
+"d": "2018-03-23",
+"t": "2018-03-23",
+"c": "Although if your screen was wide enough it was a non-issue",
+}, { // ------------------------------------------------------------------------
+"x": "Added \"(preferred)\" after \"Credit Card\", \"if you must\" to PayPal, &amp; layout #bugfix w/ the PayPal & CC sections running together if you only had PayPal added",
+"u": ["https://twitter.com/beemuvi/status/977307349416214528",
+      "https://github.com/beeminder/beeminder/commit/534be380d845ff69ed270c35e9f696dc4401f1b5"],
+"d": "2018-03-23",
+"t": "2018-03-23",
 }, /* --------------------------------------------------------- end 2018mar */ ]
+
+var batch2018apr = [{
+"x": "We no longer let you blithely turn on SMS reminders in goal or reminder settings if you haven't actually provided a phone number",
+"u": ["https://twitter.com/beemuvi/status/981316372398419969",
+      "https://github.com/beeminder/beeminder/issues/78"],
+"t": "2018-04-03",
+"c": "Partially done Feb 27 by Andy, finished by Bee on Apr 3",
+}, { // ------------------------------------------------------------------------
+"x": "We now link the reminders page header \"SMS\" to your account settings where you can add a phone number",
+"u": ["https://twitter.com/beemuvi/status/981316516422475776",
+      "https://github.com/beeminder/beeminder/commit/278957aa41da711d97fe5a1dee821578c3bcff79"],
+"t": "2018-04-03",
+}, { // ------------------------------------------------------------------------
+"x": "Now on both goal settings and reminder settings: handy tooltips on the disabled checkboxes explain why they are disabled",
+"u": ["https://twitter.com/beemuvi/status/981316663227301888",
+      "https://github.com/beeminder/beeminder/commit/278957aa41da711d97fe5a1dee821578c3bcff79"],
+"t": "2018-04-03",
+"c": "The reminder settings page is also known as the fwomp page or beeminder.com/reminders",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, /* --------------------------------------------------------- end 2018apr */ ]
 
 
 var staged = [ { // note: sub-UVIs not allowed here in staging
@@ -563,39 +631,34 @@ var staged = [ { // note: sub-UVIs not allowed here in staging
 METASTAGED: --10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
 }, { // ------------------------------------------------------------------------
 UNVERIFIED/UNINTENTIONAL:
-5. Vimium users can now jump to the goals on the dashboard with hotkeys (actually we have no idea why this got better so we probably can't use it without corroboration that this is a genuine improvement!).
+Vimium users can now jump to the goals on the dashboard with hotkeys.
+Actually we have no idea why this got better so we probably can't use it without corroboration that this is a genuine improvement! something about octicons apparently?
 }, { // ------------------------------------------------------------------------
-TODO: make be true for waterfall/reminders/fwomp page
-"x": "We no longer let you blithely turn on SMS reminders in goal or reminder settings if you haven't actually provided a phone number",
-https://github.com/beeminder/beeminder/issues/78
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 TODO: other missing X's on modals?
 X on backcharge modal
 https://github.com/beeminder/beeminder/commit/00b9bb2fd5f92067d471f4afa1c5bdd5209f102a
 }, { // ------------------------------------------------------------------------
 MINIs:
-1. Added a pointer to the colon shortcut in the help docs
-}, { // ------------------------------------------------------------------------
-METASTAGED: --10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
-}, { // ------------------------------------------------------------------------
+1. new tagline "Beeminder: Seize the day after tomorrow" HT @pennockd
+2. dyang's picture: https://github.com/beeminder/beeminder/commit/27fb1d093bdfdd4ace3ad411cea75bb82aa30714
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-http://forum.beeminder.com/t/layout-bug-in-forum-header-on-mobile/3803/1
-"d": "2018-03-13",
-(we did have to lift a finger so it counts: http://beeminder.com/changelog#1427 )
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-Beedroid 2.6.2 on March 8
-* ui tweaks? (probably only uvi-tweetable if we can mention an example)
-* minor fixes? (same)
-* play/pause buttons in the notification thing for a running timer (notification actions)
-* removed username from the goal details if there is only one account signed in
-* anything different with the blank gallery screen?
-* got rid of backburner setting since that doesn't exist since UVI#2082
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 TODO: general mercy!
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 and a max-height for the landing page images

@@ -79,6 +79,18 @@ var batch = [{
 "d": "2018-03-08",
 "u": ["https://twitter.com/beeminfra/status/971867973555113984",
       "https://github.com/beeminder/beeminder/commit/f617189b7b62295f9f85016bbcbcdc247099907f"],
+}, { // ------------------------------------------------------------------------
+"x": "Added a new endpoint with token authentication for admins to use for getting raplet info about users",
+"t": "2018-03-22",
+"d": "2018-03-16",
+"u": ["https://twitter.com/beeminfra/status/976941526218522624",
+"https://github.com/beeminder/beeminder/commit/deba84218bdd49d76180a3908e58b3694c8c3f93"],
+}, { // ------------------------------------------------------------------------
+"x": "Added a blacklist to contact mailer & email bot for domains that are spamming us a bunch.",
+"t": "2018-03-29",
+"d": "2018-03-25",
+"u": ["https://twitter.com/beeminfra/status/979467913844334592", 
+      "https://github.com/beeminder/beeminder/commit/77c63e38140bbaa74a9272fc6a21b990a9cf28b3"]
 }, /* ----------------------------------------------------------- end batch */ ]
 
 var staged = [ { // note: sub-entries not allowed here in staging
@@ -89,8 +101,6 @@ METASTAGED: --10--------20--------30--------40--------50--------60--------70----
 don't make title required and then do javascript contortions to deal with it
 nilly email_freq fix in massmail jobs
 
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
