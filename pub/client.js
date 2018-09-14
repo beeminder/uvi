@@ -143,6 +143,7 @@ function render(uvi) {
     'beeminder.com'       : 'fa fa-link        icon',
     'forum.beeminder.com' : 'fa fa-comments    icon',
     'help.beeminder.com'  : 'fa fa-info-circle icon',
+    'blog.beeminder.com'  : 'fa fa-book        icon',
     'twitter.com'         : 'fa fa-twitter     icon',
     'github.com'          : 'fa fa-github      icon',
     'trello.com'          : 'fa fa-trello      icon',
@@ -167,7 +168,7 @@ function numbum(uvi) {
     if (uvi.n === n-1 && uvi.s) {
       //console.log(`Sublist starting @ ${n-1}`);
     } else {
-      console.log(`NUMBERING ERROR: ${n-1} -> ${uvi.n}`);
+      console.log(`NUMBERING ERROR: ${n-1} -> ${uvi.n}`)
     }
     n = uvi.n;
   }

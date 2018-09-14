@@ -63,11 +63,13 @@ var batch2017jan = [{
 "t": "2017-01-28 00:26:25 +0000",
 }, { // ------------------------------------------------------------------------
 "x": "On /archived it says \"No archived goals!\" if you have none. And on the front page, link to autodata landing pages, not goal creation. #mini",
-"u": "https://twitter.com/beemuvi/status/825144702127058945",
+"u": ["https://twitter.com/beemuvi/status/825144702127058945",
+      "https://github.com/beeminder/beeminder/issues/71"],
 "t": "2017-01-28 00:53:22 +0000",
 }, { // ------------------------------------------------------------------------
 "x": "This counts as a UVI but we're not yet happy with the interaction between goal units & things like y-axis label: http://forum.beeminder.com/t/y-axis-label-didnt-update-in-graph-after-changed-in-settings/2652",
-"u": "https://twitter.com/beemuvi/status/826231486420377600",
+"u": ["https://twitter.com/beemuvi/status/826231486420377600",
+      "https://github.com/beeminder/beeminder/issues/88"],
 "t": "2017-01-31 00:51:51 +0000",
 }, { // ------------------------------------------------------------------------
 "x": "We're now consistent for all autodata goal creation in giving you the option to start with an arbitrary amount of safety buffer",
@@ -1144,8 +1146,9 @@ var batch2017aug = [{
 "x": "And PayPal #bugfix: correctly indicate the transaction status (we weren't correctly showing if a transaction was declined)",
 "u": "https://twitter.com/beemuvi/status/902418439075012608",
 "t": "2017-08-28",
-"c": "not correctly including status meant that a failed payment would show up as \"paid\"",
+"c": "Not correctly including status meant that a failed payment would show up as \"paid\". TODO: check redundancy with UVI#2773.",
 }, { // ------------------------------------------------------------------------
+"n": 2383,
 "x": "Another PayPal integration #bugfix: Adding PayPal wouldn't remove the deadbeat flag on your account. Now it does.",
 "u": "https://twitter.com/beemuvi/status/902418618326982656",
 "t": "2017-08-28",
@@ -1387,6 +1390,7 @@ var batch2017sep = [ {
 }, { // ------------------------------------------------------------------------
 "x": "Client-side checking for if a scheduled break was w/in the akrasia horizon was a little wrong. Now enforces exactly 7 days always. #bugfix",
 "u": ["https://twitter.com/beemuvi/status/913545323041001472",
+      "https://github.com/beeminder/beeminder/issues/128",
       "https://github.com/beeminder/beeminder/commit/7406b89211a3234b0afcad27ae0509d9b208a7f3",
       "https://github.com/beeminder/beeminder/commit/1ab25808590840736d4c8baf86c3115c7d2fea28"],
 "t": "2017-09-28",
@@ -1783,6 +1787,7 @@ var batch2017nov = [ {
 }, { // ------------------------------------------------------------------------
 "x": "When you click to force an auto-fetch of new data for autodata goals we add the datapoint to the list below the graph immediately. No page refresh needed.",
 "u": ["https://twitter.com/beemuvi/status/936036409642590208",
+      "https://github.com/beeminder/beeminder/issues/112",
       "https://github.com/beeminder/beeminder/commit/20a236d2b1eafc41b0456fe4db60c25383a913a1"],
 }, { // ------------------------------------------------------------------------
 "x": "URLminder would, in somewhat rare circumstances, record duplicate datapoints. #bugfix",

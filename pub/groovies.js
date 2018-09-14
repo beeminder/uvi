@@ -57,7 +57,81 @@ var batch = [{
 "t": "2018-03-22",
 }, { // ------------------------------------------------------------------------
 "x": "Sketched a spec for better unsubscribe functionality, a prereq for a lot of onboarding/lifecycle-email improvements we're working on: doc.beeminder.com/unsubscribe",
-
+"u": "https://twitter.com/beemgro/status/979429195926323201",
+"t": "2018-03-29",
+}, { // ------------------------------------------------------------------------
+"x": "Wrote up 5 prereqs (sane unsubscribe, rosca ducks, redirect bug, email collection, double opt-in) for our 2 biggest growth-oriented projects",
+"u": "https://twitter.com/beemgro/status/981958715183005696",
+"t": "2018-04-05",
+}, { // ------------------------------------------------------------------------
+"x": "Wrote up Fear-Of-God strategy memo in InnerHex about culling moribund accounts",
+"u": "https://twitter.com/beemgro/status/984507623482392577",
+"t": "2018-04-12",
+}, { // ------------------------------------------------------------------------
+"x": "As prereq for new ways to beemind growth, wrote up list of CEO duties: http://doc.bmndr.com/ceoduties HT Kim Harrison",
+"u": "https://twitter.com/beemgro/status/987250199759175681",
+"t": "2018-04-19",
+}, { // ------------------------------------------------------------------------
+"x": "Not only are we going to @MicroConf but we signed up for office hours with @patio11 😍",
+"u": "https://twitter.com/beemgro/status/989735500930990082",
+"t": "2018-04-26",
+}, { // ------------------------------------------------------------------------
+"x": "Started a @kickofflabs trial",
+"u": "https://twitter.com/beemgro/status/992304567441223682",
+"t": "2018-05-03",
+}, { // ------------------------------------------------------------------------
+"x": "Submitted a design for an infographic with @venngage (another @MicroConf giveaway)",
+"u": "https://twitter.com/beemgro/status/994924774894661634",
+"t": "2018-05-10",
+}, { // ------------------------------------------------------------------------
+"x": "Drafted first fear-of-god email and outlined the landing page for the user to opt back in",
+"u": "https://twitter.com/beemgro/status/997384682219044864",
+"t": "2018-05-17",
+}, { // ------------------------------------------------------------------------
+"x": "Drafted death-to-autoquit email. http://doc.bmndr.com/autowuss",
+"u": "https://twitter.com/beemgro/status/999893924612263936",
+"t": "2018-05-24",
+}, { // ------------------------------------------------------------------------
+"x": "New set of prereqs for first fear-of-god emails and progress on fixing unsubscribe behavior",
+"u": "https://twitter.com/beemgro/status/1002432942134530048",
+"t": "2018-05-31",
+}, { // ------------------------------------------------------------------------
+"x": "Did an interview for a Very Fancy Publication [PS: it was the Wall Street Journal] about people using Beeminder for meditation goals",
+"u": "https://twitter.com/beemgro/status/1004985165796425728",
+"t": "2018-06-07",
+}, { // ------------------------------------------------------------------------
+"x": "Had a meeting with @priceintel / ProfitWell.com",
+"u": "https://twitter.com/beemgro/status/1011502779322339329",
+"t": "2018-06-25",
+}, { // ------------------------------------------------------------------------
+"x": "We did an interview with the RescueTime folks for this article: https://blog.rescuetime.com/productivity-advice-app-makers",
+"u": "https://twitter.com/beemgro/status/1014759480695783424",
+"t": "2018-07-04",
+}, { // ------------------------------------------------------------------------
+"x": "Set up monthly user testing with FancyHands: http://doc.bmndr.com/hallway",
+"u": "https://twitter.com/beemgro/status/1018001545793695744",
+"t": "2018-07-13",
+}, { // ------------------------------------------------------------------------
+"x": "Beeminder Scholar QS sponsorship: http://quantifiedself.com/2018/07/beeminder-scholar-qs18/",
+"u": "https://twitter.com/beemgro/status/1022034737207156736",
+"t": "2018-07-24",
+}, { // ------------------------------------------------------------------------
+"x": "Beehind the scenes: equity buyout deal finalized with Andy (~90% of equity again owned by founders) and enumerating/divvying CEO/COO duties",
+"u": "https://twitter.com/beemgro/status/1025291903527411712",
+"t": "2018-08-02",
+}, { // ------------------------------------------------------------------------
+"x": "Switched Bee's MIT to fear-of-god emails and commitwalls",
+"u": "https://twitter.com/beemgro/status/1029237044797530113",
+"t": "2018-08-13",
+}, { // ------------------------------------------------------------------------
+"x": "Emailed with Toggl and Strava about our soon-to-be-officially launched integrations",
+"u": "https://twitter.com/beemgro/status/1032466399069786113",
+"t": "2018-08-22",
+}, { // ------------------------------------------------------------------------
+"x": "Launched (and blogged, tweeted, etc) official Toggl integration",
+"u": "https://twitter.com/beemgro/status/1039428916052615168",
+"t": "2018-09-10",
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, /* ----------------------------------------------------------- end batch */ ]
@@ -67,7 +141,16 @@ var staged = [ { // note: sub-entries not allowed here in staging
 }, /* ---------------------------------------------------------- end staged */ ]
 
 /*
-METASTAGED: --10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
+~~~~~~----------------------------- METASTAGED -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
+other integrations
+spec for massmail
+more with github marketplace?
+growsumo?
+unsubscribe improvements?
+doc.bmndr.com/bsignups?
+doc.bmndr.com/units?
+get usernames in intercom?
+intercom purge (more about saving money than growing but any progress with intercom is groovy (baby))
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
