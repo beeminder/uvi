@@ -10,7 +10,7 @@
     "express": "^4.16.3"
   },
   "engines": {
-    "node": "8"
+    "node": "10"
   },
   "repository": {
     "url": "glitch/uvi"

@@ -162,15 +162,19 @@ function render(uvi) {
 // Update the global UVI counter and make sure uvi.n is set 
 function numbum(uvi) {
   if (isEmpty(uvi)) { return }
-  n += 1; // increment the global variable for the number of the UVI
-  uvi.n = uvi.n || n; // let uvi.n default to the global counter if not set
+  n += 1 // increment the global variable for the number of the UVI
+  uvi.n = uvi.n || n // let uvi.n default to the global counter if not set
   if (uvi.n !== n) { // let the specified number usurp the counter but complain
     if (uvi.n === n-1 && uvi.s) {
       //console.log(`Sublist starting @ ${n-1}`);
     } else {
       console.log(`NUMBERING ERROR: ${n-1} -> ${uvi.n}`)
+      //document.getElementById('err2').innerHTML = "test2029"
+      //var d = document.getElementById('err2037')
+      //d.insertAdjacentHTML('beforeend',
+      //  `<pre>NUMBERING ERROR: ${n-1} -> ${uvi.n}</pre>`)
     }
-    n = uvi.n;
+    n = uvi.n
   }
 }
 
@@ -183,44 +187,44 @@ function genli(uvi) {
 
 // Generate html for a batch of UVIs including the year/month header
 function genbatch(year, mon) {
-  var d = document.getElementById(year + MONA[mon-1]);
-  var l = eval("batch" + year + MONA[mon-1]);
-  d.insertAdjacentHTML('beforeend', '<h3>'+year+' '+MONAF[mon-1]+'</h3>');
-  var s = '';
+  var d = document.getElementById(year + MONA[mon-1])
+  var l = eval("batch" + year + MONA[mon-1])
+  d.insertAdjacentHTML('beforeend', '<h3>'+year+' '+MONAF[mon-1]+'</h3>')
+  var s = ''
   // If we didn't need to deal with sublists we could just use this line:
   // l.forEach(function(x) { s += genli(x) })
   for (var i = 0; i < l.length; i += 1) {
     if (i < l.length-1 && l[i+1].s) { // a UVI with sub-UVIs!
-      numbum(l[i]);
+      numbum(l[i])
       // At this point, i points to the "header" UVI for the sublist
-      s += '<li value="'+l[i].n+'">' + render(l[i]) + '<ul>\n';
+      s += '<li value="'+l[i].n+'">' + render(l[i]) + '<ul>\n'
       i += 1; // Increment i to point to the first UVI in the sublist
       for (; i < l.length && l[i].s; i += 1) { s += genli(l[i]) }
       // At this point, i points to the first UVI after the sublist is done
-      i -= 1; // Scooch back to last UVI in sublist -- outer for-loop increments
-      s += '\n</ul></li>\n';
+      i -= 1 // Scooch back to last UVI in sublist -- outer for-loop increments
+      s += '\n</ul></li>\n'
     }
     else { s += genli(l[i]) }
   }
-  d.insertAdjacentHTML('beforeend', '\n<ol>\n' + s + '</ol>\n');
+  d.insertAdjacentHTML('beforeend', '\n<ol>\n' + s + '</ol>\n')
 }
 
 // Generate html for the batch of staged UVIs (NB: sublists not allowed here)
 function genstaged() {
-  var rememberme = n;
-  n = 0;
-  var d = document.getElementById('stg');
-  var l = eval('staged');
+  var rememberme = n
+  n = 0
+  var d = document.getElementById('stg')
+  var l = eval('staged')
   if (l.some(function(x) { return !isEmpty(x) })) {
     d.insertAdjacentHTML('beforeend', 
       "<h3 class=\"grayout\">"
-      +"<br>Staged UVIs (not official until tweeted as well as deployed)</h3>");
-    var s = '';
+      +"<br>Staged UVIs (not official until tweeted as well as deployed)</h3>")
+    var s = ''
     l.forEach(function(x) { s += genli(x) })
     d.insertAdjacentHTML('beforeend', 
-                         '\n<ol class=\"grayout\">\n' + s + '</ol>\n');
+                         '\n<ol class=\"grayout\">\n' + s + '</ol>\n')
   }
-  n = rememberme;
+  n = rememberme
 }
 
 // --------------------------------- 80chars ---------------------------------->

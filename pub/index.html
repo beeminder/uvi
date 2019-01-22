@@ -181,19 +181,32 @@ We're keeping the link to the Twitter export until we're certain everything matc
 <div id="2018jul"><script>genbatch(2018,  7)</script></div>
 <div id="2018aug"><script>genbatch(2018,  8)</script></div>
 <div id="2018sep"><script>genbatch(2018,  9)</script></div>
+<div id="2018oct"><script>genbatch(2018, 10)</script></div>
+<div id="2018nov"><script>genbatch(2018, 11)</script></div>
+<div id="2018dec"><script>genbatch(2018, 12)</script></div>
+
+<script src="/uvis2019.js"></script>
+<div id="2019jan"><script>genbatch(2019,  1)</script></div>
 
 
 <!-- add new UVIs to pub/uvis2018.js -->
 
 <a id="latest"></a>
 
-<div id="stg"/><script>genstaged()</script>
+<div id="stg"></div><script>genstaged()</script>
 
 <script>
-  var d = document.getElementById("n");
-  d.innerHTML = undayify_full(n);
+  var d = document.getElementById("n")
+  d.innerHTML = undayify_full(n)
 </script>
-  
+
+<script>
+  window.ChatThingySettings = {
+    app_id: "32"
+  }
+</script>
+<script src="https://chatthingy.com/load.js" async type="text/javascript"></script>
+
 </main>
 
 </body>

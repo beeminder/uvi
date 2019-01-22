@@ -192,6 +192,102 @@ var batch = [{
 "https://twitter.com/beeminfra/status/1040128311236603904"],
 "t": "2018-09-12",
 }, { // ------------------------------------------------------------------------
+"x": "whoops..  https://twitter.com/beeminfra/status/1040128311236603904 made it impossible for admins to change which of t,v,rfin were set #bugfix",
+"u": ["https://github.com/beeminder/beeminder/commit/137e9280f4003f84567440ef983e12dec2eab26a",
+      "https://twitter.com/beeminfra/status/1042653749263577088"
+],
+"d": "2018-09-01",
+"t": "2018-09-19"
+}, { // ------------------------------------------------------------------------
+"x": "added a background job to weed out inactive intercom users (since we pay by the user)",
+"u": ["https://github.com/beeminder/beeminder/commit/b0617f10255cf7fd302f9c27438032c9406f8d5f",
+"https://twitter.com/beeminfra/status/1045175113430134784"],
+"t": "2018-09-26"
+}, { // ------------------------------------------------------------------------
+"x": "significant refactor of recommit & restart behavior -- mostly pulling out shared functionality into a helper function.",
+"u": "https://twitter.com/beeminfra/status/1047735731278336001"
+}, { // ------------------------------------------------------------------------
+"x": "Removed a legacy route and controller from our original means of sending beemails via a mailgun route.",
+"u": [
+"https://twitter.com/beeminfra/status/1050333386567430145",
+"https://github.com/beeminder/beeminder/commit/c5021c285911ad402d5a14c292b8b67f3bc5faed"
+],
+"t": "2018-10-10"
+}, { // ------------------------------------------------------------------------
+"x": "changed user key \"lastmailed\" to a hash so it can store timestamps for all kinds of noncey and other emails.",
+"u": ["https://twitter.com/beeminfra/status/1052701328105848832"],
+"t": "2018-10-17"
+}, { // ------------------------------------------------------------------------
+"x": "Put all the queries and instructions for writing new queries into one place for massmails. #refactor",
+"u": "https://twitter.com/beeminfra/status/1055308425876332545",
+"t": "2018-10-24"
+}, { // ------------------------------------------------------------------------
+"x": "Among other changes that make it easier to add new queries for massmails, we can use erb-style text substitutions in those emails",
+"c": "This is in addition to some of the pre-defined macro substitutions that we make",
+"u": "https://twitter.com/beeminfra/status/1057863251231305728",
+"t": "2018-10-31"
+}, { // ------------------------------------------------------------------------
+"x": "made it so we can also query over the goals and send massmails to users that way, without duplicating the email for multiple goals per one user",
+"u": ["https://twitter.com/beeminfra/status/1060385909625970688"]
+}, { // ------------------------------------------------------------------------
+"x": "Added error handling for an airhorn that was bugging us if you picked certain Fitbit goal types before actually authorizing Beeminder to read your Fitbit data.",
+"u": ["https://twitter.com/beeminfra/status/1060386086046728193",
+      "https://github.com/beeminder/beeminder/commit/0f4ea1863d667d3419e49d0027c6caabeda930c9"],
+"c": "Weight or water goals, for some reason. UPDATE: not user-visible",
+}, { // ------------------------------------------------------------------------
+"x": "updated the regex in our deploy script that decides whether to bug you about your git state or not",
+"t": "2018-11-21",
+"d": "2018-08-30",
+"u": ["https://twitter.com/beeminfra/status/1065485716816187392",
+"https://github.com/beeminder/beeminder/commit/87d3a93e1f4e250a9158e5805d66bf09618052de"
+]
+}, { // ------------------------------------------------------------------------
+"x": "show time of user's latest charge in the admin's timezone in the admin sidebar",
+"u": ["https://github.com/beeminder/beeminder/commit/8a610a8f72de6fd8a4734e2dc0e225c5a916d1c7",
+"https://twitter.com/beeminfra/status/1068054780969250817",
+]
+}, { // ------------------------------------------------------------------------
+"x": "admins were getting a 500 error on a user's goal page where a latest charge was expected but not present. related to previous infra https://twitter.com/beeminfra/status/1068054780969250817",
+"u": ["https://github.com/beeminder/beeminder/commit/0c761d06c9cb7be3108bd9379f4a4af92af51170",
+"https://twitter.com/beeminfra/status/1070605475878588416",
+]
+}, { // ------------------------------------------------------------------------
+"x": "Cleaned up unused routes and partials for an old precursor to the UVI changelog (http://changelog.beeminder.com/) which lived as a static html page.",
+"d": "2018-12-12",
+"u": ["https://github.com/beeminder/beeminder/commit/81f86a7f99b814b297d721d05ec73144407b88d5",
+"https://github.com/beeminder/beeminder/commit/8fe4cb1a790649af29efccaa91d8e777a16a5187",
+"https://twitter.com/beeminfra/status/1073122671871676420",
+]
+}, { // ------------------------------------------------------------------------
+"x": "we piped the intentions (https://changelog.beeminder.com/#2851) that you give us at signup into our slack channel. now we see what you're thinking as you sign up.",
+"u": "https://twitter.com/beeminfra/status/1075661394047987712"
+}, { // ------------------------------------------------------------------------
+"x": "added daily-active-users:monthly-active-users metrics for us. engage! :picard face:",
+"u": ["https://github.com/beeminder/beeminder/commit/1a0635072f1a166d52c979a7875e4fb16a8f6713",
+"https://twitter.com/beeminfra/status/1078194012375273472"
+]
+}, { // ------------------------------------------------------------------------
+"x": "Refactoring our Toggl code in several places to DRY up the calls to their api.",
+"u": ["https://twitter.com/beeminfra/status/1080708333416239104",
+"https://github.com/beeminder/beeminder/commit/414131d14cb80dca9dbfcdb91347004829fdb799",
+],
+"t": "2019-01-02",
+"d": "2018-10-22"
+}, { // ------------------------------------------------------------------------
+"x": "Added a convenience method for gathering payment info about goals. Also fixed an error in the massmailer for the yearly beemail query.",
+"u": ["https://github.com/beeminder/beeminder/commit/89fab34ae3f62486b2e904d9f67e7cc3b1d35af0",
+"https://github.com/beeminder/beeminder/commit/31eced111d5afa9e688dd3bf14eb4a77ce0e2454",
+"https://twitter.com/beeminfra/status/1083230762650877953",
+],
+"t": "2019-01-09"
+}, { // ------------------------------------------------------------------------
+"x": "Clean up the URLs of referers and query strings before piping them into our slack channel for slightly less cruft cluttering up the intentions.",
+"u": ["https://github.com/beeminder/beeminder/commit/9b7271829a5cd",
+"https://github.com/beeminder/beeminder/commit/5efa7d40e90fa",
+"https://twitter.com/beeminfra/status/1085812004873326592"],
+"t": "2019-01-16",
+"d": "2018-12-18"
+}, { // ------------------------------------------------------------------------
 }, /* ----------------------------------------------------------- end batch */ ]
 
 var staged = [ { // note: sub-entries not allowed here in staging
@@ -200,26 +296,41 @@ var staged = [ { // note: sub-entries not allowed here in staging
 /*
 METASTAGED: --10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
 https://github.com/beeminder/beeminder/commit/
-}, { // ------------------------------------------------------------------------
-#TODO: is this an infra, @dreeves?
-https://github.com/beeminder/beeminder/commit/1f201ba568c0505a3b86253df4d8c56bea54be40
-}, { // ------------------------------------------------------------------------
-background job to weed out inactive intercom users (because we pay by the user)
-https://github.com/beeminder/beeminder/commit/b0617f10255cf7fd302f9c27438032c9406f8d5f
-}, { // ------------------------------------------------------------------------
-whoops..  [above] made it impossible for admins to change which of t,v,rfin were set #bugfix
-https://github.com/beeminder/beeminder/commit/137e9280f4003f84567440ef983e12dec2eab26a
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-"x": "significant refactor of recommit & restart behavior -- mostly pulling out shared functionality into a helper function."
 
+}, { // ------------------------------------------------------------------------
+
+}, { // ------------------------------------------------------------------------
+TODO MAYBE:
+https://github.com/beeminder/beeminder/commit/a09ccc95eb0eb24d084d9841be5bf6259abad9d0
+Date:   Thu Dec 27 22:52:01 2018 -0800
+    survivor and groups and home refactoring
+
+}, { // ------------------------------------------------------------------------
+there's a whole js library now that generates static graph images & all the stats and derail status etc.
+https://github.com/beeminder/road
+we've got jsbrain running in parallel on one of the production servers to test the outputs
+https://github.com/beeminder/beeminder/commit/1fc716790cd475
+snazzy script automatically comparing the outputs from pybrain & jsbrain to easily flag differences
+https://github.com/beeminder/beeminder/commit/29ab675530bb9a7
+https://github.com/beeminder/beeminder/commit/a1b842283168f8b
+swappable method for calling jsbrain from ruby 
+error handling around that call to jsbrain (from ruby) & logging comparative times to generate the outputs
+https://github.com/beeminder/beeminder/commit/123a21ae5199799f6811
+
+}, { // ------------------------------------------------------------------------
+moved google analytics to google's tag manager
+6fb434fd986621ff74e882af462019bbec3e86ec
+690bc05b2ea09c53026c13e1dfe59bd34e91e988
+}, { // ------------------------------------------------------------------------
+fixed a test that not testing what it thought it was, and was broken anyhow
+ef9ddde85ea5626e2c6cf1ec7776fd9e8cf8d4fa
+plus updates to some of the readme & beebrain "test datapoint" thing
+a2beedf4f19c466a630bd66923b874522b666df6
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 TODO:
 don't make title required and then do javascript contortions to deal with it
 
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
 */
