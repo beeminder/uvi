@@ -132,6 +132,26 @@ var batch = [{
 "u": "https://twitter.com/beemgro/status/1039428916052615168",
 "t": "2018-09-10",
 }, { // ------------------------------------------------------------------------
+"x": "Quantified Self talk, office hours, breakout session, meetup",
+"u": "https://twitter.com/beemgro/status/1042658694662516736",
+"t": "2018-09-19",
+}, { // ------------------------------------------------------------------------
+"x": "More general massmailer",
+"u": "https://twitter.com/beemgro/status/1045928713177554944",
+"t": "2018-09-28",
+}, { // ------------------------------------------------------------------------
+"x": "Launched (and blogged, tweeted, etc) official Strava integration",
+"u": "https://twitter.com/beemgro/status/1060032005662957568",
+"t": "2018-11-06",
+}, { // ------------------------------------------------------------------------
+"x": "Hired a social media czar!",
+"u": "https://twitter.com/beemgro/status/1070465110882189312",
+"t": "2018-12-05",
+}, { // ------------------------------------------------------------------------
+"x": "Launched (and blogged, tweeted, etc) official Clozemaster integration!",
+"u": "https://twitter.com/beemgro/status/1070465128082993152",
+"t": "2018-12-05",
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, /* ----------------------------------------------------------- end batch */ ]
@@ -142,8 +162,9 @@ var staged = [ { // note: sub-entries not allowed here in staging
 
 /*
 ~~~~~~----------------------------- METASTAGED -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
-other integrations
-spec for massmail
+google ads
+other integrations (got strava, clozemaster)
+killed autowuss (and used new massmailer to tell everyone affected)
 more with github marketplace?
 growsumo?
 unsubscribe improvements?

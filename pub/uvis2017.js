@@ -78,6 +78,7 @@ var batch2017jan = [{
 } /* ---------------------------------------------------------- end 2017jan */ ]
 
 var batch2017feb = [{
+"f": true,
 "x": "We're obviously very behind on UVI tweets because we're just getting to our official Todoist integration! http://blog.beeminder.com/todoist/",
 "u": "https://twitter.com/beemuvi/status/826950360493236224",
 "t": "2017-02-02 00:28:24 +0000",
@@ -263,7 +264,7 @@ var batch2017mar = [{
 "u": "https://twitter.com/beemuvi/status/837821793666650112",
 "t": "2017-03-04 00:27:36 +0000",
 }, { // ------------------------------------------------------------------------
-"x": "We again let you jump from $0 to $5 pledged (even without the Beemium plan that lets you jump to any amount). #bugfix #redesign-regression",
+"x": "We again let you jump from $0 to $5 pledged (even without the Beemium plan that lets you jump to any amount). #bugfix #redesign #regression",
 "u": "https://twitter.com/beemuvi/status/840363555736043520",
 "t": "2017-03-11 00:47:39 +0000",
 }, { // ------------------------------------------------------------------------
@@ -622,7 +623,7 @@ var batch2017may = [{
 "c": "Part of PayPal deploy. There was a disabled button that said 'add card' and then below it a second button that said 'resend confirmation email' so we got rid of the disabled one altogether",
 }, { // ------------------------------------------------------------------------
 "n": 2292,
-"x": "We had a regression of <a href=\"#2037\">#2037</a> which is now fixed for real! #redesign-regression",
+"x": "We had a regression of <a href=\"#2037\">#2037</a> which is now fixed for real! #redesign #regression",
 "u": ["https://twitter.com/beemuvi/status/867527470454407168",
       "https://github.com/beeminder/beeminder/commit/bbbaf6bf8e4e9ade59df70ef04cbc9e3e952c401",
       "https://github.com/beeminder/beeminder/commit/618787d83dcefb803a01af876ca7a41527411dc4"],
@@ -731,7 +732,7 @@ var batch2017jun = [{
 "d": "2017-06-05",
 "t": "2017-06-05",
 }, { // ------------------------------------------------------------------------
-"x": "Partial fix for #redesign-regression of UVI#555 (needs to also do this when navigating between tabs)",
+"x": "Partial fix for #redesign #regression of UVI#555 (needs to also do this when navigating between tabs)",
 "u": ["https://twitter.com/beemuvi/status/872600836311875584",
       "https://github.com/beeminder/beeminder/commit/72f2d255c6fc4ffe787d434ce0296b35664669c9"],
 "t": "2017-06-07",
@@ -1146,7 +1147,7 @@ var batch2017aug = [{
 "x": "And PayPal #bugfix: correctly indicate the transaction status (we weren't correctly showing if a transaction was declined)",
 "u": "https://twitter.com/beemuvi/status/902418439075012608",
 "t": "2017-08-28",
-"c": "Not correctly including status meant that a failed payment would show up as \"paid\". TODO: check redundancy with UVI#2773.",
+"c": "Not correctly including status meant that a failed payment would show up as \"paid\". PS: We then broke this in the mobile-friendliness redesign.",
 }, { // ------------------------------------------------------------------------
 "n": 2383,
 "x": "Another PayPal integration #bugfix: Adding PayPal wouldn't remove the deadbeat flag on your account. Now it does.",
