@@ -288,6 +288,21 @@ var batch = [{
 "t": "2019-01-16",
 "d": "2018-12-18"
 }, { // ------------------------------------------------------------------------
+"x": "moved our google analytics to google's tag manager",
+"u": ["https://twitter.com/beeminfra/status/1088293364011683841",
+"https://github.com/beeminder/beeminder/commit/6fb434fd986621ff74e882af462019bbec3e86ec",
+"https://github.com/beeminder/beeminder/commit/690bc05b2ea09c53026c13e1dfe59bd34e91e988"
+]
+}, { // ------------------------------------------------------------------------
+"x": "there's a snazzy script automatically comparing the outputs from the old python graphs & the new js graphs to easily flag differences between old & new",
+"u": ["https://github.com/beeminder/beeminder/commit/29ab675530bb9a7",
+"https://github.com/beeminder/beeminder/commit/a1b842283168f8b",
+"https://twitter.com/beeminfra/status/1090940543297679361"]
+}, { // ------------------------------------------------------------------------
+"x": "We were accidentally registering for auto-data updates from withings for all of a user's new goals. It didn't mess up yr goals, but meant a lot of errors for us.",
+"u": ["https://github.com/beeminder/beeminder/pull/460",
+"https://twitter.com/beeminfra/status/1093426170194870272"]
+}, { // ------------------------------------------------------------------------
 }, /* ----------------------------------------------------------- end batch */ ]
 
 var staged = [ { // note: sub-entries not allowed here in staging
@@ -308,25 +323,33 @@ Date:   Thu Dec 27 22:52:01 2018 -0800
 }, { // ------------------------------------------------------------------------
 there's a whole js library now that generates static graph images & all the stats and derail status etc.
 https://github.com/beeminder/road
+}, { // ------------------------------------------------------------------------
 we've got jsbrain running in parallel on one of the production servers to test the outputs
 https://github.com/beeminder/beeminder/commit/1fc716790cd475
-snazzy script automatically comparing the outputs from pybrain & jsbrain to easily flag differences
-https://github.com/beeminder/beeminder/commit/29ab675530bb9a7
-https://github.com/beeminder/beeminder/commit/a1b842283168f8b
+}, { // ------------------------------------------------------------------------
 swappable method for calling jsbrain from ruby 
 error handling around that call to jsbrain (from ruby) & logging comparative times to generate the outputs
 https://github.com/beeminder/beeminder/commit/123a21ae5199799f6811
-
-}, { // ------------------------------------------------------------------------
-moved google analytics to google's tag manager
-6fb434fd986621ff74e882af462019bbec3e86ec
-690bc05b2ea09c53026c13e1dfe59bd34e91e988
 }, { // ------------------------------------------------------------------------
 fixed a test that not testing what it thought it was, and was broken anyhow
 ef9ddde85ea5626e2c6cf1ec7776fd9e8cf8d4fa
 plus updates to some of the readme & beebrain "test datapoint" thing
 a2beedf4f19c466a630bd66923b874522b666df6
 }, { // ------------------------------------------------------------------------
+adjust tests for cc required
+https://github.com/beeminder/beeminder/commit/dda25843eb4874ece664669a0fefaa3768ebd511
+2019-02-04 (Mon)
+M spec/features/elf_spec.rb
+M spec/features/subs_spec.rb
+}, { // ------------------------------------------------------------------------
+wait a beat before logging zapped customer
+https://github.com/beeminder/beeminder/commit/f65c667471d5993e29e90b71dafe789312ad5ec0
+2019-02-04 (Mon)
+M app/models/user.rb
+M app/performers/zap_customer_job.rb
+i put it on batchy, but once or twice the zapuser job ran so fast the
+other callbacks weren't done yet (it can take a few seconds to delete a
+user if there are goals and datapoints and services to cleanup)
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------

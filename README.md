@@ -1,6 +1,6 @@
 See index.html for the background about User-Visible Improvements (UVIs).
 
-Currently the interface for adding new UVIs to the changelog is to manually append them to pub/uvis2018.js and manually go tweet them and paste in the URL of the tweet. 
+Currently the interface for adding new UVIs to the changelog is to manually append them to pub/uvis2019.js and manually go tweet them and paste in the URL of the tweet. 
 Oh and we also manually update the bmndr.com/meta/uvi graph.
 
 More automation would obviously be nice.
