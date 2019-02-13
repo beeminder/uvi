@@ -152,6 +152,9 @@ var batch = [{
 "u": "https://twitter.com/beemgro/status/1070465128082993152",
 "t": "2018-12-05",
 }, { // ------------------------------------------------------------------------
+"x": "We're participating in a Google program to help us with advertising",
+"u": "https://twitter.com/beemgro/status/1091590119167913985",
+"t": "2019-02-01",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, /* ----------------------------------------------------------- end batch */ ]
@@ -162,7 +165,7 @@ var staged = [ { // note: sub-entries not allowed here in staging
 
 /*
 ~~~~~~----------------------------- METASTAGED -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
-google ads
+handing this off to mary?
 other integrations (got strava, clozemaster)
 killed autowuss (and used new massmailer to tell everyone affected)
 more with github marketplace?
