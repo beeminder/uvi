@@ -874,7 +874,7 @@ var batch2012aug = [
 "u": "https://twitter.com/bmndr/status/233430090841731072",
 "t": "2012-08-09 05:10:45 +0000",
 }, /*************************************************************************/ {
-"x": "Now redirecting <a href=\"https://beeminder.com\">beeminder.com</a> to <a href=\"https://www.beeminder.com\">beeminder.com</a> to not break google oauth for those trying the former URL. HT @kaderbelbina",
+"x": "Now redirecting <a href=\"https://beeminder.com\">https://beeminder.com</a> to <a href=\"https://www.beeminder.com\">https://www.beeminder.com</a> to not break google oauth for those trying the former URL. HT @kaderbelbina",
 "u": "https://twitter.com/beemuvi/status/233615042149482496",
 "t": "2012-08-09 17:25:41 +0000",
 }, /*************************************************************************/ {
