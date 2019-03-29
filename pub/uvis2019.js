@@ -236,7 +236,6 @@ var batch2019jan = [{
       "https://github.com/beeminder/beeminder/issues/464"],
 "d": "2019-01-30",
 "t": "2019-01-31",
-}, { // ------------------------------------------------------------------------
 }, /* --------------------------------------------------------- end 2019jan */ ]
 
 var batch2019feb = [{
@@ -296,12 +295,354 @@ var batch2019feb = [{
 "u": ["https://twitter.com/beemuvi/status/1095621691382743041"],
 "t": "2019-02-12",
 }, { // ------------------------------------------------------------------------
+"x": "Sometimes confirmation emails got stuck behind batches of graph refreshes; moved them to a higher priority queue, so hopefully no more delays!",
+"u": ["https://twitter.com/beemuvi/status/1095927195313164290",
+      "https://github.com/beeminder/beeminder/issues/494",
+      "https://github.com/beeminder/beeminder/commit/cbdfc22461a7d9bf898318ada4940b1afa5dc710"],
+"d": "2019-02-13",
+"t": "2019-02-13",
+"c": "Moved other user-account-related emails as well",
 }, { // ------------------------------------------------------------------------
+"x": "The styling (CSS) on the \"discount please\" button was broken (probably since the #redesign) and looked more like a link than a button. #bugfix #regression",
+"u": ["https://twitter.com/beemuvi/status/1095927307921850368",
+      "https://github.com/beeminder/beeminder/issues/272",
+      "https://github.com/beeminder/beeminder/commit/f2f1196fcec23b5d5d07e65e3319baf6188c8b8d"],
+"d": "2019-02-13",
+"t": "2019-02-13",
+"c": "This might make more sense as a normal inline link than a big ol' button but we do call it the \"discount please\" button",
 }, { // ------------------------------------------------------------------------
+"x": "When you are already premium, beeminder.com/premium now starts the discount slider at your current subscription frequency (had been always starting at monthly)",
+"u": ["https://twitter.com/beemuvi/status/1096325847051493376",
+      "https://github.com/beeminder/beeminder/commit/a860dc2ef74c7f87825208d8c2d7142a487da123"],
+"d": "2019-02-13",
+"t": "2019-02-14",
 }, { // ------------------------------------------------------------------------
+"f": true,
+"x": "UVI#439 stopped being true when we deployed UVI#1517 and we finally separated Google login from Gmail permissions again!",
+"u": ["https://twitter.com/beemuvi/status/1098132186123796480",
+      "https://github.com/beeminder/beeminder/issues/234"],
+"d": "2019-02-15",
+"t": "2019-02-19",
+"c": "By Adam Wolf. UPDATE: We had the wrong tweet for UVI#439 at first and are now realizing we don't know what #439 was actually talking about.",
 }, { // ------------------------------------------------------------------------
+"x": "You now see both Google and Gmail as separate entries in http://beeminder.com/services",
+"u": ["https://twitter.com/beemuvi/status/1098132727063207936",
+      "https://github.com/beeminder/beeminder/issues/234"],
+"d": "2019-02-15",
+"t": "2019-02-19",
 }, { // ------------------------------------------------------------------------
+"x": "Fixed up the error banners to tell you to either re-add Gmail or re-add Google as needed (and updated all the existing goals accordingly)",
+"u": ["https://twitter.com/beemuvi/status/1098132951643021313",
+      "https://github.com/beeminder/beeminder/issues/234"],
+"d": "2019-02-15",
+"t": "2019-02-19",
+}, { // ------------------------------------------------------------------------
+"x": "That Gmail/Google auth split felt like more than 3 UVIs so we'll count this cheapo one: Additional clarification in <a href=\"https://www.beeminder.com/legalschmegal\">ToS</a> that we don't read or save your email",
+"u": ["https://twitter.com/beemuvi/status/1098852993703632896",
+      "https://github.com/beeminder/beeminder/pull/499"],
+"d": "2019-02-14",
+"t": "2019-02-21",
+}, { // ------------------------------------------------------------------------
+"x": "We accidentally broke our Strava integration for close to 12 hours! Deployed bad code, went to sleep, woke up to irate (not really) users! #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1098853740033892353",
+      "https://github.com/beeminder/beeminder/commit/1f3d198c3cf81218bf0cd187aa048ace8f96aec5",
+      "https://github.com/beeminder/beeminder/commit/df28df8b999ba7ae1b012fe062ac7b499a91b738"],
+"d": "2019-02-20",
+"t": "2019-02-21",
+}, { // ------------------------------------------------------------------------
+"x": "The graph legend now shows you what it's not showing you, in a \"disabled graph features\" section. Just a small thorn in @dreev's side that made for an easy UVI!",
+"u": ["https://twitter.com/beemuvi/status/1099213285683953664",
+      "https://github.com/beeminder/beeminder/commit/2f052910da95fbaacf085fd319c7d2ba2f87f107"],
+"d": "2019-02-22",
+"t": "2019-02-22",
+}, { // ------------------------------------------------------------------------
+"x": "We were also misguidedly suppressing the yellow guiding lines in the legend in the first week. Now we're not.",
+"u": ["https://twitter.com/beemuvi/status/1099218452718309378",
+      "https://github.com/beeminder/beeminder/commit/2f052910da95fbaacf085fd319c7d2ba2f87f107"],
+"d": "2019-02-22",
+"t": "2019-02-22",
+"c": "Pretty much a #bugfix even though we did it on purpose out of a misguided desire to not overwhelm newbees",
+}, { // ------------------------------------------------------------------------
+"x": "In http://beeminder.com/apps/new (registering a new Beeminder app) we had a broken link to the Autofetch Callback URL documentation. Now we don't!",
+"u": ["https://twitter.com/beemuvi/status/1100305016550711297",
+      "https://github.com/beeminder/beeminder/pull/529"],
+"d": "2019-02-25",
+"t": "2019-02-25",
+"c": "By Adam",
+}, { // ------------------------------------------------------------------------
+"x": "Fixed / cleaned up some other other internal links (aka anchor links) in the API docs while we were at it",
+"u": ["https://twitter.com/beemuvi/status/1100305160264245248",
+      "https://github.com/beeminder/apidocs/commit/e8a79a7478d6edc5224254ea9c64a312a0e277a7"],
+"d": "2019-02-25",
+"t": "2019-02-25",
+"c": "Including fixing dreev's sticking in the markdown trick of {#foo} which doesn't actually work here and was just appearing as brokenness in one of the subheaders",
+}, { // ------------------------------------------------------------------------
+"x": "We updated http://beeminder.com/money to not say false things like \"it's free to create a goal -- no credit card required\". HT <a href=\"https://twitter.com/EricMueller\">@EricMueller</a> <a href=\"http://blog.beeminder.com/commitwall\">#commitwall</a>",
+"u": ["https://twitter.com/beemuvi/status/1100842222516285440",
+      "https://github.com/beeminder/beeminder/commit/ea0e3d263085b746b204bd5337b68571b9a10f41"],
+"d": "2019-02-27",
+"t": "2019-02-27",
+}, { // ------------------------------------------------------------------------
+"x": "Tagging (UVI#2080) had a critical bug: negating tags (#!tag) broke the javascript &amp; made it impossible to add datapoints on the dashboard! #bugfix HT @openmedi",
+"u": ["https://twitter.com/beemuvi/status/1101027298361274368",
+      "https://github.com/beeminder/beeminder/commit/78d4e34aa0ca0306fdb246c53f9f08d3e9585f72",
+      "https://github.com/beeminder/beeminder/issues/448"],
+"d": "2019-02-26",
+"t": "2019-02-27",
+}, { // ------------------------------------------------------------------------
+"x": "New aggday method \"cap1\" (HT <a href=\"https://forum.beeminder.com/u/zedmango\">zedmango</a>) and brought the <a href=\"https://help.beeminder.com/article/97-custom-goals\">aggday documentation</a> up to date",
+"u": ["https://twitter.com/beemuvi/status/1101388908414156801",
+      "https://github.com/beeminder/road/issues/64",
+      "https://forum.beeminder.com/t/request-cap1-aggday/4994?u=dreev"],
+"d": "2019-02-28",
+"t": "2019-02-28",
 }, /* --------------------------------------------------------- end 2019feb */ ]
+
+var batch2019mar = [{
+"f": true,
+"x": "We cranked up the image resolution on graphs to... literally infinity. That's right, next time your graph regenerates it will be an SVG image!",
+"u": ["https://twitter.com/beemuvi/status/1101804577530175488",
+      "https://github.com/beeminder/beeminder/pull/530"],
+"d": "2019-03-01",
+"t": "2019-03-01",
+}, { // ------------------------------------------------------------------------
+"x": "Revamped the \"<a href=\"https://help.beeminder.com/article/32-what-do-i-do-first\">What do I do first?</a>\" help page that we remembered we prominently link to on the page you land on after signing up",
+"u": ["https://twitter.com/beemuvi/status/1101805645861289985"],
+"d": "2019-03-01",
+"t": "2019-03-01",
+"c": "Mainly rearranged the list, lots of copyediting, cleanup, an update related to timezone setting, link to a blog post on burnout, etc",
+}, { // ------------------------------------------------------------------------
+"x": "The fancy new svg images weren't displaying the bull's eye, infinity symbol, jolly roger, etc. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1102849043779088384",
+      "https://github.com/beeminder/beeminder/commit/4421e3e70015a65560f1a58dac64a5098ab6e4d8",
+      "https://github.com/beeminder/beeminder/pull/535",
+      "https://github.com/beeminder/beeminder/pull/536"],
+"d": "2019-03-02",
+"t": "2019-03-04",
+"c": "Now using an object tag instead of an img tag. Lost title text / alt text on the graph and can't right click to select the image / copy paste / get source link.",
+}, { // ------------------------------------------------------------------------
+"x": "Leading zeros in the datapoint field no longer make the number be interpreted as (yes, this was true) base 8. Eg, \"011\" was parsed as 9. #bugfix Cf UVI#2441",
+"u": ["https://twitter.com/beemuvi/status/1103235118724919296",
+      "https://github.com/beeminder/beeminder/issues/450"],
+"d": "2019-03-05",
+"t": "2019-03-05",
+"c": "This is a javascript eval thing (needed to support arithmetic in datapoints) and is in fact common in programming languages (it comes from C) to parse numbers with leading zeros as octal. Fix was to strip all leading zeros from numbers.",
+}, { // ------------------------------------------------------------------------
+"x": "Updated submit buttons in the tabs below your goal to have more specific labels (like \"update derail behavior\" instead of \"update goal\", etc etc)",
+"u": ["https://twitter.com/beemuvi/status/1103235477837033472",
+      "https://github.com/beeminder/beeminder/issues/515",
+      "https://github.com/beeminder/beeminder/commit/02ae5d3f447e4c9c670641ee9294bb495f973131"],
+"d": "2019-03-05",
+"t": "2019-03-05",
+"c": "Followed the convention that each submit button matches the section heading, and trello/todoist/toggl/runkeeper/urlminder/twitter/todoist all changed from \"update\" to \"update fill-in-the-blank\". Etc.",
+}, { // ------------------------------------------------------------------------
+"x": "Oops, the leading zeros #bugfix had a much worse bug and was stripping non-leading zeros! HT teoajantaival",
+"u": ["https://twitter.com/beemuvi/status/1103405105544519680",
+      "https://github.com/beeminder/beeminder/commit/54271a9cb8793d728c7ef99b0d69cae5db2069c1",
+      "https://github.com/beeminder/beeminder/commit/030308b34effb3921becfe27ef71beda1b5f8991"],
+"d": "2019-03-06",
+"t": "2019-03-06",
+}, { // ------------------------------------------------------------------------
+"x": "And one more #bugfix to the bugfix with leading zeros: we now no longer strip the zero from, eg, \"1:02\" turning it into \"1:2\". HT @dehowell",
+"u": ["https://twitter.com/beemuvi/status/1103971052902744064",
+      "https://github.com/beeminder/beeminder/commit/60813c28188159a9f8ade0d209c5993128c8ebe4",
+      "https://github.com/beeminder/beeminder/issues/541",
+      "https://forum.beeminder.com/t/leading-zeros/5067"],
+"d": "2019-03-06",
+"t": "2019-03-07",
+"c": "This was less severe since it didn't let you submit it at all instead of submitting an altered datapoint value!",
+}, { // ------------------------------------------------------------------------
+"x": "Deadlines for new Skritter goals now 4am again (cf UVI#1715), not the user's default. #bugfix #redesign #regression",
+"u": ["https://twitter.com/beemuvi/status/1103971335724625920",
+      "https://github.com/beeminder/beeminder/issues/511"],
+"d": "2019-03-07",
+"t": "2019-03-07",
+"c": "Broken since elf, presumably",
+}, { // ------------------------------------------------------------------------
+"x": "Added error checking to the goalname change field so it won't let you submit invalid goalnames (before it would let you and then complain)",
+"u": ["https://twitter.com/beemuvi/status/1104256659377930240",
+      "https://github.com/beeminder/beeminder/issues/458"],
+"d": "2019-03-07",
+"t": "2019-03-08",
+}, { // ------------------------------------------------------------------------
+"x": "Made goals with the unfortunately named deadbeat flag not appear in http://bmndr.co/survivor & added a link to the derailing-is-not-failing blog post to http://bmndr.co/money",
+"u": ["https://twitter.com/beemuvi/status/1105404154246135810",
+      "https://github.com/beeminder/beeminder/issues/547",
+      "https://github.com/beeminder/beeminder/issues/475"],
+"t": "2019-03-11",
+"c": "Also private goals but maybe they were already excluded? HT zedmango & drtall",
+}, { // ------------------------------------------------------------------------
+"x": "Removed the checkbox to opt in to the old graphs, and more importantly, stopped generating the old graphs for everyone in parallel which should speed them up!",
+"u": ["https://twitter.com/beemuvi/status/1105404956167688192",
+      "https://github.com/beeminder/beeminder/pull/548"],
+"d": "2019-03-11",
+"t": "2019-03-11",
+"c": "Even more official death of pybrain!",
+}, { // ------------------------------------------------------------------------
+"x": "UVI#2577 subtly broke the todayta checkmarks so that you had to reload the dashboard to make them show up. #bugfix #regression",
+"u": ["https://twitter.com/beemuvi/status/1105760784791957504",
+      "https://github.com/beeminder/beeminder/pull/549"],
+"d": "2019-03-12",
+"t": "2019-03-12",
+"c": "UVI#2577 messed up the javascript that handled this, by swapping the marks themselves from some old icon font thingie we were using to the replacement thingie (octicons from github) without updating the javascript that shows/hides the checkmark. Pretty embarrassing how that was broken for a year.",
+}, { // ------------------------------------------------------------------------
+"f": true,
+"x": "Folks were weaselproofing themselves thoughtlessly too often! Now have to prove you really mean it, typing \"I'm a weasel\" &amp; everything, not just check a box.",
+"u": ["https://twitter.com/beemuvi/status/1105762303947890688",
+      "https://github.com/beeminder/beeminder/issues/546"],
+"c": "guys i swear this is an improvement for users and not just admins!"
+}, { // ------------------------------------------------------------------------
+"x": "Weaselproof-related copyediting (mainly that it's always \"weaselproof\" not \"weasel-proof\" or \"weasel proof\" now)",
+"u": ["https://twitter.com/beemuvi/status/1106112403803009024",
+      "https://github.com/beeminder/beeminder/commit/0623c498b8fa0f7c5233a921cbc7d2ea9123b352"],
+"d": "2019-03-13",
+"t": "2019-03-13",
+}, { // ------------------------------------------------------------------------
+"x": "Other changes to the weasel insurance webcopy, not to mention all the new webcopy @thatgirl added as part of deploying this, eg explaining how to unweaselproof",
+"u": ["https://twitter.com/beemuvi/status/1106113854033936385",
+      "https://github.com/beeminder/beeminder/commit/1a5c3dfde003da25e52dad7b3cd90e6ef8a0280d"],
+"d": "2019-03-13",
+"t": "2019-03-13",
+}, { // ------------------------------------------------------------------------
+"x": "The SVG graph image files are now much smaller, thanks to an insight from Philipp Dörfler (round the needlessly precise floats in the vector specifications)",
+"u": ["https://twitter.com/beemuvi/status/1106438051444580352",
+      "https://github.com/beeminder/road/issues/65",
+      "https://forum.beeminder.com/t/svg-graphs/4995/11?u=dreev"],
+"d": "2019-03-13",
+"t": "2019-03-14",
+"c": "By Uluc, HT phi",
+}, { // ------------------------------------------------------------------------
+"x": "Changed the section heading/label \"SAFETY BUFFER\" to \"REDUCE SAFETY BUFFER\" after learning that that was confusing lots of people",
+"u": ["https://twitter.com/beemuvi/status/1106442204279521280",
+      "https://github.com/beeminder/beeminder/commit/4d5b1e491e29dacdcfbd32801561dea3f8b953bf"],
+"d": "2019-03-14",
+"t": "2019-03-14",
+}, { // ------------------------------------------------------------------------
+"x": "We changed our name on Instagram from bmndr to beeminder and updated the link in the footer of the website accordingly. HT Philipp Dörfler",
+"u": ["https://twitter.com/beemuvi/status/1106801264065560576",
+      "https://github.com/beeminder/beeminder/commit/e9b22b7f87e31b43239ae8ac2b5dedc74c30729f",
+      "https://forum.beeminder.com/t/insta-bmndr-beeminder-vs-website/5112"],
+"d": "2019-03-15",
+"t": "2019-03-15",
+}, { // ------------------------------------------------------------------------
+"x": "Had a nasty css bug that made the \"We'll adjust the road so you have ___ units\" form display as \"___ We'll adjust the road so you have units\" #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1106801409880551424",
+      "https://github.com/beeminder/beeminder/issues/320"],
+"d": "2019-03-14",
+"t": "2019-03-15",
+"c": "Same as UVI#2847, just in different locations. This one was for do-less safety buffer adjustments and all goal restarts. Probable #redesign #regression",
+}, { // ------------------------------------------------------------------------
+"x": "URLminder was erroneously shown in the list of services you can authorize Beeminder to access (and we gave a 500 error if you actually clicked it). #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1107888686178328576",
+      "https://github.com/beeminder/beeminder/commit/1c5e9a3b2fda4956ecbc4c96d0e568254a946cac",
+      "https://github.com/beeminder/beeminder/issues/551"],
+"d": "2019-03-18",
+"t": "2019-03-18",
+"c": "This is in http://beeminder.com/settings/account",
+}, { // ------------------------------------------------------------------------
+"x": "Made improvements to the font size in flash banners, like making it smarter about when to use a smaller font in order to fit the whole message",
+"d": "2019-03-18",
+"t": "2019-03-18",
+"u": ["https://twitter.com/beemuvi/status/1107899896395264000",
+      "https://github.com/beeminder/beeminder/issues/542"],
+"c": "In particular, we strip out the html tags before deciding how long the string is",
+}, { // ------------------------------------------------------------------------
+"x": "Relatedly, we now use a smaller font size on smaller screens in the flash banners (and embiggened the reduced font for longer messages)",
+"u": ["https://twitter.com/beemuvi/status/1107899979916468227",
+      "https://github.com/beeminder/beeminder/issues/542"],
+"d": "2019-03-18",
+"t": "2019-03-18",
+}, { // ------------------------------------------------------------------------
+"x": "Added missing links on http://beeminder.com/clozemaster: to @clozemaster itself and to the blog posts, http://blog.beeminder.com/clozemaster & http://blog.clozemaster.com/beeminder",
+"u": ["https://twitter.com/beemuvi/status/1108264657238654976",
+      "https://github.com/beeminder/beeminder/issues/497",
+      "https://github.com/beeminder/beeminder/commit/a64d9a712b6f85df8efaa9ea6b2ff1a4382928bd"],
+"d": "2019-03-19",
+"t": "2019-03-19",
+}, { // ------------------------------------------------------------------------
+"x": "Our <a href=\"https://help.beeminder.com/article/25-how-do-auto-canceling-subscriptions-work\">help page about auto-canceling</a> was wrong. Only adding data (not logging in or making changes to your goals) prevents premium subscriptions from pausing!",
+"u": ["https://twitter.com/beemuvi/status/1108602549261590528",
+      "https://help.beeminder.com/article/25-how-do-auto-canceling-subscriptions-work"],
+"d": "2019-03-20",
+"t": "2019-03-20",
+}, { // ------------------------------------------------------------------------
+"x": "Updated all the help pages in the Payments category (copyediting, minor corrections, formatting, clarifications). https://help.beeminder.com/category/6-payments",
+"u": ["https://twitter.com/beemuvi/status/1108603473019301888",
+      "https://help.beeminder.com/category/6-payments"],
+"d": "2019-03-20",
+"t": "2019-03-20",
+}, { // ------------------------------------------------------------------------
+"x": "We were inconsistently punctuating headlines on integration landing pages. Now there are no periods, because headlines don't use periods. #mini",
+"u": ["https://twitter.com/beemuvi/status/1108604478222041088",
+      "https://github.com/beeminder/beeminder/issues/558",
+      "https://github.com/beeminder/beeminder/pull/559"],
+"d": "2019-03-20",
+"t": "2019-03-20",
+"c": "This also meant ditching David Yang's line about putting some bite in your GTD. It had a good 8-year run.",
+}, { // ------------------------------------------------------------------------
+"x": "On some autodata goal creation pages (Strava, Trello, Clozemaster, GitHub) we fixed a CSS problem that made the initial safety buffer field way too wide",
+"u": ["https://twitter.com/beemuvi/status/1108977646325493763",
+      "https://github.com/beeminder/beeminder/issues/560"],
+"d": "2019-03-21",
+"t": "2019-03-21",
+}, { // ------------------------------------------------------------------------
+"x": "Did a full justify on the front page summary text. Looks way nicer than the centered version. HT @LawrenceEvalyn",
+"u": ["https://twitter.com/beemuvi/status/1109352871609286656",
+      "https://github.com/beeminder/beeminder/issues/561"],
+"d": "2018-03-22",
+"t": "2018-03-22",
+"c": "Keyword: margins",
+}, { // ------------------------------------------------------------------------
+"x": "Updated all the help pages in the Goals category (copyediting, corrections, formatting, links, clarifications, updates). http://help.beeminder.com/category/50-goals",
+"u": ["https://twitter.com/beemuvi/status/1109353298446831616",
+      "http://help.beeminder.com/category/50-goals"],
+"d": "2018-03-22",
+"t": "2018-03-22",
+}, { // ------------------------------------------------------------------------
+"x": "Updated all the help pages in the Data category (copyediting, corrections, formatting, links, clarifications, updates). https://help.beeminder.com/category/35-data",
+"u": ["https://twitter.com/beemuvi/status/1110447161739624448",
+      "http://help.beeminder.com/category/50-goals"],
+"d": "2018-03-25",
+"t": "2018-03-25",
+"c": "This is super time-consuming and Chelsea is amazing for writing all of this in the first place",
+}, { // ------------------------------------------------------------------------
+"x": "Updated all the help pages in the Derailing category (copyediting, links, clarifications). https://help.beeminder.com/category/8-derailing",
+"u": ["https://twitter.com/beemuvi/status/1110753935109681152",
+      "https://help.beeminder.com/category/8-derailing"],
+"d": "2018-03-26",
+"t": "2018-03-26",
+}, { // ------------------------------------------------------------------------
+"x": "Updated all the help pages in the Quitting category (copyediting, links, corrections). https://help.beeminder.com/category/43-quitting",
+"u": ["https://twitter.com/beemuvi/status/1110772216885448704",
+      "https://help.beeminder.com/category/43-quitting"],
+"d": "2018-03-26",
+"t": "2018-03-26",
+}, { // ------------------------------------------------------------------------
+"x": "The CSS (styling) of the modal (popup) when you click \"discount please!\" was embarrassingly broken/misaligned. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1111176724660666368",
+      "https://github.com/beeminder/beeminder/issues/496"],
+"d": "2018-03-27",
+"t": "2018-03-27",
+"c": "Also the \"moar free goals please\" button. Partially #redesign #regression",
+}, { // ------------------------------------------------------------------------
+"x": "Updated popup copy and hovertext for the \"discount please\" button to clarify that clicking the button immediately emails us",
+"u": ["https://twitter.com/beemuvi/status/1111497812070416385",
+      "https://github.com/beeminder/beeminder/commit/571d062bda21d93a0450b9019ef5c47b3d9ecaf0",
+      "https://github.com/beeminder/beeminder/issues/569"],
+"d": "2018-03-28",
+"t": "2018-03-28",
+}, { // ------------------------------------------------------------------------
+"x": "Made the \"more free goals please\" button do that too (but the first time it just magically grants the free goal, and now says as much in the hovertext)",
+"u": ["https://twitter.com/beemuvi/status/1111497838758789120",
+      "https://github.com/beeminder/beeminder/commit/172afe73419385945e16cb769c02c87768e268b6"],
+"d": "2018-03-28",
+"t": "2018-03-28",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, /* --------------------------------------------------------- end 2019mar */ ]
 
 
 var staged = [ { // note: sub-UVIs not allowed here in staging
@@ -317,6 +658,16 @@ var staged = [ { // note: sub-UVIs not allowed here in staging
 ~~~~~~----------------------------- METASTAGED -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+"x": "Super mini: removed \"Deprecated\" from the 'id' field in the api docs Goal resource -- https://changelog.beeminder.com/#2104 sort of myopically semi-broke the api, since we want you to use the slug as the identifier, but now you can change the goalname, so we'd definitely better keep the goal id around so api clients can piece things back together if someone goes and changes a goalname on them."
+"c": "it's super mini, but took lots of words to say the things."
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+small fix to the way we load new svg image after a graph reload -- should look a little smoother and less jumpy
+https://github.com/beeminder/beeminder/commit/2a859386e81dade3cc63f07c2ceeda5a2c63a281
+"c": "not sure if this will be a very minor improvement or a more noticeable one, so maybe if 
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 after new beedroid: help page for android persistent notification
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -325,10 +676,14 @@ nokia back to withings?
 }, { // ------------------------------------------------------------------------
 wakatime integration?
 }, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 project euler integration?
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 two-red-days-in-a-row bug:
 offred bb param: https://github.com/beeminder/beeminder/commit/bff8c9f382c83458b94a3e3b4c162e2ace444215
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 ~~~~~~----------------------------- CANDIDATES -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
 }, { // ------------------------------------------------------------------------

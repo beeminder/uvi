@@ -303,6 +303,39 @@ var batch = [{
 "u": ["https://github.com/beeminder/beeminder/pull/460",
 "https://twitter.com/beeminfra/status/1093426170194870272"]
 }, { // ------------------------------------------------------------------------
+"x": "Fixed a test of dashboard data entry that was broken and not testing quite the right thing anyhow.",
+"u": ["https://github.com/beeminder/beeminder/commit/ef9ddde85ea5626e2c6cf1ec7776fd9e8cf8d4fa",
+"https://twitter.com/beeminfra/status/1095969288416972800"],
+"d": "2019-02-14"
+}, { // ------------------------------------------------------------------------
+"x": "Numerous updates to our README improving and updating instructions for setting up a dev environment. ht adamwolf ht dreev",
+"u": ["https://github.com/beeminder/beeminder/commit/050572752ffd5c935ef41c148306f954b11f004e",
+"https://github.com/beeminder/beeminder/commit/a2beedf4f19c466a630bd66923b874522b666df6",
+"https://github.com/beeminder/beeminder/commit/4f68079a6de2bd16e15d86b3b9a36089e2b19632",
+"https://twitter.com/beeminfra/status/1099219065501970433"],
+"t": "2019-02-22"
+}, { // ------------------------------------------------------------------------
+"x": "adjusted some goal creation tests to work with new cc-in-goal-creation requirement, including adding a test for that final ask-for-cc step",
+"u": ["https://github.com/beeminder/beeminder/commit/dda25843eb4874ece664669a0fefaa3768ebd511",
+"https://twitter.com/beeminfra/status/1101774061577756672"],
+"d": "2019-02-04",
+"t": "2019-03-01",
+}, { // ------------------------------------------------------------------------
+"x": "Instructions in the readme for how to deploy changes to the js-based static road image generator.",
+"u": ["https://twitter.com/beeminfra/status/1104265709364736000",
+"https://github.com/beeminder/road/commit/57c2b4a391f18d159f456c3d3c64da55c7a49c69",]
+}, { // ------------------------------------------------------------------------
+"x": "Fixed intermittent auth errors from withings: tokens purportedly expire after 4 hours, but sometimes they seem to be expiring sooner.",
+"c": "This wasn't really user visible -- mostly just spamming us with a bunch of alerts, but would recover and fetch user's data just fine before it started causing any problems that the user would notice.",
+"u": ["https://github.com/beeminder/beeminder/commit/05d9f3a30c02428be2dee0f0e027c1e0d220c8c8",
+"https://twitter.com/beeminfra/status/1106795770542383105"]
+}, { // ------------------------------------------------------------------------
+"x": "Fixed some mysterious test fails that were plaguing us after updating some js. Turns out the test engine can't handle es6 -- it's past time to update that.",
+"u": ["https://github.com/beeminder/beeminder/commit/fbec9314c93bf66735c08d1b10d30f0b3755a7a9",
+"https://twitter.com/beeminfra/status/1109333012213194752"],
+"t": "2019-03-22"
+}, { // ------------------------------------------------------------------------
+
 }, /* ----------------------------------------------------------- end batch */ ]
 
 var staged = [ { // note: sub-entries not allowed here in staging
@@ -312,17 +345,23 @@ var staged = [ { // note: sub-entries not allowed here in staging
 METASTAGED: --10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
 https://github.com/beeminder/beeminder/commit/
 
-}, { // ------------------------------------------------------------------------
-
-}, { // ------------------------------------------------------------------------
 TODO MAYBE:
 https://github.com/beeminder/beeminder/commit/a09ccc95eb0eb24d084d9841be5bf6259abad9d0
 Date:   Thu Dec 27 22:52:01 2018 -0800
     survivor and groups and home refactoring
+}, { // ------------------------------------------------------------------------
+GitHub APP [23:19]
+`af940150` - use type attr on object as well
+`c44cdf36` - load png last
+}, { // ------------------------------------------------------------------------
+HACKNIGHT:
+* find nginx change for gzip svgs as well -- maybe INFRA?
+* fix withings refreshjob airhorns -- INFRA
 
 }, { // ------------------------------------------------------------------------
-there's a whole js library now that generates static graph images & all the stats and derail status etc.
-https://github.com/beeminder/road
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 we've got jsbrain running in parallel on one of the production servers to test the outputs
 https://github.com/beeminder/beeminder/commit/1fc716790cd475
@@ -331,16 +370,6 @@ swappable method for calling jsbrain from ruby
 error handling around that call to jsbrain (from ruby) & logging comparative times to generate the outputs
 https://github.com/beeminder/beeminder/commit/123a21ae5199799f6811
 }, { // ------------------------------------------------------------------------
-fixed a test that not testing what it thought it was, and was broken anyhow
-ef9ddde85ea5626e2c6cf1ec7776fd9e8cf8d4fa
-plus updates to some of the readme & beebrain "test datapoint" thing
-a2beedf4f19c466a630bd66923b874522b666df6
-}, { // ------------------------------------------------------------------------
-adjust tests for cc required
-https://github.com/beeminder/beeminder/commit/dda25843eb4874ece664669a0fefaa3768ebd511
-2019-02-04 (Mon)
-M spec/features/elf_spec.rb
-M spec/features/subs_spec.rb
 }, { // ------------------------------------------------------------------------
 wait a beat before logging zapped customer
 https://github.com/beeminder/beeminder/commit/f65c667471d5993e29e90b71dafe789312ad5ec0
