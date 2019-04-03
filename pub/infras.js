@@ -359,6 +359,9 @@ HACKNIGHT:
 * fix withings refreshjob airhorns -- INFRA
 
 }, { // ------------------------------------------------------------------------
+"x": "Removed test bb files from beeminder repo (into their own test repo for test suite)",
+"u": ["https://github.com/beeminder/beeminder/commit/4f7c84c0d63c4b9677211ff46bc580fad618f8b6",
+"https://twitter.com/beeminfra/status/1111883651795439616"]
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
