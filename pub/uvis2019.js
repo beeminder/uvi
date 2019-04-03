@@ -589,54 +589,94 @@ var batch2019mar = [{
 "x": "Did a full justify on the front page summary text. Looks way nicer than the centered version. HT @LawrenceEvalyn",
 "u": ["https://twitter.com/beemuvi/status/1109352871609286656",
       "https://github.com/beeminder/beeminder/issues/561"],
-"d": "2018-03-22",
-"t": "2018-03-22",
+"d": "2019-03-22",
+"t": "2019-03-22",
 "c": "Keyword: margins",
 }, { // ------------------------------------------------------------------------
 "x": "Updated all the help pages in the Goals category (copyediting, corrections, formatting, links, clarifications, updates). http://help.beeminder.com/category/50-goals",
 "u": ["https://twitter.com/beemuvi/status/1109353298446831616",
       "http://help.beeminder.com/category/50-goals"],
-"d": "2018-03-22",
-"t": "2018-03-22",
+"d": "2019-03-22",
+"t": "2019-03-22",
 }, { // ------------------------------------------------------------------------
 "x": "Updated all the help pages in the Data category (copyediting, corrections, formatting, links, clarifications, updates). https://help.beeminder.com/category/35-data",
 "u": ["https://twitter.com/beemuvi/status/1110447161739624448",
       "http://help.beeminder.com/category/50-goals"],
-"d": "2018-03-25",
-"t": "2018-03-25",
+"d": "2019-03-25",
+"t": "2019-03-25",
 "c": "This is super time-consuming and Chelsea is amazing for writing all of this in the first place",
 }, { // ------------------------------------------------------------------------
 "x": "Updated all the help pages in the Derailing category (copyediting, links, clarifications). https://help.beeminder.com/category/8-derailing",
 "u": ["https://twitter.com/beemuvi/status/1110753935109681152",
       "https://help.beeminder.com/category/8-derailing"],
-"d": "2018-03-26",
-"t": "2018-03-26",
+"d": "2019-03-26",
+"t": "2019-03-26",
 }, { // ------------------------------------------------------------------------
 "x": "Updated all the help pages in the Quitting category (copyediting, links, corrections). https://help.beeminder.com/category/43-quitting",
 "u": ["https://twitter.com/beemuvi/status/1110772216885448704",
       "https://help.beeminder.com/category/43-quitting"],
-"d": "2018-03-26",
-"t": "2018-03-26",
+"d": "2019-03-26",
+"t": "2019-03-26",
 }, { // ------------------------------------------------------------------------
 "x": "The CSS (styling) of the modal (popup) when you click \"discount please!\" was embarrassingly broken/misaligned. #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1111176724660666368",
       "https://github.com/beeminder/beeminder/issues/496"],
-"d": "2018-03-27",
-"t": "2018-03-27",
+"d": "2019-03-27",
+"t": "2019-03-27",
 "c": "Also the \"moar free goals please\" button. Partially #redesign #regression",
 }, { // ------------------------------------------------------------------------
 "x": "Updated popup copy and hovertext for the \"discount please\" button to clarify that clicking the button immediately emails us",
 "u": ["https://twitter.com/beemuvi/status/1111497812070416385",
       "https://github.com/beeminder/beeminder/commit/571d062bda21d93a0450b9019ef5c47b3d9ecaf0",
       "https://github.com/beeminder/beeminder/issues/569"],
-"d": "2018-03-28",
-"t": "2018-03-28",
+"d": "2019-03-28",
+"t": "2019-03-28",
 }, { // ------------------------------------------------------------------------
 "x": "Made the \"more free goals please\" button do that too (but the first time it just magically grants the free goal, and now says as much in the hovertext)",
 "u": ["https://twitter.com/beemuvi/status/1111497838758789120",
       "https://github.com/beeminder/beeminder/commit/172afe73419385945e16cb769c02c87768e268b6"],
-"d": "2018-03-28",
-"t": "2018-03-28",
+"d": "2019-03-28",
+"t": "2019-03-28",
+}, { // ------------------------------------------------------------------------
+"x": "In the Clozemaster integration we'd fail to fetch your points if there was trailing whitespace in what you gave us as your Clozemaster username! #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1111799812679073794",
+      "https://github.com/beeminder/beeminder/commit/1ba88aca94c656f362012ace023cfa7e2f84dc66"],
+"d": "2019-03-28",
+"t": "2019-03-28",
+"c": "E.g. maybe you pressed enter after typing your username, then realized that you needed to actually click the button or use a tab+enter or whatever. It was kind of insidious because the initial fetch was fine.",
+}, /* --------------------------------------------------------- end 2019mar */ ]
+
+
+var batch2019apr = [{
+"x": "New copy, links to things (like this changelog!) on our /beebacksoon.html \"bee back in a bit\" page shown during downtime, sadly user-visible for ~3 hours today",
+"u": ["https://twitter.com/beemuvi/status/1112929257213157376",
+      "https://github.com/beeminder/beeminder/commit/c19835f915cd554d76e2266b35f74ee458af01b0",
+      "https://github.com/beeminder/beeminder/commit/2d49058a3f0b3bb621c0bec49ad97b6acc558587"],
+"d": "2019-03-31",
+"t": "2019-04-01",
+"c": "Funny timing, deploying that the night before a bunch of down. Also we decided to not actually link to the poppy page, as we call it, since that could be confusing to ever accidentally land there."
+}, { // ------------------------------------------------------------------------
+"x": "Updated all the help pages in the Apps category (copyediting, corrections, clarifications, links). https://help.beeminder.com/category/59-apps",
+"u": ["https://twitter.com/beemuvi/status/1113318961448251392",
+      "https://help.beeminder.com/category/59-apps"],
+"d": "2019-04-02",
+"t": "2019-04-02",
+}, { // ------------------------------------------------------------------------
+"x": "Now we warn that changing autodata settings can derail you, for all autodata settings that you can change. And made it more noticeable.",
+"u": ["https://twitter.com/beemuvi/status/1113319110245462016",
+      "https://github.com/beeminder/beeminder/issues/486"],
+"d": "2019-04-02",
+"t": "2019-04-02",
+"c": "We were giving warning for a few of them, but it was just bold text and didn't stand out. Now they all have a standard flag up top of the [autod] settings section that's yellowed to stand out.",
+}, { // ------------------------------------------------------------------------
+"x": "Include in goal settings what the goal is tracking for RescueTime goals, for the forgetful, etc, among us to know what exactly is being tracked",
+"u": ["https://twitter.com/beemuvi/status/1113319248338620416",
+      "https://github.com/beeminder/beeminder/pull/572"],
+"d": "2019-04-02",
+"t": "2019-04-02",
+"c": "Maybe in the future allow changing this, since we do for many other autodata goals now",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -650,12 +690,16 @@ var staged = [ { // note: sub-UVIs not allowed here in staging
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
 }, /* ---------------------------------------------------------- end staged */ ]
 
 /*********************************************************************************************************************************************************************
 ~~~~~~----------------------------- METASTAGED -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+"x": "mini: fixed a broken link to tagtime minder in the FAQ. ht nikki",
+"u": ["https://github.com/beeminder/beeminder/pull/575"],
+"d": "2019-04-02",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -668,7 +712,14 @@ https://github.com/beeminder/beeminder/commit/2a859386e81dade3cc63f07c2ceeda5a2c
 "c": "not sure if this will be a very minor improvement or a more noticeable one, so maybe if 
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-after new beedroid: help page for android persistent notification
+after new beedroid: 
+1. help page for android persistent notification
+2. Allow users to disable/enable Crashalytics
+   https://github.com/beeminder/beedroid-hist/pull/46/commits/b50a374c29489287436db0c25b9fd46990aa29d6
+3. Fix sort crash reported by mary
+   https://github.com/beeminder/beedroid-hist/pull/47
+4. Set zeno notifications to happen immediately at launch.
+   https://github.com/beeminder/beedroid-hist/pull/50
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 nokia back to withings?
