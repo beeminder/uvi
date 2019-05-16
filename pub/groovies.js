@@ -160,6 +160,12 @@ var batch = [{
 "u": "https://twitter.com/beemgro/status/1103224647221276672",
 "t": "2019-03-05",
 }, { // ------------------------------------------------------------------------
+"x": "Hired Mary Renaud as \"Chief Executive Intern\"!",
+"u": "https://forum.beeminder.com/t/introducing-mary-renaud-as-chief-executive-intern/4774",
+"t": "2019-04-03",
+}, { // ------------------------------------------------------------------------
+"x": "Hired Jonathan Courtney",
+"t": "2019-04-30",
 }, /* ----------------------------------------------------------- end batch */ ]
 
 
@@ -170,11 +176,10 @@ var staged = [ { // note: sub-entries not allowed here in staging
 ~~~~~~----------------------------- METASTAGED -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
 handing this off to mary?
 other integrations (got strava, clozemaster)
-killed autowuss (and used new massmailer to tell everyone affected)
+killed autowuss (and used new massmailer to tell everyone affected) (tweeted as UVI)
 more with github marketplace?
 growsumo?
 unsubscribe improvements?
-doc.bmndr.com/bsignups?
 doc.bmndr.com/units?
 get usernames in intercom?
 intercom purge (more about saving money than growing but any progress with intercom is groovy (baby))

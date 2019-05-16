@@ -641,7 +641,7 @@ var batch2018apr = [{
 "d": "2018-04-04",
 "t": "2018-04-09",
 }, { // ------------------------------------------------------------------------
-"x": "We made a super useful tool (we use it every day ourselves) for monitoring your edge-skating on Beeminder goals fed by TagTime data: http://mind.tagtime.com",
+"x": "We made a super useful tool (we use it every day ourselves) for monitoring your edge-skating on Beeminder goals fed by TagTime data: http://mind.tagti.me",
 "u": ["https://twitter.com/beemuvi/status/983489336963289089"],
 "d": "2013-12-13",
 "t": "2018-04-09",
@@ -2071,11 +2071,12 @@ var batch2018nov = [{
 "t": "2018-11-05",
 "c": "The code to deal with various special cases had a bug. Eg, 'stand up paddling' became 'stand up paddl' instead of 'stand up paddle'.",
 }, { // ------------------------------------------------------------------------
-"x": "Canonical URL for this UVI list now http://changelog.beeminder.com (still hosted on Glitch but no longer redirects to Glitch's domain). Similar for http://mind.tagtime.com",
+"x": "Canonical URL for this UVI list now http://changelog.beeminder.com (still hosted on Glitch but no longer redirects to Glitch's domain). Similar for http://mind.tagti.me",
 "u": ["https://twitter.com/beemuvi/status/1060036989406171137",
       "https://github.com/beeminder/beeminder/pull/405"],
 "d": "2018-11-06",
 "t": "2018-11-06",
+"c": "That was mind.tagtime.com in the original tweet but we decided to make mind.tagti.me the canonical URL",
 }, { // ------------------------------------------------------------------------
 "x": "Made http://road.beeminder.com the URL for the visual road editor and updated various legacy links related to our changelog (/latestuvis, /uvi)",
 "u": ["https://twitter.com/beemuvi/status/1060394026187145216",
