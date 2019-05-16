@@ -335,7 +335,57 @@ var batch = [{
 "https://twitter.com/beeminfra/status/1109333012213194752"],
 "t": "2019-03-22"
 }, { // ------------------------------------------------------------------------
-
+"x": "Removed test bb files from beeminder repo (into their own test repo for test suite)",
+"u": ["https://github.com/beeminder/beeminder/commit/4f7c84c0d63c4b9677211ff46bc580fad618f8b6",
+"https://twitter.com/beeminfra/status/1111883651795439616"]
+}, { // ------------------------------------------------------------------------
+"x": "Added a rake task for initializing Beedroid client in dev environment for Android development",
+"d": "2019-03-20",
+"t": "2019-04-05",
+"u": ["https://github.com/beeminder/beeminder/commit/8e7e9a1d53bcf77abdc21669f94fae0b92bebd63",
+      "https://twitter.com/beeminfra/status/1114278247871553536"]
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+"x": "Silenced 3 airhorns; A sanity check in odometer restarts; and two intermittent / self-correcting autod things in Fitbit & in Withings",
+"u": ["https://github.com/beeminder/beeminder/commit/c8b9ad99aaaf562c43766dcab81b31a765927223",
+      "https://github.com/beeminder/beeminder/commit/70ba07f9a31ba307ec1d4ae42b73df1684773029",
+      "https://github.com/beeminder/beeminder/commit/66bf9298815ef26176b749271eb99644ed097f85",
+      "https://twitter.com/beeminfra/status/1116936982620278789"
+],
+"d": "2019-03-19",
+"t": "2019-04-12"
+}, { // ------------------------------------------------------------------------
+"x": "Wait a beat before logging zapped customer. (Clears an unnecessary airhorn).",
+"u": ["https://twitter.com/beeminfra/status/1119286296499740672",
+      "https://github.com/beeminder/beeminder/commit/f65c667471d5993e29e90b71dafe789312ad5ec0"
+     ],
+"d": "2019-02-04",
+"t": "2019-04-19"
+}, { // ------------------------------------------------------------------------
+"u": ["https://github.com/beeminder/beeminder/commit/10819fe85264c7812b6a5898df3b56e80453fe0d",
+"https://twitter.com/beeminfra/status/1121997787187400704"],
+"x": "Refactored internal names for 'fineprint' to match up with its external-facing name, cuz it was confusingly called 'usernotes' internally.",
+"d": "2019-03-19",
+"t": "2019-04-26"
+}, { // ------------------------------------------------------------------------
+"x": "Renamed the internal fields for admin notes on a user to the more concise 'dossier'. Helps clarify between multiple 'notes' fields about users & goals.",
+"u": ["https://twitter.com/beeminfra/status/1124552163932327936",
+"https://github.com/beeminder/beeminder/commit/f21e48888f5a8be46871a76e5b6b22b1721b16c1"],
+"t": "2019-05-03",
+"d": "2019-03-19"
+}, { // ------------------------------------------------------------------------
+"x": "svg fallbacks and reloading works for admins too, which is nice because we were getting lots of that when adminning folks' goals.",
+"u": ["https://github.com/beeminder/beeminder/commit/ea345686f93a149b87c24ddba47ed78fa71e10bd",
+"https://twitter.com/beeminfra/status/1127069573000286208"],
+"d": "2019-04-16",
+"t": "2019-05-10",
+}, { // ------------------------------------------------------------------------
+"x": "airhorn subscription upgrades and downgrades for the sake of sanity checking the slight changes to upgrade/downgrade behavior in https://changelog.beeminder.com/#3004",
+"d": "2019-05-07",
+"t": "2019-05-10",
+"u": ["https://github.com/beeminder/beeminder/commit/f2bee60373ef36d69caf7674717c9c1e0dfe0235",
+"https://twitter.com/beeminfra/status/1127069573000286208"]
+}, { // ------------------------------------------------------------------------
 }, /* ----------------------------------------------------------- end batch */ ]
 
 var staged = [ { // note: sub-entries not allowed here in staging
@@ -344,6 +394,31 @@ var staged = [ { // note: sub-entries not allowed here in staging
 /*
 METASTAGED: --10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
 https://github.com/beeminder/beeminder/commit/
+
+}, { // ------------------------------------------------------------------------
+commit 8176120eb05da355f089c5858367b06a4b1ff787 (fea/login-route)
+Author: Bethany Marie Soule <bsoule@gmail.com>
+Date:   Mon May 6 10:34:26 2019 -0700
+
+    2 admin-vi's: runits move and weekend warning
+
+    close #501
+}, { // ------------------------------------------------------------------------
+commit 2942a7b2f965ad010ec5a348d5446531d80604d6
+Author: Bethany Marie Soule <bsoule@gmail.com>
+Date:   Thu May 2 16:07:18 2019 -0700
+
+    don't charge test[subscription] accts for rea
+}, { // ------------------------------------------------------------------------
+commit ffce36d7b2ea18c340f4e6eba9046dd1fc8a28bc
+Author: Daniel Reeves <dreeves@beeminder.com>
+Date:   Thu Apr 18 13:25:30 2019 -0700
+
+    Dogfood mandate tweakage
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 
 TODO MAYBE:
 https://github.com/beeminder/beeminder/commit/a09ccc95eb0eb24d084d9841be5bf6259abad9d0
@@ -357,33 +432,12 @@ GitHub APP [23:19]
 HACKNIGHT:
 * find nginx change for gzip svgs as well -- maybe INFRA?
 * fix withings refreshjob airhorns -- INFRA
-
-}, { // ------------------------------------------------------------------------
-"x": "Removed test bb files from beeminder repo (into their own test repo for test suite)",
-"u": ["https://github.com/beeminder/beeminder/commit/4f7c84c0d63c4b9677211ff46bc580fad618f8b6",
-"https://twitter.com/beeminfra/status/1111883651795439616"]
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
 we've got jsbrain running in parallel on one of the production servers to test the outputs
 https://github.com/beeminder/beeminder/commit/1fc716790cd475
 }, { // ------------------------------------------------------------------------
 swappable method for calling jsbrain from ruby 
 error handling around that call to jsbrain (from ruby) & logging comparative times to generate the outputs
 https://github.com/beeminder/beeminder/commit/123a21ae5199799f6811
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-wait a beat before logging zapped customer
-https://github.com/beeminder/beeminder/commit/f65c667471d5993e29e90b71dafe789312ad5ec0
-2019-02-04 (Mon)
-M app/models/user.rb
-M app/performers/zap_customer_job.rb
-i put it on batchy, but once or twice the zapuser job ran so fast the
-other callbacks weren't done yet (it can take a few seconds to delete a
-user if there are goals and datapoints and services to cleanup)
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 TODO:
 don't make title required and then do javascript contortions to deal with it

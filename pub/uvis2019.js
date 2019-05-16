@@ -646,15 +646,14 @@ var batch2019mar = [{
 "c": "E.g. maybe you pressed enter after typing your username, then realized that you needed to actually click the button or use a tab+enter or whatever. It was kind of insidious because the initial fetch was fine.",
 }, /* --------------------------------------------------------- end 2019mar */ ]
 
-
 var batch2019apr = [{
-"x": "New copy, links to things (like this changelog!) on our /beebacksoon.html \"bee back in a bit\" page shown during downtime, sadly user-visible for ~3 hours today",
+"x": "New copy, links to things (like this changelog!) on our /beebacksoon.html \"bee back in a bit\" page shown during downtime, sadly user-visible for ~3 hours today. #poppies",
 "u": ["https://twitter.com/beemuvi/status/1112929257213157376",
       "https://github.com/beeminder/beeminder/commit/c19835f915cd554d76e2266b35f74ee458af01b0",
       "https://github.com/beeminder/beeminder/commit/2d49058a3f0b3bb621c0bec49ad97b6acc558587"],
 "d": "2019-03-31",
 "t": "2019-04-01",
-"c": "Funny timing, deploying that the night before a bunch of down. Also we decided to not actually link to the poppy page, as we call it, since that could be confusing to ever accidentally land there."
+"c": "Funny timing, deploying that the night before a bunch of downtime. Also we decided to not actually link to the poppy page, as we call it, since that could be confusing to ever accidentally land there."
 }, { // ------------------------------------------------------------------------
 "x": "Updated all the help pages in the Apps category (copyediting, corrections, clarifications, links). https://help.beeminder.com/category/59-apps",
 "u": ["https://twitter.com/beemuvi/status/1113318961448251392",
@@ -676,13 +675,274 @@ var batch2019apr = [{
 "t": "2019-04-02",
 "c": "Maybe in the future allow changing this, since we do for many other autodata goals now",
 }, { // ------------------------------------------------------------------------
+"x": "Fixed a broken link to http://mind.tagti.me in the <a href=\"http://beeminder.com/faq\">FAQ</a> and updated the copy there about TagTime. HT @shanaqui",
+"u": ["https://twitter.com/beemuvi/status/1114055016837345281",
+      "https://github.com/beeminder/beeminder/pull/575",
+      "https://github.com/beeminder/beeminder/commit/040be24f38c0ea25a6e1e1adbbc03912b7d19ff1",
+      "https://github.com/beeminder/beeminder/commit/a5f609fe9bfd7cc78ba92859b8d8ce2a5009fe85"],
+"t": "2019-04-04",
+"c": "Also added a redirect for the broken link, minder.tagti.me",
+}, { // ------------------------------------------------------------------------
+"x": "In Toggl, Strava, Fitbit, et al, we were letting you type new units on goal creation, which we then ignored. Now we don't let you edit that field! #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1114057404411285504",
+      "https://github.com/beeminder/beeminder/pull/577"],
+"d": "2019-04-04",
+"t": "2019-04-04",
+"c": "E.g., with Toggl a user tried writing in \"minutes\" where the stepper says \"hours\" and wound up with a goal for 5 hours per day rather than the 5 minutes they were expecting. Most autodata goals are opinionated about the units they track in!",
+}, { // ------------------------------------------------------------------------
+"x": "Updated old links from settings/payment to use the new URL: /payment (previously we were redirecting those links)",
+"u": ["https://twitter.com/beemuvi/status/1114416546917433345",
+      "https://github.com/beeminder/beeminder/pull/138",
+      "https://github.com/beeminder/beeminder/commit/87d8e61f236eff903c1fc766d14b9cd6ea067fe6"],
+"d": "2019-04-05",
+"t": "2019-04-05",
+"c": "Also now using the Rails routing helpers so that if we change the URL again the links will all point to whatever the new version is",
+}, { // ------------------------------------------------------------------------
+"x": "Sometimes Fitbit would send updates to 2 datapoints at once and, you guessed it, we had a race condition. Edge-skaters could get false derails! #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1115506389219020800",
+      "https://github.com/beeminder/beeminder/issues/508"],
+"d": "2019-04-08",
+"t": "2019-04-08",
+"c": "Lots of details in the gissue. Fixed by updating instead of deleting datapoints. Forehead-slap.",
+}, { // ------------------------------------------------------------------------
+"x": "We no longer delete \"RECOMMITTED\" datapoints from Fitbit goals when adding autodata (which also means the triangles marking derailments stay put). #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1115508099828178944",
+      "https://github.com/beeminder/beeminder/pull/583/commits/ab840e5758d51eb168c793da327892be01e69581"],
+"d": "2019-04-08",
+"t": "2019-04-08",
+"c": "Done as part of the previous bugfix. See UVI#2760 &amp; UVI#2768.",
+}, { // ------------------------------------------------------------------------
+"x": "Oops, yesterday's Fitbit UVI introduced a new bug: we weren't adding the real/new datapoint on RECOMMITTED days! #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1115865217798479874",
+      "https://github.com/beeminder/beeminder/commit/ad15570192c6b66b2f82788f9a4b31780a8b110e"],
+"d": "2019-04-09",
+"t": "2019-04-09",
+}, { // ------------------------------------------------------------------------
+"x": "Shortened the trip to our overview page: were using an old URL (/about) and redirecting. Now we just use the canonical URL (/overview). #mini",
+"u": ["https://twitter.com/beemuvi/status/1115870746700546050",
+      "https://github.com/beeminder/beeminder/commit/90166b2a262b549ec8627ac2e9f85c1cef5ed9cd"],
+"d": "2019-04-09",
+"t": "2019-04-09",
+}, { // ------------------------------------------------------------------------
+"x": "When setting a break, we'd let you set the end of the break beyond the end date of the goal, which caused graph errors. #bugfix HT @SayHiNeil",
+"u": ["https://twitter.com/beemuvi/status/1116254102697078784",
+      "https://github.com/beeminder/beeminder/issues/563",
+      "https://github.com/beeminder/beeminder/pull/585"],
+"d": "2019-04-10",
+"t": "2019-04-10",
+}, { // ------------------------------------------------------------------------
+"x": "Yesterday's take-a-break bugfix included a brand new bug of its own: it wasn't submitting the break at all! [🐑ish] Break scheduling broken for ~24hrs. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1116587535583465473",
+      "https://github.com/beeminder/beeminder/commit/1dc152c41cb1d2021db3a79d3a0db09aaad2d111",
+      "https://github.com/beeminder/beeminder/commit/7931096ba0d106299fafb2e65b4ba3352b2db182"],
+"d": "2019-04-11",
+"t": "2019-04-11",
+"c": "Oy, and then still broken for another hour or so -- needed a meta-meta-bugfix! Manually fixed up everyone affected during that window.",
+}, { // ------------------------------------------------------------------------
+"n": 2983,
+"f": true,
+"x": "(+) Beeminder iOS app version 5.4!",
+"u": ["https://twitter.com/beemuvi/status/1118751296838750213"],
+"d": "2019-04-12",
+"t": "2019-04-17",
+"c": "By Andy and Mary",
+}, { // ------------------------------------------------------------------------
+"n": 2983,
+"s": true,
+"x": "No more hanging spinner of doom! #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1118751296838750213"],
+"d": "2019-04-12",
+"t": "2019-04-17",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "Apple Health now consolidates data from multiple sources (watch, phone, different apps) rather than blindly adding it all together",
+"u": ["https://twitter.com/beemuvi/status/1118751512723742722"],
+"d": "2019-04-12",
+"t": "2019-04-17",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "The app now allows background updating so should be more likely to be up to date and in sync with Beeminder's servers as soon as you switch back to it",
+"u": ["https://twitter.com/beemuvi/status/1119095470477852675"],
+"d": "2019-04-12",
+"t": "2019-04-18",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "Apple Health data now syncs automatically, periodically, when your phone is unlocked, without having to open the Beeminder app to get it to fetch Health data!",
+"u": ["https://twitter.com/beemuvi/status/1119095554854621184"],
+"d": "2019-04-12",
+"t": "2019-04-18",
+}, { // ------------------------------------------------------------------------
+"x": "UVI#2934 broke UVI#2762. This turned out to be very hard to fix but our SVG images now also magically refresh themselves! #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1120565063985827841",
+      "https://github.com/beeminder/beeminder/pull/588",
+      "https://forum.beeminder.com/t/updating-source-of-the-object-tag/5109"],
+"d": "2019-04-16",
+"t": "2019-04-22",
+}, { // ------------------------------------------------------------------------
+"x": "Robusted that up further by showing a message when the image failed to reload properly, with the buzzing infinibee overlaid until it does",
+"u": ["https://twitter.com/beemuvi/status/1120565252503035904",
+      "https://github.com/beeminder/beeminder/pull/588",
+      "https://forum.beeminder.com/t/updating-source-of-the-object-tag/5109"],
+"d": "2019-04-16",
+"t": "2019-04-22",
+"c": "We actually detect that the SVG didn't load properly by testing whether that fallback is showing or not. That's to work around Chrome not firing an onError event for the failed load.",
+}, { // ------------------------------------------------------------------------
+"x": "Also turned off the infinibee-buzzing for other people's goals. A key #bugfix because if you loaded someone's goal page when it was buzzing it'd never stop.",
+"u": ["https://twitter.com/beemuvi/status/1120565384199852032",
+      "https://github.com/beeminder/beeminder/pull/588",
+      "https://forum.beeminder.com/t/updating-source-of-the-object-tag/5109"],
+"d": "2019-04-16",
+"t": "2019-04-22",
+}, { // ------------------------------------------------------------------------
+"f": true,
+"x": "Embarrassingly overdue but we got Nikki and Holly and Mary on the http://beeminder.com/aboutus page!",
+"u": ["https://twitter.com/beemuvi/status/1121295811722145792",
+      "https://github.com/beeminder/beeminder/commit/b6c03c9f98e2a5db87806a46ed350acf456e5a8e",
+      "https://github.com/beeminder/beeminder/commit/3d610b730a576b2da45ee6419a10cf4bc0ef8d50",
+      "https://github.com/beeminder/beeminder/commit/4a2b969422515961e7ff0c9af1078b8dc83371e5"],
+"d": "2019-04-17",
+"t": "2019-04-24",
+}, { // ------------------------------------------------------------------------
+"f": true,
+"x": "And added Austin too! http://beeminder.com/aboutus",
+"u": ["https://twitter.com/beemuvi/status/1121640699147898880",
+      "https://github.com/beeminder/beeminder/commit/0401dee1a54e17921e928761c92a63a6664ae64e"],
+"d": "2019-04-25",
+"t": "2019-04-25",
+}, { // ------------------------------------------------------------------------
+"x": "We now have http://help.beeminder.com doing double duty as our help-wanted page(s); see http://beeminder.com/jobs",
+"u": ["https://twitter.com/beemuvi/status/1121998758076510208",
+      "https://github.com/beeminder/beeminder/commit/93883f74a4c9fdc92dd0e65ad897802b4637bb05"],
+"d": "2019-04-17",
+"t": "2019-04-26",
+}, { // ------------------------------------------------------------------------
+"x": "Corrected lies in http://api.beeminder.com about the 'datasource' field for goals. To set it back to the default (manual), pass the empty string. Docs #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1122001729518571520",
+      "https://github.com/beeminder/apidocs/commit/3c306aae267de90b334ec0dd0ef959f27ee83ed1"],
+"d": "2019-04-21",
+"t": "2019-04-26",
+}, { // ------------------------------------------------------------------------
+"x": "Zero-value datapoints were not always updating the graph! Buggiest case was when a 0-datapoint (for a cumulative goal) replaced a PPR. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1123513910605205505",
+      "https://github.com/beeminder/beeminder/issues/296"],
+"d": "2019-04-24",
+"t": "2019-04-30",
+"c": "Originally tweeted 2019-04-29 confusingly and slightly wrongly: \"Happened when there was no data for today, or when a 0-datapoint replaced a PPR\"",
+}, { // ------------------------------------------------------------------------
+"x": "Zero-value kyoom datapoints also failed to update the graph if they were the 1st datapoint of the day (they should turn the little triangle into a dot). #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1123514039169048576",
+      "https://github.com/beeminder/beeminder/issues/296"],
+"d": "2019-04-24",
+"t": "2019-04-30",
+}, { // ------------------------------------------------------------------------
+"x": "Couple #mini's: Fixed a typo (double period in a warning message) and fixed the margin in fine print settings. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1123514629886373888",
+      "https://github.com/beeminder/beeminder/commit/6e50370f117799279c82abe153ef028a48bdff72",
+      "https://github.com/beeminder/beeminder/commit/1c0a588b65c118737d2cd0acb1ea6ec81d1209f7"],
+"t": "2019-04-30",
+}, /* --------------------------------------------------------- end 2019apr */ ]
+
+var batch2019may = [{
+"x": "The so-called todayta checkmark was weirdly over-specific, only showing up if you'd entered data today AND that datapoint was the most recent datapoint. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1123809766059466753",
+      "https://github.com/beeminder/beeminder/pull/601"],
+"d": "2019-05-01",
+"t": "2019-05-01",      
+}, { // ------------------------------------------------------------------------
+"x": "Dates of premium charges advanced by a day each time we charged you; a whole free day each period! Also bad for those trying to budget their monies. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1124203710970621953",
+      "https://github.com/beeminder/beeminder/pull/564"],
+"d": "2019-05-02",
+"t": "2019-05-02",
+}, { // ------------------------------------------------------------------------
+"x": "There was no indicator that the date in the data entry form on the goal page was a dropdown menu. Added a little triangle guy to indicate its selectiness!",
+"u": ["https://twitter.com/beemuvi/status/1124206434831355904",
+      "https://github.com/beeminder/beeminder/issues/599"],
+"d": "2019-05-02",
+"t": "2019-05-02",
+}, { // ------------------------------------------------------------------------
+"x": "Tweaked the copy for our live chat to clarify it isn't always real-time; you may have to leave a message. And made the forum display pretty math via MathJax!",
+"u": ["https://twitter.com/beemuvi/status/1124554268344586241"],
+"t": "2019-05-03",
+}, { // ------------------------------------------------------------------------
+"x": "Updated the help pages in the Philosophy category (updates, prose tweaks, typography, link fixes). https://help.beeminder.com/category/33-philosophy",
+"u": ["https://twitter.com/beemuvi/status/1125649376456536064",
+      "https://help.beeminder.com/category/33-philosophy"],
+"d": "2019-05-06",
+"t": "2019-05-06",
+}, { // ------------------------------------------------------------------------
+"x": "Added more instructions & warnings about importing data via the bot for autodata goals (at the bottom of the Data tab)",
+"u": ["https://twitter.com/beemuvi/status/1125670060037533696",
+      "https://github.com/beeminder/beeminder/issues/598"],
+"d": "2019-05-06",
+"t": "2019-05-06",
+"c": "The warning is usually you can't import data to an autodata goal without importing to the autodata source itself, cuz that's the master copy of the data",
+}, { // ------------------------------------------------------------------------
+"x": "UVI#2998 caused a bigger bug (in users' favor), adding extra months of free premium when upgrading. Oops. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1125955874797654016",
+      "https://github.com/beeminder/beeminder/pull/604"],
+"d": "2019-05-07",
+"t": "2019-05-07",
+}, { // ------------------------------------------------------------------------
+"x": "Also made frequency upgrades/downgrades make more sense: if you upgrade, eg, from monthly to yearly, you pay for the rest of the year upfront",
+"u": ["https://twitter.com/beemuvi/status/1125956016896528384",
+      "https://github.com/beeminder/beeminder/pull/604"],
+"d": "2019-05-07",
+"t": "2019-05-07",
+"c": "Similarly, a frequency downgrade (eg, yearly to monthly) just waits for your current period to run out then starts charging you at the new frequency",
+}, { // ------------------------------------------------------------------------
+"x": "And various webcopy updates and fixes to go along with that, not saying \"you are upgrading from Infinibee to Infinibee\" or \"per every\" and whatnot",
+"u": ["https://twitter.com/beemuvi/status/1125956137189142528",
+      "https://github.com/beeminder/beeminder/pull/604"],
+"d": "2019-05-07",
+"t": "2019-05-07",
+}, { // ------------------------------------------------------------------------
+"x": "Our Duolingo integration was briefly broken today, unable to pull in your totals, due to a change in their (formerly fully publicly accessible) API. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1126730623396093952",
+      "https://github.com/beeminder/beeminder/pull/609",
+      "https://github.com/beeminder/beeminder/issues/608"],
+"d": "2019-05-09",
+"t": "2019-05-09",
+"c": "We made a Beeminder user on Duolingo and use its cookies to fetch users' data",
+}, { // ------------------------------------------------------------------------
+"x": "Our Toggl integration now works as advertised, tracking the union of all selected projects / tags / clients (had been the intersection of unions). #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1126731570331578368",
+      "https://github.com/beeminder/beeminder/pull/610"],
+"d": "2019-05-09",
+"t": "2019-05-09",
+"c": "It was the union (OR) within each of {tags, projects, clients} but the intersection (AND) of those three categories. Eg, \"(tag1 OR tag2) AND (project1 OR project2) AND (client1 OR client2)\".",
+}, { // ------------------------------------------------------------------------
+"x": "Rearranged the instructions slightly on the Toggl setup page (put the \"tags OR projects OR clients\" up top)",
+"u": ["https://twitter.com/beemuvi/status/1127083086909337600",
+      "https://github.com/beeminder/beeminder/issues/438",
+      "https://github.com/beeminder/beeminder/commit/e53e8102fa1d2a26ec41f4c23b46d1c9d422fb5d"],
+"d": "2019-05-09",
+"t": "2019-05-10",
+}, { // ------------------------------------------------------------------------
+"x": "UVI#3006 fixed Duolingo goal data fetching, but forgot goal creation, which also relies on checking your points totals on Duolingo! #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1128171613764050945",
+      "https://github.com/beeminder/beeminder/pull/614"],
+"d": "2019-05-13",
+"t": "2019-05-13",
+}, { // ------------------------------------------------------------------------
+"x": "Doh, UVI#2221 (review pending charges, cancel any you deem not legit when updating failed payment info) didn't apply to PayPal this whole time! Now it does.",
+"u": ["https://twitter.com/beemuvi/status/1128171754365472768",
+      "https://github.com/beeminder/beeminder/issues/384",
+      "https://github.com/beeminder/beeminder/pull/615"],
+"d": "2019-05-13",
+"t": "2019-05-13",
+}, { // ------------------------------------------------------------------------
+"x": "UVI#3007 introduced a new bug: If you edited your Toggl settings to remove all filters, we would filter *everything* out. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1128527677650980864",
+      "https://github.com/beeminder/beeminder/commit/de240b11c07da5366c543e822ebd52f1c3b59074?w=1"],
+"d": "2019-05-11",
+"t": "2019-05-14",
+"c": "Lasted 2 days, only affected one user. There's a discrepancy in how we store filter data between initial goal setup vs if you edit Toggl settings from your goal page after the goal is set up. So we made the filterfix robust to both versions of filter data.",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, /* --------------------------------------------------------- end 2019mar */ ]
+}, /* --------------------------------------------------------- end 2019may */ ]
 
 
 var staged = [ { // note: sub-UVIs not allowed here in staging
@@ -695,21 +955,27 @@ var staged = [ { // note: sub-UVIs not allowed here in staging
 /*********************************************************************************************************************************************************************
 ~~~~~~----------------------------- METASTAGED -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
 }, { // ------------------------------------------------------------------------
+svg polyfit bug from uluc: https://forum.beeminder.com/t/memory-hog/5231/10
+date thing in road editor: https://github.com/beeminder/road/issues/66
+}, { // ------------------------------------------------------------------------
+maybe too lame: changed "dropout" to "out" on beeminder.com/survivor (tiny eyeroll)
+https://github.com/beeminder/beeminder/commit/4be44c3446d6739ab242fc7ee12d11b6a6b212ba
+}, { // ------------------------------------------------------------------------
+"x": "fixed a bug with gitminder issues minding: if you closed an old gissue we could miss it and not give you credit, if you had created and closed more than 30 gissues since you created that stale one.",
+"c": "the endpoint is paginated at 30 gissues, and default sort order was by creation date, so that old gissue could get buried in the results by more recently-created-and-closed gissues. Now we specify a sort order based on the timestamp that the gissue was last updated, so we won't miss a closed gissue just because it was created a long time ago."
+https://github.com/beeminder/beeminder/pull/618
+}, { // ------------------------------------------------------------------------
+MINI: unique subject lines (mainly for the benefit of support): https://github.com/beeminder/beeminder/issues/619
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-"x": "mini: fixed a broken link to tagtime minder in the FAQ. ht nikki",
-"u": ["https://github.com/beeminder/beeminder/pull/575"],
-"d": "2019-04-02",
 }, { // ------------------------------------------------------------------------
+might fix the problem with old toggl entries getting overwritten with lower values
+https://github.com/beeminder/beeminder/pull/607
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 "x": "Super mini: removed \"Deprecated\" from the 'id' field in the api docs Goal resource -- https://changelog.beeminder.com/#2104 sort of myopically semi-broke the api, since we want you to use the slug as the identifier, but now you can change the goalname, so we'd definitely better keep the goal id around so api clients can piece things back together if someone goes and changes a goalname on them."
 "c": "it's super mini, but took lots of words to say the things."
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-small fix to the way we load new svg image after a graph reload -- should look a little smoother and less jumpy
-https://github.com/beeminder/beeminder/commit/2a859386e81dade3cc63f07c2ceeda5a2c63a281
-"c": "not sure if this will be a very minor improvement or a more noticeable one, so maybe if 
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 after new beedroid: 
@@ -720,6 +986,25 @@ after new beedroid:
    https://github.com/beeminder/beedroid-hist/pull/47
 4. Set zeno notifications to happen immediately at launch.
    https://github.com/beeminder/beedroid-hist/pull/50
+5. fixed bug in fwomp page (reminder settings for all goals): the zeno checkboxes are now instead of getting covered up by the scrollbar
+   https://github.com/beeminder/beedroid/issues/64
+6. Sort goals alphabetically for 1-up widget configurator.
+   Work on Notifications on Android O.
+   Update Feedback View to tell us if users set Background Restrictions.
+   https://github.com/beeminder/beedroid-hist/pull/49
+7. More space between month and day
+   https://github.com/beeminder/beedroid-hist/pull/53
+8. Fix incessant reminders
+   https://github.com/beeminder/beedroid-hist/pull/54
+9. Lumpy swipey indicator
+   https://github.com/beeminder/beedroid-hist/pull/55
+   https://github.com/beeminder/beedroid-hist/pull/56
+10. Notifications troubleshooting page
+    https://github.com/beeminder/beedroid-hist/pull/57
+11. Ungroups Android notifications (only counts if this is different from last public release)
+    https://github.com/beeminder/beedroid-hist/pull/58
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 nokia back to withings?
@@ -738,10 +1023,7 @@ offred bb param: https://github.com/beeminder/beeminder/commit/bff8c9f382c83458b
 }, { // ------------------------------------------------------------------------
 ~~~~~~----------------------------- CANDIDATES -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
 }, { // ------------------------------------------------------------------------
-TODO: title vs description crap in api docs
 }, { // ------------------------------------------------------------------------
-MINIS:
-* maybe doesn't count, was workaround for yellatme bug: Fixed the email signatures in support emails to start with "--"
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 wordpress plugin: github.com/beeminder/beeminder-ping
@@ -766,6 +1048,10 @@ wordpress plugin: github.com/beeminder/beeminder-ping
   We have no idea why this got better so we probably can't use it without corroboration that this is a genuine improvement! something about octicons apparently?
 * max-height for the landing page images, same commit url as an old one above about runkeeper:
   https://github.com/beeminder/beeminder/commit/94e269275c4a02a1e12c5c28c42e2faef23205b3
+* small fix to the way we load new svg image after a graph reload -- should look a little smoother and less jumpy
+https://github.com/beeminder/beeminder/commit/2a859386e81dade3cc63f07c2ceeda5a2c63a281
+"c": "not sure if this will be a very minor improvement or a more noticeable one. was no better, possibly worse.
+
 *********************************************************************************************************************************************************************/
 
 /* CHECKLIST FOR TWEETING UVIS
