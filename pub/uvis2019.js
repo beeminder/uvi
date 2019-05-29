@@ -939,6 +939,87 @@ var batch2019may = [{
 "t": "2019-05-14",
 "c": "Lasted 2 days, only affected one user. There's a discrepancy in how we store filter data between initial goal setup vs if you edit Toggl settings from your goal page after the goal is set up. So we made the filterfix robust to both versions of filter data.",
 }, { // ------------------------------------------------------------------------
+"x": "Critical Gitminder #bugfix: if you closed an old enough gissue (ie, more than 30 gissues created and closed after it) we would miss it and not give you credit!",
+"u": ["https://twitter.com/beemuvi/status/1128942178590314497",
+      "https://github.com/beeminder/beeminder/pull/618"],
+"d": "2019-05-15",
+"t": "2019-05-15",
+"c": "The GitHub endpoint is paginated at 30 gissues, and default sort order was by creation date, so that old gissue could get buried in the results by more recently-created-and-closed gissues. Now we specify a sort order based on the timestamp that the gissue was last updated, so we won't miss a closed gissue just because it was created a long time ago! PS: Original tweet mistakenly said 'could' instead of 'would'.",
+}, { // ------------------------------------------------------------------------
+"x": "New names for the http://beeminder.com/survivor categories: Ultimate Survivors, Penultimate Survivors, Casualties",
+"u": ["https://twitter.com/beemuvi/status/1128943195612622848",
+      "https://github.com/beeminder/beeminder/commit/4be44c3446d6739ab242fc7ee12d11b6a6b212ba",
+      "https://github.com/beeminder/beeminder/commit/a0ea25a7e0690eec7d151ce7f2443f5b9f08448d"],
+"d": "2019-05-15",
+"t": "2019-05-15",
+}, { // ------------------------------------------------------------------------
+"x": "Tiny one that's mostly to make our lives easier in support but we added usernames to subject lines of emails like \"Couldn't charge your credit card\"",
+"u": ["https://twitter.com/beemuvi/status/1129261066989391872",
+      "https://github.com/beeminder/beeminder/issues/619"],
+"d": "2019-05-15",
+"t": "2019-05-16",
+"c": "HT Mary",
+}, { // ------------------------------------------------------------------------
+"x": "The email list signup on the front page had a bug: If you later signed up as a real user it would sometimes give you a preassigned hideous username. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1129647105281183745",
+      "https://github.com/beeminder/beeminder/issues/462"],
+"d": "2019-05-17",
+"t": "2019-05-17",
+"c": "We weren't converting correctly to a 'real' user. Now we sidestep it altogether by creating a new thing called a wuser instead of dummy user."
+}, { // ------------------------------------------------------------------------
+"x": "Addendum to UVI#2934: You too can use SVG graph images, because we return the svg_url in the API output. Now documented at http://beeminder.com/api as well.",
+"u": ["https://twitter.com/beemuvi/status/1129647314707070976",
+      "https://github.com/beeminder/apidocs/commit/9f4a69041f60d4ec43b8214904499adb0b6b1b23"],
+"d": "2019-05-17",
+"t": "2019-05-17",
+}, { // ------------------------------------------------------------------------
+"x": "Oy, a truncated error message! Shortened it to: \"Oy! You're in a RECOMMITLOOP! Help debug it by sending hints to support@beeminder.com (pretty please?)\"",
+"u": ["https://twitter.com/beemuvi/status/1130728094145232897",
+      "https://forum.beeminder.com/t/not-all-of-the-recommit-bug-notification-is-visible/5357",
+      "https://github.com/beeminder/beeminder/commit/0e6f6a73de577b844d7a8fd8c09fd8664200452c"],
+"d": "2019-05-20",
+"t": "2019-05-20",
+"c": "HT Holly Williams",
+}, { // ------------------------------------------------------------------------
+"x": "Rare bug in graph generation that could try to create a wildly bounds-overflowing aura yielding an unrenderable (on some browsers) SVG file. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1131071962237636610",
+      "https://github.com/beeminder/road/issues/74",
+      "https://forum.beeminder.com/t/memory-hog/5231/10"],
+"d": "2019-05-21",
+"t": "2019-05-21",
+}, { // ------------------------------------------------------------------------
+"x": "The road matrix table at http://road.beeminder.com was not letting you move the start date of the yellow brick road more than a few months back. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1131074958174576640",
+      "https://github.com/beeminder/road/issues/66"],
+"d": "2019-05-21",
+"t": "2019-05-21",
+}, { // ------------------------------------------------------------------------
+"x": "We no longer let you (try to) ratchet to 0 safety buffer on day 1 of a new goal (it would insta-derail on non-kyoom goals). #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1131468115198398465",
+      "https://github.com/beeminder/beeminder/issues/238",
+      "https://github.com/beeminder/beeminder/pull/625"],
+"d": "2019-05-22",
+"t": "2019-05-22",
+}, { // ------------------------------------------------------------------------
+"x": "And to make sure that's Pareto-dominant, we tweaked it to only prevent day-0 beemergency ratcheting for non-kyoom (non-auto-summing) goals!",
+"u": ["https://twitter.com/beemuvi/status/1131813919893229568",
+      "https://github.com/beeminder/beeminder/pull/627"],
+"d": "2019-05-23",
+"t": "2019-05-23",
+}, { // ------------------------------------------------------------------------
+"x": "Also for those errors we now use our nice flash banners instead of the boring browser-native alerts. #mini",
+"u": ["https://twitter.com/beemuvi/status/1131814108624408576",
+      "https://github.com/beeminder/beeminder/pull/625"],
+"d": "2019-05-22",
+"t": "2019-05-22",
+}, { // ------------------------------------------------------------------------
+"x": "We were getting rate-limited by Withings, which could cause a fetch to silently fail. Now we catch the error and retry in a couple minutes. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1132183107824521217",
+      "https://github.com/beeminder/beeminder/pull/628"],
+"d": "2019-05-24",
+"t": "2019-05-24",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -947,27 +1028,26 @@ var batch2019may = [{
 
 var staged = [ { // note: sub-UVIs not allowed here in staging
 }, { // ------------------------------------------------------------------------
+"f": true,
+"x": "(+) test1",
 }, { // ------------------------------------------------------------------------
+"s": true,
+"x": "test2",
 }, { // ------------------------------------------------------------------------
+"x": "test3",
 }, { // ------------------------------------------------------------------------
 }, /* ---------------------------------------------------------- end staged */ ]
 
 /*********************************************************************************************************************************************************************
 ~~~~~~----------------------------- METASTAGED -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
 }, { // ------------------------------------------------------------------------
-svg polyfit bug from uluc: https://forum.beeminder.com/t/memory-hog/5231/10
-date thing in road editor: https://github.com/beeminder/road/issues/66
-}, { // ------------------------------------------------------------------------
-maybe too lame: changed "dropout" to "out" on beeminder.com/survivor (tiny eyeroll)
-https://github.com/beeminder/beeminder/commit/4be44c3446d6739ab242fc7ee12d11b6a6b212ba
-}, { // ------------------------------------------------------------------------
-"x": "fixed a bug with gitminder issues minding: if you closed an old gissue we could miss it and not give you credit, if you had created and closed more than 30 gissues since you created that stale one.",
-"c": "the endpoint is paginated at 30 gissues, and default sort order was by creation date, so that old gissue could get buried in the results by more recently-created-and-closed gissues. Now we specify a sort order based on the timestamp that the gissue was last updated, so we won't miss a closed gissue just because it was created a long time ago."
-https://github.com/beeminder/beeminder/pull/618
-}, { // ------------------------------------------------------------------------
-MINI: unique subject lines (mainly for the benefit of support): https://github.com/beeminder/beeminder/issues/619
+black rectangle thing (when deployed): https://github.com/beeminder/road/issues/78
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+fixes timeouts in jsbrain_server? https://github.com/beeminder/road/issues/51
 }, { // ------------------------------------------------------------------------
 might fix the problem with old toggl entries getting overwritten with lower values
 https://github.com/beeminder/beeminder/pull/607
@@ -978,7 +1058,7 @@ https://github.com/beeminder/beeminder/pull/607
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-after new beedroid: 
+BEEDROID UVIS:
 1. help page for android persistent notification
 2. Allow users to disable/enable Crashalytics
    https://github.com/beeminder/beedroid-hist/pull/46/commits/b50a374c29489287436db0c25b9fd46990aa29d6
@@ -994,6 +1074,7 @@ after new beedroid:
    https://github.com/beeminder/beedroid-hist/pull/49
 7. More space between month and day
    https://github.com/beeminder/beedroid-hist/pull/53
+   https://github.com/beeminder/beedroid/issues/73
 8. Fix incessant reminders
    https://github.com/beeminder/beedroid-hist/pull/54
 9. Lumpy swipey indicator
@@ -1003,6 +1084,30 @@ after new beedroid:
     https://github.com/beeminder/beedroid-hist/pull/57
 11. Ungroups Android notifications (only counts if this is different from last public release)
     https://github.com/beeminder/beedroid-hist/pull/58
+12. Race condition or whatever where zenos would sometimes happen every minute seems to have come out in the wash
+    https://github.com/beeminder/beedroid/issues/3
+13. Beeminder app starts when the phone boots up
+    https://github.com/beeminder/beedroid-hist/pull/61
+14. Reworks zeno reminders to know why and when the next one will come. This time and reason is shown on the Zeno Configuration screen.
+    Sorts goals on the Zeno Configuration screen.
+    https://github.com/beeminder/beedroid-hist/pull/60
+15. Added header text to Zeno Configuration screen
+    https://github.com/beeminder/beedroid-hist/pull/62
+16. Minor visual changes
+    https://github.com/beeminder/beedroid/issues/60
+17. Push notifications improved? something about graphs that don't stop refreshing
+    https://github.com/beeminder/beedroid/issues/36
+18. Notification channels?
+    https://github.com/beeminder/beedroid/issues/54
+19. Better timey-wimey parsing
+    https://github.com/beeminder/beedroid/issues/50
+    https://github.com/beeminder/beedroid/issues/51
+    https://github.com/beeminder/beedroid/issues/55
+    https://github.com/beeminder/beedroid-hist/pull/63
+20. Maybe not net UVI: Adjusts spacing in Goal Detail View to add an extra row of data
+    https://github.com/beeminder/beedroid-hist/pull/65
+21. Show onboarding when there are no goals
+    https://github.com/beeminder/beedroid/issues/14
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
