@@ -386,6 +386,11 @@ var batch = [{
 "u": ["https://github.com/beeminder/beeminder/commit/f2bee60373ef36d69caf7674717c9c1e0dfe0235",
 "https://twitter.com/beeminfra/status/1127069573000286208"]
 }, { // ------------------------------------------------------------------------
+"x": "2 vi-s for admins: added a reminder to goals with weekends off, and moved the runits in the goal form. Both are near the road now.",
+"d": "2019-05-06",
+"t": "2019-05-24",
+"u": ["https://github.com/beeminder/beeminder/commit/8176120eb05da355f089c5858367b06a4b1ff787",
+"https://twitter.com/beeminfra/status/1132159125662552064"]
 }, /* ----------------------------------------------------------- end batch */ ]
 
 var staged = [ { // note: sub-entries not allowed here in staging
@@ -396,13 +401,6 @@ METASTAGED: --10--------20--------30--------40--------50--------60--------70----
 https://github.com/beeminder/beeminder/commit/
 
 }, { // ------------------------------------------------------------------------
-commit 8176120eb05da355f089c5858367b06a4b1ff787 (fea/login-route)
-Author: Bethany Marie Soule <bsoule@gmail.com>
-Date:   Mon May 6 10:34:26 2019 -0700
-
-    2 admin-vi's: runits move and weekend warning
-
-    close #501
 }, { // ------------------------------------------------------------------------
 commit 2942a7b2f965ad010ec5a348d5446531d80604d6
 Author: Bethany Marie Soule <bsoule@gmail.com>
