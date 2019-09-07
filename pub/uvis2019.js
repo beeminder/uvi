@@ -1019,33 +1019,859 @@ var batch2019may = [{
 "d": "2019-05-24",
 "t": "2019-05-24",
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, /* --------------------------------------------------------- end 2019may */ ]
-
-
-var staged = [ { // note: sub-UVIs not allowed here in staging
-}, { // ------------------------------------------------------------------------
+"n": 3024,
 "f": true,
-"x": "(+) test1",
+"x": "(+) Beeminder Android app version 3.0!",
+"u": ["https://twitter.com/beemuvi/status/1134688740557766656",
+      "https://github.com/beeminder/beedroid-hist",
+      "https://github.com/beeminder/beedroid"],
+"d": "2019-05-27",
+"t": "2019-05-31",
+"c": "AKA Beedroid. By Adam Wolf.",
+}, { // ------------------------------------------------------------------------
+"n": 3024,
+"s": true,
+"x": "The first most obvious change is the permanotification, which, frustratingly, Android now requires for guaranteeing reminders at exact times",
+"u": ["https://twitter.com/beemuvi/status/1134688740557766656"],
+"d": "2019-05-27",
+"t": "2019-05-31",
 }, { // ------------------------------------------------------------------------
 "s": true,
-"x": "test2",
+"x": "We made the permanotification link to <a href=\"https://help.beeminder.com/article/125-android-notification\">a help page</a> explaining how to make it shut up",
+"u": ["https://twitter.com/beemuvi/status/1134689011652472833"],
+"d": "2019-05-27",
+"t": "2019-05-31",
 }, { // ------------------------------------------------------------------------
-"x": "test3",
+"s": true,
+"x": "All the types of notifications are listed in Android settings (Apps -> Beeminder -> Notifications) where you can customize (or suppress them)",
+"u": ["https://twitter.com/beemuvi/status/1134689089066639360",
+      "https://github.com/beeminder/beedroid/issues/54"],
+"d": "2019-05-27",
+"t": "2019-05-31",
+"c": "Version 2.10.9. They're called notification channels and the most specific UVI here is making the name match the text for the permanotification. AWW - Actually maybe the most specific one is creating them.  We didn't have them before.",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "Fixed a bug that would sometimes cause incessant reminders, like one a minute, even when the deadline was like an hour away. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1134689174223589376",
+      "https://github.com/beeminder/beedroid/issues/3",
+      "https://github.com/beeminder/beedroid-hist/pull/54"],
+"d": "2019-05-27",
+"t": "2019-05-31",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "Switched to Crashalytics for crash/error reporting",
+"u": ["https://twitter.com/beemuvi/status/1134689225108967424",
+      "https://github.com/beeminder/beedroid-hist/pull/46/commits/b50a374c29489287436db0c25b9fd46990aa29d6"],
+"d": "2019-05-27",
+"t": "2019-05-31",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "Zeno notifications now happen immediately at launch",
+"u": ["https://twitter.com/beemuvi/status/1134689297020284928",
+      "https://github.com/beeminder/beedroid-hist/pull/50"],
+"d": "2019-05-27",
+"t": "2019-05-31",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "Fixed bug in fwomp page (reminder settings for all goals): the zeno checkboxes are now clickable instead of getting covered up by the scrollbar. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1134689376313593856",
+      "https://github.com/beeminder/beedroid/issues/64"],
+"d": "2019-05-27",
+"t": "2019-05-31",
+"c": "Version 2.10.0",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "Goals are now sorted alphabetically for the 1-up widget configurator (the screen for creating new homescreen widgets for single goals)",
+"u": ["https://twitter.com/beemuvi/status/1134689476876222464",
+      "https://github.com/beeminder/beedroid-hist/pull/49"],
+"d": "2019-05-27",
+"t": "2019-05-31",
+"c": "Version 2.9.3",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "In the manual data entry screen, added some space between the year, month, and day since it sometimes looked like, eg, \"531\" instead of \"5 31\"",
+"u": ["https://twitter.com/beemuvi/status/1134689579842265088",
+      "https://github.com/beeminder/beedroid-hist/pull/53",
+      "https://github.com/beeminder/beedroid/issues/73"],
+"d": "2019-05-27",
+"t": "2019-05-31",
+"c": "Version 2.10.2",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "New lumpy swipey indicator that maybe will help more people notice that there are 3 different data entry screens, since few people have realized that so far",
+"u": ["https://twitter.com/beemuvi/status/1134689668564283392",
+      "https://github.com/beeminder/beedroid-hist/pull/55",
+      "https://github.com/beeminder/beedroid-hist/pull/56"],
+"d": "2019-05-27",
+"t": "2019-05-31",
+"c": "Version 2.10.3",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "Fancy new Troubleshooting Notifications screen that tells you lots of useful things and lets you create test notifications (immediately and scheduled), etc",
+"u": ["https://twitter.com/beemuvi/status/1134689734939144200",
+      "https://github.com/beeminder/beedroid-hist/pull/57"],
+"d": "2019-05-27",
+"t": "2019-05-31",
+"c": "Version 2.10.3",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "And beyond just troubleshooting, the Troubleshoot Notifications screen lets you recreate all zeno reminders for all goals that should have them",
+"u": ["https://twitter.com/beemuvi/status/1134689803054661632",
+      "https://github.com/beeminder/beedroid-hist/pull/57"],
+"d": "2019-05-27",
+"t": "2019-05-31",
+"c": "Version 2.10.3",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "Beedroid now starts automatically when the device boots up",
+"u": ["https://twitter.com/beemuvi/status/1134689934852313088",
+      "https://github.com/beeminder/beedroid-hist/pull/61"],
+"d": "2019-05-27",
+"t": "2019-05-31",
+"c": "Version 2.10.7",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "Minor visual changes, mostly with the goal of matching the previous status quo but there are various user-visible differences in buttons and such",
+"u": ["https://twitter.com/beemuvi/status/1134689993371209732",
+      "https://github.com/beeminder/beedroid/issues/60"],
+"d": "2019-05-27",
+"t": "2019-05-31",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "Improvements to timey-wimey parsing, like handling \"HH:MM:SS\", and a #bugfix where \"H:MM\" didn't work depending on locale",
+"u": ["https://twitter.com/beemuvi/status/1134690085314498560",
+      "https://github.com/beeminder/beedroid/issues/50",
+      "https://github.com/beeminder/beedroid/issues/51",
+      "https://github.com/beeminder/beedroid/issues/55",
+      "https://github.com/beeminder/beedroid-hist/pull/63"],
+"d": "2019-05-27",
+"t": "2019-05-31",
+"c": "Version 2.10.8. Timey-wimey parsing now uses the standard monster regex from d.glitch.me.",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "The zeno reminders configuration page now tells you if and when the next zeno reminder for each goal will come",
+"u": ["https://twitter.com/beemuvi/status/1134690152511549440",
+      "https://github.com/beeminder/beedroid-hist/pull/60"],
+"d": "2019-05-27",
+"t": "2019-05-31",
+"c": "Version 2.10.7",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "The goals in the Zeno Configuration screen are now sorted alphabetically",
+"u": ["https://twitter.com/beemuvi/status/1134690209981915138",
+      "https://github.com/beeminder/beedroid-hist/pull/60"],
+"d": "2019-05-27",
+"t": "2019-05-31",
+"c": "Version 2.10.7. They were not sorted before, so however they were in the datastore. It *may* have been by next derail date, but it also may have been however Java saw fit, i.e. randomly",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "We got rid of the notifications that said \"in panic\" and don't use that term anymore. It's all about beemergencies now.",
+"u": ["https://twitter.com/beemuvi/status/1134690466027323392"],
+"d": "2019-05-27",
+"t": "2019-05-31",
+"c": "Version 2.9.3. We don't remember now when inpanic notificaions got killed and if this was just cleaning up the code but at some point we got rid of the \"in panic\" copy and didn't previously count that as a UVI so we're counting it now! AWW: There used to be zeno alerts and inpanic alerts, and as part of cleaning it up, we made it all zenos. Funnily enough, we'll be re-adding 'inpanic'-style alerts so we can use leaddays from the web, but they'll be done differently.",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "If two goals were updated at the exact same time, going to a screen that showed them both would at least sometimes crash. #bugfix & HT Mary who reported it!",
+"u": ["https://twitter.com/beemuvi/status/1134690880328151041",
+      "https://github.com/beeminder/beedroid-hist/pull/47"],
+"d": "2019-05-27",
+"t": "2019-05-31",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "Tons of mostly user-invisible work on notifications (eg switching GCM to FCM) that had the user-visible effect of stark improvements to latency/deliverability",
+"u": ["https://twitter.com/beemuvi/status/1134691078290825217"],
+"d": "2019-05-27",
+"t": "2019-05-31",
+"c": "Version 2.9.3. We can't prove this particular thing but we've got at least one two-for-one UVI in this Beedroid batch so it seems fair. Plus the fact that everything would definitely have broken with new Android versions if we hadn't done all this!",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "Fixed an orientation crash. #bugfix (Plus a lot of improvements to the Send Feedback feature and debugging info but that's not very user-visible)",
+"u": ["https://twitter.com/beemuvi/status/1134691160327241728",
+      "https://github.com/beeminder/beedroid-hist/commit/ebe6a28405a181bf4182ba490002b1ad63ad3974"],
+"d": "2019-05-27",
+"t": "2019-05-31",
+"c": "Version 2.9.2. Google's automated testing was showing that that line was causing a crash on some phones",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "We now show onboarding copy when there are no goals to show! (We thought we'd done this a long time ago but they weren't showing up, so #bugfix)",
+"u": ["https://twitter.com/beemuvi/status/1134691309669666816",
+      "https://github.com/beeminder/beedroid/issues/14"],
+"d": "2019-05-27",
+"t": "2019-05-31",
+}, /* --------------------------------------------------------- end 2019may */ ]
+
+var batch2019jun = [{
+"x": "Errors from Beebrain (like segments of the yellow brick road being out of order) were displaying on the graph as black rectangles instead of text. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1136113614631235587",
+      "https://github.com/beeminder/road/issues/78"],
+"d": "2019-06-04",
+"t": "2019-06-04",
+"c": "By Uluc Saranli"
+}, { // ------------------------------------------------------------------------
+"x": "GitHub goal creation #bugfix: If you hadn't already auth'd us to access your GitHub data and were creating a goal involving a specific repo, we'd not let you!",
+"u": ["https://twitter.com/beemuvi/status/1136530822008197121",
+      "https://github.com/beeminder/beeminder/pull/638"],
+"d": "2019-06-05",
+"t": "2019-06-05",
+}, { // ------------------------------------------------------------------------
+"x": "In Garmin goal creation we weren't letting you choose steps/sleep/active-time on non-Vivofit/Vivoki devices. #bugfix HT @phreeza",
+"u": ["https://twitter.com/beemuvi/status/1136549260160262144",
+      "https://github.com/beeminder/beeminder/issues/637",
+      "https://github.com/beeminder/beeminder/pull/639"],
+"d": "2019-06-05",
+"t": "2019-06-05",
+}, { // ------------------------------------------------------------------------
+"x": "If you had a timey-wimey goal and you recorded a datapoint that was <30 seconds, we'd round it to \"00:00\". Misleading to say the least. Now we show eg \"00:00.5\"",
+"u": ["https://twitter.com/beemuvi/status/1136862305352704000",
+      "https://github.com/beeminder/beeminder/issues/444",
+      "https://github.com/beeminder/beeminder/pull/641"],
+"d": "2019-06-06",
+"t": "2019-06-06",
+}, { // ------------------------------------------------------------------------
+"x": "Fixed typography things (bullet wrapping, title wrapping, margins) in the \"why?\" modal that is available when we ask for a credit card in goal creation",
+"u": ["https://twitter.com/beemuvi/status/1137258024106582017",
+      "https://github.com/beeminder/beeminder/pull/643"],
+"d": "2019-06-07",
+"t": "2019-06-07",
+"c": "See UVI#2908 and UVI#2912",
+}, { // ------------------------------------------------------------------------
+"x": "UVI#2221 let you cancel not just derailment payments but premium subscription payments this whole time, which made no sense so now it doesn't",
+"u": ["https://twitter.com/beemuvi/status/1137258346585571328",
+      "https://github.com/beeminder/beeminder/issues/613"],
+"d": "2019-06-07",
+"t": "2019-06-07",
+}, { // ------------------------------------------------------------------------
+"x": "We still wanted to warn you about a failed/pending subscription charge (despite UVI#3051) when updating your card, so they're included in a secondary list",
+"u": ["https://twitter.com/beemuvi/status/1138341382194487296",
+      "https://github.com/beeminder/beeminder/issues/613"],
+"d": "2019-06-07",
+"t": "2019-06-10",
+"c": "See screenshot in gissue",
+}, { // ------------------------------------------------------------------------
+"x": "Also adjusted margins, font sizes, and line height for listed charges (there was too much space when the description wrapped to 2 lines)",
+"u": ["https://twitter.com/beemuvi/status/1138642362802921473",
+      "https://github.com/beeminder/beeminder/issues/613"],
+"d": "2019-06-07",
+"t": "2019-06-11",
+}, { // ------------------------------------------------------------------------
+"n": 3054,
+"x": "A bunch of small layout changes to the new goal screen",
+"u": ["https://twitter.com/beemuvi/status/1138703486718078976",
+      "https://github.com/beeminder/beeminder/pull/647"],
+"d": "2019-06-11",
+"t": "2019-06-11",
+}, { // ------------------------------------------------------------------------
+"n": 3054,
+"s": true,
+"x": "Most notably, shifting and resizing the manual-data icon so it doesn't look like part of the header",
+"u": ["https://twitter.com/beemuvi/status/1138703486718078976",
+      "https://github.com/beeminder/beeminder/pull/647"],
+"d": "2019-06-11",
+"t": "2019-06-11",
+}, { // ------------------------------------------------------------------------
+"n": 3055,
+"s": true,
+"x": "Increased the vertical space between the manual & autodata sections and added a large OR in that vertical space to highlight the difference",
+"u": ["https://twitter.com/beemuvi/status/1138703747402461191",
+      "https://github.com/beeminder/beeminder/pull/647"],
+"d": "2019-06-11",
+"t": "2019-06-11",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "Increased the whitespace around the integration icons to make them match more / have more similar presence on the page with the <+> manual-data icon",
+"u": ["https://twitter.com/beemuvi/status/1138703851215704064",
+      "https://github.com/beeminder/beeminder/pull/647"],
+"d": "2019-06-11",
+"t": "2019-06-11",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "On the next screen for goal type (do-more, do-less, etc), fixed a problem with vertical alignment of icons. #css #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1138704037908377600",
+      "https://github.com/beeminder/beeminder/pull/647"],
+"d": "2019-06-11",
+"t": "2019-06-11",
+}, { // ------------------------------------------------------------------------
+"x": "Doh, UVI#3054+ messed up the +/- stepper in goal creation & restart for 'commit to' (in manual goal types) and the pledge cap picker. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1139794198226296832",
+      "https://github.com/beeminder/beeminder/pull/650"],
+"d": "2019-06-14",
+"t": "2019-06-14",
+}, { // ------------------------------------------------------------------------
+"x": "Fixed overhelpful Firefox defaults/autocomplete on dashboard & goal page; it remembered last date used for data entry even when you reloaded the page. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1140134844342530048",
+      "https://github.com/beeminder/beeminder/issues/634"],
+"d": "2019-06-15",
+"t": "2019-06-15",
+}, { // ------------------------------------------------------------------------
+"x": "Rewrote the <a href=\"https://help.beeminder.com/article/125-android-notification\">help page copy about the Android permanotification</a> to emphasize how ok it is to turn that off and to better explain why it's there at all",
+"u": ["https://twitter.com/beemuvi/status/1140147178326745089",
+      "https://help.beeminder.com/article/125-android-notification"],
+"d": "2019-06-15",
+"t": "2019-06-15",
+}, { // ------------------------------------------------------------------------
+"x": "Fixed a tiny bug in the new user signup page where if you changed the timezone and then made some other error in the form it would lose your choice. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1140148418439872512",
+      "https://github.com/beeminder/beeminder/issues/566"],
+"d": "2019-06-15",
+"t": "2019-06-15",
+}, { // ------------------------------------------------------------------------
+"x": "Bunch of webcopy tweaks in goal creation: mention SMS, \"Use an odometer\" to just \"Odometer\", nixed the \"www\" in the live URL, shortened/removed other things",
+"u": ["https://twitter.com/beemuvi/status/1140898198833078272",
+      "https://github.com/beeminder/beeminder/issues/659"],
+"d": "2019-06-17",
+"t": "2019-06-17",
+}, { // ------------------------------------------------------------------------
+"x": "On the \"select goal type\" screen in goal creation, small text letting you know that advanced goal types are a premium feature",
+"u": ["https://twitter.com/beemuvi/status/1140898648592531457",
+      "https://github.com/beeminder/beeminder/issues/659"],
+"d": "2019-06-17",
+"t": "2019-06-17",
+}, { // ------------------------------------------------------------------------
+"x": "Layout tweaks in goal creation: made the commit-to fields the same width (also fixed truncated placeholder text for goal units)",
+"u": ["https://twitter.com/beemuvi/status/1140898889836351491",
+      "https://github.com/beeminder/beeminder/issues/659"],
+"d": "2019-06-17",
+"t": "2019-06-17",
+}, { // ------------------------------------------------------------------------
+"x": "Updated the help pages in the <a href=\"https://help.beeminder.com/category/15-goal-settings\">Goal Settings category</a> (updates, fixes, prose tweaks, typography, link fixes)",
+"u": ["https://twitter.com/beemuvi/status/1141664787803201537"],
+"d": "2019-06-19",
+"t": "2019-06-19",
+}, { // ------------------------------------------------------------------------
+"x": "Updated the help pages in the <a href=\"https://help.beeminder.com/category/107-account-settings\">Account Settings category</a> (updates, prose tweaks, link fixes)",
+"u": ["https://twitter.com/beemuvi/status/1141887798099623936"],
+"d": "2019-06-20",
+"t": "2019-06-20",
+}, { // ------------------------------------------------------------------------
+"x": "Pledge cap UI in goal creation now has radio buttons to pick between two possible pledge caps instead of a stepper widget",
+"u": ["https://twitter.com/beemuvi/status/1141999967294242816",
+      "https://github.com/beeminder/beeminder/commit/1ec14d66f9af196e9818a18e8b8f062de863e3cc",
+      "https://github.com/beeminder/beeminder/commit/8040a6c97139e3b0139d2b1b3623b422515cd2df"],
+"d": "2019-06-20",
+"t": "2019-06-20",
+}, { // ------------------------------------------------------------------------
+"x": "Also a bunch of a tweaking of the webcopy for picking initial and max stakes and explanatory text for how to change or cap pledges any time",
+"u": ["https://twitter.com/beemuvi/status/1142287314732716034",
+      "https://github.com/beeminder/beeminder/pull/666"],
+"d": "2019-06-20",
+"t": "2019-06-21",
+}, { // ------------------------------------------------------------------------
+"x": "More tweaking of the goal creation \"Pledge Your Money\" screen's webcopy, laying out the full pledge schedule, coining \"starting stakes\", calling it \"pledge cap\"",
+"u": ["https://twitter.com/beemuvi/status/1142287441727897600",
+      "https://github.com/beeminder/beeminder/commit/2c9162ad3957eeda044f7e3867666bebfa2fd458",
+      "https://github.com/beeminder/beeminder/commit/450aca0d58994a8b48d354dee6cf5285ba97b25e"],
+"d": "2019-06-20",
+"t": "2019-06-21",
+"c": "We called it \"pledge cap\" elsewhere but not on that page previously. Also fixed a couple things that were briefly deployed before baked.",
+}, { // ------------------------------------------------------------------------
+"x": "Further separated the first row of the reminders page (aka fwomp page) for goal defaults; jettisoned the explanatory hovertext now that it's obvious enough",
+"u": ["https://twitter.com/beemuvi/status/1143434626293043200",
+      "https://github.com/beeminder/beeminder/pull/670"],
+"d": "2019-06-24",
+"t": "2019-06-24",
+"c": "For title text of slug column, no need to mention \"the first row of this page lets you set the defaults for your account\" since we moved the defaults into its own section",
+}, { // ------------------------------------------------------------------------
+"x": "Also on the fwomp/reminders page, do-less goals are now in a separate section (in anticipation of handling their reminders differently)",
+"u": ["https://twitter.com/beemuvi/status/1143734504164487168",
+      "https://github.com/beeminder/beeminder/pull/670"],
+"d": "2019-06-24",
+"t": "2019-06-25",
+"c": "Also they're sorted separately",
+}, { // ------------------------------------------------------------------------
+"x": "Beedroid version 3.0.1 has an option to send us feedback (including debug logs) before logging in. Pretty helpful when the bug is you can't log in!",
+"u": ["https://twitter.com/beemuvi/status/1144037542574088193",
+      "https://github.com/beeminder/beedroid-hist/pull/68"],
+"d": "2019-06-24",
+"t": "2019-06-26",
+}, { // ------------------------------------------------------------------------
+"x": "Another mini-revamp of the pledge setup screen of goal creation: show the whole progression vertically with arrows, and no choice (on that screen) on pledge cap",
+"u": ["https://twitter.com/beemuvi/status/1144510310012690432",
+      "https://github.com/beeminder/beeminder/pull/675"],
+"d": "2019-06-27",
+"t": "2019-06-27",
+"c": "Having only one choice for pledge cap (to go up one level) seemed petty / taunting / money-grubbing. Hopefully having it just not be on that screen at all that you set pledge cap will feel fine."
+}, { // ------------------------------------------------------------------------
+"x": "Added missing dropdown arrow indicators on some dropdowns in goal creation (Garmin, Habitica, and RescueTime). #css #affordance",
+"u": ["https://twitter.com/beemuvi/status/1144511273935130624",
+      "https://github.com/beeminder/beeminder/pull/676"],
+"d": "2019-06-27",
+"t": "2019-06-27",
+"c": "Possible #redesign #regression but we're pretty unsure about that",
+}, { // ------------------------------------------------------------------------
+"x": "Okfine, we'll still let you pick a pledge cap during goal setup. We put the picker back, alongside the vertical-spelling-out. Click the little arrow to reveal.",
+"u": ["https://twitter.com/beemuvi/status/1144843355093790721",
+      "https://forum.beeminder.com/t/fussing-with-the-pledge-cap-ui-for-goal-creation/5502",
+      "https://github.com/beeminder/beeminder/pull/677"],
+"d": "2019-06-28",
+"t": "2019-06-28",
+}, /* --------------------------------------------------------- end 2019jun */ ]
+
+var batch2019jul = [{
+"x": "Beedroid version 3.0.2 handles SSL errors more gracefully/informatively (and maybe fixes a couple other things but we're saving those for when we're certain!)",
+"u": ["https://twitter.com/beemuvi/status/1145914879225655296",
+      "https://github.com/beeminder/beedroid/issues/98"],
+"d": "2019-06-28",
+"t": "2019-07-01",
+}, { // ------------------------------------------------------------------------
+"x": "Added the newest Duolingo course -- Arabic -- to the list of languages in the Beeminder integration!",
+"u": ["https://twitter.com/beemuvi/status/1145939115063427072",
+      "https://github.com/beeminder/beeminder/pull/679"],
+"d": "2019-07-01",
+"t": "2019-07-01",
+"c": "By Adam",
+}, { // ------------------------------------------------------------------------
+"x": "RescueTime goal creation wasn't letting you set your initial safety buffer. Now it does! #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1146240016927977472",
+      "https://github.com/beeminder/beeminder/pull/683"],
+"d": "2019-07-02",
+"t": "2019-07-02",
+"c": "It was actually kind of intentional for the case of do-less RescueTime goals but not for a good reason and we intend to allow initial safety buffer for all do-less goals",
+}, { // ------------------------------------------------------------------------
+"f": true,
+"x": "Yesterday's RescueTime bugfix prompted us to finally make it so you can choose an initial safety buffer on all do-less goals when you create them!",
+"u": ["https://twitter.com/beemuvi/status/1146673465425973248",
+      "https://github.com/beeminder/beeminder/pull/688"],
+"d": "2019-07-03",
+"t": "2019-07-03",
+"c": "We're trying to remember if/why we intentionally didn't have this for do-less goals till now. It was really easy to add it!"
+}, { // ------------------------------------------------------------------------
+"x": "We now finally use HH:MM format (assuming you've checked that box for timey-wimey goals) in formatting beemergency reminders from the SMS bot. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1147030662974590976",
+      "https://github.com/beeminder/beeminder/pull/687"],
+"d": "2019-07-03",
+"t": "2019-07-04",
+}, { // ------------------------------------------------------------------------
+"x": "The evaluating of arithmetical expressions was silently failing if the value was superficially right but syntactically wrong, like \"2++2\". #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1147030763646271490",
+      "https://github.com/beeminder/beeminder/issues/689"],
+"d": "2019-07-04",
+"t": "2019-07-04",
+}, { // ------------------------------------------------------------------------
+"x": "The initial safety buffer checkbox/field was getting messed up if you started creating a do-more goal and then hit back and chose weight loss. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1147482599935266817",
+      "https://github.com/beeminder/beeminder/issues/695"],
+"d": "2019-07-05",
+"t": "2019-07-05",
+"c": "Specifically, weight loss goals have maxflux instead of days of safety buffer",
+}, { // ------------------------------------------------------------------------
+"f": true,
+"x": "Changed the derail/rerail behavior: the road jumps to where you ended the beemergency day, not the post-eep day",
+"u": ["https://twitter.com/beemuvi/status/1154623850576957441",
+      "https://github.com/beeminder/beeminder/pull/696/commits/477dc30d9a7f2357774ce82b45ef85e1714be846"],
+"d": "2019-07-07",
+"t": "2019-07-25",
+"c": "UVI#2760 (and tweaks to it in UVI#2761, UVI#2768, etc) was in anticipation of this, since this UVI means derailments are no longer indicated by red dots.",
+}, { // ------------------------------------------------------------------------
+"f": true,
+"x": "In addition to the visual changes, now you can now ratchet to zero safety buffer any time! (Before this you couldn't do that the day after a derailment.)",
+"u": ["https://twitter.com/beemuvi/status/1154624017040412672",
+      "https://github.com/beeminder/beeminder/pull/696/commits/477dc30d9a7f2357774ce82b45ef85e1714be846"],
+"d": "2019-07-07",
+"t": "2019-07-25",
+}, { // ------------------------------------------------------------------------
+"x": "Doh, the road editor was broken for 2 days before we got the new rerail behavior hotness deployed to road.beeminder.com as well. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1154990742080638977",
+      "https://forum.beeminder.com/t/road-editor-is-broken/5538",
+      "https://github.com/beeminder/road/commit/dff4a8a635272140f833dc8711ec1afb331f9fa3"],
+"d": "2019-07-09",
+"t": "2019-07-26",
+"c": "All this might be milkable for more UVIs, like how we made it smart enough to only start doing this as of the transition date, and how vprev is now a Beebrain out-param. Related infra TODO: clean up the 'offparis' param.",
+}, { // ------------------------------------------------------------------------
+"x": "Highly dubious UVI from one perspective and highly legit from another: Ended the year of grandfathering on the Infinibee price hike ($4/mo to $8/mo)",
+"u": ["https://twitter.com/beemuvi/status/1156118727957467137",
+      "https://github.com/beeminder/beeminder/pull/704"],
+"d": "2019-07-29",
+"t": "2019-07-29",
+}, { // ------------------------------------------------------------------------
+"x": "Changed a dash to an em dash in the goal settings UI webcopy which counts as a #typo #bugfix for us because we're very finicky about these things!",
+"u": ["https://twitter.com/beemuvi/status/1156119535151280129",
+      "https://github.com/beeminder/beeminder/pull/682",
+      "https://github.com/beeminder/beeminder/commit/8b2c56262ef617acf93c1faac0361442b0a8282a"],
+"d": "2019-07-02",
+"t": "2019-07-29",
+"c": "Also we accidentally typed \"&emdash;\" which made it blatantly buggy for like 12 hours so fixing that was perhaps the more substantial UVI",
+}, { // ------------------------------------------------------------------------
+"x": "The 'start with extra buffer' checkbox starts expanded for do-less goals, and unchecking it is now equivalent to choosing no extra buffer. Improvement + #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1156428897652629504",
+      "https://github.com/beeminder/beeminder/issues/694",
+      "https://github.com/beeminder/beeminder/pull/696",
+      "https://github.com/beeminder/beeminder/pull/705"],
+"d": "2019-07-30",
+"t": "2019-07-30",
+"c": "This is multiple UVIs in one (I guess we're making up for the last cheap-o one). We deployed the part where 'start with extra buffer' starts expanded on July 5 but at that point if you unchecked the box (because you didn't want to start with extra safety buffer) then it gave you 9 days of buffer! On July 30 we made it so unchecking the box actually gives you no extra buffer.",
+//Part 1: UVI#3079 allowed do-less goals to specify how much safety buffer they start with by adding the "initial safety buffer" checkbox.
+//Bug with 1: If you don't check the box, it still defaults to 9 days of buffer (the UI copy implies the default will be no extra buffer).
+//Part 2: Make the checkbox be checked / expanded by default (because if you submit with a value we give you what you ask for).
+//Bug with 2: That works fine, but if you uncheck the box and submit, you still get 9 days of buffer. In other words bug 1 totally still exists, you're just less likely to encounter it becasue we changed the default.
+//Part 3: Actually fix that so unchecking the box means zero buffer (except actually 2 because of road width).
+//(Above UVI#3088 covers both part 2 and part 3)
+//Part 4 TODO: https://github.com/beeminder/beeminder/issues/707
+}, { // ------------------------------------------------------------------------
+"n": 3089,
+"x": "Beedroid version 3.1.0",
+"u": ["https://twitter.com/beemuvi/status/1156785591175958528"],
+"d": "2019-07-31",
+"t": "2019-07-31",
+}, { // ------------------------------------------------------------------------
+"n": 3089,
+"s": true,
+"x": "Beedroid no longer starts the whole app when you boot up the device. Why did we ever think that was a good idea? We didn't, Android development is hard.",
+"u": ["https://twitter.com/beemuvi/status/1156785591175958528",
+      "https://github.com/beeminder/beedroid/issues/102",
+      "https://github.com/beeminder/beedroid-hist/pull/74"],
+"d": "2019-07-31",
+"t": "2019-07-31",
+"c": "We started doing this in the previous version because of some Android requirement about not being able to start something in the background without there being something visible to the user. Turns out it suffices to just have a \"Starting Beeminder\" toast pop up for a split second.",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "Beedroid 3.1.0 also fixes some crashes. We don't know how they were happening but they were and now they're not! Also fixed the changelog formatting. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1156787226941935617",
+      "https://github.com/beeminder/beedroid/issues/96",
+      "https://github.com/beeminder/beedroid-hist/commit/43417e40a7f6d132940d9a166a965345a353ff1d",
+      "https://github.com/beeminder/beedroid/issues/97"],
+"d": "2019-07-31",
+"t": "2019-07-31",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "Removed custom notification sounds since trying to set them caused a crash in new Android versions (and you can still do it in general Android Settings) #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1156787350921457665",
+      "https://github.com/beeminder/beedroid/issues/92",
+      "https://github.com/beeminder/beedroid-hist/pull/73"],
+"d": "2019-07-31",
+"t": "2019-07-31",
+"c": "Cf https://commonsware.com/blog/2016/09/07/notifications-sounds-android-7p0-aggravation.html",
+}, /* --------------------------------------------------------- end 2019jul */ ]
+
+var batch2019aug = [{
+"f": true,
+"x": "Follow-on to UVI#3084, you can now choose zero-mercy derails (including as a default for all new goals in account-level settings)",
+"u": ["https://twitter.com/beemuvi/status/1157520643186839553",
+      "https://github.com/beeminder/beeminder/pull/706",
+      "https://github.com/beeminder/beeminder/pull/708"],
+"d": "2019-08-01",
+"t": "2019-08-02",
+}, { // ------------------------------------------------------------------------
+"x": "Garmin sleep tracking didn't allow multiple sleep entries in a day. E.g., naps wouldn't register, nor post-midnight followed by pre-midnight bedtimes. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1157521721135493121",
+      "https://github.com/beeminder/beeminder/pull/710",
+      "https://github.com/beeminder/beeminder/issues/709"],
+"d": "2019-08-01",
+"t": "2019-08-02",
+"c": "Or if you went to bed at 1am tonight, the 2nd, and then at 10pm tomorrow -- also the 2nd -- both those sleeps look like the same day to us, and one would overwrite the other. Now we disambiguate not by day, but by start time of the sleep record. So if your Garmin sends multiple updates throughout the night, we won't record each of those as separate entries, but if you nap in the afternoon or whatever we will record those as separate events.",
+}, { // ------------------------------------------------------------------------
+"x": "Standardized whitespace and added a missing period in the email bot replies",
+"u": ["https://twitter.com/beemuvi/status/1158627953326137345",
+      "https://github.com/beeminder/beeminder/pull/701"],
+"d": "2019-08-05",
+"t": "2019-08-05",
+"c": "By Adam Wolf",
+}, { // ------------------------------------------------------------------------
+"x": "For do-less goals, added hard cap to data entry replies from the SMS and email bot as well as SMS reminders",
+"u": ["https://twitter.com/beemuvi/status/1158628630110453766",
+      "https://github.com/beeminder/beeminder/issues/522",
+      "https://github.com/beeminder/beeminder/issues/713",
+      "https://github.com/beeminder/beeminder/issues/714"],
+"d": "2019-08-05",
+"t": "2019-08-05",
+"c": "By Adam Wolf",
+}, { // ------------------------------------------------------------------------
+"x": "Oops, previous UVI broke the SMS bot which stopped sending zeno alerts and reminders for some hours. #bugfix (and manually interceded for all affected users)",
+"u": ["https://twitter.com/beemuvi/status/1158957219104223232",
+      "https://github.com/beeminder/beeminder/pull/716"],
+"d": "2019-08-06",
+"t": "2019-08-06",
+}, { // ------------------------------------------------------------------------
+"f": true,
+"x": "New (currently optional) pledge schedule! $1, $5, $10, $20, $40, $80, $160, $320, $640, $1280, $2560",
+"u": ["https://twitter.com/beemuvi/status/1159341971418124290",
+      "https://github.com/beeminder/beeminder/pull/686",
+      "https://forum.beeminder.com/t/lets-totally-change-the-pledge-schedule/5426?u=dreev"],
+"d": "2019-08-06",
+"t": "2019-08-07",
+}, { // ------------------------------------------------------------------------
+"f": true,
+"n": 3097,
+"x": "Version 5.4.1 of the Beeminder iOS app!",
+"u": ["https://twitter.com/beemuvi/status/1159705081257721857"],
+"d": "2019-08-07",
+"t": "2019-08-08",
+}, { // ------------------------------------------------------------------------
+"n": 3097,
+"s": true,
+"x": "Added 3 new metrics -- dietary sugar, carbs, and fat -- to the Apple Health integration",
+"u": ["https://twitter.com/beemuvi/status/1159705081257721857"],
+"d": "2019-08-07",
+"t": "2019-08-08",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "The Today widget wasn't showing goals for some users so they couldn't add data! #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1159705292411588608"],
+"d": "2019-08-07",
+"t": "2019-08-08",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "Updated the syncing spinners to make it more apparent that syncing has happened",
+"u": ["https://twitter.com/beemuvi/status/1160075721772916737"],
+"d": "2019-08-07",
+"t": "2019-08-08",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "We now display the Beeminder-correct date if the goal's deadline has already passed for the day",
+"u": ["https://twitter.com/beemuvi/status/1160075854933716992"],
+"d": "2019-08-07",
+"t": "2019-08-08",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "Fixed an alignment thing so that things look better on phones with curved bottom screens",
+"u": ["https://twitter.com/beemuvi/status/1160076090703876096"],
+"d": "2019-08-07",
+"t": "2019-08-08",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "The spinner would fail to disappear if you chose an existing username. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1160076242923581445"],
+"d": "2019-08-07",
+"t": "2019-08-08",
+}, { // ------------------------------------------------------------------------
+"x": "Opting in to the OG pledge schedule mostly worked but wasn't actually letting you start at $0 like it's supposed to. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1160078218059112448",
+      "https://github.com/beeminder/beeminder/pull/724",
+      "https://github.com/beeminder/beeminder/issues/720"],
+"d": "2019-08-08",
+"t": "2019-08-09",
+}, { // ------------------------------------------------------------------------
+"f": true,
+"x": "The infamous, enigmatic do-less loophole is closed: if you're in the red when you hit the deadline, you derail, no caveats!",
+"u": ["https://twitter.com/beemuvi/status/1161903802825359360",
+      "https://forum.beeminder.com/t/closing-the-do-less-loophole/5658",
+      "https://github.com/beeminder/beeminder/issues/256",
+      "https://github.com/beeminder/beeminder/commit/28ec21cde75c0ca7834dcc2037a270f27746cd76",
+      "https://github.com/beeminder/road/pull/83",
+      "https://github.com/beeminder/beeminder/pull/728"],
+"d": "2019-08-12",
+"t": "2019-08-14",
+"c": "Technically: changed the derail condition to 'yesterday is red'.",
+}, { // ------------------------------------------------------------------------
+"x": "The SMS bot now uses emoji! ⏰🔥❗️ (yes, those ones in particular)",
+"u": ["https://twitter.com/beemuvi/status/1162222397228896261",
+      "https://forum.beeminder.com/t/wow-texts-from-beeminder-now-have-emojis/5627",
+      "https://github.com/beeminder/beeminder/commit/488184d4032c17972a80b4eca11ee953bcd984b7"],
+"d": "2019-08-06",
+"t": "2019-08-15",
+}, { // ------------------------------------------------------------------------
+"x": "The new yesterday-is-red derail criterion introduced a bug for odometer (and some do-less) goals that would make them insta-derail upon creation! #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1162636847727595521",
+      "https://github.com/beeminder/road/pull/84",
+      "https://github.com/beeminder/beeminder/issues/734",
+      "https://github.com/beeminder/beeminder/issues/691",
+      "https://github.com/beeminder/beeminder/issues/707"],
+"d": "2019-08-16",
+"t": "2019-08-16",
+}, { // ------------------------------------------------------------------------
+"x": "Replaced \"Emergency day\" in SMS reminders with \"Beemergency\". It's slightly shorter and we're gradually doubling down on \"Beemergency\" everywhere anyway!",
+"u": ["https://twitter.com/beemuvi/status/1162637703403323392",
+      "https://github.com/beeminder/beeminder/commit/bf83a552ef91eae59b80a0e20db0285fbefe0b1c"],
+"d": "2019-08-10",
+"t": "2019-08-17",
+}, { // ------------------------------------------------------------------------
+"x": "For do-less goals created w/ 0 safe days you'd derail at end of very 1st day (unless you can unsmoke a cigarette?). Now we put you just on the cusp of red.",
+"u": ["https://twitter.com/beemuvi/status/1163649262636244992",
+      "https://github.com/beeminder/beeminder/pull/743/commits/41f868db5c05fbf6df2fe18d34f049fb5b423be5",
+      "https://github.com/beeminder/beeminder/issues/742"],
+"d": "2019-08-19",
+"t": "2019-08-19",
+}, { // ------------------------------------------------------------------------
+"x": "We broke (or did it never work?) the Reply-To for nonce transactional emails. Now we can (again?) send them as ourselves but have replies go to support. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1164034659556085760",
+      "https://github.com/beeminder/beeminder/pull/712"],
+"d": "2019-08-05",
+"t": "2019-08-20",
+}, { // ------------------------------------------------------------------------
+"x": "Better integeriness: there were corner cases, like do-more goals with negative amounts due, where values weren't being rounded to an integer. Now they are!",
+"u": ["https://twitter.com/beemuvi/status/1164034948203835393",
+      "https://github.com/beeminder/road/commit/9685e0f45679faa1af0927edbd8f8a826db4df52"],
+"d": "2019-08-20",
+"c": "By Danny. #beebrain #conservaround",
+}, { // ------------------------------------------------------------------------
+"x": "All SMS alerts now include bare min or hard cap",
+"u": ["https://twitter.com/beemuvi/status/1164383369909526528",
+      "https://github.com/beeminder/beeminder/issues/736",
+      "https://github.com/beeminder/beeminder/commit/e9074e2dad61b867293f8c7d2ef1eb02197b8d52",
+      "https://github.com/beeminder/beeminder/pull/739"],
+"d": "2019-08-21",
+"t": "2019-08-21",
+"c": "Removing the colon after \"hard cap\" / \"bare min\" was also part of this PR but we think we did that before deploying it and so failed to milk that as a distinct UVI",
+}, { // ------------------------------------------------------------------------
+"x": "In 2014 we lost the feature that let you upload custom avatars (profile images) and we just now got it back!",
+"u": ["https://twitter.com/beemuvi/status/1164810913368563712",
+      "https://github.com/beeminder/beeminder/commit/1c7c6d0d5570704273930c0e0893f68b7bda7f95",
+      "https://github.com/beeminder/beeminder/pull/749",
+      "https://github.com/beeminder/beeminder/issues/79"],
+"d": "2019-08-21",
+"t": "2019-08-22",
+}, { // ------------------------------------------------------------------------
+"x": "Because that Pareto Dominance Principle violation really bothered us, we also reinstated all the ancient avatars & warned everyone we were Rip-Van-Winkling them",
+"u": ["https://twitter.com/beemuvi/status/1164811144889921536",
+      "https://github.com/beeminder/beeminder/issues/79",
+      "https://github.com/beeminder/beeminder/pull/756"],
+"d": "2019-08-22",
+"t": "2019-08-22",
+"c": "1200 people emailed"
+}, { // ------------------------------------------------------------------------
+"x": "UVI#3104 made most archived/frozen goals insta-derail when you restarted. For now we're kludgily adding a dummy datapoint & moving the road yesterday. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1165100770137538560",
+      "https://github.com/beeminder/beeminder/issues/733",
+      "https://github.com/beeminder/beeminder/commit/3e7b74e709356afa9ed84dd49092bc90bf6b0bef"],
+"d": "2019-08-23",
+"t": "2019-08-23",
+"c": "The right fix will be road gaps",
+}, { // ------------------------------------------------------------------------
+"x": "When restarting, goals we were always defaulting the rate units to 'per week'. Now we default to the goal's current/previous rate units.",
+"u": ["https://twitter.com/beemuvi/status/1165100889796833280",
+      "https://github.com/beeminder/beeminder/commit/fe100ccba498dbb8374573f7d62d0f7c9df02b04"],
+"d": "2019-08-23",
+"t": "2019-08-23",
+}, { // ------------------------------------------------------------------------
+"x": "Kind of kludgy but we're now filtering out spurious zeno alerts for goals more than 24 hours from derailing, which would, rarely, get sent until now. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1166206004456853504",
+      "https://github.com/beeminder/beeminder/commit/074bbb98c941d020ae5f1bd1ee4c66b18a8f3d94",
+      "https://github.com/beeminder/beeminder/pull/757",
+      "https://github.com/beeminder/beeminder/pull/752",
+      "https://github.com/beeminder/beeminder/issues/184",
+      "https://github.com/beeminder/beeminder/issues/737",
+      "https://github.com/beeminder/beeminder/issues/621"],
+"d": "2019-08-26",
+"t": "2019-08-26",
+"c": "AKA far zenos. By Adam Wolf. lib/reminders.rb",
+}, { // ------------------------------------------------------------------------
+"x": "On the goal restart page we'd sometimes suggest a pledge cap that was lower than your actual current pledge. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1166621969770528769",
+      "https://github.com/beeminder/beeminder/issues/761",
+      "https://github.com/beeminder/beeminder/pull/762"],
+"d": "2019-08-27",
+"t": "2019-08-27",
+}, { // ------------------------------------------------------------------------
+"x": "Also, whatever the default is, we now prevent you from picking a pledge cap (aka max pledge) lower than the current pledge on the goal restart page",
+"u": ["https://twitter.com/beemuvi/status/1166622106106388480",
+      "https://github.com/beeminder/beeminder/issues/761",
+      "https://github.com/beeminder/beeminder/pull/762"],
+"d": "2019-08-27",
+"t": "2019-08-27",
+}, { // ------------------------------------------------------------------------
+"x": "Removed the weird line in the pledge section of goal creation that said \"Click on the $ above your graph to change your pledge cap\"",
+"u": ["https://twitter.com/beemuvi/status/1166946134582951936",
+      "https://github.com/beeminder/beeminder/pull/762/commits/1daadd2daa9e051f65a83ae6fa600177981c6274",
+      "https://blog.beeminder.com/paretocaps/"],
+"d": "2019-08-27",
+"t": "2019-08-28",
+}, { // ------------------------------------------------------------------------
+"x": "Beemium users can now pledge $0 without switching to the traditional pledge schedule",
+"u": ["https://twitter.com/beemuvi/status/1167299230689452037",
+      "https://github.com/beeminder/beeminder/issues/729",
+      "https://github.com/beeminder/beeminder/pull/738"],
+"d": "2019-08-29",
+"t": "2019-08-29",
+}, { // ------------------------------------------------------------------------
+"x": "We accidentally weren't letting non-Beemium people jump their initial pledge if they chose $1 and then changed their mind and wanted to bump up to $5. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1167303565192265730",
+      "https://github.com/beeminder/beeminder/pull/738"],
+"d": "2019-08-29",
+"t": "2019-08-29",
+"c": "Possible moneyfire?",
+}, /* --------------------------------------------------------- end 2019aug */ ]
+
+var batch2019sep = [{
+"x": "Duolingo Latin is here and beemindable!",
+"u": ["https://twitter.com/beemuvi/status/1169108432009363457",
+      "https://github.com/beeminder/beeminder/pull/765"],
+"d": "2019-08-30",
+"t": "2019-09-03",
+}, { // ------------------------------------------------------------------------
+"x": "UVI#3084 wasn't quite true because of UVI#3020 &amp; UVI#3021! Now you can ratchet to zero safety buffer on day one of any goal for real. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1169494587489964033",
+      "https://github.com/beeminder/beeminder/pull/767"],
+"d": "2019-09-03",
+"t": "2019-09-04",
+}, { // ------------------------------------------------------------------------
+"x": "Beedroid version 3.2.1 makes everything not be pink (this was a real thing) in Android 10. Also a #bugfix from 3.2.0 that broke summary widgets in Android 9!",
+"u": ["https://twitter.com/beemuvi/status/1169492201841127425",
+      "https://forum.beeminder.com/t/all-my-widgets-are-in-the-pink/5641",
+      "https://github.com/beeminder/beedroid-hist/tree/v3.2.1",
+      "https://github.com/beeminder/beedroid/issues/107"],
+"d": "2019-09-04",
+"t": "2019-09-04",
+"c": "By Adam. The summary widgets in Android 9 thing was probably replaced fast enough that no one saw it.",
+}, { // ------------------------------------------------------------------------
+"x": "We briefly broke goals created via the API (hello @CompliceGoals) for a few days after UVI#3097 (you'd get a 500 error when visiting the goal page). #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1169845879106240513",
+      "https://github.com/beeminder/beeminder/issues/755"],
+"d": "2019-08-09",
+"t": "2019-09-05",
+"c": "Default pledge wasn't getting set up right",
+}, { // ------------------------------------------------------------------------
+"x": "We now say \"scheduled change\" (for when your pledge is going to drop) not \"pending change\" because it turns out that's very easy to misread as \"pending charge\"",
+"u": ["https://twitter.com/beemuvi/status/1170229105456898049",
+      "https://github.com/beeminder/beeminder/pull/773"],
+"d": "2019-09-05",
+"t": "2019-09-06",
+}, { // ------------------------------------------------------------------------
+"x": "Changed a couple instances of \"email support@beeminder\" to add the \".com\" and got rid of the lingering reference to Intercom chat on http://beeminder.com/contact",
+"u": ["https://twitter.com/beemuvi/status/1170230569373843456",
+      "https://github.com/beeminder/beeminder/pull/772",
+      "https://github.com/beeminder/beeminder/commit/9c30a19578a4a76f3117f0040a83df3baa8b0f75",
+      "https://github.com/beeminder/beeminder/pull/763"],
+"t": "2019-09-06",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, /* --------------------------------------------------------- end 2019sep */ ]
+
+var staged = [ {
+}, { // ------------------------------------------------------------------------ 
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, /* ---------------------------------------------------------- end staged */ ]
 
 /*********************************************************************************************************************************************************************
 ~~~~~~----------------------------- METASTAGED -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
 }, { // ------------------------------------------------------------------------
-black rectangle thing (when deployed): https://github.com/beeminder/road/issues/78
+}, { // ------------------------------------------------------------------------
+maybe the slight beebrain speedup
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+[not a uvi; was a followon to uvis about restart bug above]
+fix razory road restart thing
+for razory roads asking for 0 buffer on restart, there could have been
+edge cases where the goal restarted in the red. since the restart row is
+getting added for yesterday, then don't discard the buffer row if
+mercX=0
+https://github.com/beeminder/beeminder/commit/1b94625e8ec4ee8b9ce703d59e28f452c7d51ca4
+Author: Bethany Marie Soule <bsoule@gmail.com>
+Date:   2019-08-23 (Fri, 23 Aug 2019)
+Changed paths:
+    M app/models/goal.rb
+}, { // ------------------------------------------------------------------------
+[maybe a UVI? odometer resets are still not great. but this is kind of just a special case of [1750?] for odometers, which were already sometimes adding an extra datapoint when restarting the goal?]
+don't add placeholder if adding odom reset also
+https://github.com/beeminder/beeminder/commit/2e80df2f7d946026bbcd680ad18252293dbdd1f3
+Author: Bethany
+Date:   2019-08-23 (Fri, 23 Aug 2019)
+Changed paths:
+    M app/models/goal.rb
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
+SCHEDGE:
+1. got rid of the "Increase the pledge each time you derail" checkbox on the goal page
 }, { // ------------------------------------------------------------------------
 fixes timeouts in jsbrain_server? https://github.com/beeminder/road/issues/51
 }, { // ------------------------------------------------------------------------
@@ -1055,60 +1881,6 @@ https://github.com/beeminder/beeminder/pull/607
 }, { // ------------------------------------------------------------------------
 "x": "Super mini: removed \"Deprecated\" from the 'id' field in the api docs Goal resource -- https://changelog.beeminder.com/#2104 sort of myopically semi-broke the api, since we want you to use the slug as the identifier, but now you can change the goalname, so we'd definitely better keep the goal id around so api clients can piece things back together if someone goes and changes a goalname on them."
 "c": "it's super mini, but took lots of words to say the things."
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-BEEDROID UVIS:
-1. help page for android persistent notification
-2. Allow users to disable/enable Crashalytics
-   https://github.com/beeminder/beedroid-hist/pull/46/commits/b50a374c29489287436db0c25b9fd46990aa29d6
-3. Fix sort crash reported by mary
-   https://github.com/beeminder/beedroid-hist/pull/47
-4. Set zeno notifications to happen immediately at launch.
-   https://github.com/beeminder/beedroid-hist/pull/50
-5. fixed bug in fwomp page (reminder settings for all goals): the zeno checkboxes are now instead of getting covered up by the scrollbar
-   https://github.com/beeminder/beedroid/issues/64
-6. Sort goals alphabetically for 1-up widget configurator.
-   Work on Notifications on Android O.
-   Update Feedback View to tell us if users set Background Restrictions.
-   https://github.com/beeminder/beedroid-hist/pull/49
-7. More space between month and day
-   https://github.com/beeminder/beedroid-hist/pull/53
-   https://github.com/beeminder/beedroid/issues/73
-8. Fix incessant reminders
-   https://github.com/beeminder/beedroid-hist/pull/54
-9. Lumpy swipey indicator
-   https://github.com/beeminder/beedroid-hist/pull/55
-   https://github.com/beeminder/beedroid-hist/pull/56
-10. Notifications troubleshooting page
-    https://github.com/beeminder/beedroid-hist/pull/57
-11. Ungroups Android notifications (only counts if this is different from last public release)
-    https://github.com/beeminder/beedroid-hist/pull/58
-12. Race condition or whatever where zenos would sometimes happen every minute seems to have come out in the wash
-    https://github.com/beeminder/beedroid/issues/3
-13. Beeminder app starts when the phone boots up
-    https://github.com/beeminder/beedroid-hist/pull/61
-14. Reworks zeno reminders to know why and when the next one will come. This time and reason is shown on the Zeno Configuration screen.
-    Sorts goals on the Zeno Configuration screen.
-    https://github.com/beeminder/beedroid-hist/pull/60
-15. Added header text to Zeno Configuration screen
-    https://github.com/beeminder/beedroid-hist/pull/62
-16. Minor visual changes
-    https://github.com/beeminder/beedroid/issues/60
-17. Push notifications improved? something about graphs that don't stop refreshing
-    https://github.com/beeminder/beedroid/issues/36
-18. Notification channels?
-    https://github.com/beeminder/beedroid/issues/54
-19. Better timey-wimey parsing
-    https://github.com/beeminder/beedroid/issues/50
-    https://github.com/beeminder/beedroid/issues/51
-    https://github.com/beeminder/beedroid/issues/55
-    https://github.com/beeminder/beedroid-hist/pull/63
-20. Maybe not net UVI: Adjusts spacing in Goal Detail View to add an extra row of data
-    https://github.com/beeminder/beedroid-hist/pull/65
-21. Show onboarding when there are no goals
-    https://github.com/beeminder/beedroid/issues/14
-}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -1129,8 +1901,6 @@ offred bb param: https://github.com/beeminder/beeminder/commit/bff8c9f382c83458b
 ~~~~~~----------------------------- CANDIDATES -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
 wordpress plugin: github.com/beeminder/beeminder-ping
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -1145,6 +1915,7 @@ wordpress plugin: github.com/beeminder/beeminder-ping
 6. proper buttons on the blog like at the end of blog.beeminder.com/strava
 7. strava activity links on the datapoints page <= do that too for IFTTT and runkeeper where we get an event/recipe URI from the service
 ~~~~~~-------------------- TOO LATE / TOO LAME -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
+* killing intercom: https://github.com/beeminder/beeminder/issues/633
 * milk static-401 for more uvis? 
   - fixing/obviating the banner bug
   - make it all work the same via the API
