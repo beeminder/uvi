@@ -164,8 +164,25 @@ var batch = [{
 "u": "https://forum.beeminder.com/t/introducing-mary-renaud-as-chief-executive-intern/4774",
 "t": "2019-04-03",
 }, { // ------------------------------------------------------------------------
-"x": "Hired Jonathan Courtney",
+"x": "A new contractor, Jonathan Courtney, has joined the team to do support and take on some administrative projects, so that we can move our beemgro projects forward faster! Welcome to the team, Jon!",
+"u": "https://twitter.com/beemgro/status/1124280348743995392",
 "t": "2019-04-30",
+}, { // ------------------------------------------------------------------------
+"x": "We're launching @helpscout for the two main support workerbees today, and rolling it out to the rest of the team over the coming days and weeks. This'll make support more scalable, and will eventually let our (incredible) support bees see more of your account info 👀 at a glance.",
+"u": "https://twitter.com/beemgro/status/1134806688593317890",
+"t": "2019-05-31",
+}, { // ------------------------------------------------------------------------
+"x": "The awesome @adamwwolf will now be spending more time on Beeminder, bringing to it all the skill and knowledge (and niceness!) from which it has already benefited, only now for more time! We couldn't 🐝 more excited. This is utterly excellent news for Beeminder's ability to grow.",
+"u": "https://twitter.com/beemgro/status/1143240688395542528",
+"t": "2019-06-24",
+}, { // ------------------------------------------------------------------------
+"x": "A year ago we raised the price of the Infinibee plan from $4/month to $8/month. We've now flipped the switch on everyone who was grandfathered into the old price for the year so that everyone is on the same pricing model.",
+"u": "https://twitter.com/beemgro/status/1156761195598274560",
+"t": "2019-07-31",
+}, { // ------------------------------------------------------------------------
+"x": "Beeminder now has a Canadian branch from which to hang a hive. 🇨🇦 Hmm... does this mean we have to learn how to say \"sorry\" in French?",
+"u": "https://twitter.com/beemgro/status/1167243238773841922",
+"t": "2019-08-29",
 }, /* ----------------------------------------------------------- end batch */ ]
 
 

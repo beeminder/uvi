@@ -391,6 +391,81 @@ var batch = [{
 "t": "2019-05-24",
 "u": ["https://github.com/beeminder/beeminder/commit/8176120eb05da355f089c5858367b06a4b1ff787",
 "https://twitter.com/beeminfra/status/1132159125662552064"]
+}, { // ------------------------------------------------------------------------
+"x": "Made test accounts for dronebee testing and only pretend charge them",
+"t": "2019-05-31",
+"d": "2019-05-02",
+"u": ["https://github.com/beeminder/beeminder/commit/2942a7b2f965ad010ec5a348d5446531d80604d6",
+"https://twitter.com/beeminfra/status/1134464696721915906"]
+}, { // ------------------------------------------------------------------------
+"x": "Rake task for anonymizing and dumping goal pledge, rate, completion & other info, For Science!",
+"u": ["https://github.com/beeminder/beeminder/commit/0996723fb97c1082c888b7d68ae6ba103acfff8a",
+      "https://github.com/beeminder/beeminder/commit/c9e25b3a904f61d014046ea18a1bcee19d9dfa0f",
+"https://twitter.com/beeminfra/status/1137029442818125825"],
+"d": "2019-05-29",
+"t": "2019-06-07"
+}, { // ------------------------------------------------------------------------
+"x": "two very minor, unrelated code cleanup things; removing unused code from registration controller, making use of spaces consistent in user mailer.",
+"u": ["https://github.com/beeminder/beeminder/commit/4c02190ffa65543e6e38f590e29b0795b0bfc27c",
+"https://github.com/beeminder/beeminder/commit/660bef5841dad4bc087cdb41705a83109bb84e29",
+"https://twitter.com/beeminfra/status/1139786958782136325"],
+"d": "2019-05-15",
+"t": "2019-06-14"
+}, { // ------------------------------------------------------------------------
+"x": "Added a test for a new version of hhmm formatting that we added to our time utils in https://changelog.beeminder.com/#3049",
+"u": ["https://github.com/beeminder/beeminder/commit/745e709fe6074e71a9a2ef04051a09b18ff7d937",
+"https://twitter.com/beeminfra/status/1142282362400595968"],
+"t": "2019-06-21",
+"d": "2019-06-07"
+}, { // ------------------------------------------------------------------------
+"x": "Updated tests to keep abreast of changes to the \"Pledge your money\" part of new goal creation",
+"u": ["https://github.com/beeminder/beeminder/commit/9cb7e6f9fa64c0d54c6369cc0968a6a175aacdf2",
+"https://github.com/beeminder/beeminder/commit/d40b39122ed2dd0b520e8c2ec769fb85b6e77227",
+"https://github.com/beeminder/beeminder/commit/6130153761be9cf2037620e4f8b7f6bdd89c64af",
+"https://github.com/beeminder/beeminder/commit/c6f816159ac9c57bfcd794fe74d4ed3e761c3213",
+"https://twitter.com/beeminfra/status/1144828184724041728"
+],
+"d": "2019-06-25",
+"t": "2019-06-28"
+}, { // ------------------------------------------------------------------------
+"x": "refactoring of pledge schedule, parameterizing all the min pledge, max pledge, etc, so that we can swap in different schedules to try out.",
+"u": ["https://twitter.com/beeminfra/status/1147351139345502208",
+],
+"d": "2019-07-04",
+"t": "2019-07-05"
+}, { // ------------------------------------------------------------------------
+"x": "Some utility functions for calculating subscription amounts, frequency multipliers, and for getting the nominal amount back based on the charged amount",
+"t": "2019-07-31",
+"d": "2019-07-26",
+"u": ["https://github.com/beeminder/beeminder/commit/59052e43f2ba841112021efb6d4071c57bbb00f4",
+"https://twitter.com/beeminfra/status/1156790284807598081"]
+}, { // ------------------------------------------------------------------------
+"x": "added additional logging info and error handling to help debug a persistent rescuetime error",
+"d": "2019-08-07",
+"t": "2019-08-07",
+"u": ["https://github.com/beeminder/beeminder/pull/651"]
+}, { // ------------------------------------------------------------------------
+"x": "killed several unused airhorns (deadman, accounts error, and an unsubscribe)",
+"d": "2019-08-07",
+"t": "2019-08-07",
+"u": ["https://github.com/beeminder/beeminder/pull/719"]
+}, { // ------------------------------------------------------------------------
+"x": "Wrote tests for reminder and zeno text for the sms and email bots (and refactored code to move them to a common location).",
+"u": ["https://github.com/beeminder/beeminder/commit/d50ba57a3b0aa967fd0e90dc1a517c0cc7e2cc5e",
+"https://github.com/beeminder/beeminder/commit/d29dd9b1d1559c8f689aed685f9146435af4cbbb",
+"https://github.com/beeminder/beeminder/commit/ca5e5da87093d9c74bafe5d464e7bad858700e17"],
+"t": "2019-08-19"
+}, { // ------------------------------------------------------------------------
+"x": "fixed an issue in capybara config that was causing circular dependency errors in tests.",
+"u": ["https://github.com/beeminder/beeminder/pull/743/commits/76c5282d10b339da34b19387f144431bdcde959c",
+"https://twitter.com/beeminfra/status/1166943405416407041"],
+"t": "2019-08-28"
+}, { // ------------------------------------------------------------------------
+"x": "Added tests for amount of initial safety buffer at goal creation for weight loss, do more, & do less goals",
+"u": ["https://github.com/beeminder/beeminder/pull/743/commits/76c5282d10b339da34b19387f144431bdcde959c",
+"https://twitter.com/beeminfra/status/1166943513306521600"
+],
+"t": "2019-08-28"}, { // ------------------------------------------------------------------------
 }, /* ----------------------------------------------------------- end batch */ ]
 
 var staged = [ { // note: sub-entries not allowed here in staging
@@ -400,24 +475,23 @@ var staged = [ { // note: sub-entries not allowed here in staging
 METASTAGED: --10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
 https://github.com/beeminder/beeminder/commit/
 
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-commit 2942a7b2f965ad010ec5a348d5446531d80604d6
-Author: Bethany Marie Soule <bsoule@gmail.com>
-Date:   Thu May 2 16:07:18 2019 -0700
 
-    don't charge test[subscription] accts for rea
+
+
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+TODO:
+don't make title required and then do javascript contortions to deal with it
+///// TOO LATE OR TOO LAME: ____________________________________________________
+swaps GCM for FCM (maybe user visible because related to keeping notifications running?)
+https://github.com/beeminder/beeminder/commit/177a3abb00706478dac1af64561406e430db2cce
 }, { // ------------------------------------------------------------------------
 commit ffce36d7b2ea18c340f4e6eba9046dd1fc8a28bc
 Author: Daniel Reeves <dreeves@beeminder.com>
 Date:   Thu Apr 18 13:25:30 2019 -0700
-
     Dogfood mandate tweakage
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-
 TODO MAYBE:
 https://github.com/beeminder/beeminder/commit/a09ccc95eb0eb24d084d9841be5bf6259abad9d0
 Date:   Thu Dec 27 22:52:01 2018 -0800
@@ -430,14 +504,5 @@ GitHub APP [23:19]
 HACKNIGHT:
 * find nginx change for gzip svgs as well -- maybe INFRA?
 * fix withings refreshjob airhorns -- INFRA
-we've got jsbrain running in parallel on one of the production servers to test the outputs
-https://github.com/beeminder/beeminder/commit/1fc716790cd475
 }, { // ------------------------------------------------------------------------
-swappable method for calling jsbrain from ruby 
-error handling around that call to jsbrain (from ruby) & logging comparative times to generate the outputs
-https://github.com/beeminder/beeminder/commit/123a21ae5199799f6811
-}, { // ------------------------------------------------------------------------
-TODO:
-don't make title required and then do javascript contortions to deal with it
-
 */

@@ -84,7 +84,7 @@ function linkify(s) {
   // Don't try to do this magic if the string already had html because otherwise
   // it breaks if there was an @-mention inside a title attribute:
   if (!alreadyMarkup) {
-    s = s.replace(/([^"'>]|^)@(\w+)\b/g, 
+    s = s.replace(/([^"'>\w]|^)@(\w+)\b/g, 
                   '$1<a href="https://twitter.com/$2">@$2</a>')
   }
   s = s.replace(/UVI#(\d+)/g, '<a href="#$1">UVI#$1</a>')
