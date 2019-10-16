@@ -465,7 +465,25 @@ var batch = [{
 "u": ["https://github.com/beeminder/beeminder/pull/743/commits/76c5282d10b339da34b19387f144431bdcde959c",
 "https://twitter.com/beeminfra/status/1166943513306521600"
 ],
-"t": "2019-08-28"}, { // ------------------------------------------------------------------------
+"t": "2019-08-28"}, 
+{ // ------------------------------------------------------------------------
+"x": "Added tests for pledge caps and for increasing pledges (a Beemium perk) and decreasing pledges on the goal page.",
+"u": ["https://github.com/beeminder/beeminder/pull/738/commits/9759d6487f77c271a7a4bce92b0be3ac233a4f93",
+"https://twitter.com/beeminfra/status/1172033826618372098"]
+}, { // ------------------------------------------------------------------------
+"x": "Made it slightly easier for new devs to get their development environment up and running by checking in the jsnonce dir (for beebrain outputs)",
+"u": ["https://github.com/beeminder/beeminder/pull/759",
+"https://twitter.com/beeminfra/status/1174531837852450816"]
+}, { // ------------------------------------------------------------------------
+"x": "Moved the 'delete goal' button in the admin interface harder to accidentally click by separating it from other UI elements",
+"u": ["https://github.com/beeminder/beeminder/pull/805",
+"https://twitter.com/beeminfra/status/1177039299113472001"]
+}, { // ------------------------------------------------------------------------
+"x": "Added tests for the new behavior in api datapoints endpoint. Verify that nothing changes if new parameters aren't sent in, and sanity check new params.",
+"u": ["https://github.com/beeminder/beeminder/commit/ffd9ee2a1499d59403b3bf3e9aec30cfc0b6e274","https://twitter.com/beeminfra/status/1179648613930037248"]
+}, { // ------------------------------------------------------------------------
+"x": "Automon! Fancy automated continuous testing for Beebrain using a suite of test goals. Does pixel diffs of the graphs and everything. Uluc is amazing.",
+"u": ["https://github.com/beeminder/road/tree/master/automon", "https://twitter.com/beeminfra/status/1182268709361971201"],
 }, /* ----------------------------------------------------------- end batch */ ]
 
 var staged = [ { // note: sub-entries not allowed here in staging
@@ -479,6 +497,10 @@ https://github.com/beeminder/beeminder/commit/
 
 
 }, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 TODO:

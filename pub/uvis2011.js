@@ -708,15 +708,18 @@ var batch2011aug = [
 "u": "https://twitter.com/beemuvi/status/98864211802861568",
 "t": "2011-08-03 21:13:59 +0000",
 }, /*************************************************************************/ {
-"x": "Signed in users have a Road Dial (not really a dial) to adjust the steepness of the Yellow Brick Road as they go.",
+"f": true,
+"x": "Signed in users have a Road Dial (not really a dial) to adjust the steepness of the Yellow Brick Road as they go",
 "u": "https://twitter.com/beemuvi/status/99526864497934336",
 "t": "2011-08-05 17:07:08 +0000",
 }, /*************************************************************************/ {
+"f": true,
 "x": "Signed in users can create new goals. (And thanks for all the awesome feedback from our beta users; keep it coming!)",
 "u": "https://twitter.com/beemuvi/status/101158450960150528",
 "t": "2011-08-10 05:10:28 +0000",
 }, /*************************************************************************/ {
-"x": "Signed in users will see a reset button to try again when you go off your yellow brick road.",
+"f": true,
+"x": "Signed in users will see a reset button to try again when you go off your yellow brick road",
 "u": "https://twitter.com/beemuvi/status/101495496597704704",
 "t": "2011-08-11 03:29:46 +0000",
 }, /*************************************************************************/ {
@@ -724,6 +727,7 @@ var batch2011aug = [
 "u": "https://twitter.com/beemuvi/status/101495833098321920",
 "t": "2011-08-11 03:31:06 +0000",
 }, /*************************************************************************/ {
+"f": true,
 "x": "Commitment contracts are built in. See <a href=\"http://bmndr.com/money\">bmndr.com/money</a>",
 "u": "https://twitter.com/beemuvi/status/101816894595674113",
 "t": "2011-08-12 00:46:53 +0000",
@@ -891,6 +895,7 @@ var batch2011sep = [
 "u": "https://twitter.com/beemuvi/status/115915422133534720",
 "t": "2011-09-19 22:29:24 +0000",
 }, /*************************************************************************/ {
+"f": true,
 "x": "You can now talk to the Beeminder bot via text message: <a href=\"http://blog.beeminder.com/textbot\">blog.beeminder.com/textbot</a>",
 "u": "https://twitter.com/beemuvi/status/116644972001902592",
 "t": "2011-09-21 22:48:23 +0000",
@@ -1022,6 +1027,7 @@ var batch2011oct = [
 "u": "https://twitter.com/tagtm/status/121686159633027072",
 "t": "2011-10-05 20:40:15 +0000",
 }, /*************************************************************************/ {
+"f": true,
 "x": "Massive UVI: We're proud & excited to announce that <a href=\"https://twitter.com/bmndr\">@bmndr</a> is now open to the public. Immense thanks to our beta users. <a href=\"http://bmndr.com\">bmndr.com</a>",
 "u": "https://twitter.com/beemuvi/status/123657746368307200",
 "t": "2011-10-11 07:14:38 +0000",
