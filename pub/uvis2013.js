@@ -737,6 +737,7 @@ var batch2013jul = [
 "x": "The goal gallery now shows a check mark next to goals that have had data added today, so you know what still needs attention. HT W Gerritsen",
 "u": "https://twitter.com/beemuvi/status/351755389936734208",
 "t": "2013-07-01 17:33:14 +0000",
+"c": "AKA the todayta checkmark",
 }, /*************************************************************************/ {
 "x": "We had people misunderstand \"unlimited freebees\" so we made it more generous; see \"UPDATE\" on <a href=\"http://blog.beeminder.com/premium\">blog.beeminder.com/premium</a>",
 "u": "https://twitter.com/beemuvi/status/354633763474505730",
