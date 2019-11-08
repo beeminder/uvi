@@ -183,6 +183,13 @@ var batch = [{
 "x": "Beeminder now has a Canadian branch from which to hang a hive. 🇨🇦 Hmm... does this mean we have to learn how to say \"sorry\" in French?",
 "u": "https://twitter.com/beemgro/status/1167243238773841922",
 "t": "2019-08-29",
+}, { // ------------------------------------------------------------------------
+"x": "We made changes to our dogfood rules -- check 'em out: http://blog.beeminder.com/dogfood Now we're paying money out to random premium folks for way more goals. How's that growth-y? Dogfooding is inherently growth-y. Walking in your users' shoes keeps you focused on more of the right things!",
+"u": "https://twitter.com/beemgro/status/1188955696525697026",
+"t": "2019-10-28",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, /* ----------------------------------------------------------- end batch */ ]
 
 
