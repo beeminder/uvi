@@ -2053,115 +2053,275 @@ var batch2019oct = [{
 "t": "2019-10-14",
 "c": "HT @ShapeOfMatter",
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, /* --------------------------------------------------------- end 2019oct */ ]
-
-
-var staged = [ {
-}, { // ------------------------------------------------------------------------ 
-"x": "#bugfix for indecisive or curious folks: if you switched to old pledge schedule then back to new schedge, even if you asked for a $5 goal, you'd get a $1 goal",
-"u": [
+"x": "For indecisive or curious folks: if you switched to old pledge schedule then back to new schedge, even if you asked for a $5 goal, you'd get a $1 goal. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1184644848986415105",
       "https://github.com/beeminder/beeminder/issues/837",
       "https://github.com/beeminder/beeminder/pull/843"],
 "d": "2019-10-10",
-"t": "2019-10-14",
+"t": "2019-10-16",
 "c": "Steps to reproduce: click 'use old schedule', then click it a second time to unselect, then finish up the goal with $5 initial pledge selected",
 }, { // ------------------------------------------------------------------------
 "x": "If you have Pessimistic Presumptive Reports (PPRs) turned off (they're always off for autodata goals) then we no longer show a ghosty PPR on the graph. #bugfix",
-"u": [
+"u": ["https://twitter.com/beemuvi/status/1184644931656118272",
+      "https://github.com/beeminder/beeminder/commit/f22f42e320f1c52455517ce43866b60aa062e08a",
       "https://github.com/beeminder/beeminder/issues/817",
       "https://github.com/beeminder/beeminder/issues/823",
       "https://github.com/beeminder/beeminder/pull/828"],
 "d": "2019-10-11",
-"t": "2019-10-14",
+"t": "2019-10-16",
 "c": "In effect now that we send the 'ppr' field to Beebrain",
 }, { // ------------------------------------------------------------------------
 "x": "Our early Strava adopters had old-style tokens, which Strava just got rid of. We migrated your tokens to avoid downtime with your goals. Related: UVI#2842",
-"u": [
+"u": ["https://twitter.com/beemuvi/status/1184645362713120768",
       "https://github.com/beeminder/beeminder/issues/793"],
 "d": "2019-10-14",
-"t": "2019-10-14",
-"c": "Also, we made a minor tweak to refreshing the oauth tokens, also storing expiry, for robustness. Maybe this point is unnecessary / uninteresting / infratastic?",
+"t": "2019-10-16",
+"c": "And we emailed a few people who we couldn't seamlessly migrate. Also, we made a minor tweak to refreshing the oauth tokens, also storing expiry, for robustness. Maybe this point is unnecessary / uninteresting / infratastic?",
+}, { // ------------------------------------------------------------------------
+"x": "Updated the webcopy at the top of http://beeminder.com/changelog in light of the new dogfood world order. #mini",
+"u": ["https://twitter.com/beemuvi/status/1184645492522676224",
+      "https://github.com/beeminder/uvi/pull/44"],
+"d": "2019-10-14",
+"t": "2019-10-16",
+}, { // ------------------------------------------------------------------------
+"x": "The emails that give your delta w.r.t. the yellow brick road now mention your goal units, which is slightly clearer. #beebrain",
+"u": ["https://twitter.com/beemuvi/status/1184645607509544960",
+      "https://github.com/beeminder/road/commit/4887570f05620a4f30185e7e38628a47cb8a61b4"],
+"d": "2019-10-15",
+"t": "2019-10-16",
+"c": "Updated the deltasum Beebrain output field which goal_mailer uses.",
+}, { // ------------------------------------------------------------------------
+"x": "We now warn you when removing an autodata service, like \"Are you sure? You have 2 active Withings goals. If you remove the service your goals may derail.\"",
+"u": ["https://twitter.com/beemuvi/status/1184645768189108225",
+      "https://github.com/beeminder/beeminder/issues/415",
+      "https://github.com/beeminder/beeminder/pull/848"],
+"d": "2019-10-16",
+"t": "2019-10-16",
+"c": "We already had a banner that would warn you if the service was disconnected but better to also warn when the user's doing the disconnecting",
+}, { // ------------------------------------------------------------------------
+"x": "Autodestructing PPRs now even more autodestructing: if you edit another datapoint's date to be the same as a PPR, the PPR self-destructs. HT @PhilipHellyer",
+"u": ["https://twitter.com/beemuvi/status/1185089453510950914",
+      "https://github.com/beeminder/beeminder/issues/420",
+      "https://github.com/beeminder/beeminder/commit/8dd0e3ec9e5cd26438b255ae958e839c7ef8913a"],
+"d": "2019-10-17",
+"t": "2019-10-17",
+}, { // ------------------------------------------------------------------------
+"x": "If you tried to unset mercy days (clear the field and then submit the form) we'd give a 500 error. Now you get a nice error that it has to be a number. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1185236066288070656",
+      "https://github.com/beeminder/beeminder/pull/860",
+      "https://github.com/beeminder/beeminder/issues/469",
+      "https://github.com/beeminder/beeminder/commit/62866a3cf87e158ac673e67a1ebca5a15fdef9bd"],
+"d": "2019-10-17",
+"t": "2019-10-17",
+"c": "Specifically: 'Days of Mercy must in the range 0-30', same as it says for an out of range number",
+}, { // ------------------------------------------------------------------------
+"x": "Per http://blog.beeminder.com/dogfood , we've listed \"A chance to win our derailment charges\" as a premium perk at http://beeminder.com/premium",
+"u": ["https://twitter.com/beemuvi/status/1185443973738840064",
+      "https://github.com/beeminder/beeminder/issues/862",
+      "https://github.com/beeminder/beeminder/pull/863"],
+"d": "2019-10-18",
+"t": "2019-10-18",
+}, { // ------------------------------------------------------------------------
+"x": "Do-less retroratchet could derail you when there was an upcoming rate change scheduled in your road! #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1186548775998767104",
+      "https://github.com/beeminder/beeminder/issues/868",
+      "https://github.com/beeminder/beeminder/pull/869"],
+"d": "2019-10-21",
+"t": "2019-10-21",
+"c": "Because the automatic road adjustment would retroactively apply that final (i.e., after-change) road rate to the section before your ratchet",
+}, { // ------------------------------------------------------------------------
+"x": "Hashtags (cf UVI#2787) can now have unicode characters",
+"u": ["https://twitter.com/beemuvi/status/1187273027001536512",
+      "https://github.com/beeminder/road/issues/89"],
+"d": "2019-10-21",
+"t": "2019-10-21",
+}, { // ------------------------------------------------------------------------
+"x": "We added gunits (goal units), hhmmformat (timey-wimey), and todayta (data entered today) fields to the API and updated http://beeminder.com/api",
+"u": ["https://twitter.com/beemuvi/status/1187273128256266240",
+      "https://github.com/beeminder/beeminder/pull/865"],
+"d": "2019-10-22",
+"t": "2019-10-22",
+"c": "By Adam",
+}, { // ------------------------------------------------------------------------
+"x": "Oops, Stripe gives us amounts in cents instead of dollars and our CSV export of charges was inconsistent. Fixed with division technology. #bugfix HT phi",
+"u": ["https://twitter.com/beemuvi/status/1187273295164346368",
+      "https://github.com/beeminder/beeminder/issues/872",
+      "https://forum.beeminder.com/t/some-long-standing-bugs-i-would-like-to-see-resolved/5921/7?u=dreev"],
+"d": "2019-10-23",
+"t": "2019-10-23",
+}, { // ------------------------------------------------------------------------
+"x": "We now prevent the creation of charges (via IFTTT or the API) that are less than $1 since those would fail anyway due to technical limitations of credit cards",
+"u": ["https://twitter.com/beemuvi/status/1189280912657309696",
+      "https://github.com/beeminder/beeminder/pull/874"],
+"d": "2019-10-23",
+"t": "2019-10-29",
+}, { // ------------------------------------------------------------------------
+"x": "The alert email we send if you create an invalid charge with our IFTTT channel now includes the (new) error message telling you that charges must be >= $1",
+"u": ["https://twitter.com/beemuvi/status/1189281035839770630",
+      "https://github.com/beeminder/beeminder/pull/878"],
+"d": "2019-10-24",
+"t": "2019-10-29",
+}, { // ------------------------------------------------------------------------
+"x": "Sneak peek of Yellow Brick Half-Plane visuals: daily beemail subscribers with zero-width custom goals can now check the YBHP box to see colored regions",
+"u": ["https://twitter.com/beemuvi/status/1189281127107891205",
+      "https://github.com/beeminder/beeminder/pull/884",
+      "https://github.com/beeminder/beeminder/commit/e24f00c0d40f6be31af8887588f2f61ca9268145"],
+"d": "2019-10-25",
+"t": "2019-10-29",
+}, { // ------------------------------------------------------------------------
+"x": "We no longer suppress zeno alerts for do-zero (do-less with flat slope) goals. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1189281225921515522",
+      "https://github.com/beeminder/beeminder/issues/870",
+      "https://github.com/beeminder/beeminder/pull/873"],
+"d": "2019-10-23",
+"t": "2019-10-29",
+"c": "This is related to the new Beebrain ghosty PPRs (UVI#3147-UVI#3162) but the suppression was happening all along (unless you were actually on the wrong side of the flat road).",
+}, { // ------------------------------------------------------------------------
+"x": "We would sometimes needlessly repeat a Duolingo autodata datapoint even when your XP hadn't changed. Now we don't. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1189281298923315206",
+      "https://github.com/beeminder/beeminder/issues/891"],
+"d": "2019-10-28",
+"t": "2019-10-29",
+"c": "This was because the internal sorting we used for datapoints was not by ID so we when checking the last datapoint we'd sometimes get something that wasn't actually the last datapoint.",
+}, { // ------------------------------------------------------------------------
+"x": "We now remember the sort you had picked for datapoints last time you were on the data tab and restore it when you come back",
+"u": ["https://twitter.com/beemuvi/status/1191477802647736321",
+      "https://github.com/beeminder/beeminder/issues/791"],
+"d": "2019-10-30",
+"t": "2019-11-04",
+}, { // ------------------------------------------------------------------------
+"x": "We now show the arrow indicator on Date Entered on the data tab when you first load the page. #bugfix #mini",
+"u": ["https://twitter.com/beemuvi/status/1191478000421752832",
+      "https://github.com/beeminder/beeminder/issues/791"],
+"d": "2019-10-30",
+"t": "2019-11-04",
+"c": "We defaulted to sorting by Date Entered all along but only indicated that with the little arrow if you explicitly clicked on it",
+}, { // ------------------------------------------------------------------------
+"x": "Ascending/descending-ness of data sorting is no longer wonky/confusing: only toggle it if you click the header twice in a row, not for switching columns!",
+"u": ["https://twitter.com/beemuvi/status/1191478206466904064",
+      "https://github.com/beeminder/beeminder/issues/791"],
+"d": "2019-10-30",
+"t": "2019-11-04",
+}, { // ------------------------------------------------------------------------
+"x": "We weren't defaulting to descending order for dates the first time you clicked a column on the Data tab. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1191478390303293440",
+      "https://github.com/beeminder/beeminder/issues/791"],
+"d": "2019-10-30",
+"t": "2019-11-04",
+}, { // ------------------------------------------------------------------------
+"x": "Submitting a datapoint to the API w/ a bad timestamp now gives a helpful error (\"did you give us milliseconds instead of seconds?\") instead of barfing. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1191750163217313792",
+      "https://github.com/beeminder/beeminder/pull/902",
+      "https://github.com/beeminder/beeminder/issues/897"],
+"d": "2019-10-30",
+"t": "2019-11-05",
+"c": "Previously we would create the datapoint, and then choke on our own vomit.",
+}, /* --------------------------------------------------------- end 2019oct */ ]
+
+
+var batch2019nov = [{
+"x": "Project Euler integration #bugfix: we weren't sending the reminder emails for Project Euler goals (fixed before public launch)",
+"u": ["https://twitter.com/beemuvi/status/1191882388114038785",
+      "https://github.com/beeminder/beeminder/issues/879"],
+"d": "2019-10-24",
+"t": "2019-11-05",
+}, { // ------------------------------------------------------------------------
+"f": true,
+"x": "Project Euler integration is official! (Added to the front page gallery, etc, not to mention blogging about it.)",
+"u": ["https://twitter.com/beemuvi/status/1191882548852359168",
+      "https://blog.beeminder.com/projecteuler/",
+      "https://github.com/beeminder/beeminder/pull/816"],
+"t": "2019-11-05",
+}, { // ------------------------------------------------------------------------
+"x": "If all your goals are private we now say \"no public goals\" on your gallery page instead of just \"no goals\". HT @chriswaterguy",
+"u": ["https://twitter.com/beemuvi/status/1192541786708692992",
+      "https://twitter.com/chriswaterguy/status/1189663536143724544",
+      "https://github.com/beeminder/beeminder/pull/916"],
+"d": "2019-11-05",
+"t": "2019-11-07",
+}, { // ------------------------------------------------------------------------
+"x": "Scheduling a break was causing \"duplicate road row\" errors around Daylight Savings Time. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1192542386691293184",
+      "https://github.com/beeminder/beeminder/pull/914"],
+"d": "2019-11-07",
+"c": "We now de-dup the road as a final cleanup step when scheduling a break",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, /* --------------------------------------------------------- end 2019nov */ ]
+
+  
+var staged = [ {
+}, { // ------------------------------------------------------------------------
+"x": "Grammatical #bugfix: Say \"This goal gets its data automatically from the API\" instead of \"...from API\"",
+"u": [
+      "https://github.com/beeminder/beeminder/issues/918",
+      "https://github.com/beeminder/beeminder/pull/919",
+      "https://forum.beeminder.com/t/grammar-of-describtion-for-goals-without-manual-data-entry/5969/1"],
+"d": "2019-11-07",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+"f": true,
+"x": "Version 5.5 of the Beeminder iOS app!",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, /* ---------------------------------------------------------- end staged */ ]
 
 /*********************************************************************************************************************************************************************
 ~~~~~~----------------------------- METASTAGED -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
-project euler improvements
 }, { // ------------------------------------------------------------------------
-"x": "Updated the webcopy at the top of http://beeminder.com/changelog in light of the new dogfood world order. #mini",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+remove protocol & add trailing space to sms alert
+"u": [
+      "https://github.com/beeminder/beeminder/commit/63b192da1d1a84191d0bc77b2b19afecfe3e9d2d",
+      "https://github.com/beeminder/beeminder/issues/780"],
+"d": "2019-11-07",
+}, { // ------------------------------------------------------------------------
+CORS POLICY (not ready to be merged yet)
+https://github.com/beeminder/beeminder/commit/72c36fc6cad02442ee2fd0b62888a015346a0a25
+https://github.com/beeminder/beeminder/pull/906
+https://github.com/beeminder/beeminder/issues/895
+https://forum.beeminder.com/t/cors-support-and-workarounds/5935
+https://github.com/beeminder/beeminder/pull/899
+Date: 2019-10-29 (Tue)
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+BeemiOS 5.5 is in the app store; has the (hopefully final) fix for intermittently disappearing goals (née Nick Winter bug), fixes for Dark Mode so you can actually use the app if you have that enabled, and a couple other small things that iOS changed out from under us in 13.0 that made things weird
+"d": "2019-11-06",
+}, { // ------------------------------------------------------------------------
+beebrain hashtags accept underscores again
+https://github.com/beeminder/road/commit/8d336ac39b84efd2cdd5ecc29c2e5c472d268d4f
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+"x": "Show Project Euler in goal creation & supported list",
+"u": ["https://github.com/beeminder/beeminder/pull/816"],
+"d": "2019-09-27",
 
+(the pull request includes the following commits)
+show PE in goal creation: "https://github.com/beeminder/beeminder/commit/e885ab199751eed5fc2be9d0e52a4ede33a93de2"
+and supported list:       "https://github.com/beeminder/beeminder/commit/52f537febd03f9052a8be60dc2e5020112e65663"
+cleanup exceptions:       "https://github.com/beeminder/beeminder/commit/d473752b4af1285f42a8456f5657f4a5a6f6f0d1"
+
+"author": "adamwolf"
+}, { // ------------------------------------------------------------------------
+project euler improvements (fixed an airhorn which was caused by.. [adam wolf? was this user visible? maybe not?])
+https://github.com/beeminder/beeminder/issues/879
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-cleanup exceptions:
-https://github.com/beeminder/beeminder/commit/d473752b4af1285f42a8456f5657f4a5a6f6f0d1
-}, { // ------------------------------------------------------------------------
-Add Project Euler to supported list:
-https://github.com/beeminder/beeminder/commit/52f537febd03f9052a8be60dc2e5020112e65663 
-Author: Adam Wolf <adamwolf@feelslikeburning.com> Date: 2019-09-27 (Fri, 27 Sep 2019)
-}, { // ------------------------------------------------------------------------
-https://github.com/beeminder/beeminder/commit/e885ab199751eed5fc2be9d0e52a4ede33a93de2 Author: Adam Wolf <adamwolf@feelslikeburning.com> Date: 2019-09-27 (Fri, 27 Sep 2019)
-M app/assets/stylesheets/elf.scss 
-M app/views/elf/_entry.html.erb
-Show Project Euler in goal creation.
-}, { // ------------------------------------------------------------------------
-I still need to uncomment in supported and in elf.
-You can view, comment on, or merge this pull request online at:
-  https://github.com/beeminder/beeminder/pull/816
-}, { // ------------------------------------------------------------------------
-schedge switching bug?
-https://github.com/beeminder/beeminder/issues/837
-}, { // ------------------------------------------------------------------------
-Branch: refs/heads/ppr-gunit-bbrain
-  Home:   https://github.com/beeminder/beeminder
-  Commit: f22f42e320f1c52455517ce43866b60aa062e08a
-      https://github.com/beeminder/beeminder/commit/f22f42e320f1c52455517ce43866b60aa062e08a
-  Author: Bethany Marie Soule <bsoule@gmail.com>
-  Date:   2019-10-01 (Tue, 01 Oct 2019)
-  Changed paths:
-    M lib/gen_graph/writer.rb
-  Log Message:
-  -----------
-  send ppr & gunits to beebrain
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 https://github.com/beeminder/BeeSwift/pull/21
 }, { // ------------------------------------------------------------------------
-[not a uvi; was a followon to uvis about restart bug above]
-fix razory road restart thing
-for razory roads asking for 0 buffer on restart, there could have been
-edge cases where the goal restarted in the red. since the restart row is
-getting added for yesterday, then don't discard the buffer row if
-mercX=0
-https://github.com/beeminder/beeminder/commit/1b94625e8ec4ee8b9ce703d59e28f452c7d51ca4
-Author: Bethany Marie Soule <bsoule@gmail.com>
-Date:   2019-08-23 (Fri, 23 Aug 2019)
-Changed paths:
-    M app/models/goal.rb
 }, { // ------------------------------------------------------------------------
-[maybe a UVI? odometer resets are still not great. but this is kind of just a special case of [1750?] for odometers, which were already sometimes adding an extra datapoint when restarting the goal?]
-don't add placeholder if adding odom reset also
-https://github.com/beeminder/beeminder/commit/2e80df2f7d946026bbcd680ad18252293dbdd1f3
-Author: Bethany
-Date:   2019-08-23 (Fri, 23 Aug 2019)
-Changed paths:
-    M app/models/goal.rb
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -2170,8 +2330,6 @@ SCHEDGE:
 }, { // ------------------------------------------------------------------------
 fixes timeouts in jsbrain_server? https://github.com/beeminder/road/issues/51
 }, { // ------------------------------------------------------------------------
-might fix the problem with old toggl entries getting overwritten with lower values
-https://github.com/beeminder/beeminder/pull/607
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 "x": "Super mini: removed \"Deprecated\" from the 'id' field in the api docs Goal resource -- https://changelog.beeminder.com/#2104 sort of myopically semi-broke the api, since we want you to use the slug as the identifier, but now you can change the goalname, so we'd definitely better keep the goal id around so api clients can piece things back together if someone goes and changes a goalname on them."
@@ -2179,13 +2337,11 @@ https://github.com/beeminder/beeminder/pull/607
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-nokia back to withings?
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 wakatime integration?
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-project euler integration?
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------

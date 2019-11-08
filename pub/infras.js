@@ -484,6 +484,21 @@ var batch = [{
 }, { // ------------------------------------------------------------------------
 "x": "Automon! Fancy automated continuous testing for Beebrain using a suite of test goals. Does pixel diffs of the graphs and everything. Uluc is amazing.",
 "u": ["https://github.com/beeminder/road/tree/master/automon", "https://twitter.com/beeminfra/status/1182268709361971201"],
+}, { // ------------------------------------------------------------------------
+"x": "A little refactor of variable names in the code that adds PPRs, to make things more clear.",
+"u": ["https://github.com/beeminder/beeminder/commit/3d4ba74fcbebd2ff70a2bcb3ee034a754d5799e8", "https://twitter.com/beeminfra/status/1184610348394876929"]
+}, { // ------------------------------------------------------------------------
+"x": "don't load braintree's api in the test environment because it is slowing down tests unecessarily to make this many POSTs to them.",
+"u": ["https://github.com/beeminder/beeminder/commit/279f7f997b30ff00128ef3bf17acf723f5400f68",
+"https://twitter.com/beeminfra/status/1187165406642835456"]
+}, { // ------------------------------------------------------------------------
+"x": "Add the resque test worker to bee.sh startup scripts.",
+"u": ["https://github.com/beeminder/beeminder/pull/876",
+"https://twitter.com/beeminfra/status/1189746865345925120"]
+}, { // ------------------------------------------------------------------------
+"x": "Include the amount of a pending charge in the admin sidebar (plus a nicer helper for displaying it).",
+"u": ["https://github.com/beeminder/beeminder/pull/880",
+"https://twitter.com/beeminfra/status/1192212549699137536"]
 }, /* ----------------------------------------------------------- end batch */ ]
 
 var staged = [ { // note: sub-entries not allowed here in staging
@@ -494,12 +509,6 @@ METASTAGED: --10--------20--------30--------40--------50--------60--------70----
 https://github.com/beeminder/beeminder/commit/
 
 
-
-
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
 
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
