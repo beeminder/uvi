@@ -1,5 +1,5 @@
 var batch2018jan = [{
-"n": 2516,
+//"n": 2516,
 "f": true,
 "x": "(+) Version 4.9 of iOS app!",
 "u": ["https://twitter.com/beemuvi/status/948355879853744128",
@@ -7,7 +7,7 @@ var batch2018jan = [{
 "t": "2018-01-02",
 "c": "This isn't actually its own UVI, just a heading for 2 related UVIs",
 }, { // ------------------------------------------------------------------------
-"n": 2516,
+"n": false,
 "s": true,
 "x": "(1) Goals can now be sorted by name, deadline, pledge, and recently updated, just like on the web dashboard",
 "u": ["https://twitter.com/beemuvi/status/948355879853744128",
@@ -16,14 +16,14 @@ var batch2018jan = [{
 "t": "2018-01-02",
 "c": "NB: This and the parent UVI are both #2516 because they were tweeted as the same UVI",
 }, { // ------------------------------------------------------------------------
-"n": 2517,
+//"n": 2517,
 "s": true,
 "x": "(2) The Settings screen got a (mostly cosmetic) overhaul",
 "u": ["https://twitter.com/beemuvi/status/948357286572933120",
       "https://github.com/beeminder/BeeSwift/commit/f891b4501ec01c6236bddc6fc50b9f654584b124"],
 "t": "2018-01-02",
 }, { // ------------------------------------------------------------------------
-"n": 2518,
+//"n": 2518,
 "f": true,
 "x": "And version 5.0 of iOS app has Timer Mode: from a goal screen, tap the timer icon to bring up a timer screen and easily submit datapoints for timed activities",
 "u": ["https://twitter.com/beemuvi/status/948719133595594752",
@@ -164,7 +164,7 @@ var batch2018jan = [{
 "d": "2018-01-23",
 "t": "2018-01-23",
 }, { // ------------------------------------------------------------------------
-"n": 2542,
+//"n": 2542,
 "x": "There's now a chat button at the bottom of every page on beeminder.com for giving us quick feedback or asking questions",
 "u": ["https://twitter.com/beemuvi/status/956328871028187136",
       "https://github.com/beeminder/beeminder/commit/ff808376c7e5140356efe829c1553d1d1dcf540e"],
@@ -548,14 +548,14 @@ var batch2018mar = [{
 "t": "2018-03-19",
 }, { // ------------------------------------------------------------------------
 "f": true,
-"n": 2598,
+//"n": 2598,
 "x": "(+) Beeminder Android App version 2.6.2!",
 "u": ["https://twitter.com/beemuvi/status/976239399057858560"],
 "d": "2018-03-08",
 "t": "2018-03-20",
 "c": "By Adam Wolf. First public Beedroid release in the Adam era.",
 }, { // ------------------------------------------------------------------------
-"n": 2598,
+"n": false,
 "s": true,
 "x": "New feature: Play/pause buttons in the notifications for running timers",
 "u": ["https://twitter.com/beemuvi/status/976239570030219264"],
@@ -719,14 +719,14 @@ var batch2018apr = [{
       "https://github.com/beeminder/beeminder/issues/175"],
 "t": "2018-04-23",
 }, { // ------------------------------------------------------------------------
-"n": 2623,
+//"n": 2623,
 "x": "(+) Beeminder Android App version 2.6.3!",
 "u": ["https://twitter.com/beemuvi/status/988560905335070725"],
 "d": "2018-04-23",
 "t": "2018-04-23",
 "c": "By Adam Wolf",
 }, { // ------------------------------------------------------------------------
-"n": 2623,
+"n": false,
 "s": true,
 "x": "Fixed bug with multiple concurrent timers. #bugfix",
 "u": ["https://twitter.com/beemuvi/status/988560905335070725",
@@ -734,7 +734,7 @@ var batch2018apr = [{
 "d": "2018-04-23",
 "t": "2018-04-23",
 }, { // ------------------------------------------------------------------------
-"n": 2624,
+//"n": 2624,
 "s": true,
 "x": "Related #bugfix with start/top timer button in the notification drawer.",
 "u": ["https://twitter.com/beemuvi/status/988560949849161728",
@@ -742,7 +742,7 @@ var batch2018apr = [{
 "d": "2018-04-23",
 "t": "2018-04-23",
 }, { // ------------------------------------------------------------------------
-"n": 2625,
+//"n": 2625,
 "s": true,
 "x": "Made the small Beeminder widget resizable to better support really large goalnames.",
 "u": ["https://twitter.com/beemuvi/status/988561005482393600",
@@ -1129,7 +1129,7 @@ var batch2018jun = [{
 "d": "2018-06-22",
 "t": "2018-06-22",
 }, { // ------------------------------------------------------------------------
-"n": 2685,
+//"n": 2685,
 "f": true,
 "x": "(+) Beeminder iOS app version 5.1!",
 "u": ["https://twitter.com/beemuvi/status/1011497001102372864"],
@@ -1137,7 +1137,7 @@ var batch2018jun = [{
 "t": "2018-06-25",
 "c": "By Andy",
 }, { // ------------------------------------------------------------------------
-"n": 2685,
+"n": false,
 "f": true,
 "x": "Added a new Apple Health metric: Stand Hours (as in, number of hours you were not sitting down)",
 "s": true,
@@ -1175,7 +1175,7 @@ var batch2018jun = [{
 "t": "2018-06-26",
 "c": "I'm not totally sure how the bug manifested but if, say, your meditation session spanned midnight we were screwing it up",
 }, { // ------------------------------------------------------------------------
-"n": 2692,
+//"n": 2692,
 "f": true,
 "x": "(+) Beeminder Android app version 2.7.0!",
 "u": ["https://twitter.com/beemuvi/status/1012230759774474242"],
@@ -1183,7 +1183,7 @@ var batch2018jun = [{
 "t": "2018-06-27",
 "c": "By Adam",
 }, { // ------------------------------------------------------------------------
-"n": 2692,
+"n": false,
 "s": true,
 "x": "Made it so if you sign up with Facebook in the app you can also log in to the website with Facebook. #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1012230759774474242"],
@@ -1546,7 +1546,7 @@ var batch2018aug = [{
 "d": "2018-08-09",
 "t": "2018-08-17",
 }, { // ------------------------------------------------------------------------
-"n": 2746,
+//"n": 2746,
 "f": true,
 "x": "(+) Beeminder iOS app version 5.2!",
 "u": ["https://twitter.com/beemuvi/status/1031508282127482880"],
@@ -1555,7 +1555,7 @@ var batch2018aug = [{
 "c": "By Andy",
 }, { // ------------------------------------------------------------------------
 "f": true,
-"n": 2746,
+"n": false,
 "s": true,
 "x": "Edit and delete datapoints! Just tap the one you want below the graph.",
 "u": ["https://twitter.com/beemuvi/status/1031508282127482880"],
@@ -1760,7 +1760,7 @@ var batch2018sep = [{
 "d": "2018-09-13",
 "t": "2018-09-13",
 }, { // ------------------------------------------------------------------------
-"n": 2775,
+//"n": 2775,
 "f": true,
 "x": "(+) Beeminder iOS app version 5.3!",
 "u": ["https://twitter.com/beemuvi/status/1040814419259940871"],
@@ -1769,7 +1769,7 @@ var batch2018sep = [{
 "c": "By Andy",
 }, { // ------------------------------------------------------------------------
 "f": true,
-"n": 2775,
+"n": false,
 "s": true,
 "x": "New Apple Health metrics: Dietary energy, resting energy, and dietary protein",
 "u": ["https://twitter.com/beemuvi/status/1040814419259940871",
@@ -2370,14 +2370,14 @@ var batch2018dec = [{
 "t": "2018-12-25",
 "c": "Update: Soon after we removed the \"Associated Accounts\" section altogether (doesn't make sense to have that with SSO)",
 }, { // ------------------------------------------------------------------------
-"n": 2866,
+//"n": 2866,
 "x": "(+) Fancied up the signup page in a few ways",
 "u": ["https://twitter.com/beemuvi/status/1077819061461954560",
       "https://github.com/beeminder/beeminder/commit/8e75eab31130f2a4fd0026ad1ff4dd1dfb0e4337"],
 "d": "2018-12-20",
 "t": "2018-12-25",
 }, { // ------------------------------------------------------------------------
-"n": 2866,
+"n": false,
 "s": true,
 "x": "Showing off some of our press hits to remind you we're a real company and stuff",
 "u": ["https://twitter.com/beemuvi/status/1077819061461954560",

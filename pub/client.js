@@ -159,11 +159,30 @@ function render(uvi) {
     + linkify(note)+'</span>'                            // notes to selves
 }
 
+// Convenience function. What Jquery's isNumeric does, I guess. Javascript wat?
+function isnum(x) { return x - parseFloat(x) + 1 >= 0 }
+
 // Update the global UVI counter and make sure uvi.n is set 
+// --------------------------------- 80chars ---------------------------------->
 function numbum(uvi) {
   if (isEmpty(uvi)) { return }
-  n += 1 // increment the global variable for the number of the UVI
-  uvi.n = uvi.n || n // let uvi.n default to the global counter if not set
+  if (uvi.n === undefined) {          // what happens if n isn't specified
+    n += 1            // increment the global variable for the number of the UVI
+    uvi.n = n         // uvi.n defaults to the global counter
+  } else if (uvi.n === false) {       // explicit false means don't increment it
+    uvi.n = n
+  } else if (!isnum(uvi.n)) {
+    console.log(`ERROR: Invalid value for n: ${uvi.n}`)
+  } else if (uvi.n === n+1) { // n is specified explicitly but didn't need to be
+    console.log(`Superfluously set n=${uvi.n} but could've let it default`)
+    n += 1
+  } else {
+    console.log(`NUMBERING ERROR: ${n} -> ${uvi.n}`)
+    
+  }
+  
+  /*
+  //uvi.n = uvi.n || n // let uvi.n default to the global counter if not set
   if (uvi.n !== n) { // let the specified number usurp the counter but complain
     if (uvi.n === n-1 && uvi.s) {
       //console.log(`Sublist starting @ ${n-1}`)
@@ -176,6 +195,7 @@ function numbum(uvi) {
     }
     n = uvi.n
   }
+  */
 }
 
 // Takes UVI object and generates the html <li> element as a string

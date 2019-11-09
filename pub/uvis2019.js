@@ -739,7 +739,7 @@ var batch2019apr = [{
 "t": "2019-04-11",
 "c": "Oy, and then still broken for another hour or so -- needed a meta-meta-bugfix! Manually fixed up everyone affected during that window.",
 }, { // ------------------------------------------------------------------------
-"n": 2983,
+//"n": 2983,
 "f": true,
 "x": "(+) Beeminder iOS app version 5.4!",
 "u": ["https://twitter.com/beemuvi/status/1118751296838750213"],
@@ -747,7 +747,7 @@ var batch2019apr = [{
 "t": "2019-04-17",
 "c": "By Andy and Mary",
 }, { // ------------------------------------------------------------------------
-"n": 2983,
+"n": false,
 "s": true,
 "x": "No more hanging spinner of doom! #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1118751296838750213"],
@@ -1019,7 +1019,7 @@ var batch2019may = [{
 "d": "2019-05-24",
 "t": "2019-05-24",
 }, { // ------------------------------------------------------------------------
-"n": 3024,
+//"n": 3024,
 "f": true,
 "x": "(+) Beeminder Android app version 3.0!",
 "u": ["https://twitter.com/beemuvi/status/1134688740557766656",
@@ -1029,7 +1029,7 @@ var batch2019may = [{
 "t": "2019-05-31",
 "c": "AKA Beedroid. By Adam Wolf.",
 }, { // ------------------------------------------------------------------------
-"n": 3024,
+"n": false,
 "s": true,
 "x": "The first most obvious change is the permanotification, which, frustratingly, Android now requires for guaranteeing reminders at exact times",
 "u": ["https://twitter.com/beemuvi/status/1134688740557766656"],
@@ -1255,14 +1255,14 @@ var batch2019jun = [{
 "d": "2019-06-07",
 "t": "2019-06-11",
 }, { // ------------------------------------------------------------------------
-"n": 3054,
+//"n": 3054,
 "x": "A bunch of small layout changes to the new goal screen",
 "u": ["https://twitter.com/beemuvi/status/1138703486718078976",
       "https://github.com/beeminder/beeminder/pull/647"],
 "d": "2019-06-11",
 "t": "2019-06-11",
 }, { // ------------------------------------------------------------------------
-"n": 3054,
+"n": false,
 "s": true,
 "x": "Most notably, shifting and resizing the manual-data icon so it doesn't look like part of the header",
 "u": ["https://twitter.com/beemuvi/status/1138703486718078976",
@@ -1270,7 +1270,7 @@ var batch2019jun = [{
 "d": "2019-06-11",
 "t": "2019-06-11",
 }, { // ------------------------------------------------------------------------
-"n": 3055,
+//"n": 3055,
 "s": true,
 "x": "Increased the vertical space between the manual & autodata sections and added a large OR in that vertical space to highlight the difference",
 "u": ["https://twitter.com/beemuvi/status/1138703747402461191",
@@ -1508,13 +1508,13 @@ var batch2019jul = [{
 //(Above UVI#3088 covers both part 2 and part 3)
 //Part 4 TODO: https://github.com/beeminder/beeminder/issues/707
 }, { // ------------------------------------------------------------------------
-"n": 3089,
+//"n": 3089,
 "x": "Beedroid version 3.1.0",
 "u": ["https://twitter.com/beemuvi/status/1156785591175958528"],
 "d": "2019-07-31",
 "t": "2019-07-31",
 }, { // ------------------------------------------------------------------------
-"n": 3089,
+"n": false,
 "s": true,
 "x": "Beedroid no longer starts the whole app when you boot up the device. Why did we ever think that was a good idea? We didn't, Android development is hard.",
 "u": ["https://twitter.com/beemuvi/status/1156785591175958528",
@@ -1544,6 +1544,7 @@ var batch2019jul = [{
 }, /* --------------------------------------------------------- end 2019jul */ ]
 
 var batch2019aug = [{
+//2019-08-02 22:22:12, 2019-08-02, 2019-08-02 22:22:12, 1, zero-mercy derails
 "f": true,
 "x": "Follow-on to UVI#3084, you can now choose zero-mercy derails (including as a default for all new goals in account-level settings)",
 "u": ["https://twitter.com/beemuvi/status/1157520643186839553",
@@ -1552,6 +1553,7 @@ var batch2019aug = [{
 "d": "2019-08-01",
 "t": "2019-08-02",
 }, { // ------------------------------------------------------------------------
+//2019-08-02 22:22:12, 2019-08-02, 2019-08-02 22:22:12, 1, garmin sleep bug
 "x": "Garmin sleep tracking didn't allow multiple sleep entries in a day. E.g., naps wouldn't register, nor post-midnight followed by pre-midnight bedtimes. #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1157521721135493121",
       "https://github.com/beeminder/beeminder/pull/710",
@@ -1560,6 +1562,7 @@ var batch2019aug = [{
 "t": "2019-08-02",
 "c": "Or if you went to bed at 1am tonight, the 2nd, and then at 10pm tomorrow -- also the 2nd -- both those sleeps look like the same day to us, and one would overwrite the other. Now we disambiguate not by day, but by start time of the sleep record. So if your Garmin sends multiple updates throughout the night, we won't record each of those as separate entries, but if you nap in the afternoon or whatever we will record those as separate events.",
 }, { // ------------------------------------------------------------------------
+//2019-08-05 23:40:47, 2019-08-05, 2019-08-05 23:40:47, 1, whitespace and missing period
 "x": "Standardized whitespace and added a missing period in the email bot replies",
 "u": ["https://twitter.com/beemuvi/status/1158627953326137345",
       "https://github.com/beeminder/beeminder/pull/701"],
@@ -1567,6 +1570,7 @@ var batch2019aug = [{
 "t": "2019-08-05",
 "c": "By Adam Wolf",
 }, { // ------------------------------------------------------------------------
+//2019-08-05 23:40:47, 2019-08-05, 2019-08-05 23:40:47, 1, hard cap in bot replies/reminders
 "x": "For do-less goals, added hard cap to data entry replies from the SMS and email bot as well as SMS reminders",
 "u": ["https://twitter.com/beemuvi/status/1158628630110453766",
       "https://github.com/beeminder/beeminder/issues/522",
@@ -1576,12 +1580,14 @@ var batch2019aug = [{
 "t": "2019-08-05",
 "c": "By Adam Wolf",
 }, { // ------------------------------------------------------------------------
+//2019-08-06 21:25:49, 2019-08-06, 2019-08-06 21:25:49, 1, sms-hotfix
 "x": "Oops, previous UVI broke the SMS bot which stopped sending zeno alerts and reminders for some hours. #bugfix (and manually interceded for all affected users)",
 "u": ["https://twitter.com/beemuvi/status/1158957219104223232",
       "https://github.com/beeminder/beeminder/pull/716"],
 "d": "2019-08-06",
 "t": "2019-08-06",
 }, { // ------------------------------------------------------------------------
+//schedgeNG
 "f": true,
 "x": "New (currently optional) pledge schedule! $1, $5, $10, $20, $40, $80, $160, $320, $640, $1280, $2560",
 "u": ["https://twitter.com/beemuvi/status/1159341971418124290",
@@ -1589,51 +1595,60 @@ var batch2019aug = [{
       "https://forum.beeminder.com/t/lets-totally-change-the-pledge-schedule/5426?u=dreev"],
 "d": "2019-08-06",
 "t": "2019-08-07",
+"c": "UVIs between UVI#3098 and UVI#3188 were originally shifted. They were all 1 too low. Fixed on 2019-11-08.",
 }, { // ------------------------------------------------------------------------
+//2019-08-09 23:39:50, 2019-08-09, 2019-08-09 23:39:50, 6, beemios 5.4.1
 "f": true,
-"n": 3097,
+//"n": 3098,
 "x": "Version 5.4.1 of the Beeminder iOS app!",
 "u": ["https://twitter.com/beemuvi/status/1159705081257721857"],
 "d": "2019-08-07",
 "t": "2019-08-08",
 }, { // ------------------------------------------------------------------------
-"n": 3097,
+//2019-08-09 23:39:50, 2019-08-09, 2019-08-09 23:39:50, 6, beemios 5.4.1
+"n": false,
 "s": true,
 "x": "Added 3 new metrics -- dietary sugar, carbs, and fat -- to the Apple Health integration",
 "u": ["https://twitter.com/beemuvi/status/1159705081257721857"],
 "d": "2019-08-07",
 "t": "2019-08-08",
 }, { // ------------------------------------------------------------------------
+//2019-08-09 23:39:50, 2019-08-09, 2019-08-09 23:39:50, 6, beemios 5.4.1
 "s": true,
 "x": "The Today widget wasn't showing goals for some users so they couldn't add data! #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1159705292411588608"],
 "d": "2019-08-07",
 "t": "2019-08-08",
 }, { // ------------------------------------------------------------------------
+//2019-08-09 23:39:50, 2019-08-09, 2019-08-09 23:39:50, 6, beemios 5.4.1
 "s": true,
 "x": "Updated the syncing spinners to make it more apparent that syncing has happened",
 "u": ["https://twitter.com/beemuvi/status/1160075721772916737"],
 "d": "2019-08-07",
 "t": "2019-08-08",
 }, { // ------------------------------------------------------------------------
+//2019-08-09 23:39:50, 2019-08-09, 2019-08-09 23:39:50, 6, beemios 5.4.1
 "s": true,
 "x": "We now display the Beeminder-correct date if the goal's deadline has already passed for the day",
 "u": ["https://twitter.com/beemuvi/status/1160075854933716992"],
 "d": "2019-08-07",
 "t": "2019-08-08",
 }, { // ------------------------------------------------------------------------
+//2019-08-09 23:39:50, 2019-08-09, 2019-08-09 23:39:50, 6, beemios 5.4.1
 "s": true,
 "x": "Fixed an alignment thing so that things look better on phones with curved bottom screens",
 "u": ["https://twitter.com/beemuvi/status/1160076090703876096"],
 "d": "2019-08-07",
 "t": "2019-08-08",
 }, { // ------------------------------------------------------------------------
+//2019-08-09 23:39:50, 2019-08-09, 2019-08-09 23:39:50, 6, beemios 5.4.1
 "s": true,
 "x": "The spinner would fail to disappear if you chose an existing username. #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1160076242923581445"],
 "d": "2019-08-07",
 "t": "2019-08-08",
 }, { // ------------------------------------------------------------------------
+//2019-08-09 23:40:32, 2019-08-09, 2019-08-09 23:40:32, 1, OG schedge $0 bug
 "x": "Opting in to the OG pledge schedule mostly worked but wasn't actually letting you start at $0 like it's supposed to. #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1160078218059112448",
       "https://github.com/beeminder/beeminder/pull/724",
@@ -1641,6 +1656,7 @@ var batch2019aug = [{
 "d": "2019-08-08",
 "t": "2019-08-09",
 }, { // ------------------------------------------------------------------------
+//2019-08-14 21:43:20, 2019-08-14, 2019-08-15 21:43:20, 1, close do-less loophole
 "f": true,
 "x": "The infamous, enigmatic do-less loophole is closed: if you're in the red when you hit the deadline, you derail, no caveats!",
 "u": ["https://twitter.com/beemuvi/status/1161903802825359360",
@@ -1653,6 +1669,7 @@ var batch2019aug = [{
 "t": "2019-08-14",
 "c": "Technically: changed the derail condition to 'yesterday is red'.",
 }, { // ------------------------------------------------------------------------
+//2019-08-15 21:43:20, 2019-08-15, 2019-08-15 21:43:20, 1, sms bot emoji
 "x": "The SMS bot now uses emoji! ⏰🔥❗️ (yes, those ones in particular)",
 "u": ["https://twitter.com/beemuvi/status/1162222397228896261",
       "https://forum.beeminder.com/t/wow-texts-from-beeminder-now-have-emojis/5627",
@@ -1660,6 +1677,7 @@ var batch2019aug = [{
 "d": "2019-08-06",
 "t": "2019-08-15",
 }, { // ------------------------------------------------------------------------
+//2019-08-17 01:11:20, 2019-08-16, 2019-08-17 01:11:20, 1, odom/do-less instaderail bug
 "x": "The new yesterday-is-red derail criterion introduced a bug for odometer (and some do-less) goals that would make them insta-derail upon creation! #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1162636847727595521",
       "https://github.com/beeminder/road/pull/84",
@@ -1669,12 +1687,14 @@ var batch2019aug = [{
 "d": "2019-08-16",
 "t": "2019-08-16",
 }, { // ------------------------------------------------------------------------
+//2019-08-17 01:11:20, 2019-08-16, 2019-08-17 01:11:20, 1, emergency day -> beemergency
 "x": "Replaced \"Emergency day\" in SMS reminders with \"Beemergency\". It's slightly shorter and we're gradually doubling down on \"Beemergency\" everywhere anyway!",
 "u": ["https://twitter.com/beemuvi/status/1162637703403323392",
       "https://github.com/beeminder/beeminder/commit/bf83a552ef91eae59b80a0e20db0285fbefe0b1c"],
 "d": "2019-08-10",
 "t": "2019-08-17",
 }, { // ------------------------------------------------------------------------
+//2019-08-19 20:22:53, 2019-08-19, 2019-08-19 20:22:53, 1, do-less day-1 cusp of red
 "x": "For do-less goals created w/ 0 safe days you'd derail at end of very 1st day (unless you can unsmoke a cigarette?). Now we put you just on the cusp of red.",
 "u": ["https://twitter.com/beemuvi/status/1163649262636244992",
       "https://github.com/beeminder/beeminder/pull/743/commits/41f868db5c05fbf6df2fe18d34f049fb5b423be5",
@@ -1682,18 +1702,21 @@ var batch2019aug = [{
 "d": "2019-08-19",
 "t": "2019-08-19",
 }, { // ------------------------------------------------------------------------
+//2019-08-20 21:44:16, 2019-08-20, 2019-08-20 21:44:16, 1, reply-to
 "x": "We broke (or did it never work?) the Reply-To for nonce transactional emails. Now we can (again?) send them as ourselves but have replies go to support. #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1164034659556085760",
       "https://github.com/beeminder/beeminder/pull/712"],
 "d": "2019-08-05",
 "t": "2019-08-20",
 }, { // ------------------------------------------------------------------------
+//2019-08-20 21:44:16, 2019-08-20, 2019-08-20 21:44:16, 1, integery conservaround
 "x": "Better integeriness: there were corner cases, like do-more goals with negative amounts due, where values weren't being rounded to an integer. Now they are!",
 "u": ["https://twitter.com/beemuvi/status/1164034948203835393",
       "https://github.com/beeminder/road/commit/9685e0f45679faa1af0927edbd8f8a826db4df52"],
 "d": "2019-08-20",
 "c": "By Danny. #beebrain #conservaround",
 }, { // ------------------------------------------------------------------------
+//2019-08-21 20:47:28, 2019-08-21, 2019-08-21 20:47:28, 1, all sms baremin/hardcap
 "x": "All SMS alerts now include bare min or hard cap",
 "u": ["https://twitter.com/beemuvi/status/1164383369909526528",
       "https://github.com/beeminder/beeminder/issues/736",
@@ -1703,6 +1726,7 @@ var batch2019aug = [{
 "t": "2019-08-21",
 "c": "Removing the colon after \"hard cap\" / \"bare min\" was also part of this PR but we think we did that before deploying it and so failed to milk that as a distinct UVI",
 }, { // ------------------------------------------------------------------------
+//2019-08-23 01:07:15, 2019-08-22, 2019-08-23 01:07:15, 2, avatars resurrected
 "x": "In 2014 we lost the feature that let you upload custom avatars (profile images) and we just now got it back!",
 "u": ["https://twitter.com/beemuvi/status/1164810913368563712",
       "https://github.com/beeminder/beeminder/commit/1c7c6d0d5570704273930c0e0893f68b7bda7f95",
@@ -1711,6 +1735,7 @@ var batch2019aug = [{
 "d": "2019-08-21",
 "t": "2019-08-22",
 }, { // ------------------------------------------------------------------------
+//2019-08-23 01:07:15, 2019-08-22, 2019-08-23 01:07:15, 2, avatars resurrected
 "x": "Because that Pareto Dominance Principle violation really bothered us, we also reinstated all the ancient avatars & warned everyone we were Rip-Van-Winkling them",
 "u": ["https://twitter.com/beemuvi/status/1164811144889921536",
       "https://github.com/beeminder/beeminder/issues/79",
@@ -1719,20 +1744,23 @@ var batch2019aug = [{
 "t": "2019-08-22",
 "c": "1200 people emailed"
 }, { // ------------------------------------------------------------------------
-"x": "UVI#3104 made most archived/frozen goals insta-derail when you restarted. For now we're kludgily adding a dummy datapoint & moving the road yesterday. #bugfix",
+//2019-08-23 20:20:29, 2019-08-23, 2019-08-23 20:20:29, 1, restart bug
+"x": "UVI#3105 made most archived/frozen goals insta-derail when you restarted. For now we're kludgily adding a dummy datapoint & moving the road yesterday. #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1165100770137538560",
       "https://github.com/beeminder/beeminder/issues/733",
       "https://github.com/beeminder/beeminder/commit/3e7b74e709356afa9ed84dd49092bc90bf6b0bef"],
 "d": "2019-08-23",
 "t": "2019-08-23",
-"c": "The right fix will be road gaps",
+"c": "The right fix will be road gaps. UVI#3105 was originally wrongly numbered 3104",
 }, { // ------------------------------------------------------------------------
+//2019-08-23 20:20:29, 2019-08-23, 2019-08-23 20:20:29, 1, restart units quasi-bug
 "x": "When restarting, goals we were always defaulting the rate units to 'per week'. Now we default to the goal's current/previous rate units.",
 "u": ["https://twitter.com/beemuvi/status/1165100889796833280",
       "https://github.com/beeminder/beeminder/commit/fe100ccba498dbb8374573f7d62d0f7c9df02b04"],
 "d": "2019-08-23",
 "t": "2019-08-23",
 }, { // ------------------------------------------------------------------------
+//2019-08-26 21:31:03, 2019-08-26, 2019-08-26 21:31:03, 1, far zeno
 "x": "Kind of kludgy but we're now filtering out spurious zeno alerts for goals more than 24 hours from derailing, which would, rarely, get sent until now. #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1166206004456853504",
       "https://github.com/beeminder/beeminder/commit/074bbb98c941d020ae5f1bd1ee4c66b18a8f3d94",
@@ -1745,6 +1773,7 @@ var batch2019aug = [{
 "t": "2019-08-26",
 "c": "AKA far zenos. By Adam Wolf. lib/reminders.rb",
 }, { // ------------------------------------------------------------------------
+//2019-08-28 01:03:49, 2019-08-27, 2019-08-28 01:03:49, 2, pledge cap on restart
 "x": "On the goal restart page we'd sometimes suggest a pledge cap that was lower than your actual current pledge. #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1166621969770528769",
       "https://github.com/beeminder/beeminder/issues/761",
@@ -1752,6 +1781,7 @@ var batch2019aug = [{
 "d": "2019-08-27",
 "t": "2019-08-27",
 }, { // ------------------------------------------------------------------------
+//2019-08-28 01:03:49, 2019-08-27, 2019-08-28 01:03:49, 2, pledge cap on restart
 "x": "Also, whatever the default is, we now prevent you from picking a pledge cap (aka max pledge) lower than the current pledge on the goal restart page",
 "u": ["https://twitter.com/beemuvi/status/1166622106106388480",
       "https://github.com/beeminder/beeminder/issues/761",
@@ -1759,6 +1789,7 @@ var batch2019aug = [{
 "d": "2019-08-27",
 "t": "2019-08-27",
 }, { // ------------------------------------------------------------------------
+//2019-08-28 22:31:52, 2019-08-28, 2019-08-28 22:31:52, 1, removed line of pledge cap webcopy
 "x": "Removed the weird line in the pledge section of goal creation that said \"Click on the $ above your graph to change your pledge cap\"",
 "u": ["https://twitter.com/beemuvi/status/1166946134582951936",
       "https://github.com/beeminder/beeminder/pull/762/commits/1daadd2daa9e051f65a83ae6fa600177981c6274",
@@ -1766,6 +1797,7 @@ var batch2019aug = [{
 "d": "2019-08-27",
 "t": "2019-08-28",
 }, { // ------------------------------------------------------------------------
+//2019-08-29 22:12:01, 2019-08-29, 2019-08-29 22:12:01, 1, pledge cap beemium fix
 "x": "Beemium users can now pledge $0 without switching to the traditional pledge schedule",
 "u": ["https://twitter.com/beemuvi/status/1167299230689452037",
       "https://github.com/beeminder/beeminder/issues/729",
@@ -1773,6 +1805,7 @@ var batch2019aug = [{
 "d": "2019-08-29",
 "t": "2019-08-29",
 }, { // ------------------------------------------------------------------------
+//2019-08-29 22:12:01, 2019-08-29, 2019-08-29 22:12:01, 1, pledge cap bump fix
 "x": "We accidentally weren't letting non-Beemium people jump their initial pledge if they chose $1 and then changed their mind and wanted to bump up to $5. #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1167303565192265730",
       "https://github.com/beeminder/beeminder/pull/738"],
@@ -1782,18 +1815,21 @@ var batch2019aug = [{
 }, /* --------------------------------------------------------- end 2019aug */ ]
 
 var batch2019sep = [{
+//2019-09-03 21:44:39, 2019-09-03, 2019-09-03 21:44:39, 1, duolingo latin
 "x": "Duolingo Latin is here and beemindable!",
 "u": ["https://twitter.com/beemuvi/status/1169108432009363457",
       "https://github.com/beeminder/beeminder/pull/765"],
 "d": "2019-08-30",
 "t": "2019-09-03",
 }, { // ------------------------------------------------------------------------
+//2019-09-04 23:18:01, 2019-09-04, 2019-09-04 23:18:01, 1, ratchet to 0 on day 1 for real
 "x": "UVI#3084 wasn't quite true because of UVI#3020 &amp; UVI#3021! Now you can ratchet to zero safety buffer on day one of any goal for real. #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1169494587489964033",
       "https://github.com/beeminder/beeminder/pull/767"],
 "d": "2019-09-03",
 "t": "2019-09-04",
 }, { // ------------------------------------------------------------------------
+//2019-09-04 23:18:01, 2019-09-04, 2019-09-04 23:18:01, 1, beedroid not pink
 "x": "Beedroid version 3.2.1 makes everything not be pink (this was a real thing) in Android 10. Also a #bugfix from 3.2.0 that broke summary widgets in Android 9!",
 "u": ["https://twitter.com/beemuvi/status/1169492201841127425",
       "https://forum.beeminder.com/t/all-my-widgets-are-in-the-pink/5641",
@@ -1803,6 +1839,7 @@ var batch2019sep = [{
 "t": "2019-09-04",
 "c": "By Adam. The summary widgets in Android 9 thing was probably replaced fast enough that no one saw it.",
 }, { // ------------------------------------------------------------------------
+//2019-09-05 22:34:27, 2019-09-05, 2019-09-05 22:34:27, 1, complice api goal creation bug
 "x": "We briefly broke goals created via the API (hello @CompliceGoals) for a few days after UVI#3097 (you'd get a 500 error when visiting the goal page). #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1169845879106240513",
       "https://github.com/beeminder/beeminder/issues/755"],
@@ -1810,12 +1847,14 @@ var batch2019sep = [{
 "t": "2019-09-05",
 "c": "Default pledge wasn't getting set up right",
 }, { // ------------------------------------------------------------------------
+//2019-09-07 00:06:33, 2019-09-06, 2019-09-07 00:06:33, 1, pending change/charge confusion webcopy
 "x": "We now say \"scheduled change\" (for when your pledge is going to drop) not \"pending change\" because it turns out that's very easy to misread as \"pending charge\"",
 "u": ["https://twitter.com/beemuvi/status/1170229105456898049",
       "https://github.com/beeminder/beeminder/pull/773"],
 "d": "2019-09-05",
 "t": "2019-09-06",
 }, { // ------------------------------------------------------------------------
+//2019-09-07 00:06:33, 2019-09-06, 2019-09-07 00:06:33, 1, missing .com
 "x": "Changed a couple instances of \"email support@beeminder\" to add the \".com\" and got rid of the lingering reference to Intercom chat on http://beeminder.com/contact",
 "u": ["https://twitter.com/beemuvi/status/1170230569373843456",
       "https://github.com/beeminder/beeminder/pull/772",
@@ -1823,12 +1862,14 @@ var batch2019sep = [{
       "https://github.com/beeminder/beeminder/pull/763"],
 "t": "2019-09-06",
 }, { // ------------------------------------------------------------------------
+//2019-09-09 23:54:04, 2019-09-09, 2019-09-09 23:54:04, 1, beebrain speedup
 "x": "Graph generation (aka Beebrain) is now slightly but measurably faster thanks to magic from Uluc with reusing connections and such",
 "u": ["https://twitter.com/beemuvi/status/1171315578134351872",
       "https://github.com/beeminder/road/commit/e6e68237e7308ef6823c6b918405cebda4a45828"],
 "d": "2019-09-05",
 "t": "2019-09-09",
 }, { // ------------------------------------------------------------------------
+//2019-09-11 01:31:37, 2019-09-10, 2019-09-11 01:31:37, 1, refresh graph with old road editor
 "x": "We now actually refresh the graph image after updating road settings (i.e., the boring non-interactive road editor in the goal settings tab)",
 "u": ["https://twitter.com/beemuvi/status/1171701583941259264",
       "https://github.com/beeminder/beeminder/issues/764",
@@ -1836,13 +1877,16 @@ var batch2019sep = [{
 "d": "2019-09-10",
 "t": "2019-09-10",
 }, { // ------------------------------------------------------------------------
-"x": "Allowing Beemium to pledge $0 on the new schedule (UVI#3120) also allowed non-Beemium to cap pledges at $0 (on the old schedge) and $1 (on the new). #bugfix",
+//2019-09-11 01:31:37, 2019-09-10, 2019-09-11 01:31:37, 1, pledge cap bug
+"x": "Allowing Beemium to pledge $0 on the new schedule (UVI#3121) also allowed non-Beemium to cap pledges at $0 (on the old schedge) and $1 (on the new). #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1171702231604719617",
       "https://github.com/beeminder/beeminder/issues/779",
       "https://github.com/beeminder/beeminder/pull/778"],
 "d": "2019-09-10",
 "t": "2019-09-10",
+"c": "UVI#3121 was originally misnumbered as 3120",
 }, { // ------------------------------------------------------------------------
+//2019-09-12 00:35:43, 2019-09-11, 2019-09-12 00:35:43, 1, ifttt sort
 "x": "We now sort the list of goal names that is sent to IFTTT so you can find the goal you want to connect more easily",
 "u": ["https://twitter.com/beemuvi/status/1172041307117608960",
       "https://github.com/beeminder/beeminder/issues/584"],
@@ -1850,6 +1894,7 @@ var batch2019sep = [{
 "t": "2019-09-11",
 "c": "Pro-tip: use ifttt.com/create if you're looking to make a custom applet (their recent redesign made this much harder to find)",
 }, { // ------------------------------------------------------------------------
+//2019-09-13 01:45:20, 2019-09-12, 2019-09-13 01:45:20, 1, withings nee nokia nee withings
 "x": "Withings née Nokia née Withings is now called Withings everywhere on Beeminder again (Withings literally bought itself back from Nokia), ie, we undid UVI#2647",
 "u": ["https://twitter.com/beemuvi/status/1172430218134343680",
       "https://github.com/beeminder/beeminder/pull/784"],
@@ -1857,12 +1902,14 @@ var batch2019sep = [{
 "t": "2019-09-12",
 "c": "We hadn't adjusted every mention of withings -> nokia yet, and good thing we waited. Now beeminder.com/nokia redirects to beeminder.com/withings and we purged other spots where we mention nokia",
 }, { // ------------------------------------------------------------------------
+//2019-09-13 01:45:20, 2019-09-12, 2019-09-13 01:45:20, 1, resend-activation link
 "x": "We now include a 'resend activation' link for SMS whenever your number isn't activated w/ Beeminder so you can reactivate it if you injudiciously deactivate it",
 "u": ["https://twitter.com/beemuvi/status/1172430359775965184",
       "https://github.com/beeminder/beeminder/pull/785"],
 "d": "2019-09-12",
 "t": "2019-09-12",
 }, { // ------------------------------------------------------------------------
+//2019-09-13 01:45:20, 2019-09-12, 2019-09-13 01:45:20, 1, css stuff with sms
 "x": "Adjusted the formatting of instructions & phone state (hanging instead of wrapping text) and made the part about the phone state (ie, activated or not) be red",
 "u": ["https://twitter.com/beemuvi/status/1172430545910845441",
       "https://github.com/beeminder/beeminder/pull/785"],
@@ -1870,12 +1917,14 @@ var batch2019sep = [{
 "t": "2019-09-12",
 "c": "It was supposed to be red all along but wasn't actually getting set to red",
 }, { // ------------------------------------------------------------------------
+//2019-09-16 21:36:48, 2019-09-16, 2019-09-16 21:36:48, 1, runkeeper no camelcase
 "x": "We were inconsistent about \"Runkeeper\" vs \"RunKeeper\" -- they're definitely using \"Runkeeper\" currently, so we standardized on that too. #mini",
 "u": ["https://twitter.com/beemuvi/status/1173817418919006208",
       "https://github.com/beeminder/beeminder/pull/788"],
 "d": "2019-09-16",
 "t": "2019-09-16",
 }, { // ------------------------------------------------------------------------
+//2019-09-16 21:36:48, 2019-09-16, 2019-09-16 21:36:48, 1, typos
 "x": "Embarrassing typo fixes: misspelled \"language\" on the Clozemaster landing page and called Duolingo \"Runkeeper\" on the Duolingo landing page. #mini #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1173817711429742594",
       "https://github.com/beeminder/beeminder/pull/787",
@@ -1883,6 +1932,7 @@ var batch2019sep = [{
 "d": "2019-09-16",
 "t": "2019-09-16",
 }, { // ------------------------------------------------------------------------
+//2019-09-18 21:24:48, 2019-09-18, 2019-09-18 21:24:48, 1, todoist oauth
 "x": "We thought we'd deftly upgraded to Todoist's new API with no user-impact but, alas, we missed something and broke the integration for some hours. #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1174155939290603520",
       "https://github.com/beeminder/omniauth-todoist/pull/2"],
@@ -1890,6 +1940,7 @@ var batch2019sep = [{
 "t": "2019-09-17",
 "c": "I guess it only affected new oauths, so didn't break the integration for existing users",
 }, { // ------------------------------------------------------------------------
+//2019-09-18 21:24:48, 2019-09-18, 2019-09-18 21:24:48, 1, custom twitter deadline
 "x": "We now allow you to set a custom deadline for Twitter goals",
 "u": ["https://twitter.com/beemuvi/status/1174539197375365120",
       "https://github.com/beeminder/beeminder/issues/721",
@@ -1897,6 +1948,7 @@ var batch2019sep = [{
 "d": "2019-09-18",
 "t": "2019-09-18",
 }, { // ------------------------------------------------------------------------
+//2019-09-18 21:24:48, 2019-09-18, 2019-09-18 21:24:48, 1, schedge bug $5->$5->$10
 "x": "In the pledge schedule shown at goal setup we were repeating the $5 pledge so it looked like the schedge was $5 -> $5 -> $10 -> ... $CAP. #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1174539516440236032",
       "https://github.com/beeminder/beeminder/pull/798",
@@ -1905,13 +1957,15 @@ var batch2019sep = [{
 "t": "2019-09-18",
 "c": "Introduced with recent bugfix for Beemium crap",
 }, { // ------------------------------------------------------------------------
+//2019-09-19 21:03:05, 2019-09-19, 2019-09-19 21:03:05, 1, custom aggday instaderails
 "x": "Goals with custom aggdays (especially binary and nonzero) were derailing on restart since God-knows-when. Now fixed along with UVI#3106 and UVI#3114. #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1174896535374426118",
       "https://github.com/beeminder/beeminder/issues/489"],
 "d": "2019-08-16",
 "t": "2019-09-19",
-"c": "We now get the correctly agg'd value for restart directly from Beebrain instead of incorrectly recalculating it in Ruby",
+"c": "We now get the correctly agg'd value for restart directly from Beebrain instead of incorrectly recalculating it in Ruby. UVI#3106 and UVI#3114 were originally misnumbered as 3106 and 3114.",
 }, { // ------------------------------------------------------------------------
+//2019-09-20 22:41:53, 2019-09-20, 2019-09-20 22:41:53, 2, clozemaster & todoist robustify
 "x": "Clozemaster integration robustification: if the last autodata fetch of the day happens just after midnight, still count the data for what's now the previous day",
 "u": ["https://twitter.com/beemuvi/status/1175283662339764225",
       "https://github.com/beeminder/beeminder/issues/630",
@@ -1919,18 +1973,21 @@ var batch2019sep = [{
 "d": "2019-09-20",
 "t": "2019-09-20",
 }, { // ------------------------------------------------------------------------
+//2019-09-20 22:41:53, 2019-09-20, 2019-09-20 22:41:53, 2, clozemaster & todoist robustify
 "x": "Same for Todoist! If you're super edge-skating and get a Todoist task done after the last zeno but before the deadline, it should now count for the right day!",
 "u": ["https://twitter.com/beemuvi/status/1175283737031925760",
       "https://github.com/beeminder/beeminder/pull/802"],
 "d": "2019-09-20",
 "t": "2019-09-20",
 }, { // ------------------------------------------------------------------------
+//2019-09-24 05:59:59, 2019-09-23, 2019-09-25 16:03:14, 1, clozemaster arbitrary deadline
 "x": "You can now set arbitrary deadlines on Clozemaster goals",
 "u": ["https://twitter.com/beemuvi/status/1176400173569695744",
       "https://github.com/beeminder/beeminder/pull/807"],
 "d": "2019-09-23",
 "t": "2019-09-23",
 }, { // ------------------------------------------------------------------------
+//2019-09-24 05:59:59, 2019-09-23, 2019-09-25 16:03:15, 1, clozemaster deadmanning
 "x": "Also in Clozemaster: we no longer add new datapoints if your score hasn't changed (matters for determining if you're still active, for, e.g., deadmanning)",
 "u": ["https://twitter.com/beemuvi/status/1176400472363528193",
       "https://github.com/beeminder/beeminder/pull/807"],
@@ -1938,18 +1995,21 @@ var batch2019sep = [{
 "t": "2019-09-23",
 "c": "Note that Clozemaster goals are odometer, non-kyoom.",
 }, { // ------------------------------------------------------------------------
+//2019-09-24 23:17:40, 2019-09-24, 2019-09-24 23:17:40, 1, project euler soft launch
 "x": "Soft launch / beta of our official Project Euler integration! http://beeminder.com/projecteuler",
 "u": ["https://twitter.com/beemuvi/status/1176742356080418816",
       "https://github.com/beeminder/beeminder/pull/783"],
 "d": "2019-09-20",
 "t": "2019-09-24",
 }, { // ------------------------------------------------------------------------
+//2019-09-25 23:13:21, 2019-09-25, 2019-09-25 23:13:21, 1, api endpoint for ios, generalized
 "x": "Added limits & sorts & pagination (oh my!) to the datapoints API endpoint -- http://api.beeminder.com/#dataall",
 "u": ["https://twitter.com/beemuvi/status/1177096705839251456",
       "https://github.com/beeminder/beeminder/pull/811"],
 "d": "2019-09-25",
 "t": "2019-09-25",
 }, { // ------------------------------------------------------------------------
+//2019-09-25 23:13:21, 2019-09-25, 2019-09-25 23:13:21, 1, do-less ppr #beebrain bugfix
 "f": true,
 "x": "Critical #bugfix: it was possible for do-less goals to get the PPR and derail you without ever warning you a derail was imminent. Broken since UVI#3104!",
 "u": ["https://twitter.com/beemuvi/status/1177103266909286400",
@@ -1957,13 +2017,16 @@ var batch2019sep = [{
       "https://github.com/beeminder/road/pull/86"],
 "d": "2019-09-25",
 "t": "2019-09-25",
+"c": "UVI#3105 was originally misnumbered as UVI#3104",
 }, { // ------------------------------------------------------------------------
+//2019-09-27 00:54:03, 2019-09-26, 2019-09-27 00:54:03, 1, dropbox ?dl=1 fix
 "x": "Dropbox URLminder #bugfix: if there's no \"?dl=1\" on the end of the Dropbox URL we now correctly add it and thus correctly get your document's wordcount",
 "u": ["https://twitter.com/beemuvi/status/1177491391603044353",
       "https://github.com/beeminder/beeminder/commit/7a4da23096c4a0f49d53322ee3a0406d0c0c4670"],
 "d": "2019-09-26",
 "t": "2019-09-26",
 }, { // ------------------------------------------------------------------------
+//2019-09-27 13:37:53, 2019-09-27, 2019-09-27 13:37:53, 1, ghosty PPR #beebrain
 "x": "If you haven't entered data on a do-less goal, the triangular presumptive datapoint (like flatlining for do-more) is shown where the PPR would put it",
 "u": ["https://twitter.com/beemuvi/status/1177682366166257664",
       "https://github.com/beeminder/road/commit/3de9d0d367045de512a931a2beb37c2861cbe8c0"],
@@ -1971,13 +2034,15 @@ var batch2019sep = [{
 "t": "2019-09-27",
 "c": "By Uluc. And #beebrain doesn't currently know if PPRs are actually turned on so it does this regardless currently.",
 }, { // ------------------------------------------------------------------------
-"x": "As part of UVI#3147, we also stop sending zeno alerts if you actually add data (and if that data puts you in the blue or better)",
+//2019-09-27 16:21:09, 2019-09-27, 2019-09-27 16:21:09, 1, only anticipate ppr for safebuf calc if no data added
+"x": "As part of UVI#3148, we also stop sending zeno alerts if you actually add data (and if that data puts you in the blue or better)",
 "u": ["https://twitter.com/beemuvi/status/1177724111994253312",
       "https://github.com/beeminder/road/pull/86"],
 "d": "2019-09-25",
 "t": "2019-09-27",
-"c": "Sort of milking this (not that there's anything wrong with that). It's the same fix, just two aspects of it: (1) we zeno when anticipated PPR will derail you, and (2) we know not to anticipate that PPR if you've added data today.",
+"c": "Sort of milking this (not that there's anything wrong with that). It's the same fix, just two aspects of it: (1) we zeno when anticipated PPR will derail you, and (2) we know not to anticipate that PPR if you've added data today. UVI#3148 was originally misnumbered as 3147.",
 }, { // ------------------------------------------------------------------------
+//2019-09-30 22:28:55, 2019-09-30, 2019-09-30 22:28:55, 3, beebrain PPR fixes/tweaks
 "x": "Tiny #bugfix: if for esoteric reasons you have a do-less goal with a negative slope, we no longer anticipate a negative PPR",
 "u": ["https://twitter.com/beemuvi/status/1178903702519681024",
       "https://github.com/beeminder/beeminder/issues/819",
@@ -1986,12 +2051,14 @@ var batch2019sep = [{
 "t": "2019-09-30",
 "c": "HT Mary. Also applies to a (theoretical) RASH goal with a positive slope. #beebrain",
 }, { // ------------------------------------------------------------------------
+//2019-09-30 22:28:55, 2019-09-30, 2019-09-30 22:28:55, 3, beebrain PPR fixes/tweaks
 "x": "Additional very corner-casey #bugfix's to make the anticipated PPR always match what the actual PPR will be. Mainly do-less goals with zero rate.",
 "u": ["https://twitter.com/beemuvi/status/1178904085078003712",
       "https://github.com/beeminder/road/commit/43751a51e4dc530b9365c4dd5a537a453e024cfa"],
 "d": "2019-09-30",
 "t": "2019-09-30",
 }, { // ------------------------------------------------------------------------
+//2019-09-30 22:28:55, 2019-09-30, 2019-09-30 22:28:55, 3, beebrain PPR fixes/tweaks
 "x": "The triangular presumptive datapoint as well as the last vertical segment of the purple steppy line are shown translucent/ghostily for anticipated PPRs",
 "u": ["https://twitter.com/beemuvi/status/1178904222080749568",
       "https://github.com/beeminder/road/commit/6a0394436b30e7623c37a5579181984b46b92dc2"],
@@ -2000,6 +2067,7 @@ var batch2019sep = [{
 }, /* --------------------------------------------------------- end 2019sep */ ]
 
 var batch2019oct = [{
+//2019-10-02 22:44:51, 2019-10-02, 2019-10-02 22:44:51, 1, todoist saturday bug
 "x": "We'd sometimes give a bad date (unixtime 0, 1969-12-31!) to all the datapoints we fetched when we did the initial fetch for brand new Todoist goals. #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1179633217466290176",
       "https://github.com/beeminder/beeminder/pull/820",
@@ -2008,6 +2076,7 @@ var batch2019oct = [{
 "t": "2019-10-02",
 "c": "We think this had happened before once or twice, don't know why it suddenly started happening a lot this last week. Clutch fix Saturday morning; excitement!",
 }, { // ------------------------------------------------------------------------
+//2019-10-04 05:16:38, 2019-10-03, 2019-10-04 05:16:38, 1, nix throttling rebraining
 "x": "There were rare circumstances (due to recent changes with PPRs) that we would skip regenerating graphs when seeming no-op data was added. Now we don't. #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1180093889866125312",
       "https://github.com/beeminder/beeminder/pull/824",
@@ -2016,6 +2085,7 @@ var batch2019oct = [{
 "t": "2019-10-03",
 "c": "Ie, always rebrain, including when data's added via the API. Issue 823 explains why this started mattering. Namely, adding a zero to a do-less with PPRs off used to be safe to not rebrain.",
 }, { // ------------------------------------------------------------------------
+//2019-10-04 05:16:38, 2019-10-03, 2019-10-04 05:16:38, 1, beebrain pprs again & related thing
 "x": "One more #bugfix with how the graphs calculate PPRs: doing so the same way today as well as all future days. Also always say 0 safe days if derailed.",
 "u": ["https://twitter.com/beemuvi/status/1180094017289084928",
       "https://github.com/beeminder/road/commit/0fdd868f83897e9139b0d4bceafcc11df09cb1d8",
@@ -2024,6 +2094,7 @@ var batch2019oct = [{
 "t": "2019-10-03",
 "c": "We had the naive '2x daily rate' always applied for today and the sophisticated version that makes sure that's not negative, uses +2 if 0 rate, etc, for future days",
 }, { // ------------------------------------------------------------------------
+//2019-10-13 14:51:54, 2019-10-13, 2019-10-13 14:51:54, 1, red triangle
 "x": "We put the red triangle marking derailments where the aggregated datapoint for that day goes instead of showing it at the worst point of the day",
 "u": ["https://twitter.com/beemuvi/status/1183500350340251649",
       "https://github.com/beeminder/road/issues/59",
@@ -2032,12 +2103,14 @@ var batch2019oct = [{
 "t": "2019-10-13",
 "c": "By dreev. To do this really right we need to compute the aggregated datapoint as of the 'RECOMMITTED' datapoint, when the derail happened. #beebrain",
 }, { // ------------------------------------------------------------------------
+//2019-10-15 01:12:02, 2019-10-14, 2019-10-15 01:12:02, 1, ghost PPR triangle bugfix
 "x": "Tiny #bugfix: more consistent ghosty triangles (only ever show it ghosty when there's actually an anticipated PPR shown)",
 "u": ["https://twitter.com/beemuvi/status/1184018778952097792",
       "https://github.com/beeminder/road/commit/543c35e2684631333defe2e00c2c953fb998bc4c"],
 "d": "2019-10-10",
 "t": "2019-10-14",
 }, { // ------------------------------------------------------------------------
+//2019-10-15 01:55:54, 2019-10-14, 2019-10-15 01:55:54, 1, ghost PPR bounds
 "x": "Another Beebrain #bugfix: don't let the ghosty PPR datapoint go out of bounds of the graph, or rather, don't let the bounds of the graph not include the PPR",
 "u": ["https://twitter.com/beemuvi/status/1184029962900131841",
       "https://github.com/beeminder/road/issues/88",
@@ -2046,6 +2119,7 @@ var batch2019oct = [{
 "d": "2019-10-10",
 "t": "2019-10-14",
 }, { // ------------------------------------------------------------------------
+//2019-10-16 00:21:08, 2019-10-15, 2019-10-16 00:21:08, 1, gravatar https thing
 "x": "Fixed our avatar (Gravatar) default image to use https so browsers like Firefox don't give us an orange padlock icon as if we're not fully secure or something",
 "u": ["https://twitter.com/beemuvi/status/1184368530638045184",
       "https://github.com/beeminder/beeminder/issues/839"],
@@ -2053,6 +2127,7 @@ var batch2019oct = [{
 "t": "2019-10-14",
 "c": "HT @ShapeOfMatter",
 }, { // ------------------------------------------------------------------------
+//2019-10-16 18:44:21, 2019-10-16, 2019-10-16 18:44:21, 1, schedgeNG curiosity bugfix
 "x": "For indecisive or curious folks: if you switched to old pledge schedule then back to new schedge, even if you asked for a $5 goal, you'd get a $1 goal. #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1184644848986415105",
       "https://github.com/beeminder/beeminder/issues/837",
@@ -2061,6 +2136,7 @@ var batch2019oct = [{
 "t": "2019-10-16",
 "c": "Steps to reproduce: click 'use old schedule', then click it a second time to unselect, then finish up the goal with $5 initial pledge selected",
 }, { // ------------------------------------------------------------------------
+//2019-10-16 18:44:21, 2019-10-16, 2019-10-16 18:44:21, 1, send PPR=false to beebrain
 "x": "If you have Pessimistic Presumptive Reports (PPRs) turned off (they're always off for autodata goals) then we no longer show a ghosty PPR on the graph. #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1184644931656118272",
       "https://github.com/beeminder/beeminder/commit/f22f42e320f1c52455517ce43866b60aa062e08a",
@@ -2071,6 +2147,7 @@ var batch2019oct = [{
 "t": "2019-10-16",
 "c": "In effect now that we send the 'ppr' field to Beebrain",
 }, { // ------------------------------------------------------------------------
+//2019-10-16 18:44:21, 2019-10-16, 2019-10-16 18:44:21, 1, strava tokens
 "x": "Our early Strava adopters had old-style tokens, which Strava just got rid of. We migrated your tokens to avoid downtime with your goals. Related: UVI#2842",
 "u": ["https://twitter.com/beemuvi/status/1184645362713120768",
       "https://github.com/beeminder/beeminder/issues/793"],
@@ -2078,12 +2155,14 @@ var batch2019oct = [{
 "t": "2019-10-16",
 "c": "And we emailed a few people who we couldn't seamlessly migrate. Also, we made a minor tweak to refreshing the oauth tokens, also storing expiry, for robustness. Maybe this point is unnecessary / uninteresting / infratastic?",
 }, { // ------------------------------------------------------------------------
+//2019-10-16 18:44:21, 2019-10-16, 2019-10-16 18:44:21, 1, changelog webcopy for dogfood NWO
 "x": "Updated the webcopy at the top of http://beeminder.com/changelog in light of the new dogfood world order. #mini",
 "u": ["https://twitter.com/beemuvi/status/1184645492522676224",
       "https://github.com/beeminder/uvi/pull/44"],
 "d": "2019-10-14",
 "t": "2019-10-16",
 }, { // ------------------------------------------------------------------------
+//2019-10-16 18:44:21, 2019-10-16, 2019-10-16 18:44:21, 1, gunits used by beebrain for deltasum
 "x": "The emails that give your delta w.r.t. the yellow brick road now mention your goal units, which is slightly clearer. #beebrain",
 "u": ["https://twitter.com/beemuvi/status/1184645607509544960",
       "https://github.com/beeminder/road/commit/4887570f05620a4f30185e7e38628a47cb8a61b4"],
@@ -2091,6 +2170,7 @@ var batch2019oct = [{
 "t": "2019-10-16",
 "c": "Updated the deltasum Beebrain output field which goal_mailer uses.",
 }, { // ------------------------------------------------------------------------
+//2019-10-16 18:44:21, 2019-10-16, 2019-10-16 18:44:21, 1, warn about disconnecting autodata services
 "x": "We now warn you when removing an autodata service, like \"Are you sure? You have 2 active Withings goals. If you remove the service your goals may derail.\"",
 "u": ["https://twitter.com/beemuvi/status/1184645768189108225",
       "https://github.com/beeminder/beeminder/issues/415",
@@ -2099,6 +2179,7 @@ var batch2019oct = [{
 "t": "2019-10-16",
 "c": "We already had a banner that would warn you if the service was disconnected but better to also warn when the user's doing the disconnecting",
 }, { // ------------------------------------------------------------------------
+//2019-10-18 09:48:14, 2019-10-18, 2019-10-18 09:48:14, 1, extra self-destructing PPRs
 "x": "Autodestructing PPRs now even more autodestructing: if you edit another datapoint's date to be the same as a PPR, the PPR self-destructs. HT @PhilipHellyer",
 "u": ["https://twitter.com/beemuvi/status/1185089453510950914",
       "https://github.com/beeminder/beeminder/issues/420",
@@ -2106,6 +2187,7 @@ var batch2019oct = [{
 "d": "2019-10-17",
 "t": "2019-10-17",
 }, { // ------------------------------------------------------------------------
+//2019-10-18 09:48:14, 2019-10-18, 2019-10-18 09:48:14, 1, unset mercy bug
 "x": "If you tried to unset mercy days (clear the field and then submit the form) we'd give a 500 error. Now you get a nice error that it has to be a number. #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1185236066288070656",
       "https://github.com/beeminder/beeminder/pull/860",
@@ -2115,6 +2197,7 @@ var batch2019oct = [{
 "t": "2019-10-17",
 "c": "Specifically: 'Days of Mercy must in the range 0-30', same as it says for an out of range number",
 }, { // ------------------------------------------------------------------------
+//2019-10-18 23:42:15, 2019-10-18, 2019-10-18 23:42:15, 1, dogfood on /premium
 "x": "Per http://blog.beeminder.com/dogfood , we've listed \"A chance to win our derailment charges\" as a premium perk at http://beeminder.com/premium",
 "u": ["https://twitter.com/beemuvi/status/1185443973738840064",
       "https://github.com/beeminder/beeminder/issues/862",
@@ -2122,6 +2205,7 @@ var batch2019oct = [{
 "d": "2019-10-18",
 "t": "2019-10-18",
 }, { // ------------------------------------------------------------------------
+//2019-10-22 00:47:53, 2019-10-21, 2019-10-22 00:47:53, 1, do-less ratchet bug
 "x": "Do-less retroratchet could derail you when there was an upcoming rate change scheduled in your road! #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1186548775998767104",
       "https://github.com/beeminder/beeminder/issues/868",
@@ -2130,12 +2214,14 @@ var batch2019oct = [{
 "t": "2019-10-21",
 "c": "Because the automatic road adjustment would retroactively apply that final (i.e., after-change) road rate to the section before your ratchet",
 }, { // ------------------------------------------------------------------------
+//2019-10-24 00:44:20, 2019-10-23, 2019-10-24 00:44:20, 1, unicode hashtags
 "x": "Hashtags (cf UVI#2787) can now have unicode characters",
 "u": ["https://twitter.com/beemuvi/status/1187273027001536512",
       "https://github.com/beeminder/road/issues/89"],
 "d": "2019-10-21",
 "t": "2019-10-21",
 }, { // ------------------------------------------------------------------------
+//2019-10-24 00:44:20, 2019-10-23, 2019-10-24 00:44:20, 1, gunits etc to api
 "x": "We added gunits (goal units), hhmmformat (timey-wimey), and todayta (data entered today) fields to the API and updated http://beeminder.com/api",
 "u": ["https://twitter.com/beemuvi/status/1187273128256266240",
       "https://github.com/beeminder/beeminder/pull/865"],
@@ -2143,6 +2229,7 @@ var batch2019oct = [{
 "t": "2019-10-22",
 "c": "By Adam",
 }, { // ------------------------------------------------------------------------
+//2019-10-24 00:44:20, 2019-10-23, 2019-10-24 00:44:20, 1, dollars vs cents
 "x": "Oops, Stripe gives us amounts in cents instead of dollars and our CSV export of charges was inconsistent. Fixed with division technology. #bugfix HT phi",
 "u": ["https://twitter.com/beemuvi/status/1187273295164346368",
       "https://github.com/beeminder/beeminder/issues/872",
@@ -2150,18 +2237,21 @@ var batch2019oct = [{
 "d": "2019-10-23",
 "t": "2019-10-23",
 }, { // ------------------------------------------------------------------------
+//2019-10-29 13:44:17, 2019-10-29, 2019-10-29 13:44:17, 1, prevent charges <$1
 "x": "We now prevent the creation of charges (via IFTTT or the API) that are less than $1 since those would fail anyway due to technical limitations of credit cards",
 "u": ["https://twitter.com/beemuvi/status/1189280912657309696",
       "https://github.com/beeminder/beeminder/pull/874"],
 "d": "2019-10-23",
 "t": "2019-10-29",
 }, { // ------------------------------------------------------------------------
+//2019-10-29 13:44:17, 2019-10-29, 2019-10-29 13:44:17, 1, include error for that in alert email
 "x": "The alert email we send if you create an invalid charge with our IFTTT channel now includes the (new) error message telling you that charges must be >= $1",
 "u": ["https://twitter.com/beemuvi/status/1189281035839770630",
       "https://github.com/beeminder/beeminder/pull/878"],
 "d": "2019-10-24",
 "t": "2019-10-29",
 }, { // ------------------------------------------------------------------------
+//2019-10-29 13:44:17, 2019-10-29, 2019-10-29 13:44:17, 1, ybhp visuals for dailies with razor roads
 "x": "Sneak peek of Yellow Brick Half-Plane visuals: daily beemail subscribers with zero-width custom goals can now check the YBHP box to see colored regions",
 "u": ["https://twitter.com/beemuvi/status/1189281127107891205",
       "https://github.com/beeminder/beeminder/pull/884",
@@ -2169,14 +2259,16 @@ var batch2019oct = [{
 "d": "2019-10-25",
 "t": "2019-10-29",
 }, { // ------------------------------------------------------------------------
+//2019-10-29 13:44:17, 2019-10-29, 2019-10-29 13:44:17, 1, don't suppress zenos for do-zero
 "x": "We no longer suppress zeno alerts for do-zero (do-less with flat slope) goals. #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1189281225921515522",
       "https://github.com/beeminder/beeminder/issues/870",
       "https://github.com/beeminder/beeminder/pull/873"],
 "d": "2019-10-23",
 "t": "2019-10-29",
-"c": "This is related to the new Beebrain ghosty PPRs (UVI#3147-UVI#3162) but the suppression was happening all along (unless you were actually on the wrong side of the flat road).",
+"c": "This is related to the new Beebrain ghosty PPRs (UVI#3148-UVI#3163) but the suppression was happening all along (unless you were actually on the wrong side of the flat road).",
 }, { // ------------------------------------------------------------------------
+//2019-10-29 13:44:17, 2019-10-29, 2019-10-29 13:44:17, 1, duolingo dup bug
 "x": "We would sometimes needlessly repeat a Duolingo autodata datapoint even when your XP hadn't changed. Now we don't. #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1189281298923315206",
       "https://github.com/beeminder/beeminder/issues/891"],
@@ -2184,12 +2276,14 @@ var batch2019oct = [{
 "t": "2019-10-29",
 "c": "This was because the internal sorting we used for datapoints was not by ID so we when checking the last datapoint we'd sometimes get something that wasn't actually the last datapoint.",
 }, { // ------------------------------------------------------------------------
+//2019-11-04 14:14:36, 2019-11-04, 2019-11-04 14:14:36, 4, data tab sorting
 "x": "We now remember the sort you had picked for datapoints last time you were on the data tab and restore it when you come back",
 "u": ["https://twitter.com/beemuvi/status/1191477802647736321",
       "https://github.com/beeminder/beeminder/issues/791"],
 "d": "2019-10-30",
 "t": "2019-11-04",
 }, { // ------------------------------------------------------------------------
+//2019-11-04 14:14:36, 2019-11-04, 2019-11-04 14:14:36, 4, data tab sorting
 "x": "We now show the arrow indicator on Date Entered on the data tab when you first load the page. #bugfix #mini",
 "u": ["https://twitter.com/beemuvi/status/1191478000421752832",
       "https://github.com/beeminder/beeminder/issues/791"],
@@ -2197,18 +2291,21 @@ var batch2019oct = [{
 "t": "2019-11-04",
 "c": "We defaulted to sorting by Date Entered all along but only indicated that with the little arrow if you explicitly clicked on it",
 }, { // ------------------------------------------------------------------------
+//2019-11-04 14:14:36, 2019-11-04, 2019-11-04 14:14:36, 4, data tab sorting
 "x": "Ascending/descending-ness of data sorting is no longer wonky/confusing: only toggle it if you click the header twice in a row, not for switching columns!",
 "u": ["https://twitter.com/beemuvi/status/1191478206466904064",
       "https://github.com/beeminder/beeminder/issues/791"],
 "d": "2019-10-30",
 "t": "2019-11-04",
 }, { // ------------------------------------------------------------------------
+//2019-11-04 14:14:36, 2019-11-04, 2019-11-04 14:14:36, 4, data tab sorting
 "x": "We weren't defaulting to descending order for dates the first time you clicked a column on the Data tab. #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1191478390303293440",
       "https://github.com/beeminder/beeminder/issues/791"],
 "d": "2019-10-30",
 "t": "2019-11-04",
 }, { // ------------------------------------------------------------------------
+//unixtime milliseconds
 "x": "Submitting a datapoint to the API w/ a bad timestamp now gives a helpful error (\"did you give us milliseconds instead of seconds?\") instead of barfing. #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1191750163217313792",
       "https://github.com/beeminder/beeminder/pull/902",
@@ -2218,14 +2315,15 @@ var batch2019oct = [{
 "c": "Previously we would create the datapoint, and then choke on our own vomit.",
 }, /* --------------------------------------------------------- end 2019oct */ ]
 
-
 var batch2019nov = [{
+//2019-11-05 17:00:40, 2019-11-05, 2019-11-05 17:00:40, 2, project euler
 "x": "Project Euler integration #bugfix: we weren't sending the reminder emails for Project Euler goals (fixed before public launch)",
 "u": ["https://twitter.com/beemuvi/status/1191882388114038785",
       "https://github.com/beeminder/beeminder/issues/879"],
 "d": "2019-10-24",
 "t": "2019-11-05",
 }, { // ------------------------------------------------------------------------
+//2019-11-05 17:00:40, 2019-11-05, 2019-11-05 17:00:40, 2, project euler
 "f": true,
 "x": "Project Euler integration is official! (Added to the front page gallery, etc, not to mention blogging about it.)",
 "u": ["https://twitter.com/beemuvi/status/1191882548852359168",
@@ -2233,6 +2331,7 @@ var batch2019nov = [{
       "https://github.com/beeminder/beeminder/pull/816"],
 "t": "2019-11-05",
 }, { // ------------------------------------------------------------------------
+//2019-11-07 12:39:25, 2019-11-07, 2019-11-07 12:39:25, 1, no goals vs no public goals
 "x": "If all your goals are private we now say \"no public goals\" on your gallery page instead of just \"no goals\". HT @chriswaterguy",
 "u": ["https://twitter.com/beemuvi/status/1192541786708692992",
       "https://twitter.com/chriswaterguy/status/1189663536143724544",
@@ -2240,6 +2339,7 @@ var batch2019nov = [{
 "d": "2019-11-05",
 "t": "2019-11-07",
 }, { // ------------------------------------------------------------------------
+//2019-11-07 12:41:08, 2019-11-07, 2019-11-07 12:41:08, 1, DST de-dup
 "x": "Scheduling a break was causing \"duplicate road row\" errors around Daylight Savings Time. #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1192542386691293184",
       "https://github.com/beeminder/beeminder/pull/914"],
@@ -2266,8 +2366,37 @@ var staged = [ {
 "d": "2019-11-07",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-"f": true,
-"x": "Version 5.5 of the Beeminder iOS app!",
+"x": "Beeminder iOS app version version 5.5",
+"u": [
+      "https://github.com/beeminder/BeeSwift"],
+"d": "2019-11-07",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"n": false,
+"x": "Includes the (hopefully final) #bugfix for intermittently disappearing goals",
+"u": [
+      "https://github.com/beeminder/BeeSwift/issues/20"],
+"d": "2019-11-07",
+"c": "née Nick Winter bug",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "And updates for Dark Mode. It was previously hiding goal names and making the app unusable if you had Dark Mode on! #bugfix",
+"u": [
+      "https://github.com/beeminder/BeeSwift"],
+"d": "2019-11-06",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "Updates for iOS 13 like default presentation for some screens (log-in, timer) changed to being a dismissable screen; put it back to non-dismissable. #bugfix",
+"u": [
+      "https://github.com/beeminder/BeeSwift"],
+"d": "2019-11-06",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+"x": "UVI#3172 accidentally made hashtags no longer allow underscores. Now they do again! HT Sindre Eilertsen",
+"u": [
+      "https://github.com/beeminder/road/commit/8d336ac39b84efd2cdd5ecc29c2e5c472d268d4f"],
+"d": "2019-11-07",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, /* ---------------------------------------------------------- end staged */ ]
@@ -2276,44 +2405,26 @@ var staged = [ {
 ~~~~~~----------------------------- METASTAGED -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
 remove protocol & add trailing space to sms alert
 "u": [
       "https://github.com/beeminder/beeminder/commit/63b192da1d1a84191d0bc77b2b19afecfe3e9d2d",
-      "https://github.com/beeminder/beeminder/issues/780"],
-"d": "2019-11-07",
+      "https://github.com/beeminder/beeminder/issues/780"
+      "https://github.com/beeminder/beeminder/pull/906",
+      "https://github.com/beeminder/beeminder/pull/923",
+      "https://forum.beeminder.com/t/what-do-sms-reminders-look-like-in-your-client/5793/5?u=dreev"],
+"d": "2019-11-08",
 }, { // ------------------------------------------------------------------------
-CORS POLICY (not ready to be merged yet)
+CORS POLICY
 https://github.com/beeminder/beeminder/commit/72c36fc6cad02442ee2fd0b62888a015346a0a25
+https://github.com/beeminder/beeminder/pull/899
 https://github.com/beeminder/beeminder/pull/906
 https://github.com/beeminder/beeminder/issues/895
 https://forum.beeminder.com/t/cors-support-and-workarounds/5935
-https://github.com/beeminder/beeminder/pull/899
 Date: 2019-10-29 (Tue)
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-BeemiOS 5.5 is in the app store; has the (hopefully final) fix for intermittently disappearing goals (née Nick Winter bug), fixes for Dark Mode so you can actually use the app if you have that enabled, and a couple other small things that iOS changed out from under us in 13.0 that made things weird
-"d": "2019-11-06",
-}, { // ------------------------------------------------------------------------
-beebrain hashtags accept underscores again
-https://github.com/beeminder/road/commit/8d336ac39b84efd2cdd5ecc29c2e5c472d268d4f
+"d": "2019-11-08",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-"x": "Show Project Euler in goal creation & supported list",
-"u": ["https://github.com/beeminder/beeminder/pull/816"],
-"d": "2019-09-27",
-
-(the pull request includes the following commits)
-show PE in goal creation: "https://github.com/beeminder/beeminder/commit/e885ab199751eed5fc2be9d0e52a4ede33a93de2"
-and supported list:       "https://github.com/beeminder/beeminder/commit/52f537febd03f9052a8be60dc2e5020112e65663"
-cleanup exceptions:       "https://github.com/beeminder/beeminder/commit/d473752b4af1285f42a8456f5657f4a5a6f6f0d1"
-
-"author": "adamwolf"
-}, { // ------------------------------------------------------------------------
-project euler improvements (fixed an airhorn which was caused by.. [adam wolf? was this user visible? maybe not?])
-https://github.com/beeminder/beeminder/issues/879
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -2362,6 +2473,7 @@ wordpress plugin: github.com/beeminder/beeminder-ping
 4. DREEV: point to help.beeminder.com in blog.beeminder.com/newbees and vice versa
 5. proper buttons on the blog like at the end of blog.beeminder.com/strava
 6. strava activity links on the datapoints page <= do that too for IFTTT and runkeeper where we get an event/recipe URI from the service
+7. https://forum.beeminder.com/t/api-create-goal-documentation-needs-updating/5547
 ~~~~~~-------------------- TOO LATE / TOO LAME -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
 * killing intercom: https://github.com/beeminder/beeminder/issues/633
 * milk static-401 for more uvis? 
