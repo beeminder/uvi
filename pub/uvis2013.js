@@ -681,7 +681,7 @@ var batch2013jun = [
 "u": "https://twitter.com/beemuvi/status/349767768297574400",
 "t": "2013-06-26 05:55:08 +0000",
 }, /*************************************************************************/ {
-"n": 858,
+//"n": 858,
 "x": "Android app version 1.6 (UVI 1 of 7): You can now edit and delete datapoints in the Android app!",
 "u": "https://twitter.com/beemuvi/status/349974158010093568",
 "t": "2013-06-26 19:35:16 +0000",
@@ -1275,7 +1275,7 @@ var batch2013nov = [
 "u": "https://twitter.com/beemuvi/status/401975856106455041",
 "t": "2013-11-17 07:31:27 +0000",
 }, /*************************************************************************/ {
-"n": 1002,
+//"n": 1002,
 "x": "To commemorate 1000 UVIs, our 1001st [actually 1002nd] UVI is announcing <a href=\"https://twitter.com/beeminfra\">@beeminfra</a>, just like UVI#1 was announcing <a href=\"https://twitter.com/beemuvi\">@beemuvi</a>",
 "u": "https://twitter.com/beemuvi/status/402340154599170049",
 "t": "2013-11-18 07:39:02 +0000",
@@ -1452,7 +1452,7 @@ var batch2013dec = [
 "u": "https://twitter.com/beemuvi/status/417553974250590208",
 "t": "2013-12-30 07:13:19 +0000",
 }, /*************************************************************************/ {
-"n": 1045,
+//"n": 1045,
 "x": "Welcome Erica Edelman, our new Head Beekeeper! (She moved to Portland for this and everything.) The UVI is she's on <a href=\"http://beeminder.com/aboutus\">beeminder.com/aboutus</a>",
 "u": "https://twitter.com/beemuvi/status/417911877629259776",
 "t": "2013-12-31 06:55:30 +0000",

@@ -1212,7 +1212,7 @@ var batch2012oct = [
 "u": "https://twitter.com/beemuvi/status/261537360766976001",
 "t": "2012-10-25 18:39:00 +0000",
 }, /*************************************************************************/ {
-"n": 619,
+//"n": 619,
 "f": true,
 "x": "Single biggest UVI tweet ever: <a href=\"https://play.google.com/store/apps/details?id=com.beeminder.beeminder\">Android app</a> and <a href=\"https://itunes.apple.com/us/app/beeminder/id551869729\">iPhone app</a> officially launched!",
 "u": "https://twitter.com/beemuvi/status/261926023090810880",
