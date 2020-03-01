@@ -188,8 +188,26 @@ var batch = [{
 "u": "https://twitter.com/beemgro/status/1188955696525697026",
 "t": "2019-10-28",
 }, { // ------------------------------------------------------------------------
+"x": "A bunch of savvy users snagged bonus premium time on Cyber Monday. (If you didn't, there's always the exquisitely fair discount slider, which allows you to get cheaper premium months by buying ahead. Here endeth the blatant marketing of Cyber Monday!)",
+"u": "https://twitter.com/beemgro/status/1203093740031795201",
+"t": "2019-12-06",
 }, { // ------------------------------------------------------------------------
+"x": "Getting groovier! (This one's a bit meta.) Updated the requirements for the growth-related items we tweet here on @beemgro that count towards the http://beeminder.com/meta/groovy goal, and doubled that goal's rate for the next year!",
+"u": "https://twitter.com/beemgro/status/1214344040721895425",
+"t": "2020-01-06",
 }, { // ------------------------------------------------------------------------
+"x": "Our iOS magician, Andy, is now set up with an account in our support tool (vs. email), making it more efficient for us to communicate while chasing down bugs that pop up in the app.",
+"u": "https://twitter.com/beemgro/status/1222290301898969089",
+"t": "2020-01-28",
+}, { // ------------------------------------------------------------------------
+"x": "We laid out our priorities for 2020 early in January so that we could keep our eyes on the ball right from the start of the year (and have since been working towards them at a faster clip than expected!)",
+"u": "https://twitter.com/beemgro/status/1227718542541426691",
+"t": "2020-02-12",
+"c": "Danny abhored this groovy until seeing the actual priorities document",
+}, { // ------------------------------------------------------------------------
+"x": "Operational items can often be louder and feel more urgent than growth-related items, so the latter can end up taking a backseat. The http://bmndr.com/mary/beegrowthprojects goal has been created in order to ensure that enough time will be carved out for those too-easy-to-backburner priorities.",
+"u": ["https://twitter.com/beemgro/status/1232822135619538944"],
+"t": "2020-02-26",
 }, /* ----------------------------------------------------------- end batch */ ]
 
 

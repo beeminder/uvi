@@ -499,6 +499,69 @@ var batch = [{
 "x": "Include the amount of a pending charge in the admin sidebar (plus a nicer helper for displaying it).",
 "u": ["https://github.com/beeminder/beeminder/pull/880",
 "https://twitter.com/beeminfra/status/1192212549699137536"]
+}, { // ------------------------------------------------------------------------
+"x": "added a little extra info and a link to archived goals for admins on a user's gallery page",
+"u": ["https://github.com/beeminder/beeminder/commit/652e9e51a4ef9a69e11acc4c2caf591da336bbd7",
+"https://twitter.com/beeminfra/status/1194764303296913408"]
+}, { // ------------------------------------------------------------------------
+"x": "Tests for CORS policy, and for millisecond datapoint timestamps.",
+"u": ["https://github.com/beeminder/beeminder/commit/241080be92b515a9492b7d06f4d5c1edb035069c",
+"https://github.com/beeminder/beeminder/commit/494ed4d00e941ca7a982d288dd512a7266c35cb4",
+"https://twitter.com/beeminfra/status/1197284194390380545"]
+}, { // ------------------------------------------------------------------------
+"x": "Updated test expectations (i.e. in mailer/alert tests) because goals are now integery by default (yay!).",
+"u": ["https://github.com/beeminder/beeminder/commit/86eb8c453b6919cacfa9cb63818cad2d7b355bcb",
+     "https://twitter.com/beeminfra/status/1199822029559484416"]
+}, { // ------------------------------------------------------------------------
+"x": "conservaround refactoring: renamed and added some helper methods and we compute hardcap/buffer ourselves instead of parsing out of a string from beebrain.",
+"u": ["https://github.com/beeminder/beeminder/commit/8b19f04b94127fc82a3db2bfa161320808bfe647", "https://github.com/beeminder/beeminder/commit/59ab9c44ea2c5381374462f7e7f5d5d493725a66",
+"https://github.com/beeminder/beeminder/commit/36059d6536b9a2b18d4ce9a7b314a9901be5a9c0",
+"https://twitter.com/beeminfra/status/1202316200862027776"],
+"c": "yes, we tweeted some similar things as UVIs "
+}, { // ------------------------------------------------------------------------
+"x": "Our continuous testing tool for Beebrain, (we call it automon, pronounced \"ottoman\" because Turks), improves; fewer false positives on image diffs, etc.",
+"u": ["https://twitter.com/beeminfra/status/1204894311009009665"]
+}, { // ------------------------------------------------------------------------
+"x": "Added rake tasks for database migrations for Gmailzero label changes.",
+"c": "And used them too.. trying to be more responsible about leaving a paper trail for this kind of thing!",
+"u": ["https://github.com/beeminder/beeminder/pull/980",
+"https://github.com/beeminder/beeminder/commit/b0c4b3a063dc6083202f6bb8ec39fc246e804bfa",
+"https://github.com/beeminder/beeminder/commit/477658f0300b4b915e846679ae75c08cb32955ef",
+"https://twitter.com/beeminfra/status/1207427368878428161"]
+}, { // ------------------------------------------------------------------------
+"x": "Better error handling / info collection in the Gmailzero integration.",
+"u": ["https://github.com/beeminder/beeminder/commit/4816713c5458f6a7ab989657fc7b1b0452ebd12f",
+"https://github.com/beeminder/beeminder/commit/50fc632e0ec633dc8a06f88e65d296945b1a9d7b","https://twitter.com/beeminfra/status/1209964873645314048"]
+}, { // ------------------------------------------------------------------------
+"x": "Added tests for 4 platonic goal types with updated safety summary method added to goals.",
+"u": ["https://github.com/beeminder/beeminder/pull/953/commits","https://twitter.com/beeminfra/status/1212461506534633472"]
+}, { // ------------------------------------------------------------------------
+"x": "Added a bunch of defensive programing and diagnostics to gmailzero.",
+"u": ["https://github.com/beeminder/beeminder/commit/b6330ad3f3083a9c5c6959cf73a90289679c3a52","https://twitter.com/beeminfra/status/1214986468738785280"]
+}, { // ------------------------------------------------------------------------
+"x": "added user's intention statement (from signup) to admin bar",
+"u": ["https://github.com/beeminder/beeminder/pull/1029","https://twitter.com/beeminfra/status/1217595337860210688"]
+}, { // ------------------------------------------------------------------------
+"x": "exclude testing & meta accounts from possible dogfooding recipients",
+"u": ["https://github.com/beeminder/beeminder/pull/1051","https://twitter.com/beeminfra/status/1220129930010226688"],
+}, { // ------------------------------------------------------------------------
+"x": "We set up @honeycombio and oh my goodness is it the bees' knees",
+"u": ["https://github.com/beeminder/beeminder/pull/1067",
+      "https://twitter.com/beeminfra/status/1222683463691599872"],
+}, { // ------------------------------------------------------------------------
+"x": "background task for emailing noisy-road folks and updating their goals to have a fixed width (per blog.beeminder.com/manwide)",
+"u": ["https://github.com/beeminder/beeminder/pull/1077",
+"https://twitter.com/beeminfra/status/1225195544416415744"],
+}, { // ------------------------------------------------------------------------
+"x": "Tuned the settings for our background workers to allow them to use more memory (because we were getting a lot of squished jobs for over-running their limits).",
+"u": "https://twitter.com/beeminfra/status/1227746970157998081"
+}, { // ------------------------------------------------------------------------
+"x": "Made a simple rake task to check the depth of our resque queues so we can do things like keep an eye on depths over time, alert ourselves, etc",
+"u": ["https://twitter.com/beeminfra/status/1230285710868877312",
+"https://github.com/beeminder/beeminder/commit/74ad112a4977e1ac7594d8ac4fb440b14dfdb673"]
+}, { // ------------------------------------------------------------------------
+"x": "robusted up the stats page so that we don't 500 on ourselves the next time a beeminder builder archives their beehours goal and then we can't find it.",
+"u": ["https://github.com/beeminder/beeminder/pull/1120","https://twitter.com/beeminfra/status/1232807574057017345"]
 }, /* ----------------------------------------------------------- end batch */ ]
 
 var staged = [ { // note: sub-entries not allowed here in staging
@@ -507,9 +570,10 @@ var staged = [ { // note: sub-entries not allowed here in staging
 /*
 METASTAGED: --10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
 https://github.com/beeminder/beeminder/commit/
-
-
-
+}, { // ------------------------------------------------------------------------
+VCR utility for mocking up requests to 3rd party services in tests. (adamwolf++)
+https://github.com/beeminder/beeminder/pull/903
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 TODO:
