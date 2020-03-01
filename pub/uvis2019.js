@@ -2347,153 +2347,443 @@ var batch2019nov = [{
 "c": "We now de-dup the road as a final cleanup step when scheduling a break",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, /* --------------------------------------------------------- end 2019nov */ ]
-
-  
-var staged = [ {
-}, { // ------------------------------------------------------------------------
-"x": "Grammatical #bugfix: Say \"This goal gets its data automatically from the API\" instead of \"...from API\"",
-"u": [
+"x": "Grammatical #bugfix: Say \"This goal gets its data automatically from the API\" instead of \"...from API\". HT forum user zzq",
+"u": ["https://twitter.com/beemuvi/status/1194828248510631936",
       "https://github.com/beeminder/beeminder/issues/918",
       "https://github.com/beeminder/beeminder/pull/919",
       "https://forum.beeminder.com/t/grammar-of-describtion-for-goals-without-manual-data-entry/5969/1"],
 "d": "2019-11-07",
-}, { // ------------------------------------------------------------------------
+"t": "2019-11-13",
 }, { // ------------------------------------------------------------------------
 "x": "Beeminder iOS app version version 5.5",
-"u": [
+"u": ["https://twitter.com/beemuvi/status/1194828576261988352",
       "https://github.com/beeminder/BeeSwift"],
 "d": "2019-11-07",
+"t": "2019-11-13",
 }, { // ------------------------------------------------------------------------
 "s": true,
 "n": false,
 "x": "Includes the (hopefully final) #bugfix for intermittently disappearing goals",
-"u": [
+"u": ["https://twitter.com/beemuvi/status/1194828576261988352",
       "https://github.com/beeminder/BeeSwift/issues/20"],
 "d": "2019-11-07",
+"t": "2019-11-13",
 "c": "née Nick Winter bug",
 }, { // ------------------------------------------------------------------------
 "s": true,
 "x": "And updates for Dark Mode. It was previously hiding goal names and making the app unusable if you had Dark Mode on! #bugfix",
-"u": [
+"u": ["https://twitter.com/beemuvi/status/1194828731979714561",
       "https://github.com/beeminder/BeeSwift"],
 "d": "2019-11-06",
+"t": "2019-11-13",
 }, { // ------------------------------------------------------------------------
 "s": true,
 "x": "Updates for iOS 13 like default presentation for some screens (log-in, timer) changed to being a dismissable screen; put it back to non-dismissable. #bugfix",
-"u": [
+"u": ["https://twitter.com/beemuvi/status/1194828872367214594",
       "https://github.com/beeminder/BeeSwift"],
 "d": "2019-11-06",
+"t": "2019-11-13",
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-"x": "UVI#3172 accidentally made hashtags no longer allow underscores. Now they do again! HT Sindre Eilertsen",
-"u": [
+"x": "UVI#3172 accidentally made hashtags no longer allow underscores. Now they do again! HT Sindre Eilertsen & @matkoniecz",
+"u": ["https://twitter.com/beemuvi/status/1194830022554476544",
       "https://github.com/beeminder/road/commit/8d336ac39b84efd2cdd5ecc29c2e5c472d268d4f"],
 "d": "2019-11-07",
+"t": "2019-11-13",
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, /* ---------------------------------------------------------- end staged */ ]
-
-/*********************************************************************************************************************************************************************
-~~~~~~----------------------------- METASTAGED -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-remove protocol & add trailing space to sms alert
-"u": [
+"x": "We saved a whopping 7 characters by dropping the \"http://\" from the URLs in the SMS bot alerts and replies",
+"u": ["https://twitter.com/beemuvi/status/1194830614031040512",
       "https://github.com/beeminder/beeminder/commit/63b192da1d1a84191d0bc77b2b19afecfe3e9d2d",
-      "https://github.com/beeminder/beeminder/issues/780"
+      "https://github.com/beeminder/beeminder/issues/780",
       "https://github.com/beeminder/beeminder/pull/906",
       "https://github.com/beeminder/beeminder/pull/923",
       "https://forum.beeminder.com/t/what-do-sms-reminders-look-like-in-your-client/5793/5?u=dreev"],
 "d": "2019-11-08",
+"t": "2019-11-13",
+"c": "We also added a trailing space on the theory that that would stop iOS from trying to show URL previews but that didn't work. Also the zeno alerts don't include links but the reminder alerts do. Confusing.",
 }, { // ------------------------------------------------------------------------
-CORS POLICY
-https://github.com/beeminder/beeminder/commit/72c36fc6cad02442ee2fd0b62888a015346a0a25
-https://github.com/beeminder/beeminder/pull/899
-https://github.com/beeminder/beeminder/pull/906
-https://github.com/beeminder/beeminder/issues/895
-https://forum.beeminder.com/t/cors-support-and-workarounds/5935
-Date: 2019-10-29 (Tue)
+"x": "And we also stuck a bee emoji 🐝 after the URLs from the SMS bot to keep iOS from adding the annoying preview",
+"u": ["https://twitter.com/beemuvi/status/1194830740648628224",
+      "https://github.com/beeminder/beeminder/pull/927",
+      "https://forum.beeminder.com/t/what-do-sms-reminders-look-like-in-your-client/5793/5?u=dreev"],
+"d": "2019-11-12",
+"t": "2019-11-13",
+}, { // ------------------------------------------------------------------------
+"x": "The API now has access-control-allow-origin header; you can build browsery integrations w/out a back-end server to work around the browser's CORS security stuff",
+"u": ["https://twitter.com/beemuvi/status/1194831388941283328",
+      "https://github.com/beeminder/beeminder/commit/72c36fc6cad02442ee2fd0b62888a015346a0a25",
+      "https://github.com/beeminder/beeminder/pull/899",
+      "https://github.com/beeminder/beeminder/issues/895",
+      "https://forum.beeminder.com/t/cors-support-and-workarounds/5935"],
 "d": "2019-11-08",
+"t": "2019-11-13",
+"c": "HT olimay",
 }, { // ------------------------------------------------------------------------
+"x": "Our timezone database was out of date for Chile and Brazil and didn't know when they go on and off daylight savings time. Now it does / we do!",
+"u": ["https://twitter.com/beemuvi/status/1194832764731703296",
+      "https://github.com/beeminder/beeminder/issues/591"],
+"d": "2019-11-12",
+"t": "2019-11-13",
 }, { // ------------------------------------------------------------------------
+"x": "Fixed the layout for the IFTTT and Zapier landing pages (things were off center, boxes were different heights, better wrapping). #css #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1198414636866949120",
+      "https://github.com/beeminder/beeminder/issues/922",
+      "https://github.com/beeminder/beeminder/pull/928"],
+"d": "2019-11-14",
+"t": "2019-11-23",
 }, { // ------------------------------------------------------------------------
+"x": "Also fixed the line height for the little icons in the text in the Zapier blurb. And made the subheader bigger. So many little UVIs! #css #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1198743483168649216",
+      "https://github.com/beeminder/beeminder/issues/922",
+      "https://github.com/beeminder/beeminder/pull/928"],
+"d": "2019-11-14",
+"t": "2019-11-24",
 }, { // ------------------------------------------------------------------------
+"x": "Made the Fitbit setup form conform to style of others (all caps headers, spacing, width). #css",
+"u": ["https://twitter.com/beemuvi/status/1199073850396270592",
+      "https://github.com/beeminder/beeminder/issues/922",
+      "https://github.com/beeminder/beeminder/pull/928"],
+"d": "2019-11-14",
+"t": "2019-11-25",
 }, { // ------------------------------------------------------------------------
+"x": "Made autodata info body in goal creation a uniform 300px (w/ a few exceptions) because of uniformity (some were wide, some narrow) &amp; mobilefriendliness #css",
+"u": ["https://twitter.com/beemuvi/status/1199448832532078598",
+      "https://github.com/beeminder/beeminder/issues/922",
+      "https://github.com/beeminder/beeminder/pull/928"],
+"d": "2019-11-14",
+"t": "2019-11-26",
 }, { // ------------------------------------------------------------------------
+"x": "Consistent width also fixed some weird-looking wrapping. #css #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1199722095124480002",
+      "https://github.com/beeminder/beeminder/issues/922",
+      "https://github.com/beeminder/beeminder/pull/928"],
+"d": "2019-11-14",
+"t": "2019-11-27",
 }, { // ------------------------------------------------------------------------
+"x": "Centered the \"Authorize RescueTime\" button. #css #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1199722318416637952",
+      "https://github.com/beeminder/beeminder/issues/922",
+      "https://github.com/beeminder/beeminder/pull/928"],
+"d": "2019-11-14",
+"t": "2019-11-27",
 }, { // ------------------------------------------------------------------------
-https://github.com/beeminder/BeeSwift/pull/21
+"x": "Withings goal creation form: less gross! Added missing arrow for units dropdown, \"fetch\" button on own line, fixed padding in text input fields. #bugfix #css",
+"u": ["https://twitter.com/beemuvi/status/1200659024150061056",
+      "https://github.com/beeminder/beeminder/issues/922",
+      "https://github.com/beeminder/beeminder/pull/928"],
+"d": "2019-11-14",
+"t": "2019-11-29",
 }, { // ------------------------------------------------------------------------
+"x": "Oops, the bee emoji in SMS messages (UVI#3195) caused them to sometimes be split up into multiple out-of-order messages; nixed it. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1200842399401951233",
+      "https://github.com/beeminder/beeminder/pull/931",
+      "https://github.com/beeminder/beeminder/issues/929"],
+"d": "2019-11-15",
+"t": "2019-11-30",
+"c": "Unfortunately we don't know what the heck was going on with that or why other emojis in SMSes are fine (maybe because those messages are shorter and the emojis are at the beginning of the messages?). In any case, we had at least 2 independent reports and it happened to Bee a bunch so we're plenty confident this broke things and removing it fixed them.",
 }, { // ------------------------------------------------------------------------
+"x": "UVI#3172 broke the road editor in Firefox! #bugfix but hashtags with unicode characters won't show up in the road editor with Firefox (kinda Firefox's fault!)",
+"u": ["https://twitter.com/beemuvi/status/1200988896579899392",
+      "https://github.com/beeminder/road/commit/eb80f177d34d33566514e3e175349d6d0c6c9630",
+      "https://forum.beeminder.com/t/road-glitch-me-is-broken/6014/3?u=dreev"],
+"d": "2019-11-21",
+"t": "2019-11-30",
 }, { // ------------------------------------------------------------------------
+"x": "The API docs were incorrectly describing the return value of the datapoints/create_all endpoint. #bugfix HT @phdoerfler",
+"u": ["https://twitter.com/beemuvi/status/1200989130563342337",
+      "https://forum.beeminder.com/t/api-datapoints-create-all-json-returns-all-kinds-of-stuff-just-not-whats-documented/6007",
+      "https://github.com/beeminder/apidocs/issues/9",
+      "https://github.com/beeminder/beeminder/issues/933"],
+"d": "2019-11-25",
+"t": "2019-11-30",
+// TODO: hat-tip https://github.com/jahkeup
 }, { // ------------------------------------------------------------------------
+"x": "The New Goal Defaults section of account settings now points to reminder settings for setting default deadline, reminder start time, etc. HT Nathan Arthur",
+"u": ["https://twitter.com/beemuvi/status/1200989663697047552",
+      "https://forum.beeminder.com/t/5pm-deadlines-might-be-life-changing/5985/3?u=dreev",
+      "https://github.com/beeminder/beeminder/issues/924",
+      "https://github.com/beeminder/beeminder/commit/893dec2bc6a5e70c1862724c83e022abcb1f3e73"],
+"d": "2019-11-25", // not actually deployed yet #TODO
+"t": "2019-11-30",
 }, { // ------------------------------------------------------------------------
-SCHEDGE:
-1. got rid of the "Increase the pledge each time you derail" checkbox on the goal page
+"x": "We rewrote the copy for keep-abreast-of-the-buzz confirmation email",
+"u": ["https://twitter.com/beemuvi/status/1200990584774619136",
+      "https://github.com/beeminder/beeminder/issues/940",
+      "https://github.com/beeminder/beeminder/pull/942"],
+"d": "2019-11-26",
+"t": "2019-11-30",
 }, { // ------------------------------------------------------------------------
-fixes timeouts in jsbrain_server? https://github.com/beeminder/road/issues/51
+"x": "More consistent/correct conservative rounding so you're never misled about how much you have to do",
+"u": ["https://twitter.com/beemuvi/status/1200991727802171392",
+      "https://github.com/beeminder/beeminder/pull/944",
+      "https://blog.beeminder.com/integers/"],
+"d": "2019-11-27",
+"t": "2019-11-30",
 }, { // ------------------------------------------------------------------------
+"f": true,
+"x": "Goals default to integery (no decimal places) until you enter a datapoint that's not a whole number",
+"u": ["https://twitter.com/beemuvi/status/1200992181290356736",
+      "https://github.com/beeminder/beeminder/pull/944",
+      "https://blog.beeminder.com/integers/"],
+"d": "2019-11-27",
+"t": "2019-11-30",
 }, { // ------------------------------------------------------------------------
+"f": true,
+"x": "We generalized the \"integery\" field to \"precision\". Instead of integery=true (only available for custom goals) you can now set precision=1 on any goal",
+"u": ["https://twitter.com/beemuvi/status/1200993266604232705",
+      "https://blog.beeminder.com/integers/",
+      "https://github.com/beeminder/beeminder/issues/582"],
+"d": "2019-11-27",
+"t": "2019-11-30",
 }, { // ------------------------------------------------------------------------
-"x": "Super mini: removed \"Deprecated\" from the 'id' field in the api docs Goal resource -- https://changelog.beeminder.com/#2104 sort of myopically semi-broke the api, since we want you to use the slug as the identifier, but now you can change the goalname, so we'd definitely better keep the goal id around so api clients can piece things back together if someone goes and changes a goalname on them."
-"c": "it's super mini, but took lots of words to say the things."
+"x": "You can now customize how many decimal places you see by setting precision<1",
+"u": ["https://twitter.com/beemuvi/status/1200993581676154880",
+      "https://github.com/beeminder/beeminder/pull/944",
+      "https://blog.beeminder.com/integers/"],
+"d": "2019-11-27",
+"t": "2019-11-30",
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-wakatime integration?
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-~~~~~~----------------------------- CANDIDATES -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-wordpress plugin: github.com/beeminder/beeminder-ping
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-~~~~~~---------------------------------- IDEAS -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
-1. abslnw conversion for deathtonoisy means various UVIs like no more stupidly conservatively saying safe days to centerline because the stupid roadwidth could stupidly change
-2. http://forum.beeminder.com/t/please-let-me-rename-archived-goals/2746
-3. DREEV: skatesum in help.beeminder.com
-4. DREEV: point to help.beeminder.com in blog.beeminder.com/newbees and vice versa
-5. proper buttons on the blog like at the end of blog.beeminder.com/strava
-6. strava activity links on the datapoints page <= do that too for IFTTT and runkeeper where we get an event/recipe URI from the service
-7. https://forum.beeminder.com/t/api-create-goal-documentation-needs-updating/5547
-~~~~~~-------------------- TOO LATE / TOO LAME -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
-* killing intercom: https://github.com/beeminder/beeminder/issues/633
-* milk static-401 for more uvis? 
-  - fixing/obviating the banner bug
-  - make it all work the same via the API
-* fixed some (most? many?) of the thing where flash banner shows up again after you leave current page & go to another page [maybe mostly only happens for admins?]
-* Vimium users can now jump to the goals on the dashboard with hotkeys.
-  We have no idea why this got better so we probably can't use it without corroboration that this is a genuine improvement! something about octicons apparently?
-* max-height for the landing page images, same commit url as an old one above about runkeeper:
-  https://github.com/beeminder/beeminder/commit/94e269275c4a02a1e12c5c28c42e2faef23205b3
-* small fix to the way we load new svg image after a graph reload -- should look a little smoother and less jumpy
-https://github.com/beeminder/beeminder/commit/2a859386e81dade3cc63f07c2ceeda5a2c63a281
-"c": "not sure if this will be a very minor improvement or a more noticeable one. was no better, possibly worse.
+"x": "You no longer see a superfluous \".0\" appended to every datapoint value",
+"u": ["https://twitter.com/beemuvi/status/1200998681010245632",
+      "https://github.com/beeminder/beeminder/commit/e6c90e2b34d5a51258cf0068a83c003c59675103",
+      "https://github.com/beeminder/beeminder/pull/944",
+      "https://blog.beeminder.com/integers/"],
+"d": "2019-11-27",
+"t": "2019-11-30",
+"c": "We monkeypatched Ruby's to_str method for Floats. Then that broke everything so we undid that and used a sprintf at least for datapoint values!",
+}, /* --------------------------------------------------------- end 2019nov */ ]
 
-*********************************************************************************************************************************************************************/
-
-/* CHECKLIST FOR TWEETING UVIS
-1. Compose the JSON at the bottom of pub/uvis2019.js
-2. Copy to Twitter and tweet it
-3. Paste the URL of the tweet into the JSON
-4. Update Beeminder
-5. Double check that the total number of tweets for @beemuvi matches the total at beeminder.com/changelog
-*/
+var batch2019dec = [{
+"x": "Made various UI tweaks to accommodate the the new less-decimally world order, like getting the \"integery\" field out of custom settings",
+"u": ["https://twitter.com/beemuvi/status/1201544387013931008",
+      "https://github.com/beeminder/beeminder/pull/944",
+      "https://blog.beeminder.com/integers/"],
+"d": "2019-11-27",
+"t": "2019-12-01",
+}, { // ------------------------------------------------------------------------
+"x": "The bare min in the header wasn't toggling to the delta; both versions showed absolute amount due. #bugfix #regression",
+"u": ["https://twitter.com/beemuvi/status/1204138747995938816",
+      "https://github.com/beeminder/beeminder/commit/ac26cf9ab0626b2e3eb1b06007d1c0f495ce0322",
+      "https://forum.beeminder.com/t/the-more-things-change-the-more-they-stay-the-same/6035?u=dreev",
+      "https://blog.beeminder.com/integers/"],
+"d": "2019-11-27",
+"t": "2019-12-09",
+}, { // ------------------------------------------------------------------------
+"x": "Added a limit to the precision, both precision inferred from data and precision set explicitly, of 0.00001 to prevent various hideousness",
+"u": ["https://twitter.com/beemuvi/status/1205359017217757184",
+      "https://github.com/beeminder/beeminder/commit/bec5c523e5ad19fd48cd395340eced1c78fd2018",
+      "https://blog.beeminder.com/integers/"],
+"c": "Like if there was ever a \"1/3\" or a \"0.016666666666\" from entering \"0:01\" or whatever then quantum ended up as like 1e-18",
+"d": "2019-11-27",
+"t": "2019-12-12",
+}, { // ------------------------------------------------------------------------
+"x": "Better UI copy and changed \"Precision\" to \"Display Precision\" (and then made it not wrap uglily)",
+"u": ["https://twitter.com/beemuvi/status/1205638801013346304",
+      "https://github.com/beeminder/beeminder/commit/cfc0ff704f13a9dd11c03cf4a0071ef3fdec218f",
+      "https://github.com/beeminder/beeminder/commit/32ee02b40c3c901fbf8b6062c02aaba44e45383b"],
+"d": "2019-12-02",
+"t": "2019-12-13",
+}, { // ------------------------------------------------------------------------
+"x": "We now accept scientific notation for timestamps in the API. Not sure why your client would send timestamps that way but the JSON spec allows it, so... #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1205639254107291649",
+      "https://github.com/beeminder/beeminder/pull/944"],
+"d": "2019-11-27",
+"t": "2019-12-13",
+"c": "Part of the big conservaround PR",
+}, { // ------------------------------------------------------------------------
+"x": "We briefly broke a tiny thing in the API: undocumented fields baremin & baremintotal in the Goal output would cause a 500 error for old frozen goals. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1206380356020011009",
+      "https://github.com/beeminder/beeminder/commit/21872e3c0e9cb3d64d7fc64e66dbe54f98013f55"],
+"d": "2019-11-27",
+"c": "This was a patch for old goals with no safebump field from Beebrain. Was likely not actually manifested for anyone so this is super cheap, like only would've been visible if we'd left it unpatched for long enough, which we didn't so yay us and yay UVI-milking?",
+}, { // ------------------------------------------------------------------------
+"x": "Rare but ugly bug where we'd complain of \"duplicate road rows\" and not show your graph. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1206741203284197376",
+      "https://github.com/beeminder/beeminder/commit/a170aa6269e18078451dfdc2e52dede88216ad90"],
+"d": "2019-11-27",
+"t": "2019-12-16",
+"c": "We're kind of violating the rule about always violating Postel's Law here. A road with a duplicate row is slightly malformed and we should be failing loudly when that happens instead of overgenerously fixing it. Plan is to clean up all historic dups and then airhorn when new dups appear so we can debug it properly instead of this bandaid.",
+}, { // ------------------------------------------------------------------------
+"x": "Recovered various broken images on the blog that were pointing to an old AWS bucket from our HipChat days (!) -- salvaged thanks to archive.org #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1207067034984435712",
+      "https://blog.beeminder.com"],
+"d": "2019-12-03",
+"t": "2019-12-17",
+}, { // ------------------------------------------------------------------------
+"x": "Found a rare bug with our rounding that made it all wrong for some small negative numbers, yielding, eg, -0.25560000000001 #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1207501859407007744",
+      "https://github.com/beeminder/beeminder/commit/7f1ce8d06fe8f410a2ee25391e12e5046376afeb",
+      "https://github.com/beeminder/conservaround/pull/3/commits/5fb8fe5120d7d33f1a5ac1bab9e3a2ea5163102b"],
+"d": "2019-11-30",
+"t": "2019-12-18",
+}, { // ------------------------------------------------------------------------
+"x": "Improvements to the visual aesthetics of the Yellow Brick Half-Plane graphs",
+"u": ["https://twitter.com/beemuvi/status/1207513887819452416"],
+"d": "2019-12-04",
+"t": "2019-12-18",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"n": false, // ie, a continuation of the previous entry, don't increment the entry number
+"x": "New grayed-out visual for what was previously called the pink zone (when editing your road, the region it can't intersect w/out violating the akrasia horizon)",
+"u": ["https://twitter.com/beemuvi/status/1207513887819452416",
+      "https://github.com/beeminder/road/commit/3f80f17d8dcdd1aec0e6b07ffeeb608ac663a48e",
+      "https://github.com/beeminder/road/commit/3dbd54c1c67f1faa129c3fb7e06329a8569e31b2"],
+"d": "2019-12-04",
+"t": "2019-12-18",
+"c": "Since it's no longer the pinkzone we started calling this the oinkzone but probably something like verboten zone or nozone makes more sense"
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "Bright red line for the razor road instead of a dotted orange centerline",
+"u": ["https://twitter.com/beemuvi/status/1207515856806150144",
+      "https://github.com/beeminder/road/commit/1a3363acaf02a6a62c10e447788cff070520b4a6"],
+"d": "2019-12-04",
+"t": "2019-12-18",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "Fixes to the shaded regions so you always go from green to blue to orange to red despite nonmonotonicities in the road",
+"u": ["https://twitter.com/beemuvi/status/1207516820132880386",
+      "https://github.com/beeminder/road/commit/527537b53e8e8ef0e143d97a34db6427dd045005",
+      "https://github.com/beeminder/road/commit/e4a503c9cf3dd737d4b7b28dc83d322fcb0c6abb"],
+"d": "2019-12-04",
+"t": "2019-12-18",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "Changed the turquoise swath (which didn't work at all with the new shaded regions) to translucent purple",
+"u": ["https://twitter.com/beemuvi/status/1207517656376467457",
+      "https://github.com/beeminder/road/commit/539750fb409695d5a983349caebf3af925a10361"],
+"d": "2019-12-09",
+"t": "2019-12-18",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "Fixed the dot colors so they match the region they're in!",
+"u": ["https://twitter.com/beemuvi/status/1207518530897399808",
+      "https://github.com/beeminder/road/commit/cff8c863bbd1235c2bceacf51d4616811ba0b0e4"],
+"d": "2019-12-09",
+"t": "2019-12-18",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "And fixed the dot coloring boundary case (eg, orange if exactly on the bright red line)",
+"u": ["https://twitter.com/beemuvi/status/1207518640821551104",
+      "https://github.com/beeminder/road/commit/9a50828b2246e34caaa7ae1757bb9511aa8d46be"],
+"d": "2019-12-09",
+"t": "2019-12-18",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "Other fixes and tweaks, made subtle outline for watermarks so they're more visible, made graph margins work better for zero road width, etc",
+"u": ["https://twitter.com/beemuvi/status/1210067774346629121",
+      "https://github.com/beeminder/road/commit/9257875b22dda075af33eb44440e5e2987001c20",
+      "https://github.com/beeminder/road/commit/9f2464f91e71dd1fbed821aa670199ee4b356498",
+      "https://github.com/beeminder/road/commit/3aecd6ab91030ab9134bd0c644d9fd1c523e4e4c",
+      "https://github.com/beeminder/road/commit/132ae54aa51bcdb424aa64c642b608227ccff334",
+      "https://github.com/beeminder/road/commit/132ae54aa51bcdb424aa64c642b608227ccff334",
+      "https://github.com/beeminder/road/commit/e4a503c9cf3dd737d4b7b28dc83d322fcb0c6abb",
+      "https://github.com/beeminder/road/commit/ee09656b1d61751bce4d1aec873194d19825d6c0",
+      "https://github.com/beeminder/road/commit/09a0b282b15b84cebf7f2bdeeeb0bd4236cd81ff"],
+"d": "2019-12-09",
+"c": "Have we mentioned Uluc is amazing?",
+}, { // ------------------------------------------------------------------------
+"x": "New webcopy on the contact page to gently discourage calling us for support (~\"we're great in email! did you try email?\")",
+"u": ["https://twitter.com/beemuvi/status/1210325339659890688",
+      "https://github.com/beeminder/beeminder/issues/967",
+      "https://github.com/beeminder/beeminder/commit/827395989f10243af0f5f927efd6f020e8724d99"],
+"d": "2019-12-16",
+"t": "2019-12-26",
+}, { // ------------------------------------------------------------------------
+"x": "In the API docs, clarified the rate parameter slightly by mentioning rate units (runits) & moving runits documentation next to rate in the big attributes list",
+"u": ["https://twitter.com/beemuvi/status/1210684766002929665",
+      "https://github.com/beeminder/apidocs/issues/11"],
+"d": "2019-12-16",
+"t": "2019-12-27",
+"c": "Huge thanks to Mateusz Konieczny (https://github.com/matkoniecz) for lots of help improving the API docs!",
+}, { // ------------------------------------------------------------------------
+"x": "In the API docs, added a warning / clarification re the base URL for the API, since that's a common thing to mess up",
+"u": ["https://twitter.com/beemuvi/status/1210685060967321601",
+      "https://forum.beeminder.com/t/help-with-auth-on-post/6001",
+      "https://github.com/beeminder/apidocs/issues/11"],
+"d": "2019-12-16",
+"t": "2019-12-27",
+"c": "We have a more helpfuller fix coming; see https://github.com/beeminder/beeminder/issues/943",
+}, { // ------------------------------------------------------------------------
+"x": "Subtle #bugfix for rationing goals (custom goals where the road goes down but the good side is up) computing the wrong bare min / hard cap",
+"u": ["https://twitter.com/beemuvi/status/1210693611915890688",
+      "https://github.com/beeminder/beeminder/issues/957"],
+"d": "2019-12-09",
+"t": "2019-12-27",
+"c": "Thanks to Adam Wolf for deft debugging. The right way to compute the critical edge of the yellow brick road for all Platonic goal types is vcur - delta - yaw*lnw. Of course that all becomes trivial in the YBHP New World Order where lane width is always zero.",
+}, { // ------------------------------------------------------------------------
+"f": true,
+"x": "Gmail Zero: Now with labels!",
+"u": ["https://twitter.com/beemuvi/status/1210808781308739586",
+      "https://github.com/beeminder/beeminder/pull/939",
+      "https://blog.beeminder.com/gmailzerolabels/"],
+"d": "2019-12-17",
+}, { // ------------------------------------------------------------------------
+"n": false,
+"s": true,
+"x": "The integration now exclusively uses labels to check your message count. Also it should be way faster for large inboxes.",
+"u": ["https://twitter.com/beemuvi/status/1210808781308739586"],
+"d": "2019-12-17",
+"t": "2019-12-27",
+"c": "It would be nice to standardize on either GmailZero vs Gmail Zero but we've been inconsistent for a long time so we're mentioning both here for greppability."
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "We no longer ask for read permission on your emails, cuz all we need to see we get from the labels now",
+"u": ["https://twitter.com/beemuvi/status/1210809211543703554"],
+"d": "2019-12-17",
+"t": "2019-12-27",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "You can now beemind starred emails! (There was a weird bug before that made this not work but now it's moot!)",
+"u": ["https://twitter.com/beemuvi/status/1210809376363073538"],
+"d": "2019-12-17",
+"t": "2019-12-27",
+"c": "Clarification: you can now treat 'starred' as a label and beemind that but you can't make a filter->label that includes starredness as part of the query",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "Nicer interface for setting up Gmail Zero goals: you're just picking a label from a dropdown and picking between read/unread/all messages",
+"u": ["https://twitter.com/beemuvi/status/1210809483548430336"],
+"d": "2019-12-17",
+"t": "2019-12-27",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "Emailed everyone affected with what they have to do to migrate to the new GmailZero; also small webcopy tweaks in settings like \"query\" -> \"search\"",
+"u": ["https://twitter.com/beemuvi/status/1210809615681589251"],
+"d": "2019-12-17",
+"t": "2019-12-27",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "We automatically migrated everyone it was possible to migrate, namely, those just minding their inbox",
+"u": ["https://twitter.com/beemuvi/status/1211789006339358720"],
+"d": "2019-12-17",
+"t": "2019-12-30",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "And a #bugfix after deploying all this: We were trying to fetch Gmail labels on every page causing a weird banner error for some people",
+"u": ["https://twitter.com/beemuvi/status/1211802381354070016",
+      "https://github.com/beeminder/beeminder/pull/978",
+      "https://github.com/beeminder/beeminder/pull/976", // this one's just debugging info, the actual fix is in 978
+      "https://github.com/beeminder/beeminder/issues/979",
+      "https://forum.beeminder.com/t/error-getting-gmail-labels/6111"],
+"d": "2019-12-17",
+"t": "2019-12-30",
+"c": "Not a net UVI but people noticed it and even asked about it in the forum! The bug was trying to fetch Gmail labels on every page whether that made sense or not. The user-visible part was that for people with a bad auth (expired or insufficient permissions) but no GmailZero goals they'd see that error banner.",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "One more post-deploy #bugfix: we failed to update the code for the initial fetch of label count on goal creation so GmailZero goal creation was broken briefly",
+"u": ["https://twitter.com/beemuvi/status/1212472942006681600",
+      "https://github.com/beeminder/beeminder/commit/80f722fb477a6aebd544636991b78b854c964770"],
+"d": "2019-12-17",
+"t": "2020-01-01",
+}, { // ------------------------------------------------------------------------
+"x": "Finally added Jon Courtney to beeminder.com/aboutus <3",
+"u": ["https://twitter.com/beemuvi/status/1212172881578229760",
+      "https://github.com/beeminder/beeminder/issues/971"],
+"d": "2019-12-31",
+"t": "2019-12-31",
+}, { // ------------------------------------------------------------------------
+"x": "Cleaned up the UI to not show the legacy GmailZero stuff anymore after you've successfully migrated to the label-based new world order",
+"u": ["https://twitter.com/beemuvi/status/1212474070903582720",
+      "https://github.com/beeminder/beeminder/commit/2a3c9af6f956ae13295c018a169a530a01adf85f",
+      "https://github.com/beeminder/beeminder/pull/991"],
+"d": "2019-12-30",
+"t": "2020-01-01",
+}, /* --------------------------------------------------------- end 2019dec */ ]

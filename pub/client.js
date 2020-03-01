@@ -1,7 +1,13 @@
-'use strict';
+// This was originally for UVIs but we're trying to generalize it to Progress
+// Logs so instead of UVIs we have PLEs (progress log entries). Except "PLE"
+// isn't as greppable as "UVI" so still mulling this. Maybe "PUP" for "progress
+// update"?
 // --------------------------------- 80chars ---------------------------------->
 
-// StackOverflow says this is how you check if a hash is empty in ES5
+'use strict';
+
+// StackOverflow says this is how you check if a hash is empty in ES5 (but
+// probably we can stop caring about ES5 by now!)
 function isEmpty(obj) { return Object.keys(obj).length === 0 }
 
 // Return the value for the given key in the querystring
@@ -21,7 +27,7 @@ const MONAF = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
                'August', 'September', 'October', 'November', 'December']
 const NOTES = eval(getQueryParam('shownotes'))
 
-var n = 0 // global variable counting the UVIs as we generate them
+var n = 0 // global variable counting the PLEs as we generate them
 
 document.getElementById("shownotes").onclick = function() {
   Array.from(document.getElementsByClassName("note")).forEach(function(x) {
@@ -68,7 +74,7 @@ function undayify_full(n) {
   var und = undayify(n)
   var spl = splur(n, "day")
   if (und === spl) { return und }
-  return `${spl} (${und}!)`
+  return `${spl} (${und}!)` // oh, ES6 feature here; should just go all ES6!
 }
 
 // Wrap bare URLs in given string with "a href" tags; also Twitter @-mentions
@@ -162,40 +168,21 @@ function render(uvi) {
 // Convenience function. What Jquery's isNumeric does, I guess. Javascript wat?
 function isnum(x) { return x - parseFloat(x) + 1 >= 0 }
 
-// Update the global UVI counter and make sure uvi.n is set 
-// --------------------------------- 80chars ---------------------------------->
+// Update the global UVI counter and set uvi.n if it isn't already
 function numbum(uvi) {
-  if (isEmpty(uvi)) { return }
-  if (uvi.n === undefined) {          // what happens if n isn't specified
-    n += 1            // increment the global variable for the number of the UVI
-    uvi.n = n         // uvi.n defaults to the global counter
+  if (uvi.n === undefined) {          // If n isn't specified, increment global
+    n += 1                            // var for the number of the UVI.
+    uvi.n = n                  
   } else if (uvi.n === false) {       // explicit false means don't increment it
     uvi.n = n
   } else if (!isnum(uvi.n)) {
     console.log(`ERROR: Invalid value for n: ${uvi.n}`)
-  } else if (uvi.n === n+1) { // n is specified explicitly but didn't need to be
+  } else if (uvi.n === n+1) {
     console.log(`Superfluously set n=${uvi.n} but could've let it default`)
     n += 1
   } else {
     console.log(`NUMBERING ERROR: ${n} -> ${uvi.n}`)
-    
   }
-  
-  /*
-  //uvi.n = uvi.n || n // let uvi.n default to the global counter if not set
-  if (uvi.n !== n) { // let the specified number usurp the counter but complain
-    if (uvi.n === n-1 && uvi.s) {
-      //console.log(`Sublist starting @ ${n-1}`)
-    } else {
-      console.log(`NUMBERING ERROR: ${n-1} -> ${uvi.n}`)
-      //document.getElementById('err2').innerHTML = "test2029"
-      //var d = document.getElementById('err2037')
-      //d.insertAdjacentHTML('beforeend',
-      //  `<pre>NUMBERING ERROR: ${n-1} -> ${uvi.n}</pre>`)
-    }
-    n = uvi.n
-  }
-  */
 }
 
 // Takes UVI object and generates the html <li> element as a string
