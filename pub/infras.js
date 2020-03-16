@@ -562,6 +562,15 @@ var batch = [{
 }, { // ------------------------------------------------------------------------
 "x": "robusted up the stats page so that we don't 500 on ourselves the next time a beeminder builder archives their beehours goal and then we can't find it.",
 "u": ["https://github.com/beeminder/beeminder/pull/1120","https://twitter.com/beeminfra/status/1232807574057017345"]
+}, { // ------------------------------------------------------------------------
+"x": "Refactored our user mailing jobs to use resque like our other mailer.",
+"u": ["https://twitter.com/beeminfra/status/1235348953438265344",
+"https://github.com/beeminder/beeminder/pull/1130"]
+}, { // ------------------------------------------------------------------------
+"x": "Found and removed a special case in the development environment that was causing confusion: all users had some subscription perks automatically",
+"u": ["https://github.com/beeminder/beeminder/commit/bd6122cc862206306cf9b24d26514e8113d84c19",
+"https://twitter.com/beeminfra/status/1237851631514836992"],
+"c": "this was probably a thing that someone did when they were working on developing something related to those perks and they probably just shouldn't have committed it"
 }, /* ----------------------------------------------------------- end batch */ ]
 
 var staged = [ { // note: sub-entries not allowed here in staging
@@ -571,9 +580,16 @@ var staged = [ { // note: sub-entries not allowed here in staging
 METASTAGED: --10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
 https://github.com/beeminder/beeminder/commit/
 }, { // ------------------------------------------------------------------------
-VCR utility for mocking up requests to 3rd party services in tests. (adamwolf++)
-https://github.com/beeminder/beeminder/pull/903
 }, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+## NEED HELP FROM ADAM:
+* massive improvements to our ansible deployment scripts so that we can now spin up a new web server from scratch in about an hour 
+* including adding some sexy test suite thingie into the mix with ansible [help?]
+* and updated our stack slightly from an ancient and unsupported ruby version, and from a Very Old Rails to a Slightly Less Ancient Rails
+* deployed 2 new web servers for faster queues and stuff 
+* and a load balancer [coming soon]
+* a bunch of work to get honeycomb into our background workers so we can monitor stuff there too [did this actually resolve to a positive end?]
+* VCR utility for mocking up requests to 3rd party services in tests. (adamwolf++) https://github.com/beeminder/beeminder/pull/903
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 TODO:

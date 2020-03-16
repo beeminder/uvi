@@ -423,141 +423,18 @@ var batch2020feb = [{
 "t": "2020-02-27",
 "c": "That server is fisher2",
 }, { // ------------------------------------------------------------------------
-"x": "http://beeminder.com/breaks was actually ignoring the break rate passed in when scheduling a break and just using 0 instead. Especially bad for do-less! #bugfix",
-"u": ["https://twitter.com/beemuvi/status/1233554622608019456",
-      "https://github.com/beeminder/beeminder/pull/1140/commits/d3e64a67fd91ed4e515bbf1a94cfece770999050",
-      "https://github.com/beeminder/beeminder/issues/1048"], // rates were set to 0
-"d": "2020-02-28",
-"t": "2020-02-28",
 }, { // ------------------------------------------------------------------------
-"x": "http://beeminder.com/breaks now drastically prettier", // #1 in twitter thread
-"u": ["https://twitter.com/beemuvi/status/1233556643377565696",
-      "https://github.com/beeminder/beeminder/pull/1140/commits/7807c96b05b87bea384a39944854cc9e5ffd2d58"],
-"d": "2020-02-28",
-"t": "2020-02-28",
 }, { // ------------------------------------------------------------------------
-"s": true,
-"n": false,
-"x": "Added fancy Beeminder-style checkboxes. #css", // also part of #1 in twitter thread
-"u": ["https://twitter.com/beemuvi/status/1233556643377565696",
-      "https://github.com/beeminder/beeminder/pull/1140/commits/7807c96b05b87bea384a39944854cc9e5ffd2d58"],
-"d": "2020-02-28",
-"t": "2020-02-28",
 }, { // ------------------------------------------------------------------------
-"s": true,
-"x": "Got rid of the strikethrough effect for goals you're not taking a break on; now we gray things out instead. #css", // #2 in twitter thread
-"u": ["https://twitter.com/beemuvi/status/1234637116572725248",
-      "https://github.com/beeminder/beeminder/pull/1140/commits/7807c96b05b87bea384a39944854cc9e5ffd2d58",
-      "https://github.com/beeminder/beeminder/issues/1059"],  // nothing-set thing
-"d": "2020-02-28",
-"t": "2020-03-02",
 }, { // ------------------------------------------------------------------------
-"s": true,
-"x": "Fixed margins, line height, & spacing in the intro paragraph. #css", // #3 in twitter thread
-"u": ["https://twitter.com/beemuvi/status/1234994742150057984",
-      "https://github.com/beeminder/beeminder/pull/1140"], // no gissue for this
-"d": "2020-02-28",
-"t": "2020-03-03",
 }, { // ------------------------------------------------------------------------
-"s": true,
-"x": "Fixed myriad tiny alignment issues (left-justify, text baseline is all the same across a row, moved take-a-break checkbox closer to its form etc). #css", //4
-"u": ["https://twitter.com/beemuvi/status/1234994860144254976",
-      "https://github.com/beeminder/beeminder/issues/1058"], // take-a-break checkbox closer to the break column
-"d": "2020-02-28",
-"t": "2020-03-03",
 }, { // ------------------------------------------------------------------------
-"s": true,
-"x": "In the do-less section, added the field for amount of weekend buffer for weekends off (#bugfix) and updated the header to say 'max safe *buffer*' not 'days'", //5
-"u": ["https://twitter.com/beemuvi/status/1234995075190382594",
-      "https://github.com/beeminder/beeminder/issues/1050"], // weekend rate for do-less goals
-"d": "2020-02-28",
-"t": "2020-03-03",
+}, { // ------------------------------------------------------------------------
 }, /* --------------------------------------------------------- end 2020feb */ ]
-
-var batch2020mar = [{  
-"x": "On http://beeminder.com/breaks if you turned on weekends-off and scheduled a break on that same goal at the same time, the weekend would clobber the break. #bugfix",
-"u": ["https://twitter.com/beemuvi/status/1235729946670059520",
-      "https://github.com/beeminder/beeminder/pull/1149",
-      "https://github.com/beeminder/beeminder/issues/1141"],
-"d": "2020-03-05",
-"t": "2020-03-05",
-"c": "Switched the order of the operations and it's ok now. This was the last Mendoza!",
-}, { // ------------------------------------------------------------------------
-"x": "Fixed the hover effect on checkboxes site-wide so that the hover effect doesn't misleadingly happen if the checkbox is disabled/grayed-out. #bugfix #css",
-"u": ["https://twitter.com/beemuvi/status/1235730846268583940",
-      "https://github.com/beeminder/beeminder/pull/1149"],
-"d": "2020-03-05",
-"t": "2020-03-05",
-}, { // ------------------------------------------------------------------------
-"x": "The 'load all datapoints' link was inconsistently, uglily button-y in Safari. Now just an ordinary link, and the spacing is a little improved. #bugfix #css",
-"u": ["https://twitter.com/beemuvi/status/1236031445308600321",
-      "https://github.com/beeminder/beeminder/pull/1151",
-      "https://github.com/beeminder/beeminder/issues/1150"],
-"d": "2020-03-05",
-"t": "2020-03-06",
-}, { // ------------------------------------------------------------------------
-"x": "Updated our Withings landing page to include pointers to our Withings help docs and to Withings's blog post about us",
-"u": ["https://twitter.com/beemuvi/status/1237164087399731201",
-      "https://github.com/beeminder/beeminder/issues/244",
-      "https://github.com/beeminder/beeminder/pull/1153"],
-"d": "2020-03-09",
-"t": "2020-03-09",
-}, { // ------------------------------------------------------------------------
-"x": "Tweaked some copy on http://beeminder.com/withings, like changing the middle piece of the triptych from 'Just Do It' to 'Weigh In'",
-"u": ["https://twitter.com/beemuvi/status/1237164268274864129",
-      "https://github.com/beeminder/beeminder/issues/244",
-      "https://github.com/beeminder/beeminder/pull/1153"],
-"d": "2020-03-09",
-"t": "2020-03-09",
-}, { // ------------------------------------------------------------------------
-"x": "Also added a customized Withings-specific contract image. Most of our integration landing pages have them. Some of 'em are pretty funny, if we do say ourself.",
-"u": ["https://twitter.com/beemuvi/status/1237519303496200192",
-      "https://github.com/beeminder/beeminder/issues/244",
-      "https://github.com/beeminder/beeminder/pull/1153"],
-"d": "2020-03-09",
-"t": "2020-03-10",
-}, { // ------------------------------------------------------------------------
-"x": "Used an actual weight loss graph for the example in the 'Track' section of the Withings autodata integration landing page",
-"u": ["https://twitter.com/beemuvi/status/1237887016957706240",
-      "https://github.com/beeminder/beeminder/pull/1154"],
-"d": "2020-03-10",
-"t": "2020-03-11",
-}, { // ---------------------------------------------------------------------
-"x": "Finally, more copy improvements and added hovertexts on the links (plus a new link to a classic Beeminder blog post) on the Withings landing page",
-"u": ["https://twitter.com/beemuvi/status/1237887180476796928",
-      "https://github.com/beeminder/beeminder/pull/1157"],
-"d": "2020-03-10",
-"t": "2020-03-11",
-}, { // ------------------------------------------------------------------------
-"x": "We updated the Apple Health help docs with guidance on sync issues: https://help.beeminder.com/article/61-apple-health (& updated the list of supported metrics)",
-"u": ["https://twitter.com/beemuvi/status/1238217067595087872"],
-"d": "2020-03-11",
-"t": "2020-03-12",
-}, { // ------------------------------------------------------------------------
-"x": "We managed to break our PayPal integration and didn't charge any PayPal users for anything for a week. #bugfix and emailed everyone and retried the charges!",
-"u": ["https://twitter.com/beemuvi/status/1238602106853928960",
-      "https://github.com/beeminder/beeminder/pull/1124"],
-"t": "2020-03-13",
-"c": "No commit for this -- the fix was to add the field we were passing in on Braintree's side of things so it stopped choking. We did include the URL of the commit that introduced the problem, for reference.",
-}, { // ------------------------------------------------------------------------
-"x": "Visual improvements to the Yellow Brick Half-Plane graphs: made the orange/blue/green guiding lines (and the razor road itself) significantly fainter/subtler",
-"u": ["https://twitter.com/beemuvi/status/1238613439154499584",
-      "https://github.com/beeminder/road/commit/3841bf2055d9e79e512c07fa051526ff97288f50",
-      "https://github.com/beeminder/road/commit/2335ecadaec1d7ebea6f8660e54246f145dddd1d"],
-"d": "2020-03-13",
-"t": "2020-03-13",
-"c": "Also the shaded YBR (between the blue and red lines) is a bit brighter to match the old status quo for now",
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ---------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, /* --------------------------------------------------------- end 2020mar */ ]
 
 var staged = [ {
 }, { // ------------------------------------------------------------------------
-}, { // ---------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -568,15 +445,15 @@ var staged = [ {
 /*********************************************************************************************************************************************************************
 ~~~~~~----------------------------- METASTAGED -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
 }, { // ------------------------------------------------------------------------
+MEGABREAK CSS
+
+"x": "fixed a bug with megabreak page where we were actually ignoring the break_rate passed in when scheduling a break and just using 0 instead",
+"u": ["https://github.com/beeminder/beeminder/pull/1140/commits/d3e64a67fd91ed4e515bbf1a94cfece770999050",
+"https://github.com/beeminder/beeminder/issues/1048"],
+"c": "was most noticable in do less goals because usually for do more goals you're usually setting the rate to 0 "
+i fixed a bunch of fussy stuff like alignment and margins and font spacing/lineheight on the text at the top, and i added our fancy-style checkboxes and made the “this is disabled because you don’t have permission for it” way more better and fixed the ugly shit with crossing stuff out when the “take a break” line is disabled
 }, { // ------------------------------------------------------------------------
-updated https://help.beeminder.com/article/90-withings but also need to add maxflux to the instructions before tweeting this
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ---------------------------------------------------------------------
-better if we can wait on this one, because it's not deployed to fisher & germain yet, as that still waits on Adam who is sick:
-"x": "We were missing sending out an email when you change your password since Feb 29. #bugfix", 
-"u": [
-      "https://github.com/beeminder/beeminder/pull/1156"],
 }, { // ------------------------------------------------------------------------
 GMAILZERO: change blog link (probably wait for other copy changes before tweeting)
 https://github.com/beeminder/beeminder/commit/39cd4142c8fa119418ab5996187e77b53c3efb39
@@ -664,23 +541,6 @@ wordpress plugin: github.com/beeminder/beeminder-ping
 * small fix to the way we load new svg image after a graph reload -- should look a little smoother and less jumpy
 https://github.com/beeminder/beeminder/commit/2a859386e81dade3cc63f07c2ceeda5a2c63a281
 "c": "not sure if this will be a very minor improvement or a more noticeable one. was no better, possibly worse.
-
-For posterity / in case we change our minds...
-Nixed UVIs from Beedroid 3.0:
-1. Made silent notification updates on recent Android versions actually silent. #bugfix
-  Version 2.10.2. Not a net UVI.
-2. Something something push notifications improved something something graphs that don't ever stop refreshing. #bugfix
-  https://github.com/beeminder/beedroid/issues/36
-  Not user-visible, we don't think.
-3. Adjusted our Tasker integration
-  Version 2.9.2. Not a net UVI.
-4. Fixed a crash on Settings. #bugfix
-  Version 2.9.1. Not a net UVI.
-5. Adjusted spacing in Goal Detail View to add an extra row of data
-  https://github.com/beeminder/beedroid-hist/pull/65"],
-  Probably just avoiding a regression but we're not totally sure.
-6. Made the Datapoint Edit View fit better
-  Version 2.10.6. Probably any visual differences are covered by the catchall UVI about various minor visual differences.
 
 *********************************************************************************************************************************************************************/
 
