@@ -421,7 +421,7 @@ var batch2020feb = [{
 "u": ["https://twitter.com/beemuvi/status/1233189829493448704",
       "https://github.com/beeminder/beeploy"],
 "t": "2020-02-27",
-"c": "That server is fisher2",
+"c": "That server is fisher2. See also the comments on UVI#3321 which fixed a bug that this UVI indirectly introduced.",
 }, { // ------------------------------------------------------------------------
 "x": "http://beeminder.com/breaks was actually ignoring the break rate passed in when scheduling a break and just using 0 instead. Especially bad for do-less! #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1233554622608019456",
@@ -548,8 +548,87 @@ var batch2020mar = [{
 "t": "2020-03-13",
 "c": "Also the shaded YBR (between the blue and red lines) is a bit brighter to match the old status quo for now",
 }, { // ------------------------------------------------------------------------
+"x": "We were missing sending out an email when you changed your password between Feb 29 & Mar 11 (and a couple more failures after that, long story). #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1239694233923026945",
+      "https://github.com/beeminder/beeminder/pull/1156",
+      "https://github.com/beeminder/beeminder/commit/4e6d2b3dc1a9498d2c062a8c437f6f55cc363f51",
+      "https://github.com/beeminder/beeminder/issues/1097",
+      "https://github.com/beeminder/beeminder/issues/1102"],
+"d": "2020-03-11",
+"t": "2020-03-16",
+"c": "The long story is that the fix didn't go to all the servers right away. And a longer story: We broke a similar thing around Feb 7 with legit check emails (and made sure to resend them all, a bit delayed, in that case) that we probably should've tweeted as a separate UVI but we waited too long so we just added a link to the commit and related gissues for that here as well. And yet another similar thing with charge alert emails.",
 }, { // ------------------------------------------------------------------------
-}, { // ---------------------------------------------------------------------
+"x": "Made http://beeminder.com/premium downgrade buttons just say \"downgrade\" instead of \"downgrade to ___\" since the \"to ___\" was clear from context. Also for consistency.",
+"u": ["https://twitter.com/beemuvi/status/1239694385228345344",
+      "https://github.com/beeminder/beeminder/pull/1161"],
+"d": "2020-03-16",
+"t": "2020-03-16",
+"c": "The consistency is that the other buttons say e.g. 'add plan', not 'add Infinibee plan'",
+}, { // ------------------------------------------------------------------------
+"x": "Fixed a margin thing with \"downgrading on DATE\" buttons, where the text overflowed the edge of the button. #css #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1240057797867233281",
+      "https://github.com/beeminder/beeminder/pull/1161"],
+"d": "2020-03-16",
+"t": "2020-03-17",
+}, { // ------------------------------------------------------------------------
+"x": "We now tell you (in a pop-up) when you downgrade your premium subscription level that you keep your perks until your next payment would have been",
+"u": ["https://twitter.com/beemuvi/status/1240355548609957891",
+      "https://github.com/beeminder/beeminder/pull/1161"],
+"d": "2020-03-16",
+"t": "2020-03-18",
+}, { // ------------------------------------------------------------------------
+"x": "Made the buttons in the downgrade dialog on http://beeminder.com/premium match the rest of Beeminder. #css",
+"u": ["https://twitter.com/beemuvi/status/1240420766484553728",
+      "https://github.com/beeminder/beeminder/pull/1165",
+      "https://github.com/beeminder/beeminder/commit/fa7576fbd05aa25d58bc3e85c6796043ee3d16da"],
+"d": "2020-03-18",
+"t": "2020-03-18",
+}, { // ------------------------------------------------------------------------
+"x": "Webcopy change for downgrading / removing a premium subscription: \"your subscription has been removed\" &rarr; \"your subscription is downgrading\"",
+"u": ["https://twitter.com/beemuvi/status/1240422194645098497",
+      "https://github.com/beeminder/beeminder/pull/1165",
+      "https://github.com/beeminder/beeminder/commit/4bbffe0d2665bded52f6c98df3f90a59f64b4013"],
+"d": "2020-03-18",
+"t": "2020-03-18",
+}, { // ------------------------------------------------------------------------
+"x": "Bug we've been shirk-n-turking (manually fixing as it happened) since we introduced it with UVI#3004: proper prorated credit for premium upgrades. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1241140877763829761",
+      "https://github.com/beeminder/beeminder/pull/1165",
+      "https://github.com/beeminder/beeminder/commit/4493b9abb2fea8e26894ee6b49a300b4915da329"],
+"d": "2020-03-18",
+"t": "2020-03-20",
+}, { // ------------------------------------------------------------------------
+"x": "Lifetime premium subscribers were getting quoted wrong prices for upgrades! Now we say e.g. \"$16/month ($8 for you)\" to a lifetime Infinibee subscriber. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1241140992851333120",
+      "https://github.com/beeminder/beeminder/pull/1168",
+      "https://github.com/beeminder/beeminder/issues/1167"],
+"d": "2020-03-18",
+"t": "2020-03-20",
+}, { // ------------------------------------------------------------------------
+"x": "Copy fix: \"You are switching to ___ &amp; will be charged $__ per lifetime until you cancel, starting now.\" &rarr; \"You are adding a lifetime subscription to ...\"",
+"u": ["https://twitter.com/beemuvi/status/1242237797622112256",
+      "https://github.com/beeminder/beeminder/pull/1168",
+      "https://github.com/beeminder/beeminder/issues/1167"],
+"d": "2020-03-18",
+"t": "2020-03-23",
+}, { // ------------------------------------------------------------------------
+"x": "Nicer formatting for doc.beeminder.com documents and other related tweaks like giving the pages meta descriptions. #css",
+"u": ["https://twitter.com/beemuvi/status/1242599910643359744",
+      "https://github.com/bsoule/expost"],
+"d": "2020-03-23",
+"t": "2020-03-24",
+"c": "We could milk this for a lot of UVIs (expost docs are responsive now, there's a sidebar css class, etc etc) but it's not part of Beeminder proper so we're compromising and lumping it into one",
+}, { // ------------------------------------------------------------------------
+"x": "On your goal page, we linkify stuff you put in your goal description, but we weren't linkifying on the dashboard, so you got ugly '<a href=...' stuff. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1242600958728626176",
+      "https://github.com/beeminder/beeminder/issues/1171",
+      "https://github.com/beeminder/beeminder/pull/1176"],
+"d": "2020-03-24",
+"t": "2020-03-24",
+"c": "See also UVI#2813 and sorta UVI#3276. The part about only premium users doesn't matter much now that we have the commitwall to filter out spammers.",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -557,7 +636,31 @@ var batch2020mar = [{
 
 var staged = [ {
 }, { // ------------------------------------------------------------------------
-}, { // ---------------------------------------------------------------------
+"f": true,
+"x": "Premium credit! It's now a thing we can give you! Drastically more than you wanted to know at https://doc.beeminder.com/credit",
+"u": ["https://twitter.com/beemuvi/status/1242962138936696832",
+      ],
+"d": "2020-03-25",
+"t": "2020-03-25",
+}, { // ------------------------------------------------------------------------
+"x": "Updated beeminder.com/widgets to show \"goalname: description\" in the goal selection dropdown. Had been showing only descriptions which made no sense. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1243308924737949696",
+      "https://github.com/beeminder/beeminder/issues/1162",
+      "https://github.com/beeminder/beeminder/commit/7b183d7a9472f657dc528dc3a1122527dde43c28"],
+"d": "2020-01-10",
+"t": "2020-03-26",
+"c": "Turns out we did this as part of UVI#3252 but forgot to log it as its own UVI even though it totally was. HT @shanaqui for catching this. This is all part of the http://doc.beeminder.com/slug quagmire.",
+}, { // ------------------------------------------------------------------------
+"x": "Yellow Brick Half-Plane graphs now include the thicker yellow guiding line on weight loss goals indicating the most your weight fluctuates day to day",
+"u": ["https://twitter.com/beemuvi/status/1243309185430728704",
+      "https://github.com/beeminder/road/commit/d2bd106489705818b02d841c5424455d90ba447d"],
+"d": "2020-03-26",
+"t": "2020-03-26",
+"c": "Known as maxflux in Beebrain",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -568,15 +671,9 @@ var staged = [ {
 /*********************************************************************************************************************************************************************
 ~~~~~~----------------------------- METASTAGED -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
 updated https://help.beeminder.com/article/90-withings but also need to add maxflux to the instructions before tweeting this
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-}, { // ---------------------------------------------------------------------
-better if we can wait on this one, because it's not deployed to fisher & germain yet, as that still waits on Adam who is sick:
-"x": "We were missing sending out an email when you change your password since Feb 29. #bugfix", 
-"u": [
-      "https://github.com/beeminder/beeminder/pull/1156"],
 }, { // ------------------------------------------------------------------------
 GMAILZERO: change blog link (probably wait for other copy changes before tweeting)
 https://github.com/beeminder/beeminder/commit/39cd4142c8fa119418ab5996187e77b53c3efb39

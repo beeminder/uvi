@@ -571,6 +571,20 @@ var batch = [{
 "u": ["https://github.com/beeminder/beeminder/commit/bd6122cc862206306cf9b24d26514e8113d84c19",
 "https://twitter.com/beeminfra/status/1237851631514836992"],
 "c": "this was probably a thing that someone did when they were working on developing something related to those perks and they probably just shouldn't have committed it"
+}, { // ------------------------------------------------------------------------
+"x": "Refactoring views for the Premium page. It's more manageable and less a pokey nest of html and ruby templating now.",
+"d": "2020-03-16",
+"t": "2020-03-18",
+"u": ["https://github.com/beeminder/beeminder/pull/1161/commits",
+"https://twitter.com/beeminfra/status/1240418921984868352"]
+}, { // ------------------------------------------------------------------------
+"x": "Added meta-info to charges in Stripe and Paypal for tighter association between an individual payment and the Beeminder event that triggered it.",
+"u": ["https://github.com/beeminder/beeminder/pull/1124",
+"https://twitter.com/beeminfra/status/1242890982959378432"
+],
+"d": "2020-02-21",
+"t": "2020-03-25",
+"c": "hoping this will help track down / identify a bug with double charging. but also it's a good idea anyway."
 }, /* ----------------------------------------------------------- end batch */ ]
 
 var staged = [ { // note: sub-entries not allowed here in staging
@@ -579,8 +593,6 @@ var staged = [ { // note: sub-entries not allowed here in staging
 /*
 METASTAGED: --10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
 https://github.com/beeminder/beeminder/commit/
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 ## NEED HELP FROM ADAM:
 * massive improvements to our ansible deployment scripts so that we can now spin up a new web server from scratch in about an hour 
