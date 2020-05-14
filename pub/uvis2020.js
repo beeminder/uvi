@@ -627,23 +627,15 @@ var batch2020mar = [{
 "t": "2020-03-24",
 "c": "See also UVI#2813 and sorta UVI#3276. The part about only premium users doesn't matter much now that we have the commitwall to filter out spammers.",
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, /* --------------------------------------------------------- end 2020mar */ ]
-
-var staged = [ {
-}, { // ------------------------------------------------------------------------
 "f": true,
 "x": "Premium credit! It's now a thing we can give you! Drastically more than you wanted to know at https://doc.beeminder.com/credit",
 "u": ["https://twitter.com/beemuvi/status/1242962138936696832",
-      ],
+      "https://github.com/beeminder/beeminder/issues/1170",
+      "https://github.com/beeminder/beeminder/pull/1174"],
 "d": "2020-03-25",
 "t": "2020-03-25",
 }, { // ------------------------------------------------------------------------
-"x": "Updated beeminder.com/widgets to show \"goalname: description\" in the goal selection dropdown. Had been showing only descriptions which made no sense. #bugfix",
+"x": "Updated https://beeminder.com/widgets to show \"goalname: description\" in the goal selection dropdown. Had been showing only descriptions which made no sense. #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1243308924737949696",
       "https://github.com/beeminder/beeminder/issues/1162",
       "https://github.com/beeminder/beeminder/commit/7b183d7a9472f657dc528dc3a1122527dde43c28"],
@@ -653,17 +645,439 @@ var staged = [ {
 }, { // ------------------------------------------------------------------------
 "x": "Yellow Brick Half-Plane graphs now include the thicker yellow guiding line on weight loss goals indicating the most your weight fluctuates day to day",
 "u": ["https://twitter.com/beemuvi/status/1243309185430728704",
+      "https://github.com/beeminder/road/issues/97",
       "https://github.com/beeminder/road/commit/d2bd106489705818b02d841c5424455d90ba447d"],
 "d": "2020-03-26",
 "t": "2020-03-26",
 "c": "Known as maxflux in Beebrain",
 }, { // ------------------------------------------------------------------------
+"x": "Updates to http://beeminder.com/api -- Documented the sort order for the Goals endpoint + various copyediting, formatting, tweaking, fixing things throughout the docs",
+"u": ["https://twitter.com/beemuvi/status/1243685722579554304",
+      "https://forum.beeminder.com/t/does-the-goals-endpoint-always-return-goals-sorted-by-losedate-ascending/6477?u=dreev",
+      "https://github.com/beeminder/beeminder/issues/1177",
+      "https://github.com/beeminder/apidocs/commit/f1615746d8356a5895102d3055a1af4c6c909222",
+      "https://github.com/beeminder/apidocs/commit/6f966ed7f62ba246f47d55c0c07932daa4c424db"],
+"d": "2020-03-27",
+"t": "2020-03-27",
+}, { // ------------------------------------------------------------------------
+"x": "Oops, previous (like 6-for-1!) UVI for the <a href=\"http://beeminder.com/api\">API docs</a> introduced a formatting bug with lists inside a bulleted list. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1244044580695109635",
+      "https://github.com/beeminder/apidocs/commit/30cd924b5d564c5882d6e6b4393770b88ad18349"],
+"d": "2020-03-27",
+"t": "2020-03-28",
+}, { // ------------------------------------------------------------------------
+"x": "Added a loadbalancer & upgraded Rails, which may not be user-visible enough but in the process we broke the \"load more datapoints\" button & fixed it. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1244045164923904002",
+      "https://github.com/beeminder/beeminder/pull/1187"],
+"d": "2020-03-27",
+"t": "2020-03-28",
+}, { // ------------------------------------------------------------------------
+"x": "And we missed a spot with the loadbalancer and broke oauth (eg, logging in via Google) for some hours. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1244407589930070017",
+      "https://github.com/beeminder/beeminder/pull/1192"],
+"d": "2020-03-29",
+"t": "2020-03-29",
+"c": "Missed the oauth base URL config thing moving www2 back to www",
+}, { // ------------------------------------------------------------------------
+"x": "One more: our server/rails upgrades messed up our Javascript for autodata goal creation for several integrations including Duolingo and Todoist. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1244767256078254081",
+      "https://github.com/beeminder/beeminder/pull/1195"],
+"d": "2020-03-30",
+"t": "2020-03-30",
+"c": "Was broken the whole weekend!",
+}, { // ------------------------------------------------------------------------
+"x": "Turns out our fix in UVI#3130 only worked sometimes, randomly. Now refreshing the graph when you edit the YBR works all the time, deterministically. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1244767561234841600",
+      "https://github.com/beeminder/beeminder/issues/764",
+      "https://github.com/beeminder/beeminder/pull/1186"],
+"d": "2020-03-30",
+"t": "2020-03-30",
+"c": "Clarification: It always regenerated the graph, you would just sometimes have to refresh the page to see it",
+}, { // ------------------------------------------------------------------------
+"x": "Autoratchet (setting a max safety buffer) wasn't always getting applied for do-less goals! Sorry about that! HT Neal Chau #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1245136305270296576",
+      "https://github.com/beeminder/beeminder/issues/1175",
+      "https://github.com/beeminder/beeminder/pull/1207"],
+"d": "2020-03-31",
+"t": "2020-03-31",
+"c": "We had accidentally been considering days of buffer instead of goal-units of buffer in deciding whether a goal was ratchetable",
+}, { // ------------------------------------------------------------------------
+"x": "Some buggy API clients were accidentally requesting full history of data every time so we added a helpful check + error message for the diff_since parameter",
+"u": ["https://twitter.com/beemuvi/status/1245136521939705856",
+      "https://github.com/beeminder/beeminder/issues/1203",
+      "https://github.com/beeminder/beeminder/pull/1209"],
+"d": "2020-03-31",
+"t": "2020-03-31",
+}, /* --------------------------------------------------------- end 2020mar */ ]
+
+const batch2020apr = [{  
+"x": "There's no such thing as lanes in the Yellow Brick Half-Plane new world order but we made the API lane field backward-compatible to not break clients. #YBHP",
+"u": ["https://github.com/beeminder/road/commit/4a277094534da2f9af5e3569a0da6ea41359af68",
+      "https://forum.beeminder.com/t/api-changes-in-the-yellow-brick-half-plane-new-world-order/6493"],
+"d": "2020-04-01",
+"t": "2020-04-01",
+}, { // ------------------------------------------------------------------------
+"x": "The new pledge schedule from UVI#3097 is now opt-in instead of opt-out. Less confusion this way (for now) w/ people expecting $0 initial pledges. HT @TomFrankly",
+"u": ["https://twitter.com/beemuvi/status/1245859868365344780",
+      "https://github.com/beeminder/beeminder/issues/1213",
+      "https://github.com/beeminder/beeminder/pull/1217"],
+"d": "2020-04-02",
+"t": "2020-04-02",
+}, { // ------------------------------------------------------------------------
+"x": "Some yellow brick half-plane graphs were showing the wrong number of safe days (missed a spot with purging all the horrible lane-related code). #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1245860792097861633",
+      "https://github.com/beeminder/road/commit/d7a0a615c7e21966331e7a8e2bb730373f42abb8"],
+"d": "2020-04-02",
+"t": "2020-04-02",
+}, { // ------------------------------------------------------------------------
+"x": "UVI#3342 broke Complice! Eek! Now slightly \"smarter\" (though all quite a mess now, design-wise, sadly) so diff_since=0 is allowed in the case that skinny=true",
+"u": ["https://twitter.com/beemuvi/status/1246224898508247040",
+      "https://github.com/malcolmocean/beeminderjs/issues/6",
+      "https://github.com/beeminder/beeminder/pull/1216",
+      "https://github.com/beeminder/beeminder/pull/1219",
+      "https://github.com/beeminder/beeminder/issues/1203"],
+"d": "2020-04-03",
+"t": "2020-04-03",
+"c": "One more layer of duct tape. Oy. New error copy: \"Nonsensical diff_since timestamp: it's from before you started beeminding! (Though diff_since=0 is allowed in the case of skinny=true.) The intended use is to retrieve a filtered list of goals/datapoints updated since diff_since. This helps both your app and Beeminder's beleaguered servers.\"",
+}, { // ------------------------------------------------------------------------
+"x": "Made YBHP graphs give an error if you set lane width > 0 and removed an accidentally visible placeholder from the y-axis on graphs that are blank due to errors",
+"u": ["https://twitter.com/beemuvi/status/1247311782441390080",
+      "https://github.com/beeminder/road/commit/fe87cb9714812271c9e3de76f9d356924275aed5",
+      "https://github.com/beeminder/road/commit/46ca2bfd8b7cc2d7bdde7262416c6364c1c70208"],
+"d": "2020-04-06",
+"t": "2020-04-06",
+"c": "Specifically abslnw. Way better to fail loudly than let everything be broken. And the placeholder was 'deneme' which I think means something like 'ignore this' or 'test' in Turkish.",
+}, { // ------------------------------------------------------------------------
+"x": "Brought our Withings help docs up to date, including max daily fluctuation, plus myriad copy improvements. https://help.beeminder.com/article/90-withings",
+"u": ["https://twitter.com/beemuvi/status/1247312012616404995"],
+"t": "2020-04-06",
+}, { // ------------------------------------------------------------------------
+"x": "UVI#2713 wasn't enough; we now show timezone directly in the graph header along with the deadline in case your browser and Beeminder disagree on your timezone",
+"u": ["https://twitter.com/beemuvi/status/1247672849172533249",
+      "https://github.com/beeminder/beeminder/issues/274",
+      "https://github.com/beeminder/beeminder/pull/1224"],
+"d": "2020-04-06",
+"t": "2020-04-07",
+}, { // ------------------------------------------------------------------------
+"x": "Display of timezones above the graph now much prettier: we show the standard abbreviation like 'PDT' if there is one, else the canonical city like 'Los Angeles'",
+"u": ["https://twitter.com/beemuvi/status/1248031844295012353",
+      "https://github.com/beeminder/beeminder/pull/1227",
+      "https://github.com/beeminder/beeminder/pull/1230",
+      "https://github.com/beeminder/beeminder/commit/9a8a53e49fe41c47952e1a704d7ebf759bcdeca0"],
+"d": "2020-04-08",
+"t": "2020-04-08",
+}, { // ------------------------------------------------------------------------
+"x": "Again, that's just if the browser's and the user's stored timezone differ. Also we improved the tooltip/hovertext showing both, including nicer UTC offsets.",
+"u": ["https://twitter.com/beemuvi/status/1248031984330231809",
+      "https://github.com/beeminder/beeminder/pull/1234"],
+"d": "2020-04-08",
+"t": "2020-04-08",
+}, { // ------------------------------------------------------------------------
+"x": "More error checking in http://beeminder.com/breaks -- we no longer silently fail if you clear the dates and submit them blank. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1248391682938122240",
+      "https://github.com/beeminder/beeminder/pull/1232",
+      "https://github.com/beeminder/beeminder/pull/1233"],
+"d": "2020-04-08",
+"t": "2020-04-09",
+}, { // ------------------------------------------------------------------------
+"x": "Insidious rare bug with http://beeminder.com/breaks that would break (bad kind of 'break') weekends-off-enabled goals next time we tried to schedule a weekend. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1248391844477595648",
+      "https://github.com/beeminder/beeminder/pull/1232",
+      "https://github.com/beeminder/beeminder/pull/1233"],
+"d": "2020-04-08",
+"t": "2020-04-09",
+}, { // ------------------------------------------------------------------------
+"x": "Huge facepalm: UVI#3342 broke Beedroid (one of the \"buggy API clients\" apparently): was impossible to sync goals after first logging in. Ouch/sorry! #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1248421301829505025",
+      "https://github.com/beeminder/beeminder/pull/1237",
+      "https://github.com/beeminder/beeminder/pull/1238"],
+"d": "2020-04-09",
+"t": "2020-04-09",
+}, { // ------------------------------------------------------------------------
+"x": "Two typo fixes: a comma splice (or was it asyndeton??) in a tagline and a missing word (\"in case you'd like try it\") in our webcopy. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1249847789267247104",
+      "https://github.com/beeminder/beeminder/issues/1225",
+      "https://github.com/beeminder/beeminder/pull/1226",
+      "https://forum.beeminder.com/t/grammar-nerd-interlude-embarrassing-comma-splices-also-uvi-criteria/6542?u=dreev",
+      "https://github.com/beeminder/beeminder/issues/1240"],
+"d": "2020-04-13",
+"t": "2020-04-13",
+"c": "Vote was 8 to 6 on typo fixes being legit UVIs. Our compromise is that it takes more than one typo fix to count!",
+}, { // ------------------------------------------------------------------------
+"x": "Warn you of your max safety buffer (autoratchet), if you have one, when setting your (initial post-restart) safety buffer while restarting a goal",
+"u": ["https://twitter.com/beemuvi/status/1249849041317322759",
+      "https://github.com/beeminder/beeminder/issues/937",
+      "https://github.com/beeminder/beeminder/pull/1243"],
+"d": "2020-04-13",
+"t": "2020-04-13",
+}, { // ------------------------------------------------------------------------
+"x": "Facepalm: Previous UVI broke goal restarts altogether! We pretty quickly #bugfix'd it and emailed the 2 people affected.",
+"u": ["https://twitter.com/beemuvi/status/1250202076753190913",
+      "https://github.com/beeminder/beeminder/pull/1244"],
+"d": "2020-04-14",
+"t": "2020-04-14",
+}, { // ------------------------------------------------------------------------
+"x": "New hovertext on the word \"due\" above your graph with a better descriptor of how safe you are / what you have to do to get safe. Also in API as \"safesum\".",
+"u": ["https://twitter.com/beemuvi/status/1250571348021145602",
+      "https://github.com/beeminder/beeminder/issues/830",
+      "http://doc.beeminder.com/safesum",
+      "https://github.com/beeminder/beeminder/pull/953"],
+"d": "2020-04-15",
+"t": "2020-04-15",
+"c": "By Adam",
+}, { // ------------------------------------------------------------------------
+"x": "Got rid of the dumb \"0.0\" in \"initial datapoint of 0.0 on the 5th\" when creating a goal. It's just zero. Good old \"0\". A lot behind the scenes there though.",
+"u": ["https://twitter.com/beemuvi/status/1250573914658336769",
+      "https://github.com/beeminder/beeminder/issues/948",
+      "https://github.com/beeminder/beeminder/pull/950"],
+"d": "2020-04-15",
+"t": "2020-04-15",
+"c": "Similar to UVI#3214 and UVI#3255 (and, um, UVI#355 and UVI#1271 and UVI#1839 and UVI#2198) which we should've made more universal rather than all piecemeal like this",
+}, { // ------------------------------------------------------------------------
+"x": "When recommitting after derailing, we'd lose the first future row if you had zero recommit mercy and had future changes scheduled. #bugfix HT @phdoerfler",
+"u": ["https://twitter.com/beemuvi/status/1250936619651096576",
+      "https://github.com/beeminder/beeminder/issues/1261",
+      "https://github.com/beeminder/beeminder/pull/1262"],
+"d": "2020-04-16",
+"t": "2020-04-16",
+}, { // ------------------------------------------------------------------------
+"x": "Yet another fix with removing trailing .0 decimals when stringifying numbers, this time in the dashboard & goal page add-data widgets. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1250940740114411520",
+      "https://github.com/beeminder/beeminder/pull/1257"],
+"d": "2020-04-16",
+"t": "2020-04-16",
+}, { // ------------------------------------------------------------------------
+"x": "If you updated the goal description above the header then updated things in goal settings (eg, fine print), we'd clobber the updated description! #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1251298242714726401",
+      "https://github.com/beeminder/beeminder/issues/437",
+      "https://github.com/beeminder/beeminder/pull/1266"],
+"d": "2020-04-17",
+"t": "2020-04-17",
+"c": "This was only if you did the two without a page refresh in between, because \"goal description\" is included in that goal settings form as well as above the graph, but updating it above the graph didn't update the one down below.",
+}, { // ------------------------------------------------------------------------
+"f": true,
+"x": "We made Megabreak (UVI#3257) official (not that awful name though!). It's now in the main menu and we blogged about it and everything!",
+"u": ["https://twitter.com/beemuvi/status/1252385271275905024",
+      "https://github.com/beeminder/beeminder/pull/1272",
+      "https://blog.beeminder.com/megabreak"],
+"d": "2020-04-20",
+"t": "2020-04-20",
+}, { // ------------------------------------------------------------------------
+"x": "In fact, Megabreak is so official (again, the feature, not the name \"Megabreak\"!) that it has a <a href=\"https://help.beeminder.com/article/154-can-i-schedule-breaks-on-many-goals-at-once\">help doc</a>",
+"u": ["https://twitter.com/beemuvi/status/1252385614139256834"],
+"d": "2020-04-17",
+"t": "2020-04-20",
+}, { // ------------------------------------------------------------------------
+"x": "Webcopy bug in Do Less section of Megabreak table: Do Less goals give safety buffer in goal units, not days. #bugfix Also blog.beeminder.com/glossary updates!",
+"u": ["https://twitter.com/beemuvi/status/1252738846355099649",
+      "https://github.com/beeminder/beeminder/issues/1273",
+      "https://github.com/beeminder/beeminder/pull/1276"],
+"d": "2020-04-21",
+"t": "2020-04-21",
+"c": "Changed the entry for 'auto-widening' to 'This isn't a thing anymore!' with a link to the death-to-autowidening post",
+}, { // ------------------------------------------------------------------------
+"x": "Zero-lane-width goals (custom and/or new YBHP goals) gave one too few days of mercy when recommitting! #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1253107138114641921",
+      "https://github.com/beeminder/beeminder/pull/1279",
+      "https://github.com/beeminder/beeminder/issues/1010"],
+"d": "2020-04-22",
+"t": "2020-04-22",
+"c": "Doesn't exactly resolve gissue #1010, but does for the YBHP NWO so, y'know, onward to the future!",
+}, { // ------------------------------------------------------------------------
+"f": true,
+"x": "Version 5.6 (and 5.6.1 and 5.6.2) of the iOS app!",
+"u": ["https://twitter.com/beemuvi/status/1253469964293435393"],
+"d": "2020-04-18",
+"t": "2020-04-23",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"n": false,
+"x": "Newly beemindable Apple Health metrics: Saturated fat and Sodium",
+"u": ["https://twitter.com/beemuvi/status/1253469964293435393"],
+"d": "2020-04-18",
+"t": "2020-04-23",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "Better, more prosaic, sometimes more concise descriptors of what you have to do by when",
+"u": ["https://twitter.com/beemuvi/status/1253470310508052480"],
+"d": "2020-04-18",
+"t": "2020-04-23",
+"c": "AKA safesum",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "A search button (originally just if you had >10 goals, which is when it makes sense, but that violated the Anti-Magic Principle so now everyone sees it)",
+"u": ["https://twitter.com/beemuvi/status/1253791321271091200"],
+"d": "2020-04-18",
+"t": "2020-04-24",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "We now show your timezone in settings. You can't edit it, mind you, but at least you can see what it's set to!",
+"u": ["https://twitter.com/beemuvi/status/1253791600024535042"],
+"d": "2020-04-18",
+"t": "2020-04-24",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "The deltas (how much you have to do to get in the orange/blue/green) are now centered below your graph",
+"u": ["https://twitter.com/beemuvi/status/1253791743125803008"],
+"d": "2020-04-18",
+"t": "2020-04-24",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "If you entered invalid credentials, you were bombarded with multiple popups admonishing you, over and over. That was deemed excessive so now you get 1. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1253791873149177856",
+      "https://github.com/beeminder/BeeSwift/issues/34"],
+"d": "2020-04-18",
+"t": "2020-04-24",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "If we really need you to upgrade in the future you'll now see a banner telling you your version is out of date",
+"u": ["https://twitter.com/beemuvi/status/1253792005794103303"],
+"d": "2020-04-18",
+"t": "2020-04-24",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "Between 5.6.1 until version 5.6.2 the app wouldn't display your most recent datapoint. Made things seem very broken! #bugfix HT Faire Soule-Reeves",
+"u": ["https://twitter.com/beemuvi/status/1253792327665020933"],
+"d": "2020-04-23",
+"t": "2020-04-24",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "Also the sort feature was sort of broken in 5.6 until 5.6.1. Sheepish-face-emoji! #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1253792559408660481"],
+"d": "2020-04-22",
+"t": "2020-04-24",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "Finally, a little improvement to the search feature: results stay filtered to your search after you view a goal and go back to the gallery",
+"u": ["https://twitter.com/beemuvi/status/1253792807262683136"],
+"d": "2020-04-23",
+"t": "2020-04-24",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "The app now understands that Beeminder days end at the deadline, not necessarily midnight. #bugfix HT Garrison Taylor",
+"u": ["https://twitter.com/beemuvi/status/1253797080172093441",
+      "https://github.com/beeminder/BeeSwift/issues/29"],
+"d": "2020-04-18",
+"t": "2020-04-24",
+"c": "Originally tweeted these as '(__ of 10)' and prefixed this one with 'Turns out BeemiOS UVIs go up to 11'",
+}, /* --------------------------------------------------------- end 2020apr */ ]
+
+const batch2020may = [{  
+}, { // ------------------------------------------------------------------------
+"x": "The SVG URL in the JSON output at beeminder.com/username/goalname.json was broken. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1257454842232143874",
+      "https://github.com/beeminder/beeminder/commit/ba4f94a4f1ed6d7e3ad6c14bd795e522fb0930d2",
+      "https://github.com/beeminder/beeminder/issues/1023"],
+"d": "2020-04-03",
+"t": "2002-05-04",
+"c": "See item 7 in list of 'Other Thoughts Not Part of this Gissue' in the linked gissue",
+}, { // ------------------------------------------------------------------------
+"x": "Sped up page loads by being smarter (using if-technology!) about not loading redundant snippets of html. Thanks @honeycombio!",
+"u": ["https://twitter.com/beemuvi/status/1257456458607796226",
+      "https://github.com/beeminder/beeminder/issues/1070"],
+"d": "2020-04-29",
+"t": "2020-05-04",
+"c": "By 'snippet of html' we mean a partial. Namely the hookcheck modal for credit cards. Didn't apply to anyone who'd already added a payment method.",
+}, { // ------------------------------------------------------------------------
+"x": "Added a (currently stubbish) help page for our Toggl integration + more details on downgrading on the help page for premium subscriptions",
+"u": ["https://twitter.com/beemuvi/status/1257819196945166337",
+      "https://help.beeminder.com/article/155-toggl",
+      "https://forum.beeminder.com/t/missing-toggl-help-page/6637",
+      "https://help.beeminder.com/article/24-how-do-i-manage-my-subscription"],
+"t": "2020-05-05",
+"c": "Now specify that when you downgrade, you keep your current subscription perks until the current plan's subscription runs out",
+}, { // ------------------------------------------------------------------------
+"x": "Updated our help-wanted page, accidentally broke some links, fixed them again, and added clear update headers so no confusion about (lack of) current openings",
+"u": ["https://twitter.com/beemuvi/status/1258183178893668352",
+      "https://help.beeminder.com/collection/138-help-wanted"],
+"t": "2020-05-06",
+}, { // ------------------------------------------------------------------------
+"x": "Yellow Brick Half-Plane goals were sometimes giving the wrong amount of safety buffer (a lane width had snuck in to some of the YBHP calculations!) #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1258183904881590273",
+      "https://github.com/beeminder/road/issues/113",
+      "https://forum.beeminder.com/t/0-due-in-16-days-and-other-x-due-in-y-oddities/6636?u=dreev"],
+"t": "2020-05-06",
+}, { // ------------------------------------------------------------------------
+"x": "The hovertext on graphs would sometimes, for crufty historical reasons, say \"Coasting on a currently flat yellow brick road\" when that wasn't true. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1258300677119283201",
+      "https://github.com/beeminder/road/issues/114"],
+"t": "2020-05-07",
+}, { // ------------------------------------------------------------------------
+"x": "We were sometimes drawing the thick yellow guiding line demarcating your max daily fluctuation (aka maxflux) in the totally wrong place. #bugfix #YBHP",
+"u": ["https://twitter.com/beemuvi/status/1258300809487347715",
+      "https://github.com/beeminder/road/issues/109",
+      "https://forum.beeminder.com/t/road-editor-bugs-roundup/6685"],
+"d": "2020-05-06",
+"t": "2020-05-07",
+}, { // ------------------------------------------------------------------------
+"x": "We removed the custom absolute lane width setting, replaced with link to blog post about why we're killing it (also means you can switch to YBHP in 1 step now)",
+"u": ["https://twitter.com/beemuvi/status/1258901678645850112",
+      "https://blog.beeminder.com/lanes/",
+      "https://github.com/beeminder/beeminder/pull/1320"],
+"d": "2020-05-01",
+"t": "2020-05-08",
+}, { // ------------------------------------------------------------------------
+"x": "Custom lane width (abslnw/lanewidth) out of the API &amp; updated the API docs. And replaed mention of it in the help docs with Yellow Brick Half-Plane instead.",
+"u": ["https://twitter.com/beemuvi/status/1258901977825607681",
+      "https://github.com/beeminder/apidocs/commit/9fe009f0fcf29a2ca4edae36df3fd671feeb6521",
+      "https://github.com/beeminder/beeminder/pull/1322",
+      "https://help.beeminder.com/article/97-custom-goals"],
+"d": "2020-05-01",
+"t": "2020-05-08",
+}, { // ------------------------------------------------------------------------
+"x": "More help docs updates: lots of copy improvements to the page on Whittle Down goals and a new placeholder page for Yellow Brick Half-Plane",
+"u": ["https://twitter.com/beemuvi/status/1259880866781659143",
+      "https://help.beeminder.com/article/69-whittle-down-goals",
+      "https://help.beeminder.com/article/156-ybhp"],
+"d": "2020-05-08",
+"t": "2020-05-11",
+}, { // ------------------------------------------------------------------------
+"x": "Version 5.6.3 of the iOS app fixed a bug where the refresh button didn't update the blurb saying how safe you are if you'd added data elsewhere. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1260351678886248448",
+      "https://github.com/beeminder/BeeSwift/issues/38",
+      "https://forum.beeminder.com/t/remaining-work-is-not-synced-but-app-pretends-everything-is-fine/6683"],
+"d": "2020-05-06",
+"t": "2020-05-12",
+"c": "This version also purports to fix the blank screen on startup but it sounds like that may not be true",
+}, { // ------------------------------------------------------------------------
+"x": "The delta_text API output is now correct for Yellow Brick Half-Plane. This should also fix the multicolored numbers below the graph in the iOS app. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1260718803324768256",
+      "https://forum.beeminder.com/t/ios-app-graphs-show-oldest-4-out-most-recent-5-data-points/6631/5?u=dreev",
+      "https://github.com/beeminder/beeminder/issues/1350",
+      "https://github.com/beeminder/beeminder/pull/1351",
+      "https://github.com/beeminder/beeminder/commit/e17305ccb7839c201b4b851bb608e5819770ea47"],
+"d": "2020-05-13",
+"t": "2020-05-13",
+}, { // ------------------------------------------------------------------------
+"x": "Also those multicolored numbers are now conservarounded correctly to the user-specified precision",
+"u": ["https://twitter.com/beemuvi/status/1260719526427025409",
+      "https://forum.beeminder.com/t/ios-app-graphs-show-oldest-4-out-most-recent-5-data-points/6631/5?u=dreev",
+      "https://github.com/beeminder/beeminder/issues/1350",
+      "https://github.com/beeminder/beeminder/pull/1351",
+      "https://github.com/beeminder/beeminder/commit/e17305ccb7839c201b4b851bb608e5819770ea47"],
+"d": "2020-05-13",
+"t": "2020-05-13",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
+}, /* --------------------------------------------------------- end 2020may */ ]
+
+  
+var staged = [ {
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+"x": "Thin red critical edge marker on old-style laney roads (but it has problems; not happy with calling this a UVI yet)",
+"u": [
+      "https://help.beeminder.com/article/156-ybhp",
+      "https://github.com/beeminder/road/issues/96"],
+"d": "2020-05-11",
+"t": "2020-05-13",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+"x": "Converting all the existing abslnw goals and emailing people about it...",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, /* ---------------------------------------------------------- end staged */ ]
@@ -671,7 +1085,45 @@ var staged = [ {
 /*********************************************************************************************************************************************************************
 ~~~~~~----------------------------- METASTAGED -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
 }, { // ------------------------------------------------------------------------
-updated https://help.beeminder.com/article/90-withings but also need to add maxflux to the instructions before tweeting this
+}, { // ------------------------------------------------------------------------
+BEEMIOS
+f4119b9b - temporarily remove twitter login
+e396b7ee - potentially refix https://github.com/beeminder/BeeSwift/issues/37 (the blank-screen-on-start bug that 5.6.3 purported to fix)
+66968179 - fix https://github.com/beeminder/BeeSwift/issues/45
+535d8b40 - bump version
+7d915333 - fix https://github.com/beeminder/BeeSwift/issues/27
+91a19169 - update value text field after updating goal (enhance #27)
+7830fead - fix https://github.com/beeminder/BeeSwift/issues/28
+https://github.com/beeminder/BeeSwift/issues/50
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+TODO: wrapping things in shn():
+https://github.com/beeminder/beeminder/pull/950
+dreev kinda wants to have a discussion about general principles for when to wrap things in shn(), when to conservaround, etc.
+probably the answer is: wrap everything shown to the user in shn(); never conservaround datapoints, just dueby values.
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+TODO: don't let you set abslnw>0 on ybhp goals in the first place
+(wait, better, more general solution: no increasing abslnw! any increase in abslnw is weaselly bullshit and is all going away soon and if someone has a legit use case for that, they should talk to us)
+}, { // ------------------------------------------------------------------------
+fatcyclist mongoid pagination bug, waiting to tweet till bmndr.com/fatcyclist is non-hideous
+https://github.com/beeminder/beeminder/pull/1196
+https://github.com/beeminder/beeminder/issues/1188
+https://github.com/beeminder/beeminder/commit/4e94d3a862039fb4f9d23e79ca4fd9a8628ce3e6
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+PR from andy: adds a private / undocumented api endpoint for alerting the app of the minimum ios version
+https://github.com/beeminder/beeminder/pull/1214
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+actually killing panictime / sort threshold
+https://github.com/beeminder/beeminder/pull/1197
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -748,6 +1200,8 @@ wordpress plugin: github.com/beeminder/beeminder-ping
 5. proper buttons on the blog like at the end of blog.beeminder.com/strava
 6. strava activity links on the datapoints page <= do that too for IFTTT and runkeeper where we get an event/recipe URI from the service
 7. https://forum.beeminder.com/t/api-create-goal-documentation-needs-updating/5547
+8. Peasy API docs gissues: https://github.com/beeminder/beeminder/issues/963
+9. Tiny copy change: https://github.com/beeminder/beeminder/issues/288
 ~~~~~~-------------------- TOO LATE / TOO LAME -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
 * killing intercom: https://github.com/beeminder/beeminder/issues/633
 * milk static-401 for more uvis? 
@@ -782,9 +1236,9 @@ Nixed UVIs from Beedroid 3.0:
 *********************************************************************************************************************************************************************/
 
 /* CHECKLIST FOR TWEETING UVIS
-1. Compose the JSON at the bottom of pub/uvis2019.js
-2. Copy to Twitter and tweet it
+1. Compose the JSON at the bottom of pub/uvis2020.js
+2. Copy to Twitter and tweet it as @beemuvi
 3. Paste the URL of the tweet into the JSON
-4. Update Beeminder
-5. Double check that the total number of tweets for @beemuvi matches the total at beeminder.com/changelog
+4. Update beeminder.com/meta/uvi
+5. Double check that the total number of UVIs at beeminder.com/changelog matches the total in the stats tab at beeminder.com/meta/uvi
 */
