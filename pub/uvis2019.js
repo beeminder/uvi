@@ -1431,7 +1431,8 @@ var batch2019jul = [{
 "f": true,
 "x": "Yesterday's RescueTime bugfix prompted us to finally make it so you can choose an initial safety buffer on all do-less goals when you create them!",
 "u": ["https://twitter.com/beemuvi/status/1146673465425973248",
-      "https://github.com/beeminder/beeminder/pull/688"],
+      "https://github.com/beeminder/beeminder/pull/688",
+      "https://github.com/beeminder/beeminder/issues/685"],
 "d": "2019-07-03",
 "t": "2019-07-03",
 "c": "We're trying to remember if/why we intentionally didn't have this for do-less goals till now. It was really easy to add it!"
@@ -1963,7 +1964,7 @@ var batch2019sep = [{
       "https://github.com/beeminder/beeminder/issues/489"],
 "d": "2019-08-16",
 "t": "2019-09-19",
-"c": "We now get the correctly agg'd value for restart directly from Beebrain instead of incorrectly recalculating it in Ruby. UVI#3106 and UVI#3114 were originally misnumbered as 3106 and 3114.",
+"c": "We now get the correctly agg'd value for restart directly from Beebrain instead of incorrectly recalculating it in Ruby. UVI#3106 and UVI#3114 were originally misnumbered.",
 }, { // ------------------------------------------------------------------------
 //2019-09-20 22:41:53, 2019-09-20, 2019-09-20 22:41:53, 2, clozemaster & todoist robustify
 "x": "Clozemaster integration robustification: if the last autodata fetch of the day happens just after midnight, still count the data for what's now the previous day",

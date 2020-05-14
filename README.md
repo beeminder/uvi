@@ -20,6 +20,8 @@ See tweets.glitch.me for how to import your Twitter archive into a progress log 
 1. Codemod `.*bug.*` -> append '#bugfix'
 1. Pick featured UVIs through June 2013 when we started doing that
 1. Filtering options like only showing bugfixes, non-bugfixes, featured, etc
+1. Convert this into a front-end-only project, no need for Node here
+1. Delete backup2020.js
 
 ## Acknowledgments
 

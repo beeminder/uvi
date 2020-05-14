@@ -227,7 +227,10 @@ function genstaged() {
   var l = eval('staged')
   if (l.every(function(x) { return isEmpty(x) })) { return }
   d.insertAdjacentHTML('beforeend', '<h3 class="grayout">'
-    +"<br>Staged UVIs (not official until tweeted as well as deployed)</h3>")
+    +"<br>Staged UVIs</h3><p class=\"grayout\">"
+    +"(These are not official until deployed "
+    +"<i>and</i> tweeted "
+    +"<i>and</i> logged on <a href=\"\">bmndr.com/meta/uvi</a>)</p>")
   d.insertAdjacentHTML('beforeend', '<ol class="grayout">\n'+genol(l)+'</ol>')
 }
 

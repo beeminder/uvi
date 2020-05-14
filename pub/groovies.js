@@ -208,6 +208,11 @@ var batch = [{
 "x": "Operational items can often be louder and feel more urgent than growth-related items, so the latter can end up taking a backseat. The http://bmndr.com/mary/beegrowthprojects goal has been created in order to ensure that enough time will be carved out for those too-easy-to-backburner priorities.",
 "u": ["https://twitter.com/beemgro/status/1232822135619538944"],
 "t": "2020-02-26",
+}, { // ------------------------------------------------------------------------
+"x": "Spent several tocks (http://blog.beeminder.com/tocks/) thinking about and then working out details of how best to respond to the unusual circumstances we’re all in and how to make sure we help our users (and ourselves!) keep healthy, happy, and productive through it all.",
+"u": ["https://twitter.com/beemgro/status/1243666592686358530"],
+"t": "2020-03-27",
+"c": "Another one that Danny hate-hate-hated",
 }, /* ----------------------------------------------------------- end batch */ ]
 
 

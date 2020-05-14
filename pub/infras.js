@@ -562,6 +562,72 @@ var batch = [{
 }, { // ------------------------------------------------------------------------
 "x": "robusted up the stats page so that we don't 500 on ourselves the next time a beeminder builder archives their beehours goal and then we can't find it.",
 "u": ["https://github.com/beeminder/beeminder/pull/1120","https://twitter.com/beeminfra/status/1232807574057017345"]
+}, { // ------------------------------------------------------------------------
+"x": "Refactored our user mailing jobs to use resque like our other mailer.",
+"u": ["https://twitter.com/beeminfra/status/1235348953438265344",
+"https://github.com/beeminder/beeminder/pull/1130"]
+}, { // ------------------------------------------------------------------------
+"x": "Found and removed a special case in the development environment that was causing confusion: all users had some subscription perks automatically",
+"u": ["https://github.com/beeminder/beeminder/commit/bd6122cc862206306cf9b24d26514e8113d84c19",
+"https://twitter.com/beeminfra/status/1237851631514836992"],
+"c": "this was probably a thing that someone did when they were working on developing something related to those perks and they probably just shouldn't have committed it"
+}, { // ------------------------------------------------------------------------
+"x": "Refactoring views for the Premium page. It's more manageable and less a pokey nest of html and ruby templating now.",
+"d": "2020-03-16",
+"t": "2020-03-18",
+"u": ["https://github.com/beeminder/beeminder/pull/1161/commits",
+"https://twitter.com/beeminfra/status/1240418921984868352"]
+}, { // ------------------------------------------------------------------------
+"x": "Added meta-info to charges in Stripe and Paypal for tighter association between an individual payment and the Beeminder event that triggered it.",
+"u": ["https://github.com/beeminder/beeminder/pull/1124",
+"https://twitter.com/beeminfra/status/1242890982959378432"
+],
+"d": "2020-02-21",
+"t": "2020-03-25",
+"c": "hoping this will help track down / identify a bug with double charging. but also it's a good idea anyway."
+}, { // ------------------------------------------------------------------------
+"x": "upgraded rails! (and myriad other libraries and things as well in the process of upgrading our install scripts and infrastructure)",
+"u": ["https://github.com/beeminder/beeminder/pull/856",
+"https://twitter.com/beeminfra/status/1245490354419204097"],
+"d": "2020-03-27",
+"t": "2020-04-01"
+}, { // ------------------------------------------------------------------------
+"x": "Added a load balancer so we can reboot web servers willy nilly and you'll never know!",
+"u": ["https://twitter.com/beeminfra/status/1248033580325855232"],
+"d": "2020-03-27",
+"t": "2020-04-08",
+}, { // ------------------------------------------------------------------------
+"x": "Fixed a bug we had introduced into our deploy script -- quit the deploy if tests fail!",
+"t": "2020-04-15",
+"d": "2020-04-15",
+"u": ["https://github.com/beeminder/beeminder/pull/1256",
+"https://twitter.com/beeminfra/status/1250566474076307456"]
+}, { // ------------------------------------------------------------------------
+"x": "gissue templates! for Proper Bug Reports, and feature requests",
+"d": "2020-04-14",
+"t": "2020-04-22",
+"u": ["https://github.com/beeminder/beeminder/commit/5ddbaf4062edd73598562d7572e9bc684831693f",
+"https://github.com/beeminder/beeminder/commit/73c82ac356fa74bfa77eb55264e3bcac84cea227",
+"https://twitter.com/beeminfra/status/1253074585655717890"]
+}, { // ------------------------------------------------------------------------
+"x": "Finally made a tidy script for pulling & collating translogs from multiple servers. Debugging me is so happy.",
+"d": "2020-04-24",
+"t": "2020-04-29",
+"u": ["https://github.com/beeminder/beeminder/commit/aa723e50e07a3ca293a86609640f354f5f2263b2",
+"https://twitter.com/beeminfra/status/1255608875388035072"
+]
+}, { // ------------------------------------------------------------------------
+"x": "Trialling TrackJs for tracking js errors on Beeminder -- and hopefully helping us track down repro steps for a specific Heisenbug (initVal errors)",
+"u": [
+"https://github.com/beeminder/beeminder/pull/1298",
+"https://twitter.com/beeminfra/status/1258172262085099521"]
+}, { // ------------------------------------------------------------------------
+"x": "Added tracking to our @trackjs config around goal creation to help track down an unpredictable and long-standing bug with the browser's localstorage",
+"u": ["https://github.com/beeminder/beeminder/pull/1309",
+      "https://twitter.com/beeminfra/status/1260719383548006401"
+],
+"t": "2020-05-13",
+"d": "2020-04-29"
 }, /* ----------------------------------------------------------- end batch */ ]
 
 var staged = [ { // note: sub-entries not allowed here in staging
@@ -570,10 +636,29 @@ var staged = [ { // note: sub-entries not allowed here in staging
 /*
 METASTAGED: --10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
 https://github.com/beeminder/beeminder/commit/
+
+new worker machine, got rid of dubnium
 }, { // ------------------------------------------------------------------------
-VCR utility for mocking up requests to 3rd party services in tests. (adamwolf++)
-https://github.com/beeminder/beeminder/pull/903
+added admin squeaks
 }, { // ------------------------------------------------------------------------
+
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+"x": "added tracking to our @trackjs config around goal creation to help track down an unpredictable and long-standing bug with the browser's localstorage",
+"u": ["https://github.com/beeminder/beeminder/pull/1309",
+],
+"t": "2020-05-13",
+"d": "2020-04-29"
+}, { // ------------------------------------------------------------------------
+error in loading gmail labels for no-gmail ppl. 
+https://github.com/beeminder/beeminder/pull/1310
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+## NEED HELP FROM ADAM:
+* massive improvements to our ansible deployment scripts so that we can now spin up a new web server from scratch in about an hour 
+* including adding some sexy test suite thingie into the mix with ansible [help?]
+* a bunch of work to get honeycomb into our background workers so we can monitor stuff there too [did this actually resolve to a positive end?]
+* VCR utility for mocking up requests to 3rd party services in tests. (adamwolf++) https://github.com/beeminder/beeminder/pull/903
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 TODO:
