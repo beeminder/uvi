@@ -628,6 +628,10 @@ var batch = [{
 ],
 "t": "2020-05-13",
 "d": "2020-04-29"
+}, { // ------------------------------------------------------------------------
+"x": "Fixed a silent error from trying to load gmail labels for ppl with no gmail goals. Not UVI, but it is nice to not spew errors into the browser console. #trackjs",
+"u": ["https://github.com/beeminder/beeminder/pull/1310",
+"https://twitter.com/beeminfra/status/1263231970584039430"]
 }, /* ----------------------------------------------------------- end batch */ ]
 
 var staged = [ { // note: sub-entries not allowed here in staging
@@ -641,17 +645,8 @@ new worker machine, got rid of dubnium
 }, { // ------------------------------------------------------------------------
 added admin squeaks
 }, { // ------------------------------------------------------------------------
-
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-"x": "added tracking to our @trackjs config around goal creation to help track down an unpredictable and long-standing bug with the browser's localstorage",
-"u": ["https://github.com/beeminder/beeminder/pull/1309",
-],
-"t": "2020-05-13",
-"d": "2020-04-29"
-}, { // ------------------------------------------------------------------------
-error in loading gmail labels for no-gmail ppl. 
-https://github.com/beeminder/beeminder/pull/1310
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 ## NEED HELP FROM ADAM:
