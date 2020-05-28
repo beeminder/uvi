@@ -1045,6 +1045,7 @@ const batch2020may = [{
       "https://forum.beeminder.com/t/ios-app-graphs-show-oldest-4-out-most-recent-5-data-points/6631/5?u=dreev",
       "https://github.com/beeminder/beeminder/issues/1350",
       "https://github.com/beeminder/beeminder/pull/1351",
+      "https://github.com/beeminder/BeeSwift/issues/36",
       "https://github.com/beeminder/beeminder/commit/e17305ccb7839c201b4b851bb608e5819770ea47"],
 "d": "2020-05-13",
 "t": "2020-05-13",
@@ -1058,6 +1059,109 @@ const batch2020may = [{
 "d": "2020-05-13",
 "t": "2020-05-13",
 }, { // ------------------------------------------------------------------------
+"x": "We converted all existing absolute-lane-width (abslnw) goals to Yellow Brick Half-Plane and emailed everyone affected. Lanes delenda est! See UVI#3385",
+"u": ["https://twitter.com/beemuvi/status/1261069695194509314",
+      "https://github.com/beeminder/beeminder/pull/1354",
+      "https://github.com/beeminder/beeminder/pull/1353"],
+"d": "2020-05-14",
+"t": "2020-05-14",
+}, { // ------------------------------------------------------------------------
+"x": "Newly created weightloss goals are now Yellow Brick Half-Plane! For normal users that just means they look a bit different, w/ a bright red line you can't cross",
+"u": ["https://twitter.com/beemuvi/status/1261433854662815744",
+      "https://github.com/beeminder/beeminder/issues/275",
+      "https://github.com/beeminder/beeminder/issues/1343",
+      "https://github.com/beeminder/beeminder/pull/1356"],
+"d": "2020-05-14",
+"t": "2020-05-15",
+}, { // ------------------------------------------------------------------------
+"x": "And everyone restarting any existing frozen/archived weight-loss goal, those will also be Yellow Brick Half-Plane style now!",
+"u": ["https://twitter.com/beemuvi/status/1261435388729556992",
+      "https://github.com/beeminder/beeminder/issues/1342",
+      "https://github.com/beeminder/beeminder/pull/1357"],
+"d": "2020-05-14",
+"t": "2020-05-15",
+}, { // ------------------------------------------------------------------------
+"x": "There's now a thin red line visually highlighting the critical edge of your yellow brick road. Useful in and of itself but especially for converting to YBHP!",
+"u": ["https://twitter.com/beemuvi/status/1262528356588777472",
+      "https://help.beeminder.com/article/156-ybhp",
+      "https://github.com/beeminder/road/issues/96",
+      "https://github.com/beeminder/road/issues/120"],
+"d": "2020-05-11",
+"t": "2020-05-18",
+"c": "These were sometimes all wrong at first and we didn't tweet them till they were more correct, although they're still not totally right (it's impossible for them to be totally right because road lanes are an abomination that need to die).",
+}, { // ------------------------------------------------------------------------
+"x": "Pledge settings now included in the Commitment tab instead of just a button to open a popup to edit them (like when you click the pledge above the graph)",
+"u": ["https://twitter.com/beemuvi/status/1263256265569923072",
+      "https://github.com/beeminder/beeminder/issues/961",
+      "https://github.com/beeminder/beeminder/pull/1340"],
+"d": "2020-05-15",
+"t": "2020-05-20",
+"c": "See also UVI#2151. We still have the popup for when you click the pledge amount. Out of laziness we had just reused that popup in the settings as well.",
+}, { // ------------------------------------------------------------------------
+"x": "For old users who managed to create a goal without a payment method, the Pledge section of the Commitment tab is now clear about that. #antimagic",
+"u": ["https://twitter.com/beemuvi/status/1263256417366011904",
+      "https://github.com/beeminder/beeminder/pull/1340"],
+"d": "2020-05-15",
+"t": "2020-05-20",
+"c": "Ie, from pre-commitwall. Previously we had the Pledge header and just mysteriously missing content if you didn't have a credit card on file.",
+}, { // ------------------------------------------------------------------------
+"x": "The \"email me my full payment history\" (for users with more than 50 payments) button was broken since UVI#3321. #bugfix #regression",
+"u": ["https://twitter.com/beemuvi/status/1263596493681750016",
+      "https://github.com/beeminder/beeminder/issues/1361",
+      "https://github.com/beeminder/beeminder/pull/1363",
+      "https://github.com/beeminder/beeminder/commit/41c56493f4ad4017f305467520bcc93a04b64e92"],
+"d": "2020-05-15",
+"t": "2020-05-21",
+"c": "More Rails upgrade woes. Also our first fix to this had it sending mangled payment entries (base64 something something) but now is fixed for real.",
+}, { // ------------------------------------------------------------------------
+"x": "Our login-via-Facebook option broke so we fixed it, which involved appeasing the Facebook gods with a new privacy policy link. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1263980713008787456",
+      "https://github.com/beeminder/beeminder/issues/1371",
+      "https://github.com/beeminder/beeminder/pull/1372"],
+"d": "2020-05-18",
+"t": "2020-05-22",
+}, { // ------------------------------------------------------------------------
+"x": "Made the headers of various pages (\"pricing\", \"FAQ\", \"Team\", etc) consistently styled (all-caps, black-on-yellow). #css",
+"u": ["https://twitter.com/beemuvi/status/1263981410567835648",
+      "https://github.com/beeminder/beeminder/pull/1372"],
+"d": "2020-05-18",
+"t": "2020-05-22",
+}, { // ------------------------------------------------------------------------
+"x": "Date pickers on break settings & in road dial now have correct minimum date & don't let you pick a date that's too early, ie, inside akrasia horizon #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1264979866350350336",
+      "https://github.com/beeminder/beeminder/issues/965",
+      "https://github.com/beeminder/beeminder/pull/1387"],
+"d": "2020-05-20",
+"t": "2020-05-25",
+}, { // ------------------------------------------------------------------------
+"x": "We added meta-data to our +/- stepper buttons so screen readers can interpret them, thus making Beeminder *slightly* more accessible to the visually impaired",
+"u": ["https://twitter.com/beemuvi/status/1265430931990437889",
+      "https://github.com/beeminder/beeminder/pull/1360"],
+"d": "2020-05-18",
+"t": "2020-05-26",
+"c": "User \"visible\", tee-hee",
+}, { // ------------------------------------------------------------------------
+"x": "Similarly for our tabs below the graph, which should now, we believe, be more comprehensible to screen readers / non-visual navigation",
+"u": ["https://twitter.com/beemuvi/status/1265431405799960576",
+      "https://github.com/beeminder/beeminder/pull/1360"],
+"d": "2020-05-18",
+"t": "2020-05-26",
+}, { // ------------------------------------------------------------------------
+/*
+  "x": "Fixed a bug where sometimes going to your normal goal URL didn't open the last bottom tab you had open. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1265765347702923265",
+      "https://github.com/beeminder/beeminder/issues/1369",
+      "https://github.com/beeminder/beeminder/pull/1365"],
+"d": "2020-05-20",
+"t": "2020-05-27",
+}, { // ------------------------------------------------------------------------
+"x": "And when following a direct/anchor link the page automatically scrolls to thing it's supposed to show you (but no magic scrolling when just clicking around)",
+"u": ["https://twitter.com/beemuvi/status/1265765523637145600",
+      "https://github.com/beeminder/beeminder/pull/1365"],
+"d": "2020-05-20",
+"t": "2020-05-27",
+*/
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -1065,25 +1169,46 @@ const batch2020may = [{
 }, { // ------------------------------------------------------------------------
 }, /* --------------------------------------------------------- end 2020may */ ]
 
-  
+
 var staged = [ {
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-"x": "Thin red critical edge marker on old-style laney roads (but it has problems; not happy with calling this a UVI yet)",
-"u": [
-      "https://help.beeminder.com/article/156-ybhp",
-      "https://github.com/beeminder/road/issues/96"],
-"d": "2020-05-11",
-"t": "2020-05-13",
 }, { // ------------------------------------------------------------------------
+"x": "MINI: Faire's new @beemuvi avatar plus we started making custom images for our blog posts because we're that fancy",
 }, { // ------------------------------------------------------------------------
-"x": "Converting all the existing abslnw goals and emailing people about it...",
+"x": "BeemiOS bugfixes (when it hits the app store)",
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
+"x": "Beedroid 3.3.0 coming shortly with like 10 little UVIs! <3",
 }, /* ---------------------------------------------------------- end staged */ ]
 
 /*********************************************************************************************************************************************************************
 ~~~~~~----------------------------- METASTAGED -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+"x": "And a direct/anchor link not discoverable by just clicking: the due-by table at, eg, beeminder.com/d/mass#goal-safety",
+ADAM: Could be reworded as "anchor links in the URL to things inside the tabs open the tabs and go scroll to them" or something like that?
+"u": [
+      "https://github.com/beeminder/beeminder/pull/1365"],
+"d": "2020-05-20",
+}, { // ------------------------------------------------------------------------
+five UVIs from shanaqui! (and then a couple more!)
+"Most notably, I created an actual page for PPRs, because otherwise you have to read through most of the Do-Less goals article to get the info."
+https://forum.beeminder.com/t/help-docs-updates-as-uvis/6672/4?u=dreev
+"d": "2020-05-22",
+}, { // ------------------------------------------------------------------------
+ADAM: bunch more UVIs!
+Fixing up the datepicker default dates, 
+reducing the reflow on SVG load (not eliminating in all circumstances, but that remaining work has been gissued), 
+fixing an extra space in safesum if gunits is blank,
+}, { // ------------------------------------------------------------------------
+made some graphs with very shallow roads much faster to generate 
+https://github.com/beeminder/road/issues/119
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+fixed missing/truncated glines bug by shading
+https://github.com/beeminder/road/issues/104
+https://github.com/beeminder/road/commit/d40d3a54685ee882a5ab3f3c3305e3e79fe8e195
+"d": "2020-05-25",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 BEEMIOS
@@ -1097,6 +1222,7 @@ e396b7ee - potentially refix https://github.com/beeminder/BeeSwift/issues/37 (th
 https://github.com/beeminder/BeeSwift/issues/50
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
+TODO: add faire's uvi avatar to the top (and bottom?) of 
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------

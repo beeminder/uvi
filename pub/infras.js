@@ -628,6 +628,14 @@ var batch = [{
 ],
 "t": "2020-05-13",
 "d": "2020-04-29"
+}, { // ------------------------------------------------------------------------
+"x": "Fixed a silent error from trying to load gmail labels for ppl with no gmail goals. Not UVI, but it is nice to not spew errors into the browser console. #trackjs",
+"u": ["https://github.com/beeminder/beeminder/pull/1310",
+"https://twitter.com/beeminfra/status/1263231970584039430"]
+}, { // ------------------------------------------------------------------------
+"x": "added a new rough metric 'squeaks' to track how often each user needs admin intervention",
+"u": ["https://github.com/beeminder/beeminder/pull/1329",
+"https://twitter.com/beeminfra/status/1265779917951623168"]
 }, /* ----------------------------------------------------------- end batch */ ]
 
 var staged = [ { // note: sub-entries not allowed here in staging
@@ -639,19 +647,15 @@ https://github.com/beeminder/beeminder/commit/
 
 new worker machine, got rid of dubnium
 }, { // ------------------------------------------------------------------------
-added admin squeaks
+show ios tokens in admin interface
+https://github.com/beeminder/beeminder/pull/1396
 }, { // ------------------------------------------------------------------------
-
+alert for admins that they're seeing this juicy error page *because* they are an admin
+https://github.com/beeminder/beeminder/pull/1399
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-"x": "added tracking to our @trackjs config around goal creation to help track down an unpredictable and long-standing bug with the browser's localstorage",
-"u": ["https://github.com/beeminder/beeminder/pull/1309",
-],
-"t": "2020-05-13",
-"d": "2020-04-29"
-}, { // ------------------------------------------------------------------------
-error in loading gmail labels for no-gmail ppl. 
-https://github.com/beeminder/beeminder/pull/1310
+clean up multiple copies of different versions of bootstrap being included.
+https://github.com/beeminder/beeminder/pull/1378
+https://github.com/beeminder/beeminder/pull/1386
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 ## NEED HELP FROM ADAM:
