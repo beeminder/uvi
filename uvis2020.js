@@ -1147,8 +1147,7 @@ const batch2020may = [{
 "d": "2020-05-18",
 "t": "2020-05-26",
 }, { // ------------------------------------------------------------------------
-/*
-  "x": "Fixed a bug where sometimes going to your normal goal URL didn't open the last bottom tab you had open. #bugfix",
+"x": "Fixed a bug where sometimes going to your normal goal URL didn't open the last bottom tab you had open. #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1265765347702923265",
       "https://github.com/beeminder/beeminder/issues/1369",
       "https://github.com/beeminder/beeminder/pull/1365"],
@@ -1160,7 +1159,6 @@ const batch2020may = [{
       "https://github.com/beeminder/beeminder/pull/1365"],
 "d": "2020-05-20",
 "t": "2020-05-27",
-*/
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -1168,7 +1166,6 @@ const batch2020may = [{
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, /* --------------------------------------------------------- end 2020may */ ]
-
 
 var staged = [ {
 }, { // ------------------------------------------------------------------------
