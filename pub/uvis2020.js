@@ -1114,6 +1114,54 @@ const batch2020may = [{
 "t": "2020-05-21",
 "c": "More Rails upgrade woes. Also our first fix to this had it sending mangled payment entries (base64 something something) but now is fixed for real.",
 }, { // ------------------------------------------------------------------------
+"x": "Our login-via-Facebook option broke so we fixed it, which involved appeasing the Facebook gods with a new privacy policy link. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1263980713008787456",
+      "https://github.com/beeminder/beeminder/issues/1371",
+      "https://github.com/beeminder/beeminder/pull/1372"],
+"d": "2020-05-18",
+"t": "2020-05-22",
+}, { // ------------------------------------------------------------------------
+"x": "Made the headers of various pages (\"pricing\", \"FAQ\", \"Team\", etc) consistently styled (all-caps, black-on-yellow). #css",
+"u": ["https://twitter.com/beemuvi/status/1263981410567835648",
+      "https://github.com/beeminder/beeminder/pull/1372"],
+"d": "2020-05-18",
+"t": "2020-05-22",
+}, { // ------------------------------------------------------------------------
+"x": "Date pickers on break settings & in road dial now have correct minimum date & don't let you pick a date that's too early, ie, inside akrasia horizon #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1264979866350350336",
+      "https://github.com/beeminder/beeminder/issues/965",
+      "https://github.com/beeminder/beeminder/pull/1387"],
+"d": "2020-05-20",
+"t": "2020-05-25",
+}, { // ------------------------------------------------------------------------
+"x": "We added meta-data to our +/- stepper buttons so screen readers can interpret them, thus making Beeminder *slightly* more accessible to the visually impaired",
+"u": ["https://twitter.com/beemuvi/status/1265430931990437889",
+      "https://github.com/beeminder/beeminder/pull/1360"],
+"d": "2020-05-18",
+"t": "2020-05-26",
+"c": "User \"visible\", tee-hee",
+}, { // ------------------------------------------------------------------------
+"x": "Similarly for our tabs below the graph, which should now, we believe, be more comprehensible to screen readers / non-visual navigation",
+"u": ["https://twitter.com/beemuvi/status/1265431405799960576",
+      "https://github.com/beeminder/beeminder/pull/1360"],
+"d": "2020-05-18",
+"t": "2020-05-26",
+}, { // ------------------------------------------------------------------------
+/*
+  "x": "Fixed a bug where sometimes going to your normal goal URL didn't open the last bottom tab you had open. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1265765347702923265",
+      "https://github.com/beeminder/beeminder/issues/1369",
+      "https://github.com/beeminder/beeminder/pull/1365"],
+"d": "2020-05-20",
+"t": "2020-05-27",
+}, { // ------------------------------------------------------------------------
+"x": "And when following a direct/anchor link the page automatically scrolls to thing it's supposed to show you (but no magic scrolling when just clicking around)",
+"u": ["https://twitter.com/beemuvi/status/1265765523637145600",
+      "https://github.com/beeminder/beeminder/pull/1365"],
+"d": "2020-05-20",
+"t": "2020-05-27",
+*/
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -1126,9 +1174,9 @@ var staged = [ {
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-"x": "MINI: Faire's new avatar",
+"x": "MINI: Faire's new @beemuvi avatar plus we started making custom images for our blog posts because we're that fancy",
 }, { // ------------------------------------------------------------------------
-"x": "Unbroke Facebook oauth",
+"x": "BeemiOS bugfixes (when it hits the app store)",
 }, { // ------------------------------------------------------------------------
 "x": "Beedroid 3.3.0 coming shortly with like 10 little UVIs! <3",
 }, /* ---------------------------------------------------------- end staged */ ]
@@ -1137,23 +1185,30 @@ var staged = [ {
 ~~~~~~----------------------------- METASTAGED -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
+"x": "And a direct/anchor link not discoverable by just clicking: the due-by table at, eg, beeminder.com/d/mass#goal-safety",
+ADAM: Could be reworded as "anchor links in the URL to things inside the tabs open the tabs and go scroll to them" or something like that?
+"u": [
+      "https://github.com/beeminder/beeminder/pull/1365"],
+"d": "2020-05-20",
 }, { // ------------------------------------------------------------------------
-BEEDROID 3.3.0 with like 10 UVIs! <3
+five UVIs from shanaqui! (and then a couple more!)
+"Most notably, I created an actual page for PPRs, because otherwise you have to read through most of the Do-Less goals article to get the info."
+https://forum.beeminder.com/t/help-docs-updates-as-uvis/6672/4?u=dreev
+"d": "2020-05-22",
+}, { // ------------------------------------------------------------------------
+ADAM: bunch more UVIs!
+Fixing up the datepicker default dates, 
+reducing the reflow on SVG load (not eliminating in all circumstances, but that remaining work has been gissued), 
+fixing an extra space in safesum if gunits is blank,
+}, { // ------------------------------------------------------------------------
+made some graphs with very shallow roads much faster to generate 
+https://github.com/beeminder/road/issues/119
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-"x": "rename privacy policy / terms&conditions page to 'privacy' in attempt to appease facebook [#bugfix?]",
-"u": ["https://github.com/beeminder/beeminder/pull/1372"]
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-"x": "also made headers in the info pages more consistent -- Some were big banners, some were just an H1 header, some didn't have a title/header text",
-"u": ["https://github.com/beeminder/beeminder/pull/1372"]
-}, { // ------------------------------------------------------------------------
-"x": "Adding beeminder.com/privacy as its own URL unbroke our facebook oauth login",
-"d": "2020-05-18",
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-"x": "fix date pickers on break settings and in road dial to have correct minimum date (and not allow you to pick a date that's too early, i.e. inside akrasia horizon)"
-"u": "https://github.com/beeminder/beeminder/pull/1387"
+fixed missing/truncated glines bug by shading
+https://github.com/beeminder/road/issues/104
+https://github.com/beeminder/road/commit/d40d3a54685ee882a5ab3f3c3305e3e79fe8e195
+"d": "2020-05-25",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 BEEMIOS
