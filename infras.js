@@ -636,6 +636,22 @@ var batch = [{
 "x": "added a new rough metric 'squeaks' to track how often each user needs admin intervention",
 "u": ["https://github.com/beeminder/beeminder/pull/1329",
 "https://twitter.com/beeminfra/status/1265779917951623168"]
+}, { // ------------------------------------------------------------------------
+"x": "added an alert to admins that they're seeing this juicy error page *because* they are an admin if oauth errors happen.",
+"u": ["https://github.com/beeminder/beeminder/pull/1399",
+"https://twitter.com/beeminfra/status/1268313977924096000"
+]
+}, { // ------------------------------------------------------------------------
+"x": "Noticed that we were including multiple different versions of bootstrap libraries and cleaned that up so there is only one.",
+"u": ["https://github.com/beeminder/beeminder/pull/1378",
+"https://github.com/beeminder/beeminder/pull/1386",
+     "https://twitter.com/beeminfra/status/1270797808249892864"]
+}, { // ------------------------------------------------------------------------
+"x": "Show iOS tokens in the admin interface for adminning purposes.",
+"u": ["https://github.com/beeminder/beeminder/pull/1396",
+"https://twitter.com/beeminfra/status/1273378074852069376"],
+"t": "2020-06-17",
+"d": "2020-05-27"
 }, /* ----------------------------------------------------------- end batch */ ]
 
 var staged = [ { // note: sub-entries not allowed here in staging
@@ -645,17 +661,8 @@ var staged = [ { // note: sub-entries not allowed here in staging
 METASTAGED: --10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
 https://github.com/beeminder/beeminder/commit/
 
-new worker machine, got rid of dubnium
-}, { // ------------------------------------------------------------------------
-show ios tokens in admin interface
-https://github.com/beeminder/beeminder/pull/1396
-}, { // ------------------------------------------------------------------------
-alert for admins that they're seeing this juicy error page *because* they are an admin
-https://github.com/beeminder/beeminder/pull/1399
-}, { // ------------------------------------------------------------------------
-clean up multiple copies of different versions of bootstrap being included.
-https://github.com/beeminder/beeminder/pull/1378
-https://github.com/beeminder/beeminder/pull/1386
+* include hostname in airhorns: https://github.com/beeminder/beeminder/pull/1423
+* new worker machine, got rid of dubnium
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 ## NEED HELP FROM ADAM:

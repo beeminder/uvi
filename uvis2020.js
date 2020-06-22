@@ -1013,6 +1013,7 @@ const batch2020may = [{
 "x": "We removed the custom absolute lane width setting, replaced with link to blog post about why we're killing it (also means you can switch to YBHP in 1 step now)",
 "u": ["https://twitter.com/beemuvi/status/1258901678645850112",
       "https://blog.beeminder.com/lanes/",
+      "https://github.com/beeminder/beeminder/issues/1293",
       "https://github.com/beeminder/beeminder/pull/1320"],
 "d": "2020-05-01",
 "t": "2020-05-08",
@@ -1109,6 +1110,7 @@ const batch2020may = [{
 "u": ["https://twitter.com/beemuvi/status/1263596493681750016",
       "https://github.com/beeminder/beeminder/issues/1361",
       "https://github.com/beeminder/beeminder/pull/1363",
+      "https://github.com/beeminder/beeminder/pull/1389",
       "https://github.com/beeminder/beeminder/commit/41c56493f4ad4017f305467520bcc93a04b64e92"],
 "d": "2020-05-15",
 "t": "2020-05-21",
@@ -1130,12 +1132,14 @@ const batch2020may = [{
 "x": "Date pickers on break settings & in road dial now have correct minimum date & don't let you pick a date that's too early, ie, inside akrasia horizon #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1264979866350350336",
       "https://github.com/beeminder/beeminder/issues/965",
-      "https://github.com/beeminder/beeminder/pull/1387"],
+      "https://github.com/beeminder/beeminder/pull/1387",
+      "https://github.com/beeminder/beeminder/pull/1388"],
 "d": "2020-05-20",
 "t": "2020-05-25",
 }, { // ------------------------------------------------------------------------
 "x": "We added meta-data to our +/- stepper buttons so screen readers can interpret them, thus making Beeminder *slightly* more accessible to the visually impaired",
 "u": ["https://twitter.com/beemuvi/status/1265430931990437889",
+      "https://github.com/beeminder/beeminder/issues/1450",
       "https://github.com/beeminder/beeminder/pull/1360"],
 "d": "2020-05-18",
 "t": "2020-05-26",
@@ -1143,6 +1147,7 @@ const batch2020may = [{
 }, { // ------------------------------------------------------------------------
 "x": "Similarly for our tabs below the graph, which should now, we believe, be more comprehensible to screen readers / non-visual navigation",
 "u": ["https://twitter.com/beemuvi/status/1265431405799960576",
+      "https://github.com/beeminder/beeminder/issues/1450",
       "https://github.com/beeminder/beeminder/pull/1360"],
 "d": "2020-05-18",
 "t": "2020-05-26",
@@ -1154,18 +1159,240 @@ const batch2020may = [{
 "d": "2020-05-20",
 "t": "2020-05-27",
 }, { // ------------------------------------------------------------------------
-"x": "And when following a direct/anchor link the page automatically scrolls to thing it's supposed to show you (but no magic scrolling when just clicking around)",
+"x": "And when following a direct/anchor link, the page automatically scrolls past the graph to the tab (but no magic scrolling when just clicking around)",
 "u": ["https://twitter.com/beemuvi/status/1265765523637145600",
       "https://github.com/beeminder/beeminder/pull/1365"],
 "d": "2020-05-20",
 "t": "2020-05-27",
 }, { // ------------------------------------------------------------------------
+"x": "Anchor links (the \"#stuff\" part at the end of the URL) can also link to subsections of tabs (and does the auto-scrolling), eg, bmndr.com/d/mass#goal-safety",
+"u": ["https://twitter.com/beemuvi/status/1266127129395073025",
+      "https://github.com/beeminder/beeminder/issues/1369",
+      "https://github.com/beeminder/beeminder/pull/1365"],
+"d": "2020-05-20",
+"t": "2020-05-28",
+"c": "This involves javascript fanciness from Adam. This is the bigger UVI that probably should've come before the previous one about auto-scrolling.",
 }, { // ------------------------------------------------------------------------
+"x": "Updates, clarifications, adding links, and other copyediting to 4 different help doc articles!",
+"u": ["https://twitter.com/beemuvi/status/1266518168941416454",
+      "https://forum.beeminder.com/t/help-docs-updates-as-uvis/6672/4?u=dreev",
+      "https://help.beeminder.com/article/120-whats-the-best-way-to-beemind ",
+      "https://help.beeminder.com/article/122-why-does-beeminder-think-its-already-tomorrow ",
+      "https://help.beeminder.com/article/32-what-do-i-do-first ",
+      "https://help.beeminder.com/article/101-reminders"],
+"d": "2020-05-22",
+"t": "2020-05-29",
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
+"x": "Another batch of edits to help doc articles, including removing things that have become wrong",
+"u": ["https://twitter.com/beemuvi/status/1266518383438131206",
+      "https://forum.beeminder.com/t/help-docs-updates-as-uvis/6672/5?u=dreev",
+      "https://help.beeminder.com/article/104-supporters",
+      "https://help.beeminder.com/article/106-goal-settings"],
+"d": "2020-05-26",
+"t": "2020-05-29",
 }, /* --------------------------------------------------------- end 2020may */ ]
+
+const batch2020jun = [{  
+"x": "And a new help page for Pessimistic Presumptive Reports (PPRs)! These are all thanks to @shanaqui!",
+"u": ["https://twitter.com/beemuvi/status/1267562697941331968",
+      "https://help.beeminder.com/article/157-pessimistic-presumptive-reports"],
+"d": "2020-05-30",
+"t": "2020-06-01",
+}, { // ------------------------------------------------------------------------
+"x": "And one more #mini since we kinda bundled a bunch of these help docs UVIs into 3 entries: the Do-Less help page now links to the PPR help page.",
+"u": ["https://twitter.com/beemuvi/status/1267562793592451072",
+      "https://help.beeminder.com/article/67-do-less-goals"],
+"d": "2020-05-30",
+"t": "2020-06-01",
+}, { // ------------------------------------------------------------------------
+"x": "We made the graph page load a little smoother by leaving room for the graph (so it doesn't have to rerender/reflow when the graph renders)",
+"u": ["https://twitter.com/beemuvi/status/1267915027048132608",
+      "https://github.com/beeminder/beeminder/issues/1377"],
+"d": "2020-05-18",
+"t": "2020-06-02",
+"c": "By Adam. And the reflow is not eliminated in all circumstances, but that remaining work has been gissued.", 
+}, { // ------------------------------------------------------------------------
+"x": "Firefox (et al?) would change data in the data tab. Browser saw a partially completed form so it was 'helpfully' 'remembering' previous values. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1268319960230584321",
+      "https://github.com/beeminder/beeminder/issues/1400",
+      "https://github.com/beeminder/beeminder/pull/1405"],
+"d": "2020-05-28",
+"t": "2020-06-03",
+"c": "Adding the autocomplete=off attribute to the input elements should stop that shit. It wasn't changing the datapoints themselves, unless you re-submitted a datapoint, but user was very confused when they e.g. added a new datapoint to the goal, and then what they see in the datapoint list is garbled because their browser was e.g. changing the date, or the comment or whatever.",
+}, { // ------------------------------------------------------------------------
+"x": "The red line demarcating the critical edge of the road (UVI#3394) now always visually matches the road and is always parallel to the centerline. #bugfix #YBHP",
+"u": ["https://twitter.com/beemuvi/status/1268662278779400194",
+      "https://github.com/beeminder/road/issues/96#issuecomment-629482046",
+      "https://github.com/beeminder/road/commit/d632994a50e5cf19cc85965f70f908f080b7a4eb"],
+"d": "2020-05-29",
+"t": "2020-06-04",
+}, { // ------------------------------------------------------------------------
+"x": "We made some graphs with very shallow roads much faster to generate (they were trying to generate an unwieldy number of isolines). #YBHP",
+"u": ["https://twitter.com/beemuvi/status/1268662365844672512",
+      "https://github.com/beeminder/road/issues/119",
+      "https://github.com/beeminder/beeminder/issues/1355"],
+"d": "2020-05-25",
+"t": "2020-06-04",  
+}, { // ------------------------------------------------------------------------
+"x": "Some YBHP graphs didn't show the thin yellow lines (or only would for part of the half-plane). Now we shade the whole good side yellow for such goals! #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1269048864532647937",
+      "https://github.com/beeminder/road/issues/104",
+      "https://github.com/beeminder/road/commit/d40d3a54685ee882a5ab3f3c3305e3e79fe8e195"],
+"d": "2020-05-25",
+"t": "2020-06-05",
+"c": "Interestingly, Beebrain is technically correct to not show them because they are isolines and it can't draw those in the DTD=infinity region!",
+}, { // ------------------------------------------------------------------------
+"x": "Now conservatively infer earlier end date (aka dayfloor) if road dialed with rate and value that implies end date not on a day boundary. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1269813432234110978",
+      "https://forum.beeminder.com/t/bad-aim/6852/2?u=dreev",
+      "https://github.com/beeminder/road/issues/98",
+      "https://github.com/beeminder/beeminder/issues/333"],
+"d": "2020-06-03",
+"t": "2020-06-07",
+"c": "AKA the crossbones bug! Caused all sorts of insidious problems.",
+}, { // ------------------------------------------------------------------------
+"f": true,
+"x": "All new goals are Yellow Brick Half-Plane! We couldn't turn back now even if we wanted to! #YBHP",
+"u": ["https://twitter.com/beemuvi/status/1269816180820160512",
+      "https://github.com/beeminder/beeminder/issues/1410"],
+"d": "2020-06-04",
+"t": "2020-06-07",
+}, { // ------------------------------------------------------------------------
+"x": "Weight-loss goals and other goals that use a \"max daily fluctuation\" are now less cluttered, not showing the orange/blue/green lines",
+"u": ["https://twitter.com/beemuvi/status/1270491137506041856",
+      "https://github.com/beeminder/road/issues/102"],
+"d": "2020-06-09",
+"t": "2020-06-09",
+}, { // ------------------------------------------------------------------------
+"x": "We've now converted the first significant chunk of goals to Yellow Brick Half-Plane, namely, all daily beemail subscribers!",
+"u": ["https://twitter.com/beemuvi/status/1270491350346022912",
+      "https://github.com/beeminder/beeminder/pull/1435"],
+"d": "2020-06-09",
+"t": "2020-06-09",
+}, { // ------------------------------------------------------------------------
+"x": "When starting a new goal after its deadline and before midnight, the road would start technically-yesterday giving you 1 less initial safe day. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1270856692696145921",
+      "https://github.com/beeminder/beeminder/issues/1253",
+      "https://github.com/beeminder/beeminder/pull/1420"],
+"d": "2020-06-04",
+"t": "2020-06-10",
+"c": "For earlybird deadlines, tini would be the previous day",
+}, { // ------------------------------------------------------------------------
+"x": "But that broke things for certain timezones (HT @lady_alys of Brisbane!) yielding correct road-start date but data in the future! #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1270856949895069696",
+      "https://github.com/beeminder/beeminder/issues/1430",
+      "https://github.com/beeminder/beeminder/pull/1433 & https://github.com/beeminder/beeminder/pull/1436"],
+"d": "2020-06-09",
+"t": "2020-06-10",
+"c": "Resulted in an ugly 'all datapoint are in the future' error message",
+}, { // ------------------------------------------------------------------------
+"x": "Twice, doing #YBHP conversions broke tons of goals that we painstakingly restored & emailed everyone affected. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1271216866967482368",
+      "https://github.com/beeminder/beeminder/pull/1435",
+      "https://blog.beeminder.com/ybhp/#BREAKING"],
+"d": "2020-06-09",
+"c": "2020-06-04 was the first time, where we shrunk"
+}, { // ------------------------------------------------------------------------
+"x": "As part of the switch to Yellow Brick Half-Plane, new goals by default start with just one day of safety buffer instead of two",
+"u": ["https://twitter.com/beemuvi/status/1271577561613529088",
+      "https://blog.beeminder.com/ybhp/",
+      "https://github.com/beeminder/beeminder/issues/1144#issuecomment-642944271"],
+"d": "2020-06-04",
+"t": "2020-06-12",
+"c": "It's just more natural to have the razor road start exactly where you are today with you right on it",
+}, { // ------------------------------------------------------------------------
+"f": true,
+"x": "Version 5.6.4 of the iOS app!",
+"u": ["https://twitter.com/beemuvi/status/1272677197803712512",
+      "https://github.com/beeminder/BeeSwift/releases/tag/5.6.4"],
+"d": "2020-06-09",
+"t": "2020-06-15",
+"c": "AKA BeemiOS",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"n": false,
+"x": "For datapoints shown like \"1,234\" if you used the stepper or edited it, it would change the comma to a decimal point! #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1272677197803712512",
+      "https://github.com/beeminder/BeeSwift/issues/45"],
+"d": "2020-06-09",
+"t": "2020-06-15",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "If you delete a datapoint, the datapoint now immediately disappears from the list of datapoints under the graph. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1272677515954274304",
+      "https://github.com/beeminder/BeeSwift/issues/27"],
+"d": "2020-06-09",
+"t": "2020-06-15",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "Similarly, if you edit a datapoint, it immediately updates under the graph, as does the value in the data entry field, to reflect the edit. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1272678259105214464",
+      "https://github.com/beeminder/BeeSwift/issues/28"],
+"d": "2020-06-09",
+"t": "2020-06-15",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "The intermittent blank white screen on startup is, we believe, vanquished for good. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1272680109724413955",
+      "https://github.com/beeminder/BeeSwift/issues/37"],
+"d": "2020-06-09",
+"t": "2020-06-15",
+"c": "The blank-screen-on-start bug that 5.6.3 purported to fix though we didn't include it as a UVI due to inklings that it wasn't really fixed",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "If the app fails to fetch the latest from Beeminder, there's no longer an alert (\"Error fetching goals\") waiting for you when you return to the app.",
+"u": ["https://twitter.com/beemuvi/status/1272680777113677824",
+      "https://github.com/beeminder/BeeSwift/commit/520e09646bc67b4eabf1d869a3cf085f36cd17c8"],
+"d": "2020-06-09",
+"t": "2020-06-15",
+"c": "So-called background fetch, not related to autodata, just syncing with the Beeminder server."
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "We now prompt you to turn on notifications when switching to a new device or on a reinstall of the app, if necessary",
+"u": ["https://twitter.com/beemuvi/status/1272681613499838464",
+      "https://github.com/beeminder/BeeSwift/issues/50"],
+"d": "2020-06-09",
+"t": "2020-06-15",
+}, { // ------------------------------------------------------------------------
+"x": "Webcopy/#css changes in the \"From the blog\" section of the front page, to not seem like the \"Guaranteed Fresh\" link is to the blog itself. HT @slatestarcodex",
+"u": ["https://twitter.com/beemuvi/status/1273656060989943808",
+      "https://github.com/beeminder/beeminder/issues/1427",
+      "https://github.com/beeminder/beeminder/pull/1452"],
+"d": "2020-06-16",
+"t": "2020-06-18",
+"c": "Mainly downpopping the 'Guaranteed Fresh' and linkifying just the word 'guaranteed' -- should fix the thing that threw off Scott Alexander",
+}, { // ------------------------------------------------------------------------
+"x": "Also updated that link to point to the newer blog post, and more webcopy and hovertext updates there",
+"u": ["https://twitter.com/beemuvi/status/1273656138588807168",
+      "https://github.com/beeminder/beeminder/issues/1427",
+      "https://github.com/beeminder/beeminder/pull/1452"],
+"d": "2020-06-16",
+"t": "2020-06-18",
+}, { // ------------------------------------------------------------------------
+"x": "Webcopy tweaks for consistency: refer to ratcheting as manually reducing and autoratchet as automatically trimming your safety buffer. HT @philiphellyer",
+"u": ["https://twitter.com/beemuvi/status/1273675927830982656",
+      "https://github.com/beeminder/beeminder/commit/99b662e083a4524a010e181dbf914ba5fe7f3d0d"],
+"d": "2020-06-13",
+"t": "2020-06-18",
+"c": "By Philip. New copy: \"WARNING: this will not play nicely with manually reducing or automatically trimming your safety buffer\" (was \"retro-ratchet\" and \"auto-cap\")",
+}, { // ------------------------------------------------------------------------
+"x": "UVI#3389 had an off-by-one error. Now the 3 colored numbers under the graph in the iOS app (delta_text in the API) are right for real. #bugfix HT @faireness",
+"u": ["https://twitter.com/beemuvi/status/1273676165895475200",
+      "https://github.com/beeminder/beeminder/commit/7eb142e02fbdb6ed5b422f4d113f2f3e6afb8920",
+      "https://github.com/beeminder/beeminder/issues/1350",
+      "https://github.com/beeminder/beeminder/pull/1445"],
+"d": "2020-06-16",
+"t": "2020-06-18",
+"c": "For non-YBHP goals it was [-1, 0, 1] offsets from the quoted delta; in YBHP we want [0, 1 , 2]",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, /* --------------------------------------------------------- end 2020jun */ ]
+
 
 var staged = [ {
 }, { // ------------------------------------------------------------------------
@@ -1173,53 +1400,49 @@ var staged = [ {
 }, { // ------------------------------------------------------------------------
 "x": "MINI: Faire's new @beemuvi avatar plus we started making custom images for our blog posts because we're that fancy",
 }, { // ------------------------------------------------------------------------
-"x": "BeemiOS bugfixes (when it hits the app store)",
 }, { // ------------------------------------------------------------------------
 "x": "Beedroid 3.3.0 coming shortly with like 10 little UVIs! <3",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, /* ---------------------------------------------------------- end staged */ ]
 
 /*********************************************************************************************************************************************************************
+[[PSA: add dates please!]]
 ~~~~~~----------------------------- METASTAGED -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-"x": "And a direct/anchor link not discoverable by just clicking: the due-by table at, eg, beeminder.com/d/mass#goal-safety",
-ADAM: Could be reworded as "anchor links in the URL to things inside the tabs open the tabs and go scroll to them" or something like that?
+"x": "Added some tolerance to some floating point comparisons in Beebrain because we found a few cases of a dot exactly on the road that was red. #bugfix",
 "u": [
-      "https://github.com/beeminder/beeminder/pull/1365"],
+      "https://github.com/beeminder/road/issues/128"],
+"d": "2020-06-18",
+}, { // ------------------------------------------------------------------------
+yanked the YBHP checkbox
+https://github.com/beeminder/beeminder/issues/1411
+https://github.com/beeminder/beeminder/pull/1458
+https://github.com/beeminder/beeminder/issues/275
+"d": "2020-06-18",
+}, { // ------------------------------------------------------------------------
+3 PRs with safesum: (not all merged)
+fixing an extra space in safesum if gunits is blank
+fixing an extra space in safesum before the time-due
+fixing safesum for frozen goals (would say "safe for 1 day" on ended goals)
+https://github.com/beeminder/beeminder/issues/1382
+https://github.com/beeminder/beeminder/pull/1383 -- extra space
+https://github.com/beeminder/beeminder/pull/1439 -- other extra space
+https://github.com/beeminder/beeminder/pull/1440 -- safesum for frozen goals
+https://github.com/beeminder/beeminder/issues/1419
+https://github.com/beeminder/beeminder/issues/1408
+https://github.com/beeminder/beeminder/commit/88d806d0cadefa546d45d4027cf06c62ab355352
+https://forum.beeminder.com/t/a-touchy-subject/6818/8?u=dreev
 "d": "2020-05-20",
 }, { // ------------------------------------------------------------------------
-five UVIs from shanaqui! (and then a couple more!)
-"Most notably, I created an actual page for PPRs, because otherwise you have to read through most of the Do-Less goals article to get the info."
-https://forum.beeminder.com/t/help-docs-updates-as-uvis/6672/4?u=dreev
-"d": "2020-05-22",
-}, { // ------------------------------------------------------------------------
-ADAM: bunch more UVIs!
-Fixing up the datepicker default dates, 
-reducing the reflow on SVG load (not eliminating in all circumstances, but that remaining work has been gissued), 
-fixing an extra space in safesum if gunits is blank,
-}, { // ------------------------------------------------------------------------
-made some graphs with very shallow roads much faster to generate 
-https://github.com/beeminder/road/issues/119
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-fixed missing/truncated glines bug by shading
-https://github.com/beeminder/road/issues/104
-https://github.com/beeminder/road/commit/d40d3a54685ee882a5ab3f3c3305e3e79fe8e195
-"d": "2020-05-25",
+1. negative UVI? f4119b9b - temporarily remove twitter login
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-BEEMIOS
-f4119b9b - temporarily remove twitter login
-e396b7ee - potentially refix https://github.com/beeminder/BeeSwift/issues/37 (the blank-screen-on-start bug that 5.6.3 purported to fix)
-66968179 - fix https://github.com/beeminder/BeeSwift/issues/45
-535d8b40 - bump version
-7d915333 - fix https://github.com/beeminder/BeeSwift/issues/27
-91a19169 - update value text field after updating goal (enhance #27)
-7830fead - fix https://github.com/beeminder/BeeSwift/issues/28
-https://github.com/beeminder/BeeSwift/issues/50
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-TODO: add faire's uvi avatar to the top (and bottom?) of 
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -1229,8 +1452,6 @@ dreev kinda wants to have a discussion about general principles for when to wrap
 probably the answer is: wrap everything shown to the user in shn(); never conservaround datapoints, just dueby values.
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-TODO: don't let you set abslnw>0 on ybhp goals in the first place
-(wait, better, more general solution: no increasing abslnw! any increase in abslnw is weaselly bullshit and is all going away soon and if someone has a legit use case for that, they should talk to us)
 }, { // ------------------------------------------------------------------------
 fatcyclist mongoid pagination bug, waiting to tweet till bmndr.com/fatcyclist is non-hideous
 https://github.com/beeminder/beeminder/pull/1196
