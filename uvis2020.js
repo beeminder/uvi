@@ -1385,6 +1385,48 @@ const batch2020jun = [{
 "t": "2020-06-18",
 "c": "For non-YBHP goals it was [-1, 0, 1] offsets from the quoted delta; in YBHP we want [0, 1 , 2]",
 }, { // ------------------------------------------------------------------------
+"x": "Added some tolerance to some floating point comparisons in Beebrain because we found a few cases of a dot exactly on the road that was red (!). #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1275570395182018568",
+      "https://github.com/beeminder/road/issues/128"],
+"d": "2020-06-18",
+"t": "2020-06-23",
+}, { // ------------------------------------------------------------------------
+"f": true,
+"x": "We converted the last existing goal to Yellow Brick Half-Plane and removed the checkbox to opt out so there's now literally no such thing as non-YBHP",
+"u": ["https://twitter.com/beemuvi/status/1275938580137783296",
+      "https://blog.beeminder.com/ybhp/",
+      "https://github.com/beeminder/beeminder/issues/1411",
+      "https://github.com/beeminder/beeminder/pull/1458",
+      "https://github.com/beeminder/beeminder/issues/275"],
+"d": "2020-06-18",
+"t": "2020-06-24",
+}, { // ------------------------------------------------------------------------
+"x": "We have a new @beemuvi avatar (also visible here on the changelog) plus we've made custom images for our last 6 blog posts because we're that fancy",
+"u": ["https://twitter.com/beemuvi/status/1275939541359013888"],
+"t": "2020-06-24",
+"c": "By Faire",
+}, { // ------------------------------------------------------------------------
+"x": "UVI#3419 &amp; UVI#3420 introduced a bug where you couldn't create new goals if your default goal deadline was before 9:30am. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1276301945146191872",
+      "https://github.com/beeminder/beeminder/issues/1464",
+      "https://github.com/beeminder/beeminder/pull/1466"],
+"d": "2020-06-25",
+"t": "2020-06-25",
+}, { // ------------------------------------------------------------------------
+"x": "If your Beeminder API client had a registered post-deauth-callback URL, we were failing to alert you if there was an error trying to post to your URL. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1276660614467710977",
+      "https://github.com/beeminder/beeminder/issues/1461"],
+"d": "2020-06-26",
+"t": "2020-06-26",
+}, { // ------------------------------------------------------------------------
+"x": "The blurb about how much safety buffer you have (aka safesum) was saying, eg, \"safe for 1 day\" on already-ended goals. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1276664506739945472",
+      "https://github.com/beeminder/beeminder/issues/1419",
+      "https://github.com/beeminder/beeminder/pull/1440"],
+"d": "2020-06-25",
+"t": "2020-06-26",
+"c": "Reported by Andy, fixed by Adam. <3",
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -1395,10 +1437,6 @@ const batch2020jun = [{
 
 
 var staged = [ {
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-"x": "MINI: Faire's new @beemuvi avatar plus we started making custom images for our blog posts because we're that fancy",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 "x": "Beedroid 3.3.0 coming shortly with like 10 little UVIs! <3",
@@ -1412,31 +1450,21 @@ var staged = [ {
 [[PSA: add dates please!]]
 ~~~~~~----------------------------- METASTAGED -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
 }, { // ------------------------------------------------------------------------
-"x": "Added some tolerance to some floating point comparisons in Beebrain because we found a few cases of a dot exactly on the road that was red. #bugfix",
-"u": [
-      "https://github.com/beeminder/road/issues/128"],
-"d": "2020-06-18",
 }, { // ------------------------------------------------------------------------
-yanked the YBHP checkbox
-https://github.com/beeminder/beeminder/issues/1411
-https://github.com/beeminder/beeminder/pull/1458
-https://github.com/beeminder/beeminder/issues/275
-"d": "2020-06-18",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+"x": "The blurb about how much safety buffer you have had spurious extra spaces around the goal units"
 }, { // ------------------------------------------------------------------------
 3 PRs with safesum: (not all merged)
-fixing an extra space in safesum if gunits is blank
-fixing an extra space in safesum before the time-due
-fixing safesum for frozen goals (would say "safe for 1 day" on ended goals)
-https://github.com/beeminder/beeminder/issues/1382
+fixing an extra space in safesum if gunits is blank [deployed]
+fixing an extra space in safesum before the time-due [monday]
+https://github.com/beeminder/beeminder/issues/1382 -- extra space when gunits is blank
 https://github.com/beeminder/beeminder/pull/1383 -- extra space
 https://github.com/beeminder/beeminder/pull/1439 -- other extra space
-https://github.com/beeminder/beeminder/pull/1440 -- safesum for frozen goals
-https://github.com/beeminder/beeminder/issues/1419
-https://github.com/beeminder/beeminder/issues/1408
+https://github.com/beeminder/beeminder/issues/1408 -- sometimes extra space before the final time
 https://github.com/beeminder/beeminder/commit/88d806d0cadefa546d45d4027cf06c62ab355352
 https://forum.beeminder.com/t/a-touchy-subject/6818/8?u=dreev
 "d": "2020-05-20",
-}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 1. negative UVI? f4119b9b - temporarily remove twitter login
