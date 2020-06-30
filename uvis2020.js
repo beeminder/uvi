@@ -1412,6 +1412,7 @@ const batch2020jun = [{
       "https://github.com/beeminder/beeminder/pull/1466"],
 "d": "2020-06-25",
 "t": "2020-06-25",
+"c": "9:30am being the global default (aka the default default) for alertstart",
 }, { // ------------------------------------------------------------------------
 "x": "If your Beeminder API client had a registered post-deauth-callback URL, we were failing to alert you if there was an error trying to post to your URL. #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1276660614467710977",
@@ -1427,19 +1428,57 @@ const batch2020jun = [{
 "t": "2020-06-26",
 "c": "Reported by Andy, fixed by Adam. <3",
 }, { // ------------------------------------------------------------------------
+"x": "The blurb about how much safety buffer you have (aka safesum) had spurious extra spaces if goal units was blank. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1277748380203020288",
+      "https://github.com/beeminder/beeminder/issues/1382",
+      "https://github.com/beeminder/beeminder/pull/1383"],
+"d": "2020-05-20",
+"t": "2020-06-29",
+"c": "Tweeted version of this was slightly wrong",
 }, { // ------------------------------------------------------------------------
+"x": "And another spurious space in safesum, this time before the due-time in cases where the hours in the time-of-day had 1 digit. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1278090103642927104",
+      "https://forum.beeminder.com/t/a-touchy-subject/6818/8?u=dreev",
+      "https://github.com/beeminder/beeminder/issues/1408",
+      "https://github.com/beeminder/beeminder/pull/1439",
+      "https://github.com/beeminder/beeminder/pull/1479",
+      "https://github.com/beeminder/beeminder/commit/88d806d0cadefa546d45d4027cf06c62ab355352"],
+"d": "2020-06-30",
+"t": "2020-06-30",
+"c": "We'd normally call this a #mini and not count it as its own UVI but with the forum post and multiple PRs we figure it should count!",
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
+"x": "Since around YBHP, do-less goals were being drawn with a thick yellow line for maxflux instead of the normal colored lines. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1278104514780790785",
+      "https://github.com/beeminder/beeminder/issues/1486",
+      "https://github.com/beeminder/beeminder/pull/1490"],
+"d": "2020-06-30",
+"t": "2020-06-30",
 }, /* --------------------------------------------------------- end 2020jun */ ]
+
+
+const batch2020jul = [{  
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, /* --------------------------------------------------------- end 2020jul */ ]
+
 
 
 var staged = [ {
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 "x": "Beedroid 3.3.0 coming shortly with like 10 little UVIs! <3",
+// Info button takes you to website/dueby
+//   * https://github.com/beeminder/beedroid-hist/pull/81
+// EXIF image issue on graph load (#48)
+//   * https://github.com/beeminder/beedroid/issues/127
+// Had to do with widgets when you were logged out or hadn't yet fetched safesums on the transition.
+//   * https://github.com/beeminder/beedroid-hist/pull/85 
+//   * https://github.com/beeminder/beedroid-hist/pull/84 -- different crash bug? "fix default entry crash bug"
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -1451,20 +1490,25 @@ var staged = [ {
 ~~~~~~----------------------------- METASTAGED -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
+BEESWIFT post-5.6.4
+Goals are sorted according to the sort-goals-by preference not only in the list displayed on the gallery but also in the lists displayed on configureNotifications and healthKitConfig
+  * https://github.com/beeminder/BeeSwift/pull/58
+Bugfix/41 entering app from notification does open screen of that goal (#60)
+  * https://github.com/beeminder/BeeSwift/pull/60
+Maybe not user-visible: different gem for iOS push notifications
+  * https://github.com/beeminder/beeminder/issues/1401
+  * https://github.com/beeminder/beeminder/pull/1412
+Crash with layout updates on background thread
+  * https://github.com/beeminder/BeeSwift/issues/56
+Twitter login back
+  * https://github.com/beeminder/BeeSwift/issues/67
+Sort goals consistently (unmerged? rejected?)
+  * https://github.com/beeminder/BeeSwift/pull/58
+Enable cancel in the searchBar -- Can't make keyboard go away after using the search button
+  * https://github.com/beeminder/BeeSwift/issues/53
+  * https://github.com/beeminder/BeeSwift/pull/65
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-"x": "The blurb about how much safety buffer you have had spurious extra spaces around the goal units"
-}, { // ------------------------------------------------------------------------
-3 PRs with safesum: (not all merged)
-fixing an extra space in safesum if gunits is blank [deployed]
-fixing an extra space in safesum before the time-due [monday]
-https://github.com/beeminder/beeminder/issues/1382 -- extra space when gunits is blank
-https://github.com/beeminder/beeminder/pull/1383 -- extra space
-https://github.com/beeminder/beeminder/pull/1439 -- other extra space
-https://github.com/beeminder/beeminder/issues/1408 -- sometimes extra space before the final time
-https://github.com/beeminder/beeminder/commit/88d806d0cadefa546d45d4027cf06c62ab355352
-https://forum.beeminder.com/t/a-touchy-subject/6818/8?u=dreev
-"d": "2020-05-20",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 1. negative UVI? f4119b9b - temporarily remove twitter login
