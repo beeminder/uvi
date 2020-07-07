@@ -657,6 +657,13 @@ var batch = [{
 "u": ["https://twitter.com/beeminfra/status/1275933875181481984"],
 "t": "2020-06-24",
 "d": "~2020-04-04"
+}, { // ------------------------------------------------------------------------
+"x": "Include the hostname in airhorns so we can see if problems are specific to a particular machine or general",
+"u": ["https://github.com/beeminder/beeminder/pull/1423",
+"https://twitter.com/beeminfra/status/1278383938793172992"
+],
+"t": "2020-07-01",
+"d": "2020-06-05"
 }, /* ----------------------------------------------------------- end batch */ ]
 
 var staged = [ { // note: sub-entries not allowed here in staging
@@ -665,13 +672,7 @@ var staged = [ { // note: sub-entries not allowed here in staging
 /*
 METASTAGED: --10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
 https://github.com/beeminder/beeminder/commit/
-
-* include hostname in airhorns: https://github.com/beeminder/beeminder/pull/1423
 }, { // ------------------------------------------------------------------------
-"x": "Deployed a new worker machine and got rid of the old underpowered one. also added our own loadbalancer so we can get logs for some periodic 503s.",
-"u": ["https://twitter.com/beeminfra/status/1275933875181481984"],
-"t": "2020-06-24",
-"d": "2020-04-04"
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 ## NEED HELP FROM ADAM:
