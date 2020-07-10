@@ -657,6 +657,17 @@ var batch = [{
 "u": ["https://twitter.com/beeminfra/status/1275933875181481984"],
 "t": "2020-06-24",
 "d": "~2020-04-04"
+}, { // ------------------------------------------------------------------------
+"x": "Include the hostname in airhorns so we can see if problems are specific to a particular machine or general",
+"u": ["https://github.com/beeminder/beeminder/pull/1423",
+"https://twitter.com/beeminfra/status/1278383938793172992"
+],
+"t": "2020-07-01",
+"d": "2020-06-05"
+}, { // ------------------------------------------------------------------------
+"x": "Refactored airhorns to, essentially, include a loglevel (i.e. debug vs OMG)",
+"u": ["https://twitter.com/beeminfra/status/1280994947081007107",
+      "https://github.com/beeminder/beeminder/issues/1465"]
 }, /* ----------------------------------------------------------- end batch */ ]
 
 var staged = [ { // note: sub-entries not allowed here in staging
@@ -665,13 +676,30 @@ var staged = [ { // note: sub-entries not allowed here in staging
 /*
 METASTAGED: --10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
 https://github.com/beeminder/beeminder/commit/
-
-* include hostname in airhorns: https://github.com/beeminder/beeminder/pull/1423
 }, { // ------------------------------------------------------------------------
-"x": "Deployed a new worker machine and got rid of the old underpowered one. also added our own loadbalancer so we can get logs for some periodic 503s.",
-"u": ["https://twitter.com/beeminfra/status/1275933875181481984"],
-"t": "2020-06-24",
-"d": "2020-04-04"
+refactoring in safesum to make helper functions, rename some variables for clarity, that kind of thing.
+https://github.com/beeminder/beeminder/pull/1439
+https://github.com/beeminder/beeminder/pull/1494
+}, { // ------------------------------------------------------------------------
+tests for a timezone issue with goal start and deadlines and initial datapoints
+https://github.com/beeminder/beeminder/commit/8b0d576ba7f901e15aabddbc8c8e7d8abfc98bd5
+}, { // ------------------------------------------------------------------------
+spec updates re the ybhp switchover (default amounts of buffer changed and stuff)
+https://github.com/beeminder/beeminder/commit/213dc3591f3a9c04f764fe1ef2a70bd56558cc8f
+}, { // ------------------------------------------------------------------------
+updated a script to optionally include data w/goals when collecting data for analysis
+https://github.com/beeminder/beeminder/commit/dc0e846ecfbfc1b14d9d73dbe5f0871dfc64e842
+}, { // ------------------------------------------------------------------------
+trlog refunds & include them in the counts for derev. also stop double counting subscriptions
+https://github.com/beeminder/beeminder/pull/1478
+https://github.com/beeminder/beeminder/commit/6f2ade9662be4410e1f1e35660027860f464a4c0
+}, { // ------------------------------------------------------------------------
+"x": "restructured how we do ios token cleanup from push notifications, and removed a cronned "cleanup job".",
+"u": [
+      "https://github.com/beeminder/beeminder/pull/1488"]
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 ## NEED HELP FROM ADAM:

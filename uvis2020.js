@@ -1447,7 +1447,7 @@ const batch2020jun = [{
 "t": "2020-06-30",
 "c": "We'd normally call this a #mini and not count it as its own UVI but with the forum post and multiple PRs we figure it should count!",
 }, { // ------------------------------------------------------------------------
-"x": "Since around YBHP, do-less goals were being drawn with a thick yellow line for maxflux instead of the normal colored lines. #bugfix",
+"x": "Since around YBHP transition, do-less goals were being drawn with a thick yellow line for maxflux instead of the normal colored lines. #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1278104514780790785",
       "https://github.com/beeminder/beeminder/issues/1486",
       "https://github.com/beeminder/beeminder/pull/1490"],
@@ -1457,6 +1457,84 @@ const batch2020jun = [{
 
 
 const batch2020jul = [{  
+}, { // ------------------------------------------------------------------------
+"x": "The help doc for URLminder now clarifies about sharable links vs public docs, points to the blog post which has new screenshots for Google Docs & Dropbox",
+"u": ["https://twitter.com/beemuvi/status/1278461631865839616",
+      "https://github.com/beeminder/beeminder/issues/1485",
+      "https://help.beeminder.com/article/88-urlminder"],
+"d": "2020-07-01",
+"t": "2020-07-01",
+}, { // ------------------------------------------------------------------------
+"x": "In the iOS app, repeated notifications for the same goal no longer pile up as separate notifications -- the existing notification just updates itself. Phew!",
+"u": ["https://twitter.com/beemuvi/status/1278839691840614400",
+      "https://github.com/beeminder/beeminder/pull/1488"],
+"d": "2020-07-02",
+"t": "2020-07-02",
+}, { // ------------------------------------------------------------------------
+"x": "Added missing hovertext for lead days, alertstart, & deadline so UI is consistent in both places you find reminder settings (goal page & reminders page)",
+"u": ["https://twitter.com/beemuvi/status/1278840168305197059",
+      "https://github.com/beeminder/beeminder/issues/58",
+      "https://github.com/beeminder/beeminder/pull/1500"],
+"d": "2020-07-02",
+"t": "2020-07-02",
+}, { // ------------------------------------------------------------------------
+"x": "Also added hovertext restoring some webcopy describing early bird vs nightowl deadlines (probably doesn't suffice to only have as a tooltip!). #regression",
+"u": ["https://twitter.com/beemuvi/status/1279140073783488512",
+      "https://forum.beeminder.com/t/is-6-30am-a-nightowl-or-earlybird-deadline/4763/5?u=dreev",
+      "https://github.com/beeminder/beeminder/issues/58",
+      "https://github.com/beeminder/beeminder/pull/1500"],
+"d": "2020-07-02",
+"t": "2020-07-03",
+"c": "Yes, another redesign regression from around 2016 facepalm"
+}, { // ------------------------------------------------------------------------
+"x": "\"Load all datapoints\" link now suppressed (instead of giving a confusing error) if less than a page's worth of data to load. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1280288932538617857",
+      "https://github.com/beeminder/beeminder/issues/1406",
+      "https://github.com/beeminder/beeminder/pull/1509"],
+"d": "2020-07-03",
+"t": "2020-07-06",
+"c": "Sounds prima facie like an anti-magic violation but it's ok because the grayed out \"load more data\" button makes it totally clear",
+}, { // ------------------------------------------------------------------------
+"f": true,
+"x": "TaskRatchet integration is official and is now featured on the front page!",
+"u": ["https://twitter.com/beemuvi/status/1280290249122344961",
+      "https://github.com/beeminder/beeminder/issues/1470",
+      "https://github.com/beeminder/beeminder/pull/1511"],
+"d": "2020-07-03",
+"t": "2020-07-06",
+}, { // ------------------------------------------------------------------------
+"x": "\"Sort by date entered\" only worked correctly before loading/adding additional datapoints (used datapoints' dates after that). #bugfix HT Brent Yorgey",
+"u": ["https://twitter.com/beemuvi/status/1280636952107081728",
+      "https://github.com/beeminder/beeminder/issues/1508",
+      "https://github.com/beeminder/beeminder/pull/1509"],
+"d": "2020-07-03",
+"t": "2020-07-07",
+}, { // ------------------------------------------------------------------------
+"x": "Added a fancy TaskRatchet integration landing page: beeminder.com/taskratchet",
+"u": ["https://twitter.com/beemuvi/status/1280637325475635200",
+      "https://github.com/beeminder/beeminder/pull/1511"],
+"d": "2020-07-03",
+"t": "2020-07-07",
+}, { // ------------------------------------------------------------------------
+"x": "Changed our privacy policy, can dox you at will now; j/k, boring stuff like new anchor link, removing reference to fitness expert. See bottom of https://bmndr.co/terms",
+"u": ["https://twitter.com/beemuvi/status/1281013247483588608",
+      "https://github.com/beeminder/beeminder/issues/1487",
+      "https://github.com/beeminder/beeminder/pull/1504",
+      "https://github.com/beeminder/beeminder/pull/1514"],
+"d": "2020-07-06",
+"t": "2020-07-08",
+}, { // ------------------------------------------------------------------------
+"x": "Multiple other privacy policy tweaks too boring to count as UVIs but we'll count the new canonical URL, beeminder.com/terms, and the better changelog",
+"u": ["https://twitter.com/beemuvi/status/1281361098495541249",
+      "https://github.com/beeminder/beeminder/pull/1527"],
+"d": "2020-07-09",
+"t": "2020-07-09",
+}, { // ------------------------------------------------------------------------
+"x": "Ok, one more little one: both Terms and Privacy are in the site footer now. Google's persnicketiness was the impetus for all this, btw.",
+"u": ["https://twitter.com/beemuvi/status/1281361666010054656",
+      "https://github.com/beeminder/beeminder/issues/1503"],
+"d": "2020-07-06",
+"t": "2020-07-09",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -1471,6 +1549,7 @@ const batch2020jul = [{
 var staged = [ {
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 "x": "Beedroid 3.3.0 coming shortly with like 10 little UVIs! <3",
 // Info button takes you to website/dueby
 //   * https://github.com/beeminder/beedroid-hist/pull/81
@@ -1480,6 +1559,7 @@ var staged = [ {
 //   * https://github.com/beeminder/beedroid-hist/pull/85 
 //   * https://github.com/beeminder/beedroid-hist/pull/84 -- different crash bug? "fix default entry crash bug"
 }, { // ------------------------------------------------------------------------
+"x": "New version of BeemiOS almost ready with several UVIs! <3",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -1488,6 +1568,51 @@ var staged = [ {
 /*********************************************************************************************************************************************************************
 [[PSA: add dates please!]]
 ~~~~~~----------------------------- METASTAGED -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
+maybe milkable but mostly infra:
+we got a 500 error when regenerating the graph. the user wouldn't see the 500 but their graphs would sometimes fail to regenerate when the user expected it to.
+it only happened like once. was only briefly broken.
+https://github.com/beeminder/beeminder/issues/1492
+https://github.com/beeminder/beeminder/pull/1493
+}, { // ------------------------------------------------------------------------
+Fitbit / Rescuetime autod goal setup regressions (4 UVIs total)
+"x1": "no initial leeway on fitbit calories goal",
+"u": ["https://github.com/beeminder/beeminder/issues/1431",
+"https://github.com/beeminder/beeminder/pull/1524"
+]
+"d": "2020-07-08",
+"c": "all three calories types did not give you the setting for selecting a different default amt of starting buffer."
+}, { // ------------------------------------------------------------------------
+"x2": "Fitbit has three types of calories goals, and they were poorly differentiated in the setup dropdown. Added annotation: \"Calories burned (more)\" and \"Calories eaten (less)\" so you have a better idea what you're getting.",
+"u": ["https://github.com/beeminder/beeminder/issues/1521",
+"https://github.com/beeminder/beeminder/pull/1524"],
+"d": "2020-07-08",
+}, { // ------------------------------------------------------------------------
+"x3": "Rescuetime do less goals include the 'start with extra leeway' option, but unlike manual do less, were defaulting to 'unchecked'. Make it consistent w/manual do less and default to checked",
+"u": [
+      "https://github.com/beeminder/beeminder/issues/1460",
+      "https://github.com/beeminder/beeminder/pull/1524"],
+"d": "2020-07-08"
+}, { // ------------------------------------------------------------------------
+"x4": "Changed the default (i.e. no extra buffer requested) for do less goals to be 1 day of buffer, like do more goals.",
+"u": ["https://github.com/beeminder/beeminder/issues/1520",
+"https://github.com/beeminder/beeminder/pull/1524"],
+"d": "2020-07-08",
+"c": "technically, i think that the 'days' of buffer kind of still has an off-by-one error for do less goals. technically I changed it to give you 1 daily rate's worth of buffer to your hardcap, which is technically 2 days of buffer, when you have a hard cap of zero more cookies allowed, you are considered 'orange', i.e., you won't derail that day at midnight, but the next day.... i should probably put this in a gissue and not in this uvi comment."
+}, { // ------------------------------------------------------------------------
+another small safesum uvi:
+I think this is technically user visible as in there are <50 goals that are sum but not kyoom and they will now have the total hidden too.
+https://github.com/beeminder/beeminder/issues/1285
+https://github.com/beeminder/beeminder/pull/1494
+"d": "2020-07-08",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+fixed another wrong dot color bug in beebrain:
+https://github.com/beeminder/road/issues/126
+not merged yet
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 BEESWIFT post-5.6.4

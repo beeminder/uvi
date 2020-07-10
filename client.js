@@ -217,7 +217,12 @@ function genol(l) {
 function genbatch(year, mon) {
   var d = document.getElementById(year + MONA[mon-1])
   var l = eval("batch" + year + MONA[mon-1])
-  d.insertAdjacentHTML('beforeend', '<h3>'+year+' '+MONAF[mon-1]+'</h3>')
+  var cd = new Date() // current date object
+  var cur = cd.getFullYear() + ' ' + MONAF[cd.getMonth()]
+  d.insertAdjacentHTML('beforeend', '<h3>'+year+' '+MONAF[mon-1]+
+    (year===2011 && mon===2 ? 
+     ' <font size="-1">(<a href="#latest">jump to '+cur+' &darr;</a>)</font>' : '')
+    +'</h3>')
   d.insertAdjacentHTML('beforeend', '\n<ol>\n' + genol(l) + '</ol>\n')
 }
 
