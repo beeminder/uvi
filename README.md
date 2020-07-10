@@ -22,6 +22,7 @@ See tweets.glitch.me for how to import your Twitter archive into a progress log 
 1. Codemod `.*bug.*` -> append '#bugfix'
 1. Pick featured UVIs through June 2013 when we started doing that
 1. Filtering options like only showing bugfixes, non-bugfixes, featured, etc
+1. Top-post! https://github.com/beeminder/beeminder/issues/1530
 
 ## Acknowledgments
 

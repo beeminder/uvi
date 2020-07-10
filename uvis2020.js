@@ -1516,6 +1516,26 @@ const batch2020jul = [{
 "d": "2020-07-03",
 "t": "2020-07-07",
 }, { // ------------------------------------------------------------------------
+"x": "Changed our privacy policy, can dox you at will now; j/k, boring stuff like new anchor link, removing reference to fitness expert. See bottom of https://bmndr.co/terms",
+"u": ["https://twitter.com/beemuvi/status/1281013247483588608",
+      "https://github.com/beeminder/beeminder/issues/1487",
+      "https://github.com/beeminder/beeminder/pull/1504",
+      "https://github.com/beeminder/beeminder/pull/1514"],
+"d": "2020-07-06",
+"t": "2020-07-08",
+}, { // ------------------------------------------------------------------------
+"x": "Multiple other privacy policy tweaks too boring to count as UVIs but we'll count the new canonical URL, beeminder.com/terms, and the better changelog",
+"u": ["https://twitter.com/beemuvi/status/1281361098495541249",
+      "https://github.com/beeminder/beeminder/pull/1527"],
+"d": "2020-07-09",
+"t": "2020-07-09",
+}, { // ------------------------------------------------------------------------
+"x": "Ok, one more little one: both Terms and Privacy are in the site footer now. Google's persnicketiness was the impetus for all this, btw.",
+"u": ["https://twitter.com/beemuvi/status/1281361666010054656",
+      "https://github.com/beeminder/beeminder/issues/1503"],
+"d": "2020-07-06",
+"t": "2020-07-09",
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -1554,18 +1574,38 @@ it only happened like once. was only briefly broken.
 https://github.com/beeminder/beeminder/issues/1492
 https://github.com/beeminder/beeminder/pull/1493
 }, { // ------------------------------------------------------------------------
+Fitbit / Rescuetime autod goal setup regressions (4 UVIs total)
+"x1": "no initial leeway on fitbit calories goal",
+"u": ["https://github.com/beeminder/beeminder/issues/1431",
+"https://github.com/beeminder/beeminder/pull/1524"
+]
+"d": "2020-07-08",
+"c": "all three calories types did not give you the setting for selecting a different default amt of starting buffer."
 }, { // ------------------------------------------------------------------------
-not merged yet:
+"x2": "Fitbit has three types of calories goals, and they were poorly differentiated in the setup dropdown. Added annotation: \"Calories burned (more)\" and \"Calories eaten (less)\" so you have a better idea what you're getting.",
+"u": ["https://github.com/beeminder/beeminder/issues/1521",
+"https://github.com/beeminder/beeminder/pull/1524"],
+"d": "2020-07-08",
+}, { // ------------------------------------------------------------------------
+"x3": "Rescuetime do less goals include the 'start with extra leeway' option, but unlike manual do less, were defaulting to 'unchecked'. Make it consistent w/manual do less and default to checked",
+"u": [
+      "https://github.com/beeminder/beeminder/issues/1460",
+      "https://github.com/beeminder/beeminder/pull/1524"],
+"d": "2020-07-08"
+}, { // ------------------------------------------------------------------------
+"x4": "Changed the default (i.e. no extra buffer requested) for do less goals to be 1 day of buffer, like do more goals.",
+"u": ["https://github.com/beeminder/beeminder/issues/1520",
+"https://github.com/beeminder/beeminder/pull/1524"],
+"d": "2020-07-08",
+"c": "technically, i think that the 'days' of buffer kind of still has an off-by-one error for do less goals. technically I changed it to give you 1 daily rate's worth of buffer to your hardcap, which is technically 2 days of buffer, when you have a hard cap of zero more cookies allowed, you are considered 'orange', i.e., you won't derail that day at midnight, but the next day.... i should probably put this in a gissue and not in this uvi comment."
+}, { // ------------------------------------------------------------------------
 another small safesum uvi:
 I think this is technically user visible as in there are <50 goals that are sum but not kyoom and they will now have the total hidden too.
 https://github.com/beeminder/beeminder/issues/1285
 https://github.com/beeminder/beeminder/pull/1494
+"d": "2020-07-08",
 }, { // ------------------------------------------------------------------------
-privacy policy updates:
-https://github.com/beeminder/beeminder/issues/1487
-https://github.com/beeminder/beeminder/issues/1503 -- privacy link on main page
-https://github.com/beeminder/beeminder/pull/1504
-note the changes to routes so maybe milkable for more UVIs
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 fixed another wrong dot color bug in beebrain:
 https://github.com/beeminder/road/issues/126
