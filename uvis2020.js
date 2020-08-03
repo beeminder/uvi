@@ -1536,6 +1536,185 @@ const batch2020jul = [{
 "d": "2020-07-06",
 "t": "2020-07-09",
 }, { // ------------------------------------------------------------------------
+"x": "If for whatever rare reason could no longer send updates to ur iOS device we'd give ourselves (not you) a 500 error &amp; silently fail to update ur graph #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1281727412644929536",
+      "https://twitter.com/beemuvi/status/1281727412644929536",
+      "https://github.com/beeminder/beeminder/issues/1492",
+      "https://github.com/beeminder/beeminder/pull/1493"],
+"c": "I guess Andy introduced a syntax error in the code to prune iOS tokens. Only happened like once; was only briefly broken.",
+}, { // ------------------------------------------------------------------------
+"x": "None of the three types of calories goals for our @fitbit integration were showing the option for customizing initial safety buffer. Facepalm. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1282824806342090752",
+      "https://github.com/beeminder/beeminder/issues/1431",
+      "https://github.com/beeminder/beeminder/pull/1524"],
+"d": "2020-07-08",
+"t": "2020-07-13",
+}, { // ------------------------------------------------------------------------
+"x": "While we were at it, better distinguished the 3 @fitbit calories goal types: \"Calories burned (more)\", \"Calories eaten (less)\", \"Net Calories\"",
+"u": ["https://twitter.com/beemuvi/status/1282825039893544960",
+      "https://github.com/beeminder/beeminder/issues/1521",
+      "https://github.com/beeminder/beeminder/pull/1524"],
+"d": "2020-07-08",
+"t": "2020-07-13",
+}, { // ------------------------------------------------------------------------
+"x": "Do-less @rescuetime goals are now consistent with manual do-less goals in defaulting \"start with extra leeway (safety buffer)\" to checked",
+"u": ["https://twitter.com/beemuvi/status/1282825211457372160",
+      "https://github.com/beeminder/beeminder/issues/1460",
+      "https://github.com/beeminder/beeminder/pull/1524"],
+"d": "2020-07-08",
+"t": "2020-07-13",
+}, { // ------------------------------------------------------------------------
+"x": "Changed the default (i.e., no extra buffer requested) for do-less goals to be 1 day's worth of buffer, like do-more goals.",
+"u": ["https://twitter.com/beemuvi/status/1283550848463691776",
+      "https://github.com/beeminder/beeminder/issues/1520",
+      "https://github.com/beeminder/beeminder/pull/1524"],
+"d": "2020-07-08",
+"t": "2020-07-15",
+}, { // ------------------------------------------------------------------------
+"x": "The hovertext on the graph thumbnails are now more concise and don't mention the archaic notions of lanes and centerlines",
+"u": ["https://twitter.com/beemuvi/status/1283551764382269440",
+      "https://github.com/beeminder/road/issues/136"],
+"d": "2020-07-15",
+"t": "2020-07-15",
+}, { // ------------------------------------------------------------------------
+"x": "Another dumb floating point comparison bug meant some rare cases of a datapoint's dot showing red on successfully completed goal. #bugfix HT Mary",
+"u": ["https://twitter.com/beemuvi/status/1283866102611636224",
+      "https://github.com/beeminder/road/issues/126"],
+"d": "2020-07-15",
+"t": "2020-07-16",
+}, { // ------------------------------------------------------------------------
+"x": "Changed all the email/webcopy to say things like \"you're in the orange\" instead of \"you're in the wrong lane\" and \"you're safe\" instead of \"on the road\"",
+"u": ["https://twitter.com/beemuvi/status/1284268889388412929",
+      "https://github.com/beeminder/beeminder/issues/1215",
+      "https://github.com/beeminder/beeminder/pull/1540/commits/1475f1e4b1b2a122c58e17fc2a42cca73824a7e1"],
+"d": "2020-07-16",
+"t": "2020-07-17",
+}, { // ------------------------------------------------------------------------
+"x": "Also changed references to \"centerline\" to refer to \"the bright line\" everywhere in the web and email copy",
+"u": ["https://twitter.com/beemuvi/status/1284269258688524289",
+      "https://github.com/beeminder/road/issues/138",
+      "https://github.com/beeminder/road/commit/85b16d7fe3dfdf1671ff2f5dbffc2b9d6e9772c2",
+      "https://github.com/beeminder/beeminder/pull/1540/commits/1475f1e4b1b2a122c58e17fc2a42cca73824a7e1"],
+"d": "2020-07-15",
+"t": "2020-07-17",
+}, { // ------------------------------------------------------------------------
+"x": "Purged mentions of \"lanes\" and \"centerlines\" and \"critical edge\" from our help docs. Viva la Yellow Brick Half-Plane!",
+"u": ["https://twitter.com/beemuvi/status/1285361210733375488",
+      "https://help.beeminder.com/article/156-ybhp",
+      "https://help.beeminder.com/article/118-how-do-i-interpret-the-graph",
+      "https://help.beeminder.com/article/96-weight-gain-loss-goals",
+      "https://help.beeminder.com/article/97-custom-goals",
+      "https://help.beeminder.com/article/119-what-are-the-goal-statistics",
+      "https://help.beeminder.com/article/99-road-editor",
+      "https://help.beeminder.com/article/157-pessimistic-presumptive-reports"],
+"d": "2020-07-20",
+"t": "2020-07-20",
+}, { // ------------------------------------------------------------------------
+"x": "If you had non-ascii characters in your @Runkeeper username/profile, we'd fail when you tried to add Runkeeper authorization to your Beeminder account. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1285723518211108866",
+      "https://github.com/beeminder/beeminder/issues/1201",
+      "https://github.com/beeminder/beeminder/issues/1534",
+      "https://github.com/beeminder/beeminder/pull/1535"],
+"d": "2020-07-17",
+"t": "2020-07-21",
+"c": "The problem was doublefold: 1) our Runkeeper oauth was mangling the response from Runkeeper because we weren't sending an explicit 'Accept-Charset' header. 2) we were attempting to use forceencode on the results from omniauth to clean up any such mangled outputs, but were doing it in such a way that it choked on the mangled encoding anyway.",
+}, { // ------------------------------------------------------------------------
+"x": "The previous fix for character encoding in Runkeeper's oauth caused a bug in our Slack oauth (for the Beeminder Slack bot, and Slack alerts)! #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1285723930460860416",
+      "https://github.com/beeminder/beeminder/issues/1550",
+      "https://github.com/beeminder/beeminder/pull/1551"],
+"d": "2020-07-20",
+"t": "2020-07-21",
+}, { // ------------------------------------------------------------------------
+"x": "\"Retroratchet\" is now just \"ratchet\". Updated the site copy, help docs, even the glossary!",
+"u": ["https://twitter.com/beemuvi/status/1286081785164513282",
+      "https://blog.beeminder.com/glossary/",
+      "https://forum.beeminder.com/t/renaming-retroratchet-to-ratchet/6703",
+      "https://help.beeminder.com/article/56-can-i-get-rid-of-extra-safety-buffer",
+      "https://help.beeminder.com/article/98-can-i-put-my-goal-on-pause-for-a-little-bit",
+      "https://help.beeminder.com/article/67-do-less-goals",
+      "https://github.com/beeminder/beeminder/issues/1269",
+      "https://github.com/beeminder/beeminder/pull/1557"],
+"d": "2020-07-22",
+"t": "2020-07-22",
+"c": "Also made all the needed YBHP changes to the glossary but I guess we're not counting that as it's own UVI since it's part of the blog currently, even though that's a dump place for the glossary.",
+}, { // ------------------------------------------------------------------------
+"x": "When support replied to the email bot on your behalf we'd spam you about adding data from an \"unknown\" email address. We've now finally whitelisted ourselves.",
+"u": ["https://twitter.com/beemuvi/status/1286085032944078849",
+      "https://github.com/beeminder/beeminder/issues/827",
+      "https://github.com/beeminder/beeminder/pull/1560"],
+"d": "2020-07-22",
+"t": "2020-07-22",
+"c": "Regression caused by switching to HelpScout for support. The reason for support to reply to the bot on your behalf is generally that you sent the bot malformed data and it replied with support cc'd to complain. Then a human (one of us) would fix it for you and reply-all, to both you and the bot. All peachy, except for the part where Beeminder would then reply \"OMG data submitted from an unknown address!\".",
+}, { // ------------------------------------------------------------------------
+"x": "We officially added safebuf, the integer number of days of safety buffer (not just the losedate timestamp), to the API",
+"u": ["https://twitter.com/beemuvi/status/1287899099975397377",
+      "https://forum.beeminder.com/t/api-changes-in-the-yellow-brick-half-plane-new-world-order/6493/5?u=dreev",
+      "https://github.com/beeminder/apidocs/pull/24"],
+"d": "2020-07-25",
+"t": "2020-07-27",
+}, { // ------------------------------------------------------------------------
+"x": "Our Misfit autodata integration was sometimes sending us duplicate datapoints. Our fault for not being robust to that; now we are! #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1288250770547044352",
+      "https://github.com/beeminder/beeminder/issues/781",
+      "https://github.com/beeminder/beeminder/issues/1537",
+      "https://github.com/beeminder/beeminder/pull/1556"],
+"d": "2020-07-22",
+"t": "2020-07-28",
+"c": "Extremely cheap solution was to put Misfit on a queue with only worker so the whole thing is moot (as long as we have very few Misfit users!)",
+}, { // ------------------------------------------------------------------------
+"x": "We edited all the copy in the API docs to not talk about lanes and centerlines anymore and added instructions for inferring color from the safebuf parameter",
+"u": ["https://twitter.com/beemuvi/status/1288253328879624192",
+      "https://github.com/beeminder/apidocs/pull/24",
+      "https://github.com/beeminder/beeminder/issues/1215"],
+"d": "2020-07-25",
+"t": "2020-07-28",
+}, { // ------------------------------------------------------------------------
+"x": "At some point we added some metadata to datapoints and we missed at least one and it caused at least one person's graph to give a 500 error. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1288618214813888513",
+      "https://github.com/beeminder/beeminder/commit/4c3eee582362d9943c1d3bbc0865f75281e0615e"],
+"d": "2020-07-20",
+"t": "2020-07-29",
+"c": "The fix is just to not freak out if the metadata is missing",
+}, { // ------------------------------------------------------------------------
+"x": "Letting you interact with your newly created Fitbit goal before it finished importing your Fitbit data could yield insta-derails or other wrongness. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1288618341385478145",
+      "https://github.com/beeminder/beeminder/issues/1558",
+      "https://github.com/beeminder/beeminder/pull/1559"],
+"d": "2020-07-23",
+"t": "2020-07-29",
+}, { // ------------------------------------------------------------------------
+"x": "The confirmation dialog for deleting datapoints would sometimes say \"[undefined]\" instead of the actual datapoint. #bugfix HT @phdoerfler & zzq",
+"u": ["https://twitter.com/beemuvi/status/1288984798929674240",
+      "https://forum.beeminder.com/t/bug-report-deleting-undefined-are-you-sure/6529/9",
+      "https://github.com/beeminder/beeminder/issues/1568",
+      "https://github.com/beeminder/beeminder/pull/1574 -- Rework htmlForDatapoint"],
+"d": "2020-07-29",
+"t": "2020-07-30",
+}, { // ------------------------------------------------------------------------
+"f": true,
+"x": "Revamped the graph legend! New images, new words, new things that weren't documented like colored guidelines and the pink zone!",
+"u": ["https://twitter.com/beemuvi/status/1288985279924015104",
+      "https://github.com/beeminder/beeminder/issues/1584",
+      "https://github.com/beeminder/beeminder/pull/1566"],
+"d": "2020-07-24",
+"t": "2020-07-30",
+}, { // ------------------------------------------------------------------------
+"x": "Also the legend images are higher resolution. We should probably be milking the legend revamp for several more UVIs!",
+"u": ["https://twitter.com/beemuvi/status/1289276488974401536",
+      "https://github.com/beeminder/beeminder/issues/1584",
+      "https://github.com/beeminder/beeminder/pull/1566"],
+"d": "2020-07-24",
+"t": "2020-07-31",
+}, { // ------------------------------------------------------------------------
+"x": "Also a copy fix in the legend: \"above this bright red line\" to \"good side of this bright red line\"",
+"u": ["https://twitter.com/beemuvi/status/1289276615986356224",
+      "https://github.com/beeminder/beeminder/issues/1584",
+      "https://github.com/beeminder/beeminder/pull/1566",
+      "https://github.com/beeminder/beeminder/pull/1585"],
+"d": "2020-07-30",
+"t": "2020-07-31",
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -1549,8 +1728,16 @@ const batch2020jul = [{
 var staged = [ {
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
+"x": "Several Beebrain/graph fixes from Uluc!",
 }, { // ------------------------------------------------------------------------
-"x": "Beedroid 3.3.0 coming shortly with like 10 little UVIs! <3",
+"x": "Adam's GmailZero improvements coming!",
+//https://github.com/beeminder/beeminder/issues/989 -- maybe not relevant anymore
+//https://github.com/beeminder/beeminder/issues/1545 -- Spurious error banner "Error getting Gmail labels."
+//https://github.com/beeminder/beeminder/issues/1561 -- when you go to another person's gmailzero goals, it tries to fetch your labels
+//https://github.com/beeminder/beeminder/issues/1549
+//https://github.com/beeminder/beeminder/issues/1572 -- Add bell and whistle in goal creation for gmailzero goals
+}, { // ------------------------------------------------------------------------
+"x": "Beedroid 3.3.0 coming soon with like 10 little UVIs! <3",
 // Info button takes you to website/dueby
 //   * https://github.com/beeminder/beedroid-hist/pull/81
 // EXIF image issue on graph load (#48)
@@ -1560,6 +1747,23 @@ var staged = [ {
 //   * https://github.com/beeminder/beedroid-hist/pull/84 -- different crash bug? "fix default entry crash bug"
 }, { // ------------------------------------------------------------------------
 "x": "New version of BeemiOS almost ready with several UVIs! <3",
+//BEESWIFT post-5.6.4
+//Goals are sorted according to the sort-goals-by preference not only in the list displayed on the gallery but also in the lists displayed on configureNotifications and healthKitConfig
+//  * https://github.com/beeminder/BeeSwift/pull/58
+//Bugfix/41 entering app from notification does open screen of that goal (#60)
+//  * https://github.com/beeminder/BeeSwift/pull/60
+//Maybe not user-visible: different gem for iOS push notifications
+//  * https://github.com/beeminder/beeminder/issues/1401
+//  * https://github.com/beeminder/beeminder/pull/1412
+//Crash with layout updates on background thread
+//  * https://github.com/beeminder/BeeSwift/issues/56
+//Twitter login back
+//  * https://github.com/beeminder/BeeSwift/issues/67
+//Sort goals consistently (unmerged? rejected?)
+//  * https://github.com/beeminder/BeeSwift/pull/58
+//Enable cancel in the searchBar -- Can't make keyboard go away after using the search button
+//  * https://github.com/beeminder/BeeSwift/issues/53
+//  * https://github.com/beeminder/BeeSwift/pull/65
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -1568,70 +1772,46 @@ var staged = [ {
 /*********************************************************************************************************************************************************************
 [[PSA: add dates please!]]
 ~~~~~~----------------------------- METASTAGED -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
-maybe milkable but mostly infra:
-we got a 500 error when regenerating the graph. the user wouldn't see the 500 but their graphs would sometimes fail to regenerate when the user expected it to.
-it only happened like once. was only briefly broken.
-https://github.com/beeminder/beeminder/issues/1492
-https://github.com/beeminder/beeminder/pull/1493
+Oinkzone should stay static in road editor
+also fixed region mismatch
+https://github.com/beeminder/road/issues/100
 }, { // ------------------------------------------------------------------------
-Fitbit / Rescuetime autod goal setup regressions (4 UVIs total)
-"x1": "no initial leeway on fitbit calories goal",
-"u": ["https://github.com/beeminder/beeminder/issues/1431",
-"https://github.com/beeminder/beeminder/pull/1524"
-]
-"d": "2020-07-08",
-"c": "all three calories types did not give you the setting for selecting a different default amt of starting buffer."
+Animated watermarks in tutorial stopped working
+https://github.com/beeminder/road/issues/140
 }, { // ------------------------------------------------------------------------
-"x2": "Fitbit has three types of calories goals, and they were poorly differentiated in the setup dropdown. Added annotation: \"Calories burned (more)\" and \"Calories eaten (less)\" so you have a better idea what you're getting.",
-"u": ["https://github.com/beeminder/beeminder/issues/1521",
-"https://github.com/beeminder/beeminder/pull/1524"],
-"d": "2020-07-08",
 }, { // ------------------------------------------------------------------------
-"x3": "Rescuetime do less goals include the 'start with extra leeway' option, but unlike manual do less, were defaulting to 'unchecked'. Make it consistent w/manual do less and default to checked",
+HTML-escaping bug
+https://github.com/beeminder/road/issues/112
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+leaking isolines
+https://github.com/beeminder/road/issues/141#issuecomment-665558661
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+Purple line doesn't start at agg'd day on day 1
+https://github.com/beeminder/road/issues/129#issuecomment-665565225
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+// TODO: wait, why, this doesn't make sense, if it's not auto-summing you'd want the sum, right?
+"x": "For the rare goals that are aggday=sum but not auto-summing, we no longer show the total due in the blurb that tells you your safety buffer",
+"x": "Hide the total in the blurb with your safety buffer if the goal has a custom aggday of 'sum'. (Previously we were only hiding it when the goal is cumulative.)"
 "u": [
-      "https://github.com/beeminder/beeminder/issues/1460",
-      "https://github.com/beeminder/beeminder/pull/1524"],
-"d": "2020-07-08"
-}, { // ------------------------------------------------------------------------
-"x4": "Changed the default (i.e. no extra buffer requested) for do less goals to be 1 day of buffer, like do more goals.",
-"u": ["https://github.com/beeminder/beeminder/issues/1520",
-"https://github.com/beeminder/beeminder/pull/1524"],
-"d": "2020-07-08",
-"c": "technically, i think that the 'days' of buffer kind of still has an off-by-one error for do less goals. technically I changed it to give you 1 daily rate's worth of buffer to your hardcap, which is technically 2 days of buffer, when you have a hard cap of zero more cookies allowed, you are considered 'orange', i.e., you won't derail that day at midnight, but the next day.... i should probably put this in a gissue and not in this uvi comment."
-}, { // ------------------------------------------------------------------------
-another small safesum uvi:
-I think this is technically user visible as in there are <50 goals that are sum but not kyoom and they will now have the total hidden too.
-https://github.com/beeminder/beeminder/issues/1285
-https://github.com/beeminder/beeminder/pull/1494
+      "https://github.com/beeminder/beeminder/issues/1285",
+      "https://github.com/beeminder/beeminder/pull/1494"],
 "d": "2020-07-08",
 }, { // ------------------------------------------------------------------------
+https://www.beeminder.com/faq#qvar
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-fixed another wrong dot color bug in beebrain:
-https://github.com/beeminder/road/issues/126
-not merged yet
+"x": "The \"headsum\" API output field is now identical to the hovertext for graph thumbnails",
+TODO: let's not tweet this till we rename refactor these "sum"-suffixed fields and come up with a better name than "headsum" for this one
+titlesum?
+https://github.com/beeminder/road/commit/ab6c09b9e91e9b167f81f18c06d864821822d2c2
+https://github.com/beeminder/road/issues/136
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-BEESWIFT post-5.6.4
-Goals are sorted according to the sort-goals-by preference not only in the list displayed on the gallery but also in the lists displayed on configureNotifications and healthKitConfig
-  * https://github.com/beeminder/BeeSwift/pull/58
-Bugfix/41 entering app from notification does open screen of that goal (#60)
-  * https://github.com/beeminder/BeeSwift/pull/60
-Maybe not user-visible: different gem for iOS push notifications
-  * https://github.com/beeminder/beeminder/issues/1401
-  * https://github.com/beeminder/beeminder/pull/1412
-Crash with layout updates on background thread
-  * https://github.com/beeminder/BeeSwift/issues/56
-Twitter login back
-  * https://github.com/beeminder/BeeSwift/issues/67
-Sort goals consistently (unmerged? rejected?)
-  * https://github.com/beeminder/BeeSwift/pull/58
-Enable cancel in the searchBar -- Can't make keyboard go away after using the search button
-  * https://github.com/beeminder/BeeSwift/issues/53
-  * https://github.com/beeminder/BeeSwift/pull/65
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------

@@ -668,6 +668,25 @@ var batch = [{
 "x": "Refactored airhorns to, essentially, include a loglevel (i.e. debug vs OMG)",
 "u": ["https://twitter.com/beeminfra/status/1280994947081007107",
       "https://github.com/beeminder/beeminder/issues/1465"]
+}, { // ------------------------------------------------------------------------
+"x": "refactoring in safesum to make helper functions, rename some variables for clarity, that kind of thing.",
+"u": ["https://github.com/beeminder/beeminder/pull/1439",
+"https://github.com/beeminder/beeminder/pull/1494",
+"https://twitter.com/beeminfra/status/1283532598514348032"],
+"t": "2020-07-15",
+"d": "2020-07-08"
+}, { // ------------------------------------------------------------------------
+"x": "Wrote tests for a timezone issue with goal starts and deadlines and initial datapoints. Testing timezones is funtimes!",
+"u": ["https://github.com/beeminder/beeminder/commit/8b0d576ba7f901e15aabddbc8c8e7d8abfc98bd5",
+"https://twitter.com/beeminfra/status/1286070909858545665"],
+"d": "2020-06-10",
+"t": "2020-07-22",
+}, { // ------------------------------------------------------------------------
+"x": "Updates to the specs as a result of the ybhp switchover (default amounts of buffer changed and stuff).",
+"u": ["https://github.com/beeminder/beeminder/commit/213dc3591f3a9c04f764fe1ef2a70bd56558cc8f",
+"https://twitter.com/beeminfra/status/1288622928678891520"],
+"d": "2020-05",
+"t": "2020-07-29"
 }, /* ----------------------------------------------------------- end batch */ ]
 
 var staged = [ { // note: sub-entries not allowed here in staging
@@ -676,16 +695,6 @@ var staged = [ { // note: sub-entries not allowed here in staging
 /*
 METASTAGED: --10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
 https://github.com/beeminder/beeminder/commit/
-}, { // ------------------------------------------------------------------------
-refactoring in safesum to make helper functions, rename some variables for clarity, that kind of thing.
-https://github.com/beeminder/beeminder/pull/1439
-https://github.com/beeminder/beeminder/pull/1494
-}, { // ------------------------------------------------------------------------
-tests for a timezone issue with goal start and deadlines and initial datapoints
-https://github.com/beeminder/beeminder/commit/8b0d576ba7f901e15aabddbc8c8e7d8abfc98bd5
-}, { // ------------------------------------------------------------------------
-spec updates re the ybhp switchover (default amounts of buffer changed and stuff)
-https://github.com/beeminder/beeminder/commit/213dc3591f3a9c04f764fe1ef2a70bd56558cc8f
 }, { // ------------------------------------------------------------------------
 updated a script to optionally include data w/goals when collecting data for analysis
 https://github.com/beeminder/beeminder/commit/dc0e846ecfbfc1b14d9d73dbe5f0871dfc64e842
