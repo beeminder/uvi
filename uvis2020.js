@@ -1714,21 +1714,79 @@ const batch2020jul = [{
       "https://github.com/beeminder/beeminder/pull/1585"],
 "d": "2020-07-30",
 "t": "2020-07-31",
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
 }, /* --------------------------------------------------------- end 2020jul */ ]
 
+const batch2020aug = [{  
+"x": "The pink shading & the grayed-out lines denoting the region your road can't intersect (the akrasia horizon constraint) were sometimes mismatched. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1290432162622091265",
+      "https://github.com/beeminder/road/issues/100"],
+"d": "2020-08-03",
+"t": "2020-08-03",
+"c": "By Uluc",
+}, { // ------------------------------------------------------------------------
+"x": "A related #bugfix in the road editor: when you dragged the yellow brick road, the pink shading would not stay put, defeating the point",
+"u": ["https://twitter.com/beemuvi/status/1290432272160571393",
+      "https://github.com/beeminder/road/issues/100"],
+"d": "2020-08-03",
+"t": "2020-08-03",
+"c": "By Uluc. The gray diagonal lines were fine, just not the pink shading, ie, they didn't always match, even for static graphs; see previous UVI. Also we need to decide what to call that region: pinkzone, oinkzone, nozone, verboten zone?",
+}, { // ------------------------------------------------------------------------
+"x": "We broke the animated watermarks in http://road.beeminder.com/tutorial at some point (probably around UVI#3287) and have now fixed them again. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1290797280539242496",
+      "https://github.com/beeminder/road/issues/140"],
+"d": "2020-08-03",
+"t": "2020-08-04",
+"c": "By Uluc",
+}, { // ------------------------------------------------------------------------
+"x": "HTML-like characters (like less-than signs) in goal units or the y-axis label don't break things now. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1290797463268282370",
+      "https://github.com/beeminder/road/issues/112"],
+"d": "2020-08-03",
+"t": "2020-08-04",
+"c": "By Uluc",
+}, { // ------------------------------------------------------------------------
+"x": "The isolines (yellow guiding lines indicating different amounts of buffer) sometimes leaked onto the bad side of the yellow brick road! #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1291157293267062786",
+      "https://github.com/beeminder/road/issues/141"],
+"d": "2020-08-03",
+"t": "2020-08-05",
+}, { // ------------------------------------------------------------------------
+"f": true,
+"x": "We now shade yellow any region of your graph in which you have an infinite amount of safety buffer (like having enough buffer to take you to the goal date)",
+"u": ["https://twitter.com/beemuvi/status/1291157671513591809",
+      "https://github.com/beeminder/road/issues/145"],
+"d": "2020-08-03",
+"t": "2020-08-05",
+}, { // ------------------------------------------------------------------------
+"x": "The new \"shade if infinitely safe\" feature included multiple fixes like always drawing enough yellow guiding lines (aka isolines). #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1291513001988591616",
+      "https://github.com/beeminder/road/issues/145"],
+"d": "2020-08-03",
+"t": "2020-08-06",      
+}, { // ------------------------------------------------------------------------
+"x": "And another #bugfix / improvement in deciding the density of the isolines so they're hopefully never so dense as to obscure watermarks, etc",
+"u": ["https://twitter.com/beemuvi/status/1291513298370715648",
+      "https://github.com/beeminder/road/issues/145"],
+"d": "2020-08-03",
+"t": "2020-08-06",      
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, /* --------------------------------------------------------- end 2020aug */ ]
 
 
 var staged = [ {
 }, { // ------------------------------------------------------------------------
+"x": "Beebrain speedup to be deployed 2020-08-06",
 }, { // ------------------------------------------------------------------------
-"x": "Several Beebrain/graph fixes from Uluc!",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 "x": "Adam's GmailZero improvements coming!",
 //https://github.com/beeminder/beeminder/issues/989 -- maybe not relevant anymore
@@ -1772,20 +1830,8 @@ var staged = [ {
 /*********************************************************************************************************************************************************************
 [[PSA: add dates please!]]
 ~~~~~~----------------------------- METASTAGED -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
-Oinkzone should stay static in road editor
-also fixed region mismatch
-https://github.com/beeminder/road/issues/100
-}, { // ------------------------------------------------------------------------
-Animated watermarks in tutorial stopped working
-https://github.com/beeminder/road/issues/140
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-HTML-escaping bug
-https://github.com/beeminder/road/issues/112
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-leaking isolines
-https://github.com/beeminder/road/issues/141#issuecomment-665558661
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 Purple line doesn't start at agg'd day on day 1

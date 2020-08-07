@@ -687,6 +687,24 @@ var batch = [{
 "https://twitter.com/beeminfra/status/1288622928678891520"],
 "d": "2020-05",
 "t": "2020-07-29"
+}, { // ------------------------------------------------------------------------
+"x": "Updated a script that collects goal information for science to optionally include anonymized datapoints.",
+"u": ["https://github.com/beeminder/beeminder/commit/dc0e846ecfbfc1b14d9d73dbe5f0871dfc64e842",
+"https://twitter.com/beeminfra/status/1291142261057568769"],
+"d": "2020-05",
+"t": "2020-08-05"
+}, { // ------------------------------------------------------------------------
+"x": "full translogs are finally available to admins again (and not just programmers)",
+"u": ["https://github.com/beeminder/beeminder/pull/1574",
+"https://twitter.com/beeminfra/status/1291142431476314112"],
+"d": "2020-07-30",
+"t": "2020-08-05"
+}, { // ------------------------------------------------------------------------
+"x": "Made a handy sidebar widget for our helpscout inbox that gives useful reference info about the user, pulled from the beeminder api.",
+"u": ["https://github.com/beeminder/beeminder/pull/1594",
+"https://twitter.com/beeminfra/status/1291142605435068417"],
+"t": "2020-08-05",
+"d": "2020-08-05"
 }, /* ----------------------------------------------------------- end batch */ ]
 
 var staged = [ { // note: sub-entries not allowed here in staging
@@ -695,9 +713,6 @@ var staged = [ { // note: sub-entries not allowed here in staging
 /*
 METASTAGED: --10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
 https://github.com/beeminder/beeminder/commit/
-}, { // ------------------------------------------------------------------------
-updated a script to optionally include data w/goals when collecting data for analysis
-https://github.com/beeminder/beeminder/commit/dc0e846ecfbfc1b14d9d73dbe5f0871dfc64e842
 }, { // ------------------------------------------------------------------------
 trlog refunds & include them in the counts for derev. also stop double counting subscriptions
 https://github.com/beeminder/beeminder/pull/1478
