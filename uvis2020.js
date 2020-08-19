@@ -1750,6 +1750,7 @@ const batch2020aug = [{
       "https://github.com/beeminder/road/issues/141"],
 "d": "2020-08-03",
 "t": "2020-08-05",
+"c": "By Uluc",
 }, { // ------------------------------------------------------------------------
 "f": true,
 "x": "We now shade yellow any region of your graph in which you have an infinite amount of safety buffer (like having enough buffer to take you to the goal date)",
@@ -1757,18 +1758,68 @@ const batch2020aug = [{
       "https://github.com/beeminder/road/issues/145"],
 "d": "2020-08-03",
 "t": "2020-08-05",
+"c": "By Uluc and dreev",
 }, { // ------------------------------------------------------------------------
 "x": "The new \"shade if infinitely safe\" feature included multiple fixes like always drawing enough yellow guiding lines (aka isolines). #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1291513001988591616",
       "https://github.com/beeminder/road/issues/145"],
 "d": "2020-08-03",
-"t": "2020-08-06",      
+"t": "2020-08-06",
+"c": "By Uluc",
 }, { // ------------------------------------------------------------------------
 "x": "And another #bugfix / improvement in deciding the density of the isolines so they're hopefully never so dense as to obscure watermarks, etc",
 "u": ["https://twitter.com/beemuvi/status/1291513298370715648",
       "https://github.com/beeminder/road/issues/145"],
 "d": "2020-08-03",
-"t": "2020-08-06",      
+"t": "2020-08-06",
+"c": "By Uluc",
+}, { // ------------------------------------------------------------------------
+"x": "Graph generation is now measurably faster, especially for rare graphs with an obscene number of yellow brick road segments",
+"u": ["https://twitter.com/beemuvi/status/1291884993912815616",
+      "https://github.com/beeminder/road/issues/144",
+      "https://github.com/beeminder/road/commit/2cab17dee2ab038adf9af8b196aa705a0b13ce59",
+      "https://github.com/beeminder/road/commit/d502bdd1cc7a7aea19647a15da8637c1bc60cfbd",
+      "https://github.com/beeminder/road/commit/d3146b75a68f632edfb32dd58f3e9af2b42040cc",
+      "https://github.com/beeminder/road/commit/af455cb26275bf89d68d2cd3dbda678ed7eec915"],
+"d": "2020-08-06",
+"t": "2020-08-07",
+"c": "By Uluc",
+}, { // ------------------------------------------------------------------------
+"x": "We rewrote the FAQ item about so-called \"90% Variance\" to make it comport with the Yellow Brick Half-Plane New World Order",
+"u": ["https://twitter.com/beemuvi/status/1291885632810151936",
+      "https://www.beeminder.com/faq#qvar"],
+"t": "2020-08-07",
+}, { // ------------------------------------------------------------------------
+"f": true,
+"x": "Beeminder's Boss as a Service -- https://bossasaservice.life -- integration is Extra Official and is featured on the front page!",
+"u": ["https://twitter.com/beemuvi/status/1295497339205894144",
+      "https://blog.beeminder.com/baas/",
+      "https://github.com/beeminder/beeminder/pull/1598"],
+"d": "2020-08-09",
+"t": "2020-08-17",
+}, { // ------------------------------------------------------------------------
+"x": "We also made a landing page, with help from @Manasvinik, for our Boss as a Service integration: http://beeminder.com/baas",
+"u": ["https://twitter.com/beemuvi/status/1295497447926452225",
+      "https://blog.beeminder.com/baas/",
+      "https://github.com/beeminder/beeminder/pull/1598"],
+"d": "2020-08-09",
+"t": "2020-08-17",
+"c": "Image by @faireness",
+}, { // ------------------------------------------------------------------------
+"x": "If your pagination parameter 'per' got to the API as a string, we gave a 500 error. Now we're robust to that and magically convert it. Oof. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1295858114642604034",
+      "https://github.com/beeminder/beeminder/issues/1580",
+      "https://github.com/beeminder/beeminder/pull/1581"],
+"d": "2020-07-29",
+"t": "2020-08-18",
+"c": "Blatant violation of the Anti-Robustness Principle but consistency with the rest of the API dictates we do this. In version 2 of the API we can get this sort of thing right! (Also some ambiguity about whether this sort of thing is even the API client's fault?)",
+}, { // ------------------------------------------------------------------------
+"x": "Better error handling for the 'roadall' parameter in the API. We were giving a 500 error instead of an informative error for some nonsensical roads. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1295858898058924032",
+      "https://github.com/beeminder/beeminder/issues/1608",
+      "https://github.com/beeminder/beeminder/pull/1609"],
+"d": "2020-08-18",
+"t": "2020-08-18",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -1781,10 +1832,6 @@ const batch2020aug = [{
 
 
 var staged = [ {
-}, { // ------------------------------------------------------------------------
-"x": "Beebrain speedup to be deployed 2020-08-06",
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -1806,6 +1853,7 @@ var staged = [ {
 }, { // ------------------------------------------------------------------------
 "x": "New version of BeemiOS almost ready with several UVIs! <3",
 //BEESWIFT post-5.6.4
+// [see ubs label in dreev's email]
 //Goals are sorted according to the sort-goals-by preference not only in the list displayed on the gallery but also in the lists displayed on configureNotifications and healthKitConfig
 //  * https://github.com/beeminder/BeeSwift/pull/58
 //Bugfix/41 entering app from notification does open screen of that goal (#60)
@@ -1831,6 +1879,31 @@ var staged = [ {
 [[PSA: add dates please!]]
 ~~~~~~----------------------------- METASTAGED -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
 }, { // ------------------------------------------------------------------------
+https://forum.beeminder.com/t/help-docs-updates-as-uvis/6672/16?u=dreev
+"d": "2020-08-17",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+BEEBRAIN THINGS FROM ULUC WHILE WE WERE HIKING:
+}, { // ------------------------------------------------------------------------
+"x": "Small visual improvements like crisper bright red line on some graphs and subtler shading of the pink zone (aka akrasia horizon constrained zone)",
+"u": [],
+"d": "2020-08-18",
+"c": "By Uluc",
+}, { // ------------------------------------------------------------------------
+https://github.com/beeminder/road/issues/130#issuecomment-663145821
+2. The bright red line no longer extends to the left of the goal start date or to the right of the goal end date. It was confusing when it did!",
+3. But in the visual road editor it does show it extended horizontally, just dashed; and you can add more road segments to extend the road.
+4. When editing the road in the visual road editor, the previous position of the bright red line is shown as a dashed red line instead of orange, which made no sense
+5. Better choices about how dense to make the yellow guiding lines (aka isolines)
+6. Yellow guidelines now shown during visual editing of the road!
+7. Rosy line does not extend before tini
+8. https://github.com/beeminder/road/issues/146 -- intersecting isolines
+"d": "2020-08-14",
+9. Subtler oinkzone keeps the watermarks and other graph elements more legible
+10. When using the visual road editor, the oinkzone gets much brighter when you violate it
+11. Improved the animations in road.beeminder.com/tutorial ? and updated the copy
+12. see commit messages around aug 17
+
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -1845,8 +1918,6 @@ https://github.com/beeminder/road/issues/129#issuecomment-665565225
       "https://github.com/beeminder/beeminder/issues/1285",
       "https://github.com/beeminder/beeminder/pull/1494"],
 "d": "2020-07-08",
-}, { // ------------------------------------------------------------------------
-https://www.beeminder.com/faq#qvar
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 "x": "The \"headsum\" API output field is now identical to the hovertext for graph thumbnails",

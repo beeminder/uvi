@@ -1,6 +1,8 @@
 See index.html for the background about User-Visible Improvements (UVIs).
 
-Currently the interface for adding a new UVI to the changelog is as follows:
+This is hosted on Glitch at [changelog.beeminder.com](https://changelog.beeminder.com ).
+
+The interface for adding a new UVI to the changelog is as follows:
 
 1. Add the JSON for it to pub/uvis2020.js (following a bunch of conventions only dreev knows)
 2. Tweet it at twitter.com/beemuvi
@@ -10,6 +12,7 @@ Currently the interface for adding a new UVI to the changelog is as follows:
 It sounds like that process wants more automation but it's fraught.
 For example, it especially might not be worth trying to duplicate Twitter's interface and automatically tweeting. 
 There are too many things like expanding @-mentions that wouldn't work as well outside of Twitter.
+And I even like manually updating the Beeminder meta graph because I give 
 
 Update: Since Twitter doubled its character limit we decided to self-impose 160 characters as the max length for a UVI.
 
