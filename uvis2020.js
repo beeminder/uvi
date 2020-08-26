@@ -1755,7 +1755,8 @@ const batch2020aug = [{
 "f": true,
 "x": "We now shade yellow any region of your graph in which you have an infinite amount of safety buffer (like having enough buffer to take you to the goal date)",
 "u": ["https://twitter.com/beemuvi/status/1291157671513591809",
-      "https://github.com/beeminder/road/issues/145"],
+      "https://github.com/beeminder/road/issues/145",
+      "https://github.com/beeminder/road/issues/124"],
 "d": "2020-08-03",
 "t": "2020-08-05",
 "c": "By Uluc and dreev",
@@ -1821,6 +1822,156 @@ const batch2020aug = [{
 "d": "2020-08-18",
 "t": "2020-08-18",
 }, { // ------------------------------------------------------------------------
+"x": "The bright red line on the graph no longer extends to the left of the goal start date or to the right of the goal end date. It was confusing when it did!",
+"u": ["https://twitter.com/beemuvi/status/1296233151539208193",
+      "https://github.com/beeminder/road/commit/c81edfd3a9ecf8898d5d0fd8975d3408babbb19c",
+      "https://github.com/beeminder/road/commit/bd34707da6b2f009e7f218ff2e565fc444263661"],
+"t": "2020-08-14",
+"t": "2020-08-19",
+}, { // ------------------------------------------------------------------------
+"x": "Small visual improvements like crisper bright red line on some graphs and subtler shading of the pink zone (aka akrasia horizon constrained zone)",
+"u": ["https://twitter.com/beemuvi/status/1296233376454590467",
+      "https://github.com/beeminder/road/commit/596bdde8c41e8a47fc9f5bc53c8476e7218d30c6",
+      "https://github.com/beeminder/road/commit/679e7366149a588e119de5a61481be4bf01717b7"],
+"d": "2020-08-18",
+"t": "2020-08-19",
+"c": "By Uluc",
+}, { // ------------------------------------------------------------------------
+"x": "Fixed some spurious half-plane shading, as in wrongly shading the whole good side of the road yellow. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1296596575259512832",
+      "https://github.com/beeminder/road/issues/130"],
+"t": "2020-08-20",
+"c": "By Uluc",
+}, { // ------------------------------------------------------------------------
+"x": "Yellow guidelines (aka isolines, especially helpful to make obvious what the good side of the road is) are now shown during visual editing of the road!",
+"u": ["https://twitter.com/beemuvi/status/1296596713776406528",
+      "https://github.com/beeminder/road/commit/591d477fc298586c354f3a3d63fa72e6695695f3"],
+"d": "2020-08-14",
+"t": "2020-08-20",
+"c": "By Uluc",
+}, { // ------------------------------------------------------------------------
+"x": "In the visual road editor, the road is shown as a dashed line past the goal end date and before the goal start date so you can click to extend it",
+"u": ["https://twitter.com/beemuvi/status/1296944468478709760",
+      "https://github.com/beeminder/road/commit/bd34707da6b2f009e7f218ff2e565fc444263661"],
+"d": "2020-08-14",
+"t": "2020-08-21",
+"c": "By Uluc",
+}, { // ------------------------------------------------------------------------
+"x": "When editing with the visual road editor, the previous position of the bright red line is shown as a dashed red line instead of orange, which made no sense",
+"u": ["https://twitter.com/beemuvi/status/1296945345897705473",
+      ],
+"d": "2020-08-14",
+"t": "2020-08-21",
+"c": "By Uluc",
+}, { // ------------------------------------------------------------------------
+"x": "When editing the road with the visual editor, violating the akrasia horizon constraint makes the pink zone get brighter",
+"u": ["https://twitter.com/beemuvi/status/1297308963139022848",
+      "https://github.com/beeminder/road/commit/efba1ca6f410671a5edb552820772c76176a0d29"],
+"t": "2020-08-22",
+"c": "By Uluc",
+}, { // ------------------------------------------------------------------------
+"x": "Also when editing, we made the bright line red line always be red instead of black while editing and turning red when violating the akrasia horizon constraint",
+"u": ["https://twitter.com/beemuvi/status/1297657534635900928",
+      ],
+"t": "2020-08-23",
+"c": "By Uluc",
+}, { // ------------------------------------------------------------------------
+"x": "And then to make sure it was obvious enough we made the whole graph have a dashed red outline and show a message when the road crosses the pink zone",
+"u": ["https://twitter.com/beemuvi/status/1297657655914188800",
+      "https://github.com/beeminder/road/commit/c7ccb499ea50d77da7ec2554732f6cd2cfd3b893"],
+"t": "2020-08-23",
+"c": "By Uluc",
+}, { // ------------------------------------------------------------------------
+"x": "Better choices about how dense to make the yellow guiding lines (aka isolines) and fixed some bugs with dynamic display as you visually edit the road. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1297804267906936834",
+      "https://github.com/beeminder/road/commit/596bdde8c41e8a47fc9f5bc53c8476e7218d30c6"],
+"t": "2020-08-24",
+"c": "By Uluc",
+}, { // ------------------------------------------------------------------------
+"x": "The pink rosy line no longer extends before the start of the yellow brick road. It was messed up when it tried to. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1297804770975993862",
+      "https://github.com/beeminder/road/commit/c8fe8e1859807b2e644f6afdcac10def04d07ad0",
+      "https://github.com/beeminder/road/commit/591d477fc298586c354f3a3d63fa72e6695695f3"],
+"d": "2020-08-14",
+"t": "2020-08-24",
+"c": "By Uluc",
+}, { // ------------------------------------------------------------------------
+"x": "Fixed a rare bug where the isolines for a do-less goal could intersect each other and be all messed up. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1297804893923639297",
+      "https://github.com/beeminder/road/issues/146",
+      "https://github.com/beeminder/road/commit/17a11c334b430e6b617675d44d566e113f2e2f3a"],
+"d": "2020-08-14",
+"t": "2020-08-24",
+"c": "By Uluc",
+}, { // ------------------------------------------------------------------------
+"x": "Improved the animations in http://road.beeminder.com/tutorial and updated the copy",
+"u": ["https://twitter.com/beemuvi/status/1297805093153067010",
+      "https://github.com/beeminder/road/commit/ff1a0c77c199f454686d6db5bbfaef55f9c55b26",
+      "https://github.com/beeminder/road/commit/f981a3b6f3964283134cf33673f7f53f0ea45d02",
+      "https://github.com/beeminder/road/commit/04c0f5e0f11ab41c989281230866efbae6008a62"],
+"t": "2020-08-24",
+"c": "By Uluc and Danny",
+}, { // ------------------------------------------------------------------------
+"x": "When you visited another user's Gmail goal it would try to fetch your own labels (yielded surprising errors sometimes, plus slowness). #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1298377934026059777",
+      "https://github.com/beeminder/beeminder/issues/1561",
+      "https://github.com/beeminder/beeminder/issues/1545",
+      "https://github.com/beeminder/beeminder/pull/1610"],
+"d": "2020-08-20",
+"t": "2020-08-25",
+"c": "By Adam",
+}, { // ------------------------------------------------------------------------
+"x": "We removed all the legacy Gmail settings from goal settings that we had due to the labels migration (see UVI#3235)",
+"u": ["https://twitter.com/beemuvi/status/1298378097352294401",
+      "https://blog.beeminder.com/gmailzerolabels/",
+      "https://github.com/beeminder/beeminder/issues/1549",
+      "https://github.com/beeminder/beeminder/issues/989",
+      "https://github.com/beeminder/beeminder/issues/988"],
+"d": "2020-08-20",
+"t": "2020-08-25",
+"c": "By Adam. Also handling all the stragglers which could probably be milked for another UVI if we wanted",
+}, { // ------------------------------------------------------------------------
+"x": "When showing a message after successfully authenticating to a third-party service, we now always show the actual capitalized name, not our internal code name",
+"u": ["https://twitter.com/beemuvi/status/1298380507005071360",
+      "https://github.com/beeminder/beeminder/issues/1630"],
+"d": "2020-08-20",
+"t": "2020-08-25",
+"c": "By Adam. Part of the GmailZero PR but more general.",
+}, { // ------------------------------------------------------------------------
+"x": "In Gmail goal creation, we dynamically adjust the headline based on chosen goal parameters. \"I pledge to get my ___ down to...\". So slick!",
+"u": ["https://twitter.com/beemuvi/status/1298380621065015297",
+      "https://github.com/beeminder/beeminder/issues/1572"],
+"d": "2020-08-20",
+"t": "2020-08-25",
+"c": "By Adam",
+}, { // ------------------------------------------------------------------------
+"x": "Also the up/down stepper for what you're committing to has its label change dynamically: 'read messages' vs 'messages' vs 'unread messages'",
+"u": ["https://twitter.com/beemuvi/status/1298380817819820032",
+      "https://github.com/beeminder/beeminder/issues/1572"],
+"d": "2020-08-20",
+"t": "2020-08-25",
+"c": "By Adam",
+}, { // ------------------------------------------------------------------------
+"x": "Kind of a bug fix or UI improvement: we disable the Gmail label dropdown in your goal settings before we've fetched your labels",
+"u": ["https://twitter.com/beemuvi/status/1298380922845200384",
+      "https://github.com/beeminder/beeminder/pull/1610"],
+"d": "2020-08-20",
+"t": "2020-08-25",
+"c": "By Adam",
+}, { // ------------------------------------------------------------------------
+"x": "Also we updated the copy on GmailZero landing page, updated the link to point to the help page instead of the old blog post, etc.",
+"u": ["https://twitter.com/beemuvi/status/1298381641547567104",
+      "https://github.com/beeminder/beeminder/issues/1002",
+      "https://github.com/beeminder/beeminder/pull/1610/commits/799121e320bbd085405d2094d3eb7769fcd5b441"],
+"d": "2020-08-20",
+"t": "2020-08-25",
+"c": "By Adam. Eg, \"Be sure what you're committing to! Beeminder will charge you money if you don't stay on track!\" instead of the erroneous \"Break your pledge again, and you'll need to put your money where your mouth is\".",
+}, { // ------------------------------------------------------------------------
+"x": "Copy/typographical tweaks in goal settings: consistent periods/colons and a hovertext improvement (maybe also more GmailZero cleanup a la UVI#3504)",
+"u": ["https://twitter.com/beemuvi/status/1298712112970137601",
+      "https://github.com/beeminder/beeminder/issues/993"],
+"d": "2020-08-19",
+"t": "2020-08-26",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -1835,12 +1986,9 @@ var staged = [ {
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-"x": "Adam's GmailZero improvements coming!",
-//https://github.com/beeminder/beeminder/issues/989 -- maybe not relevant anymore
-//https://github.com/beeminder/beeminder/issues/1545 -- Spurious error banner "Error getting Gmail labels."
-//https://github.com/beeminder/beeminder/issues/1561 -- when you go to another person's gmailzero goals, it tries to fetch your labels
-//https://github.com/beeminder/beeminder/issues/1549
-//https://github.com/beeminder/beeminder/issues/1572 -- Add bell and whistle in goal creation for gmailzero goals
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 "x": "Beedroid 3.3.0 coming soon with like 10 little UVIs! <3",
 // Info button takes you to website/dueby
@@ -1851,25 +1999,10 @@ var staged = [ {
 //   * https://github.com/beeminder/beedroid-hist/pull/85 
 //   * https://github.com/beeminder/beedroid-hist/pull/84 -- different crash bug? "fix default entry crash bug"
 }, { // ------------------------------------------------------------------------
-"x": "New version of BeemiOS almost ready with several UVIs! <3",
+"x": "New version of BeemiOS!",
+// https://forum.beeminder.com/t/nailing-down-the-changelog-for-beemios-version-5-7/7155
 //BEESWIFT post-5.6.4
 // [see ubs label in dreev's email]
-//Goals are sorted according to the sort-goals-by preference not only in the list displayed on the gallery but also in the lists displayed on configureNotifications and healthKitConfig
-//  * https://github.com/beeminder/BeeSwift/pull/58
-//Bugfix/41 entering app from notification does open screen of that goal (#60)
-//  * https://github.com/beeminder/BeeSwift/pull/60
-//Maybe not user-visible: different gem for iOS push notifications
-//  * https://github.com/beeminder/beeminder/issues/1401
-//  * https://github.com/beeminder/beeminder/pull/1412
-//Crash with layout updates on background thread
-//  * https://github.com/beeminder/BeeSwift/issues/56
-//Twitter login back
-//  * https://github.com/beeminder/BeeSwift/issues/67
-//Sort goals consistently (unmerged? rejected?)
-//  * https://github.com/beeminder/BeeSwift/pull/58
-//Enable cancel in the searchBar -- Can't make keyboard go away after using the search button
-//  * https://github.com/beeminder/BeeSwift/issues/53
-//  * https://github.com/beeminder/BeeSwift/pull/65
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -1877,33 +2010,45 @@ var staged = [ {
 
 /*********************************************************************************************************************************************************************
 [[PSA: add dates please!]]
-~~~~~~----------------------------- METASTAGED -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
+~~~~~~----------------------------- METASTAGED -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160~~
+BEEMIOS CHANGELOG ON THE APP STORE
+1. There's now a cancel button in search bar to make it easier to go back to showing all goals
+2. Images on the gallery screen no longer flicker
+3. You can now see more than one goal in the Today widget
+4. Additional images and tweaks to make dark mode look a little better
+5. Updates to the process of linking a goal to Apple Health: better sorting of goals to indicate which ones can be linked, instructions on the screen, and the checkmark no longer disappears
+6. Added some padding around the bee in the app icon
+7. Bugfix: the app badge now goes away if you log out of Beeminder
+}, { // ------------------------------------------------------------------------
+"f": true,
+"x": "Version 5.7 of the iOS app!",
+}, { // ------------------------------------------------------------------------
+"x": "There's now a cancel button in the search bar to make it easier to go back to showing all goals",
+"d": "2020-08-20",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+twitter: now with 280 characters. (so if you put a hashtag at the end of your tweet, we see it now.)
+https://github.com/beeminder/beeminder/issues/656
+https://github.com/beeminder/beeminder/pull/1619
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+https://forum.beeminder.com/t/xss-kind-of/7176?u=dreev
+"d": "2020-08-26",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+AWAITING BEEBODY DATABASE CLEANUP:
+giving a proper error if you somehow create road rows that start before the goal start date
+https://github.com/beeminder/beeminder/issues/1623
+https://github.com/beeminder/road/commit/e67e3e1df52652d00ec5d2abe645e803b1bc4fb4
 }, { // ------------------------------------------------------------------------
 https://forum.beeminder.com/t/help-docs-updates-as-uvis/6672/16?u=dreev
 "d": "2020-08-17",
+Added an extra bit about the starting pledges to https://help.beeminder.com/article/21-can-i-change-the-pledge-on-my-goal – h/t to the user lifeofchrome for letting me know it wasn’t clear!
+2020-08-19
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-BEEBRAIN THINGS FROM ULUC WHILE WE WERE HIKING:
 }, { // ------------------------------------------------------------------------
-"x": "Small visual improvements like crisper bright red line on some graphs and subtler shading of the pink zone (aka akrasia horizon constrained zone)",
-"u": [],
-"d": "2020-08-18",
-"c": "By Uluc",
 }, { // ------------------------------------------------------------------------
-https://github.com/beeminder/road/issues/130#issuecomment-663145821
-2. The bright red line no longer extends to the left of the goal start date or to the right of the goal end date. It was confusing when it did!",
-3. But in the visual road editor it does show it extended horizontally, just dashed; and you can add more road segments to extend the road.
-4. When editing the road in the visual road editor, the previous position of the bright red line is shown as a dashed red line instead of orange, which made no sense
-5. Better choices about how dense to make the yellow guiding lines (aka isolines)
-6. Yellow guidelines now shown during visual editing of the road!
-7. Rosy line does not extend before tini
-8. https://github.com/beeminder/road/issues/146 -- intersecting isolines
-"d": "2020-08-14",
-9. Subtler oinkzone keeps the watermarks and other graph elements more legible
-10. When using the visual road editor, the oinkzone gets much brighter when you violate it
-11. Improved the animations in road.beeminder.com/tutorial ? and updated the copy
-12. see commit messages around aug 17
-
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
