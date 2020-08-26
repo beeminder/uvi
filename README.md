@@ -18,6 +18,31 @@ Update: Since Twitter doubled its character limit we decided to self-impose 160 
 
 See tweets.glitch.me for how to import your Twitter archive into a progress log like this.
 
+## Data structure for UVIs
+
+```
+f: featured [bool: default false]
+s: sub-UVI [bool: default false]
+n: new number [bool: default true]
+x: text of UVI
+u: list of links (urls)
+d: date deployed
+t: date tweeted / logged / announced
+c: comment / note to selves
+```
+
+Tentative refactor:
+
+```
+f: featured [bool: default false]
+s: sub-UVI / indented [bool: default false]
+c: continuation [bool: default false]
+x: text of UVI / log entry [string]
+l: list of links (urls) [list of strings]
+d: date deployed [string in YYYY-MM-DD format]
+a: date tweeted / logged / announced / entered [same]
+n: comment / note to selves [string]
+```
 
 ## TODO LIST
 
