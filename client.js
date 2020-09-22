@@ -118,11 +118,25 @@ function genhov(d, t, c) { // if just d's given let it be ambiguous
   return s
 }
 
-// Extract the hostname from a URL
-function domain(u) {
-  // var x = new URL(u); x.hostname // might be lot of overhead vs just a regex
-  var m = u.match(/\:\/\/(?:www\d?\.)?([^\/]+)/)
-  return m ? m[1] : ''
+// Extract the hostname from a URL (not used, but does work)
+//function domain(u) {
+//  // var x = new URL(u); x.hostname // might be lot of overhead vs just a regex
+//  var m = u.match(/\:\/\/(?:www\d?\.)?([^\/]+)/)
+//  return m ? m[1] : ''
+//}
+
+// Pick the font-awesome icon given the URL
+function icon(u) {
+  return /beeminder\.com\/changelog/.test(u) ? 'fa-link'        :
+         /forum\.beeminder\.com/    .test(u) ? 'fa-comments'    :
+         /help\.beeminder.com/      .test(u) ? 'fa-info-circle' :
+         /blog\.beeminder.com/      .test(u) ? 'fa-book'        :
+         /twitter\.com/             .test(u) ? 'fa-twitter'     :
+         /github\.com/              .test(u) ? 'fa-github'      :
+         /trello\.com/              .test(u) ? 'fa-trello'      :
+         /dropbox\.com/             .test(u) ? 'fa-dropbox'     :
+         /beeminder\.com/           .test(u) ? 'fa-forumbee'    :
+                                               'fa-link'
 }
 
 // Takes UVI object and generates the html version, with anchor link
@@ -145,21 +159,10 @@ function render(uvi) {
   var hovt = 'title="' + (subl ? '(#'+num+') ' : '') 
                        + genhov(date, tate, note) + '"'
 
-  var css = { // map website to css classes including font-awesome icon
-    'beeminder.com'       : 'fa fa-link        icon',
-    'forum.beeminder.com' : 'fa fa-comments    icon',
-    'help.beeminder.com'  : 'fa fa-info-circle icon',
-    'blog.beeminder.com'  : 'fa fa-book        icon',
-    'twitter.com'         : 'fa fa-twitter     icon',
-    'github.com'          : 'fa fa-github      icon',
-    'trello.com'          : 'fa fa-trello      icon',
-    'dropbox.com'         : 'fa fa-dropbox     icon',
-  }
-
   return '<a name="'+num+'"></a>'                        // anchor link
     + text + ' '                                         // full text, linkified
     + urls.map(function(u) {                             // icons as links
-        return '<a href="'+u+'" '+hovt+'><i class="'+css[domain(u)]+'"></i></a>'
+        return '<a href="'+u+'" '+hovt+'><i class="fa '+icon(u)+' icon"></i></a>'
       }).join(' ') + ' '
     + '<span class="note'+(NOTES ? '' : ' hidden')+'">'
     + linkify(note)+'</span>'                            // notes to selves
