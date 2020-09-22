@@ -1973,16 +1973,294 @@ const batch2020aug = [{
 "d": "2020-08-19",
 "t": "2020-08-26",
 }, { // ------------------------------------------------------------------------
+"x": "Help docs updates! Extra FAQ about PPRs; \"How do I delete a goal?\" page mentions that archiving takes 7 days; clarification on starting pledges",
+"u": ["https://twitter.com/beemuvi/status/1298754642084376577",
+      "https://help.beeminder.com/article/157-pessimistic-presumptive-reports",
+      "https://help.beeminder.com/article/47-how-do-i-delete-a-goal",
+      "https://help.beeminder.com/article/21-can-i-change-the-pledge-on-my-goal",
+      "https://forum.beeminder.com/t/help-docs-updates-as-uvis/6672/16?u=dreev"],
+"d": "2020-08-18",
+"t": "2020-08-26",
+"c": "By Nicky",
 }, { // ------------------------------------------------------------------------
+"f": true,
+"x": "Version 5.7 of the iOS app!",
+"u": ["https://twitter.com/beemuvi/status/1299125464942800896",
+      "https://forum.beeminder.com/t/nailing-down-the-changelog-for-beemios-version-5-7/7155"],
+"d": "2020-08-20",
+"t": "2020-08-27",
+"c": "By apb and krugerk",
 }, { // ------------------------------------------------------------------------
+"n": false,
+"s": true,
+"x": "There's now a cancel button in the search bar to make it easier to go back to showing all goals",
+"u": ["https://twitter.com/beemuvi/status/1299125464942800896",
+      "https://github.com/beeminder/BeeSwift/issues/53",
+      "https://github.com/beeminder/BeeSwift/pull/65"],
+"d": "2020-08-20",
+"t": "2020-08-27",
 }, { // ------------------------------------------------------------------------
+"s": true,
+"x": "Graph images on the gallery screen no longer flicker when the screen is first loaded or when you pull to refresh; more responsive placeholder images. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1299125597986123778",
+      "https://github.com/beeminder/BeeSwift/issues/43",
+      "https://github.com/beeminder/BeeSwift/pull/103",
+      "https://github.com/beeminder/BeeSwift/pull/82"],
+"d": "2020-08-20",
+"t": "2020-08-27",
+"c": "2 UVIs in 1! (This is 2 and 19 in the list on the forum.) Full version of 2nd one: The placeholder image that's displayed on the goal screen until the graph loads was itself taking awhile to load; now it's shown immediately.",
 }, { // ------------------------------------------------------------------------
+"s": true,
+"x": "You can now see more up to 3 goals in the Today widget (click the expandy icon to see more than one)",
+"u": ["https://twitter.com/beemuvi/status/1299463286384025600",
+      "https://github.com/beeminder/BeeSwift/issues/92",
+      "https://github.com/beeminder/BeeSwift/pull/93"],
+"d": "2020-08-20",
+"t": "2020-08-28",
 }, { // ------------------------------------------------------------------------
+"s": true,
+"x": "Additional images and tweaks to make dark mode look better",
+"u": ["https://twitter.com/beemuvi/status/1299463412557082624",
+      "https://github.com/beeminder/BeeSwift/issues/94",
+      "https://github.com/beeminder/BeeSwift/pull/95"],
+"d": "2020-08-20",
+"t": "2020-08-28",
 }, { // ------------------------------------------------------------------------
+"s": true,
+"x": "Better sorting of goals to show which can be linked to Apple Health (sections: “Manual”, “Connected to Apple Health”, “Other Autodata Goals”)",
+"u": ["https://twitter.com/beemuvi/status/1299463563229065216"],
+"d": "2020-08-20",
+"t": "2020-08-28",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "Also w/ Apple Health: instructions blurb, pull-to-refresh, fixed scrolling glitch on goal screen for Apple Health goals, #bugfix w/ disappearing checkmark",
+"u": ["https://twitter.com/beemuvi/status/1299463712688857088",
+      "https://github.com/beeminder/BeeSwift/issues/85",
+      "https://github.com/beeminder/BeeSwift/pull/122",
+      "https://github.com/beeminder/BeeSwift/pull/99",
+      "https://github.com/beeminder/BeeSwift/issues/116",
+      "https://github.com/beeminder/BeeSwift/pull/121"],
+"d": "2020-08-20",
+"t": "2020-08-28",
+"c": "4 UVIs in 1! This is 6, 7, 20, and 18 in the list on the forum. The scrolling glitch maybe only affected small screens.",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "Visual tweaks: Added padding around the Infinibee in the app icon, thumbnail placeholder image for Today Widget",
+"u": ["https://twitter.com/beemuvi/status/1299463841823125506",
+      "https://github.com/beeminder/BeeSwift/issues/25",
+      "https://github.com/beeminder/BeeSwift/pull/139"],
+"d": "2020-08-20",
+"t": "2020-08-28",
+"c": "2 UVIs in 1! This is 8 and 12 in the list on the forum.",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "The app badge now goes away if you log out of Beeminder + Sorting by recent data in the gallery now actually does so. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1299463950791094273",
+      "https://github.com/beeminder/BeeSwift/issues/100",
+      "https://github.com/beeminder/BeeSwift/pull/101"],
+"d": "2020-08-20",
+"t": "2020-08-28",
+"c": "2 UVIs in 1! This is 9 and 11 in the list on the forum.",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "We no longer remind you to unlock your phone for health data if the app is in foreground",
+"u": ["https://twitter.com/beemuvi/status/1299464153115930625",
+      "https://github.com/beeminder/BeeSwift/issues/44",
+      "https://github.com/beeminder/BeeSwift/pull/78"],
+"d": "2020-08-20",
+"t": "2020-08-28",
+"c": "There might still be problems with this though, according to Faire.",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "Prettier log-in / sign-up screen with better errors",
+"u": ["https://twitter.com/beemuvi/status/1299464409866104832",
+      "https://github.com/beeminder/BeeSwift/pull/110"],
+"d": "2020-08-20",
+"t": "2020-08-28",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "You can now view/edit a goal in a webview and then hit “done” to go back to the normal app but never actually leave the app",
+"u": ["https://twitter.com/beemuvi/status/1299464524706140163",
+      "https://github.com/beeminder/BeeSwift/pull/128"],
+"d": "2020-08-20",
+"t": "2020-08-28",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"f": true,
+"x": "Same for creating a new goal! This piggybacks on the website but very seamlessly so users’ perspective is you can create goals in the app now!",
+"u": ["https://twitter.com/beemuvi/status/1299464643992117248",
+      "https://github.com/beeminder/BeeSwift/pull/119"],
+"d": "2020-08-20",
+"t": "2020-08-28",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "Less crashing! At least we fixed one particular kind of crash. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1299464767975825408",
+      "https://github.com/beeminder/BeeSwift/issues/56"],
+"d": "2020-08-20",
+"t": "2020-08-28",
+"c": "Involved layout updates on background thread",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "Negative UVI: no more 3rd-party login (long Apple-y story)",
+"u": ["https://twitter.com/beemuvi/status/1299464883801485312",
+      "https://github.com/beeminder/BeeSwift/issues/",
+      "https://github.com/beeminder/BeeSwift/pull/"],
+"d": "2020-08-20",
+"t": "2020-08-28",
+"c": "The long story is that Apple doesn't let you support any 3rd-party logins without also supporting Apple's. Also no one cared about the 3rd-party logins we had, like Twitter. Also we crammed 19 UVIs into 13 above so we don't feel too guilty logging a negative UVI here.",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "Improvements to the open-source code repository itself, like elaborating on contributor guidelines",
+"u": ["https://twitter.com/beemuvi/status/1299465019436875776",
+      "https://github.com/beeminder/BeeSwift/pull/138"],
+"d": "2020-08-20",
+"t": "2020-08-28",
+"c": "See previous note-to-selves about why we don't feel too guilty counting this questionable UVI!",
+}, { // ------------------------------------------------------------------------
+"x": "Critical #bugfix in our Twitter integration: we finally caught up with the new 280-character limit and hashtags in the 2nd half of tweets are picked up now",
+"u": ["https://twitter.com/beemuvi/status/1300578764787576833",
+      "https://forum.beeminder.com/t/twitter-integration-missed-a-tweet/7156?u=dreev",
+      "https://github.com/beeminder/beeminder/issues/656",
+      "https://github.com/beeminder/beeminder/pull/1619"],
+"d": "2020-08-26",
+"t": "2020-08-31",
+"c": "HT narthur. Thanks to Bee for redoing the whole gem or whatever!",
+}, { // ------------------------------------------------------------------------
+"x": "Previous UVI broke reminders (for ~24 hours) for Twitter goals! meta #bugfix sheepish-emoji & doubly-sheepish-emoji",
+"u": ["https://twitter.com/beemuvi/status/1300578907846893568",
+      "https://github.com/beeminder/beeminder/issues/",
+      "https://github.com/beeminder/beeminder/pull/1644"],
+"d": "2020-08-27",
+"t": "2020-08-31",
 }, /* --------------------------------------------------------- end 2020aug */ ]
+
+const batch2020sep = [{  
+"x": "We now strip html out of user-entered stuff when showing error messages (and fixed a bug that that #bugfix caused with showing our own html!)",
+"u": ["https://twitter.com/beemuvi/status/1300921854874378240",
+      "https://forum.beeminder.com/t/xss-kind-of/7176?u=dreev",
+      "https://github.com/beeminder/beeminder/issues/1646",
+      "https://github.com/beeminder/beeminder/pull/1648"],
+"d": "2020-08-26",
+"t": "2020-09-01",
+"c": "By Adam and Bee",
+}, { // ------------------------------------------------------------------------
+"x": "We now spell \"autodata\" consistently (no space or hyphen) and fixed a sorta-typo while we were at it (\"swap data source\" &rarr; \"swap data sources\")",
+"u": ["https://twitter.com/beemuvi/status/1301292750780866560",
+      "https://github.com/beeminder/beeminder/issues/1642",
+      "https://github.com/beeminder/beeminder/pull/1641"],
+"d": "2020-09-02",
+"t": "2020-09-02",
+"c": "In the iOS app too but that won't appear till the next version hits the app store. We plan to add the beeswift gissue here.",
+}, { // ------------------------------------------------------------------------
+"x": "We chopped out the parts of the front page video that are no longer true (mainly due to commitwall, UVI#2904)",
+"u": ["https://twitter.com/beemuvi/status/1301664704801075201",
+      "https://github.com/beeminder/beeminder/issues/1591"],
+"d": "2020-09-03",
+"t": "2020-09-03",
+}, { // ------------------------------------------------------------------------
+"x": "Several tweaks and cleanup of the visual road editor UI: added space, tightened copy, changed title, moved credits to the README, etc",
+"u": ["https://twitter.com/beemuvi/status/1302007166774247428",
+      "https://github.com/beeminder/road/issues/153"],
+"t": "2020-09-04",
+}, { // ------------------------------------------------------------------------
+"x": "7 more visual road editor UI tweaks: better errorcopy, instructions, descriptions of UI elements, spacing, button text, etc",
+"u": ["https://twitter.com/beemuvi/status/1303076455836913664",
+      "https://github.com/beeminder/road/issues/156"],
+"d": "2020-09-07",
+"t": "2020-09-07",
+}, { // ------------------------------------------------------------------------
+"x": "Since the previous UVI was 7-in-1 (!), here's sorta-but-not-really negative UVI: yanked the checkboxes to turn off showing all data and the context graph",
+"u": ["https://twitter.com/beemuvi/status/1303076763610673153",
+      "https://github.com/beeminder/road/issues/156"],
+"d": "2020-09-07",
+"t": "2020-09-07",
+}, { // ------------------------------------------------------------------------
+"x": "A bunch of minor webcopy changes like changing \"Paypal\" to \"PayPal\", fixing a tiny typo on the Complice landing page, and general prose-tightening",
+"u": ["https://twitter.com/beemuvi/status/1303843050607620097",
+      "https://github.com/beeminder/beeminder/issues/1592"],
+"d": "2020-09-09",
+"t": "2020-09-09",
+}, { // ------------------------------------------------------------------------
+"x": "Slightly bigger copy change: rephrased all instances of things like \"...then Beeminder will be free for you forever\" to keeping it goal-specific",
+"u": ["https://twitter.com/beemuvi/status/1303843180748521472",
+      "https://github.com/beeminder/beeminder/issues/1592"],
+"d": "2020-09-09",
+"t": "2020-09-09",
+}, { // ------------------------------------------------------------------------
+"x": "And still bigger copy changes: fixed cases where we still wrongly said you didn't have to add a credit card till the first time you derailed",
+"u": ["https://twitter.com/beemuvi/status/1303843270183665664",
+      "https://github.com/beeminder/beeminder/issues/1510",
+      "https://github.com/beeminder/beeminder/issues/1592"],
+"d": "2020-09-09",
+"t": "2020-09-09",
+}, { // ------------------------------------------------------------------------
+"x": "And then more minor copy changes like adding hovertext to more links and intentional vagueness about if you can start at $0",
+"u": ["https://twitter.com/beemuvi/status/1303843377713012738",
+      "https://github.com/beeminder/beeminder/issues/1592"],
+"d": "2020-09-09",
+"t": "2020-09-09",
+"c": "Also we scrapped the ancient Bitcoin link, emphasized the dozens of integrations on the overview page, etc etc etc. Could've milked all this for like a dozen UVIs!",
+}, { // ------------------------------------------------------------------------
+"x": "Tiny typo (huge thanks to @Mcarthur_Joe for spotting it!): we had a rogue space in the link text at the bottom of the Data tab. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1305958848860020737",
+      "https://github.com/beeminder/beeminder/issues/1668"],
+"d": "2020-09-11",
+"t": "2020-09-15",
+}, { // ------------------------------------------------------------------------
+"x": "The blog is responsive / mobile-friendly now! HT @skalinchuk",
+"u": ["https://twitter.com/beemuvi/status/1306373787907026944",
+      "https://github.com/beeminder/beeminder/issues/1164"],
+"d": "2020-09-13",
+"t": "2020-09-16",
+}, { // ------------------------------------------------------------------------
+"x": "Red error banner now says \"Could not update avatar\" if you click \"update avatar\" button w/o first uploading an image (used to give a 500 error). #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1306486231115558912",
+      "https://github.com/beeminder/beeminder/issues/1691"],
+"t": "2020-09-16",
+}, { // ------------------------------------------------------------------------
+"x": "Some red error messages were getting swallowed up by the server, resulting in some forms having silent failures when there was an error! Serious #bugfix",
+"d": "2020-09-15",
+"t": "2020-09-18",
+"u": ["https://twitter.com/beemuvi/status/1307104003415846914",
+      "https://github.com/beeminder/beeminder/issues/284"],
+"c": "Gory details: We were deleting the 'error' key from the hash that Rails uses to pass these error messages back & forth between controller and browser. We noticed some specific error messages were missing at various points since gissue #284 was added, and found the workaround to use a different key ('alert') for them, instead of the Rails standard 'error'. However, there were many places that we were still using 'error' key, and so would have been vulnerable to silent failures. Here is a non-exhaustive list of places we might've been bit by this: restarting goals, changing reminders, adding breaks, some goal settings, payments page, and others. It was compounded by the fact that we also use JS to submit some forms and show error messages, which made it less obvious all along that the problem was _all error messages_ were broken (all error messages generated from Rails).",
+}, { // ------------------------------------------------------------------------
+"x": "We now always prepend \"Legacy\" to the names of the legacy premium plans. #mini",
+"u": ["https://twitter.com/beemuvi/status/1308186894992252928",
+      "https://github.com/beeminder/beeminder/issues/1615"],
+"t": "2020-09-21",
+}, { // ------------------------------------------------------------------------
+"x": "Purged all mention of \"road width\". Specifically: in the FAQ, in the premium FAQ (buried in hovertext), and in the \"Beeminder Standard Contract\".",
+"u": ["https://twitter.com/beemuvi/status/1308187013795868672",
+      "https://www.beeminder.com/faq",
+      "https://www.beeminder.com/premium",
+      "https://www.beeminder.com/contract",
+      "https://github.com/beeminder/beeminder/issues/1708"],
+"d": "2020-09-21",
+"t": "2020-09-21",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, /* --------------------------------------------------------- end 2020sep */ ]
+
 
 
 var staged = [ {
+}, { // ------------------------------------------------------------------------
+// ratchet redo redresses “ratcheting breaks breaks” bug (RRRRBBB)
+// https://github.com/beeminder/beeminder/pull/1640
+// https://github.com/beeminder/beeminder/commit/3dbde09c266a2c2e729bd57c2c77fdf625061abb -- disallow if nonmonotone
+// From a commit message: UVI!
+//* update the text box for ween/rash ratchet after ratcheting
+//* check the bounds on ween/rash ratcheting and don't allow to submit
+//  an amount larger than current buffer
+//
+//(we were only checking the bounds for MOAR/PHAT ratchets)
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -1998,53 +2276,37 @@ var staged = [ {
 // Had to do with widgets when you were logged out or hadn't yet fetched safesums on the transition.
 //   * https://github.com/beeminder/beedroid-hist/pull/85 
 //   * https://github.com/beeminder/beedroid-hist/pull/84 -- different crash bug? "fix default entry crash bug"
+// Dueby API thing: https://github.com/beeminder/beeminder/issues/1541 -- rounded delta / formatted dueby
+// Dueby API thing: https://github.com/beeminder/beeminder/issues/1628 -- checkmarks in dueby?
+// a crash: https://github.com/beeminder/beedroid/issues/149
 }, { // ------------------------------------------------------------------------
-"x": "New version of BeemiOS!",
-// https://forum.beeminder.com/t/nailing-down-the-changelog-for-beemios-version-5-7/7155
-//BEESWIFT post-5.6.4
-// [see ubs label in dreev's email]
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, /* ---------------------------------------------------------- end staged */ ]
 
 /*********************************************************************************************************************************************************************
-[[PSA: add dates please!]]
+[[PSA: add dates please!]]  
 ~~~~~~----------------------------- METASTAGED -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160~~
-BEEMIOS CHANGELOG ON THE APP STORE
-1. There's now a cancel button in search bar to make it easier to go back to showing all goals
-2. Images on the gallery screen no longer flicker
-3. You can now see more than one goal in the Today widget
-4. Additional images and tweaks to make dark mode look a little better
-5. Updates to the process of linking a goal to Apple Health: better sorting of goals to indicate which ones can be linked, instructions on the screen, and the checkmark no longer disappears
-6. Added some padding around the bee in the app icon
-7. Bugfix: the app badge now goes away if you log out of Beeminder
-}, { // ------------------------------------------------------------------------
-"f": true,
-"x": "Version 5.7 of the iOS app!",
-}, { // ------------------------------------------------------------------------
-"x": "There's now a cancel button in the search bar to make it easier to go back to showing all goals",
-"d": "2020-08-20",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-twitter: now with 280 characters. (so if you put a hashtag at the end of your tweet, we see it now.)
-https://github.com/beeminder/beeminder/issues/656
-https://github.com/beeminder/beeminder/pull/1619
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-https://forum.beeminder.com/t/xss-kind-of/7176?u=dreev
-"d": "2020-08-26",
+BEEMIOS POST 5.7
+1. better autodata instructions and consistent spelling of "autodata"
+   https://github.com/beeminder/BeeSwift/issues/170
+   https://github.com/beeminder/BeeSwift/pull/171
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 AWAITING BEEBODY DATABASE CLEANUP:
 giving a proper error if you somehow create road rows that start before the goal start date
 https://github.com/beeminder/beeminder/issues/1623
 https://github.com/beeminder/road/commit/e67e3e1df52652d00ec5d2abe645e803b1bc4fb4
-}, { // ------------------------------------------------------------------------
-https://forum.beeminder.com/t/help-docs-updates-as-uvis/6672/16?u=dreev
-"d": "2020-08-17",
-Added an extra bit about the starting pledges to https://help.beeminder.com/article/21-can-i-change-the-pledge-on-my-goal – h/t to the user lifeofchrome for letting me know it wasn’t clear!
-2020-08-19
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------

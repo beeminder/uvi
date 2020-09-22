@@ -705,6 +705,29 @@ var batch = [{
 "https://twitter.com/beeminfra/status/1291142605435068417"],
 "t": "2020-08-05",
 "d": "2020-08-05"
+}, { // ------------------------------------------------------------------------
+"x": "Get refunds into our transaction log & include them in the sums for derev meta graph. Also stop double counting subscriptions in the same.",
+"d": "2020-06-26",
+"t": "2020-08-26",
+"u": ["https://github.com/beeminder/beeminder/pull/1478",
+"https://twitter.com/beeminfra/status/1298756974952108032",
+"https://github.com/beeminder/beeminder/commit/6f2ade9662be4410e1f1e35660027860f464a4c0"]
+}, { // ------------------------------------------------------------------------
+"x": "Restructured how we do iOS token cleanup from push notifications, and removed a cronned cleanup job.",
+"u": ["https://twitter.com/beeminfra/status/1301293060127559681",
+      "https://github.com/beeminder/beeminder/pull/1488"]
+}, { // ------------------------------------------------------------------------
+"x": "Our garmin integration was still using an older api URL. We updated it use the new one, before the old one got turned off.",
+"u": ["https://github.com/beeminder/beeminder/issues/1586", 
+"https://twitter.com/beeminfra/status/1303830898874310656"
+],
+"c": "often these things wind up going on the UVI changelog becuase we wait until it actually breaks to make the change. eep."
+}, { // ------------------------------------------------------------------------
+"x": "Improved the premium summary info included in our Helpscout widget for workerbees.",
+"u": ["https://github.com/beeminder/beeminder/pull/1616",
+"https://twitter.com/beeminfra/status/1306378755779080192"],
+"t": "2020-09-16",
+"d": "2020-08-19"
 }, /* ----------------------------------------------------------- end batch */ ]
 
 var staged = [ { // note: sub-entries not allowed here in staging
@@ -714,20 +737,28 @@ var staged = [ { // note: sub-entries not allowed here in staging
 METASTAGED: --10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
 https://github.com/beeminder/beeminder/commit/
 }, { // ------------------------------------------------------------------------
-trlog refunds & include them in the counts for derev. also stop double counting subscriptions
-https://github.com/beeminder/beeminder/pull/1478
-https://github.com/beeminder/beeminder/commit/6f2ade9662be4410e1f1e35660027860f464a4c0
+strava gem was pulled from rubygem, so point gemfile at the git repo 
+https://github.com/beeminder/beeminder/pull/1653
 }, { // ------------------------------------------------------------------------
-"x": "restructured how we do ios token cleanup from push notifications, and removed a cronned "cleanup job".",
-"u": [
-      "https://github.com/beeminder/beeminder/pull/1488"]
+fix a thing because of factorybot upgrade that changed build vs create behavior in a way that broke at least one of our tests
+https://github.com/beeminder/beeminder/pull/1677
 }, { // ------------------------------------------------------------------------
-updated garmin's api url
-https://github.com/beeminder/beeminder/issues/1586
+improve how we wait for graphs to generate in tests (when we have to wait for them)
+https://github.com/beeminder/beeminder/pull/1678
 }, { // ------------------------------------------------------------------------
+did a little straight-up refactoring of params that are passed in to retroratchet, small infra baby step towards fixing domore ratchets
+https://github.com/beeminder/beeminder/pull/1635
 }, { // ------------------------------------------------------------------------
+a couple fixes in our fb tracking code initialization, including not initializing in the test env.
+https://github.com/beeminder/beeminder/pull/1633
 }, { // ------------------------------------------------------------------------
+don't do the dogfood winner selection for $0 dogfoodie derails (doing so was kind of wolf crying)
+https://github.com/beeminder/beeminder/pull/1622
 }, { // ------------------------------------------------------------------------
+updated our github authentication (use header instead of access token param) because they're going to deprecate the old way this year
+https://github.com/beeminder/beeminder/pull/1617
+}, { // ------------------------------------------------------------------------
+
 ## NEED HELP FROM ADAM:
 * massive improvements to our ansible deployment scripts so that we can now spin up a new web server from scratch in about an hour 
 * including adding some sexy test suite thingie into the mix with ansible [help?]
