@@ -2,12 +2,15 @@ See index.html for the background about User-Visible Improvements (UVIs).
 
 This is hosted on Glitch at [changelog.beeminder.com](https://changelog.beeminder.com ).
 
-The interface for adding a new UVI to the changelog is as follows:
+The interface / protocol for adding a new UVI to the changelog is as follows:
 
 1. Add the JSON for it to pub/uvis2020.js (following a bunch of conventions only dreev knows)
-2. Tweet it at twitter.com/beemuvi
-3. Paste in the URL of the tweet to the JSON
-4. Manually update the bmndr.com/meta/uvi graph
+2. Include a link to the relevant gissue
+3. Tweet it at twitter.com/beemuvi
+4. Paste in the URL of the tweet to the JSON
+5. Manually update the bmndr.com/meta/uvi graph
+6. Double check that the total number of UVIs at beeminder.com/changelog matches the total in the stats tab at beeminder.com/meta/uvi
+7. Paste the canonical UVI link (e.g., beeminder.com/changelog#123) into the relevant gissue
 
 It sounds like that process wants more automation but it's fraught.
 For example, it especially might not be worth trying to duplicate Twitter's interface and automatically tweeting. 
