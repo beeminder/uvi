@@ -728,6 +728,37 @@ var batch = [{
 "https://twitter.com/beeminfra/status/1306378755779080192"],
 "t": "2020-09-16",
 "d": "2020-08-19"
+}, { // ------------------------------------------------------------------------
+"x": "An upgrade to FactoryBot from a while back broke at least one of our tests by a change in build vs create behavior. Use build instead and all is good now.",
+"u": ["https://twitter.com/beeminfra/status/1308915313313017856",
+"https://github.com/beeminder/beeminder/pull/1677"]
+}, { // ------------------------------------------------------------------------
+"x": "The Strava gem we use was pulled from RubyGem, so point the Gemfile at the git repo for backwards compatibility.",
+"u": ["https://twitter.com/beeminfra/status/1311454474066567168",
+      "https://github.com/beeminder/beeminder/pull/1653"]
+}, { // ------------------------------------------------------------------------
+"x": "Improve how we wait for graphs to generate in tests (when we have to wait for them)",
+"u": ["https://twitter.com/beeminfra/status/1313981358176260096",
+"https://github.com/beeminder/beeminder/pull/1678",
+"https://github.com/beeminder/beeminder/pull/1705",
+"https://github.com/beeminder/beeminder/pull/1733"],
+"d": "2020-09-24",
+"t": "2020-10-07"
+}, { // ------------------------------------------------------------------------
+"x": "Much refactoring of the retroratchet code, cleaning up some old kludges with the safety param that's passed in, etc, as part of all the ratchet UVIs",
+"u": ["https://github.com/beeminder/beeminder/pull/1635",
+      "https://twitter.com/beeminfra/status/1316511104449748993",
+     ]
+}, { // ------------------------------------------------------------------------
+"x": "a couple fixes in our fb tracking code initialization, including not initializing in the test env.",
+"u": ["https://github.com/beeminder/beeminder/pull/1633",
+"https://twitter.com/beeminfra/status/1319057021677654021"],
+"t": "2020-10-21"
+}, { // ------------------------------------------------------------------------
+"x": "removed param 'sadbrink' from the codebase. It was a gross hacky fix for a thing that's now moot! (still cleaning up from red-yesterday changes > 1 year ago :\)",
+"u": ["https://github.com/beeminder/beeminder/issues/1270",
+"https://twitter.com/beeminfra/status/1321587754799525888"],
+"t": "2020-10-27"
 }, /* ----------------------------------------------------------- end batch */ ]
 
 var staged = [ { // note: sub-entries not allowed here in staging
@@ -736,21 +767,15 @@ var staged = [ { // note: sub-entries not allowed here in staging
 /*
 METASTAGED: --10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
 https://github.com/beeminder/beeminder/commit/
+
+infra:
 }, { // ------------------------------------------------------------------------
-strava gem was pulled from rubygem, so point gemfile at the git repo 
-https://github.com/beeminder/beeminder/pull/1653
+"completely expunged exprd from road lib & other places; removed references to lnw in ratchet algorithms; clean up some TODOs and SCHEDELs in goal model as well"
+https://github.com/beeminder/beeminder/pull/1640/commits/ef7242e71be446af3b8d677f00355c46206bafa9
+https://github.com/beeminder/beeminder/pull/1640/commits/291580b8e54e9a67ee3f89585941640d59695bf0
 }, { // ------------------------------------------------------------------------
-fix a thing because of factorybot upgrade that changed build vs create behavior in a way that broke at least one of our tests
-https://github.com/beeminder/beeminder/pull/1677
-}, { // ------------------------------------------------------------------------
-improve how we wait for graphs to generate in tests (when we have to wait for them)
-https://github.com/beeminder/beeminder/pull/1678
-}, { // ------------------------------------------------------------------------
-did a little straight-up refactoring of params that are passed in to retroratchet, small infra baby step towards fixing domore ratchets
-https://github.com/beeminder/beeminder/pull/1635
-}, { // ------------------------------------------------------------------------
-a couple fixes in our fb tracking code initialization, including not initializing in the test env.
-https://github.com/beeminder/beeminder/pull/1633
+"internally fixed all instances of 'retroratchet' to 'ratchet'"
+https://github.com/beeminder/beeminder/pull/1640
 }, { // ------------------------------------------------------------------------
 don't do the dogfood winner selection for $0 dogfoodie derails (doing so was kind of wolf crying)
 https://github.com/beeminder/beeminder/pull/1622
