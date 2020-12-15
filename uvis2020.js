@@ -2396,7 +2396,8 @@ const batch2020oct = [{
       "https://github.com/beeminder/beeminder/issues/1775",
       "https://github.com/beeminder/beeminder/issues/1686",
       "https://github.com/beeminder/beeminder/pull/1814",
-      "https://github.com/beeminder/beeminder/commit/e1f66b09d4931710530bd896a9a76bad0f1fc709"],
+      "https://github.com/beeminder/beeminder/commit/e1f66b09d4931710530bd896a9a76bad0f1fc709",
+      "https://github.com/beeminder/beeminder/issues/1932"], // fixed a bug with this later
 "d": "2020-10-02",
 "t": "2020-10-16",
 "c": "Also we changed the support scripts to offer free goals in exchange for feedback, upside-down-support-style. And, specifically, 3X'd the lifetime prices, which, it has since been pointed out to us, miiiight make us seem like price-gouging jerks and maybe we should just stop offering new lifetime plans? TBD!",
@@ -2477,7 +2478,7 @@ const batch2020oct = [{
 "s": true,
 "n": false,
 "x": "Primarily: Pretty pervasive improvements to notifications. Beemergency notifications now consistently created when not already there / updated when they are.",
-"u": [],
+"u": ["https://twitter.com/beemuvi/status/1322322090356142080"],
 "d": "2020-10-20",
 "t": "2020-10-31",
 }, { // ------------------------------------------------------------------------
@@ -2540,37 +2541,249 @@ const batch2020oct = [{
 }, /* --------------------------------------------------------- end 2020oct */ ]
 
 const batch2020nov = [{  
+"f": true,
+"x": "BeemiOS version 5.8! New hotness (but mostly incremental improvements and bugfixes) in the Beeminder iOS app!",
+"u": ["https://twitter.com/beemuvi/status/1324476341861801984",
+      "https://github.com/beeminder/BeeSwift/pull/223",
+],
+"d": "2020-10-20",
+"t": "2020-11-05",
 }, { // ------------------------------------------------------------------------
+"n": false,
+"s": true,
+"x": "Better Apple Health integration instructions, link for forgotten password, pull-to-refresh for goals, more consistent autodata datapoint comments",
+"u": ["https://twitter.com/beemuvi/status/1324476341861801984",
+      "https://github.com/beeminder/BeeSwift/issues/170", // apple health instructions
+      "https://github.com/beeminder/BeeSwift/issues/173", // reset passwd link
+      "https://github.com/beeminder/BeeSwift/issues/84",  // pull-to-refresh
+      "https://github.com/beeminder/BeeSwift/issues/195", // autodata comment consistency
+],
+"d": "2020-10-20",
+"t": "2020-11-05",
 }, { // ------------------------------------------------------------------------
+"s": true,
+"x": "Other #bugfix's like missing settings gear icon on older iOSes, showing duplicate datapoints, a crash, number on app badge wrongly shown after logging out",
+"u": ["https://twitter.com/beemuvi/status/1324476644862566401",
+      "https://github.com/beeminder/BeeSwift/issues/158", // missing gear icon
+      "https://github.com/beeminder/BeeSwift/issues/166", // dup data
+      "https://github.com/beeminder/BeeSwift/issues/179", // crasher
+      "https://github.com/beeminder/BeeSwift/issues/40",  // app badge updated on signout
+],
+"d": "2020-10-20",
+"t": "2020-11-05",
 }, { // ------------------------------------------------------------------------
+"s": true,
+"x": "That was a lot of UVIs packed into those couple entries! Also we no longer give a bogus error if you try to sign up while Beeminder's free plan is full!",
+"u": ["https://twitter.com/beemuvi/status/1324476781609377793"],
+"d": "2020-10-20",
+"t": "2020-11-05",
 }, { // ------------------------------------------------------------------------
+"s": true,
+"x": "Also fixed a weird black outline on the app icon and made countdowns (and maybe other things) on the goal screen appear more snappily",
+"u": ["https://twitter.com/beemuvi/status/1324476969128394752",
+      "https://github.com/beeminder/BeeSwift/issues/178"], // tiny black border
+"d": "2020-10-20",
+"t": "2020-11-05",
 }, { // ------------------------------------------------------------------------
+"x": "We rewrote the confirmation email and banner message to be extra clear that you have to confirm your email when signing up for 'keep abreast of the buzz'",
+"u": ["https://twitter.com/beemuvi/status/1325965475566612485",
+      "https://github.com/beeminder/beeminder/pull/1867"],
+"d": "2020-10-23",
+"t": "2020-11-09",
+"c": "This also applied to the waitlist email for the free plan, but that's moot now.",
 }, { // ------------------------------------------------------------------------
+"x": "We purged all HTTP links everywhere in webcopy and emailcopy. Everything should be HTTPS now. Also some changes to beeminder.com/contract",
+"u": ["https://twitter.com/beemuvi/status/1326319936772272129",
+      "https://github.com/beeminder/beeminder/issues/347",
+      "https://github.com/beeminder/beeminder/pull/1834", // http->https refactoring, plus blog blurbs
+      "https://github.com/beeminder/beeminder/commit/73b04d6c8ef0452bde2ef48655518a73a68c8555", // missed some http's
+      "https://github.com/beeminder/beeminder/issues/1215",
+      "https://github.com/beeminder/beeminder/pull/1860",
+      "https://github.com/beeminder/beeminder/commit/7966918d2308852f0f0da2158ba7504995c4633a",
+      "https://github.com/beeminder/beeminder/commit/a6f811050dda7db804b3fd30ad3bfb4555d493ed"],
+"d": "2020-10-14",
+"t": "2020-11-10",
+"c": "Changes to Ye Olde Beeminder Contract were a bit later and were just purging a rogue \"lane\" from pre-YBHP",
 }, { // ------------------------------------------------------------------------
+"x": "Fixed a 500 error on signup (didn't actually prevent signups); no longer require email confirmation if already confirmed for 'keep abreast of the buzz' #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1326690458219601920",
+      "https://github.com/beeminder/beeminder/issues/1875",
+      "https://github.com/beeminder/beeminder/pull/1872"],
+"d": "2020-10-25",
+"t": "2020-11-11",
+"c": "TODO: clean these notes up, probably pare them down: Sunday bugfix with waitlists/signups: the thing with sending email to support when someone confirms their email address was failing for *user* signups (not waitlist). The failure was with sending the email, and occurred after their email was confirmed, so it manifested as a one-time 500 page that looked sketchy, but was instantly resolved and didn't interfere with creating goals on their shiny new account etc. Wrong local var in the user-confirmation case",
 }, { // ------------------------------------------------------------------------
+"x": "Also no more need to confirm your email if you sign up via Google or something else that gives us a confirmed email address; now we send a welcome email instead",
+"u": ["https://twitter.com/beemuvi/status/1327051276589273088",
+      "https://github.com/beeminder/beeminder/issues/1878",
+      "https://github.com/beeminder/beeminder/pull/1877"],
+"d": "TODO: seen on 2020-10-27 but not sure the deploy date",
+"t": "2020-11-12",
+"c": "Also stuff with waitlisting, like adding premium credit for people on the waitlist that's applied to their new account when they sign up. But that's all moot now that Freefull is over.",
 }, { // ------------------------------------------------------------------------
+"x": "Removed some no-longer-relevant warnings from the interface about how scheduled breaks and ratcheting don't play nice together. Now they do!",
+"u": ["https://twitter.com/beemuvi/status/1327410817696813057",
+      "https://blog.beeminder.com/ratchet/",
+      "https://github.com/beeminder/beeminder/issues/1836",
+      "https://github.com/beeminder/beeminder/pull/1886"],
+"d": "2020-10-29",
+"t": "2020-11-13",
+"c": "The warnings were weekends-off saying it doesn't play nice with ratcheting, and auto-ratchet saying it doesn't work with long breaks",
 }, { // ------------------------------------------------------------------------
+"x": "Embarrassingly we broke the \"Goals that people have been beeminding\" tabs on bmndr.com/overview months ago! #bugfix HT @GigusDev",
+"u": ["https://twitter.com/beemuvi/status/1328495785286148098",
+      "https://twitter.com/GigusDev/status/1323021859554791425",
+      "https://github.com/beeminder/beeminder/issues/959"],
+"d": "2020-11-01",
+"t": "2020-11-16",
 }, { // ------------------------------------------------------------------------
+"x": "Now consistent with \"real time\" as the noun, \"real-time\" as the adjective. Also a case-sensitivity #bugfix with the waitlist though that's moot now!",
+"u": ["https://twitter.com/beemuvi/status/1328821502154665984",
+      "https://github.com/beeminder/beeminder/issues/1484",
+      "https://github.com/beeminder/beeminder/pull/1892",
+      "https://github.com/beeminder/beeminder/issues/1899",
+      "https://github.com/beeminder/beeminder/pull/1903"],
+"c": "Never 'realtime'. We were treating email addresses (for w8list) as case insensitive when you signed up, but case sensitive when we tried to confirm, so that if you gave us an email like JohnSmith@email.com we wouldn't be able to find you when you tried to confirm",
+"d": "2020-11-04",
+"t": "2020-11-17",
+}, { // ------------------------------------------------------------------------
+"x": "As part of reopening the free plan (kinda also a UVI), we now require a payment method in order to sign up and added a \"Why?\" popup to justify it",
+"u": ["https://twitter.com/beemuvi/status/1329225950756626432",
+      "https://github.com/beeminder/beeminder/pull/1905"],
+"d": "2020-11-06",
+"t": "2020-11-18",
+}, { // ------------------------------------------------------------------------
+"x": "The ratchet UI now warns if your road is infinitely flat (ratcheting makes no sense then), pointing you to the road dial to make it not be so you can ratchet",
+"u": ["https://twitter.com/beemuvi/status/1329588771184996353",
+      "https://github.com/beeminder/beeminder/issues/1772",
+      "https://github.com/beeminder/beeminder/pull/1904"],
+"d": "2020-11-09",
+"t": "2020-11-19",
+}, { // ------------------------------------------------------------------------
+"x": "Beedroid (3.3.2) now aims you at the website to sign up; also the API gives a clearer message in rejecting signup via the API",
+"u": ["https://twitter.com/beemuvi/status/1333567698601611264",
+      "https://github.com/beeminder/beedroid/issues/165",
+      "https://github.com/beeminder/beedroid-hist/pull/102",
+      "https://github.com/beeminder/beeminder/pull/1908"],
+"d": "2020-11-06",
+"t": "2020-11-30",
+"c": "From \"Beeminder isn't taking new signups right now but you can get on the waitlist on the website!\" to \"Beeminder signup is in flux and only works via the website. Apologies!\"",
 }, /* --------------------------------------------------------- end 2020nov */ ]
+
+const batch2020dec = [{  
+"x": "Fixed the too-long placeholder text for goalname in goal creation and are now consistent about \"goalname\" instead of \"goal name\". HT Cantor Soule-Reeves",
+"u": ["https://twitter.com/beemuvi/status/1333932982139174913",
+      "https://github.com/beeminder/beeminder/issues/1526",
+      "https://github.com/beeminder/beeminder/pull/1915"],
+"d": "2020-11-16",
+"t": "2020-12-01",
+}, { // ------------------------------------------------------------------------
+"x": "Fixed and rewrote the tooltips for the due-by table, making it make sense for every goal type. HT Uluc Saranli. Also improved http://road.beeminder.com/tutorial copy.",
+"u": ["https://twitter.com/beemuvi/status/1334273834837442561",
+      "https://github.com/beeminder/beeminder/issues/1918",
+      "https://github.com/beeminder/beeminder/pull/1919",
+      "https://github.com/beeminder/road/issues/159"],
+"d": "2020-11-16",
+"t": "2020-12-02",
+}, { // ------------------------------------------------------------------------
+"x": "Our @integromat integration is official! Made a landing page for it and added it to our front page gallery. http://beeminder.com/integromat",
+"u": ["https://twitter.com/beemuvi/status/1334660741798920193",
+      "https://twitter.com/bmndr/status/1332083813371973632",
+      "https://github.com/beeminder/beeminder/issues/1824",
+      "https://github.com/beeminder/beeminder/pull/1920"],
+"d": "2020-11-16",
+"t": "2020-12-03",
+}, { // ------------------------------------------------------------------------
+"x": "Important #bugfix in the email bot parser to be robust to some weird quoting that the Fastmail email client was doing. HT Andy Brett",
+"u": ["https://twitter.com/beemuvi/status/1335023209465303042",
+      "https://github.com/beeminder/beeminder/issues/1925",
+      "https://github.com/beeminder/beeminder/pull/1926"],
+"d": "2020-11-16",
+"t": "2020-12-04",
+"c": "By dreev. Robusted up the regex.",
+}, { // ------------------------------------------------------------------------
+"x": "Added Finnish and Scottish Gaelic to our Duolingo autodata integration! Also added more direct links to the integration on our Integromat landing page.",
+"u": ["https://twitter.com/beemuvi/status/1336101209573244928",
+      "https://forum.beeminder.com/t/duolingo-tracking-finnish-new-language/7489/4?u=dreev",
+      "https://github.com/beeminder/beeminder/issues/1935",
+      "https://github.com/beeminder/beeminder/pull/1943"],
+"d": "2020-11-24", // and 2020-11-20
+"t": "2020-12-07",
+}, { // ------------------------------------------------------------------------
+"x": "Dropped the grayed-out checkbox and webcopy about the yellow brick half-plane migration; so lanes are truly but a distant memory now. Also fixed aggday=mode!",
+"u": ["https://twitter.com/beemuvi/status/1336415728086347777",
+      "https://github.com/beeminder/beeminder/issues/1945",
+      "https://github.com/beeminder/road/issues/168"],
+"t": "2020-12-08",
+}, { // ------------------------------------------------------------------------
+"f": true,
+"x": "We removed the new pledge schedule :gasp-emoji: Back to just $0, $5, $10, $30, $90, $270, $810, $2430 for now. Also fixed erroneous $0 and $1 pledge caps!",
+"u": [
+      "https://github.com/beeminder/beeminder/issues/693",
+      "https://github.com/beeminder/beeminder/pull/1922",
+      "https://github.com/beeminder/beeminder/issues/1963",
+      "https://github.com/beeminder/beeminder/pull/1960",
+      "https://github.com/beeminder/beeminder/pull/1967"],
+"d": "2020-12-04",
+"c": "Also changed copy to mention that \"pledgeless\" really means \"sub-$5-pledge-capped\" which we can change back if we stick with just the OG schedge",
+}, { // ------------------------------------------------------------------------
+"x": "Added a bunch of explanation about weight loss goals to our help docs. https://help.beeminder.com/article/96-weight-gain-loss-goals",
+"u": ["https://twitter.com/beemuvi/status/1337198110871748609",
+      "https://forum.beeminder.com/t/help-docs-updates-as-uvis/6672/20?u=dreev"],
+"d": "2020-11-30",
+"t": "2020-12-10",
+"c": "HT martinwachters",
+}, { // ------------------------------------------------------------------------
+"x": "An obscure rounding bug in Beebrain meant if you were right on the edge *and your value was a negative number* you could erroneously derail. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1337557503073112065",
+      "https://github.com/beeminder/road/issues/165"],
+"d": "2020-12-11",
+"t": "2020-12-11",
+}, { // ------------------------------------------------------------------------
+"x": "We got a marked (and provable thanks to @StatusCake) performance improvement (and downtime reduction!) by migrating from @linode DNS to AWS Route53",
+"u": ["https://twitter.com/beemuvi/status/1338649795901018112",
+      "https://github.com/beeminder/beeminder/issues/1849",
+      "https://github.com/beeminder/beeminder/issues/285"],
+"d": "2020-11-14",
+"t": "2020-12-14",
+"c": "By Adam. Starting around the 14th is when the StatusCake graph gets drastically better",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, /* --------------------------------------------------------- end 2020dec */ ]
 
 
 var staged = [ {
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 // ratchet revamp: double check that we got the following things from https://github.com/beeminder/beeminder/pull/1640
 //* update the text box for WEEN/RASH ratchet after ratcheting
 //* check the bounds on WEEN/RASH ratcheting and don't allow to submit an amount larger than current buffer
 //  (we were only checking the bounds for MOAR/PHAT ratchets)
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-"x": "(not yet deployed: gmailzero restarts of ancient goals get proper error, by Adam)",
-// Set autod error after Gmailzero issues
-// UVI: Users now get error messages when restarting really old Gmailzero goals instead of graph failures.
-// How it was tested: I added a bunch of gmailzero quals.
-"u": [
-      "https://github.com/beeminder/beeminder/issues/1650",
-      "https://github.com/beeminder/beeminder/pull/1821"],
-// TODO: merged but not deployed as of 2020-10-22
-"c": "By Adam",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -2585,87 +2798,80 @@ var staged = [ {
 
 /*********************************************************************************************************************************************************************
 [[PSA: add dates please!]]
-~~~~~~----------------------------- METASTAGED -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160~~
-}, { // ------------------------------------------------------------------------
-overview tabs broken
-https://twitter.com/GigusDev/status/1323021859554791425
-"d": "2020-11-01",
-}, { // ------------------------------------------------------------------------
-TODO: seen on 2020-10-27...
-https://github.com/beeminder/beeminder/issues/1878
-https://github.com/beeminder/beeminder/pull/1877
-when oauth provided an email
-when user already confirmed as a wuser
-}, { // ------------------------------------------------------------------------
-sunday bugfix with waitlists/signups: the thing with sending email to support when someone confirms their email address was failing for *user* signups (not waitlist). the failure was with sending the email, and occurred after their email was confirmed, so it manifested as a one-time 500 page that looked sketchy, but was instantly resolved and didn't interfer with creating goals on their shiny new account etc.
-https://github.com/beeminder/beeminder/issues/1875
-https://github.com/beeminder/beeminder/pull/1872
-wrong local var in the user-confirmation case
-"d": "2020-10-25",
-}, { // ------------------------------------------------------------------------
-1) ask for a name in waitlist
-2) js validations for waitlist form
-https://github.com/beeminder/beeminder/pull/1876
-"d": "2020-10-27"
-}, { // ------------------------------------------------------------------------
-make a few changes to the confirmation email and stuff to try to increase awareness that we're wanting you to confirm your email when you get on the "waitlist"
-https://github.com/beeminder/beeminder/pull/1867
-"d": "2020-10-23",
+~~~~~~----------------------------- METASTAGED -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-changes to beeminder.com/contract
-https://github.com/beeminder/beeminder/issues/1215
-https://github.com/beeminder/beeminder/pull/1860
-https://github.com/beeminder/beeminder/commit/7966918d2308852f0f0da2158ba7504995c4633a
-https://github.com/beeminder/beeminder/commit/a6f811050dda7db804b3fd30ad3bfb4555d493ed
+MINI beebrain things: skatesum daily rate & trimmean
+https://github.com/beeminder/road/issues/169
+https://github.com/beeminder/road/issues/170
+pushed 2020-12-06
+depl'd 2020-12-08
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-"x": "",
-http -> https
-https://github.com/beeminder/beeminder/issues/347
-https://github.com/beeminder/beeminder/pull/1834 (http->https refactoring, plus blog blurbs)
-https://github.com/beeminder/beeminder/commit/73b04d6c8ef0452bde2ef48655518a73a68c8555 (missed some http's)
-deployed 2020-10-14 (confirmed)
+}, { // ------------------------------------------------------------------------
+BEEDROID: 
+1. FIX: Goalname that's a prefix of another goalname breaks search
+   https://github.com/beeminder/beedroid/issues/72
+   merged 2020-11-25, awaiting deploy to google play
+2. FIX: low space sync bug
+   https://github.com/beeminder/beedroid/issues/77
+3. CLEANUP: removed the "check for graph updates" frequency setting and "panic buffer" setting
+   https://github.com/beeminder/beedroid/issues/136
+   https://github.com/beeminder/beedroid/issues/62
+4. maybe something with beedroid's due-by table slide-out?
+   https://github.com/beeminder/beedroid/issues/147
+5. de-lane-ify the tally screen -- or was that part of the last release?
+   https://github.com/beeminder/beedroid/issues/143
+6. FIX: User reports "Tasker integration seems to break if goal is changed from manual to API"
+   https://github.com/beeminder/beedroid/issues/140
+7. Is this user-visible at all: Migrate to AndroidX
+   https://github.com/beeminder/beedroid/issues/127
+8. Sounds like this only affected beta versions: Widgets broken on upgrade from 3.3 beta 2 to beta 3
+   https://github.com/beeminder/beedroid/issues/148
+9. Stop showing user name when I am searching for goal
+   https://github.com/beeminder/beedroid/issues/152
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-grayson dots. pushed to beebrain master, not yet deployed
-https://github.com/beeminder/road/issues/111
-https://github.com/beeminder/beeminder/issues/1755
-"d": "TODO, maybe 2020-10-26",
+fixed the thing with blue error banners persisting through the next page load so you see an error about your rescuetime auth or whatever in a totally wrong place
+https://github.com/beeminder/beeminder/issues/1968
+https://github.com/beeminder/beeminder/pull/1969
+is this part of that? https://github.com/beeminder/beeminder/commit/ff253064d4afce3b542e534670a663a9d1348fbb
+these banners should use flash.now
+* UVI: fixes the #1968 issue in goals controller
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-BEEMIOS 5.8
-1. better autodata instructions and consistent spelling of "autodata"
-   https://github.com/beeminder/BeeSwift/issues/170
-   https://github.com/beeminder/BeeSwift/pull/171
-- Fixed a bug on older versions of iOS that hid the settings gear icon
-- We now show the countdown on the goal screen immediately
-- Clarified instructions for Apple Health goals
-- Added pull to refresh on the goal screen
-- Removed the tiny black border around the icon that appeared in version 5.7
-- Fixed a bug where a duplicate datapoint would be displayed on the goal screen
-- Updated the sign up/sign in screen
-- Added a link for resetting a forgotten password
-- Fixed a crasher when updating Apple Health goals in the background
-- Updated the datapoint comment for Apple Health goals to match other autodata goals
-- Freefull?
-[hit app store 2020-10-20]
-TODO: MERGE THE FOLLOWING WITH ABOVE:
-* Fixed a bug on older versions of iOS that hid the settings gear icon
-* We now show the countdown on the goal screen immediately
-* Clarified instructions for Apple Health goals
-* Added pull to refresh on the goal screen
-* Removed the tiny black border around the icon that appeared in version https://github.com/beeminder/BeeSwift/releases/tag/5.7
-* Fixed a bug where a duplicate datapoint would be displayed on the goal screen
-* Updated the sign up/sign in screen
-* Added a link for resetting a forgotten password
-* Fixed a crasher when updating Apple Health goals in the background
-* Updated the datapoint comment for Apple Health goals to match other autodata goals
+things with alias domains redirecting/expanding correctly
+eg "blog.bmndr.co/nerds" actually works now
+https://github.com/beeminder/beeminder/issues/89
+"d": "2020-11-14"
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+TODO: put this in the right spot for the beemios UVI for this
+PR from andy: adds a private / undocumented api endpoint for alerting the app of the minimum ios version
+https://github.com/beeminder/beeminder/pull/1214
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+"x": "(not yet deployed: gmailzero restarts of ancient goals get proper error, by Adam)",
+// Set autod error after Gmailzero issues
+// UVI: Users now get error messages when restarting really old Gmailzero goals instead of graph failures.
+"u": [
+      "https://github.com/beeminder/beeminder/issues/1650",
+      "https://github.com/beeminder/beeminder/pull/1821"],
+"c": "By Adam, merged on 2020-10-22 so deployed sometime after that. Failed to tweet/log it and then realized it was broken on 12-04.",
+// TODO: see gissue 1965
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 AWAITING BEEBODY DATABASE CLEANUP:
-giving a proper error if you somehow create road rows that start before the goal start date
+giving a proper error if you somehow create road rows that start before the goal start date (tini)
 https://github.com/beeminder/beeminder/issues/1623
 https://github.com/beeminder/road/commit/e67e3e1df52652d00ec5d2abe645e803b1bc4fb4
 }, { // ------------------------------------------------------------------------
@@ -2686,11 +2892,7 @@ https://github.com/beeminder/road/commit/ab6c09b9e91e9b167f81f18c06d864821822d2c
 https://github.com/beeminder/road/issues/136
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-negative UVI? f4119b9b - temporarily remove twitter login -- i guess this was beemiOS?
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-TODO: wrapping things in shn():
-https://github.com/beeminder/beeminder/pull/950
+TODO: gissue this or something:
 dreev kinda wants to have a discussion about general principles for when to wrap things in shn(), when to conservaround, etc.
 probably the answer is: wrap everything shown to the user in shn(); never conservaround datapoints, just dueby values.
 }, { // ------------------------------------------------------------------------
@@ -2701,12 +2903,6 @@ https://github.com/beeminder/beeminder/issues/1188
 https://github.com/beeminder/beeminder/commit/4e94d3a862039fb4f9d23e79ca4fd9a8628ce3e6
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-PR from andy: adds a private / undocumented api endpoint for alerting the app of the minimum ios version
-https://github.com/beeminder/beeminder/pull/1214
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-actually killing panictime / sort threshold
-https://github.com/beeminder/beeminder/pull/1197
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 GMAILZERO: change blog link (probably wait for other copy changes before tweeting)
@@ -2714,10 +2910,7 @@ https://github.com/beeminder/beeminder/commit/39cd4142c8fa119418ab5996187e77b53c
 https://github.com/beeminder/beeminder/issues/1002
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-updated twitter gem [this might fix a bug with hashtag minding. need to check]
-https://github.com/beeminder/beeminder/pull/1067
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
+TODO: already tweeted; merge links with existing UVI
 Wrap initial datapoint comment in shn.
 by adam
 https://github.com/beeminder/beeminder/issues/948
@@ -2732,7 +2925,7 @@ SAFESUM
 2. https://github.com/beeminder/beeminder/issues/830
 }, { // ------------------------------------------------------------------------
 RASH BUG -- will this count as user-visible?
-https://github.com/beeminder/beeminder/issues/957
+https://github.com/beeminder/beeminder/issues/957 [oh, this was tweeted, says this gissue? https://changelog.beeminder.com/#3234]
 https://github.com/beeminder/beeminder/commit/d36a498b191218de3430e37e9f011be505a66335
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -2746,9 +2939,6 @@ fixes timeouts in jsbrain_server? https://github.com/beeminder/road/issues/51
 "c": "it's super mini, but took lots of words to say the things."
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-
-
-
 ~~~~~~----------------------------- CANDIDATES -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -2776,5 +2966,4 @@ wordpress plugin: github.com/beeminder/beeminder-ping
 * small fix to the way we load new svg image after a graph reload -- should look a little smoother and less jumpy
 https://github.com/beeminder/beeminder/commit/2a859386e81dade3cc63f07c2ceeda5a2c63a281
 "c": "not sure if this will be a very minor improvement or a more noticeable one. was no better, possibly worse.
-
 *********************************************************************************************************************************************************************/

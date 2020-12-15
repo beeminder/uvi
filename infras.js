@@ -759,60 +759,85 @@ var batch = [{
 "u": ["https://github.com/beeminder/beeminder/issues/1270",
 "https://twitter.com/beeminfra/status/1321587754799525888"],
 "t": "2020-10-27"
+}, { // ------------------------------------------------------------------------
+"x": "updated our github authentication (use header instead of access token param) because they're going to deprecate the old way this year",
+"u": ["https://github.com/beeminder/beeminder/pull/1617",
+"https://twitter.com/beeminfra/status/1324154011176456195"],
+"t": "2020-11-04",
+}, { // ------------------------------------------------------------------------
+"x": "Dramatic improvement to our automated testing (aka Quals) by upgrading from phantomjs to ChromeDriver, and VCR utility to mock 3rd party service calls",
+"u": ["https://github.com/beeminder/beeminder/pull/1403",
+"https://github.com/beeminder/beeminder/pull/1832",
+"https://twitter.com/beeminfra/status/1326618558109949952"],
+"t": "2020-11-11"
+}, { // ------------------------------------------------------------------------
+"x": "More code cleanup: removed lingering instances of exprd in road utils, removed references to lnw from ratchet algorithms, and other TODOS & deletions.",
+"u": ["https://twitter.com/beeminfra/status/1329211477719359488",
+"https://github.com/beeminder/beeminder/pull/1640/commits/ef7242e71be446af3b8d677f00355c46206bafa9",
+"https://github.com/beeminder/beeminder/pull/1640/commits/291580b8e54e9a67ee3f89585941640d59695bf0",
+]
+}, { // ------------------------------------------------------------------------
+"x": "Dockerized our dev environment so that it's basically trivial to set up and start developing on a new machine. thanks @adamwolf",
+"u": ["https://twitter.com/beeminfra/status/1331752909835444226",
+"https://github.com/beeminder/beeminder/pull/1657"],
+"t": "2020-11-25",
+}, { // ------------------------------------------------------------------------
+"x": "We now have a script that takes the beeminder.com DNS configuration from AWS DNS and keeps all our short domains (e.g. bmndr.com) in sync.",
+"u": ["https://github.com/beeminder/beeminder/issues/89", "https://twitter.com/beeminfra/status/1334295203130195969"],
+"t": "2020-12-02"
+}, { // ------------------------------------------------------------------------
+"x": "Added useful info to honeycomb's trace of GraphJobs so we can keep an eye on graph regeneration / queue latency. @honeycombio <3 ",
+"u": ["https://github.com/beeminder/beeminder/pull/1962",
+"https://twitter.com/beeminfra/status/1336829865597648896"],
+"t": "2020-12-09"
+}, { // ------------------------------------------------------------------------
+"x": "More docker work to dockerize our deploys and to clean up env variables and other things with jsbrain & the README",
+"u": ["https://github.com/beeminder/beeminder/pull/1682",
+"https://github.com/beeminder/beeminder/pull/1749",
+"https://github.com/beeminder/beeminder/pull/1762",
+"https://twitter.com/beeminfra/status/1336829987400216576"],
+"t": "2020-12-09"
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, /* ----------------------------------------------------------- end batch */ ]
 
 var staged = [ { // note: sub-entries not allowed here in staging
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, /* ---------------------------------------------------------- end staged */ ]
 
 /*
 METASTAGED: --10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
 https://github.com/beeminder/beeminder/commit/
 
-infra:
 }, { // ------------------------------------------------------------------------
-"completely expunged exprd from road lib & other places; removed references to lnw in ratchet algorithms; clean up some TODOs and SCHEDELs in goal model as well"
-https://github.com/beeminder/beeminder/pull/1640/commits/ef7242e71be446af3b8d677f00355c46206bafa9
-https://github.com/beeminder/beeminder/pull/1640/commits/291580b8e54e9a67ee3f89585941640d59695bf0
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 "internally fixed all instances of 'retroratchet' to 'ratchet'"
 https://github.com/beeminder/beeminder/pull/1640
 }, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 don't do the dogfood winner selection for $0 dogfoodie derails (doing so was kind of wolf crying)
 https://github.com/beeminder/beeminder/pull/1622
 }, { // ------------------------------------------------------------------------
-updated our github authentication (use header instead of access token param) because they're going to deprecate the old way this year
-https://github.com/beeminder/beeminder/pull/1617
 }, { // ------------------------------------------------------------------------
+
+
 
 ## NEED HELP FROM ADAM:
 * massive improvements to our ansible deployment scripts so that we can now spin up a new web server from scratch in about an hour 
 * including adding some sexy test suite thingie into the mix with ansible [help?]
 * a bunch of work to get honeycomb into our background workers so we can monitor stuff there too [did this actually resolve to a positive end?]
-* VCR utility for mocking up requests to 3rd party services in tests. (adamwolf++) https://github.com/beeminder/beeminder/pull/903
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 TODO:
 don't make title required and then do javascript contortions to deal with it
-///// TOO LATE OR TOO LAME: ____________________________________________________
-swaps GCM for FCM (maybe user visible because related to keeping notifications running?)
-https://github.com/beeminder/beeminder/commit/177a3abb00706478dac1af64561406e430db2cce
 }, { // ------------------------------------------------------------------------
-commit ffce36d7b2ea18c340f4e6eba9046dd1fc8a28bc
-Author: Daniel Reeves <dreeves@beeminder.com>
-Date:   Thu Apr 18 13:25:30 2019 -0700
-    Dogfood mandate tweakage
 }, { // ------------------------------------------------------------------------
-TODO MAYBE:
-https://github.com/beeminder/beeminder/commit/a09ccc95eb0eb24d084d9841be5bf6259abad9d0
-Date:   Thu Dec 27 22:52:01 2018 -0800
-    survivor and groups and home refactoring
 }, { // ------------------------------------------------------------------------
 GitHub APP [23:19]
 `af940150` - use type attr on object as well
 `c44cdf36` - load png last
 }, { // ------------------------------------------------------------------------
-HACKNIGHT:
-* find nginx change for gzip svgs as well -- maybe INFRA?
-* fix withings refreshjob airhorns -- INFRA
 }, { // ------------------------------------------------------------------------
 */
