@@ -24,14 +24,14 @@ See tweets.glitch.me for how to import your Twitter archive into a progress log 
 ## Data structure for UVIs
 
 ```
-f: featured [bool: default false]
-s: sub-UVI [bool: default false]
-n: new number [bool: default true]
-x: text of UVI
-u: list of links (urls)
-d: date deployed
-t: date tweeted / logged / announced
-c: comment / note to selves
+f: featured                              [bool: default false]
+s: sub-UVI                               [bool: default false]
+n: new number                            [bool: default true]
+x: text of UVI                           [string]
+u: list of links (urls)                  [list of strings]
+d: date deployed                         [YYYY-MM-DD string]
+t: date tweeted/logged/announced/entered [YYYY-MM-DD string]
+c: comment / note to selves              [string]
 ```
 
 Tentative refactor:

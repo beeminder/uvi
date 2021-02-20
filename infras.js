@@ -798,6 +798,60 @@ var batch = [{
 "https://twitter.com/beeminfra/status/1336829987400216576"],
 "t": "2020-12-09"
 }, { // ------------------------------------------------------------------------
+"x": "Don't do the dogfood winner selection for $0 dogfoodie derails. It's silly because it's a no-op, and doing so was making extra accounting work.",
+"u": ["https://github.com/beeminder/beeminder/pull/1622",
+"https://twitter.com/beeminfra/status/1341874431216381955"],
+"t": "2020-12-23"
+}, { // ------------------------------------------------------------------------
+"x": "Internally fixed all instances of 'retroratchet' to 'ratchet'.",
+"d": "2020-09-24",
+"t": "2020-12-30",
+"u": [
+"https://twitter.com/beeminfra/status/1344441982790238209",
+"https://github.com/beeminder/beeminder/pull/1640",
+"https://github.com/beeminder/beeminder/pull/1640/commits/431eeadffbc3f97af688c04f61074823962a424d"]
+}, { // ------------------------------------------------------------------------
+"x": "Glorious, glorious shredding of code focused around switching between original and trial pledge schedule during goal creation.",
+"u": ["https://github.com/beeminder/beeminder/pull/2017",
+"https://twitter.com/beeminfra/status/1346954344579489793"],
+"d": "2020-12-30",
+"t": "2021-01-06",
+}, { // ------------------------------------------------------------------------
+x: "We were falsely alerting 'too many commits' in gitminder every time we got a non-200 response error. Skip the log when it's a 200-error response.",
+u: ["https://github.com/beeminder/beeminder/pull/1981",
+"https://twitter.com/beeminfra/status/1349505784640520193"],
+"t": "2021-01-13",
+"d": "2020-12-09",
+}, { // ------------------------------------------------------------------------
+"x": "Backend cleanup of abslnw and ybhp params from beebody code and removed from graph generation (so beebrain no longer has to ignore them).",
+"u": ["https://github.com/beeminder/beeminder/pull/1996",
+      "https://twitter.com/beeminfra/status/1352038831663443968"],
+"t": "2021-01-20",
+"d": "2020-12-18"
+}, { // ------------------------------------------------------------------------
+"x": "Started collecting more internal metrics about site and worker performance, plus useful info added to GraphJob honeycomb traces.",
+"u": ["https://twitter.com/beeminfra/status/1354567559673126913",
+"https://github.com/beeminder/beeminder/pull/1962",
+"https://github.com/beeminder/beeminder/pull/1990"]
+}, { // ------------------------------------------------------------------------
+x: "We were failing to log our own error because of a missing local variable in the GmailZero setup jobs.",
+u: ["https://github.com/beeminder/beeminder/pull/2046",
+"https://twitter.com/beeminfra/status/1357123122760011776"]
+}, { // ------------------------------------------------------------------------
+x: "Updated our Stripe gem, and updated the Stripe api version we are targeting via api headers.",
+"u": ["https://github.com/beeminder/beeminder/pull/2077",
+"https://twitter.com/beeminfra/status/1359643791326547969"],
+"t": "2021-02-10",
+"d": "2021-01-22"
+}, { // ------------------------------------------------------------------------
+"x": "A couple updates to the admin interface: bugfix with the user's \"x goals remaining\" count, and added the PPR setting.",
+"u": ["https://github.com/beeminder/beeminder/issues/2079",
+"https://github.com/beeminder/beeminder/pull/2088",
+"https://twitter.com/beeminfra/status/1362189553344241665"],
+"t": "2021-02-17",
+"d": "2021-01-25",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, /* ----------------------------------------------------------- end batch */ ]
 
@@ -812,16 +866,6 @@ https://github.com/beeminder/beeminder/commit/
 
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-"internally fixed all instances of 'retroratchet' to 'ratchet'"
-https://github.com/beeminder/beeminder/pull/1640
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-don't do the dogfood winner selection for $0 dogfoodie derails (doing so was kind of wolf crying)
-https://github.com/beeminder/beeminder/pull/1622
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-
 
 
 ## NEED HELP FROM ADAM:
