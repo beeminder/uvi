@@ -1168,6 +1168,7 @@ const batch2020may = [{
 "x": "Anchor links (the \"#stuff\" part at the end of the URL) can also link to subsections of tabs (and does the auto-scrolling), eg, bmndr.com/d/mass#goal-safety",
 "u": ["https://twitter.com/beemuvi/status/1266127129395073025",
       "https://github.com/beeminder/beeminder/issues/1369",
+      "https://github.com/beeminder/beeminder/issues/1347",
       "https://github.com/beeminder/beeminder/pull/1365"],
 "d": "2020-05-20",
 "t": "2020-05-28",
@@ -2441,7 +2442,8 @@ const batch2020oct = [{
 "x": "The precision (aka quantum) setting is now a dropdown (and never shows scientific notation) so that's way less confusing",
 "u": ["https://twitter.com/beemuvi/status/1321239237757317123",
       "https://github.com/beeminder/beeminder/issues/1702",
-      "https://github.com/beeminder/beeminder/issues/1583"],
+      "https://github.com/beeminder/beeminder/issues/1583",
+      "https://github.com/beeminder/beeminder/issues/1413"],
 "d": "2020-10-23",
 "t": "2020-10-27",
 "c": "Like how people would think '0' meant zero decimal places!"
@@ -2748,222 +2750,89 @@ const batch2020dec = [{
 "t": "2020-12-14",
 "c": "By Adam. Starting around the 14th is when the StatusCake graph gets drastically better",
 }, { // ------------------------------------------------------------------------
+"x": "All our alias domains redirect properly with every combination of www vs not, https vs not, subdomains, etc. Eg, http://blog.bmndr.co/nerds works now.",
+"u": ["https://twitter.com/beemuvi/status/1339001435606773760",
+      "https://github.com/beeminder/beeminder/issues/89"],
+"d": "2020-11-14",
+"t": "2020-12-15",
 }, { // ------------------------------------------------------------------------
+"x": "Error banners were persisting thru the next page load; you'd sometimes see an error about access to an autodata source or something in the wrong place #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1339370990367776768",
+      "https://github.com/beeminder/beeminder/issues/1968",
+      "https://github.com/beeminder/beeminder/pull/1969"],
+"d": "2020-12-04",
+"t": "2020-12-16",
+"c": "AKA flash messages; this is a fix of a specific instance of it but the gissue remains open because there are surely other instances of the same problem elsewhere",
 }, { // ------------------------------------------------------------------------
+"x": "Recommits that were close to the end date of the goal would result in a hideous/brick-wall \"road rows out of order\" error. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1339734991886929920",
+      "https://github.com/beeminder/beeminder/issues/1883",
+      "https://github.com/beeminder/beeminder/pull/1994"],
+"d": "2020-12-17",
+"t": "2020-12-17",
 }, { // ------------------------------------------------------------------------
+"x": "Goal-archiving UI-copy! Disambiguated canceling the goal vs canceling the archive, linked to the archive page when mentioning it, linked to help docs.",
+"u": ["https://twitter.com/beemuvi/status/1340092905428377601",
+      "https://github.com/beeminder/beeminder/issues/1712",
+      "https://github.com/beeminder/beeminder/pull/1998"],
+"d": "2020-12-18",
 }, { // ------------------------------------------------------------------------
+"x": "Also added a parenthetical to the \"since this goal is less than a week old\" copy to further explain, fleshed out some other copy, fixed some commas, etc",
+"u": ["https://twitter.com/beemuvi/status/1340093817949589505",
+      "https://github.com/beeminder/beeminder/issues/1712",
+      "https://github.com/beeminder/beeminder/pull/1998"],
+"d": "2020-12-18",
+"t": "2020-12-18",
+"c": "New copy blurbs: \"(After a week you must first wait through the archive process [link] before you are able to fully delete a goal)\" and \"After the countdown runs out, we cancel your pledge and move the goal to your archived gallery [link].\"",
 }, { // ------------------------------------------------------------------------
+"x": "Rewrote the deadline snoozing email copy: it's years old, not \"new\", and it now solicits feedback about possible changes to deadline snoozing",
+"u": ["https://twitter.com/beemuvi/status/1341535641201332224",
+      "https://github.com/beeminder/beeminder/issues/1985",
+      "https://github.com/beeminder/beeminder/pull/1997"],
+"d": "2020-12-18",
+"t": "2020-12-22",
 }, { // ------------------------------------------------------------------------
+"x": "We were ignoring the starting buffer you requested on new Twitter goals and just always giving you two days! Pretty egregious #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1343723071459344386",
+      "https://github.com/beeminder/beeminder/issues/2003",
+      "https://github.com/beeminder/beeminder/pull/2009"],
+"d": "2020-12-28",
+"t": "2020-12-28",
 }, { // ------------------------------------------------------------------------
+"x": "The numbers at the bottom of widgets from http://beeminder.com/widgets (orange/blue/green) were wrong since we got rid of lanes & the hovertext was broken #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1343723650281664512",
+"https://github.com/beeminder/beeminder/issues/1916",
+"https://github.com/beeminder/beeminder/pull/2010"],
+"c": "This was essentially the same thing as http://changelog.beeminder.com/#3389",
+"d": "2020-12-28",
+"t": "2020-12-28",
 }, { // ------------------------------------------------------------------------
+"x": "Fixed one bug (perhaps not the biggest bug) with the skatesum aggday option and made the trimmed mean option work again, not that anyone uses that. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1343803916299849728",
+      "https://github.com/beeminder/road/issues/169",
+      "https://github.com/beeminder/road/issues/170"],
+"d": "2020-12-08",
+"t": "2020-12-28",
 }, { // ------------------------------------------------------------------------
+"x": "Deconfused the UI-copy for changing default payment type from PayPal to Credit Card; also made it not submit the form if you didn't actually change anything",
+"u": ["https://twitter.com/beemuvi/status/1344445889058721792",
+      "https://github.com/beeminder/beeminder/issues/1570",
+      "https://github.com/beeminder/beeminder/pull/1953"],
+"d": "2020-12-01",
+"c": "Specifically: Updated the message when you change your default payment type to say \"changed your default to Credit Card\", because it was previously a generic \"updated your payment method\" which confused some folks about what was actually accomplished by checking that box. And the form submission thing is to only submit (and show the banner) if the checkmark changes sides, not every time you click it.",
 }, { // ------------------------------------------------------------------------
+"x": "Fixed up the default pledge cap section of Account Settings; was still referencing 'New Schedule' vs 'Old Schedule' (there is now only old schedge)",
+"u": ["https://twitter.com/beemuvi/status/1344446727181324288",
+      "https://github.com/beeminder/beeminder/issues/1984",
+      "https://github.com/beeminder/beeminder/pull/2017"],
+"d": "2020-12-30",
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
+"x": "The -/+ buttons on pledge steppers were always starting out enabled, even if they were at an upper or lower limit and ought to be disabled. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1344779220434653184",
+      "https://github.com/beeminder/beeminder/pull/2017",
+      "https://github.com/beeminder/beeminder/issues/1652",
+      "https://github.com/beeminder/beeminder/issues/1115"],
+"d": "2020-12-30",
+"t": "2020-12-31",
+"c": "Reseminata: (1) be infinibee, have a pledge cap of $5, (2) look at pledge section of goal page. Expectata: The '-' button is disabled because I'm not allowed to have a pledge cap less than $5. Resultata: Not disabled, but does disable itself when you click on it.",
 }, /* --------------------------------------------------------- end 2020dec */ ]
-
-
-var staged = [ {
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-// ratchet revamp: double check that we got the following things from https://github.com/beeminder/beeminder/pull/1640
-//* update the text box for WEEN/RASH ratchet after ratcheting
-//* check the bounds on WEEN/RASH ratcheting and don't allow to submit an amount larger than current buffer
-//  (we were only checking the bounds for MOAR/PHAT ratchets)
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, /* ---------------------------------------------------------- end staged */ ]
-
-/*********************************************************************************************************************************************************************
-[[PSA: add dates please!]]
-~~~~~~----------------------------- METASTAGED -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-MINI beebrain things: skatesum daily rate & trimmean
-https://github.com/beeminder/road/issues/169
-https://github.com/beeminder/road/issues/170
-pushed 2020-12-06
-depl'd 2020-12-08
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-BEEDROID: 
-1. FIX: Goalname that's a prefix of another goalname breaks search
-   https://github.com/beeminder/beedroid/issues/72
-   merged 2020-11-25, awaiting deploy to google play
-2. FIX: low space sync bug
-   https://github.com/beeminder/beedroid/issues/77
-3. CLEANUP: removed the "check for graph updates" frequency setting and "panic buffer" setting
-   https://github.com/beeminder/beedroid/issues/136
-   https://github.com/beeminder/beedroid/issues/62
-4. maybe something with beedroid's due-by table slide-out?
-   https://github.com/beeminder/beedroid/issues/147
-5. de-lane-ify the tally screen -- or was that part of the last release?
-   https://github.com/beeminder/beedroid/issues/143
-6. FIX: User reports "Tasker integration seems to break if goal is changed from manual to API"
-   https://github.com/beeminder/beedroid/issues/140
-7. Is this user-visible at all: Migrate to AndroidX
-   https://github.com/beeminder/beedroid/issues/127
-8. Sounds like this only affected beta versions: Widgets broken on upgrade from 3.3 beta 2 to beta 3
-   https://github.com/beeminder/beedroid/issues/148
-9. Stop showing user name when I am searching for goal
-   https://github.com/beeminder/beedroid/issues/152
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-fixed the thing with blue error banners persisting through the next page load so you see an error about your rescuetime auth or whatever in a totally wrong place
-https://github.com/beeminder/beeminder/issues/1968
-https://github.com/beeminder/beeminder/pull/1969
-is this part of that? https://github.com/beeminder/beeminder/commit/ff253064d4afce3b542e534670a663a9d1348fbb
-these banners should use flash.now
-* UVI: fixes the #1968 issue in goals controller
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-things with alias domains redirecting/expanding correctly
-eg "blog.bmndr.co/nerds" actually works now
-https://github.com/beeminder/beeminder/issues/89
-"d": "2020-11-14"
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-TODO: put this in the right spot for the beemios UVI for this
-PR from andy: adds a private / undocumented api endpoint for alerting the app of the minimum ios version
-https://github.com/beeminder/beeminder/pull/1214
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-"x": "(not yet deployed: gmailzero restarts of ancient goals get proper error, by Adam)",
-// Set autod error after Gmailzero issues
-// UVI: Users now get error messages when restarting really old Gmailzero goals instead of graph failures.
-"u": [
-      "https://github.com/beeminder/beeminder/issues/1650",
-      "https://github.com/beeminder/beeminder/pull/1821"],
-"c": "By Adam, merged on 2020-10-22 so deployed sometime after that. Failed to tweet/log it and then realized it was broken on 12-04.",
-// TODO: see gissue 1965
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-AWAITING BEEBODY DATABASE CLEANUP:
-giving a proper error if you somehow create road rows that start before the goal start date (tini)
-https://github.com/beeminder/beeminder/issues/1623
-https://github.com/beeminder/road/commit/e67e3e1df52652d00ec5d2abe645e803b1bc4fb4
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-// TODO: wait, why, this doesn't make sense, if it's not auto-summing you'd want the sum, right?
-"x": "For the rare goals that are aggday=sum but not auto-summing, we no longer show the total due in the blurb that tells you your safety buffer",
-"x": "Hide the total in the blurb with your safety buffer if the goal has a custom aggday of 'sum'. (Previously we were only hiding it when the goal is cumulative.)"
-"u": [
-      "https://github.com/beeminder/beeminder/issues/1285",
-      "https://github.com/beeminder/beeminder/pull/1494"],
-"d": "2020-07-08",
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-"x": "The \"headsum\" API output field is now identical to the hovertext for graph thumbnails",
-TODO: let's not tweet this till we rename refactor these "sum"-suffixed fields and come up with a better name than "headsum" for this one
-titlesum?
-https://github.com/beeminder/road/commit/ab6c09b9e91e9b167f81f18c06d864821822d2c2
-https://github.com/beeminder/road/issues/136
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-TODO: gissue this or something:
-dreev kinda wants to have a discussion about general principles for when to wrap things in shn(), when to conservaround, etc.
-probably the answer is: wrap everything shown to the user in shn(); never conservaround datapoints, just dueby values.
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-fatcyclist mongoid pagination bug, waiting to tweet till bmndr.com/fatcyclist is non-hideous
-https://github.com/beeminder/beeminder/pull/1196
-https://github.com/beeminder/beeminder/issues/1188
-https://github.com/beeminder/beeminder/commit/4e94d3a862039fb4f9d23e79ca4fd9a8628ce3e6
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-GMAILZERO: change blog link (probably wait for other copy changes before tweeting)
-https://github.com/beeminder/beeminder/commit/39cd4142c8fa119418ab5996187e77b53c3efb39
-https://github.com/beeminder/beeminder/issues/1002
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-TODO: already tweeted; merge links with existing UVI
-Wrap initial datapoint comment in shn.
-by adam
-https://github.com/beeminder/beeminder/issues/948
-https://github.com/beeminder/beeminder/pull/950
-https://github.com/beeminder/beeminder/commit/0435e5e5cc379df09b83111773c25183ed933c8f
-}, { // ------------------------------------------------------------------------   
-}, { // ------------------------------------------------------------------------
-SAFESUM
-1. Add safesum and test for safesum.
-   https://github.com/beeminder/beeminder/commit/52a60651c8d48f340d3ef2958dccc75c01c31669
-   https://github.com/beeminder/beeminder/pull/953
-2. https://github.com/beeminder/beeminder/issues/830
-}, { // ------------------------------------------------------------------------
-RASH BUG -- will this count as user-visible?
-https://github.com/beeminder/beeminder/issues/957 [oh, this was tweeted, says this gissue? https://changelog.beeminder.com/#3234]
-https://github.com/beeminder/beeminder/commit/d36a498b191218de3430e37e9f011be505a66335
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-SCHEDGE:
-1. got rid of the "Increase the pledge each time you derail" checkbox on the goal page
-}, { // ------------------------------------------------------------------------
-fixes timeouts in jsbrain_server? https://github.com/beeminder/road/issues/51
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-"x": "Super mini: removed \"Deprecated\" from the 'id' field in the api docs Goal resource -- https://changelog.beeminder.com/#2104 sort of myopically semi-broke the api, since we want you to use the slug as the identifier, but now you can change the goalname, so we'd definitely better keep the goal id around so api clients can piece things back together if someone goes and changes a goalname on them."
-"c": "it's super mini, but took lots of words to say the things."
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-~~~~~~----------------------------- CANDIDATES -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-wordpress plugin: github.com/beeminder/beeminder-ping
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-~~~~~~---------------------------------- IDEAS -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
-1. abslnw conversion for deathtonoisy means various UVIs like no more stupidly conservatively saying safe days to centerline because the stupid roadwidth could stupidly change
-2. http://forum.beeminder.com/t/please-let-me-rename-archived-goals/2746
-3. DREEV: point to help.beeminder.com in blog.beeminder.com/newbees and vice versa
-4. proper buttons on the blog like at the end of blog.beeminder.com/strava
-5. strava activity links on the datapoints page <= do that too for IFTTT and runkeeper where we get an event/recipe URI from the service
-6. https://forum.beeminder.com/t/api-create-goal-documentation-needs-updating/5547
-7. Peasy API docs gissues: https://github.com/beeminder/beeminder/issues/963
-~~~~~~-------------------- TOO LATE / TOO LAME -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
-* killing intercom: https://github.com/beeminder/beeminder/issues/633
-* milk static-401 for more uvis? 
-  - fixing/obviating the banner bug
-  - make it all work the same via the API
-* fixed some (most? many?) of the thing where flash banner shows up again after you leave current page & go to another page [maybe mostly only happens for admins?]
-* Vimium users can now jump to the goals on the dashboard with hotkeys.
-  We have no idea why this got better so we probably can't use it without corroboration that this is a genuine improvement! something about octicons apparently?
-* max-height for the landing page images, same commit url as an old one above about runkeeper:
-  https://github.com/beeminder/beeminder/commit/94e269275c4a02a1e12c5c28c42e2faef23205b3
-* small fix to the way we load new svg image after a graph reload -- should look a little smoother and less jumpy
-https://github.com/beeminder/beeminder/commit/2a859386e81dade3cc63f07c2ceeda5a2c63a281
-"c": "not sure if this will be a very minor improvement or a more noticeable one. was no better, possibly worse.
-*********************************************************************************************************************************************************************/

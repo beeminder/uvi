@@ -1003,7 +1003,7 @@ var batch2014aug = [
 "u": "https://twitter.com/beemuvi/status/502725295024402432",
 "t": "2014-08-22 07:53:45 +0000",
 }, /*************************************************************************/ {
-"x": "Fixed an (embarrassing, money burning) bug where we retried charges before saving new credit card, thus trying them against old one. #bugfix", 
+"x": "Fixed an (embarrassing, money burning) bug where we retried charges before saving your new credit card, thus trying them against the old one. #bugfix", 
 "u": "https://twitter.com/beemuvi/status/502885935755694080",
 "t": "2014-08-22 18:32:04 +0000",
 }, /*************************************************************************/ {

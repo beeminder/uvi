@@ -1294,6 +1294,7 @@ var batch2019jun = [{
 }, { // ------------------------------------------------------------------------
 "x": "Doh, UVI#3054+ messed up the +/- stepper in goal creation & restart for 'commit to' (in manual goal types) and the pledge cap picker. #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1139794198226296832",
+      "https://github.com/beeminder/beeminder/issues/649",
       "https://github.com/beeminder/beeminder/pull/650"],
 "d": "2019-06-14",
 "t": "2019-06-14",
@@ -1851,6 +1852,7 @@ var batch2019sep = [{
 //2019-09-07 00:06:33, 2019-09-06, 2019-09-07 00:06:33, 1, pending change/charge confusion webcopy
 "x": "We now say \"scheduled change\" (for when your pledge is going to drop) not \"pending change\" because it turns out that's very easy to misread as \"pending charge\"",
 "u": ["https://twitter.com/beemuvi/status/1170229105456898049",
+      "https://github.com/beeminder/beeminder/issues/769",
       "https://github.com/beeminder/beeminder/pull/773"],
 "d": "2019-09-05",
 "t": "2019-09-06",
@@ -1858,6 +1860,7 @@ var batch2019sep = [{
 //2019-09-07 00:06:33, 2019-09-06, 2019-09-07 00:06:33, 1, missing .com
 "x": "Changed a couple instances of \"email support@beeminder\" to add the \".com\" and got rid of the lingering reference to Intercom chat on http://beeminder.com/contact",
 "u": ["https://twitter.com/beemuvi/status/1170230569373843456",
+      "https://github.com/beeminder/beeminder/issues/770",
       "https://github.com/beeminder/beeminder/pull/772",
       "https://github.com/beeminder/beeminder/commit/9c30a19578a4a76f3117f0040a83df3baa8b0f75",
       "https://github.com/beeminder/beeminder/pull/763"],
