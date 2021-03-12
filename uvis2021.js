@@ -11,9 +11,11 @@ var batch2021jan = [{
 "x": "We bumped up the price of Beemium to $40/mo (if you don't already have it) and stopped selling the lifetime option for all plans",
 "u": ["https://twitter.com/beemuvi/status/1346258053755097088",
       "https://github.com/beeminder/beeminder/issues/313",
-      "https://github.com/beeminder/beeminder/pull/1921"],
+      "https://github.com/beeminder/beeminder/pull/1921",
+      "https://github.com/beeminder/beeminder/commit/cc8dd0a45118ce919035456057a7c5768cabc003"],
 "t": "2021-01-04",
 "d": "2020-12-31",
+"c": "Note the 'if false' things that comment out various sections. There may be things worth resurrecting from there.",
 }, { // ------------------------------------------------------------------------
 "x": "As probably just an easter-eggy new year's promotion, if that's not an oxymoron, the more-free-goals-please button now works for everyone on the free plan",
 "u": ["https://twitter.com/beemuvi/status/1346260055662895105",
@@ -404,35 +406,95 @@ var batch2021feb = [{
 "t": "2021-02-19",
 "c": "AKA toasts, as they're known to Android developers",
 }, { // ------------------------------------------------------------------------
+"x": "Fixed a malformed sentence on beeminder.com/premium and generally made the intro copy better for non-premium users",
+"u": ["https://twitter.com/beemuvi/status/1366548721857556485",
+      "https://github.com/beeminder/beeminder/issues/2116",
+      "https://github.com/beeminder/beeminder/pull/2117"],
+"d": "2021-02-22",
+"c": "Originally a mini-UVI but then Bee and Dreev edit-warred and it ended up way better",
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
+"x": "Commitwall means never having to say you're sorry, er, never having to say \"since you've added a credit card\" (in the new goal email)",
+"u": ["https://twitter.com/beemuvi/status/1366549043279663110",
+      "https://github.com/beeminder/beeminder/issues/2008",
+      "https://github.com/beeminder/beeminder/pull/2120"],
+"d": "2021-02-22",
+"c": "Actual copy change: \"here are the key things to remember since you've added a credit card\" -> \"here are the key things to remember about your new goal commitment\"",
 }, /* --------------------------------------------------------- end 2021feb */ ]
 
+var batch2021mar = [{
+"x": "We removed the old \"nomercy\" field from the API docs since that hasn't been a thing since UVI#2734; also fixed a broken link to RapidAPI",
+"u": ["https://twitter.com/beemuvi/status/1366619658124627971",
+      "https://github.com/beeminder/beeminder/issues/2044",
+      "https://github.com/beeminder/beeminder/pull/2102",
+      "https://github.com/beeminder/beeminder/issues/1942"],
+"d": "2021-03-01",
+"c": "RapidAPI used to be Mashape",
+}, { // ------------------------------------------------------------------------
+"x": "If you're learning a language in @clozemaster *from* multiple different languages, we were only counting your points from one of them. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1367270900823773184",
+      "https://github.com/beeminder/beeminder/issues/722",
+      "https://github.com/beeminder/beeminder/pull/2126"],
+"d": "2021-03-03",
+"t": "2021-03-03",
+"c": "So if you're learning, say, Arabic from both English and from French, we now count Clozemaster points in both categories, since they're both Arabic. Before it was random each time which from-language we counted, so that was pretty bad (for the likely 1 person who had this problem).",
+}, { // ------------------------------------------------------------------------
+"x": "There were some missing spaces in the blog blurb on the front page; #bugfix on the script that generates those. Also fixed date and author line getting merged.",
+"u": ["https://twitter.com/beemuvi/status/1367581630655655937",
+      "https://github.com/beeminder/beeminder/pull/2127",
+      "https://github.com/beeminder/beeminder/pull/2128"],
+"d": "2021-03-03",
+"t": "2021-03-04",
+}, { // ------------------------------------------------------------------------
+"x": "We were accidentally eliding your avatar / 'About You' blurb / URL on your gallery when you were logged in (it was only shown when you were logged out). #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1367582532011655168",
+      "https://github.com/beeminder/beeminder/issues/2029",
+      "https://github.com/beeminder/beeminder/pull/2130"],
+"d": "2021-03-04",
+"t": "2021-03-04",
+}, { // ------------------------------------------------------------------------
+"x": "In the do-less section of the megabreak page we were giving safe days but calling it a hard cap, which was all wrong (now we give actual hard cap). #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1370163495170318337",
+      "https://github.com/beeminder/beeminder/issues/1512",
+      "https://github.com/beeminder/beeminder/pull/2133"],
+"d": "2021-03-11",
+"t": "2021-03-11",
+"c": "Eg: if you had a rate of 3 cookies per day, and a current limit of 21 cookies, we'd say you had a safety buffer of 7 cookies, when it ought to have been either 7 days or 21 cookies",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, /* --------------------------------------------------------- end 2021mar */ ]
+
 var staged = [ {
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -497,14 +559,9 @@ https://github.com/beeminder/beeminder/issues/2087
 }, { // ------------------------------------------------------------------------
 [HOLD]
 Make /user/goal/graph.svg work like /user/goal/graph.png.
-
-I am not 100% confident this will work in production, because
-we have a thing where production and dev/test work differently with
-regards to formats, but this should get us closer.
-
+ADAM: I am not 100% confident this will work in production, because we have a thing where production and dev/test work differently with regards to formats, but this should get us closer.
 When this works, the UVI will be something like:
 You can now get the most recent SVG of a public goal's graph at user/goal/graph.svg.
-
 Works toward https://github.com/beeminder/beeminder/issues/2084
 then adam said "This actually did the job!" 
 does that mean it's a UVI now?
@@ -513,10 +570,11 @@ ADAM: I need to rework this. It'll be a quick change, but I have to step away at
 * rework the graph controller to have an svg style and use that
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-[MINI]
-remove "nomercy" from the API docs
-https://github.com/beeminder/beeminder/issues/2044
-(still seems to be there as of 2021-02-11 when i grep "nomercy" in api.bmndr.co )
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------

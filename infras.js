@@ -851,6 +851,18 @@ x: "Updated our Stripe gem, and updated the Stripe api version we are targeting 
 "t": "2021-02-17",
 "d": "2021-01-25",
 }, { // ------------------------------------------------------------------------
+"x": "A bunch more updates to the admin interface: rearranged a few things, updated the spacing between sections, simplified some things with the include statement.",
+"u": ["https://twitter.com/beeminfra/status/1364681582976536576"]
+}, { // ------------------------------------------------------------------------
+"x": "Even better: made the admin interface accessible from a user's gallery page, not just goal page, so we don't have awkwardness with users w/no goals left.",
+"u": ["https://twitter.com/beeminfra/status/1364681633891196928"]
+}, { // ------------------------------------------------------------------------
+"x": "removed an old unused controller and redundant routes associated with it (that now just redirect to the correct/new place)",
+"u": ["https://twitter.com/beeminfra/status/1369814931017588737",
+"https://github.com/beeminder/beeminder/pull/2109"],
+"d": "2021-02-12",
+"t": "2021-03-10"
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, /* ----------------------------------------------------------- end batch */ ]
@@ -864,6 +876,10 @@ var staged = [ { // note: sub-entries not allowed here in staging
 METASTAGED: --10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
 https://github.com/beeminder/beeminder/commit/
 
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 
