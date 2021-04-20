@@ -863,7 +863,36 @@ x: "Updated our Stripe gem, and updated the Stripe api version we are targeting 
 "d": "2021-02-12",
 "t": "2021-03-10"
 }, { // ------------------------------------------------------------------------
+"x": "We've been getting warnings in our test env that ActiveMailer has deprecated #deliver and we should be using deliver_now instead. Done.",
+"u": ["https://github.com/beeminder/beeminder/pull/2152",
+"https://twitter.com/beeminfra/status/1372336559547056128"]
 }, { // ------------------------------------------------------------------------
+"x": "Refactored the dashboard goal sorting javascript into its own module.",
+"u": ["https://twitter.com/beeminfra/status/1374822865481125896",
+"https://github.com/beeminder/beeminder/pull/2153"],
+"d": "2021-03-22",
+"t": "2021-03-24",
+}, { // ------------------------------------------------------------------------
+"x": "Fixed a problem that made deploys fail if the resque monitor wasn't already up and monitoring.",
+"u": ["https://twitter.com/beeminfra/status/1377382129391165440",
+"https://github.com/beeminder/beeminder/pull/2155"],
+"d": "2021-03-19",
+"t": "2021-03-31"
+}, { // ------------------------------------------------------------------------
+"x": "Wrote tests covering the ratchet bugs I fixed in UVI #3707 and #3708 so we won't unknowingly re-break it in the future (in that same exact way...)",
+"u": ["https://github.com/beeminder/beeminder/commit/7752fe1cac59ff106d0dc14fbaa81ff36f496ae4",
+"https://twitter.com/beeminfra/status/1379658978888609792"],
+"d": "2021-04-01",
+"t": "2021-04-06"
+}, { // ------------------------------------------------------------------------
+"x": "Updated some gems (mimemagic & capistrano-passenger) and turned up resque logging for diagnostic purposes.",
+"u": ["https://twitter.com/beeminfra/status/1382457274891788291",
+"https://github.com/beeminder/beeminder/pull/2200",
+"https://github.com/beeminder/beeminder/pull/2195",
+"https://github.com/beeminder/beeminder/pull/2181",
+"https://github.com/beeminder/beeminder/pull/2213"],
+"d": "2020-04-12",
+"t": "2020-04-14",
 }, { // ------------------------------------------------------------------------
 }, /* ----------------------------------------------------------- end batch */ ]
 
@@ -876,6 +905,15 @@ var staged = [ { // note: sub-entries not allowed here in staging
 METASTAGED: --10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
 https://github.com/beeminder/beeminder/commit/
 
+
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------

@@ -1109,6 +1109,7 @@ const batch2020may = [{
 "x": "The \"email me my full payment history\" (for users with more than 50 payments) button was broken since UVI#3321. #bugfix #regression",
 "u": ["https://twitter.com/beemuvi/status/1263596493681750016",
       "https://github.com/beeminder/beeminder/issues/1361",
+      "https://github.com/beeminder/beeminder/issues/1381",
       "https://github.com/beeminder/beeminder/pull/1363",
       "https://github.com/beeminder/beeminder/pull/1389",
       "https://github.com/beeminder/beeminder/commit/41c56493f4ad4017f305467520bcc93a04b64e92"],

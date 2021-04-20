@@ -460,36 +460,414 @@ var batch2021mar = [{
 "t": "2021-03-11",
 "c": "Eg: if you had a rate of 3 cookies per day, and a current limit of 21 cookies, we'd say you had a safety buffer of 7 cookies, when it ought to have been either 7 days or 21 cookies",
 }, { // ------------------------------------------------------------------------
+"x": "We added Simone Walters, part-time support workerbee, to our About Us page",
+"u": ["https://twitter.com/beemuvi/status/1370540088120156163",
+      "https://github.com/beeminder/beeminder/pull/2136"],
+"d": "2021-03-12",
+"t": "2021-03-12",
 }, { // ------------------------------------------------------------------------
+"x": "Also Robin Goins, our most recent addition to the support team (&amp; Batman sidekick?), is listed, and we finally removed Jon who sadly left us a while ago",
+"u": ["https://twitter.com/beemuvi/status/1370540088120156163",
+      "https://github.com/beeminder/beeminder/pull/2136"],
+"d": "2021-03-12",
+"t": "2021-03-12",
 }, { // ------------------------------------------------------------------------
+"x": "Nitpicky punctuation fix in UI copy (HT zzq) and a #bugfix where we'd say things like 'a 15 days' after ratcheting and before refreshing the page (HT krugerk)",
+"u": ["https://twitter.com/beemuvi/status/1371606687195394049",
+      "https://forum.beeminder.com/t/nitpicking-punctuation-in-beeminders-copy/9094?u=dreev",
+      "https://github.com/beeminder/beeminder/issues/2135",
+      "https://github.com/beeminder/beeminder/pull/2138",
+      "https://github.com/beeminder/beeminder/issues/2060",
+      "https://github.com/beeminder/beeminder/pull/2139"],
+"d": "2021-03-12",
+"t": "2021-03-15",
 }, { // ------------------------------------------------------------------------
+"x": "The error banners on the megabreak page are now the right color (red rather than yellow or blue). #css",
+"u": ["https://twitter.com/beemuvi/status/1371966960670363655",
+      "https://github.com/beeminder/beeminder/issues/1373"],
+"t": "2021-03-16",
 }, { // ------------------------------------------------------------------------
+"x": "Better error checking on the megabreak page: not allowing a negative safety buffer cap since apparently someone tried to do that? #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1371967152538808321",
+      "https://github.com/beeminder/beeminder/issues/2140"],
+"t": "2021-03-16",
 }, { // ------------------------------------------------------------------------
+"x": "Also if you set an autoratchet (safety buffer cap) on megabreak, you couldn't unset it. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1372335224751673344",
+      "https://github.com/beeminder/beeminder/issues/1294",
+      "https://github.com/beeminder/beeminder/pull/2141"],
+"t": "2021-03-17",
+"c": "Don't unset weekend_rates in megabreak; do unset other keys if passed a blank key",
 }, { // ------------------------------------------------------------------------
+"x": "Restarting an ancient GmailZero goal will now result in a helpful error message, alerting you to update your Gmail settings. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1372336482459918341",
+      "https://github.com/beeminder/beeminder/issues/1650",
+      "https://github.com/beeminder/beeminder/issues/1965",
+      "https://github.com/beeminder/beeminder/pull/1821",
+      "https://github.com/beeminder/beeminder/pull/2149",],
+"d": "2020-10-21",
+"t": "2021-03-17",
+"c": "By Adam. Failed to tweet/log it in October and then realized it was broken on 12-04. Fixed the ancillary gissue, #1965 (the error would immediately dismiss itself! a slight improvement on graph failure, I guess), on 2021-03-16.",
 }, { // ------------------------------------------------------------------------
+"x": "If you set tmin (aka x-min) to be in the future (via the API), we now give an error (on the graph) instead of silently failing to update the graph. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1372695581815009282",
+      "https://github.com/beeminder/road/issues/201"],
+"d": "2021-03-16",
+"t": "2021-03-18",
+"c": "We originally logged this as if it were a problem with the website",
 }, { // ------------------------------------------------------------------------
+"x": "The email bot was breaking due to iOS inserting some dumb unprintable (in the literal sense) character, '<feff>'. #bugfix HT Mary Renaud",
+"u": ["https://twitter.com/beemuvi/status/1372696913959555072",
+      "https://github.com/beeminder/beeminder/issues/985",
+      "https://github.com/beeminder/beeminder/pull/2147"],
+"d": "2021-03-16",
+"t": "2021-03-18",
+"c": "Probably this was Mailgun's fault since we count on it to strip out such things and it started missing this particular thing, so we added yet another special case to do it ourselves",
 }, { // ------------------------------------------------------------------------
+"x": "Turns out UVI#3155 (bad dates on Todoist tasks) was incomplete and some cases were still slipping through. We're pretty sure we got them all now! #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1373054519064424448",
+      "https://github.com/beeminder/beeminder/issues/818",
+      "https://github.com/beeminder/beeminder/pull/2148"],
+"d": "2021-03-16",
+"t": "2021-03-19",
+"c": "Only applied to very first import when creating the goal, setting dates to 1970 for unixtime-related reasons",
 }, { // ------------------------------------------------------------------------
+"x": "UVI#3682 introduced a bug where we'd double up the buffer number after a goal refresh (eg, \"You have 7 7 days of buffer\"). #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1373054849273663492",
+      "https://github.com/beeminder/beeminder/issues/2145",
+      "https://github.com/beeminder/beeminder/pull/2151"],
+"d": "2021-03-16",
+"t": "2021-03-19",
 }, { // ------------------------------------------------------------------------
+"x": "Improvements to tags (UVI#2080)! (HT zzq AKA Benjamin Fox) Goals now sorted by goalname on http://bmndr.co/tags and you can add multiple tags at once (space separated)",
+"u": ["https://twitter.com/beemuvi/status/1374143289213870080",
+      "https://github.com/beeminder/beeminder/issues/2159",
+      "https://github.com/beeminder/beeminder/pull/2158"],
+"d": "2021-03-22",
+"t": "2021-03-22",
+"c": "Wait, not just HT zzq -- actually implemented by zzq! See UVI#2080 for the documentation on tagging.",
 }, { // ------------------------------------------------------------------------
+"x": "Another tags improvement from zzq: Fancy autocomplete (for the first tag typed at least; see previous UVI) based on existing tags",
+"u": ["https://twitter.com/beemuvi/status/1374143341319753728",
+      "https://github.com/beeminder/beeminder/issues/2159",
+      "https://github.com/beeminder/beeminder/pull/2158"],
+"d": "2021-03-22",
+"t": "2021-03-22",
 }, { // ------------------------------------------------------------------------
+"x": "We've standardised on American ſpelling in the webcopy. As dreev colourfully put it, 'this is America, dammit!'",
+"u": ["https://twitter.com/beemuvi/status/1374509890136203265",
+      "https://github.com/beeminder/beeminder/issues/1847"],
+"d": "2021-03-22",
+"t": "2021-03-23",
+"c": "Just 'canceled/canceling' vs 'cancelled' etc so far. Keyword for greppability: spelling.",
 }, { // ------------------------------------------------------------------------
+"x": "We added the list of tags to the API output (and documented it at http://api.beeminder.com). Thanks to zzq again!",
+"u": ["https://twitter.com/beemuvi/status/1374510196702081025",
+      "https://github.com/beeminder/apidocs/pull/34",
+      "https://github.com/beeminder/beeminder/issues/2159",
+      "https://github.com/beeminder/beeminder/pull/2158"],
+"d": "2021-03-22",
+"t": "2021-03-23",
 }, { // ------------------------------------------------------------------------
+"x": "Added tmin and tmax (AKA x-min and x-max in the UI) to the API output / documented them as goal parameters in the API docs",
+"u": ["https://twitter.com/beemuvi/status/1374866485370257408",
+      "https://forum.beeminder.com/t/xmin-and-xmax-via-api/9031/7?u=dreev",
+      "https://github.com/beeminder/beeminder/issues/2121",
+      "https://github.com/beeminder/beeminder/pull/2160",
+      "https://github.com/beeminder/apidocs/pull/33"],
+"d": "2021-03-23",
+"t": "2021-03-24",
 }, { // ------------------------------------------------------------------------
+"x": "Further improvement on UVI#3687: we don't let you set a bad tmin (x-min) in the first place, via the API or otherwise (UVI#2170 may've covered the 'otherwise')",
+"u": ["https://twitter.com/beemuvi/status/1374866630132387841",
+      "https://github.com/beeminder/beeminder/issues/2163",
+      "https://github.com/beeminder/beeminder/pull/2160"],
+"d": "2021-03-23",
+"t": "2021-03-24",
+"c": "We now don't think this was ever user-visible outside the API. The javascript validations should've already prevented bad tmin values, according to UVI#2170.",
 }, { // ------------------------------------------------------------------------
+"x": "If you had PayPal for your payment method, there was no account listed on the Payment Method step of goal creation. Now there is. Stupid PayPal grumble grumble.",
+"u": ["https://twitter.com/beemuvi/status/1375232765256368129",
+      "https://github.com/beeminder/beeminder/issues/2028",
+      "https://github.com/beeminder/beeminder/pull/2166"],
+"d": "2021-03-25",
+"t": "2021-03-25",
 }, { // ------------------------------------------------------------------------
+"x": "We now trim spaces from goalnames in goal creation so we don't have to give annoying errors about trailing whitespace (apparently especially annoying on iOS)",
+"u": ["https://twitter.com/beemuvi/status/1375234539581108225",
+      "https://forum.beeminder.com/t/spaces-surrounding-goalnames/7658/2",
+      "https://github.com/beeminder/beeminder/issues/2037",
+      "https://github.com/beeminder/beeminder/pull/2168"],
+"d": "2021-03-25",
+"t": "2021-03-25",
 }, { // ------------------------------------------------------------------------
+"x": "Better error handling in our Trello autodata integration: standard blue banner like other integrations instead of 'there's an error' in the datapoint comment",
+"u": ["https://twitter.com/beemuvi/status/1376670083905245191",
+      "https://github.com/beeminder/beeminder/issues/2132",
+      "https://github.com/beeminder/beeminder/pull/2167"],
+"d": "2021-03-25",
+"t": "2021-03-29",
 }, { // ------------------------------------------------------------------------
+"x": "Also the Trello integration now tells you specifically if the beeminded Trello board goes missing",
+"u": ["https://twitter.com/beemuvi/status/1376670200494391298",
+      "https://github.com/beeminder/beeminder/issues/2132",
+      "https://github.com/beeminder/beeminder/pull/2167"],
+"d": "2021-03-25",
+"t": "2021-03-29",
 }, { // ------------------------------------------------------------------------
+"x": "We weren't letting you set tmax to today if it was Beeminder-today but calendar-tomorrow (ie, after midnight with a night-owl deadline). #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1376995692904738816",
+      "https://github.com/beeminder/beeminder/issues/2121",
+      "https://github.com/beeminder/beeminder/pull/2160"],
+"t": "2021-03-30",
+"c": "AKA x-max. Lord knows why you'd want tmax to be today. The error was 'tmax must be in the future'. So kind of technically correct for tmax=today so I guess the real bugginess was the inconsistency of not letting you do it just because it was after midnight when midnight's irrelevant on a nightowl-deadline goal.",
 }, { // ------------------------------------------------------------------------
+"x": "Dropped mention of post-mortems in legit check emails since no one gave those (plus other simplifications). Also fixed our spelling of 'PayPal' from UVI#3697.",
+"u": ["https://twitter.com/beemuvi/status/1376996380917436417",
+      "https://github.com/beeminder/beeminder/issues/2161",
+      "https://github.com/beeminder/beeminder/pull/2172"],
+"t": "2021-03-30",
 }, { // ------------------------------------------------------------------------
+"x": "As a follow-on to UVI#3332 (that we failed to announce at the time): you can now see all your premium credit on beeminder.com/payment",
+"u": ["https://twitter.com/beemuvi/status/1377409245973340161",
+      "https://blog.beeminder.com/deathtolife/",
+      "https://github.com/beeminder/beeminder/commit/5d67b974e4ac4b00261795821ef5c1a334894c99",
+      "https://github.com/beeminder/beeminder/pull/1877"],
+"d": "2020-10-28",
+"t": "2021-03-31",
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
+"x": "For about a week we were letting archived goals go into a weird limbo quasi-archived state that would prevent charges but still send legit checks. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1377409386470014979",
+      "https://github.com/beeminder/beeminder/issues/2169",
+      "https://github.com/beeminder/beeminder/pull/2185"],
+"t": "2021-03-31",
 }, /* --------------------------------------------------------- end 2021mar */ ]
+
+var batch2021apr = [{
+}, { // ------------------------------------------------------------------------
+"x": "As a failsafe for the quasi-archived limbo state, or other problems with archived goals, the legit check email now explicitly mentions this if it happens",
+"u": ["https://twitter.com/beemuvi/status/1377772368328675330",
+      "https://github.com/beeminder/beeminder/pull/2184",
+      "https://github.com/beeminder/beeminder/issues/2182"],
+"d": "2021-03-31",
+"t": "2021-04-01",
+"c": "We don't expect the specific thing from the previous UVI (headless triples in the road matrix) to trigger this but plenty of other things could",
+}, { // ------------------------------------------------------------------------
+"x": "Fixed a bug that would sometimes mangle your road by picking the wrong slope when automatically ending the goal after the archive took effect. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1377772542186811392",
+      "https://github.com/beeminder/beeminder/issues/2169",
+      "https://github.com/beeminder/beeminder/pull/2185"],
+"d": "2021-03-31",
+"t": "2021-04-01",
+"c": "We always used rfin, basically changing rcur to rfin, which could totally change the shape of the road. The version you'd see in your archived gallery could destroy the true pictue, like if you were skating the edge right up to the point that the archive happened, it might show you as being way above the road, or totally off the road.",
+}, { // ------------------------------------------------------------------------
+"x": "If your buffer on a Do Less goal was &le;1 &amp; you tried to ratchet, we'd nonsensically say \"Number of units must be less than current safety buffer\". #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1378134567387734016",
+      "https://github.com/beeminder/beeminder/issues/2179",
+      "https://github.com/beeminder/beeminder/pull/2186"],
+"d": "2021-04-01",
+"t": "2021-04-02",
+"c": "E.g., I have a buffer of 1 on my do-less goal and I want it to be 0.5, but Beeminder says \"No no no. The ratchet amount has to be less than your current safety buffer\" and you're like \"WTF? 0.5 is less than 1\".",
+}, { // ------------------------------------------------------------------------
+"x": "And yesterday's bugfix introduced a problem with Do More ratchets, where you could't ratchet by -1 (e.g. from 4 days to 3 days). #bugfix HT zedmango",
+"c": "gave the 'number of units must be less than current safety buffer' error",
+"u": ["https://twitter.com/beemuvi/status/1378134737122824195",
+      "https://github.com/beeminder/beeminder/issues/2187",
+      "https://github.com/beeminder/beeminder/pull/2188",
+      "https://forum.beeminder.com/t/ratcheting-is-now-broken/9147?u=dreev"],
+"d": "2021-04-02",
+"t": "2021-04-02",
+}, { // ------------------------------------------------------------------------
+"x": "Updated the error message for Do Less ratchets to include the amount that you must be less than (instead of just \"must be less than the current buffer\")",
+"u": ["https://twitter.com/beemuvi/status/1378135950040043521",
+      "https://github.com/beeminder/beeminder/issues/2187",
+      "https://github.com/beeminder/beeminder/pull/2188"],
+"d": "2021-04-02",
+"t": "2021-04-02",
+"c": "So, e.g., used to say \"Must be less than the current safety buffer\" and now says \"Must be less than the current buffer (4)\""
+}, { // ------------------------------------------------------------------------
+"x": "We now guarantee that the official end date for archived goals matches when the archive countdown ended (unclear if ever an issue other than from UVI#3704)",
+"u": ["https://twitter.com/beemuvi/status/1379215589961424899",
+      "https://github.com/beeminder/beeminder/issues/2169",
+      "https://github.com/beeminder/beeminder/pull/2177"],
+"t": "2021-04-05",
+}, { // ------------------------------------------------------------------------
+"x": "Goals should no longer insta-derail when you try to restart them! Or, well, we fixed one known cause by making them deadline aware. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1379578880294449152",
+      "https://github.com/beeminder/beeminder/issues/1312",
+      "https://github.com/beeminder/beeminder/pull/2192"],
+"d": "2021-04-05",
+"t": "2021-04-06",
+"c": "We do road adjustments on restart to make sure yesterday is not in the red (since that's our 'is derailed' condition) and because of neglecting deadline times and maybe timezones, we would sometimes adjust the wrong day and leave yesterday in the red, hence insta-derail on restart.",
+}, { // ------------------------------------------------------------------------
+"x": "Restarts would sometimes get the tmin (x-min) wrong -- either slightly suboptimal (yesterday vs today) or gave a graph error (tomorrow vs today). #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1379578805174497280",
+      "https://github.com/beeminder/beeminder/issues/1312",
+      "https://github.com/beeminder/beeminder/pull/2192"],
+"d": "2021-04-05",
+"t": "2021-04-06",
+}, { // ------------------------------------------------------------------------
+"x": "More recently, UVI#3696 introduced a new bug that would sometimes (like at certain times of day!) not let you restart the goal at all. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1379578986389413892",
+      "https://github.com/beeminder/beeminder/issues/2191",
+      "https://github.com/beeminder/beeminder/pull/2192"],
+"d": "2021-04-05",
+"t": "2021-04-06",
+"c": "E.g., after 23:00 in US Central time until you passed into the same day as servertime",
+}, { // ------------------------------------------------------------------------
+"x": "Daylight savings time bug for Garmin steps goals had, eg, the data for the 14th overwrite the data for the 13th after springing forward. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1379935632164724740",
+      "https://github.com/beeminder/beeminder/issues/573",
+      "https://github.com/beeminder/beeminder/pull/2199"],
+"d": "2021-04-07",
+"t": "2021-04-07",
+}, { // ------------------------------------------------------------------------
+"x": "Fixed confusion with Garmin sleep records where you go to sleep post-midnight one night and pre- the next. We now match what you see in the Garmin app. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1379936087565602818",
+      "https://github.com/beeminder/beeminder/issues/711",
+      "https://github.com/beeminder/beeminder/issues/2196",
+      "https://github.com/beeminder/beeminder/pull/2199"],
+"d": "2021-04-07",
+"t": "2021-04-07",
+"c": "If you go to bed at 1am one day and 10pm the next day, Garmin is smart about it and treats those as different days even though technically they're the same day. Gissue #711 is not fully resolved yet. But the confusion about sleep dates is described in it."
+}, { // ------------------------------------------------------------------------
+"x": "Rare 500-error when you restarted a do-less goal. It'd go away once the graph regenerated but now it doesn't happen in the first place. Even better! #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1380306232087506946",
+      "https://github.com/beeminder/beeminder/issues/1828",
+      "https://github.com/beeminder/beeminder/pull/2206"],
+"d": "2021-04-08",
+"t": "2021-04-08",
+}, { // ------------------------------------------------------------------------
+"x": "Since Nov 2020 we undercharged for premium if you'd used a coupon previously and then upgraded with a coupon (we applied both on top of each other!) #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1380667054085173250",
+      "https://github.com/beeminder/beeminder/issues/1993",
+      "https://github.com/beeminder/beeminder/pull/2208"],
+"d": "2021-04-09",
+"t": "2021-04-09",
+"c": "A so-called beaucoupbucksbleeder bug. Just kidding, it is not so called. Also not sure if it was actually that beaucoup of bucks.",
+}, { // ------------------------------------------------------------------------
+"x": "Restarting Odometer goals (especially Duolingo) could cause us to do an unnecessary and confusing odometer reset giving you way too much safety buffer. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1380667453592674305",
+      "https://github.com/beeminder/beeminder/issues/2207",
+      "https://github.com/beeminder/beeminder/pull/2210"],
+"d": "2021-04-09",
+"t": "2021-04-09",
+}, { // ------------------------------------------------------------------------
+"x": "We now mercifully disallow goalnames like 'archived' & 'settings' that would/could break things by colliding with other URLs. #bugfix HT zzq AKA Benjamin Fox",
+"u": ["https://twitter.com/beemuvi/status/1381758031243841539",
+      "https://forum.beeminder.com/t/avoid-using-archived-as-a-goals-slug/9183",
+      "https://github.com/beeminder/beeminder/issues/2211",
+      "https://github.com/beeminder/beeminder/pull/2212"],
+"d": "2021-04-12",
+"t": "2021-04-12",
+"c": "Eg archive, archived, archives, settings, shortcircuit, reminders, etc. TODO: breaks, payments, etc. Also TODO: it gives the error message a couple screens later!",
+}, { // ------------------------------------------------------------------------
+"x": "It would sometimes happen that our authorization to fetch your Withings data would expire and we'd fail silently instead of warning you! #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1381758528717615108",
+      "https://github.com/beeminder/beeminder/issues/1937",
+      "https://github.com/beeminder/beeminder/pull/2214"],
+"d": "2021-04-12",
+"t": "2021-04-12",
+"c": "We thought those 401 errors were rate limit warnings from Withings; doh.",
+}, { // ------------------------------------------------------------------------
+"x": "We were (weirdly) silently failing if you tried to (weirdly) edit your goal description to be identical to your goalname. Now we just shrug and let you. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1382117356541857793",
+      "https://github.com/beeminder/beeminder/issues/2176",
+      "https://github.com/beeminder/beeminder/pull/2216"],
+"d": "2021-04-13",
+"t": "2021-04-13",
+}, { // ------------------------------------------------------------------------
+"x": "FAQ modernizations: No more 'red button', mentioning pledge caps, describing where things live in the tabs below the graph, various copy tweaks",
+"u": ["https://twitter.com/beemuvi/status/1382117613874995204",
+      "https://github.com/beeminder/beeminder/issues/2202",
+      "https://github.com/beeminder/beeminder/pull/2217"],
+"d": "2021-04-13",
+"t": "2021-04-13",
+}, { // ------------------------------------------------------------------------
+"x": "A new extensive copyediting pass on the FAQ: clarifying about PayPal, post-derail respite, daily rates, 'bright red line' rather than 'yellow brick road', etc",
+"u": ["https://twitter.com/beemuvi/status/1382472499544297472",
+      "https://github.com/beeminder/beeminder/issues/2202#issuecomment-819792727",
+      "https://github.com/beeminder/beeminder/pull/2218"],
+"d": "2021-04-14",
+"t": "2021-04-14",
+}, { // ------------------------------------------------------------------------
+"x": "Added more disallowed goalnames (like 'goal') and made cuter error copy for if you violate it (also we cleaned up existing goals, emailed people, etc)",
+"u": ["https://twitter.com/beemuvi/status/1382472680083845121",
+      "https://github.com/beeminder/beeminder/issues/2219"],
+"d": "2021-04-14",
+"t": "2021-04-14",
+"c": "Error: For possibly obscure apiarian reasons, that goalname is not allowed",
+}, { // ------------------------------------------------------------------------
+"x": "The error message if you used a reserved slug (like 'goal' or 'archived') for a goalname showed up a couple screens after the fact. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1382840143422255106",
+      "https://github.com/beeminder/beeminder/issues/2219",
+      "https://github.com/beeminder/beeminder/pull/2224"],
+"d": "2021-04-15",
+"t": "2021-04-15",
+}, { // ------------------------------------------------------------------------
+"x": "In goal creation we were giving browser-default-style alerts for some errors instead of consistently using our red flash banners",
+"u": ["https://twitter.com/beemuvi/status/1382840398914203658",
+      "https://github.com/beeminder/beeminder/issues/2219",
+      "https://github.com/beeminder/beeminder/pull/2224"],
+"d": "2021-04-15",
+"t": "2021-04-15",
+}, { // ------------------------------------------------------------------------
+"x": "More aggressive warning that custom goal settings are Highly Advanced and Might Break Things; plus a tweak to the wording about the \"cumulative\" setting.",
+"u": ["https://twitter.com/beemuvi/status/1383206428119212034",
+      "https://github.com/beeminder/beeminder/issues/2180",
+      "https://github.com/beeminder/beeminder/pull/2222",
+      "https://github.com/beeminder/beeminder/pull/2229"],
+"d": "2021-04-16",
+"t": "2021-04-16",
+}, { // ------------------------------------------------------------------------
+"x": "Closed a loophole in deadbeating where simply adding data to the goal caused us to show you the true graph again (instead of the guilt trip image). #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1383206707111751683",
+      "https://github.com/beeminder/beeminder/issues/2119",
+      "https://github.com/beeminder/beeminder/pull/2227"],
+"d": "2021-04-16",
+"t": "2021-04-16",
+}, { // ------------------------------------------------------------------------
+"x": "We now don't allow goalnames over 20 characters, for various layout but mostly aesthetic reasons. Yay Opinionated Software?",
+"u": ["https://twitter.com/beemuvi/status/1384295124813844480",
+      "https://github.com/beeminder/beeminder/issues/1438",
+      "https://github.com/beeminder/beeminder/pull/2216",  // this one changed the length allowed by the js validation in elf
+      "https://github.com/beeminder/beeminder/pull/2216"], // this tweaked the wording of the error message
+"t": "2021-04-19",
+"c": "Deployed piecemeal: enforced in the UI in March with UVI#3698, in the API in ... April?",
+}, { // ------------------------------------------------------------------------
+"x": "Indirect UVI but we improved the emails we automatically send to ourselves and then manually reply to, with the user included, when they first sign up",
+"u": ["https://twitter.com/beemuvi/status/1384295609335566336",
+      "https://github.com/beeminder/beeminder/issues/1975"],
+"d": "2021-04-19",
+"t": "2021-04-19",
+"c": "Aka the new-newbee emails. The new subject line is \"beeminder welcomes you, $USERNAME, from a busybody workerbee\".",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, /* --------------------------------------------------------- end 2021apr */ ]
 
 var staged = [ {
 }, { // ------------------------------------------------------------------------
@@ -505,19 +883,6 @@ var staged = [ {
 
 /*********************************************************************************************************************************************************************
 ~~~~~~----------------------------- METASTAGED -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-[HOLD]
-TODO: fix gissue 1965 before tweeting this, bcuz #1965 is an issue where we *set* the error message, but there's a bug that 
-      immediately dismisses it specifically for gmailzero goals, sooooo, need to fix that before tweeting i guess.
-https://github.com/beeminder/beeminder/issues/1965
-"x": "restarting an ancient gmailzero goal will now result in a helpful error message getting shown, alerting you to update your gmail settings.",
-// UVI: Users now get error messages when restarting really old Gmailzero goals instead of graph failures.
-"u": [
-      "https://github.com/beeminder/beeminder/issues/1650",
-      "https://github.com/beeminder/beeminder/pull/1821"],
-"d": "2020-10-21"
-"c": "By Adam. Failed to tweet/log it in October and then realized it was broken on 12-04.",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 [HOLD]
@@ -570,11 +935,34 @@ ADAM: I need to rework this. It'll be a quick change, but I have to step away at
 * rework the graph controller to have an svg style and use that
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
+[HOLD]
+shortcuts in beemiOS?
+https://github.com/beeminder/BeeSwift/pull/273
+PR 2021-03-30
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
+glomar bug HT zzq
+"d": "2021-04-19",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
+[TODO: error message is done, not the API part]
+"x": "Goalname character limit now also enforced via the API; also we fixed off-by-one error in the error message (max characters is exactly 20)",
+"u": [
+      
+      ],
+"c": "The error message is \"Goalnames cannot be more than 20 characters\". See UVI#3729.",
 }, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+help docs updates by nicky
+https://forum.beeminder.com/t/help-docs-updates-as-uvis/6672/23?u=dreev
+"d": "2021-04-20",
+"c": "By Nicky",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+this looks user-visible and i don't remember tweeting it as of 2021-04-20:
+https://github.com/beeminder/beeminder/issues/2022
+https://github.com/beeminder/beeminder/pull/2222/commits/810ed72b48e19e5b915bde2973572019100636d4
+committed 2021-04-14
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -602,4 +990,5 @@ wordpress plugin: github.com/beeminder/beeminder-ping
   https://github.com/beeminder/beeminder/commit/94e269275c4a02a1e12c5c28c42e2faef23205b3
 * Got rid of the \"Increase the pledge each time you derail\" checkbox on the goal page as it was redundant with using Pledge Caps to stop pledge increases
   [BEE: nothing was tweeted as far I can see; but also you don't have a PR/Gissue to link to with this, so maybe that + the ancientness disqualifies it?]
+~~~~~~------------------------------------------------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
 *********************************************************************************************************************************************************************/
