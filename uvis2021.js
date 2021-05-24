@@ -539,6 +539,7 @@ var batch2021mar = [{
 "d": "2021-03-16",
 "t": "2021-03-19",
 }, { // ------------------------------------------------------------------------
+"f": true,
 "x": "Improvements to tags (UVI#2080)! (HT zzq AKA Benjamin Fox) Goals now sorted by goalname on http://bmndr.co/tags and you can add multiple tags at once (space separated)",
 "u": ["https://twitter.com/beemuvi/status/1374143289213870080",
       "https://github.com/beeminder/beeminder/issues/2159",
@@ -703,6 +704,7 @@ var batch2021apr = [{
 "x": "Restarts would sometimes get the tmin (x-min) wrong -- either slightly suboptimal (yesterday vs today) or gave a graph error (tomorrow vs today). #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1379578805174497280",
       "https://github.com/beeminder/beeminder/issues/1312",
+      "https://github.com/beeminder/beeminder/issues/342",
       "https://github.com/beeminder/beeminder/pull/2192"],
 "d": "2021-04-05",
 "t": "2021-04-06",
@@ -760,7 +762,7 @@ var batch2021apr = [{
       "https://github.com/beeminder/beeminder/pull/2212"],
 "d": "2021-04-12",
 "t": "2021-04-12",
-"c": "Eg archive, archived, archives, settings, shortcircuit, reminders, etc. TODO: breaks, payments, etc. Also TODO: it gives the error message a couple screens later!",
+"c": "Eg archive, archived, archives, settings, shortcircuit, reminders, etc. TODO: breaks, payments, etc.",
 }, { // ------------------------------------------------------------------------
 "x": "It would sometimes happen that our authorization to fetch your Withings data would expire and we'd fail silently instead of warning you! #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1381758528717615108",
@@ -842,33 +844,340 @@ var batch2021apr = [{
 "t": "2021-04-19",
 "c": "Aka the new-newbee emails. The new subject line is \"beeminder welcomes you, $USERNAME, from a busybody workerbee\".",
 }, { // ------------------------------------------------------------------------
+"f": true,
+"x": "Your payments page now also shows your pledge caps. http://beeminder.com/payments",
+"u": ["https://twitter.com/beemuvi/status/1385379870641823746",
+      "https://github.com/beeminder/beeminder/issues/1911",
+      "https://github.com/beeminder/beeminder/pull/2234"],
+"d": "2021-04-21",
+"t": "2021-04-22",
 }, { // ------------------------------------------------------------------------
+"x": "Help docs updates: troubleshooting Android notifications, iOS metrics, custom goal examples, iOS/Android login issues. http://help.beeminder.com",
+"u": ["https://twitter.com/beemuvi/status/1385380870488350722",
+      "https://forum.beeminder.com/t/help-docs-updates-as-uvis/6672/23?u=dreev"],
+"d": "2021-04-22",
+"t": "2021-04-22",
+"c": "By Nicky",
 }, { // ------------------------------------------------------------------------
+"x": "Security/privacy #bugfix: there was a subtle way to break our glomarizing / Slytherin 404s by requesting certain image URLs. HT Benjamin Fox (zzq)",
+"u": ["https://twitter.com/beemuvi/status/1385383525721862145",
+      "https://blog.beeminder.com/slytherin404/",
+      "https://github.com/beeminder/beeminder/issues/2230",
+      "https://github.com/beeminder/beeminder/pull/2232"],
+"d": "2021-04-19",
+"t": "2021-04-22",
+"c": "Not sure if this was a regression or if this vulnerability always existed. We fixed it the same day we learned about it. And to be clear, no private info was leaked, just that bad guys could've theoretically probed for the existence of bmndr.co/expartnersusername/lessporn or whatever.",
 }, { // ------------------------------------------------------------------------
+"x": "When the deadline field is grayed out because it's an autodata goal on which we can't support non-midnight deadlines, the tooltip now explains that",
+"u": ["https://twitter.com/beemuvi/status/1385386613149028352",
+      "https://github.com/beeminder/beeminder/issues/2022",
+      "https://github.com/beeminder/beeminder/pull/2222/commits/810ed72b48e19e5b915bde2973572019100636d4"],
+"d": "2021-04-14",
+"t": "2021-04-22",
+"c": "People kept thinking it was a bug that they couldn't change the deadline. Now if they read the words on the screen, they won't think that. Vacuously true statement!",
 }, { // ------------------------------------------------------------------------
+"x": "Our last Rails upgrade broke curl for some pages; also we now have better / less broken 404 errors for pages with weird extensions. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1385711070367555585",
+      "https://github.com/beeminder/beeminder/issues/1137",
+      "https://github.com/beeminder/beeminder/issues/1380",
+      "https://github.com/beeminder/beeminder/issues/1547"],
+"d": "2021-04-23",
+"t": "2021-04-23",
+"c": "By Adam. Curl was broken for pages without .html or .json extensions, and .js 404s were especially messed up. And all the previously weird/broken errors are plain text now.",
 }, { // ------------------------------------------------------------------------
+"x": "We deployed 2 additional servers! Most user-visible aspect is that there's noticeably less time between hitting your deadline and us processing the derailment",
+"u": ["https://twitter.com/beemuvi/status/1386827299085979649",
+      "https://github.com/beeminder/beeploy",
+      "https://github.com/beeminder/beeminder/issues/2011"],
+"d": "2021-04-09",
+"c": "Aka deadline-eking. New servers are ipsen and jemison.",
 }, { // ------------------------------------------------------------------------
+"f": true,
+"x": "Your forum profile now links to your Beeminder gallery! HT @philiphellyer and @nocas",
+"u": ["https://twitter.com/beemuvi/status/1387147748219056128",
+      "https://forum.beeminder.com/t/adding-link-to-beeminder-profile-on-user-card/9229"],
+"d": "2021-04-25",
+"t": "2021-04-27",
+"c": "By Philip, thanks to prompting from Ana of Postcrossing",
 }, { // ------------------------------------------------------------------------
+"x": "We fixed one reason for delays in fetching Strava data: we thought auth tokens lasted longer than they do and we weren't refreshing them. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1387192869937508356",
+      "https://github.com/beeminder/beeminder/issues/418",
+      "https://github.com/beeminder/beeminder/pull/2248"],
+"d": "2021-04-27",
+"t": "2021-04-27",
+"c": "We'd airhorn ourselves but from a user perspective, autodata fetches were just a no-op. Auth tokens last 3.5 hours; we thought it was 5 hours. So for amounts of time in between we'd just shrug instead of refreshing the token.",
 }, { // ------------------------------------------------------------------------
+"x": "Silly bitty #bugfix: 'load all datapoints' was disabled if your data was (somehow) mostly in the future. Beeminder now exhibits time reversal symmetry.",
+"u": ["https://twitter.com/beemuvi/status/1387551079001325574",
+      "https://github.com/beeminder/beeminder/issues/263",
+      "https://github.com/beeminder/beeminder/pull/2251"],
+"d": "2021-04-28",
+"t": "2021-04-28",
+"c": "As physicists say. See T-symmetry, entropic time, etc. And the 'somehow' being, in practice, 'you are user-mary'.",
 }, { // ------------------------------------------------------------------------
+"x": "Our 'contact us' form would silently drop messages if you specified an email address that our ESP considered shady (like '@inbox.ru'). #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1387551284274745344",
+      "https://github.com/beeminder/beeminder/issues/2247",
+      "https://github.com/beeminder/beeminder/pull/2252"],
+"d": "2021-04-28",
+"t": "2021-04-28",
+"c": "Mailgun. I think this was technically cuz the sender's domain was sort of graylisted by our mail servers. So the user has an 'inbox.ru' email address, that's legit, but so much spam gets sent from inbox.ru, that our mail server double checks messages that look like they come from there, and since the user didn't really send the message, we sent it ourselves, the check doesn't pass and the message gets tossed in the bin.",
 }, { // ------------------------------------------------------------------------
+"x": "We would sometimes send duplicate reminders due to a dumb misconfiguration of our job scheduler. Now we don't do that. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1387913440803450880",
+      "https://github.com/beeminder/beeminder/issues/1394",
+      "https://github.com/beeminder/beeploy/pull/25"],
+"t": "2021-04-29",
+"c": "Original fix like 11 months ago by Bee was just editing a config file directly on the server. Related infra: finally getting it correct in the beeploy repo, thanks to Adam. So now it's permanently fixed for real.",
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
+"x": "We failed to check username length in signup before getting your credit card and we'd make you re-enter your credit card if your username was too long! #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1387915863882231813",
+      "https://github.com/beeminder/beeminder/issues/1947",
+      "https://github.com/beeminder/beeminder/pull/2258"],
+"d": "2021-04-29",
+"t": "2021-04-29",
 }, /* --------------------------------------------------------- end 2021apr */ ]
 
+var batch2021may = [{
+"x": "We added a premium FAQ item about why the Beemium plan is so pricey and how you probably don't really want it",
+"u": ["https://twitter.com/beemuvi/status/1389728874989117440",
+      "https://github.com/beeminder/beeminder/pull/2272",
+      "https://github.com/beeminder/beeminder/issues/2115"],
+"d": "2021-05-04",
+"t": "2021-05-04",
+}, { // ------------------------------------------------------------------------
+"x": "Fixed margins and centering of the logos for autodata sources to the right of your graph on the graph page. #css #bugfix HT krugerk",
+"u": ["https://twitter.com/beemuvi/status/1389729825217077249",
+      "https://github.com/beeminder/beeminder/issues/2150",
+      "https://github.com/beeminder/beeminder/pull/2273"],
+"d": "2021-05-04",
+"t": "2021-05-04",
+}, { // ------------------------------------------------------------------------
+"x": "And a similar #css fix for the manual data entry box, both newbee and advanced",
+"u": ["https://twitter.com/beemuvi/status/1390093607072194562",
+      "https://github.com/beeminder/beeminder/issues/2150",
+      "https://github.com/beeminder/beeminder/pull/2273",
+      "https://github.com/beeminder/beeminder/pull/2277"],
+"d": "2021-05-04",
+"t": "2021-05-05",
+}, { // ------------------------------------------------------------------------
+"x": "Goalname character limit now also enforced via the API; also we fixed an off-by-one error in the error message (max characters is exactly 20)",
+"u": ["https://twitter.com/beemuvi/status/1390093688613658626",
+      "https://blog.beeminder.com/goalnames",
+      "https://github.com/beeminder/beeminder/issues/1438",
+      "https://github.com/beeminder/beeminder/pull/2270"],
+"d": "2021-05-04",
+"t": "2021-05-05",
+"c": "The error message is \"Goalnames cannot be more than 20 characters\". See UVI#3729.",
+}, { // ------------------------------------------------------------------------
+"x": "We no longer give an ugly error if all your datapoints are somehow in the future (as can happen when changing deadline right after goal creation). #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1390424817057234944",
+      "https://forum.beeminder.com/t/request-include-deadline-in-goal-creation-wizard/9248/7?u=dreev",
+      "https://github.com/beeminder/road/issues/206"],
+"d": "2021-05-06",
+"t": "2021-05-06",
+"c": "HT narthur",
+}, { // ------------------------------------------------------------------------
+"f": true,
+"x": "You can now change settings (a subset of them, the ones that don't require the graph to be regenerated) for archived goals",
+"u": ["https://twitter.com/beemuvi/status/1390454485550465024",
+      "https://github.com/beeminder/beeminder/issues/1003",
+      "https://github.com/beeminder/beeminder/pull/2281"],
+"d": "2021-05-06",
+"t": "2021-05-06",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "Specifically, you can change goalname, description, goal units, y-axis label, fine print, visibility of fine print, other privacy settings, and supporters",
+"u": ["https://twitter.com/beemuvi/status/1390454582715633665",
+      "https://github.com/beeminder/beeminder/issues/1003",
+      "https://github.com/beeminder/beeminder/pull/2281"],
+"d": "2021-05-06",
+"t": "2021-05-06",
+}, { // ------------------------------------------------------------------------
+"s": true,
+"x": "Also there's a helpful note about the limitations of what you can change about archived goals (at the top, and also at the bottom about supporters)",
+"u": ["https://twitter.com/beemuvi/status/1390454735258329088",
+      "https://github.com/beeminder/beeminder/issues/1003",
+      "https://github.com/beeminder/beeminder/pull/2281"],
+"d": "2021-05-06",
+"t": "2021-05-06",
+"c": "Specifically, you can remove supporters but not add them. Not that it matters, since supporters should never be bugged about an archived goal anyway.",
+}, { // ------------------------------------------------------------------------
+"x": "We missed updating the error message for 'goalname is too long' in the API for the new 20-character limit. (Also we grandfathered all existing long goalnames)",
+"u": ["https://twitter.com/beemuvi/status/1391895480414605312",
+      "https://forum.beeminder.com/t/bug-errors-slug-is-too-long-max-is-50-characters/9270",
+      "https://github.com/beeminder/beeminder/pull/2282"],
+"t": "2021-05-10",
+"c": "HT krugerk",
+}, { // ------------------------------------------------------------------------
+"x": "UVI#2749 disallowed goal units that start with a number, but only at goal creation. Now it's enforced always, with a nice error message explaining goal units.",
+"u": ["https://twitter.com/beemuvi/status/1391899107254407169",
+      "https://github.com/beeminder/beeminder/issues/1017",
+      "https://github.com/beeminder/beeminder/pull/2274"],
+"d": "2021-05-10",
+"t": "2021-05-10",
+}, { // ------------------------------------------------------------------------
+"x": "Use cmd+enter (or ctrl+enter for non-Mac folks) to submit datapoints on the dashboard and on goal page (finally!)",
+"u": ["https://twitter.com/beemuvi/status/1392267539888017408",
+      "https://github.com/beeminder/beeminder/issues/1859",
+      "https://github.com/beeminder/beeminder/pull/2288"],
+"d": "2021-05-11",
+"t": "2021-05-11",
+}, { // ------------------------------------------------------------------------
+"x": "We've changed \"yellow brick road\" to \"bright red line\" in various places in the webcopy. Full terminological transition to come...",
+"u": ["https://twitter.com/beemuvi/status/1392268485506441216",
+      "https://github.com/beeminder/beeminder/issues/2259",
+      "https://github.com/beeminder/beeminder/pull/2287"],
+"d": "2021-05-11",
+"t": "2021-05-11",
+"c": "Draftin, taglines, overview page, ...",
+}, { // ------------------------------------------------------------------------
+"x": "The watermark on your graph indicating how much safety buffer you have now shows an infinity sign if and only if you're safe past the goal end date",
+"u": ["https://twitter.com/beemuvi/status/1392626683291717634",
+      "https://github.com/beeminder/road/issues/207"],
+"d": "2021-05-12",
+"t": "2021-05-12",
+"c": "Previously we gave a semi-random number of days or day of the week if you were safe past tfin and we used the infinity symbol specifically for >999d of safety buffer",
+}, { // ------------------------------------------------------------------------
+"x": "And if you just have a stupid amount of safety buffer, it always shows the number of days or '>999d' if more than 3 digits",
+"u": ["https://twitter.com/beemuvi/status/1392626883817185282",
+      "https://github.com/beeminder/road/issues/207"],
+"d": "2021-05-12",
+"t": "2021-05-12",
+}, { // ------------------------------------------------------------------------
+"x": "Added your premium subscription info to the payments page, and to account settings, because no one thinks to look on beeminder.com/premium",
+"u": ["https://twitter.com/beemuvi/status/1392991884146974720",
+      "https://github.com/beeminder/beeminder/issues/1826",
+      "https://github.com/beeminder/beeminder/pull/2292"],
+"d": "2021-05-13",
+"t": "2021-05-13",
+"c": "And even if they do look at /premium, there's definitely banner blindness with the section at the top that tells you about your current subscription",
+}, { // ------------------------------------------------------------------------
+"x": "When your premium plan is about to renew (which we've always emailed you about), there's now a button at the top of the premium page to cancel it",
+"u": ["https://twitter.com/beemuvi/status/1392995771771883528",
+      "https://github.com/beeminder/beeminder/issues/1826",
+      "https://github.com/beeminder/beeminder/pull/2292"],
+"d": "2021-05-13",
+"t": "2021-05-13",
+}, { // ------------------------------------------------------------------------
+"x": "And the same button is available in your account settings, in case you head there after learning your premium subscription's about to renew",
+"u": ["https://twitter.com/beemuvi/status/1393355314108407811",
+      "https://github.com/beeminder/beeminder/issues/1826",
+      "https://github.com/beeminder/beeminder/pull/2292"],
+"d": "2021-05-13",
+"t": "2021-05-14",
+"c": "Originally tweeted as 'payment settings' instead of 'account settings'. This was a pretty common support issue, so it's as much for Bee and Nicky as for the users. Someone gets the \"we're renewing your subscription\" charge email and replies like \"wait, I don't want that subscription; please cancel!\". So now there's a way for the user to do it instead.",
+}, { // ------------------------------------------------------------------------
+"x": "We made the cancel button just always be shown at the top of the premium page so you don't have to figure out to click downgrade to the free plan",
+"u": ["https://twitter.com/beemuvi/status/1393356587419410434",
+      "https://github.com/beeminder/beeminder/issues/2294",
+      "https://github.com/beeminder/beeminder/pull/2293"],
+"d": "2021-05-14",
+"t": "2021-05-14",
+"c": "Consistency, anti-magic, etc",
+}, { // ------------------------------------------------------------------------
+"x": "Besides the new button, the bigger improvement is the ability to downgrade after getting the email and before you pay for the new month (or however long)",
+"u": ["https://twitter.com/beemuvi/status/1394440929872805888",
+      "https://github.com/beeminder/beeminder/issues/1826",
+      "https://github.com/beeminder/beeminder/pull/2292"],
+"d": "2021-05-13",
+"t": "2021-05-17",
+"c": "An especially big improvement because even if you knew to downgrade to the free plan, by the time you got the email it was too late to avoid the charge for the new month or however long (unless you asked support, of course)",
+}, { // ------------------------------------------------------------------------
+"x": "New Strava goals were broken for the last 20 days (sob-emoji), failing to ever start fetching your data. Regression introduced by UVI#3738. #bugfix #regression",
+"u": ["https://twitter.com/beemuvi/status/1394441943510228993",
+      "https://github.com/beeminder/beeminder/issues/2300",
+      "https://github.com/beeminder/beeminder/pull/2299"],
+"d": "2021-05-17",
+"t": "2021-05-17",
+"c": "We're emailing all affected users. The shame!",
+}, { // ------------------------------------------------------------------------
+"x": "Goodbye Yellow Brick Road. UVI#3754 did this in some key places and now we've done it methodically throughout the webcopy. Viva la Bright Red Line!",
+"u": ["https://twitter.com/beemuvi/status/1394804905462747136",
+      "https://github.com/beeminder/beeminder/issues/2305"],
+"d": "2021-05-18",
+"t": "2021-05-18",
+"c": "Still missing: The API docs, the help docs, the blog archives (which probably we won't do), and God knows what else we're forgetting...",
+}, { // ------------------------------------------------------------------------
+"x": "We also purged all references to roads in what we now call the visual graph editor at road.beeminder.com -- graph matrix instead of road matrix, etc etc.",
+"u": ["https://twitter.com/beemuvi/status/1394805090309992451",
+      "https://github.com/beeminder/road/commit/ea446d7a0a9abcca3dcaed2d9410c4cc7759dd86"],
+"d": "2021-05-17",
+"t": "2021-05-18",
+}, { // ------------------------------------------------------------------------
+"x": "We broke our error checking for amount of initial safety buffer on goal creation. It was allowing invalid strings and then breaking uglily. #bugfix #regression",
+"u": ["https://twitter.com/beemuvi/status/1395528112083931138",
+      "https://github.com/beeminder/beeminder/issues/382",
+      "https://github.com/beeminder/beeminder/pull/2313"],
+"t": "2021-05-20",
+}, { // ------------------------------------------------------------------------
+"x": "There's now also a limit of 30 days of initial safety buffer when creating a goal",
+"u": ["https://twitter.com/beemuvi/status/1395528165691297796",
+      "https://github.com/beeminder/beeminder/issues/382",
+      "https://github.com/beeminder/beeminder/pull/2313"],
+"t": "2021-05-20",
+}, { // ------------------------------------------------------------------------
+"x": "Also we were never validating amount of initial safety buffer for any of the autodata integrations. Now we are! #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1395890143190421507",
+      "https://github.com/beeminder/beeminder/issues/382",
+      "https://github.com/beeminder/beeminder/pull/2313"],
+"d": "2021-05-20",
+"t": "2021-05-21",
+}, { // ------------------------------------------------------------------------
+"x": "Added a warning to the API docs about undocumented things; also added 'gunits' to the list of required params for goal creation",
+"u": ["https://twitter.com/beemuvi/status/1395890949365002244",
+      "https://github.com/beeminder/beeminder/issues/1673",
+      "https://github.com/beeminder/apidocs/commit/9845f49da7ffe201e972750f31183aae8530a2a7"],
+"t": "2021-05-21",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, /* --------------------------------------------------------- end 2021may */ ]
+
+  
 var staged = [ {
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -883,7 +1192,6 @@ var staged = [ {
 
 /*********************************************************************************************************************************************************************
 ~~~~~~----------------------------- METASTAGED -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
-}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 [HOLD]
 // TODO: Make a decision about this one! either tweet it because it is a change that happened, or 
@@ -941,28 +1249,65 @@ https://github.com/beeminder/BeeSwift/pull/273
 PR 2021-03-30
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-glomar bug HT zzq
-"d": "2021-04-19",
+TODO: emailing people and force-changing their goalnames
+"x": "",
+https://github.com/beeminder/beeminder/pull/2276
+}, { // ------------------------------------------------------------------------
+[HOLD]
+code combat integration.
+https://github.com/beeminder/beeminder/pull/2244
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-[TODO: error message is done, not the API part]
-"x": "Goalname character limit now also enforced via the API; also we fixed off-by-one error in the error message (max characters is exactly 20)",
-"u": [
-      
-      ],
-"c": "The error message is \"Goalnames cannot be more than 20 characters\". See UVI#3729.",
+WIP: punctuation after hashtags allowed
+https://github.com/beeminder/road/issues/142
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-help docs updates by nicky
-https://forum.beeminder.com/t/help-docs-updates-as-uvis/6672/23?u=dreev
-"d": "2021-04-20",
-"c": "By Nicky",
+[HOLD]
+fixed the thing that was going to break with toggl's api; probably doesn't count as user-visible (cuz we were on top of shit)
+https://github.com/beeminder/beeminder/issues/2290
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-this looks user-visible and i don't remember tweeting it as of 2021-04-20:
-https://github.com/beeminder/beeminder/issues/2022
-https://github.com/beeminder/beeminder/pull/2222/commits/810ed72b48e19e5b915bde2973572019100636d4
-committed 2021-04-14
+[WIP?]
+Set API to be json only
+Remove extra respond_tos.
+Add base controller format override, along with a bunch of notes, so we can figure out what we did faster, next time.
+For #1552
+UVI: API users can once again get json from API urls that don't end in .json, like api/v1/users/me.
+TODO: before merging this, add test for api/v1/users/me that fails without this change
+TODO: add reference to wiki page in comments
+TODO: review with @bsoule
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+[HOLD]
+beebrain: say 'eke' instead of :) if you're at tfin but on the wrong side of the bright red line. probably should be a normal beemergency in that case
+https://github.com/beeminder/road/issues/172
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+[WIP FROM ADAM]
+Rework MaintenanceJob.
+MaintenanceJob now spawns a MaintainGoalJob for each goal that should have maintenance run.
+MaintainGoalJobs run both the RefreshJob and the GraphJob without putting them back on the queue.
+I removed maintenance refreshes from goal.queue_for_refresh, and renamed it to queue_for_user_refresh.
+For gissue #2279
+This should lead to a UVI of smaller eking windows on non-HH:00 deadline goals.
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+"x": "So many more instances of 'road' and 'YBR' etc that we missed! We got them all for real now, we think, including the help pages!",
+
+https://github.com/beeminder/beeminder/issues/2305
+https://github.com/beeminder/beeminder/issues/2317 -- hello-weight-loss landing page
+https://github.com/beeminder/beeminder/pull/2309
+https://github.com/beeminder/beeminder/commit/58e94a72362d8889cce735d7e062b62de547fc12
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------

@@ -37,14 +37,14 @@ c: comment / note to selves              [string]
 Tentative refactor:
 
 ```
-f: featured / bolded / highlighted       [bool: default false]
-i: sub-UVI / indented                    [bool: default false]
-c: continuation / no new number          [bool: default false]
-x: text of UVI / log entry               [string]
-l: list of links / urls                  [list of strings]
-d: date deployed                         [YYYY-MM-DD string]
-e: date tweeted/logged/announced/entered [YYYY-MM-DD string]
-s: comment / note to selves              [string]
+f: Featured / bolded / highlighted       [bool: default false]
+i: sub-UVI / Indented                    [bool: default false]
+c: Continuation / no new number          [bool: default false]
+x: teXt of UVI / log entry               [string]
+l: list of Links / urls                  [list of strings]
+d: date Deployed                         [YYYY-MM-DD string]
+e: date tweeted/logged/announced/Entered [YYYY-MM-DD string]
+s: comment / note to Selves              [string]
 ```
 
 ## TODO LIST

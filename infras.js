@@ -894,6 +894,32 @@ x: "Updated our Stripe gem, and updated the Stripe api version we are targeting 
 "d": "2020-04-12",
 "t": "2020-04-14",
 }, { // ------------------------------------------------------------------------
+"x": "Allow admins to give negative credit (mostly this is important for being able to fix mistakes)",
+"u": ["https://github.com/beeminder/beeminder/pull/2236",
+"https://twitter.com/beeminfra/status/1385001214585171977"],
+"d": "2021-04-21",
+"t": "2021-04-21"
+}, { // ------------------------------------------------------------------------
+"x": "Redecorating in the admin interfaces; regrouped some goal fields to make more sense, and added last active date ",
+"u": ["https://github.com/beeminder/beeminder/pull/2237",
+"https://twitter.com/beeminfra/status/1387551794679619584"],
+"d": "2021-04-21",
+}, { // ------------------------------------------------------------------------
+"x": "We can now deploy test web servers and test worker servers on our machines with an ansible script",
+"u": ["https://github.com/beeminder/beeploy/pull/25",
+"https://twitter.com/beeminfra/status/1390088649803399168"],
+"d": "2021-04-08",
+"t": "2021-05-05",
+"c": "we could a little bit do this before, but now it is fully automated push a button and voila"
+}, { // ------------------------------------------------------------------------
+"x": "Fixed up how we're using Let's Encrypt so that updating our SSL certificates is much less manual than before.",
+"t": "2021-05-12",
+"u": ["https://twitter.com/beeminfra/status/1392626604770168832"]
+}, { // ------------------------------------------------------------------------
+"x": "Deploying to our test web servers and test worker servers is similar to deploying to production now",
+"u": ["https://twitter.com/beeminfra/status/1395148665002422275"],
+"t": "2021-05-19"
+}, { // ------------------------------------------------------------------------
 }, /* ----------------------------------------------------------- end batch */ ]
 
 var staged = [ { // note: sub-entries not allowed here in staging
@@ -917,14 +943,9 @@ https://github.com/beeminder/beeminder/commit/
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
 
 
 ## NEED HELP FROM ADAM:
-* massive improvements to our ansible deployment scripts so that we can now spin up a new web server from scratch in about an hour 
-* including adding some sexy test suite thingie into the mix with ansible [help?]
 * a bunch of work to get honeycomb into our background workers so we can monitor stuff there too [did this actually resolve to a positive end?]
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
