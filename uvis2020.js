@@ -619,7 +619,7 @@ var batch2020mar = [{
 "t": "2020-03-24",
 "c": "We could milk this for a lot of UVIs (expost docs are responsive now, there's a sidebar css class, etc etc) but it's not part of Beeminder proper so we're compromising and lumping it into one",
 }, { // ------------------------------------------------------------------------
-"x": "On your goal page, we linkify stuff you put in your goal description, but we weren't linkifying on the dashboard, so you got ugly '<a href=...' stuff. #bugfix",
+"x": "On your goal page, we linkify stuff you put in your goal description, but we weren't linkifying on the dashboard, so you got ugly '&lt;a href=...' stuff. #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1242600958728626176",
       "https://github.com/beeminder/beeminder/issues/1171",
       "https://github.com/beeminder/beeminder/pull/1176"],
@@ -2700,6 +2700,7 @@ const batch2020dec = [{
 "x": "Important #bugfix in the email bot parser to be robust to some weird quoting that the Fastmail email client was doing. HT Andy Brett",
 "u": ["https://twitter.com/beemuvi/status/1335023209465303042",
       "https://github.com/beeminder/beeminder/issues/1925",
+      "https://github.com/beeminder/beeminder/issues/632",
       "https://github.com/beeminder/beeminder/pull/1926"],
 "d": "2020-11-16",
 "t": "2020-12-04",
