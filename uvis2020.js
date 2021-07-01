@@ -343,8 +343,8 @@ var batch2020feb = [{
 }, { // ------------------------------------------------------------------------
 "x": "Newly added datapoints were sorting to the bottom of the dashboard with sort-by = 'recently updated', rather than the top where they ought to've gone. #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1229922524844085248",
-      "https://github.com/beeminder/beeminder/pull/1116",
-      "https://github.com/beeminder/beeminder/issues/1086"],
+      "https://github.com/beeminder/beeminder/issues/1086",
+      "https://github.com/beeminder/beeminder/pull/1116"],
 "d": "2020-02-18",
 "t": "2020-02-18",
 "c": "This was a javascript layer thing, so reloading the page would correct the sort problem. But now there's no problem!",
