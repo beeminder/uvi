@@ -1131,53 +1131,231 @@ var batch2021may = [{
       "https://github.com/beeminder/apidocs/commit/9845f49da7ffe201e972750f31183aae8530a2a7"],
 "t": "2021-05-21",
 }, { // ------------------------------------------------------------------------
+"x": "So many more instances of 'road' and 'YBR' etc that we missed! Also got the help docs, but not yet the API docs or the video or the blog.",
+"u": ["https://twitter.com/beemuvi/status/1397327257778024448",
+      "https://github.com/beeminder/beeminder/issues/2305", 
+      "https://github.com/beeminder/beeminder/issues/2317",
+      "https://github.com/beeminder/beeminder/pull/2319",
+      "https://github.com/beeminder/beeminder/pull/2309",
+      "https://github.com/beeminder/beeminder/commit/58e94a72362d8889cce735d7e062b62de547fc12"],
+"d": "2021-05-24",
+"t": "2021-05-25",
+"c": "Also still have a lot of images and screenshots to update. Oh and we killed an old road-ridden hello-weightloss landing page that we never used, redirecting it to the front page",
 }, { // ------------------------------------------------------------------------
+"x": "Updated our Super Lame captcha in accordance with the spring yellow-brick-road cleaning. It now asks you to name our mascot. HT @brennankbrown",
+"u": ["https://twitter.com/beemuvi/status/1397327472799014916",
+      "https://github.com/beeminder/beeminder/issues/2315",
+      "https://github.com/beeminder/beeminder/pull/2318"],
+"t": "2021-05-25",
 }, { // ------------------------------------------------------------------------
+"x": "Facepalm! The previous UVI broke signups for about 20 minutes, giving you a 500 error if you tried to visit the signup page. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1397327766245101573",
+      "https://twitter.com/beemstat/status/1396982258112753664",
+      "https://github.com/beeminder/beeminder/commit/ec264ea9db23faf5e5f72e81fbfc943e70752cbd"],
+"d": "2021-05-24",
+"t": "2021-05-25",
+"c": "Yes, we wrote a test for this!",
 }, { // ------------------------------------------------------------------------
+"x": "The updated captcha was working in the Contact form, but was failing to actually validate the answer on signup, allowing spammy signups for a day. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1397328172773822464",
+      "https://github.com/beeminder/beeminder/issues/2324",
+      "https://github.com/beeminder/beeminder/pull/2325"],
+"d": "2021-05-25",
+"t": "2021-05-25",
+"c": "We wrote a test for this too! But bigger problem we haven't solved yet: how is commitwall failing to prevent these spam signups??",
 }, { // ------------------------------------------------------------------------
+"x": "Toggl changed their API (and they emailed all users of the Beeminder integration about it, making this user-visible!) and we did the thing to make it not break",
+"u": ["https://twitter.com/beemuvi/status/1398053779216289796",
+      "https://github.com/beeminder/beeminder/issues/2290"],
+"d": "2021-05-12",
+"t": "2021-05-27",
+"c": "Normally we wouldn't count this since we fixed it before it broke but we got like at least 5 users forwarding us the email worried that things were going to break and they didn't know what to do",
 }, { // ------------------------------------------------------------------------
+"x": "We now don't apply goal defaults to new goals if those settings won't actually work (eg, if you can't get SMS or Slack alerts anymore). #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1398057330797776900",
+      "https://github.com/beeminder/beeminder/issues/183"],
+"d": "2021-05-26",
+"t": "2021-05-27",
+"c": "Also iOS/Android? Maybe that's it. And one way this could happen is if you don't have Infinibee anymore, which is needed for the SMS bot. Also this is a pretty subtle improvement: Your account-wide goal defaults are still set how they're set, just that now if you create a goal and look in the goal's settings, the defaults won't have propagated to this new goal if they aren't allowed/possible.",
 }, { // ------------------------------------------------------------------------
+"x": "We soft-launched a Pocket integration for intrepid souls who're game to beta test it: http://beeminder.com/pocket",
+"u": ["https://twitter.com/beemuvi/status/1398428956294979587",
+      "https://github.com/beeminder/beeminder/issues/2345",
+      "https://github.com/beeminder/beeminder/pull/2342"],
+"d": "2021-05-28",
+"t": "2021-05-28",
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
+"x": "Also we've submitted our Pocket integration for inclusion in their gallery and added it to our front page; so baaaasically official already",
+"u": ["https://twitter.com/beemuvi/status/1398428973797830661",
+      "https://github.com/beeminder/beeminder/issues/2345",
+      "https://github.com/beeminder/beeminder/pull/2342"],
+"d": "2021-05-28",
+"t": "2021-05-28",
 }, /* --------------------------------------------------------- end 2021may */ ]
 
-  
+var batch2021jun = [{
+"x": "Fetching data for your autodata goals is now faster. We used to send two jobs through our background queues, but now it just takes one.",
+"u": ["https://twitter.com/beemuvi/status/1400128768136548355",
+      "https://github.com/beeminder/beeminder/pull/2323#issuecomment-850737542"],
+"d": "2021-05-27",
+"t": "2021-06-02",
+"c": "We used to run a refreshjob and then at the end of the refreshjob, we'd queue up a graphjob to actually redraw the graph, which then had to wait through the background queues again. Now we redraw the graph in-line at the end of the refreshjob. Less waiting!",
+}, { // ------------------------------------------------------------------------
+"x": "Deadlines not on-the-hour sometimes had long windows where you could eke in after the deadline w/o derailing. Window's now shorter (and never over 15 minutes).",
+"u": ["https://twitter.com/beemuvi/status/1400195796423917571",
+      "https://github.com/beeminder/beeminder/issues/2354",
+      "https://github.com/beeminder/beeminder/pull/2279"],
+"c": "See also UVI#3736. This was from reworking MaintenanceJob, by Adam, and bumping it up to running 4 times per hour",
+}, { // ------------------------------------------------------------------------
+"x": "Clarified in the Pocket autodata integration landing page and goal creation page that it's specifically archiving articles that gets you the +1",
+"u": ["https://twitter.com/beemuvi/status/1400600621330305027",
+      "https://github.com/beeminder/beeminder/pull/2357",
+      "https://github.com/beeminder/beeminder/pull/2358"],
+"d": "2021-06-03",
+"t": "2021-06-03",
+}, { // ------------------------------------------------------------------------
+"x": "We were hitting a race condition refreshing Withings auth tokens, which was making us expire your auth (and email you about it) when we really hadn't needed to",
+"u": ["https://twitter.com/beemuvi/status/1400600842013581314",
+      "https://github.com/beeminder/beeminder/issues/2348",
+      "https://github.com/beeminder/beeminder/pull/2353"],
+"d": "2021-06-03",
+"t": "2021-06-03",
+"c": "We're assuming the user primarily affected by this will confirm that it's better now... TODO",
+}, { // ------------------------------------------------------------------------
+"x": "Our Pocket integration only counted things Pocket classified as articles but it failed to do so for some definitely-articles so now we count everything. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1404961766191206400",
+      "https://forum.beeminder.com/t/soft-launch-of-official-pocket-autodata-integration/9460/8?u=dreev",
+      "https://github.com/beeminder/beeminder/issues/2370",
+      "https://github.com/beeminder/beeminder/pull/2371"],
+"d": "2021-06-09",
+"t": "2021-06-15",
+}, { // ------------------------------------------------------------------------
+"x": "Small clarification on weekend rate for do-less goals: you are specifying an amount of additional buffer for the weekend, i.e., on top of the existing rate!",
+"u": ["https://twitter.com/beemuvi/status/1405673523771678725",
+      "https://github.com/beeminder/beeminder/issues/2372",
+      "https://github.com/beeminder/beeminder/pull/2378"],
+"d": "2021-06-11",
+"t": "2021-06-17",
+}, { // ------------------------------------------------------------------------
+"x": "Clarified in the commitment dial UI copy that dialing only changes the final bright red line segment which is not what you expect if you have upcoming breaks",
+"u": ["https://twitter.com/beemuvi/status/1407826473269051395",
+      "https://github.com/beeminder/beeminder/issues/2377",
+      "https://github.com/beeminder/beeminder/pull/2379"],
+"d": "2021-06-11",
+"t": "2021-06-23",
+"c": "To clarify the egregiously broken bit: the old 'dialing your road means changing your commitment starting a week from now' is sometimes lies. Typically you're on the final segment and it breaks that segment up and changes it starting in a week.",
+}, { // ------------------------------------------------------------------------
+"x": "Goalnames used to be changeable via the API but haven't been for ages (and since you can edit them on the website anyway) so we updated the docs to be correct",
+"u": ["https://twitter.com/beemuvi/status/1407827051688562689",
+      "http://api.beeminder.com/#putgoal",
+      "https://forum.beeminder.com/t/feature-request-reusing-archived-urls/2062?source_topic_id=2061",
+      "https://forum.beeminder.com/t/feature-request-reusing-archived-urls/2062?source_topic_id=2061",
+      "https://github.com/beeminder/beeminder/issues/1672#issuecomment-862760717",
+      "https://github.com/beeminder/apidocs/commit/613e6bdd9fe645442d9d7f1e362bb49043553e00"],
+"d": "2021-06-16",
+"t": "2021-06-23",
+}, { // ------------------------------------------------------------------------
+"x": "We had an off-by-one error with where we drew the akrasia horizon on the graph and it made the visual graph editor too restrictive in allowing changes. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1407899771541417985",
+      "https://github.com/beeminder/beeminder/issues/1838",
+      "https://github.com/beeminder/road/commit/65c8bd458873b8bcd812bbeededf9ae44eedfac5"],
+"d": "2021-06-15",
+"t": "2021-06-22",
+}, { // ------------------------------------------------------------------------
+"x": "GmailZero goals were ignoring the initial safety buffer you asked for on goal creation. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1407919530731397121",
+      "https://github.com/beeminder/beeminder/issues/1627",
+      "https://github.com/beeminder/beeminder/pull/2388"],
+"d": "2021-06-17",
+"t": "2021-06-22",
+"c": "B checked other autodata integrations and is reasonably confident that this was the only error of this type, and there won't be six other UVIs like 'oh, and also did that for X'",
+}, { // ------------------------------------------------------------------------
+"x": "GmailZero goals w/ pre-midnight deadlines created after said deadline started a day too early, meaning you'd start the goal in the red. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1407921917135233026",
+      "https://github.com/beeminder/beeminder/issues/2386",
+      "https://github.com/beeminder/beeminder/pull/2387"],
+"d": "2021-06-17",
+"t": "2021-06-23",
+"c": "Pre-midnight deadline = earlybird goal. We were, in fact, messing up the tini in the Gmail setup job. That's why it was broken here while working on other goals, including other whittle downs.",
+}, { // ------------------------------------------------------------------------
+"x": "We now give actual constructive errors when you do things like add duplicate tags instead of a generic/incorrect \"something went wrong. try reloading the page?\"",
+"u": ["https://twitter.com/beemuvi/status/1408519268132474881",
+      "https://github.com/beeminder/beeminder/issues/2389"],
+"d": "2021-06-25",
+"t": "2021-06-25",
+"c": "This is tagging a la UVI#2080",
+}, { // ------------------------------------------------------------------------
+"x": "If Infinibee or lower folks hit submit on beeminder.com/breaks without changing anything, we gave a 500 error. Now we give a sensible error. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1409656367762214915",
+      "https://github.com/beeminder/beeminder/issues/1974"],
+"d": "2021-06-28",
+"t": "2021-06-28",
+}, { // ------------------------------------------------------------------------
+"x": "Fixed another unhelpful error if you clicked 'add tag' at http://beeminder.com/tags w/o actually typing anything. Now we sensibly do nothing if you do that. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1409656879073021956",
+      "https://github.com/beeminder/beeminder/issues/2390"],
+"t": "2021-06-28",
+}, { // ------------------------------------------------------------------------
+"x": "Tiny things: Bit more consistency in the legend w/ \"Bright Red Line\" and yanked dogfood bounties from the list of premium perks since we scaled that back a lot",
+"u": ["https://twitter.com/beemuvi/status/1410020670491095040",
+      "https://blog.beeminder.com/dogfood",
+      "https://github.com/beeminder/beeminder/issues/2368",
+      "https://github.com/beeminder/beeminder/pull/2369",
+      "https://github.com/beeminder/beeminder/issues/1577"],
+"t": "2021-06-29",
+"c": "Dogfood bounty thing was 2021-06-09; see elaborate update to the blog post",
+}, { // ------------------------------------------------------------------------
+"x": "Added explanation for the weekend buffer setting to the http://beeminder.com/breaks page",
+"u": ["https://twitter.com/beemuvi/status/1410021637450190852",
+      "https://github.com/beeminder/beeminder/issues/1191",
+      "https://github.com/beeminder/beeminder/pull/2401"],
+"d": "2021-06-29",
+"t": "2021-06-29",
+}, { // ------------------------------------------------------------------------
+"x": "Double-clicking the 'archive now' button could result in actually *restarting* your goal because !surprise!. Fixed by disabling double clicks. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1410022199923122176",
+      "https://github.com/beeminder/beeminder/issues/2375",
+      "https://github.com/beeminder/beeminder/pull/2399"],
+"d": "2021-06-29",
+"t": "2021-06-29",
+"c": "We think technically this could have happened in any archive case but could only get it to reproduce when the goal was frozen with a pending charge",
+}, { // ------------------------------------------------------------------------
+"f": true,
+"x": "New Todoist goals now count recurring tasks! (Transition for existing goals to come)",
+"u": ["https://twitter.com/beemuvi/status/1410383666610507789",
+      "https://github.com/beeminder/beeminder/issues/518",
+      "https://github.com/beeminder/beeminder/issues/2405"],
+"d": "2021-06-30",
+"t": "2021-06-30",
+}, /* --------------------------------------------------------- end 2021jun */ ]
+
+var batch2021jul = [{
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, /* --------------------------------------------------------- end 2021jul */ ]
+
 var staged = [ {
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -1193,11 +1371,9 @@ var staged = [ {
 /*********************************************************************************************************************************************************************
 ~~~~~~----------------------------- METASTAGED -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
 }, { // ------------------------------------------------------------------------
-[HOLD]
-// TODO: Make a decision about this one! either tweet it because it is a change that happened, or 
-//       make a new gissue for undoing it and link to #1285 and #1494 in that gissue.
-// TODO: wait, why, this doesn't make sense, if it's not auto-summing you'd want the sum, right?
+[HOLD] Decide! Either tweet it cuz it's a change that happened, or make a new gissue for undoing it and link to #1285 and #1494 in that gissue.
 "x": "For the rare goals that are aggday=sum but not auto-summing, we no longer show the total due in the blurb that tells you your safety buffer",
+// TODO: Wait, why, this doesn't make sense, if it's not auto-summing you'd want the sum, right?
 "x": "Hide the total in the blurb with your safety buffer if the goal has a custom aggday of 'sum'. (Previously we were only hiding it when the goal is cumulative.)"
 "u": [
       "https://github.com/beeminder/beeminder/issues/1285",
@@ -1205,66 +1381,25 @@ var staged = [ {
 "d": "2020-07-08",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-[HOLD]
-GMAILZERO: change blog link (probably wait for other copy changes before tweeting)
-https://github.com/beeminder/beeminder/commit/39cd4142c8fa119418ab5996187e77b53c3efb39
-https://github.com/beeminder/beeminder/issues/1002
-"d": "2020-01-02"
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
 [MINI] awaiting more changes with slug/goalname/goalID in the API
-"x": "Super mini: removed \"Deprecated\" from the 'id' field in the api docs Goal resource -- https://changelog.beeminder.com/#2104 sort of myopically semi-broke the api, since we want you to use the goalname (aka slug) as the identifier, but now you can change the goalname, so we'd definitely better keep the goal ID around so API clients can piece things back together if someone goes and changes a goalname on them.",
-"c": "it's super mini, but took lots of words to say the things",
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-[MINI AT MOST]
-update Habitica wiki URL -- Changes a user-visible link on the goal creation screen (after you've entered your Habitica credentials) so that it points to the new URL for Habitica's wiki. 
-But... the old URL was automatically redirecting so the users wouldn't have seen a broken link.
-https://github.com/beeminder/beeminder/pull/2073
-  update Habitica wiki URL (UVI?) and update code comments (#2073)
-* change habitica.wikia.com URLs to habitica.fandom.com
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-[HOLD]
-ids for road editor to be able to do datapoint editing
-https://github.com/beeminder/beeminder/issues/2087
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-[HOLD]
-Make /user/goal/graph.svg work like /user/goal/graph.png.
-ADAM: I am not 100% confident this will work in production, because we have a thing where production and dev/test work differently with regards to formats, but this should get us closer.
-When this works, the UVI will be something like:
-You can now get the most recent SVG of a public goal's graph at user/goal/graph.svg.
-Works toward https://github.com/beeminder/beeminder/issues/2084
-then adam said "This actually did the job!" 
-does that mean it's a UVI now?
-ADAM: I need to rework this. It'll be a quick change, but I have to step away at the moment.
-* add the route for u/g.svg to point to /u/g/graph?style=svg
-* rework the graph controller to have an svg style and use that
+"x": "Super mini: removed \"Deprecated\" from the 'id' field in the API docs Goal resource -- UVI#2104 sort of myopically semi-broke the API, since we want you to use the goalname (aka slug) as the identifier, but now you can change the goalname, so we'd definitely better keep the goal ID around so API clients can piece things back together if someone goes and changes a goalname on them",
+"c": "It's super mini, but took lots of words to say the things",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 [HOLD]
 shortcuts in beemiOS?
 https://github.com/beeminder/BeeSwift/pull/273
-PR 2021-03-30
+PR 2021-03-30, testflight 2021-06-01
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-TODO: emailing people and force-changing their goalnames
-"x": "",
-https://github.com/beeminder/beeminder/pull/2276
 }, { // ------------------------------------------------------------------------
 [HOLD]
-code combat integration.
+CodeCombat integration!
 https://github.com/beeminder/beeminder/pull/2244
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-WIP: punctuation after hashtags allowed
+[WIP]
+Punctuation after hashtags allowed
 https://github.com/beeminder/road/issues/142
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-[HOLD]
-fixed the thing that was going to break with toggl's api; probably doesn't count as user-visible (cuz we were on top of shit)
-https://github.com/beeminder/beeminder/issues/2290
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 [WIP?]
@@ -1283,27 +1418,49 @@ beebrain: say 'eke' instead of :) if you're at tfin but on the wrong side of the
 https://github.com/beeminder/road/issues/172
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-[WIP FROM ADAM]
-Rework MaintenanceJob.
-MaintenanceJob now spawns a MaintainGoalJob for each goal that should have maintenance run.
-MaintainGoalJobs run both the RefreshJob and the GraphJob without putting them back on the queue.
-I removed maintenance refreshes from goal.queue_for_refresh, and renamed it to queue_for_user_refresh.
-For gissue #2279
-This should lead to a UVI of smaller eking windows on non-HH:00 deadline goals.
+[HOLD]
+one more pocket one for the blog post and making it officially official? maybe when we show up in pocket's gallery? we're milking this pretty hard already though
+https://blog.beeminder.com/pocket/?secretpreview=4
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
+[BEEMIOS]
+username whitespace bugfix
+https://github.com/beeminder/BeeSwift/issues/285
 }, { // ------------------------------------------------------------------------
-"x": "So many more instances of 'road' and 'YBR' etc that we missed! We got them all for real now, we think, including the help pages!",
+}, { // ------------------------------------------------------------------------
+[HOLD] this looks like it wasn't extant long enough to impact any actual users
+"x": "Fixed a briefly extant bug with new Todoist goals that autofetched pre-goal-creation data and made you start with way too much safety buffer. #bugfix",
+also it added everything from the past week as a datapoint for *today* which was especially wrong.
+}, { // ------------------------------------------------------------------------
+Instead of fetching all the items, or all the items that have changed since the last time we checked, we have to use the event history log.
+We depaginate the event history log, and then compare times, projects, and labels.
+Labels are tricky, though, because the event history log doesn't include them. We have to fetch them separately.
+https://github.com/beeminder/beeminder/issues/518
+deploy planned for 2021-06-30
 
-https://github.com/beeminder/beeminder/issues/2305
-https://github.com/beeminder/beeminder/issues/2317 -- hello-weight-loss landing page
-https://github.com/beeminder/beeminder/pull/2309
-https://github.com/beeminder/beeminder/commit/58e94a72362d8889cce735d7e062b62de547fc12
+More:
+Fix bug with Todoist recurring item labels
+Set new Todoist goals to watch for completed recurring items.
+Remove elf text describing recurring item limitation
+
+More on 2021-06-30:
+Fix bug with Todoist recurring item labels.
+Set new Todoist goals to watch for completed recurring items.
+Remove elf text describing recurring item limitation.
+Add Honeycomb to more of the Todoist integration.
+Add comments about undocumented Todoist full sync behavior.
+Add transition key to Todoist that schedules a refreshjob to cover the labels during switchover.
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
+[MINI]
+update gitminder help to say "main/master" since github is changing the default name from "master" to "main"
+https://help.beeminder.com/article/81-github
+"d": "2021-06-30",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
+[MINI]
+we changed road.beeminder.com to graph.beeminder.com
+
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -1326,6 +1483,7 @@ wordpress plugin: github.com/beeminder/beeminder-ping
 2. DREEV: point to help.beeminder.com in blog.beeminder.com/newbees and vice versa
 3. https://forum.beeminder.com/t/api-create-goal-documentation-needs-updating/5547
 ~~~~~~-------------------- TOO LATE / TOO LAME -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
+* Friendlier oauth names: https://github.com/beeminder/beeminder/issues/1612
 * CNR on this weight-loss restart thing means maybe we fixed it long ago without realizing it? https://github.com/beeminder/beeminder/issues/1321
 * fixed timeouts in jsbrain_server? https://github.com/beeminder/road/issues/51 -- depl'd probably 2020 october or earlier
 * milk static-401 for more uvis? (fixing/obviating the banner bug, making it all work the same via the API)

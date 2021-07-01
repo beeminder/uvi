@@ -1424,6 +1424,7 @@ var batch2019jul = [{
 }, { // ------------------------------------------------------------------------
 "x": "RescueTime goal creation wasn't letting you set your initial safety buffer. Now it does! #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1146240016927977472",
+      "https://github.com/beeminder/beeminder/issues/674",
       "https://github.com/beeminder/beeminder/pull/683"],
 "d": "2019-07-02",
 "t": "2019-07-02",

@@ -920,6 +920,40 @@ x: "Updated our Stripe gem, and updated the Stripe api version we are targeting 
 "u": ["https://twitter.com/beeminfra/status/1395148665002422275"],
 "t": "2021-05-19"
 }, { // ------------------------------------------------------------------------
+"x": "Did a super satisfying spring cleaning of unused/unreferenced strings from our locales, and moved master copy back into the repo.",
+"u": ["https://twitter.com/beeminfra/status/1397665524276891648",
+"https://github.com/beeminder/beeminder/pull/2287"],
+"d": "2021-05-11",
+"t": "2021-05-26",
+"c": "this was updates in stringles, and removing the padm.us pad from the equation. github lets a normal human edit text files pretty handily now, so no real advantage to having the master copy live in padm.us"
+}, { // ------------------------------------------------------------------------
+"x": "Did somesome nice refactoring of the lame-captcha code so it's DRY and easy to swap out new 'captcha' riddles or whatever.",
+"u": ["https://twitter.com/beeminfra/status/1400226330831032323",
+"https://github.com/beeminder/beeminder/pull/2318",
+],
+"t": "2021-06-02",
+"d": "2021-05-25"
+}, { // ------------------------------------------------------------------------
+"x": "Github deprecated sending tokens in the URL params. We changed our integration code a while back, but we missed a spot in OAuth, and so now that's all ready too.",
+"u": ["https://github.com/beeminder/beeminder/pull/228",
+"https://twitter.com/beeminfra/status/1402768749346783234"]
+}, { // ------------------------------------------------------------------------
+"x": "Added more honeycomb hooks into graph & refresh jobs so we can get a handle on how long things wait on a worker etc etc.",
+"u": ["https://github.com/beeminder/beeminder/pull/2271",
+"https://twitter.com/beeminfra/status/1405258040639508480"],
+"t": "2021-06-16"
+}, { // ------------------------------------------------------------------------
+"x": "Found some bad response codes in a few of our private api methods, which could lead to a 500 error, not, e.g. 422 if those requests went south.",
+"u": ["https://github.com/beeminder/beeminder/pull/2329",
+"https://twitter.com/beeminfra/status/1407788807584305155"],
+"c": ":unacceptable is not a legit rails HTTP status code; but since the tagging interface is ajaxy, the 500 error did not evidence itself to users",
+}, { // ------------------------------------------------------------------------
+"x": "A couple minis with our Docker setup: stop docker-compose automatically when the dev server stops, and updated bootsnap gem to fix a Docker error",
+"u": ["https://github.com/beeminder/beeminder/pull/2366",
+"https://github.com/beeminder/beeminder/pull/2351",
+"https://twitter.com/beeminfra/status/1410363263062134784"],
+"t": "2021-06-30"
+}, { // ------------------------------------------------------------------------
 }, /* ----------------------------------------------------------- end batch */ ]
 
 var staged = [ { // note: sub-entries not allowed here in staging
@@ -932,21 +966,18 @@ METASTAGED: --10--------20--------30--------40--------50--------60--------70----
 https://github.com/beeminder/beeminder/commit/
 
 
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
 
-
-## NEED HELP FROM ADAM:
-* a bunch of work to get honeycomb into our background workers so we can monitor stuff there too [did this actually resolve to a positive end?]
+}, { // ------------------------------------------------------------------------
+remove intercom from gemfile & remove weeder #2384
+https://github.com/beeminder/beeminder/pull/2384
+}, { // ------------------------------------------------------------------------
+initialize logger in omniauth initializer #2363
+https://github.com/beeminder/beeminder/pull/2363
+}, { // ------------------------------------------------------------------------
+Fix bad RefreshJob tests #2360
+https://github.com/beeminder/beeminder/pull/2360
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 TODO:
