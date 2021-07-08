@@ -954,6 +954,13 @@ x: "Updated our Stripe gem, and updated the Stripe api version we are targeting 
 "https://twitter.com/beeminfra/status/1410363263062134784"],
 "t": "2021-06-30"
 }, { // ------------------------------------------------------------------------
+"x": "Cleaned up unused infrastructure (gem files, background jobs) from an old chat tool we're no longer using (intercom)",
+"u": ["https://twitter.com/beeminfra/status/1412911500721750019",
+      "https://github.com/beeminder/beeminder/pull/2384",
+],
+"t": "2021-07-07",
+"c": "remove intercom from gemfile & remove weeder #2384"
+}, { // ------------------------------------------------------------------------
 }, /* ----------------------------------------------------------- end batch */ ]
 
 var staged = [ { // note: sub-entries not allowed here in staging
@@ -967,9 +974,6 @@ https://github.com/beeminder/beeminder/commit/
 
 
 
-}, { // ------------------------------------------------------------------------
-remove intercom from gemfile & remove weeder #2384
-https://github.com/beeminder/beeminder/pull/2384
 }, { // ------------------------------------------------------------------------
 initialize logger in omniauth initializer #2363
 https://github.com/beeminder/beeminder/pull/2363
