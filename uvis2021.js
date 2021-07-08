@@ -1331,6 +1331,92 @@ var batch2021jun = [{
 
 var batch2021jul = [{
 }, { // ------------------------------------------------------------------------
+"x": "Help docs now explain about recurring Todoist tasks and how to transition existing graphs",
+"u": ["https://twitter.com/beemuvi/status/1410748893776596995",
+      "https://help.beeminder.com/article/79-todoist"],
+"d": "2021-07-01",
+"t": "2021-07-01",
+}, { // ------------------------------------------------------------------------
+"x": "Changed road.beeminder.com to graph.beeminder.com + Gitminder docs say both \"main\" &amp; \"master\" cuz GitHub's changing the default name of the master/main branch",
+"u": ["https://twitter.com/beemuvi/status/1410749764086370304",
+      "https://github.com/beeminder/beeminder/issues/2404",
+      "https://github.com/beeminder/beeminder/pull/2415",
+      "https://help.beeminder.com/article/81-github"],
+"t": "2021-07-01",
+}, { // ------------------------------------------------------------------------
+"x": "Y'know the little triangles or chevrons or v's that indicate that a dropdown menu is a dropdown menu? Some of ours went missing. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1411110787582595072",
+      "https://github.com/beeminder/beeminder/issues/1039",
+      "https://github.com/beeminder/beeminder/pull/2413"],
+"d": "2021-07-01",
+"t": "2021-07-02",
+}, { // ------------------------------------------------------------------------
+"x": "Also they're all consistent across the website now and are aligned properly and are v's instead of triangles which seems more modern/standard. #css",
+"u": ["https://twitter.com/beemuvi/status/1411110916351926279",
+      "https://github.com/beeminder/beeminder/issues/1645",
+      "https://github.com/beeminder/beeminder/pull/2413"],
+"d": "2021-07-01",
+"t": "2021-07-02",
+}, { // ------------------------------------------------------------------------
+"x": "While we were at it we did more #css fussery and fixing, like not using different font sizes and padding in the text boxes in goal creation",
+"u": ["https://twitter.com/beemuvi/status/1411111010321059840",
+      "https://github.com/beeminder/beeminder/pull/2413"],
+"d": "2021-07-01",
+"t": "2021-07-02",
+}, { // ------------------------------------------------------------------------
+"x": "Fixed a 500 error on the goal page if it was a Todoist-connected goal without a Todoist connection (like if you de-authorized Beeminder in Todoist). #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1412182218038865925",
+      "https://github.com/beeminder/beeminder/issues/2420",
+      "https://github.com/beeminder/beeminder/pull/2421"],
+"d": "2021-07-02",
+"t": "2021-07-05",
+"c": "This was introduced by the Todoist upgrades because our API client responds differently to a missing auth now, and throws an error, which went uncaught, where it didn't used to throw an error",
+}, { // ------------------------------------------------------------------------
+"x": "UVI#3785 introduced a regression where the polynomial fit purple aura peeked out uglily past the akrasia horizon. #beebrain #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1412527024342593538",
+      "https://github.com/beeminder/road/issues/217"],
+"d": "2021-07-06",
+"t": "2021-07-06",
+}, { // ------------------------------------------------------------------------
+"x": "The Todoist changes for recurring tasks broke our label tracking for new goals when you had both projects &amp; labels selected for tracking by Beeminder. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1412560718700834821",
+      "https://github.com/beeminder/beeminder/issues/2424",
+      "https://github.com/beeminder/beeminder/pull/2425"],
+"d": "2021-07-06",
+"c": "This involved gutting a bunch of stuff we did with fetching and caching labels from Todoist's API because we (Bee) found a much simpler way to do it all using just the task text. #regression",
+}, { // ------------------------------------------------------------------------
+"x": "We now do slightly more robust retrying when fetching Todoist data and Todoists rate-limits us. User-visibility: slightly less flakiness. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1412920962694057990",
+      "https://github.com/beeminder/beeminder/pull/2417"],
+"d": "2021-07-02",
+"t": "2021-07-07",
+"c": "Manifested as failed Resque jobs. Refreshjobs need a timestamp, not Time object",
+}, { // ------------------------------------------------------------------------
+"x": "We split the display-precision setting into two side-by-side dropdowns depending on if you choose timey format",
+"u": ["https://twitter.com/beemuvi/status/1412921851806818305",
+      "https://github.com/beeminder/beeminder/issues/954",
+      "https://github.com/beeminder/beeminder/pull/2429"],
+"d": "2021-07-07",
+"t": "2021-07-07",
+}, { // ------------------------------------------------------------------------
+"x": "Rearranged the settings a little and improved the webcopy around the timey setting and display precision, nixed an errant comma, etc",
+"u": ["https://twitter.com/beemuvi/status/1413004592346923017",
+      "https://github.com/beeminder/beeminder/issues/954",
+      "https://github.com/beeminder/beeminder/pull/2429"],
+"d": "2021-07-07",
+"t": "2021-07-07",
+}, { // ------------------------------------------------------------------------
+"x": "And a smattering more fixes and improvements and #css tweaks, like a better icon for the autodata source, and capitalizing it, and aligning it correctly",
+"u": ["https://twitter.com/beemuvi/status/1413004706293506048",
+      "https://github.com/beeminder/beeminder/issues/954",
+      "https://github.com/beeminder/beeminder/pull/2429"],
+"d": "2021-07-07",
+"t": "2021-07-07",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -1429,39 +1515,39 @@ https://github.com/beeminder/BeeSwift/issues/285
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 [HOLD] this looks like it wasn't extant long enough to impact any actual users
+but maybe neal chau ran into bugs in this window? see email with dreev and neal and adam?
 "x": "Fixed a briefly extant bug with new Todoist goals that autofetched pre-goal-creation data and made you start with way too much safety buffer. #bugfix",
 also it added everything from the past week as a datapoint for *today* which was especially wrong.
 }, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+SO CLOSE: TODOIST-RECURRING TRANSITION FOR EXISTING GOALS
+https://github.com/beeminder/beeminder/issues/518
 Instead of fetching all the items, or all the items that have changed since the last time we checked, we have to use the event history log.
 We depaginate the event history log, and then compare times, projects, and labels.
-Labels are tricky, though, because the event history log doesn't include them. We have to fetch them separately.
-https://github.com/beeminder/beeminder/issues/518
-deploy planned for 2021-06-30
-
-More:
-Fix bug with Todoist recurring item labels
 Set new Todoist goals to watch for completed recurring items.
 Remove elf text describing recurring item limitation
-
-More on 2021-06-30:
-Fix bug with Todoist recurring item labels.
-Set new Todoist goals to watch for completed recurring items.
-Remove elf text describing recurring item limitation.
-Add Honeycomb to more of the Todoist integration.
-Add comments about undocumented Todoist full sync behavior.
-Add transition key to Todoist that schedules a refreshjob to cover the labels during switchover.
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-[MINI]
-update gitminder help to say "main/master" since github is changing the default name from "master" to "main"
-https://help.beeminder.com/article/81-github
-"d": "2021-06-30",
+warn about PPR vs autodata for [api, zapier, ifttt]
+don't disable the PPR setting when someone turns on API, Zapier, or IFTTT for a manual do less. (cuz then it's un-fixable by the user).
+https://github.com/beeminder/beeminder/issues/2403
+"d": "2021-07-02"
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-[MINI]
-we changed road.beeminder.com to graph.beeminder.com
-
-}, { // ------------------------------------------------------------------------
+[MILKABLE FOR A COUPLE, I THINK -- ps, milked for 3, which seems good unless we wanted to call out the "data push" and "data pull" thing separately]
+timey precision shown as HH:MM 
+other small layout tweaks to the Data section of settings:
+X errant comma in the display precision description
+X uses fancy radio button and capitalizes Integration (if autodata source)
+- adds header for "esoteric number settings"
+* adds "(aka push)" and "(aka pull)" to PESOS / data source labels
+"u": [
+      "https://github.com/beeminder/beeminder/issues/954",
+      "https://github.com/beeminder/beeminder/pull/2429"],
+"d": "2021-07-07",
+Better hovertext for the precision dropdowns:
+https://github.com/beeminder/beeminder/pull/2430
+2021-07-07: PR by dreev
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
