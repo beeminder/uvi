@@ -1178,6 +1178,7 @@ var batch2021may = [{
 "t": "2021-05-27",
 "c": "Also iOS/Android? Maybe that's it. And one way this could happen is if you don't have Infinibee anymore, which is needed for the SMS bot. Also this is a pretty subtle improvement: Your account-wide goal defaults are still set how they're set, just that now if you create a goal and look in the goal's settings, the defaults won't have propagated to this new goal if they aren't allowed/possible.",
 }, { // ------------------------------------------------------------------------
+"f": true,
 "x": "We soft-launched a Pocket integration for intrepid souls who're game to beta test it: http://beeminder.com/pocket",
 "u": ["https://twitter.com/beemuvi/status/1398428956294979587",
       "https://github.com/beeminder/beeminder/issues/2345",
@@ -1413,42 +1414,603 @@ var batch2021jul = [{
 "d": "2021-07-07",
 "t": "2021-07-07",
 }, { // ------------------------------------------------------------------------
+"x": "We no longer disable the PPR setting when you switch to API, Zapier, or IFTTT as the data source for a manual do-less goal, cuz then it's irreversible!",
+"u": ["https://twitter.com/beemuvi/status/1413640514910310400",
+      "https://github.com/beeminder/beeminder/issues/2403"],
+"d": "2021-07-02",
+"t": "2021-07-09",
 }, { // ------------------------------------------------------------------------
+"x": "More webcopy fussing: 'Esoteric Settings About Numbers' and hovertext on display precision and 'aka data push' and 'aka data pull'",
+"u": ["https://twitter.com/beemuvi/status/1413641697381076993",
+      "https://github.com/beeminder/beeminder/issues/954",
+      "https://github.com/beeminder/beeminder/pull/2429",
+      "https://github.com/beeminder/beeminder/pull/2430",
+      "https://github.com/beeminder/beeminder/pull/2433"],
+"d": "2021-07-07",
+"t": "2021-07-09",
 }, { // ------------------------------------------------------------------------
+"f": true,
+"x": "When you create a new goal, we now show a dynamic, zoomable preview of your graph and let you go back to make changes before finalizing the goal creation",
+"u": ["https://twitter.com/beemuvi/status/1414733059174240257",
+      "https://github.com/beeminder/beeminder/issues/1449",
+      "https://doc.beeminder.com/dynagraphs",
+      "https://github.com/beeminder/beeminder/pull/2437"],
+"d": "2021-07-12",
+"t": "2021-07-12",
+"c": "Aka dyna-elf",
 }, { // ------------------------------------------------------------------------
+"x": "The visual graph editor at graph.beeminder.com now has a smarter graph selector with autocomplete instead of the old unwieldy dropdown. HT Benjamin Fox (zzq)",
+"u": ["https://twitter.com/beemuvi/status/1414733278884499456",
+      "https://github.com/beeminder/road/issues/103"],
+"d": "2021-07-12",
+"t": "2021-07-12",
 }, { // ------------------------------------------------------------------------
+"x": "The safesum blurbs for weight-loss and inbox-fewer goals make more sense now, always telling you your hard cap today instead of how many safe days you have",
+"u": ["https://twitter.com/beemuvi/status/1415083002527326208",
+      "https://github.com/beeminder/beeminder/issues/1538"],
+"d": "2021-07-08",
+"t": "2021-07-13",
+"c": "By Adam. Eg: 'hard cap +3 pounds (150) today'.",
 }, { // ------------------------------------------------------------------------
+"x": "Those safesum blurbs are shown in the Android and iPhone apps too; also we added an explicit error when something (rarely) goes wrong generating the blurb",
+"u": ["https://twitter.com/beemuvi/status/1415083330702172162",
+      "https://github.com/beeminder/beeminder/issues/2436"],
+"d": "2021-07-13",
+"t": "2021-07-13",
+"c": "Maybe just a transient problem when safesums were generated the first time? We were getting airhorns and there was presumably some user-visibility.",
 }, { // ------------------------------------------------------------------------
+"x": "Todoist goals now support arbitrary deadlines!",
+"u": ["https://twitter.com/beemuvi/status/1415455517900644352",
+      "https://github.com/beeminder/beeminder/pull/2432"],
+"d": "2021-07-08",
+"t": "2021-07-14",
 }, { // ------------------------------------------------------------------------
+"x": "Panning/scrolling in the graph previews now works. Still somewhat buggy but before it didn't work at all! #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1415455850336903170",
+      "https://github.com/beeminder/beeminder/issues/2444"],
+"d": "2021-07-14",
+"t": "2021-07-14",
 }, { // ------------------------------------------------------------------------
+"x": "Fixed the buggy panning/scrolling. It's like butter now! #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1415460316389908482",
+      "https://github.com/beeminder/beeminder/issues/2446"],
+"d": "2021-07-14",
+"t": "2021-07-14",
 }, { // ------------------------------------------------------------------------
+"x": "Rare ugly bug where, when syncing the last week of Todoist tasks, if you had recurring tasks, we could delete some of them from your Beeminder data. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1415753899663781888",
+      "https://github.com/beeminder/beeminder/issues/2431",
+      "https://github.com/beeminder/beeminder/pull/2432"],
+"d": "2021-07-08",
+"t": "2021-07-15",
 }, { // ------------------------------------------------------------------------
+"x": "If you tried to scroll the browser page while your mouse was on the dynamic preview, it would turn black. Now it tells you another way to zoom! #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1415759299226128385",
+      "https://github.com/beeminder/beeminder/issues/2449",
+      "https://github.com/beeminder/beeminder/pull/2450"],
+"d": "2021-07-15",
+"t": "2021-07-15",
 }, { // ------------------------------------------------------------------------
+"x": "We transitioned all the old Todoist goals to support recurring tasks and emailed everyone affected in case this breaks their workflow",
+"u": ["https://twitter.com/beemuvi/status/1416180235138121732",
+      "https://github.com/beeminder/beeminder/issues/518"],
+"d": "2021-07-16",
+"t": "2021-07-16",
+"c": "We thought this would be easy when Todoist changed their API and it turned out to be an ordeal. But now it's all done! It involved using Todoist's event history log, depaginating it, and comparing times/projects/labels. Wait, but then we switched to the completed items log. Anyway, it took us forever.",
 }, { // ------------------------------------------------------------------------
+"x": "Pretty thoroughly revamped our tutorial at https://graph.beeminder.com/tutorial to demonstrate various things like edge-skating and scheduling breaks",
+"u": ["https://twitter.com/beemuvi/status/1417271205606826004",
+      "https://github.com/beeminder/road/issues/220"],
+"d": "2021-07-16",
+"t": "2021-07-19",
 }, { // ------------------------------------------------------------------------
+"x": "Also fixed at least one regression in the tutorial: the pledge amount failing to increase. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1417271316483252245",
+      "https://github.com/beeminder/road/issues/220"],
+"d": "2021-07-12",
+"t": "2021-07-19",
 }, { // ------------------------------------------------------------------------
+"x": "The 'currently subscribed' button on http://beeminder.com/premium was erroneously appearing grayed out despite still being clickable. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1417631195949453314",
+      "https://github.com/beeminder/beeminder/issues/1128",
+      "https://github.com/beeminder/beeminder/pull/2454"],
+"d": "2021-07-19",
+"t": "2021-07-20",
+"c": "See comment on next UVI",
 }, { // ------------------------------------------------------------------------
+"x": "Bigger #bugfix: clicking that ostensibly disabled button would charge you for another month of your premium plan right away (delaying your next charge)",
+"u": ["https://twitter.com/beemuvi/status/1417631537026134018",
+      "https://github.com/beeminder/beeminder/issues/646",
+      "https://github.com/beeminder/beeminder/issues/1128",
+      "https://github.com/beeminder/beeminder/pull/2454"],
+"d": "2021-07-19",
+"t": "2021-07-20",
+"c": "The 'weird bug' bit was not quite so bad as it sounds because if you paid for 2 months in this way, we'd give you two months before attempting to re-charge you for the subscription. Of course that was mostly moot since people don't click grayed-out buttons. So the real problem was that there seemed to be no way to change the payment frequency for your current plan.",
 }, { // ------------------------------------------------------------------------
+"x": "GmailZero goal setup would fail opaquely/messily if your auth expired and not let you re-auth. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1417993697782759424",
+      "https://github.com/beeminder/beeminder/issues/881"],
+"d": "2021-07-20",
+"t": "2021-07-21",
 }, { // ------------------------------------------------------------------------
+"x": "Also we email you when your auth expires (same as for other autodata integrations) so you can go re-authorize us to count your emails",
+"u": ["https://twitter.com/beemuvi/status/1417993864942481409",
+      "https://github.com/beeminder/beeminder/issues/881"],
+"d": "2021-07-20",
+"t": "2021-07-21",
 }, { // ------------------------------------------------------------------------
+"x": "And in GmailZero goal creation we give better errors and updates, like showing 'Checking Gmail connection' while it does that",
+"u": ["https://twitter.com/beemuvi/status/1418079044382314503",
+      "https://github.com/beeminder/beeminder/issues/881"],
+"d": "2021-07-20",
+"t": "2021-07-21",
 }, { // ------------------------------------------------------------------------
+"x": "Turns out you could crash Beebrain (our graph generator) with a derailed goal and x-min set to be later than all the datapoints. HT Mary Renaud #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1418082273681756162",
+      "https://github.com/beeminder/road/issues/224"],
+"d": "2021-07-21",
+"t": "2021-07-21",
 }, { // ------------------------------------------------------------------------
+"x": "Fixed a briefly extant bug with new Todoist goals that autofetched pre-goal-creation data and made you start with way too much safety buffer. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1418400897483239424",
+      "https://github.com/beeminder/beeminder/pull/2406",
+      "https://github.com/beeminder/beeminder/pull/2425"],
+"d": "2021-06-30",
+"t": "2021-07-22",
+"c": "Also it added everything from the past week as a datapoint for *today* which was especially wrong. There were multiple bugs introduced and fixed on todoist-recurring deploy day. We're not sure which ones users actually ran into but Neal Chau at least seems to have run into this one!",
 }, { // ------------------------------------------------------------------------
+"x": "Todoist datapoints are now consistently logged for the date Todoist logged them as. Can matter subtly for tasks done seconds after midnight, say.",
+"u": ["https://twitter.com/beemuvi/status/1418401016651816961",
+      "https://github.com/beeminder/beeminder/pull/2406",
+      "https://github.com/beeminder/beeminder/pull/2425"],
+"d": "2021-06-30",
+"t": "2021-07-22",
 }, { // ------------------------------------------------------------------------
+"f": true,
+"x": "New official autodata integration! @CodeCombat! http://beeminder.com/codecombat",
+"u": ["https://twitter.com/beemuvi/status/1419808741810049025",
+      "https://github.com/beeminder/beeminder/issues/323",
+      "https://github.com/beeminder/beeminder/pull/2244"],
+"d": "2021-07-26",
+"t": "2021-07-26",
 }, { // ------------------------------------------------------------------------
+"x": "All the usual follow-on UVIs for a new integration: added CodeCombat to the front page, wrote a blog post, etc.",
+"u": ["https://twitter.com/beemuvi/status/1419808838207741955",
+      "https://github.com/beeminder/beeminder/issues/323",
+      "https://github.com/beeminder/beeminder/pull/2465",
+      "https://github.com/beeminder/beeminder/pull/2467"],
+"d": "2021-07-26",
+"t": "2021-07-26",
+"c": "We also accidentally left the '/?secretpreview' on the link to the Pocket blog post so potentially we could milk this for another UVI but I guess we won't",
 }, { // ------------------------------------------------------------------------
+"x": "Added explicit mention of paying $5 on our fancy http://graph.beeminder.com/tutorial page plus fussing with the timing / animation speed. HT @LawrenceEvalyn",
+"u": ["https://twitter.com/beemuvi/status/1420166571264147458",
+      "https://github.com/beeminder/road/commit/09a9dd8b6046146b7df76274b8f5bbd3e351978e"],
+"d": "2020-07-21",
+"t": "2021-07-27",
 }, { // ------------------------------------------------------------------------
+"x": "Our fancy custom domains for various integrations like http://gmailzero.com and http://gitminder.com broke for https. Also fixed a broken blog thumbnail. #bugfix #regression",
+"u": ["https://twitter.com/beemuvi/status/1420167496695357447",
+      "https://github.com/beeminder/beeminder/issues/1964",
+      "https://github.com/beeminder/beeminder/issues/2464"],
+"d": "2021-07-27",
+"t": "2021-07-27",
+"c": "See UVI#1801 and UVI#3607",
 }, { // ------------------------------------------------------------------------
+"x": "Serious #bugfix where you could insta-derail a do-less goal by toggling weekends-off on and off and on again, inserting a flat spot",
+"u": ["https://twitter.com/beemuvi/status/1420532932276482050",
+      "https://github.com/beeminder/beeminder/issues/2070",
+      "https://github.com/beeminder/beeminder/pull/2460"],
+"d": "2021-07-23",
+"t": "2021-07-28",
 }, { // ------------------------------------------------------------------------
+"x": "We now helpfully reload/regenerate the graph after the weekend is scheduled when you turn on weekends-off; it seemed all broken when we didn't! #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1420533158718545923",
+      "https://github.com/beeminder/beeminder/issues/1624",
+      "https://github.com/beeminder/beeminder/pull/2460"],
+"d": "2021-07-23",
+"t": "2021-07-28",
+}, { // ------------------------------------------------------------------------
+"x": "We got rid of the checkbox for weekends-off for do-less goals. Much simpler/clearer now: a single field for how much extra buffer to allow on weekends!",
+"u": ["https://twitter.com/beemuvi/status/1420877915550408705",
+      "https://github.com/beeminder/beeminder/pull/2460"],
+"d": "2021-07-23",
+"t": "2021-07-29",
+}, { // ------------------------------------------------------------------------
+"x": "Error checking for weekend buffer for do-less: you're forced to enter an actual number (also the webcopy clarifies that setting it to zero means turning it off)",
+"u": ["https://twitter.com/beemuvi/status/1420877989982531585",
+      "https://github.com/beeminder/beeminder/issues/2459",
+      "https://github.com/beeminder/beeminder/issues/1047",
+      "https://github.com/beeminder/beeminder/pull/2460"],
+"d": "2021-07-23",
+}, { // ------------------------------------------------------------------------
+"x": "Anti-magic: instead of hiding the entire weekends-off section of the UI if you don't have a Bee Plus or higher premium plan, there's text saying what's up",
+"u": ["https://twitter.com/beemuvi/status/1420878153271021570",
+      "https://github.com/beeminder/beeminder/pull/2460"],
+"d": "2021-07-23",
+"c": "Fuller anti-magic probably says to gray it out rather than replacing it with static text",
 }, /* --------------------------------------------------------- end 2021jul */ ]
 
+var batch2021aug = [{
+}, { // ------------------------------------------------------------------------
+"x": "Dumb regression: we were (mostly) sending emails with the \"From\" as a bare email address instead of, e.g., \"Beeminder Support &lt;support@beeminder.com&gt;\" #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1425228591969701891",
+      "https://forum.beeminder.com/t/new-goal-email-doesnt-identify-as-beeminder/9520",
+      "https://github.com/beeminder/beeminder/issues/2391",
+      "https://github.com/beeminder/beeminder/pull/2475"],
+"d": "2021-07-30",
+"t": "2021-08-10",
+}, { // ------------------------------------------------------------------------
+"x": "Oops, our dynamic graph previews were missing for GmailZero goals. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1425233318379810819",
+      "https://github.com/beeminder/beeminder/issues/2455",
+      "https://github.com/beeminder/beeminder/pull/2476",
+      "https://github.com/beeminder/road/pull/226"],
+"d": "2021-07-30",
+"t": "2021-08-10",
+}, { // ------------------------------------------------------------------------
+"x": "Updated the Habitica screenshot at http://beeminder.com/habitica to match modern Habitica; also fixed some em dashes on the Strava and Trello landing pages",
+"u": ["https://twitter.com/beemuvi/status/1427778561474056200",
+      "https://github.com/beeminder/beeminder/issues/2071",
+      "https://github.com/beeminder/beeminder/issues/2283",
+      "https://github.com/beeminder/beeminder/pull/2484",
+      "https://github.com/beeminder/beeminder/pull/2485"],
+"d": "2021-08-17",
+"t": "2021-08-17",
+}, { // ------------------------------------------------------------------------
+"x": "Fixed some ugly spacing (or lack thereof) on the reminders page, namely the little header icons like the sort arrows and the info (i) icons. #bugfix #css",
+"u": ["https://twitter.com/beemuvi/status/1428143895754395648",
+      "https://github.com/beeminder/beeminder/issues/2301",
+      "https://github.com/beeminder/beeminder/pull/2487"],
+"d": "2021-08-18",
+"t": "2021-08-18",
+}, { // ------------------------------------------------------------------------
+"x": "Added missing features to the graph legend: max flux, standard flux, and the pale yellow sea of infinite safety and tranquility",
+"u": ["https://twitter.com/beemuvi/status/1428144089061494787",
+      "https://github.com/beeminder/beeminder/issues/2346",
+      "https://github.com/beeminder/beeminder/pull/2486"],
+"d": "2021-08-18",
+"t": "2021-08-18",
+}, { // ------------------------------------------------------------------------
+"x": "In our list of autodata services in Settings, RescueTime was falsely listing your Beeminder email address as the username with which you connected. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1428506387827412994",
+      "https://github.com/beeminder/beeminder/issues/445"],
+"d": "2021-08-19",
+"t": "2021-08-19",
+}, { // ------------------------------------------------------------------------
+"x": "We also added a column to that list -- https://www.beeminder.com/settings/account#account-permissions -- for the date the autodata service was added",
+"u": ["https://twitter.com/beemuvi/status/1428506503049224194",
+      "https://github.com/beeminder/beeminder/issues/445"],
+"d": "2021-08-19",
+"t": "2021-08-19",
+}, { // ------------------------------------------------------------------------
+"x": "And we improved the layout/alignment of the autodata services you haven't (yet) given Beeminder access to. #css",
+"u": ["https://twitter.com/beemuvi/status/1428506626017742849",
+      "https://github.com/beeminder/beeminder/issues/445"],
+"d": "2021-08-19",
+"t": "2021-08-19",
+}, { // ------------------------------------------------------------------------
+"x": "We replaced \"credit card\" with \"payment method\" throughout the webcopy, since we're gradually supporting more and more payment methods, thanks to @stripe",
+"u": ["https://twitter.com/beemuvi/status/1428861303754395652",
+      "https://github.com/beeminder/beeminder/issues/2223"],
+"d": "2021-08-20",
+"t": "2021-08-20",
+}, { // ------------------------------------------------------------------------
+"x": "Relatedly, we're getting closer to ditching PayPal thank goodness and edited the webcopy to strongly discourage ever using that as one's payment method",
+"u": ["https://twitter.com/beemuvi/status/1428861442971738115",
+      "https://github.com/beeminder/beeminder/issues/2223"],
+"d": "2021-08-20",
+"t": "2021-08-20",
+}, { // ------------------------------------------------------------------------
+"x": "We (mostly @shanaqui) edited and rearranged the Apple Health help page a bit in light of user confusion. Also cross-linked to the iOS app help page, etc.",
+"u": ["https://twitter.com/beemuvi/status/1429956799109623813",
+      "https://help.beeminder.com/article/61-apple-health"],
+"d": "2021-08-23",
+"t": "2021-08-23",
+}, { // ------------------------------------------------------------------------
+"x": "Added TaskRatchet and Complice shoutouts in our API documentation. Also rearranged the front matter a bit and added a \"troubleshooting\" header.",
+"u": ["https://twitter.com/beemuvi/status/1430312764640165892",
+      "https://github.com/beeminder/beeminder/issues/1736",
+      "https://github.com/beeminder/apidocs/commit/77ef02b1d5a8b1fafe58e2d372e8ed6355dc7e34"],
+"d": "2021-08-24",
+"t": "2021-08-24",
+}, { // ------------------------------------------------------------------------
+"x": "Reminder settings let you set a negative value for lead-days, meaning, logically but confusingly, no reminders at all. Now we enforce lead-days &ge; 0.",
+"u": ["https://twitter.com/beemuvi/status/1430314274975408128",
+      "https://github.com/beeminder/beeminder/issues/483",
+      "https://github.com/beeminder/beeminder/pull/2488"],
+"d": "2021-08-24",
+"t": "2021-08-24",
+"c": "Negative lead-days to mean no reminders was intentional and maaaybe made some sense in the past but now we have checkboxes for each alert channel (email, SMS, Slack, etc) so users can and should just use those to toggle reminders",
+}, { // ------------------------------------------------------------------------
+"x": "In the API docs, the datapoint parameters for the create_all endpoint were described incorrectly. Documentation #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1430648501533216768",
+      "https://forum.beeminder.com/t/error-creating-datapoints/7776",
+      "https://github.com/beeminder/apidocs/issues/32"],
+"d": "2021-08-25",
+"t": "2021-08-25",
+}, { // ------------------------------------------------------------------------
+"x": "The \"email not found\" error on the forgot-password and email-confirmation pages was stupidly hard to notice. Now it's a big red banner.",
+"u": ["https://twitter.com/beemuvi/status/1430674303872163842",
+      "https://github.com/beeminder/beeminder/issues/1844",
+      "https://github.com/beeminder/beeminder/pull/2499"],
+"d": "2021-08-25",
+"t": "2021-08-25",
+}, { // ------------------------------------------------------------------------
+"x": "Fixed typo in password-confirmation error message: \"Password confirmation does not match confirmation\" &rarr; \"Password confirmation does not match\"",
+"u": ["https://twitter.com/beemuvi/status/1431041852468195331",
+      "https://github.com/beeminder/beeminder/issues/1844",
+      "https://github.com/beeminder/beeminder/pull/2499"],
+"d": "2021-08-25",
+"t": "2021-08-26",
+}, { // ------------------------------------------------------------------------
+"x": "Changed a few of the icons on the website so they all match (eg, we had 2 different pencil icons). Halved the number of icon libraries we use!",
+"u": ["https://twitter.com/beemuvi/status/1431043004647624706",
+      "https://github.com/beeminder/beeminder/pull/2504"],
+"d": "2021-08-26",
+"t": "2021-08-26",
+"c": "No gissue",
+}, { // ------------------------------------------------------------------------
+"x": "Added a database index / tweaked a query that made dashboards load up to 10x faster. Extremely noticeable for oldtimers with many thousands of datapoints!",
+"u": ["https://twitter.com/beemuvi/status/1431399267470495745",
+      "https://github.com/beeminder/beeminder/issues/2501",
+      "https://github.com/beeminder/beeminder/pull/2506"],
+"d": "2021-08-27",
+"t": "2021-08-27",
+"c": "Went from >30s to ~3s for user d, for example",
+}, { // ------------------------------------------------------------------------
+"x": "We once had an \"increase pledge on derail\" checkbox, replaced it w/ pledge caps but some users still had it set false, so their pledges never increased. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1431400492853174272",
+      "https://github.com/beeminder/beeminder/issues/597"],
+"d": "2021-08-27",
+"t": "2021-08-27",
+"c": "Removed crufty autoincrease boolean. Original tweet that should've been the second UVI here: We accidentally allowed some old non-Beemium goals to have [effective] $0 pledge caps. Fixed/rescinded the pledgeless goals and emailed everyone affected. #bugfix",
+}, { // ------------------------------------------------------------------------
+"x": "We conservatively set pledge cap to current pledge for anyone who originally chose auto-increase off, except those with $0 pledges, who got $5 caps and an email",
+"u": ["https://twitter.com/beemuvi/status/1432502592379121665",
+      "https://github.com/beeminder/beeminder/issues/597"],
+"d": "2021-08-27",
+"t": "2021-08-30",
+"c": "See previous UVI. Pledgeless goals are Beemium perk, hence not setting any pledge caps below $5 and needing to email people. The actual tweet corresponding to this UVI was a reply to the previous one: \"[Updates: (1) Typo: '*effective* $0 pledge caps'. (2) There were 2 aspects of this that we're counting as separate UVIs. See [[links to these UVIs]] for the official changelog entries]\". Basically we accidentally tweeted the pledgeless goals thing first when it should've been a follow-on to the auto-increase bugfix.",
+}, { // ------------------------------------------------------------------------
+"x": "Added Catalán to our Duolingo integration!",
+"u": ["https://twitter.com/beemuvi/status/1432492251649773571",
+      "https://github.com/beeminder/beeminder/issues/2122",
+      "https://github.com/beeminder/beeminder/issues/1625",
+      "https://github.com/beeminder/beeminder/pull/2509/"],
+"d": "2021-08-30",
+"t": "2021-08-30",
+"c": "Also added infrastructure for supporting arbitrary From langugages but that will be a future UVI",
+}, { // ------------------------------------------------------------------------
+"x": "The old legacy streak-minding goals for Duolingo now track site-wide streak rather than language-specific streak (Duolingo's phasing out the latter)",
+"u": ["https://twitter.com/beemuvi/status/1432492848889270278",
+      "https://github.com/beeminder/beeminder/issues/2122",
+      "https://github.com/beeminder/beeminder/issues/1625",
+      "https://github.com/beeminder/beeminder/pull/2509/"],
+"d": "2021-08-30",
+"t": "2021-08-30",
+"c": "Emailed the ~4 people affected by this",
+}, { // ------------------------------------------------------------------------
+"x": "Fixed inconsistencies with buttons (they should all be yellow on black now) and made the links on the premium page for resending email confirmation be buttons",
+"u": ["https://twitter.com/beemuvi/status/1432839554260602888",
+      "https://github.com/beeminder/beeminder/issues/2514",
+      "https://github.com/beeminder/beeminder/pull/2513"],
+"d": "2021-08-31",
+"t": "2021-08-31",
+}, /* --------------------------------------------------------- end 2021aug */ ]
+
+
+var batch2021sep = [{
+"x": "Added a click-to-copy button for your Personal Auth Token in API settings instead of just linking to the raw JSON (and added \"Personal\" to the header)",
+"u": ["https://twitter.com/beemuvi/status/1433141599987331073",
+      "https://github.com/beeminder/beeminder/issues/2511",
+      "https://github.com/beeminder/beeminder/pull/2513"],
+"d": "2021-08-31",
+"t": "2021-09-01",
+"c": "Let's please also kill the confirmation dialog? Real quick as part of this UVI? Ooh, also a visual glitch with like an underscore after the icon?",
+}, { // ------------------------------------------------------------------------
+"x": "Made the click-to-copy much nicer: instead of a whole dumb confirmation dialog, just change the tooltip to say \"copied!\" (and cleaned up a spurious underscore)",
+"u": ["https://twitter.com/beemuvi/status/1433191826979110913",
+      "https://github.com/beeminder/beeminder/issues/2511",
+      "https://github.com/beeminder/beeminder/pull/2521"],
+"d": "2021-09-01",
+"t": "2021-09-01",
+}, { // ------------------------------------------------------------------------
+"x": "While we were at it: spaced out the icons (#css) and improved the tooltip text. https://www.beeminder.com/settings/account#account-permissions",
+"u": ["https://twitter.com/beemuvi/status/1433579423693881351",
+      "https://github.com/beeminder/beeminder/issues/2529"],
+"d": "2021-09-02",
+"t": "2021-09-02",
+}, { // ------------------------------------------------------------------------
+"x": "Autodata goals would freeze (not rerail) if you clicked refresh/refetch immediately after the deadline & were still below the line w/ the fetched data. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1433579690778771485",
+      "https://github.com/beeminder/beeminder/issues/2516",
+      "https://github.com/beeminder/beeminder/pull/2518"],
+"d": "2021-09-01",
+"t": "2021-09-02",
+"c": "Emailed everyone potentially affected",
+}, { // ------------------------------------------------------------------------
+"x": "Added Yiddish and Guarani (one of the official languages of Paraguay, only learnable in Duolingo from Spanish) to our Duolingo integration",
+"u": ["https://twitter.com/beemuvi/status/1433902294139949056",
+      "https://github.com/beeminder/beeminder/issues/2510"],
+"d": "2021-08-31",
+"t": "2021-09-02",
+}, { // ------------------------------------------------------------------------
+"x": "We briefly broke our Duolingo integration for Chinese, Dutch, Klingon, and Norwegian -- we just wouldn't see new XP you got for like a day. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1433902461538824192",
+      "https://github.com/beeminder/beeminder/issues/2519"],
+"d": "2021-08-31",
+"t": "2021-09-02",
+"c": "Duolingo has like at least three APIs -- confusion ensued."
+}, { // ------------------------------------------------------------------------
+"x": "In our Duolingo integration if you changed your base language we'd stop seeing XP for languages not learnable from that language. #bugfix #regression",
+"u": ["https://twitter.com/beemuvi/status/1435017882073649166",
+      "https://github.com/beeminder/beeminder/pull/2509/"],
+"d": "2021-08-30",
+"t": "2021-09-06",
+"c": "See UVI#1092 and UVI#1312 showing that this was technically a regression but only ever briefly worked -- till now!",
+}, { // ------------------------------------------------------------------------
+"x": "Another brief #regression from all these Duolingo changes: We were starting Duolingo goals at 0 XP instead of however many XP you actually had. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1435018064727216128",
+      "https://github.com/beeminder/beeminder/issues/2522",
+      "https://github.com/beeminder/beeminder/pull/2524"],
+"d": "2021-09-01",
+"t": "2021-09-06",
+}, { // ------------------------------------------------------------------------
+"x": "One more Duolingo #regression (from UVI#3295): we were silently failing to tell you if we couldn't find your username on Duolingo. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1435018167420555267",
+      "https://github.com/beeminder/beeminder/issues/2533",
+      "https://github.com/beeminder/beeminder/pull/2534"],
+"d": "2021-09-03",
+"t": "2021-09-06",
+"c": "The old API gave an explicit 404 and the new one returns a 200-response with an empty list of users",
+}, { // ------------------------------------------------------------------------
+"x": "Added a click-to-copy link to give you a URL for your graph image (beeminder.com/username/goalname.png) that appears when your mouse is hovering over your graph",
+"u": ["https://twitter.com/beemuvi/status/1435375568560611328",
+      "https://github.com/beeminder/beeminder/issues/537"],
+"d": "2021-09-03",
+"t": "2021-09-07",
+"c": "This was kind of a regression introduced by UVI#2934 because before that, you could just right-click and save-as, which stopped working when we switched to SVG images. Originally this was deployed with beeminder.com/username/goalname/graph as the image URL; we changed it to beeminder.com/username/goalname.png on 9/6 because that's a better URL and because it ties in with UVI#3663 better",
+}, { // ------------------------------------------------------------------------
+"x": "The hovertext on the \"share\" link in the Statistics tab said \"cancel\" for some reason (#bugfix); now a whole blurb about html-embedding and hotlinking images",
+"u": ["https://twitter.com/beemuvi/status/1435743386305122304",
+      "https://github.com/beeminder/beeminder/pull/2504",
+      "https://github.com/beeminder/beeminder/pull/2538"],
+"d": "2021-09-08",
+"t": "2021-09-08",
+}, { // ------------------------------------------------------------------------
+"x": "Also we made all(?) our hovertext have consistent capitalization. #bugfix HT zzq",
+"u": ["https://twitter.com/beemuvi/status/1435744093422768128",
+      "https://forum.beeminder.com/t/capitalization-in-consistency-in-tooltips/9684",
+      "https://github.com/beeminder/beeminder/pull/2538"],
+"c": "Sentence-casing, I guess we can call it",
+"d": "2021-09-08",
+"t": "2021-09-08",
+}, { // ------------------------------------------------------------------------
+"x": "Deleting the (poorly named but that's a separate issue) \"RECOMMIT\" meta datapoint after derailing would (sometimes, long story) instantly re-derail you. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1436101325314420759",
+      "https://github.com/beeminder/road/issues/223",
+      "https://github.com/beeminder/beeminder/issues/1143"],
+"d": "2021-09-06",
+"t": "2021-09-09",
+"c": "See following UVI comment",
+}, { // ------------------------------------------------------------------------
+"x": "That fix also makes flatlining (do-more's counterpart to pessimistic presumptive datapoints) on derailed, frozen goals be more consistent/correct. #beebrain",
+"u": ["https://twitter.com/beemuvi/status/1436101451256786965",
+      "https://github.com/beeminder/road/issues/223"],
+"d": "2021-09-06",
+"t": "2021-09-09",
+"c": "Namely, we now always flatline up to today unless you derailed in the past and stayed derailed up to and including today -- then we cut the flatlining short to just after your most recent derailment. That makes long-derailed graphs much more informative and it doesn't even make sense to keep flatlining while derailed -- unless the bright red line is eventually reset. Failure to do that 'unless' part is what the big bugfix was.",
+}, { // ------------------------------------------------------------------------
+"x": "Embarrassingly, we had a dumb workaround for the flatlining bug where we'd add a \"RESTART PLACEHOLDER\" meta datapoint for goal restarts; mercifully nixed now",
+"u": ["https://twitter.com/beemuvi/status/1436101557125214229",
+      "https://github.com/beeminder/beeminder/issues/1302"],
+"d": "2021-09-07",
+"t": "2021-09-09",
+}, { // ------------------------------------------------------------------------
+"x": "One more #bugfix along for the ride: a weird edge case where flatlining got confused and failed to draw the graph at all, similar to UVI#3826",
+"u": ["https://twitter.com/beemuvi/status/1436101658308603912",
+      "https://github.com/beeminder/road/issues/222"],
+"d": "2021-09-06",
+"t": "2021-09-09",
+}, { // ------------------------------------------------------------------------
+"x": "Scheduling a break sometimes added superfluous zero-width segments to the bright red line, cluttering up the graph matrix. #bugfix HT adba",
+"u": ["https://twitter.com/beemuvi/status/1437552993755283457",
+      "https://github.com/beeminder/beeminder/issues/1275",
+      "https://github.com/beeminder/beeminder/issues/2541",
+      "https://github.com/beeminder/beeminder/pull/2545"],
+"d": "2021-09-13",
+"t": "2021-09-13",
+"c": "Confusing degenerate graph matrix rows are like [2021-09-13, nil, 0], [2021-09-13, nil, 7]",
+}, { // ------------------------------------------------------------------------
+"x": "Worse, that could result in insta-derails when ratcheting the red line (and ratcheting is now robust to such degenerate segments if they were added). #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1437553083400159232",
+      "https://github.com/beeminder/beeminder/issues/1275"],
+"d": "2021-09-13",
+"t": "2021-09-13",
+}, { // ------------------------------------------------------------------------
+"x": "Fixed instances in webcopy of \"break your pledge once, shame on you; break it again, put your money where your mouth is\" from the pre-commitwall days",
+"u": ["https://twitter.com/beemuvi/status/1437928649789829120",
+      "https://github.com/beeminder/beeminder/issues/2259",
+      "https://github.com/beeminder/beeminder/pull/2548"],
+"d": "2021-09-14",
+"t": "2021-09-14",
+}, { // ------------------------------------------------------------------------
+"x": "Premium page webcopy clarifies how you'll lose access to perks if you downgrade from a premium plan (but some we intentionally let you keep despite downgrading)",
+"u": ["https://twitter.com/beemuvi/status/1437928756027396098",
+      "https://github.com/beeminder/beeminder/issues/668"],
+"d": "2021-09-14",
+"t": "2021-09-14",
+"c": "For Bee Plus: \"After your downgrade occurs you will lose access to the perks of your Bee Plus plan. For example we will stop automatically scheduling weekends on your weekends-off goals.\". For Beemium: \"After your downgrade occurs you will lose access to the perks of your Beemium plan. For example your $0 pledge caps (if you have any) will be increased to the $5 minimum (not the pledge, just the cap).\". For removing plan entirely: \"After your downgrade occurs you will lose access to the perks of your plan, including $0 pledge caps (if you have any, they'll be increased to the $5 minimum -- not the pledge, just the cap), weekends will no longer be scheduled, SMS reminders will fall back to email, etc. The exception is that we won't take away any existing goals, or change the goal type. In other words if you bought Infinibee to create 12 custom goals we won't force you to close or change them.\"",
+}, { // ------------------------------------------------------------------------
+"x": "Beyond the webcopy clarification, it's all now true and consistent, as opposed to the old status quo of some perks like $0 pledge caps persisting on downgrade",
+"u": ["https://twitter.com/beemuvi/status/1440093006443343879",
+      "https://github.com/beeminder/beeminder/issues/668",
+      "https://github.com/beeminder/beeminder/pull/2556"],
+"d": "2021-09-20",
+"t": "2021-09-20",
+}, { // ------------------------------------------------------------------------
+"x": "Pledges going to charity now also automatically goes away when you downgrade. Also we changed pledge caps that should've increased and emailed people impacted.",
+"u": ["https://twitter.com/beemuvi/status/1440093471210016771",
+      "https://github.com/beeminder/beeminder/issues/668",
+      "https://github.com/beeminder/beeminder/issues/779",
+      "https://github.com/beeminder/beeminder/pull/2557"],
+"d": "2021-09-20",
+"t": "2021-09-20",
+}, { // ------------------------------------------------------------------------
+"x": "SMS reminders used to (falsely) still show a checked checkbox after you downgraded your premium subscription (even though SMS reminders were not sent) #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1440455834916425731",
+      "https://github.com/beeminder/beeminder/issues/2559",
+      "https://github.com/beeminder/beeminder/pull/2556"],
+"d": "2021-09-20",
+"t": "2021-09-21",
+}, { // ------------------------------------------------------------------------
+"x": "We fixed myriad styling / layout / font problems in our popup dialogs (aka modals). They should all be nice and consistent now. #bugfix #css",
+"u": ["https://twitter.com/beemuvi/status/1440457755635032066",
+      "https://github.com/beeminder/beeminder/pull/2553",
+      "https://github.com/beeminder/beeminder/issues/668#issuecomment-919634104"],
+"d": "2021-09-15",
+"t": "2021-09-21",
+"c": "Font size, header size, paragraph spacing. See gissue for before/after screenshot. Included a bunch of satisfying refactoring of naming scheme for modals and moving the styles into one modal stylesheet",
+}, { // ------------------------------------------------------------------------
+"x": "Previous UVI was kinda many UVIs! Here's one that barely counts, since Stripe did all the real work for us: http://beeminder.com/climate",
+"u": ["https://twitter.com/beemuvi/status/1440458009197510664",
+      "https://github.com/beeminder/beeminder/pull/2554"],
+"d": "2021-09-15",
+"t": "2021-09-21",
+}, { // ------------------------------------------------------------------------
+"x": "The ratchet UI was blank for non-do-less goals after restarting an archived one. Now it at least tells you to reload the page. #bugfix #regression cf UVI#3716",
+"u": ["https://twitter.com/beemuvi/status/1440799613330411524",
+      "https://github.com/beeminder/beeminder/issues/2284",
+      "https://github.com/beeminder/beeminder/pull/2564"],
+"d": "2021-09-22",
+"t": "2021-09-22",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, /* --------------------------------------------------------- end 2021sep */ ]
+
 var staged = [ {
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -1456,6 +2018,12 @@ var staged = [ {
 
 /*********************************************************************************************************************************************************************
 ~~~~~~----------------------------- METASTAGED -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
+}, { // ------------------------------------------------------------------------
+[HOLD] 
+Forest green aka darker green grayson dots when safe days is 7 or more
+https://github.com/beeminder/road/issues/111
+2020-10-26: done in beebrain
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 [HOLD] Decide! Either tweet it cuz it's a change that happened, or make a new gissue for undoing it and link to #1285 and #1494 in that gissue.
 "x": "For the rare goals that are aggday=sum but not auto-summing, we no longer show the total due in the blurb that tells you your safety buffer",
@@ -1478,11 +2046,6 @@ https://github.com/beeminder/BeeSwift/pull/273
 PR 2021-03-30, testflight 2021-06-01
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-[HOLD]
-CodeCombat integration!
-https://github.com/beeminder/beeminder/pull/2244
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
 [WIP]
 Punctuation after hashtags allowed
 https://github.com/beeminder/road/issues/142
@@ -1501,12 +2064,8 @@ TODO: review with @bsoule
 }, { // ------------------------------------------------------------------------
 [HOLD]
 beebrain: say 'eke' instead of :) if you're at tfin but on the wrong side of the bright red line. probably should be a normal beemergency in that case
+also i guess now we sometimes say 'fin' and sometimes a happyface but i've forgotten why we do one vs the other... (and did we already tweet that?)
 https://github.com/beeminder/road/issues/172
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-[HOLD]
-one more pocket one for the blog post and making it officially official? maybe when we show up in pocket's gallery? we're milking this pretty hard already though
-https://blog.beeminder.com/pocket/?secretpreview=4
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 [BEEMIOS]
@@ -1514,40 +2073,25 @@ username whitespace bugfix
 https://github.com/beeminder/BeeSwift/issues/285
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-[HOLD] this looks like it wasn't extant long enough to impact any actual users
-but maybe neal chau ran into bugs in this window? see email with dreev and neal and adam?
-"x": "Fixed a briefly extant bug with new Todoist goals that autofetched pre-goal-creation data and made you start with way too much safety buffer. #bugfix",
-also it added everything from the past week as a datapoint for *today* which was especially wrong.
+[MINI/QUESTIONABLE]
+made the milkman group publicly viewable and show all goals, archived or not
+https://github.com/beeminder/beeminder/issues/2472
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-SO CLOSE: TODOIST-RECURRING TRANSITION FOR EXISTING GOALS
-https://github.com/beeminder/beeminder/issues/518
-Instead of fetching all the items, or all the items that have changed since the last time we checked, we have to use the event history log.
-We depaginate the event history log, and then compare times, projects, and labels.
-Set new Todoist goals to watch for completed recurring items.
-Remove elf text describing recurring item limitation
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-warn about PPR vs autodata for [api, zapier, ifttt]
-don't disable the PPR setting when someone turns on API, Zapier, or IFTTT for a manual do less. (cuz then it's un-fixable by the user).
-https://github.com/beeminder/beeminder/issues/2403
-"d": "2021-07-02"
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-[MILKABLE FOR A COUPLE, I THINK -- ps, milked for 3, which seems good unless we wanted to call out the "data push" and "data pull" thing separately]
-timey precision shown as HH:MM 
-other small layout tweaks to the Data section of settings:
-X errant comma in the display precision description
-X uses fancy radio button and capitalizes Integration (if autodata source)
-- adds header for "esoteric number settings"
-* adds "(aka push)" and "(aka pull)" to PESOS / data source labels
+"x": "Made the text box in the "tell us why you are deleting your goal" UI normal-sized. It was narrow and ugly. #css",
 "u": [
-      "https://github.com/beeminder/beeminder/issues/954",
-      "https://github.com/beeminder/beeminder/pull/2429"],
-"d": "2021-07-07",
-Better hovertext for the precision dropdowns:
-https://github.com/beeminder/beeminder/pull/2430
-2021-07-07: PR by dreev
+      "https://github.com/beeminder/beeminder/issues/2570",
+      "https://github.com/beeminder/beeminder/pull/2526"],
+"d": early september?
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+[SAD TROMBONE: NOT DETECTABLE IN HONECOMB]
+fewer individual renders when loading, e.g., the goal page. might be measurably faster?
+https://github.com/beeminder/beeminder/issues/2571
+https://github.com/beeminder/beeminder/pull/2526
+"d": early september?
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------

@@ -414,6 +414,7 @@ var batch2020feb = [{
 }, { // ------------------------------------------------------------------------
 "x": "For the past several weeks we've had cases of mail delayed by several hours (upgrading Rails, long story) #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1232820775301763072",
+      "https://github.com/beeminder/beeminder/issues/1097",
       "https://github.com/beeminder/beeminder/pull/1111"],
 "c": "Something changed with usermailer in the Rails 4.0 to 4.2 upgrade and we were having to manually retry mail jobs",
 }, { // ------------------------------------------------------------------------

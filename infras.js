@@ -961,6 +961,77 @@ x: "Updated our Stripe gem, and updated the Stripe api version we are targeting 
 "t": "2021-07-07",
 "c": "remove intercom from gemfile & remove weeder #2384"
 }, { // ------------------------------------------------------------------------
+"x": "#bugfix qual failures: first was on the order of a syntax error; the other a nondeterministic failure due to dirty db state & the order they were run in.",
+"u": ["https://twitter.com/beeminfra/status/1415439534788022273",
+      "https://github.com/beeminder/beeminder/issues/2312",
+      "https://github.com/beeminder/beeminder/pull/2422",
+      "https://github.com/beeminder/beeminder/pull/2360",
+      "https://github.com/beeminder/beeminder/issues/2359"
+      ],
+"t": "2021-07-14",
+"d": "2021-06-03",
+"d": "2021-07-02"
+}, { // ------------------------------------------------------------------------
+"x": "Fixed a non-user-visible bug where any user with bad Google auth (or other scenarios) would cause a 500 every time they visit the new goal page!",
+"c": "See gmailzero.rb line 206 or so",
+"u": ["https://github.com/beeminder/beeminder/pull/2456",
+"https://twitter.com/beeminfra/status/1417973284373602304"],
+"d": "2021-07-20",
+"t": "2021-07-21"
+}, { // ------------------------------------------------------------------------
+"x": "Fulfilled some admin wishes regarding our raplet (user dossier tool) adding info like timezone, total goal count, and other stuff",
+"u": ["https://github.com/beeminder/beeminder/pull/2466",
+"https://twitter.com/beeminfra/status/1420527652801187843"],
+"d": "2021-07-26",
+"t": "2021-07-28"
+}, { // ------------------------------------------------------------------------
+"x": "Stopped sending a certain type of derail alert to our support inbox when the pledge cap is $0, cuz it's not relevant for $0 goals and could be super self-spammy.",
+"u": ["https://github.com/beeminder/beeminder/pull/2458",
+"https://twitter.com/beeminfra/status/1420530238023364609"],
+"d": "2021-07-21",
+"t": "2021-07-28"
+}, { // ------------------------------------------------------------------------
+"x": "Fixed a warning from Yarn complaining about us not having a license in our package file. Cleaned that up to stop muddying our logs.",
+"u": ["https://github.com/beeminder/beeminder/pull/2374","https://twitter.com/beeminfra/status/1425225010554105858"]
+}, { // ------------------------------------------------------------------------
+"x": "Fixed a problem with emailing users from our admin interface where the email would silently fail if the admin was initiating it from an archived goal page.",
+"u": ["https://twitter.com/beeminfra/status/1428141803568439299",
+      "https://github.com/beeminder/beeminder/issues/283",
+      "https://github.com/beeminder/beeminder/pull/2474"],
+"d": "2021-07-29",
+"t": "2021-08-18"
+}, { // ------------------------------------------------------------------------
+"x": "In addition to fixing the disappearing email problem last week, we also made it so that you can email a user with no goals at all, directly from their gallery page.",
+"u": ["https://github.com/beeminder/beeminder/pull/2474",
+      "https://twitter.com/beeminfra/status/1430638903636107266"],
+"d": "2021-07-29",
+"t": "2021-08-25"
+}, { // ------------------------------------------------------------------------
+"x": "Fixed a timezone bug in the specs for our Premium page that made them fail at certain times of day.",
+"u": ["https://twitter.com/beeminfra/status/1432837269581303808",
+      "https://github.com/beeminder/beeminder/issues/2515"],
+"d": "2021-08-31",
+"t": "2021-08-31"
+}, { // ------------------------------------------------------------------------
+"x": "Fixed up our Withings integration for an upcoming deprecation / URL change for their api auth token endpoint.",
+"u": ["https://twitter.com/beeminfra/status/1432837378427682823",
+      "https://github.com/beeminder/beeminder/issues/2193",
+      "https://github.com/beeminder/beeminder/pull/2508",
+      "https://github.com/beeminder/beeminder/pull/2512"],
+"d": "2021-08-31",
+"t": "2021-08-31"
+}, { // ------------------------------------------------------------------------
+"x": "Cleaned up deprecated goal fields and added missing ones in admin's goal dashboard as well as improved descriptions and formatting.",
+"u": ["https://github.com/beeminder/beeminder/pull/2543",
+"https://twitter.com/beeminfra/status/1438290628559863811"],
+"d": "2021-09-13",
+"t": "2021-09-15"
+}, { // ------------------------------------------------------------------------
+"x": "UVI#3884 included much satisfying refactoring of modals behind the scenes, consolidating CSS, and a consistent naming scheme for partials.",
+"u": ["https://github.com/beeminder/beeminder/pull/2553/commits",
+"https://twitter.com/beeminfra/status/1440820626994855936"],
+"t": "2021-09-22"
+}, { // ------------------------------------------------------------------------
 }, /* ----------------------------------------------------------- end batch */ ]
 
 var staged = [ { // note: sub-entries not allowed here in staging
@@ -978,12 +1049,29 @@ https://github.com/beeminder/beeminder/commit/
 initialize logger in omniauth initializer #2363
 https://github.com/beeminder/beeminder/pull/2363
 }, { // ------------------------------------------------------------------------
-Fix bad RefreshJob tests #2360
-https://github.com/beeminder/beeminder/pull/2360
+We've been slowly improving our error handling in autodata, some have a todoist::Authexception, and a gmailzero::authexception now
+* Created a Gmailzero::AuthException.
+      "https://github.com/beeminder/beeminder/issues/881"],
+}, { // ------------------------------------------------------------------------
+[1047 is the infra side of 2459, which is user-visible]
+
+furthermore, with the weird toggling stuff going on with the form, we were setting "weekend-rate" to nil when you turned it off 
+https://github.com/beeminder/beeminder/issues/1047
+}, { // ------------------------------------------------------------------------
+"x": "numerous opportunistic-refactoring commits tucked into other PRs, removing unused methods in goal model, unused legacy controllers, unused view helpers",
+"u": ["https://github.com/beeminder/beeminder/commit/0fc36c0e71cba18b55cc1d385dee2bb0c24ced04",
+"https://github.com/beeminder/beeminder/pull/2531",
+"https://github.com/beeminder/beeminder/pull/2526/commits/214fdb74ba4d5a73d309966dbce9f6fe7ed8f5f0"],
+}, { // ------------------------------------------------------------------------
+super satisfying refactor of a view partial that was being rendered in forms all over the site, turning it into a view helper function so there are fewer renders
+(maybe a UVI instead? or also?)
+https://github.com/beeminder/beeminder/pull/2526
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
+
+
 TODO:
 don't make title required and then do javascript contortions to deal with it
 }, { // ------------------------------------------------------------------------
