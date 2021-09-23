@@ -1231,6 +1231,7 @@ var batch2019jun = [{
 }, { // ------------------------------------------------------------------------
 "x": "Fixed typography things (bullet wrapping, title wrapping, margins) in the \"why?\" modal that is available when we ask for a credit card in goal creation",
 "u": ["https://twitter.com/beemuvi/status/1137258024106582017",
+      "https://github.com/beeminder/beeminder/issues/602",
       "https://github.com/beeminder/beeminder/pull/643"],
 "d": "2019-06-07",
 "t": "2019-06-07",

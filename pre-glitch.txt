@@ -1,0 +1,160 @@
+! XXX Stripe Alipay beta
+2017 Apr 06: started dumping UVIs at https://glitch.com/edit/#!/uvi ------------------------------------------------------------------------------
+STAGED: ------10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140
+      Yudkowskian anti-akrasia technique when, eg, faced w/ choice of whether to eat a donut: Don't entertain the choice of "just this one" ...
+      ... donut. Instead choose between always eating donuts in situations similar to the one you're in (including right now) or never doing so.
+. UPD Updates to glossary and FAQ to be up to date with redesign (no panic threshold, etc), nixed superfluous logged in/out banners. #mini++ [TODO: FAQ]
+CANDIDATES: --10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140
+    do less max-safety is units too, not days
+bugfix: don't try to verify authenticity token on signup or login
+? MIS error handling in misfit receive push
+? ENC fix encoding issue in dpt controller
+? API edits from dave42w on beemapi
+. DEA don't let people deauth the smartphone apps [deeper issue here says bee; tried to deal with this the right way but wrong set syntax?]
+. LNK Link to make data public/private is wrong with those in advanced [TODO]
+. BOT Email bot robustification ("add data above this line") [TODO? not seeing this in production]
+. SK2 More serious #bugfix w/ our @SkritterHQ integration: we weren't counting 12am-4am time for the prev day (unless you manually hit refresh?) [TODO: truth check]
+      [need to figure out how the bug manifested exactly]
+      [origin of bug: it's not a midnight deadline, but also not allowed for the user to set arbitrary deadline]
+. BEM beemind.me #bugfix [not a problem on our end? can we fail louder or something?] -- we can maybe give specific error messages
+. FEA [TODO: fix bug with /featured, put back "feature me" checkbox, link to it somewhere] [this is not exactly a bug. it's just that we're doing an expensive/dumb fetch-and-sort, so it's not really strictly the exact optimal subset of goals. maybe it's really dumb and it doesn't even closely resemble the right set of goals.]
+. HOV TODO: hovertext on pledge amount arrows
+o SDP Added a param to sort datapoints in the api goal endpoint (with datapoints=true); should make it [noticeably?] faster in general, since we're no longer sorting by default [need to document it on beeminder.com/api]
+. JAW http://forum.beeminder.com/t/bug-weight-logging-through-up/1195 [TODO]
+. HMS Elide the trailing ":00" in the H:M:S-formatted values [TODO]
+. TRX TODO: improved safebump algorithm: lim(safebuf)
+. IS1 [STAGING] ifttt commit: "respond to comparison" https://github.com/dreeves/beeminder/commit/86ba892674fd373a6f050cf13524cb32a3c0ba81
+. IS2 [STAGING] ifttt commit: "send comparison with test setup" https://github.com/dreeves/beeminder/commit/55721175aca8bc3f4c5ae26ade2a028927b72d47
+. IS3 [STAGING] ifttt commit: ignore specific goal param for deadline IFTTT test (because ifttt requires at least 3 items for a successful trigger. idiots).
+. MIN We now give better errors when the email bot can't parse a datapoint [DOH: rachel benoit (hawk3ye/arp) and others have confirmed it's still silently failing]
+. DOL make do-less goals re-rail with safety buffer the same way they start with safety buffer. no confusing week of double-steepness. [TODO: happens on recommits, not restarts so far]
+. ZAP TODO: handle stuff like this: ^ :29 "Via Zapier-Withings Integration Hack V2" HT Nick Head
+TOO LATE OR TOO LAME: --20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140          
+  nuvi 07/29 SETTING PERSISTS ACROSS GOAL CLICKS [i think chelsea said this? referring to togglable buttons for delta vs abs? anything else?]
+  nuvi 09/22 remember dashboard toggle state [already tweeted expand/collapse; i think this predated that but don't know what else it might be referring to]
+  nuvi 10/04 withings logo [we didn't have one at all before? or was this just referring to the handful of pixels that were cut off originally?]
+  nuvi? 7/30 don't barf [was it a 500 before?] if you auth an app on https://www.beeminder.com/settings/apps that is later deleted
+       https://twitter.com/beemuvi/status/759646136906883072
+  nuvi 10/12 anchor text that goes to the goal tabs, but that’s sort of duplicating what’s on prod [yeah, maybe too minor]
+  nuvi 9/23 hide the pledge stepper if autoincrease is off [i don't actually like this]
+  nuvi 9/20 smarter default for baremin display (delta vs abs) [too minor? already tweeted togglability. or there's particular cleverness w/ choosing good default?]
+o HAB bugfix from alys with initial To-Do count? [not done yet] anything else with api v3 upgrade? [no]
+o GTB GTBee infinite loop fix (mongoid thing)
+. CAR don't "(premium only)" the goal types that are premium only [slightly less carrot dangling] [not really a UVI, just sneakily concealing carrotiness]
+. SCO Stripe checkout everywhere (except premium, and maybe restarting frozen/archived goals?)
+. PAN sort threshold bugfix [too lame cuz it's deprecated]
+. DUO #bugfix: errors creating new duolingo goals, and others where we set the runits to daily instead of weekly at creation time. [already tweeted fixed rate units]
+o EVS "Alert defaults" now has a tooltip about how Email vs SMS is not currently overridable per goal -- you just have to choose one or the other [maybe kind of a negative UVI]
+. MIS Misfit bugfix with duplicate datapoints? 
+      [i'm still not clear on *how* this happened in the first place]
+. SK3 Skritter 4am thing after all? I'm leaning towards no, that we missed our chance to tweet it as part of the "yay! skritter integration" uvi.
+o NGI Passenger/nginx thing that bee fixed on saturday 2015 may 9?
+. 4AM Handle Skritter's 4am end-of-day properly. (DONE)
+. SK3 set returnto for skritter if user not authed yet (?)
+o GZ7 Maybe was impossible to create brand new GmailZero goal if coming fresh to http://gmailzero.com and never authed before #bugfix 
+      TODO: needs more understanding from Bee but is related to the forum thing: http://forum.beeminder.com/t/breaking-changes-in-gmailzero/713/12
+      also maybe improved redirect-after-oauth ridiculousness.. but probably not for everything. 
+o PNK API returns "pinkzone" ie subset of the road matrix ("roadall") indicating what part of the road you're not allowed to change [TODO: beebrain only now]
+o LAT http://beeminder.com/latestUVIs (maybe we previously had decided this wouldn't count?)
+o TMI You can now specify relative deadlines (eg "+2h") in TagTime Minder: http://tminder.meteor.com [BEE VETOES]
+. GOO victorious tweet about finally fixing the problem where google would make you re-auth every time or every couple weeks or something? [I did a thing that I hope/wish fixes this, but have not yet confirmed]
+. IOS "as far as I can tell there just aren't eep day notifications going out to ios right now" --andy (one prereq for fixing committed so far)
+. ??? scrollto failing again for some reason. plus don't remove google oauth at all
+. FRE freebees error -- sometimes some people were getting errors? [not actually sure this is fixed yet]
+o API goal.frozen? always returns a boolean now [only noticable in ios cuz of causing crashes]
+. RK2 runkeeper bug for exactly one user with a non utf-8 character in their runkeeper info [i think it's a legit UVI, being robust to that; but not actually fixed yet?]
+. LNK Reminder email link url tweak HT Joel Bradbury
+o GRA gravatars, advanced user settings page [dreeves isn't happy with the state of this yet]
+- ICO Fixed the icons at http://beeminder.com/services as well
+. WEE do an actual shownum on target weight in the mannequin thing [TODO: can we call it uvi if we're not giving mannequin treatment to everyone?]
+. DIA fix 500 in dial rate? [saw a commit to that effect...]
+o HEA Some very minor tweaks to the frontpage css: got rid of the gradients (the ugly ones anyway), & removed the green dividers between sections
+. GIT #bugfix: Gitminder would forget the goal params https://trello.com/c/jdMMpvlt/914-gitminder-forgets-goal-params-if-you-haven-t-already-authed-github [verify not more brokenness]
+. CON contact mailer was briefly broken with alice's big refactor or something (was visible to exactly one user so probably doesn't count)
+. RES Previous UVI fixed an issue with getting Y-M-D dates for goal fields. We had the same problem in take-a-break and #bugfix'd it too. [prev was aug 31]
+. BOC Made the email bot slightly more secure but we don't want to say how cuz it's still embarrassingly lax
+. PPO a nice little popover to explain why you can't pledge more than $5 to start with [ OK, it's not actually *all* that nice. right now it just links to money faq ]
+. TR5 No special insta-archive option when adding credit card [safe when we add leniency factor for PPRs]
+. AVA There was a bug with default avatar thumbnails (the path just pointed to the regular-sized default avatar image) 
+. RXR fixed a lazy regex in the revenue graphs to make them more robust to possibility of picking up non revenue entries from the logs (aka we are not billionaires)
+. MYL tabs remember your preference for newbee vs advanced data entry [maybe this is super lame, but we didn't mention it yesterday]
+. BBR Doubt anyone would've noticed but https://twitter.com/beemuvi/status/361949069003866112 was not accounting for the flatlined datapoint till now
+. APP flash error if bad client id for the /apps/authorize thing [TODO for chris]
+. GTB Reply to the charge email from GTBee -- http://blog.beeminder.com/gtbee -- w/ "just testing" & we'll cancel it before it goes thru (only works once!)
+. BAL For superfans who want to read our whole blog except for things tangential to Beeminder or no longer relevant: http://blog.beeminder.com/tag/bee-all/
+. FIN Fine print at the bottom of http://beeminder.com/premium (if you're signed in)
+. NIL fix nil comment match error in delete PPR code??? [i have no idea what this is referring to]
+o AUT [auto-ratchet? did we ever tweet that?]
+- COM API documentation fix: Docs for Datapoint#create_all said "comment" parameter was optional (it's not). HT @dmwit13 [maybe make it actually optional instead?] [this is probably done?]
+- QUA Off-by-one bugfix in Quick Add: [what was it?] HT Brent Yorgey <- I'm not really positive this is fixed for all time zones. [this is fixed / will be fixed by daystamp Genmid stuff]
+- HOV Hovertext on "Your Goals" link as kind of a reminder that you can share your Beeminder gallery by pointing friends to, eg, http://beeminder.com/d
+. IFT new datapoint trigger (a specific goal)
+. IFT goal is red trigger (any of your goals, or a specific goal)
+. IFT add datapoint action
+EMERGENCY UVI IDEAS: ---20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140
+o SET the settings cog should be grayed out instead of absent for frozen goals
+o PLC include the pledge cap in the upper left above the graph. and maybe fix those arrow buttons while we're at it.
+o API http://forum.beeminder.com/t/api-goal-datapoints-parameter-parsing/1026
+      https://github.com/dreeves/beeminder/blob/master/app/controllers/api/v1/goals_controller.rb#L30
+o ESY Latest 500 error that chipmanaged generated
+o SRT Chelsea: another totally dumb uvi req - sort these alphabetically. http://beeminder.com/services
+o PER Don't ask to read the user's email just to sign in with Google
+o CHL Chelsea: the popup that comes up when i cancel an archive telling me i'm still on the hook should also pop up when i hit archive initially to say "HEY FYI YOU'RE STILL ON THE HOOK"
+o DAY http://forum.beeminder.com/t/days-between-pledges/755 (maybe like a "days since last derailment" line in the goal progress box)
+o END get rid of or extend BDUSK in beebrain since rails doesn't have 2038 as ENDOFDAYS anymore
+o COO remember_user_token is getting set by rails and causing people to get logged out
+o OAU http://beeminder.uservoice.com/forums/3011-general/suggestions/6914639-make-the-oauth2-tokens-non-expiring
+o WID http://beeminder.uservoice.com/forums/3011-general/suggestions/6966280-add-widget-code-to-handle-cases-where-iframes-don
+o DSE ideas from dsernst:
+  * goal page alerts / notifications could use larger X button. More visible and easier to click area 
+  * shadow on #goal-box-content doesn't make any sense in terms of real world light.
+    * {box-shadow: 0px 0px 3px -1px #3b3b3b;} looks much cleaner 
+  * pressing edit button on detailed /datapoints/ page should let you edit values in-line without loading a new page
+    * all the relevant data has already been downloaded 
+  * Goal graph "Key" is in inconvenient out-of-way position 
+  * Goals shouldn't need week delay to archive if they are already completed (or derailed?). Leaves a feeling of being out of control, when unnecessary. 
+  * List view for goals, with columns: Name, Time-until-derail, minimum to get on road, pledge amount
+o BUG Import["https://www.beeminder.com/api/v1/users/me/goals/bugmagic1623.json?auth_token=xx5h6YWasA29UswMxysm", "JSON"]
+o REC ocharles bug with recommit using not-the-most-recent-datapoint value when recommiting an odometer goal
+X SMS from lahwran: when you confirm SMS, automatically check the box to actually get minded by sms
+o CAL http://beeminder.uservoice.com/forums/3011-general/suggestions/6596906-use-calories-capital-c-for-runkeeper-goals
+. KEY https://twitter.com/GameClayton/status/523198750349467648
+. FIT fitbit wizard description of different types (reto) [TODO]
+? ??? [alice will probably get to writing this up properly soon, once the reunion is over] https://mail.google.com/mail/u/1/?zx=ugrzciuivp11#inbox/1456df0ec713c804
+. CNT Fixed flaky countdown timer; it should always refresh itself now when new data is entered or the road is dialed. #bugfix HT @drmaciver [TODO: still flaking out as of july 6 2am]
+. SHP checkbox to show password [dreevpeeve]  [TODO]
+. ESW http://beeminder.uservoice.com/forums/3011-general/suggestions/5823296-enforce-current-weight-field-when-setting-goal [TODO]
+. FRE bug that allows people to create pledgeless goals when out of freebees [TODO]
+. QUI make it more obvious that "quick add" is not so much for newbees  [TODO]
+. GTY goal type selector updates the description text as you mouse over the goal type in drop down. [TODO]
+. TOT and it tells you how many total datapoints there are uptop on the datapoint page [removed till it's prettier]
+. ALL option to count all commits to a repository for gitminder (rather than only commits by you) [i should make this something the user can set before we tweet it]
+- ||| 1-------10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140
+
+(tip: just type it all out in a couple full sentences first and then we can tighten it down to 140; don't be vague like "fixed retroratchet" except as temporary placeholder)
+
+Solving the discrepancy in UVI numbering:
+
+----- OLD ----  ----- NEW ----  
+Beem Glit Twit  Beem Glit Twit  
+        1    1  
+...
+1410 1410 1410  
+1411 1412 1411  1411 1411 1411
+...
+2054 2055 2054  2054 2054 2054
+2055 2056 none  2055 2055 none
+2056 2057 2055  2056 2056 2055
+...
+2242 2243 2241  2242 2242 2241 urlmin
+2243 2244 2242  2243 2243 2242 fixlink
+2245 2245 2243  2244 2244 2243 bee.me
+2246 2246 2244  2245 2245 2244 hashtag
+...
+2256 2256 2254  2255 2255 2254 
+
+DONE: change 2017-04-05 datapoint from 2->1
+  which changes bmndr#2245 -> 2244
+  and decrements all subsequent bmndr numbers
+DONE: change glit#1412 -> 1411 and decrement all subsequent glitch numbers
+DONE: tweet missing tweet, UVI#2055
