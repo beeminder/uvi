@@ -1032,6 +1032,57 @@ x: "Updated our Stripe gem, and updated the Stripe api version we are targeting 
 "https://twitter.com/beeminfra/status/1440820626994855936"],
 "t": "2021-09-22"
 }, { // ------------------------------------------------------------------------
+"x": "Super satisfying refactor of a view partial that was rendered in forms all over the site. Turned it into a helper function netting clearer code, fewer renders.",
+"u": ["https://github.com/beeminder/beeminder/pull/2526",
+"https://twitter.com/beeminfra/status/1443323756647047172"],
+"d": "2021-09-02",
+"t": "2021-09-29"
+}, { // ------------------------------------------------------------------------
+"x": "Upgraded our ORM (Mongoid) from a super ancient version to a somewhat less ancient version. Incrementally making steps towards upgrading all the things.",
+"u": ["https://twitter.com/beeminfra/status/1445895610389860357",
+"https://github.com/beeminder/beeminder/pull/2582"],
+"d": "2021-09-27",
+"t": "2021-10-06",
+}, { // ------------------------------------------------------------------------
+"x": "Removed an unlinked extra copy of jquery, and corrected a complaint about the jquery.min.map being missing, which was annoying in the context of dev.",
+"u": ["https://github.com/beeminder/beeminder/pull/2616",
+      "https://blog.jquery.com/2018/08/30/bad-map-file-for-jquery-1-9-1-in-the-jquery-cdn/",
+      "https://twitter.com/beeminfra/status/1448344568768851970"],
+"c": "The jquery.min.map thing has an explanation on jquery's blog."
+}, { // ------------------------------------------------------------------------
+"x": "Cleaned out infrastructure from an old version of Garmin's api related to the way we were expected to handle pushed notifications about user data.",
+"u": ["https://twitter.com/beeminfra/status/1450947133444481030",
+"https://github.com/beeminder/beeminder/pull/2615",
+],
+"c": "also incidentally got rid of a massive db table of pushed data and phew. that's a load off our db.",
+"t": "2021-10-20"
+}, { // ------------------------------------------------------------------------
+"x": "Numerous opportunistic-refactoring commits tucked into other PRs, removing unused methods in goal model, unused legacy controllers, unused view helpers",
+"u": ["https://twitter.com/beeminfra/status/1453500391790759936",
+"https://github.com/beeminder/beeminder/commit/0fc36c0e71cba18b55cc1d385dee2bb0c24ced04",
+"https://github.com/beeminder/beeminder/pull/2531",
+"https://github.com/beeminder/beeminder/pull/2526/commits/214fdb74ba4d5a73d309966dbce9f6fe7ed8f5f0"],
+"t": "2021-10-27"
+}, { // ------------------------------------------------------------------------
+"x": "Improvements to our internal stats page so all hours are included and slightly improved query performance, mostly thanks to DB upgrades",
+"u": ["https://twitter.com/beeminfra/status/1456044273984434176",
+"https://github.com/beeminder/beeminder/pull/2672",
+"https://github.com/beeminder/beeminder/pull/2671",
+"https://github.com/beeminder/beeminder/pull/2684"],
+"t": "2021-11-03"
+}, { // ------------------------------------------------------------------------
+"x": "Some big improvements to our db server (fully automated setup, etc), and improved the way we backup the data.",
+"u": ["https://github.com/beeminder/beeploy/pull/66",
+"https://github.com/beeminder/beeploy/pull/67",
+"https://twitter.com/beeminfra/status/1458595055250259970"],
+"t": "2021-11-10"
+}, { // ------------------------------------------------------------------------
+"x": "Removed a hint from a mongo query that is 1) now properly indexed and 2) was causing a race condition at startup of a brand new dev environment.",
+"u": ["https://twitter.com/beeminfra/status/1461135648316739588",
+      "https://github.com/beeminder/beeminder/issues/2711",
+      "https://github.com/beeminder/beeminder/pull/2744"],
+"d": "2021-11-12",
+"t": "2021-11-17"
 }, /* ----------------------------------------------------------- end batch */ ]
 
 var staged = [ { // note: sub-entries not allowed here in staging
@@ -1046,8 +1097,6 @@ https://github.com/beeminder/beeminder/commit/
 
 
 }, { // ------------------------------------------------------------------------
-initialize logger in omniauth initializer #2363
-https://github.com/beeminder/beeminder/pull/2363
 }, { // ------------------------------------------------------------------------
 We've been slowly improving our error handling in autodata, some have a todoist::Authexception, and a gmailzero::authexception now
 * Created a Gmailzero::AuthException.
@@ -1058,14 +1107,9 @@ We've been slowly improving our error handling in autodata, some have a todoist:
 furthermore, with the weird toggling stuff going on with the form, we were setting "weekend-rate" to nil when you turned it off 
 https://github.com/beeminder/beeminder/issues/1047
 }, { // ------------------------------------------------------------------------
-"x": "numerous opportunistic-refactoring commits tucked into other PRs, removing unused methods in goal model, unused legacy controllers, unused view helpers",
-"u": ["https://github.com/beeminder/beeminder/commit/0fc36c0e71cba18b55cc1d385dee2bb0c24ced04",
-"https://github.com/beeminder/beeminder/pull/2531",
-"https://github.com/beeminder/beeminder/pull/2526/commits/214fdb74ba4d5a73d309966dbce9f6fe7ed8f5f0"],
 }, { // ------------------------------------------------------------------------
-super satisfying refactor of a view partial that was being rendered in forms all over the site, turning it into a view helper function so there are fewer renders
-(maybe a UVI instead? or also?)
-https://github.com/beeminder/beeminder/pull/2526
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------

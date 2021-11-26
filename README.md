@@ -47,6 +47,21 @@ e: date tweeted/logged/announced/Entered [YYYY-MM-DD string]
 s: comment / note to Selves              [string]
 ```
 
+So `f`, `x`, and `d` are unchanged;
+`s`, `u`, `t`, and `c` become `i`, `l`, `e`, and `s`;
+and `n` gets toggled and becomes `c`.
+
+Migration plan for that refactoring:
+ 1. Leave "f" alone
+ 2. Change "s" to "i"
+ 3. Change "n" to "newnum"  
+ 4. Leave "x" alone
+ 5. Change "u" to "l"
+ 6. Leave "d" alone
+ 7. Change "t" to "e"
+ 8. Change "c" to "s"   
+ 9. Change "newnum" to "c" and toggle the true/false-ness
+
 ## TODO LIST
 
 1. Show tweet times in Pacific (Central before 2012 Feb?) instead of UTC
