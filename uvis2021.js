@@ -1986,31 +1986,533 @@ var batch2021sep = [{
 "d": "2021-09-22",
 "t": "2021-09-22",
 }, { // ------------------------------------------------------------------------
+"x": "Made the text box in the \"tell us why you are deleting your goal\" UI normal-sized. It was narrow and ugly. #css",
+"u": ["https://twitter.com/beemuvi/status/1441171757969248260",
+      "https://github.com/beeminder/beeminder/issues/2570",
+      "https://github.com/beeminder/beeminder/pull/2526"],
+"d": "2021-09-02",
+"t": "2021-09-23",
+"c": "Also in that PR: fewer individual renders when loading, e.g., the goal page. But, alas, we couldn't find a measurable speedup from honeycomb graphs.",
 }, { // ------------------------------------------------------------------------
+"x": "The SMS bot was failing to check that your phone number was active before adding and replying to your datapoints. Now it bugs you to (re)activate instead.",
+"u": ["https://twitter.com/beemuvi/status/1441189470884171776",
+      "https://github.com/beeminder/beeminder/issues/2573",
+      "https://github.com/beeminder/beeminder/pull/2574"],
+"d": "2021-09-23",
+"t": "2021-09-23",
 }, { // ------------------------------------------------------------------------
+"x": "When you sent SMSes we still weren't checking if you had the SMS bot perk, so if you'd subsequently downgraded, the bot'd still accept data from you",
+"u": ["https://twitter.com/beemuvi/status/1441518347506438145",
+      "https://github.com/beeminder/beeminder/issues/2573",
+      "https://github.com/beeminder/beeminder/pull/2574"],
+"d": "2021-09-23",
+"t": "2021-09-24",
+"c": "Contra UVI#3881 -- this was a loose end we'd forgotten. We were checking phone number state and user permissions before sending out alerts via SMS, but we weren't checking when you sent messages to us.",
 }, { // ------------------------------------------------------------------------
+"x": "Fixed a couple places in error messages where we accidentally said \"gunits\" (the internal name) instead of \"goal units\". HT Robert Perce",
+"u": ["https://twitter.com/beemuvi/status/1441548893410398217",
+      "https://github.com/beeminder/beeminder/issues/2551"],
+"d": "2021-09-24",
+"t": "2021-09-24",
 }, { // ------------------------------------------------------------------------
+"x": "Got rid of a mostly redundant bit of web copy in the static graph editor. Rewrote it and made it the hover text on the final graph matrix row.",
+"u": ["https://twitter.com/beemuvi/status/1442540402221871110",
+      "https://github.com/beeminder/beeminder/issues/2551"],
+"d": "2021-09-24",
+"t": "2021-09-27",
+"c": "A little follow-on to the previous UVI. It was another instance of \"gunits\" in webcopy.",
 }, { // ------------------------------------------------------------------------
+"x": "SMS bot now uses safesum (see UVI#3358, UVI#3368). Previously it did something safesum-like for do-less and said nothing about safety buffer for do-more et al.",
+"u": ["https://twitter.com/beemuvi/status/1442632488954695689",
+      "https://github.com/beeminder/beeminder/issues/905"],
+"d": "2021-09-27",
+"t": "2021-09-27",
 }, { // ------------------------------------------------------------------------
+"x": "SMS bot had been reporting incorrect hard-caps! It would reply before updating the graph and give the pre-datapoint hard-cap. #bugfix #regression",
+"u": ["https://twitter.com/beemuvi/status/1442959903228788742",
+      "https://github.com/beeminder/beeminder/issues/905"],
+"d": "2021-09-27",
+"t": "2021-09-28",
 }, { // ------------------------------------------------------------------------
+"x": "If you submit data for multiple goals in one SMS, we now give a status update on each of them in the bot reply, not just the last one (or none, cf UVI#3892)",
+"u": ["https://twitter.com/beemuvi/status/1442960000490426368",
+      "https://github.com/beeminder/beeminder/issues/905"],
+"d": "2021-09-27",
+"t": "2021-09-28",
 }, { // ------------------------------------------------------------------------
+"x": "The SMS bot now differentiates between \"inactive\" and \"stopped\" phone numbers in its error responses",
+"u": ["https://twitter.com/beemuvi/status/1443358923256307714",
+      "https://github.com/beeminder/beeminder/issues/905"],
+"d": "2021-09-27",
+"t": "2021-09-29",
 }, { // ------------------------------------------------------------------------
+"x": "Fixed up the webcopy (including a longstanding typo) to be nice and clear that you need to actually press the \"Schedule Archive\" button to schedule archiving",
+"u": ["https://twitter.com/beemuvi/status/1443359454280306691",
+      "https://github.com/beeminder/beeminder/issues/2593"],
+"d": "2021-09-29",
+"t": "2021-09-29",
 }, { // ------------------------------------------------------------------------
+"x": "Another loopholey #bugfix: if your pledge was $0 or $1 we were letting you set that as your pledge cap when you restarted a goal, even without a Beemium plan",
+"u": ["https://twitter.com/beemuvi/status/1443723302069891073",
+      "https://github.com/beeminder/beeminder/issues/2598",
+      "https://github.com/beeminder/beeminder/pull/2599"],
+"d": "2021-09-30",
+"t": "2021-09-30",
+"c": "Also we made the $0 option disappear instead of being grayed out, which made sense at the time code-wise, but we realized it's an anti-magic violation and we probably should undo that so it's not a UVI.",
 }, { // ------------------------------------------------------------------------
+"x": "When you updated your credit card on the payments page we didn't update the card info displayed there until after you reloaded the page. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1443724217048977408",
+      "https://github.com/beeminder/beeminder/issues/2568",
+      "https://github.com/beeminder/beeminder/pull/2601"],
+"d": "2021-09-30",
+"t": "2021-09-30",
+"c": "HT Galaurie",
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
+"x": "Added an infinibee buzzer to spin while you wait for something to happen (aka servers to communicate) after you click \"submit\" after updating payment info",
+"u": ["https://twitter.com/beemuvi/status/1443815749391294470",
+      "https://github.com/beeminder/beeminder/issues/2568",
+      "https://github.com/beeminder/beeminder/pull/2601"],
+"d": "2021-09-30",
+"t": "2021-09-30",
 }, /* --------------------------------------------------------- end 2021sep */ ]
 
+var batch2021oct = [{
+"x": "Starting 4 days ago the email bot was replying to datapoints you sent it AND replying to all subsequent data as if it'd been emailed to the bot. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1444080393590689797",
+      "https://github.com/beeminder/beeminder/issues/2603",
+      "https://github.com/beeminder/beeminder/pull/2605"],
+"d": "2021-10-01",
+"t": "2021-10-01",
+"c": "Database/ORM bug introduced by an upgrade on Sep 27: unsetting stored values failed and we'd think we hadn't yet sent the bot reply email. #regression",
+}, { // ------------------------------------------------------------------------
+"x": "In recent data, we were uglily displaying ampersands in datapoint comments as \"&amp;amp;\" &amp; now we display them the way you typed them. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1445169682500108291",
+      "https://forum.beeminder.com/t/html-entity-display-bug/7678",
+      "https://forum.beeminder.com/t/dashboard-shows-special-character-ampersand-escaped/9495",
+      "https://github.com/beeminder/beeminder/issues/1348",
+      "https://github.com/beeminder/beeminder/pull/2612"],
+"d": "2021-10-04",
+"t": "2021-10-04",
+}, { // ------------------------------------------------------------------------
+"x": "Upgraded the CPUs &amp; memory on our database server and reduced slow database queries by like 3x (~70s to ~20s for slowest response time)",
+"u": ["https://twitter.com/beemuvi/status/1445170509675520002",
+      "https://github.com/beeminder/beeminder/issues/2569"],
+"d": "2021-10-01",
+"t": "2021-10-04",
+"c": "Espcially user-visible for users of the Complice integration and also things like downloading all your datapoints",
+}, { // ------------------------------------------------------------------------
+"x": "When we do server maintenance we now give a 503 error, not 405, to PUTs/POSTs from API clients (405 suggested that it was their fault, not ours!) #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1445527723317743624",
+      "https://github.com/beeminder/beeminder/issues/2613"],
+"d": "2021-10-05",
+"t": "2021-10-05",
+"c": "Ie, when we poppy the server, as we call it",
+}, { // ------------------------------------------------------------------------
+"x": "Also we now give an informative JSON-formatted error with a pointer to status updates instead of hideous html from nginx",
+"u": ["https://twitter.com/beemuvi/status/1445527842989559819",
+      "https://github.com/beeminder/beeminder/issues/2613"],
+"d": "2021-10-05",
+"t": "2021-10-05",
+}, { // ------------------------------------------------------------------------
+"x": "And we serve the JSON error directly for GET requests. Previously we did a redirect and it caused silent failure for our Zapier integration.",
+"u": ["https://twitter.com/beemuvi/status/1445527964737675271",
+      "https://github.com/beeminder/beeminder/issues/581"],
+"t": "2021-10-05",
+}, { // ------------------------------------------------------------------------
+"x": "IFTTT triggers now faster and more robust in fetching your data. If we get a timeout trying to tell IFTTT to fetch your data, we retry.",
+"u": ["https://twitter.com/beemuvi/status/1445901610819801090",
+      "https://github.com/beeminder/beeminder/issues/2547"],
+"d": "2021-10-06",
+"t": "2021-10-06",
+}, { // ------------------------------------------------------------------------
+"x": "For old users with no payment method, we weren't updating the page when you finally added one, making it seem kinda broken until you thought to reload the page",
+"u": ["https://twitter.com/beemuvi/status/1446263086357254153",
+      "https://github.com/beeminder/beeminder/issues/2621",
+      "https://github.com/beeminder/beeminder/pull/2618"],
+"d": "2021-10-07",
+"t": "2021-10-07",
+"c": "Conceptually the same as UVI#3898 but that fix turned out to be insufficiently general for this case",
+}, { // ------------------------------------------------------------------------
+"x": "Similarly on the goal creation page, if you were an old user with no credit card added yet, we now insta-add the payment method info to the page",
+"u": ["https://twitter.com/beemuvi/status/1446263178552229894",
+      "https://github.com/beeminder/beeminder/pull/2618"],
+"d": "2021-10-07",
+"t": "2021-10-07",
+"c": "Aka, do the same thing in elf",
+}, { // ------------------------------------------------------------------------
+"x": "Show a progress spinner at the end of goal creation below \"saving your goal...\" (a janky one for now but better than nothing)",
+"u": ["https://twitter.com/beemuvi/status/1446362715979583491",
+      "https://github.com/beeminder/beeminder/issues/2622",
+      "https://github.com/beeminder/beeminder/pull/2618"],
+"d": "2021-10-07",
+"t": "2021-10-07",
+"c": "It's the animated gif version of the buzzing infinibee for now; cool css lemniscate in the works",
+}, { // ------------------------------------------------------------------------
+"x": "We found a few more instance of \"[yellow brick] road\" that we've changed to \"bright red line\", in error copy and in the graph legend. HT Benjamin Fox aka zzq",
+"u": ["https://twitter.com/beemuvi/status/1446626065703596033",
+      "https://github.com/beeminder/beeminder/issues/2620"],
+"d": "2021-10-08",
+"t": "2021-10-08",
+"c": "Also 'road matrix' to 'graph matrix' in the API errorcopy, some of which shows its face in error messages in the UI. Cf UVI#3763 and UVI#3769",
+}, { // ------------------------------------------------------------------------
+"x": "Revamped our Todoist integration help page to clarify how limiting to projects/labels works and removed cruft about recurring tasks, with links to previous UVIs",
+"u": ["https://twitter.com/beemuvi/status/1447678217993609218",
+      "https://help.beeminder.com/article/79-todoist"],
+"d": "2021-10-11",
+"t": "2021-10-11",
+}, { // ------------------------------------------------------------------------
+"x": "We de-jankified the buzzing infinibee from UVI#3909 and made it a nice swooping css-animated lemniscate of Bernoulli",
+"u": ["https://twitter.com/beemuvi/status/1447685305721491457",
+      "https://github.com/beeminder/beeminder/issues/2622",
+      "https://github.com/beeminder/beeminder/issues/2624"],
+"d": "2021-10-11",
+"t": "2021-10-11",
+}, { // ------------------------------------------------------------------------
+"x": "We changed various references to \"real-time support\" (Beemium perk) to the more accurate \"sometimes-synchronous support\". We may just call it \"priority support\".",
+"u": ["https://twitter.com/beemuvi/status/1448070648799039499",
+      "https://github.com/beeminder/beeminder/issues/2632",
+      "https://github.com/beeminder/beeminder/pull/2633"],
+"d": "2021-10-12",
+"t": "2021-10-12",
+"c": "We like 'priority support' because, ironically, it doesn't commit us to anything in particular",
+}, { // ------------------------------------------------------------------------
+"x": "Race condition #bugfix! If you submitted data at just the right (wrong) moment before your deadline, your graph could end up the wrong color on your dashboard.",
+"u": ["https://twitter.com/beemuvi/status/1448071068921499651",
+      "https://github.com/beeminder/beeminder/issues/2628"],
+"d": "2021-10-12",
+"t": "2021-10-12",
+"c": "If the graphjob started before the deadline and finished after, this would cause your maintenance run to get skipped, which could mean a persistently incorrect dashboard color (until the goal was next brained)",
+}, { // ------------------------------------------------------------------------
+"x": "Labeled the ratchet field w/ the stepper UI \"New number of safe days\" because people weren't always sure if it was specifying the delta or the new number",
+"u": ["https://twitter.com/beemuvi/status/1448383989643837447",
+      "https://github.com/beeminder/beeminder/issues/2137",
+      "https://github.com/beeminder/beeminder/pull/2634"],
+"d": "2021-10-12",
+"t": "2021-10-13",
+}, { // ------------------------------------------------------------------------
+"x": "We now retry sending legit check emails if we get a timeout from our ESP (Mailgun). This mattered a lot yesterday when our servers were having network problems.",
+"u": ["https://twitter.com/beemuvi/status/1448797227644645421",
+      "https://github.com/beeminder/beeminder/issues/2637"],
+"d": "2021-10-13",
+"t": "2021-10-13",
+"c": "Also Nicky manually played the role of the bot yesterday for emails that failed, before we deployed the auto-retrying! Also we do airhorns and slackhorns if we fail to send email. PS: This only applies to email we send via Mailgun's REST endpoint (like legit checks); some things we send via SMTP and we still need to move those to REST.",
+}, { // ------------------------------------------------------------------------
+"x": "Relatedly, if our ESP stops trying to send you email because your ESP thinks we're spam (and you're a paying user) we try via a non-Beeminder email",
+"u": ["https://twitter.com/beemuvi/status/1448797460545957897",
+      "https://github.com/beeminder/beeminder/issues/67"],
+"d": "2021-10-13",
+"t": "2021-10-13",
+"c": "This is shirk-n-turked and we're beeminding staying on top of it",
+}, { // ------------------------------------------------------------------------
+"x": "We were sometimes showing an idiotic number of decimal places for current safety buffer on do-less goals in the ratchet UI. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1449152764651532290",
+      "https://github.com/beeminder/beeminder/issues/1546",
+      "https://github.com/beeminder/beeminder/pull/2652"],
+"d": "2021-10-14",
+"c": "Note: it was fine when you first loaded the page, but if any stuff caused js to refresh things, e.g. adding data, it'd go all unroundy full float precision",
+}, { // ------------------------------------------------------------------------
+"x": "The ratchet form was letting you submit an empty field for new safety buffer and reloading the page before showing an error; now it gives an immediate error",
+"u": ["https://twitter.com/beemuvi/status/1449152880590548994",
+      "https://github.com/beeminder/beeminder/issues/1546",
+      "https://github.com/beeminder/beeminder/pull/2652"],
+"d": "2021-10-14",
+"c": "Ie, no round trip to the server, does the validation ajaxliy",
+}, { // ------------------------------------------------------------------------
+"x": "We were sending goal alert emails (aka zenos) via a different Mailgun API and it wasn't as reliable; in particular UVI#3916 now applies to those as well",
+"u": ["https://twitter.com/beemuvi/status/1450233978032590848",
+      "https://github.com/beeminder/beeminder/issues/2644",
+      "https://github.com/beeminder/beeminder/pull/2649"],
+"d": "2021-10-15",
+"t": "2021-10-18",
+"c": "We were sending by SMTP instead of Mailgun's REST endpoint. Other things to move from SMTP to REST include email-bot replies when there's no data detected or it can't figure out what goal to send to, plus a handful of other things.",
+}, { // ------------------------------------------------------------------------
+"x": "Made the logos on autodata integration landing pages be smaller on small screens",
+"u": ["https://twitter.com/beemuvi/status/1450240016999804932",
+      "https://github.com/beeminder/beeminder/issues/401",
+      "https://github.com/beeminder/beeminder/pull/2658"],
+"d": "2021-10-18",
+"t": "2021-10-18",
+"c": "Aka responsive design aka mobile-friendliness",
+}, { // ------------------------------------------------------------------------
+"x": "Added a help page about premium credit (see UVI#3332)",
+"u": ["https://twitter.com/beemuvi/status/1451337038783868931",
+      "https://help.beeminder.com/article/244-what-is-premium-credit-used-for"],
+"d": "2021-10-19",
+"t": "2021-10-21",
+}, { // ------------------------------------------------------------------------
+"x": "Fixed up the CSS on http://beeminder.com/slack so it's mobile-friendly",
+"u": ["https://twitter.com/beemuvi/status/1451337130840444928",
+      "https://github.com/beeminder/beeminder/issues/401",
+      "https://github.com/beeminder/beeminder/pull/2659"],
+"d": "2021-10-20",
+"t": "2021-10-21",
+}, { // ------------------------------------------------------------------------
+"x": "We no longer try to send beemails (or any other mass mailing) to users who haven't confirmed their email address. Dumb of us to miss that for so long!",
+"u": ["https://twitter.com/beemuvi/status/1452771325919981571",
+      "https://github.com/beeminder/beeminder/issues/2662"],
+"d": "2021-10-20",
+"t": "2021-10-25",
+}, { // ------------------------------------------------------------------------
+"x": "Revamped the help page about premium credit: new sections, new links, etc (see UVI#3922)",
+"u": ["https://twitter.com/beemuvi/status/1452771639616159747",
+      "https://help.beeminder.com/article/244-premium-credit"],
+"d": "2021-10-21",
+"t": "2021-10-25",
+}, { // ------------------------------------------------------------------------
+"x": "The countdown on widgets (http://beeminder.com/widgets) broke at some point. #bugfix #regression Plus we killed the numbers w/ yellow-brick-road-mentioning hovertext",
+"u": ["https://twitter.com/beemuvi/status/1453146423684337666",
+      "https://github.com/beeminder/beeminder/issues/2667",
+      "https://github.com/beeminder/beeminder/issues/2665",
+      "https://github.com/beeminder/beeminder/pull/2666"],
+"d": "2021-10-22",
+"t": "2021-10-26",
+"c": "The numbers were distances to each lane of the road, pretty much subsumed by just number of safe days post-YBHP",
+}, { // ------------------------------------------------------------------------
+"x": "All our autodata integration landing pages are pretty fully mobile-friendly now. Phew!",
+"u": ["https://twitter.com/beemuvi/status/1453148323779469317",
+      "https://github.com/beeminder/beeminder/issues/401",
+      "https://github.com/beeminder/beeminder/pull/2664",
+      "https://github.com/beeminder/beeminder/pull/2673"],
+"d": "2021-10-22",
+"t": "2021-10-26",
+"c": "#regression",
+}, { // ------------------------------------------------------------------------
+"x": "This involved myriad improvements and cleanup. Spacing between boxes is sane and they never overlap and are centered and are the same height. #css #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1453510862136692736",
+      "https://github.com/beeminder/beeminder/issues/401"],
+"d": "2021-10-22",
+"t": "2021-10-27",
+}, { // ------------------------------------------------------------------------
+"x": "Next: The Beeminder logo and the integration partner logo are now consistently adjacent rather than weirdly spreading out across the screen.",
+"u": ["https://twitter.com/beemuvi/status/1453510992650928132",
+      "https://github.com/beeminder/beeminder/issues/401"],
+"d": "2021-10-22",
+"t": "2021-10-27",
+}, { // ------------------------------------------------------------------------
+"x": "Finally: Justified the text in the \"pledge, [do thing], track\" boxes on the autodata landing pages. Bonus: fixed up our old http://beeminder.com/pact page",
+"u": ["https://twitter.com/beemuvi/status/1453513168857174019",
+      "https://github.com/beeminder/beeminder/issues/401",
+      "https://github.com/beeminder/beeminder/pull/2675"],
+"d": "2021-10-22",
+"t": "2021-10-27",
+}, { // ------------------------------------------------------------------------
+"x": "If you tried to create a Fitbit water-consumption goal and hadn't yet authorized us to access your Fitbit, it would fail (silently) to create it. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1453848404568674304",
+      "https://github.com/beeminder/beeminder/issues/636"],
+"d": "2021-10-27",
+"t": "2021-10-28",
+"c": "This was due to not having any units specified for water consumption -- and failing to get told what units to use by Fitbit (which is what we usually do). Now it creates the goal fine, though the units won't be updated to whatever you've set in Fitbit. Workaround: auth Fitbit before creating the water goal.",
+}, { // ------------------------------------------------------------------------
+"x": "Another user-visible aspect of that bug was that the units field was blank when creating a water consumption goal without having auth'd Fitbit",
+"u": ["https://twitter.com/beemuvi/status/1453848537850998792",
+      "https://github.com/beeminder/beeminder/issues/636"],
+"d": "2021-10-27",
+"t": "2021-10-28",
+}, { // ------------------------------------------------------------------------
+"x": "If you create a Fitbit goal and our authorization to view your Fitbit data has expired, we now make you re-auth as part of goal creation, instead of later",
+"u": ["https://twitter.com/beemuvi/status/1453848753157246980",
+      "https://github.com/beeminder/beeminder/issues/636"],
+"d": "2021-10-27",
+"t": "2021-10-28",
+"c": "This is an error from the fitbit_user_info endpoint. It sucked to create the goal as if everything was fine and then only later put up a banner about the failure to be able to fetch data.",
+}, /* --------------------------------------------------------- end 2021oct */ ]
+
+var batch2021nov = [{
+"x": "The dropdown for units in Fitbit goal creation for weight was mis-sized and partially unreadable. #css #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1455309544528093184",
+      "https://github.com/beeminder/beeminder/issues/2689",
+      "https://github.com/beeminder/beeminder/pull/2693"],
+"d": "2021-10-29",
+"t": "2021-11-01",
+}, { // ------------------------------------------------------------------------
+"x": "Fixed some tiny errors with units for Fitbit goals: 'kgs' is now 'kg', 'mls' is 'mL', and 'stones' is 'stone'",
+"u": ["https://twitter.com/beemuvi/status/1455309660328652800",
+      "https://github.com/beeminder/beeminder/issues/2689",
+      "https://github.com/beeminder/beeminder/pull/2693"],
+"d": "2021-10-29",
+"t": "2021-11-01",
+}, { // ------------------------------------------------------------------------
+"x": "Fitbit bodyfat percentage goal creation was messed up, both display-wise and asking for max fluctuation as weight instead of percentage points. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1455680340605825029",
+      "https://github.com/beeminder/beeminder/issues/2689",
+      "https://github.com/beeminder/beeminder/pull/2693"],
+"d": "2021-10-29",
+"t": "2021-11-02",
+}, { // ------------------------------------------------------------------------
+"x": "The bare min quoted to you in email alerts could be wrong for timey goals, e.g., overly conservatively rounding to +2:00 when you had +1:09 due. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1455680476165726210",
+      "https://github.com/beeminder/beeminder/issues/2691",
+      "https://github.com/beeminder/beeminder/pull/2692"],
+"d": "2021-10-29",
+"c": "Rogue instance of getting the bare min by parsing Beebrain's limsum field. We're not clear on what all problems that could cause besides this specific example. But now we do it correctly!",
+}, { // ------------------------------------------------------------------------
+"x": "Rewrote the help page for \"How do I tell Beeminder what day my week starts?\", prompted by ongoing confusion about that. New examples, links, clarification.",
+"u": ["https://twitter.com/beemuvi/status/1456044447804706822",
+      "https://help.beeminder.com/article/123-weekstart",
+      "https://forum.beeminder.com/t/help-scheduling-a-twice-a-week-task/9817/10?u=dreev"],
+"d": "2021-11-03",
+"t": "2021-11-03",
+}, { // ------------------------------------------------------------------------
+"x": "You can beemind bodyfat percentage and fat mass via our Withings autodata integration",
+"u": ["https://twitter.com/beemuvi/status/1456047959716483078",
+      "https://github.com/beeminder/beeminder/issues/2705",
+      "https://github.com/beeminder/beeminder/pull/2709",
+      "https://github.com/beeminder/beeminder/pull/2708"],
+"d": "2021-11-03",
+"t": "2021-11-03",
+"c": "We had at least bodyfat ratio in the past and then dropped it for while",
+}, { // ------------------------------------------------------------------------
+"x": "Upgrading our database (Mongo 3 to 5) yielded a decrease in median page request time from ~275ms to ~200ms",
+"u": ["https://twitter.com/beemuvi/status/1456403100445544449",
+      "https://twitter.com/beemstat/status/1453031047927459850",
+      "https://github.com/beeminder/beeminder/issues/1476"],
+"d": "2021-10-26",
+"t": "2021-11-04",
+"c": "Speedup from daphne; rule of thumb is that response time difference has to be visually blatant on a graph to count as user-visible",
+}, { // ------------------------------------------------------------------------
+"x": "Burgle #bugfix w/ premium downgrades! In rare (exactly one before fixing) instances, we'd forget we charged you for the new plan and charge you again every day!",
+"u": ["https://twitter.com/beemuvi/status/1456767612117938176",
+      "https://github.com/beeminder/beeminder/issues/2712",
+      "https://github.com/beeminder/beeminder/pull/2713"],
+"d": "2021-11-04",
+"t": "2021-11-05",
+"c": "We double-refunded the user who spotted it and verified there were no other instances. More commonly, this manifested as a moneyfire bug where we'd fail to remove perks when you downgraded. Also added an airhorn for any time the user object is invalid at the end of the subscription charge job. Also quals.",
+}, { // ------------------------------------------------------------------------
+"x": "We no longer ever magically turn on email reminders UNLESS you previously had SMS reminders and lost those, hence needing email as emergency fallback. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1457868981214187522",
+      "https://github.com/beeminder/beeminder/issues/2712",
+      "https://github.com/beeminder/beeminder/pull/2713"],
+"d": "2021-11-04",
+"t": "2021-11-08",
+"c": "The bug was that we were accidentally turning on email reminders any time you downgraded and lost the SMS perk",
+}, { // ------------------------------------------------------------------------
+"x": "Almost doesn't matter but plenty of links to beeminder.com/jawbone out there & it was barfing 'translation not found' across the page & now it's not. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1457866182468386816",
+      "https://github.com/beeminder/beeminder/issues/2714"],
+"d": "2021-11-08",
+"t": "2021-11-08",
+"c": "Technically a #regression, due to cleaning up stringles",
+}, { // ------------------------------------------------------------------------
+"x": "Easter-eggy for now but to avoid re-filling out date ranges on the megabreak page, you can add, eg, \"&start=2021-11-20&finish=2021-11-23\" to the URL",
+"u": ["https://twitter.com/beemuvi/status/1458230743230943233",
+      "https://github.com/beeminder/beeminder/issues/1126#issuecomment-959821418"],
+"d": "2021-11-03",
+"t": "2021-11-09",
+"c": "Note: Has to be added to the beeminder.com/breaks/USERNAME version of the URL, not beeminder.com/breaks, which redirects there, so that's extra confusing",
+}, { // ------------------------------------------------------------------------
+"x": "We had some slightly broken #css in, embarrassingly, one of the first screens a newbee sees, making you confirm your email address before creating a goal",
+"u": ["https://twitter.com/beemuvi/status/1458598705783721987",
+      "https://github.com/beeminder/beeminder/issues/2718"],
+"d": "2021-11-09",
+"t": "2021-11-10",
+"c": "There were some zero-pixel margins in the text box; before/after screenshots in the gissue. #regression",
+}, { // ------------------------------------------------------------------------
+"x": "Had an off-by-one error with the megabreak URL start param, giving a spurious error if you asked for a start date in exactly a week. #bugfix HT Daria Semenova",
+"u": ["https://twitter.com/beemuvi/status/1458599976049594371",
+      "https://github.com/beeminder/beeminder/issues/2732"],
+"d": "2021-11-10",
+"t": "2021-11-10",
+}, { // ------------------------------------------------------------------------
+"x": "On Trello autodata goals, the Trello logo now links to the Trello board that we're getting data from, on both your dashboard and goal page",
+"u": ["https://twitter.com/beemuvi/status/1458952568504078338",
+      "https://github.com/beeminder/beeminder/issues/493",
+      "https://github.com/beeminder/beeminder/pull/2735"],
+"d": "2021-11-11",
+"t": "2021-11-11",
+"c": "So far only did the bare minimum aka Trello. But also easy to add in more autodata sources for a followon UVI. Also we already do something similar for Strava, with a link to the Strava workout for each datapoint, which we never logged as a UVI because it was part of the launch of the Strava integration.",
+}, { // ------------------------------------------------------------------------
+"x": "Turns out we get 3 decimal places of precision from Withings -- your weight in grams! -- and were throwing the least significant away. Until now!",
+"u": ["https://twitter.com/beemuvi/status/1459310936414515202",
+      "https://github.com/beeminder/beeminder/issues/2745"],
+"d": "2021-11-12",
+"t": "2021-11-12",
+"c": "Oops, for today only this is yielding duplicate datapoints -- the previous 2-decimal-place version and the new 3-decimal-place version. Manually deleting the old ones is a workaround, and of course after today only the 3-decimal-place versions will be fetched so it's pretty transient; not sure it's worth further cleanup?",
+}, { // ------------------------------------------------------------------------
+"x": "You can now specify tags (see UVI#2080 &amp; UVI#3694) when creating and updating goals through the API! Thanks to zzq aka Benjamin Fox for the implementation!",
+"u": ["https://twitter.com/beemuvi/status/1460404335771152384",
+      "https://forum.beeminder.com/t/possible-to-set-tags-on-api-goal-creation/9832?u=zzq",
+      "https://github.com/beeminder/beeminder/pull/2748"],
+"d": "2021-11-15",
+"t": "2021-11-15",
+}, { // ------------------------------------------------------------------------
+"x": "Our Garmin integration setup has a metric we were calling \"Active time\" which was misleading/confusing because Garmin now calls this metric \"intensity time\"",
+"u": ["https://twitter.com/beemuvi/status/1460404500963811328",
+      "https://github.com/beeminder/beeminder/issues/2753",
+      "https://github.com/beeminder/beeminder/pull/2754"],
+"d": "2021-11-15",
+"t": "2021-11-15",
+}, { // ------------------------------------------------------------------------
+"x": "Specifying tags yielded a 500 error if you formatted the tags wrong (they've gotta be an array). Now we give a semi-informative error if you do that. HT rperce",
+"u": ["https://twitter.com/beemuvi/status/1460764280815435781",
+      "https://forum.beeminder.com/t/possible-to-set-tags-on-api-goal-creation/9832/10?u=dreev",
+      "https://github.com/beeminder/beeminder/issues/2755",
+      "https://github.com/beeminder/beeminder/pull/2758"],
+"d": "2021-11-16",
+"t": "2021-11-16",
+"c": "The fix here is more general than the tags field but it doesn't tend to come up for other fields because Rails casts strings to integers and stuff willy-nilly",
+}, { // ------------------------------------------------------------------------
+"x": "The fix for the API giving a 500 error only applied to goal updates with the tags field. We've now robusted it up for the entire API. #bugfix HT rperce again",
+"u": ["https://twitter.com/beemuvi/status/1461129644380327937",
+      "https://github.com/beeminder/beeminder/issues/2755",
+      "https://github.com/beeminder/beeminder/pull/2765"],
+"d": "2021-11-17",
+"t": "2021-11-17",
+"c": "Bee: Instead of just doing it in the individual api methods, I'll rescue from the InvalidValue error in the API base controller, and fix this specific input-does-not-match-expected-type problem for the whole API",
+}, { // ------------------------------------------------------------------------
+"x": "Some of the logos for autodata integrations would show up bigger than others on your goal page and mess it up. Now they have a consistent max size. #css #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1461131309804261376",
+      "https://github.com/beeminder/beeminder/issues/2761",
+      "https://github.com/beeminder/beeminder/pull/2762"],
+"d": "2021-11-17",
+"c": "Lame to count this before fully consistentifying but consistency is important to not looking janky, so.",
+}, { // ------------------------------------------------------------------------
+"x": "Garmin goal setup now shows the goal units in the stepper box when you switch between, e.g., steps, sleep, distance, etc",
+"u": ["https://twitter.com/beemuvi/status/1461476002824024065",
+      "https://github.com/beeminder/beeminder/issues/2753"],
+"d": "2021-11-15",
+"t": "2021-11-18",
+"c": "Fixed in the same PR as the previous Garmin UVI about 'intensity minutes'",
+}, { // ------------------------------------------------------------------------
+"x": "We got rid of the links to our http://beeminder.com/donate page, removed the PayPal donate button from it, and rewrote the webcopy. We ain't no charity case.",
+"u": ["https://twitter.com/beemuvi/status/1461838904990994433",
+      "https://github.com/beeminder/beeminder/issues/2700",
+      "https://github.com/beeminder/beeminder/pull/2777"],
+"d": "2021-11-18",
+"t": "2021-11-19",
+}, { // ------------------------------------------------------------------------
+"x": "The menu in upper right corner goes away / collapses itself when you click away from it, instead of only when you click directly on it",
+"u": ["https://twitter.com/beemuvi/status/1461839081009156098",
+      "https://github.com/beeminder/beeminder/issues/2716",
+      "https://github.com/beeminder/beeminder/pull/2778"],
+"d": "2021-11-18",
+"t": "2021-11-19",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, /* --------------------------------------------------------- end 2021nov */ ]
+
 var staged = [ {
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -2078,24 +2580,51 @@ made the milkman group publicly viewable and show all goals, archived or not
 https://github.com/beeminder/beeminder/issues/2472
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-"x": "Made the text box in the "tell us why you are deleting your goal" UI normal-sized. It was narrow and ugly. #css",
-"u": [
-      "https://github.com/beeminder/beeminder/issues/2570",
-      "https://github.com/beeminder/beeminder/pull/2526"],
-"d": early september?
+[HOLD: BEEDROID BUGFIX IN NEXT RELEASE: TIMEZONE SHORTNAMES NOW DST-SENSITIVE]
+https://forum.beeminder.com/t/tiny-bug-beedroid-timezone-inaccuracy/9746/5?u=dreev
+https://github.com/beeminder/beedroid/issues/198
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-[SAD TROMBONE: NOT DETECTABLE IN HONECOMB]
-fewer individual renders when loading, e.g., the goal page. might be measurably faster?
-https://github.com/beeminder/beeminder/issues/2571
-https://github.com/beeminder/beeminder/pull/2526
-"d": early september?
+[HOLD] milking the ampersand fix:
+https://forum.beeminder.com/t/html-entity-display-bug/7678/8?u=dreev
+probably need to do something with newlines or trimming whitespace -- discussion in forum thread ensuing
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
+[TOO LAME?]
+"x": "set an error if config info is bad in the goal (e.g. habitica_type setting missing or not valid -- could be a leftover from a very legacy habitica goal? but probably won't ever happen)"
+https://github.com/beeminder/beeminder/issues/2006
+https://github.com/beeminder/beeminder/pull/2737
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
+TODO: autodata links (like trello for the rest of them)
+https://github.com/beeminder/beeminder/issues/493
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
+TODO:
+unreverse withings autofetch batches
+"x": "Our Withings autofetches were annoyingly (for those weighing in multiple times in a row) reversing each batch of datapoints they fetched. #bugfix",
+https://github.com/beeminder/beeminder/issues/2739
+
+"c": "This was kind of subtle for most users, or didn't impact you at all if your weigh-ins were spread out enough that we always fetched your data in between them. It matters a lot for Danny's tareable diet thing though!",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+[HOLD TILL NEW YEARS]
+grandpatricide: beemium $32 -> 40
+we called it a UVI last time! UVI#3086
+https://github.com/beeminder/beeminder/pull/2769 for the email warning people?
+2021-11-17: email warning sent to people
+2022-01-01: TODO: run the rake task to actually raise the prices on people
+this is a rake task for doing the actual database update to change folks from $32 nominal beemium price to $40 nominal beemium price.
+once this is deployed i'll run a test run of the task, and assuming that's all smooth, this can be ignored until January first.
+see also #2690
+https://github.com/beeminder/beeminder/pull/2773
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+FOCUSMATE
+https://github.com/beeminder/beeminder/issues/2742
+https://github.com/beeminder/beeminder/pull/2751
+2021-11-15: PR
+2021-11-17: softlaunch
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
