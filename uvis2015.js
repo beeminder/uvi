@@ -1085,7 +1085,8 @@ var batch2015sep = [
 "t": "2015-09-04 06:34:31 +0000",
 }, /*************************************************************************/ {
 "x": "Weaselproofed goals now also don't let you change their data source back to manual. People complained about us letting them weasel that way.",
-"u": "https://twitter.com/beemuvi/status/640056849144778752",
+"u": ["https://twitter.com/beemuvi/status/640056849144778752",
+      "https://github.com/beeminder/beeminder/issues/146"],
 "t": "2015-09-05 07:00:19 +0000",
 }, /*************************************************************************/ {
 "x": "Yesterday's UVI broke the workaround for changing deadlines on IFTTT/Zapier goals so we fixed that. You can change IFTTT/Zap deadlines now.",
