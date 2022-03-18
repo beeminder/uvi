@@ -1,6 +1,6 @@
 // Awaiting proglogs generalization...
 
-var batch = [{
+var batch2011feb = [{
 "x": "Timezones, asof-null, sadedgy, sadreset, and inferred tini/vini all purged from Beebrain!",
 "u": "https://twitter.com/beeminfra/status/931291064794718208",
 "t": "2017-11-16",
@@ -1083,6 +1083,118 @@ x: "Updated our Stripe gem, and updated the Stripe api version we are targeting 
       "https://github.com/beeminder/beeminder/pull/2744"],
 "d": "2021-11-12",
 "t": "2021-11-17"
+}, { // ------------------------------------------------------------------------
+"x": "Updated our docker dev environment for using Mongo 5, and removed a cache file from version control [mini].",
+"u": ["https://twitter.com/beeminfra/status/1466182361620484097",
+"https://github.com/beeminder/beeminder/issues/2682",
+"https://github.com/beeminder/beeminder/pull/2695",
+"https://github.com/beeminder/beeminder/pull/2696",
+"https://github.com/beeminder/beeminder/issues/2677"],
+"d": "2021-11-03",
+"t": "2021-12-01"
+}, { // ------------------------------------------------------------------------
+"x": "Fixed a couple of the sample config files in the repo for ease of cloning the repo and starting up from scratch",
+"u": ["https://twitter.com/beeminfra/status/1468730968903077888",
+"https://github.com/beeminder/beeminder/issues/2726",
+"https://github.com/beeminder/beeminder/pull/2786",
+"https://github.com/beeminder/beeminder/pull/2785"],
+"c": "mongoid sample and resque_schedule samples",
+"t": "2021-12-08"
+}, { // ------------------------------------------------------------------------
+"x": "Added VCR & webmock to our specs (was only in minitest before); tell VCR to allow http connections when no cassette so it doesn't break every other spec.",
+"u": ["https://twitter.com/beeminfra/status/1471188352607031296",
+      "https://github.com/beeminder/beeminder/issues/2774",
+      "https://github.com/beeminder/beeminder/pull/2775",
+      "https://github.com/beeminder/beeminder/commit/669c619bfd5b1135bf015c4b06604948925cd4aa"],
+"d": "2021-11-18",
+"t": "2021-12-15",
+}, { // ------------------------------------------------------------------------
+"x": "Got dockerized dev environment working on m1 macs.",
+"u": ["https://twitter.com/beeminfra/status/1473779288981655552",
+      "https://github.com/beeminder/beeminder/issues/2727",
+      "https://github.com/beeminder/beeminder/pull/2728"],
+"d": "2021-11-22",
+"t": "2021-12-22"
+}, { // ------------------------------------------------------------------------
+"x": "Some robustifying of our quals; improve db cleaning (quitting in the middle was leaving next run broken), hushed wolf crying, and satisfied deprecation warnings.",
+"u": ["https://twitter.com/beeminfra/status/1476307094621982720",
+      "https://github.com/beeminder/beeminder/issues/2783",
+      "https://github.com/beeminder/beeminder/pull/2787",
+      "https://github.com/beeminder/beeminder/issues/2784",
+      "https://github.com/beeminder/beeminder/pull/2793",
+      "https://github.com/beeminder/beeminder/pull/2788"],
+"c": "adjusted class and path for metrics api test",
+"d": "2021-11-23",
+"t": "2021-12-29"
+}, { // ------------------------------------------------------------------------
+"x": "Added some infrastructure (a test job) and logging to test (and figure out) what's up with our background workers when they get stuck or time out.",
+"u": ["https://twitter.com/beeminfra/status/1478830581811073024",
+      "https://github.com/beeminder/beeminder/pull/2706",
+      "https://github.com/beeminder/beeminder/pull/2707"],
+"d": "2021-11-03",
+"t": "2022-01-05"
+}, { // ------------------------------------------------------------------------
+"x": "Fixed a generic RuntimeError we were seeing because of a syntax error with re-raising an exception when a mailer times out.",
+"u": ["https://twitter.com/beeminfra/status/1481419011279572993",
+      "https://github.com/beeminder/beeminder/pull/2736"],
+"t": "2022-01-12"
+}, { // ------------------------------------------------------------------------
+"x": "Document in Docker README how you would run a single specific test for both minitest and rspec cases.",
+"u": ["https://twitter.com/beeminfra/status/1483939193436786689",
+      "https://github.com/beeminder/beeminder/pull/2789"],
+"t": "2022-01-19"
+}, { // ------------------------------------------------------------------------
+"x": "More improvements to quals: Fix a warning from IFTTT controller; also ignore honeycomb anywhere in the quals-environment.",
+"u": ["https://twitter.com/beeminfra/status/1486468288699781126",
+      "https://github.com/beeminder/beeminder/issues/2780",
+      "https://github.com/beeminder/beeminder/pull/2791",
+      "https://github.com/beeminder/beeminder/issues/1250",
+      "https://github.com/beeminder/beeminder/pull/2703"],
+"d": "2021-11-22",
+"t": "2022-01-26"
+}, { // ------------------------------------------------------------------------
+"x": "Stop running yarn check before every Rails cmd (This matches future Rails behavior, and speeds up everything in dev.)",
+"u": ["https://twitter.com/beeminfra/status/1488998252078776320",
+      "https://github.com/beeminder/beeminder/issues/2750",
+      "https://github.com/beeminder/beeminder/pull/2790"],
+"d": "2021-11-22",
+"t": "2022-02-02"
+}, { // ------------------------------------------------------------------------
+"x": "Many improvements to our scripts for adminning development docker environments: check if docker's running first stop potentially stale resque workers",
+"u": ["https://github.com/beeminder/beeminder/pull/2805",
+"https://github.com/beeminder/beeminder/pull/2680",
+"https://twitter.com/beeminfra/status/1491563226210783235"],
+"t": "2022-02-09"
+}, { // ------------------------------------------------------------------------
+"x": "Fixed a silent failure when you edited someone's gallery string (an admin thing): if a goal is archived or deleted we now pass that error up the chain correctly.",
+"u": ["https://github.com/beeminder/beeminder/issues/2440",
+      "https://github.com/beeminder/beeminder/pull/2912",
+      "https://twitter.com/beeminfra/status/1494110638020636672"],
+"d": "2022-01-11",
+"t": "2022-02-16"
+}, { // ------------------------------------------------------------------------
+"x": "More improvements to dockerized dev env: add commands for launching dev and quals terminals to our control script; remove reference to old admin/dev scripts.",
+"u": ["https://twitter.com/beeminfra/status/1496646307217219587",
+"https://github.com/beeminder/beeminder/pull/2725",
+"https://github.com/beeminder/beeminder/pull/2731",
+"https://github.com/beeminder/beeminder/pull/2698"],
+"t": "2022-02-23"
+}, { // ------------------------------------------------------------------------
+"x": "Quality quals: improved the dockerized running of our automated test suit (aka quals), addressing mongo slowness in docker, and adding a retry for failed specs.",
+"u": ["https://twitter.com/beeminfra/status/1499145778400415746", 
+      "https://github.com/beeminder/beeminder/pull/2917"],
+"t": "2022-03-02",
+}, { // ------------------------------------------------------------------------
+"x": "Related to docker & automated test improvements, we've now got GitHub running our quals automatically on new PRs.",
+"u": ["https://github.com/beeminder/beeminder/pull/2943",
+"https://twitter.com/beeminfra/status/1499145778400415746"],
+"t": "2022-03-09"
+}, { // ------------------------------------------------------------------------
+"x": "(Re)added a garish color to the website's header in the dev environment, because sometimes I get confused.",
+"u": ["https://github.com/beeminder/beeminder/pull/2864",
+"https://twitter.com/beeminfra/status/1504191115653648389",
+],
+"c": "Like \"Why isn't this thing I'm changing showing up?!!!\" Oh. Because you are looking at the deployed production site for the local change. Doh."
 }, /* ----------------------------------------------------------- end batch */ ]
 
 var staged = [ { // note: sub-entries not allowed here in staging
@@ -1098,14 +1210,49 @@ https://github.com/beeminder/beeminder/commit/
 
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 We've been slowly improving our error handling in autodata, some have a todoist::Authexception, and a gmailzero::authexception now
 * Created a Gmailzero::AuthException.
       "https://github.com/beeminder/beeminder/issues/881"],
 }, { // ------------------------------------------------------------------------
-[1047 is the infra side of 2459, which is user-visible]
-
-furthermore, with the weird toggling stuff going on with the form, we were setting "weekend-rate" to nil when you turned it off 
-https://github.com/beeminder/beeminder/issues/1047
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+get rid of logo_32 and just use logo_64 version of autod logos
+https://github.com/beeminder/beeminder/issues/2759
+https://github.com/beeminder/beeminder/pull/2760
+"d": "2021-11-17"
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+slackhorn subscription changes #2799
+https://github.com/beeminder/beeminder/pull/2799
+}, { // ------------------------------------------------------------------------
+a few more temporary fail suppressions [mini]
+https://github.com/beeminder/beeminder/pull/2801
+}, { // ------------------------------------------------------------------------
+removed a silly special case around the meta user; some of the graphs there aren't really for "beeminding", but just to track data. We used to have a silly thing to make those not recommit and increase pledge etc, but now instead we used normal means for doing the same [i.e. $0 pledge caps, and our exception list for charges]
+https://github.com/beeminder/beeminder/pull/2924
+https://github.com/beeminder/beeminder/pull/2920
+"c": "maybe we don't actually want to tweet this?"
+}, { // ------------------------------------------------------------------------
+added a new / better index to our database; that's really technically a uvi, but in order to do that I also had to do some cleaning on the existing datapoints in the database. That bit was infra-tastic.
+https://github.com/beeminder/beeminder/pull/2899
+}, { // ------------------------------------------------------------------------
+fix no-route-found 500 error for admin-user-goal (nginx error when following a link in admin interface)
+https://github.com/beeminder/beeminder/issues/2380
+https://github.com/beeminder/beeminder/pull/3029
+}, { // ------------------------------------------------------------------------
+We hit a rate limit, we waited, we hit it again, and we wanted to send ourselves an airhorn, but we died instead. (that dying did send us an airhorn, but it was less obvious and not the one we meant to send)
+https://github.com/beeminder/beeminder/pull/3005
+https://github.com/beeminder/beeminder/issues/3003
+}, { // ------------------------------------------------------------------------
+Start redis and mongo when starting workers in dev
+https://github.com/beeminder/beeminder/pull/3002
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -1114,16 +1261,10 @@ https://github.com/beeminder/beeminder/issues/1047
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-
-
-TODO:
-don't make title required and then do javascript contortions to deal with it
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-GitHub APP [23:19]
-`af940150` - use type attr on object as well
-`c44cdf36` - load png last
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 */
