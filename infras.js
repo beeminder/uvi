@@ -1195,6 +1195,36 @@ x: "Updated our Stripe gem, and updated the Stripe api version we are targeting 
 "https://twitter.com/beeminfra/status/1504191115653648389",
 ],
 "c": "Like \"Why isn't this thing I'm changing showing up?!!!\" Oh. Because you are looking at the deployed production site for the local change. Doh."
+}, { // ------------------------------------------------------------------------
+"x": "Our #gitgeyser slackchannel now gets notified of every user/premium plan churn & unchurn. It's not exactly top of mind, but much more accessible than before!",
+"u": ["https://github.com/beeminder/beeminder/pull/2799",
+"https://twitter.com/beeminfra/status/1506753709669158914"],
+}, { // ------------------------------------------------------------------------
+"x": "Improved error handling of Todoist ratelimits from an obscure unhelpful error (due to an error inside the error...), to the intended descriptive error.",
+"u": ["https://twitter.com/beeminfra/status/1509266257282887681",
+      "https://github.com/beeminder/beeminder/pull/3005",
+      "https://github.com/beeminder/beeminder/issues/3003"],
+"c": "We hit a rate limit, we waited, we hit it again, and we wanted to send ourselves an airhorn, but we died instead. (that dying did send us an airhorn, but it was less obvious and not the one we meant to send)",
+"t": "2022-03-30"
+}, { // ------------------------------------------------------------------------
+"x": "Wait for jobs to finish successfully in quals so we notice if background worker has failures too",
+"u": ["https://github.com/beeminder/beeminder/pull/3024",
+      "https://twitter.com/beeminfra/status/1511856011757309961"],
+"t": "2022-04-06"
+}, { // ------------------------------------------------------------------------
+"x": "Fixed an error in our admin interface where we were linking to a non-existent route for admin view of a goal.",
+"u": ["https://github.com/beeminder/beeminder/pull/3029",
+      "https://github.com/beeminder/beeminder/issues/2380",
+      "https://twitter.com/beeminfra/status/1513995895372607493"],
+"d": "2022-02-28",
+"t": "2022-04-12"
+}, { // ------------------------------------------------------------------------
+"x": "We were incorrectly reporting users' timezone offset in our Helpscout widget. Now workerbees have correct info about user timezone when reading emails.",
+"u": ["https://twitter.com/beeminfra/status/1516555265285312512",
+"https://github.com/beeminder/beeminder/issues/3115",
+"https://github.com/beeminder/beeminder/pull/3125"],
+"d": "2022-04-11",
+"t": "2022-04-19"
 }, /* ----------------------------------------------------------- end batch */ ]
 
 var staged = [ { // note: sub-entries not allowed here in staging
@@ -1205,7 +1235,6 @@ var staged = [ { // note: sub-entries not allowed here in staging
 /*
 METASTAGED: --10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
 https://github.com/beeminder/beeminder/commit/
-
 
 
 }, { // ------------------------------------------------------------------------
@@ -1222,6 +1251,7 @@ We've been slowly improving our error handling in autodata, some have a todoist:
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
+TODO: remove unused logo_32 version from assets
 get rid of logo_32 and just use logo_64 version of autod logos
 https://github.com/beeminder/beeminder/issues/2759
 https://github.com/beeminder/beeminder/pull/2760
@@ -1229,35 +1259,26 @@ https://github.com/beeminder/beeminder/pull/2760
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-slackhorn subscription changes #2799
-https://github.com/beeminder/beeminder/pull/2799
-}, { // ------------------------------------------------------------------------
-a few more temporary fail suppressions [mini]
-https://github.com/beeminder/beeminder/pull/2801
 }, { // ------------------------------------------------------------------------
 removed a silly special case around the meta user; some of the graphs there aren't really for "beeminding", but just to track data. We used to have a silly thing to make those not recommit and increase pledge etc, but now instead we used normal means for doing the same [i.e. $0 pledge caps, and our exception list for charges]
 https://github.com/beeminder/beeminder/pull/2924
 https://github.com/beeminder/beeminder/pull/2920
 "c": "maybe we don't actually want to tweet this?"
 }, { // ------------------------------------------------------------------------
-added a new / better index to our database; that's really technically a uvi, but in order to do that I also had to do some cleaning on the existing datapoints in the database. That bit was infra-tastic.
-https://github.com/beeminder/beeminder/pull/2899
-}, { // ------------------------------------------------------------------------
-fix no-route-found 500 error for admin-user-goal (nginx error when following a link in admin interface)
-https://github.com/beeminder/beeminder/issues/2380
-https://github.com/beeminder/beeminder/pull/3029
-}, { // ------------------------------------------------------------------------
-We hit a rate limit, we waited, we hit it again, and we wanted to send ourselves an airhorn, but we died instead. (that dying did send us an airhorn, but it was less obvious and not the one we meant to send)
-https://github.com/beeminder/beeminder/pull/3005
-https://github.com/beeminder/beeminder/issues/3003
-}, { // ------------------------------------------------------------------------
-Start redis and mongo when starting workers in dev
-https://github.com/beeminder/beeminder/pull/3002
+TOO LAME?
+"x": "Cleaned dupicate metadata on existing datapoints in our database so that we could do UVI#4010 (https://changelog.beeminder.com/#4010)",
+"c": "Yes, the UVI portion has already been counted, but the cleaning part was significant work, and was infra I guess?",
+"u": ["https://github.com/beeminder/beeminder/pull/2899"],
+"t": "2022-03-30"
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
+added a few more fine-grained mailing list management controls to our massmailer interface
+https://github.com/beeminder/beeminder/pull/3058
+"c": "this was the plaud users thing, and maybe not actually something we should point to?"
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
+Print logs on GitHub Actions failure
+https://github.com/beeminder/beeminder/pull/3046
+https://github.com/beeminder/beeminder/pull/3026
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
