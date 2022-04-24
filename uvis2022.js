@@ -535,48 +535,303 @@ const batch2022mar = [{
 "d": "2022-03-16",
 "c": "Could've milked this for two UVIs: first was adding an error banner on submit, then we made the field an html5 URL field to get validation in real time for free from the browser a la UVI#3986",
 }, { // ------------------------------------------------------------------------
+"x": "We moved the post-derail respite UI up, so it's right below the commitment dial",
+"u": ["https://twitter.com/beemuvi/status/1504961492927410178",
+      "https://github.com/beeminder/beeminder/pull/3067",
+      "https://github.com/beeminder/beeminder/issues/259"],
+"d": "2022-03-17",
+"t": "2022-03-18",
 }, { // ------------------------------------------------------------------------
+"x": "Help docs: cleanup and copyediting and cruft-removal on 4 articles: lying to Beeminder, the akrasia horizon, Beeminder vs StickK, and beneficiaries",
+"u": ["https://twitter.com/beemuvi/status/1506057016007036931",
+      "https://help.beeminder.com/article/34-cant-you-just-lie-about-your-data",
+      "https://help.beeminder.com/article/45-what-is-the-akrasia-horizon",
+      "https://help.beeminder.com/article/49-why-should-i-use-beeminder-over-stickk",
+      "https://help.beeminder.com/article/114-can-i-specify-a-beneficiary-for-my-derailments"],
+"d": "2022-03-14",
+"t": "2022-03-21",
 }, { // ------------------------------------------------------------------------
+"x": "Help docs: revamped the article on the Android app (aka Beedroid) including new screenshots",
+"u": ["https://twitter.com/beemuvi/status/1506057147926286336",
+      "https://help.beeminder.com/article/62-android-app"],
+"d": "2022-03-21",
+"t": "2022-03-21",
 }, { // ------------------------------------------------------------------------
+"x": "We finally added Clive and Nathan, both helping us with support, to https://www.beeminder.com/aboutus !",
+"u": ["https://twitter.com/beemuvi/status/1506419658143924229",
+      "https://github.com/beeminder/beeminder/issues/2978",
+      "https://github.com/beeminder/beeminder/pull/3071"],
+"d": "2022-03-22",
+"t": "2022-03-22",
 }, { // ------------------------------------------------------------------------
+"x": "Fixed a tiny typo with spacing in the new derailment notification emails when you have no-excuses mode turned on, plus made the timestamps less ugly",
+"u": ["https://twitter.com/beemuvi/status/1506419889090621440",
+      "https://github.com/beeminder/beeminder/issues/3061",
+      "https://github.com/beeminder/beeminder/pull/3070"],
+"d": "2022-03-22",
+"t": "2022-03-22",
 }, { // ------------------------------------------------------------------------
+"x": "Closed an ugly loophole where you could immediately end a goal by causing an error. Now we show the error in place of the restart/archive buttons. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1506782429087891458",
+      "https://github.com/beeminder/beeminder/issues/419",
+      "https://github.com/beeminder/beeminder/pull/3073"],
+"d": "2022-03-23",
+"t": "2022-03-23",
+"c": "See also follow-on milking UVI. Keywords: BB errors, Beebrain error, error text in the sidebar",
 }, { // ------------------------------------------------------------------------
+"x": "We no longer show a hideous overflowing error message in the graph header. The graph itself still shows the error message so the header can just say 'error'.",
+"u": ["https://twitter.com/beemuvi/status/1506782552488484864",
+      "https://github.com/beeminder/beeminder/issues/3074",
+      "https://github.com/beeminder/beeminder/pull/3072"],
+"d": "2022-03-23",
+"t": "2022-03-23",
 }, { // ------------------------------------------------------------------------
+"x": "Something changed with browsers and the icons in header of the blog got hideously oversized. #bugfix (also nixed the old Google+ icon while we were at it!)",
+"u": ["https://twitter.com/beemuvi/status/1507141851207200775",
+      "https://github.com/beeminder/beeminder/issues/3075"],
+"d": "2022-03-24",
+"t": "2022-03-24",
+"c": "#regression aka zombie",
 }, { // ------------------------------------------------------------------------
+"x": "Help docs: Added clarifications, further instructions, etc to the articles on new goal defaults, profile info, and goal settings",
+"u": ["https://twitter.com/beemuvi/status/1507142555552477185",
+      "https://help.beeminder.com/article/111-new-goal-defaults",
+      "https://help.beeminder.com/article/109-profile-information",
+      "https://help.beeminder.com/article/106-goal-settings"],
+"d": "2022-03-24",
+"t": "2022-03-24",
 }, { // ------------------------------------------------------------------------
+"x": "Additional cute errorcopy (emoji and all) pointing you at the humans of support when your bright red line is borked. Kinda part of UVI#4082.",
+"u": ["https://twitter.com/beemuvi/status/1507505782601834499",
+      "https://github.com/beeminder/beeminder/issues/419",
+      "https://github.com/beeminder/beeminder/pull/3073"],
+"d": "2022-03-23",
+"t": "2022-03-25",
+"c": "Keywords: alien emoji, error that us poor bots can't dig ourselves out of, contact the humans",
 }, { // ------------------------------------------------------------------------
+"x": "Added a moving time metric for Strava. Previously if you chose \"duration\" it was total elapsed time of the workout. Now you can pick between either.",
+"u": ["https://twitter.com/beemuvi/status/1507506322249420807",
+      "https://github.com/beeminder/beeminder/pull/3078",
+      "https://github.com/beeminder/beeminder/issues/500"],
+"d": "2022-03-24",
+"t": "2022-03-25",
 }, { // ------------------------------------------------------------------------
+"x": "A PayPal error caused us to fail inelegantly and stop charging anyone else. Oof. We caught up and then robusted things so no more such charge delays. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1508591329370009601",
+      "https://github.com/beeminder/beeminder/issues/3081"],
+"d": "2022-03-28",
+"t": "2022-03-28",
 }, { // ------------------------------------------------------------------------
+"x": "Help docs: Revamped and expanded (and renamed, from \"Authorized applications\") the \"Apps &amp; API\" article. Describes creating apps, mentions TaskRatchet, etc etc",
+"u": ["https://twitter.com/beemuvi/status/1508591934289240065",
+      "https://help.beeminder.com/article/110-authorized-applications",
+      "https://help.beeminder.com/article/110-apps-and-api"],
+"d": "2022-03-23",
+"t": "2022-03-28",
 }, { // ------------------------------------------------------------------------
+"x": "Help docs: Revamped and expanded the article on goal settings. Notes about IFTTT/Zapier, added missing section, removed stuff about fine print, etc",
+"u": ["https://twitter.com/beemuvi/status/1508954431936626692",
+      "https://help.beeminder.com/article/106-goal-settings"],
+"d": "2022-03-24",
+"t": "2022-03-29",
+"c": "We don't really like calling it fine print (it can encourage an excuse-making mindset) and may change that field to just 'notes'",
 }, { // ------------------------------------------------------------------------
+"x": "Help docs: We made all the help docs be consistent about \"goalname\" vs \"goal name\" (the former is what we're going with!)",
+"u": ["https://twitter.com/beemuvi/status/1508954622207021058",
+      "https://help.beeminder.com"],
+"d": "2022-03-29",
+"t": "2022-03-29",
 }, { // ------------------------------------------------------------------------
+"x": "Help docs: minor improvements to the article on deadlines plus a smattering of typo fixes. HT @lady_alys",
+"u": ["https://twitter.com/beemuvi/status/1509318495493795845",
+      "https://help.beeminder.com/article/14-deadline"],
+"d": "2022-03-28",
+"t": "2022-03-30",
 }, { // ------------------------------------------------------------------------
+"x": "Help docs: For the graph editor article, pointed more firmly to the visual graph editor, replaced a screenshot, minor copy-editing, etc",
+"u": ["https://twitter.com/beemuvi/status/1509319092687147010",
+      "https://help.beeminder.com/article/99-graph-editor"],
+"d": "2022-03-29",
+"t": "2022-03-30",
 }, { // ------------------------------------------------------------------------
+"x": "Help docs: Copyediting and working in mention of Zeno's paradox to the article on reminders, plus the term \"leeway\" for the one on safety buffer",
+"u": ["https://twitter.com/beemuvi/status/1509681923844567040",
+      "https://help.beeminder.com/article/101-reminders",
+      "https://help.beeminder.com/article/55-what-is-safety-buffer"],
+"t": "2022-03-31",
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
+"x": "Help docs: New screenshot and all new text for the help page on post-derail respite (previously known as \"mercy\")",
+"u": ["https://twitter.com/beemuvi/status/1509682224265793544",
+      "https://help.beeminder.com/article/18-respite"],
+"d": "2022-03-31",
+"t": "2022-03-31",
 }, /* --------------------------------------------------------- end 2022mar */ ]
+
+const batch2022apr = [{
+"x": "Help docs: Added a caveat about autodata to the article on Data Source, plus a link to Boss as a Service",
+"u": ["https://twitter.com/beemuvi/status/1510022691620737026",
+      "https://help.beeminder.com/article/103-data-source"],
+"d": "2022-04-01",
+"t": "2022-04-01",
+}, { // ------------------------------------------------------------------------
+"x": "Help docs: Rewrote parts of the article on what counts as a legit derailment to mention illness, plug no-excuses mode harder, etc",
+"u": ["https://twitter.com/beemuvi/status/1510022837200859139",
+      "https://help.beeminder.com/article/16-what-is-a-legit-derailment"],
+"d": "2022-04-01",
+"t": "2022-04-01",
+}, { // ------------------------------------------------------------------------
+"x": "Help docs: Edits to the article on PPRs to mitigate confusion and not saying anything that sounded like 'fake data'",
+"u": ["https://twitter.com/beemuvi/status/1511127340713082881",
+      "https://help.beeminder.com/article/157-pessimistic-presumptive-reports"],
+"d": "2022-04-01",
+"t": "2022-04-04",
+}, { // ------------------------------------------------------------------------
+"x": "Added Haitian Creole as a language to our @duolingo autodata integration!",
+"u": ["https://twitter.com/beemuvi/status/1511128534223233024",
+      "https://github.com/beeminder/beeminder/issues/3091"],
+"d": "2022-04-04",
+"t": "2022-04-04",
+}, { // ------------------------------------------------------------------------
+"x": "Yet-another-bug (see UVI#4075) with handling failed payments from PayPal was causing us to repeatedly email the user about the failed charge attempt. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1511487766147653635",
+      "https://github.com/beeminder/beeminder/issues/3081",
+      "https://github.com/beeminder/beeminder/pull/3083"],
+"d": "2022-03-29",
+"t": "2022-04-05",
+"c": "Behind the scenes notes: The Braintree gem doesn't do serialization as JSON for high-level objects (\"we want to keep the library light\"), so serialize to YAML and pass the string to our airlert method and fix the lancemcdoogal error",
+}, { // ------------------------------------------------------------------------
+"x": "We made UVI#3947 be true for 5 more autodata integrations: the logo links to the data source for Clozemaster, CodeCombat, Draftin, Duolingo, and Fitbit",
+"u": ["https://twitter.com/beemuvi/status/1511494285773840385",
+      "https://github.com/beeminder/beeminder/pull/3098"],
+"d": "2022-04-05",
+"t": "2022-04-05",
+"c": "Also freeCodeCamp but that's only soft-launched",
+}, { // ------------------------------------------------------------------------
+"x": "Help docs: Revamped the help page for the iOS app with updated screenshots and instructions",
+"u": ["https://twitter.com/beemuvi/status/1511854850975289350",
+      "https://help.beeminder.com/article/60-ios-app"],
+"d": "2022-04-06",
+"t": "2022-04-06",
+}, { // ------------------------------------------------------------------------
+"x": "Help docs: Revamped the quite out of date help page for the Withings integration with new screenshots, instructions, tweaks to the answers to questions, etc.",
+"u": ["https://twitter.com/beemuvi/status/1511854969338556417",
+      "https://help.beeminder.com/article/90-withings"],
+"d": "2022-04-06",
+"t": "2022-04-06",
+}, { // ------------------------------------------------------------------------
+"x": "Phased out all coupon codes / percent discounts for Beemium plans and emailed everyone affected. No such thing as paying less than full price for Beemium now!",
+"d": "2022-02-20",
+"t": "2022-04-07",
+"u": ["https://twitter.com/beemuvi/status/1512188861513838592",
+      "https://github.com/beeminder/beeminder/issues/2701"],
+"c": "Note that UVI#3996 was just expiring the coupon links so no new coupons could be applied; this one is about rescinding existing coupons for Beemium folks.",
+}, { // ------------------------------------------------------------------------
+"x": "Help docs: the graph settings page got new screenshots (the old ones were from the yellow brick road days!) plus other tweaks like keywords",
+"u": ["https://twitter.com/beemuvi/status/1512189031681073154",
+      "https://help.beeminder.com/article/105-graph-settings"],
+"d": "2022-04-07",
+"t": "2022-04-07",
+}, { // ------------------------------------------------------------------------
+"x": "If your start &amp; finish dates were in the past in the megabreak URL, we'd say (wrongly/confusingly) \"your finish date has to be after your start date\" #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1512565677650956288",
+      "https://github.com/beeminder/beeminder/issues/2949#issuecomment-1092255941",
+      "https://github.com/beeminder/beeminder/pull/3108"],
+"d": "2022-04-07",
+"t": "2022-04-08",
+"c": "See UVI#3944",
+}, { // ------------------------------------------------------------------------
+"x": "When the deadline hits and until we redraw the graph for the new day, we now show a banner on your goal page to warn you that things may be briefly out of sync",
+"u": ["https://twitter.com/beemuvi/status/1512565813324107777",
+      "https://github.com/beeminder/beeminder/issues/532",
+      "https://github.com/beeminder/beeminder/pull/3109"],
+"d": "2022-04-08",
+"t": "2022-04-08",
+"c": "I.e., a persistent/cryptic banner ('A new day has dawned') is shown during the eke window. A baremin / worse-is-better stab at helping with user-confusion around non-dynamic goal pages.",
+}, { // ------------------------------------------------------------------------
+"x": "We nixed signup/login via Facebook and clarified that you can use the forgot-password link if you never had a password, cuz you'd previously used Facebook",
+"u": ["https://twitter.com/beemuvi/status/1513663343810134016",
+      "https://github.com/beeminder/beeminder/issues/3056"],
+"d": "2022-04-09",
+"t": "2022-04-11",
+"c": "Microcopy: \"Forgot your password? (or never got one to begin with?)\"",
+}, { // ------------------------------------------------------------------------
+"x": "Our new banner alerting you of goals out of sync was buggily showing up permanently on archived goals! #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1513667200426524674",
+      "https://github.com/beeminder/beeminder/issues/3113",
+      "https://github.com/beeminder/beeminder/pull/3114"],
+"d": "2022-04-09",
+"t": "2022-04-11",
+"c": "Aka the new-day-has-dawned banner. See followup UVI for additional bugfix.",
+}, { // ------------------------------------------------------------------------
+"x": "Help docs: Revamped out-of-date docs for the following autodata integrations: Draft, Fitbit, and Garmin",
+"u": ["https://twitter.com/beemuvi/status/1516564249157414912",
+      "https://help.beeminder.com/article/121-draft",
+      "https://help.beeminder.com/article/11-fitbit",
+      "https://help.beeminder.com/article/74-garmin"],
+"d": "2022-04-18",
+"t": "2022-04-19",
+}, { // ------------------------------------------------------------------------
+"x": "Help docs: More changes and improvements to the following autodata integrations: Apple Health (new screenshots), Complice (new FAQ item), Focusmate (lots)",
+"u": ["https://twitter.com/beemuvi/status/1516564418183630853",
+      "https://help.beeminder.com/article/61-apple-health",
+      "https://help.beeminder.com/article/85-complice",
+      "https://help.beeminder.com/article/278-focusmate"],
+"d": "2022-04-18",
+"t": "2022-04-19",
+}, { // ------------------------------------------------------------------------
+"x": "Our 'new day has dawned' banner was also buggily showing up at the wrong time on certain goals with non-midnight deadlines (shaking my fist: timezones!) #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1516920396557156353",
+      "https://github.com/beeminder/beeminder/issues/3113",
+      "https://github.com/beeminder/beeminder/pull/3128"],
+"d": "2022-04-11",
+"t": "2022-04-20",
+}, { // ------------------------------------------------------------------------
+"x": "Help docs: Overhaul of our Duolingo integration help page, new screenshots, troubleshooting, reordered questions, etc",
+"u": ["https://twitter.com/beemuvi/status/1516921216291852288",
+      "https://help.beeminder.com/article/80-duolingo"],
+"d": "2022-04-18",
+"t": "2022-04-20",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, /* --------------------------------------------------------- end 2022apr */ ]
 
 const staged = [ {
 }, { // ------------------------------------------------------------------------
@@ -663,8 +918,6 @@ https://github.com/beeminder/beeminder/issues/2006
 https://github.com/beeminder/beeminder/pull/2737
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-TODO: autodata links (like trello for the rest of them)
-https://github.com/beeminder/beeminder/issues/493
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 TODO: unreverse withings autofetch batches
@@ -684,7 +937,7 @@ TODO-dreev: add links to UVIs to the gissues for december and january
 }, { // ------------------------------------------------------------------------
 [HOLD: Probably not a UVI, and not deployed] Improve handling of 500s from Mailgun when sending
 Clarifies error message as well as retries on non-2xx response.
-ADAM: @bsoule i don't have time to qualify this at the moment, so i don't know if it works at all. If you want, you can take this over the finish line, otherwise, I can look at it when I'm back at it.
+ADAM: @bsoule i don't have time to qualsify this at the moment, so i don't know if it works at all. If you want, you can take this over the finish line, otherwise, I can look at it when I'm back at it.
 https://github.com/beeminder/beeminder/issues/2976
 DATE DEPLOYED? [this is a WIP PR; not deployed as of 02/11; also probably not a UVI]
 what about "Clarifies error message as well as retries on non-2xx response"? that sounds user-visible-ish -- no. it's just rearranging stuff in error handling + retrying that we were already doing. i don't think this is user visible. but could clarify with adam for higher levels of confidence. 
@@ -695,15 +948,71 @@ fixed in 2019??
 https://github.com/beeminder/beeminder/issues/703#issuecomment-1033153413
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-AHEM: this does not belong here. it just an idea and no work has been done on it yet.
-TODO: parcel out goals stingily 
-https://github.com/beeminder/beeminder/issues/2993
+WIP PR; not deployed
+a url to check what beeminder sees for urlminder?
+https://github.com/beeminder/beeminder/commit/6a7311cddd29dc8e4b3f5cbff1ed3d51ab29a347
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-TODO: DMARC etc for anti-spam? maybe this broke things and adam undid it? // it did briefly break stuff with helpscout, but then he fixed it proper -- but ask to clarify state of it
-https://github.com/beeminder/beeminder/issues/910#issuecomment-1040831508
+MINI: removed a lot of outdated weight-loss tips of the day
+TODO: 
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
+freecodecamp soft launch?
+https://beeminder.consider.it/freecodecamp-what-should-our-next-autodata-integration-be-92-19939
+https://github.com/beeminder/beeminder/issues/2782
+2022-04-04: PR
+2022-04-05: soft launch
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+other coupon-killing tasks (already tweeted killing discounts for beemium)
+https://github.com/beeminder/beeminder/issues/2701
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+TODO: autodata links (like trello for the rest of them)
+https://github.com/beeminder/beeminder/issues/493
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+//TWEETED
+"x": "Help docs: Updated screenshots for our GitHub integration article, plus new clarifications about permissions in the Garmin article",
+"u": ["https://twitter.com/beemuvi/status/1517291718554521600",
+      "https://help.beeminder.com/article/81-github",
+      "https://help.beeminder.com/article/74-garmin"],
+"d": "2022-04-19",
+"t": "2022-04-21",
+}, { // ------------------------------------------------------------------------
+//TWEETED
+"x": "Added some missing page titles (the text the browser displays on the page's tab) for things like the premium page, the featured gallery, etc",
+"u": ["https://twitter.com/beemuvi/status/1517292582505570309",
+      "https://github.com/beeminder/beeminder/issues/3116",
+      "https://github.com/beeminder/beeminder/pull/3161"],
+"d": "2022-04-20",
+"t": "2022-04-21",
+}, { // ------------------------------------------------------------------------
+//TWEETED
+"x": "Released a new version of our Beeminder gem that works with Ruby 3. HT @t_a_w",
+"u": ["https://twitter.com/beemuvi/status/1517635008915140608",
+      "https://dev.to/taw/open-source-adventures-episode-37-fixing-beeminder-gem-to-work-with-ruby-3-d1c",
+      "https://github.com/beeminder/beeminder-gem/issues/31"],
+"d": "2022-04-19",
+"t": "2022-04-22",
+}, { // ------------------------------------------------------------------------
+//TWEETED
+"x": "Help docs: Clarifications on our Gmail integration page + tweaks and a new intro on our IFTTT integration page",
+"u": ["https://twitter.com/beemuvi/status/1517644057723367424",
+      "https://help.beeminder.com/article/86-ifttt",
+      "https://help.beeminder.com/article/82-gmail"],
+"d": "2022-04-21",
+"t": "2022-04-22",
+}, { // ------------------------------------------------------------------------
+"x": "Help docs: new FAQ items on our Habitica integration page
+"u": [
+      "https://help.beeminder.com/article/83-habitica"],
+"d": "2022-04-22",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+more page title stuff?
+https://github.com/beeminder/beeminder/issues/2699
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -737,13 +1046,16 @@ https://github.com/beeminder/beeminder/issues/910#issuecomment-1040831508
 ~~~~~~----------------------------- CANDIDATES -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-wordpress plugin: github.com/beeminder/beeminder-ping
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 ~~~~~~---------------------------------- IDEAS -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
 1. http://forum.beeminder.com/t/please-let-me-rename-archived-goals/2746
 2. DREEV: point to help.beeminder.com in blog.beeminder.com/newbees and vice versa
 3. https://forum.beeminder.com/t/api-create-goal-documentation-needs-updating/5547
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 ~~~~~~-------------------- TOO LATE / TOO LAME -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
 * Friendlier oauth names: https://github.com/beeminder/beeminder/issues/1612
 * CNR on this weight-loss restart thing means maybe we fixed it long ago without realizing it? https://github.com/beeminder/beeminder/issues/1321
@@ -755,5 +1067,9 @@ wordpress plugin: github.com/beeminder/beeminder-ping
   https://github.com/beeminder/beeminder/commit/94e269275c4a02a1e12c5c28c42e2faef23205b3
 * Got rid of the \"Increase the pledge each time you derail\" checkbox on the goal page as it was redundant with using Pledge Caps to stop pledge increases
   [BEE: nothing was tweeted as far I can see; but also you don't have a PR/Gissue to link to with this, so maybe that + the ancientness disqualifies it?]
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 //////------------------------------------------------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
 *********************************************************************************************************************************************************************/
