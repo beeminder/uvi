@@ -1166,7 +1166,8 @@ var batch2019may = [{
 }, { // ------------------------------------------------------------------------
 "s": true,
 "x": "We got rid of the notifications that said \"in panic\" and don't use that term anymore. It's all about beemergencies now.",
-"u": ["https://twitter.com/beemuvi/status/1134690466027323392"],
+"u": ["https://twitter.com/beemuvi/status/1134690466027323392",
+      "https://github.com/beeminder/beedroid/issues/52"],
 "d": "2019-05-27",
 "t": "2019-05-31",
 "c": "Version 2.9.3. We don't remember now when inpanic notificaions got killed and if this was just cleaning up the code but at some point we got rid of the \"in panic\" copy and didn't previously count that as a UVI so we're counting it now! AWW: There used to be zeno alerts and inpanic alerts, and as part of cleaning it up, we made it all zenos. Funnily enough, we'll be re-adding 'inpanic'-style alerts so we can use leaddays from the web, but they'll be done differently.",
@@ -2085,6 +2086,7 @@ var batch2019oct = [{
 //2019-10-04 05:16:38, 2019-10-03, 2019-10-04 05:16:38, 1, nix throttling rebraining
 "x": "There were rare circumstances (due to recent changes with PPRs) that we would skip regenerating graphs when seeming no-op data was added. Now we don't. #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1180093889866125312",
+      "https://github.com/beeminder/beeminder/issues/703",
       "https://github.com/beeminder/beeminder/pull/824",
       "https://github.com/beeminder/beeminder/issues/823",
       "https://github.com/beeminder/beeminder/issues/296"],
