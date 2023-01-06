@@ -2488,7 +2488,8 @@ const batch2020oct = [{
 }, { // ------------------------------------------------------------------------
 "s": true,
 "x": "Also with notifications: Separate notification channel for \"goal is now safe\", not creating new notifications just because something about the goal changed",
-"u": ["https://twitter.com/beemuvi/status/1322667252584341504"],
+"u": ["https://twitter.com/beemuvi/status/1322667252584341504",
+      "https://github.com/beeminder/beedroid-hist/pull/79"],
 "d": "2020-10-20",
 "t": "2020-10-31",
 }, { // ------------------------------------------------------------------------

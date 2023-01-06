@@ -1225,6 +1225,273 @@ x: "Updated our Stripe gem, and updated the Stripe api version we are targeting 
 "https://github.com/beeminder/beeminder/pull/3125"],
 "d": "2022-04-11",
 "t": "2022-04-19"
+}, { // ------------------------------------------------------------------------
+"x": "Capybara was having trouble finding things in bootstrap modals. Disabled animation in quals and make sure it's not in transition still. More reliable quals++",
+"u": ["https://github.com/beeminder/beeminder/pull/3077",
+"https://twitter.com/beeminfra/status/1519095036691976193"],
+"d": "2022-04-15",
+"t": "2022-04-26"
+}, { // ------------------------------------------------------------------------
+"x": "Print out the logs when GitHub Actions fails so we can figure out why...",
+"u": ["https://twitter.com/beeminfra/status/1521608144639586304",
+      "https://github.com/beeminder/beeminder/issues/3045",
+      "https://github.com/beeminder/beeminder/pull/3046",
+      "https://github.com/beeminder/beeminder/pull/3026",],
+"d": "",
+"t": "2022-05-03"
+}, { // ------------------------------------------------------------------------
+"x": "Fixed a bug with certain query conditions in the beemailer, as well as adding some new conditions, and a new macro for a transactional email postscript.",
+"u": ["https://twitter.com/beeminfra/status/1524111590932434944",
+"https://github.com/beeminder/beeminder/pull/3181",
+"https://github.com/beeminder/beeminder/pull/3058"],
+"d": "2022-04-27",
+"t": "2022-05-10"
+}, { // ------------------------------------------------------------------------
+"x": "Updated all our controllers from using legacy rails protected attributes, to using Strong Params. Part of project #upgradeallthethings",
+"u": ["https://github.com/beeminder/beeminder/pull/3057",
+      "https://twitter.com/beeminfra/status/1526711955305529344"],
+"d": "2022-04-11",
+"t": "2022-05-17",
+}, { // ------------------------------------------------------------------------
+"x": "Removed a redundant special case and simplified some things around meta graphs that are only for tracking meta data.",
+"u": ["https://github.com/beeminder/beeminder/pull/2924",
+      "https://github.com/beeminder/beeminder/pull/2920",
+      "https://twitter.com/beeminfra/status/1529202979319885824"],
+"c": "We had multiple different ways implemented to accomplish the same meta-goals exemption.",
+}, { // ------------------------------------------------------------------------
+"x": "Fixed a misleading heisenbug in quals. Sometimes we would clean the db before we were done with the qual and see an exception about a user-less goal.",
+"u": ["https://github.com/beeminder/beeminder/issues/3146",
+      "https://github.com/beeminder/beeminder/pull/3147",
+      "https://twitter.com/beeminfra/status/1531784573566128128"],
+"t": "2022-05-31"
+}, { // ------------------------------------------------------------------------
+"x": "Fixed an error that was sometimes getting thrown when we are logging mailgun bounce notifications.",
+"u": ["https://twitter.com/beeminfra/status/1534314193347911684",
+      "https://github.com/beeminder/beeminder/pull/3105"],
+"c": "we were expecting a delivery status message, but sometimes there isn't one.",
+"d": "2022-04-06",
+"t": "2022-06-07"
+}, { // ------------------------------------------------------------------------
+"x": "As part of project #upgradeallthethings, upgraded from the extremely geriatric Rails 4 version we'd been on, to the slightly less outdated Rails 5.2",
+"u": ["https://twitter.com/beeminfra/status/1536838991822999552",
+      "https://github.com/beeminder/beeminder/issues/2033",
+      "https://github.com/beeminder/beeminder/issues/2034",
+      "https://github.com/beeminder/beeminder/issues/2035",
+      "https://github.com/beeminder/beeminder/pull/3132"],
+"d": "2022-05-13",
+"t": "2022-06-14",
+"c": "There were no UVIs directly from this upgrade, but there were plenty of little things we missed in migrating that caused regressions and subsequent User-Visible fixes."
+}, { // ------------------------------------------------------------------------
+"x": "Added a missing gem necessary for running the rails console post our 5.2 upgrade; also added the new 5.2 servers to the translog script.",
+"u": ["https://twitter.com/beeminfra/status/1539374788673646593",
+      "https://github.com/beeminder/beeminder/pull/3254",
+      "https://github.com/beeminder/beeminder/issues/3238",
+      "https://github.com/beeminder/beeminder/pull/3244"],
+"d": "2022-05-17",
+"t": "2022-06-21"
+}, { // ------------------------------------------------------------------------
+"x": "Updated webpacker & redis now that we are off rails 4; has the side effect of making it possible to run our dev env locally on M1 macs now.",
+"u": ["https://twitter.com/beeminfra/status/1541914336762900480",
+      "https://github.com/beeminder/beeminder/pull/3315",
+      "https://github.com/beeminder/beeminder/issues/3313",
+      "https://github.com/beeminder/beeminder/issues/3314",
+      "https://github.com/beeminder/beeminder/pull/3317"],
+"d": "2022-06-10",
+"t": "2022-06-28"
+}, { // ------------------------------------------------------------------------
+"x": "Another post 5.2 upgrade bugfix: silence some warning messages that would happen during deploy.",
+"u": ["https://twitter.com/beeminfra/status/1544419008006479873",
+"https://github.com/beeminder/beeminder/pull/3258",
+"https://github.com/beeminder/beeploy/issues/78",
+"https://github.com/beeminder/beeminder/pull/3257"],
+"d": "2022-05-17"
+}, { // ------------------------------------------------------------------------
+"x": "Fixed a bug that was not allowing admins to certain user-fields. (Strong params / rails 5.2 upgrade consequence.)",
+"u": ["https://twitter.com/beeminfra/status/1546960508967845890",
+      "https://github.com/beeminder/beeminder/pull/3268",
+      "https://github.com/beeminder/beeminder/issues/3267"],
+"d": "2022-05-20",
+"t": "2022-07-12"
+}, { // ------------------------------------------------------------------------
+"x": "In concert with UVI#4176, added quals to cover the happy path & the error path in both goal creation and api for Focusmate integration. Also for missing oauth.",
+"u": ["https://twitter.com/beeminfra/status/1549489578423222276",
+      "https://changelog.beeminder.com/#4176",
+      "https://github.com/beeminder/beeminder/pull/3322",
+      "https://github.com/beeminder/beeminder/pull/3326"],
+"d": "2022-06-13",
+"t": "2022-07-19"
+}, { // ------------------------------------------------------------------------
+"x": "Fix the printed output of the Honeycomb queue metrics uploader. This didn't affect uploaded metrics, just the human readable output of the job.",
+"u": ["https://twitter.com/beeminfra/status/1552018455431241730",
+      "https://github.com/beeminder/beeminder/pull/3299",
+      "https://github.com/beeminder/beeminder/issues/3298"],
+"d": "2022-06-06",
+"t": "2022-07-26"
+}, { // ------------------------------------------------------------------------
+"x": "Add Docker caching to Github Actions to cut our run time in half for running quals on Github",
+"c": "This uses an alternate docker-compose file, and relies on a prebuilt base Beeminder image.",
+"u": ["https://twitter.com/beeminfra/status/1554611765761019904",
+      "https://github.com/beeminder/beeminder/issues/3004",
+      "https://github.com/beeminder/beeminder/pull/3383",
+      "https://github.com/beeminder/beeminder/pull/3384",
+      "https://github.com/beeminder/beeminder/pull/3385"],
+"d": "2022-07-26",
+"t": "2022-08-02"
+}, { // ------------------------------------------------------------------------
+"x": "Reduce Github Actions timeout -- now that builds are faster, we can timeout sooner!",
+"u": [
+"https://twitter.com/beeminfra/status/1557131068737671168",
+"https://github.com/beeminder/beeminder/issues/3004",
+"https://github.com/beeminder/beeminder/pull/3388"],
+"t": "2022-08-09"
+}, { // ------------------------------------------------------------------------
+"x": "Migrate to new Strava library. The one we were using is not maintained; new one handles stuff with webhooks and exposes ratelimit headers.",
+"u": ["https://github.com/beeminder/beeminder/pull/3330",
+      "https://github.com/beeminder/beeminder/issues/3351",
+      "https://twitter.com/beeminfra/status/1559685418202775552"],
+"d": "2022-06-24"
+}, { // ------------------------------------------------------------------------
+"x": "Added job information to \"vengeful god\" emails (aka when a background worker stalls and gets killed by the watchdog) so we know what got killed.",
+"u": ["https://twitter.com/beeminfra/status/1562185703995322369", 
+      "https://github.com/beeminder/beeminder/issues/3229",
+      "https://github.com/beeminder/beeploy/pull/85",
+      "https://github.com/beeminder/beeploy/pull/86"],
+"d": "2022-05-11",
+"t": "2022-08-23",
+"c": "This adds the job class and the child command line to both Honeycomb and the emails, and it adds the last ten lines of log output for the child PID to the email. This output usually includes the job class and the arguments!",
+}, { // ------------------------------------------------------------------------
+"x": "Upgraded to a newer version of Resque-Web and moved it to the same machine as the scheduler (it's slightly more mistake proof if on the same host).",
+"u": ["https://twitter.com/beeminfra/status/1564732995533434880",
+      "https://github.com/beeminder/beeploy/pull/101",
+      "https://github.com/beeminder/beeploy/issues/98",
+      "https://github.com/beeminder/beeploy/issues/91",
+      "https://github.com/beeminder/beeploy/pull/92"],
+"d": "2022-08-01"
+}, { // ------------------------------------------------------------------------
+"x": "Be smarter about when Github runs quals; now GH runs quals on new PRs, and our deploy runs quals against the merge prior to deploy.",
+"u": ["https://twitter.com/beeminfra/status/1567245554610208768",
+      "https://github.com/beeminder/beeminder/issues/3421",
+      "https://github.com/beeminder/beeminder/pull/3422"],
+"d": "2022-08-04",
+"t": "2022-09-06"
+}, { // ------------------------------------------------------------------------
+"x": "Added a private endpoint to check what release of beeminder code is running. This is for failing loudly if the deploy fails, and for Lighthouse CI integration.",
+"u": ["https://twitter.com/beeminfra/status/1569787556442816512",
+      "https://github.com/beeminder/beeminder/pull/3396",
+      "https://github.com/beeminder/beeminder/issues/2741",
+      "https://github.com/beeminder/beeminder/issues/3334",
+      "https://github.com/beeminder/beeminder/pull/3397"],
+"d": "2022-07-21",
+"t": "2022-09-13"
+}, { // ------------------------------------------------------------------------
+"x": "Oh, and we set up a Lighthouse CI server for working on web standards / SEO stuff.",
+"u": ["https://twitter.com/beeminfra/status/1572323165459849216",
+      "https://github.com/beeminder/beeminder/issues/3334",
+      "https://github.com/beeminder/beeploy/issues/96"],
+"d": "2022-07-26",
+"t": "2022-09-20",
+"c": "mentioned lighthouse in last week's infra, without realizing i hadn't mentioned lighthouse CI yet."
+}, { // ------------------------------------------------------------------------
+"x": "Added a helpful script for checking development and production with Lighthouse, along with documentation, and a Rake task for setting up data for the checker.",
+"u": ["https://twitter.com/beeminfra/status/1574897525198561280",
+      "https://github.com/beeminder/beeminder/issues/3334",
+      "https://github.com/beeminder/beeminder/pull/3401"],
+"d": "2022-07-29",
+"t": "2022-09-27",
+}, { // ------------------------------------------------------------------------
+"x": "Updated our Github actions config for Lighthouse stuff because it was causing a bunch of error messages on regular pushes and PRs.",
+"u": ["https://twitter.com/beeminfra/status/1577432534908272640",
+      "https://github.com/beeminder/beeminder/issues/3334",
+      "https://github.com/beeminder/beeminder/pull/3420"],
+"c": "we'd had it configured for experiments we were running in branches, but GH Actions was expecting the config on the main branch too, leading to errors/wolf-crying...",
+"d": "2022-08-04",
+"t": "2022-10-04"
+}, { // ------------------------------------------------------------------------
+"x": "Squelched Capybara's startup messages, and other noisy non-error output from our quals.",
+"u": [
+"https://github.com/beeminder/beeminder/pull/3673",
+"https://github.com/beeminder/beeminder/issues/2784",
+"https://github.com/beeminder/beeminder/pull/3585",
+"https://github.com/beeminder/beeminder/pull/3670",
+"https://twitter.com/beeminfra/status/1579969781264191489"
+],
+"d": "2022-09-27",
+"t": "2022-10-11"
+}, { // ------------------------------------------------------------------------
+"x": "We've been moving quals out of minitest and into rspec. Even made a beeminder goal for whittling down the remainders: beeminder.com/meta/speckify",
+"u": ["https://twitter.com/beeminfra/status/1582514659625955328",
+      "https://github.com/beeminder/beeminder/pull/3609",
+      "https://github.com/beeminder/beeminder/pull/3750",
+      "https://github.com/beeminder/beeminder/pull/3747"],
+"d": "2022-10-17",
+"t": "2022-10-18"
+}, { // ------------------------------------------------------------------------
+"x": "Added the full goal url (so email clients will linkify it) to PND alerts for support workerbees.",
+"u": ["https://github.com/beeminder/beeminder/pull/3758",
+"https://github.com/beeminder/beeminder/issues/3227",
+"https://twitter.com/beeminfra/status/1585031079693799424"],
+"d": "2022-10-19",
+"t": "2022-10-25"
+}, { // ------------------------------------------------------------------------
+"x": "Added the goal state to listing of a user's goal in the admin interface, #worker-bee-request",
+"u": ["https://twitter.com/beeminfra/status/1587519911639015424",
+      "https://github.com/beeminder/beeminder/pull/3758",
+      "https://github.com/beeminder/beeminder/issues/3448"],
+"d": "2022-10-19",
+"t": "2022-11-01"
+}, { // ------------------------------------------------------------------------
+"x": "Changed the way we include support on certain emails so that helpscout can correctly classify them; #worker-bee-request",
+"u": ["https://github.com/beeminder/beeminder/pull/3687",
+      "https://github.com/beeminder/beeminder/issues/3160",
+     "https://twitter.com/beeminfra/status/1590140941725495297"],
+"d": "2022-10-04",
+"t": "2022-11-08"
+}, { // ------------------------------------------------------------------------
+"x": "Better error messaging in our local control scripts if you've forgotten to set up your local key files.",
+"u": ["https://github.com/beeminder/beeminder/pull/3686",
+"https://github.com/beeminder/beeminder/issues/3685",
+"https://twitter.com/beeminfra/status/1594418224078417922"],
+"t": "2022-11-20"
+}, { // ------------------------------------------------------------------------
+"x": "More Honeycomb info around graph jobs: tell Honeycomb how big the graph is, and tell them about recommits within the GraphJob as well.",
+"u": ["https://github.com/beeminder/beeminder/pull/3704",
+"https://github.com/beeminder/beeminder/pull/3705",
+"https://github.com/beeminder/beeminder/issues/3668",
+"https://github.com/beeminder/beeminder/issues/3701",
+"https://twitter.com/beeminfra/status/1597025036606779392"],
+"t": "2022-11-27"
+}, { // ------------------------------------------------------------------------
+"x": "The autodata error banner went missing for admins about a month ago. Added it back so our support workerbees can see what's going on with your goal!",
+"u": ["https://github.com/beeminder/beeminder/pull/3849",
+"https://twitter.com/beeminfra/status/1598832915949170691"],
+"d": "2022-11-30",
+"t": "2022-12-02"
+}, { // ------------------------------------------------------------------------
+"x": "Added more granular / detailed status tracking to Beeminder::Charge objects, so we can e.g. query for refunded charges directly in our own database.",
+"u": ["https://github.com/beeminder/beeminder/pull/3828",
+"https://twitter.com/beeminfra/status/1601296909750407168"],
+"d": "2022-11-16",
+"t": "2022-12-09"
+}, { // ------------------------------------------------------------------------
+"x": "Added a simple little 'set_deadbeat_status' helper to the user model to DRY up some things we were doing around setting/unsetting this flag.",
+"u": ["https://github.com/beeminder/beeminder/pull/3826",
+"https://github.com/beeminder/beeminder/pull/3836",
+"https://twitter.com/beeminfra/status/1603882972629073921"],
+"d": "2022-12-16",
+"t": "2022-11-16"
+}, { // ------------------------------------------------------------------------
+"x": "Moved the logic for lifecycle of a Donation (beemium perk) into the Charge object (added callbacks around charging card & refunds, added associations, and quals).",
+"u": ["https://github.com/beeminder/beeminder/pull/3838",
+"https://github.com/beeminder/beeminder/issues/596",
+"https://twitter.com/beeminfra/status/1606442836416946176"],
+"d": "2022-11-17",
+"t": "2022-12-23"
+}, { // ------------------------------------------------------------------------
+"x": "Fixed a silly little dependency problem in our dev environment by loading util with rails so we can findu / findg without loading Goals first.",
+"u": ["https://github.com/beeminder/beeminder/pull/3904",
+"https://twitter.com/beeminfra/status/1608989379149836292"],
+"t": '2022-12-30',
+}, { // ------------------------------------------------------------------------
 }, /* ----------------------------------------------------------- end batch */ ]
 
 var staged = [ { // note: sub-entries not allowed here in staging
@@ -1240,50 +1507,75 @@ https://github.com/beeminder/beeminder/commit/
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
+## ansible things:
+1. Add lighthouseci Ansible role #97: https://github.com/beeminder/beeploy/pull/97
+"d": "2022-08-01"
 }, { // ------------------------------------------------------------------------
+## ansible nginx related stuff:
+Reload a running nginx after certs are updated; I also added a playbook for just updating the certificates.
+https://github.com/beeminder/beeploy/pull/88
+https://github.com/beeminder/beeploy/issues/87
 }, { // ------------------------------------------------------------------------
+Update load balancer nginx config 
+https://github.com/beeminder/beeploy/pull/82
 }, { // ------------------------------------------------------------------------
+Tweak sudo for passenger restarts
+https://github.com/beeminder/beeploy/pull/94
+https://github.com/beeminder/beeploy/issues/77
 }, { // ------------------------------------------------------------------------
+rails 6 upgrade stuff
 }, { // ------------------------------------------------------------------------
-We've been slowly improving our error handling in autodata, some have a todoist::Authexception, and a gmailzero::authexception now
-* Created a Gmailzero::AuthException.
-      "https://github.com/beeminder/beeminder/issues/881"],
+Pull out webpack-dev-server
+remove half-setup webpacker dev server
+https://github.com/beeminder/beeminder/issues/3972
 }, { // ------------------------------------------------------------------------
+Clean up babel warnings (something something about translating es6 to es5, but we don't really care)
+https://github.com/beeminder/beeminder/issues/3968
 }, { // ------------------------------------------------------------------------
+500 error when admin visits certain meta goals
+https://github.com/beeminder/beeminder/issues/3966
+https://github.com/beeminder/beeminder/pull/3967
 }, { // ------------------------------------------------------------------------
-TODO: remove unused logo_32 version from assets
-get rid of logo_32 and just use logo_64 version of autod logos
-https://github.com/beeminder/beeminder/issues/2759
-https://github.com/beeminder/beeminder/pull/2760
-"d": "2021-11-17"
+Run bee.sh Github Actions checker when docker/ changes
+https://github.com/beeminder/beeminder/issues/3955
 }, { // ------------------------------------------------------------------------
+Upgrade ruby container in Docker dev environment: for "bee.sh init gives error about nokogiri"
+The ruby container is running ruby/ruby:2.7.7-buster. This is based on Debian buster, which is substantially older than Debian bullseye--the other provided base.
+
+Nokogiri can run fine on aarch64 systems as long as glibc is 2.29 or newer--which it is in bullseye, but not in buster. (See #3940)
+
+We should make sure the bee.sh checker on GitHub Actions is happy with any changes we make to the Dockerfile. (it is!)
+https://github.com/beeminder/beeminder/issues/3953
+https://github.com/beeminder/beeminder/issues/3940
 }, { // ------------------------------------------------------------------------
+Announce completion of trlog fetch in hornucopia for workerbees to see its done
+https://github.com/beeminder/beeminder/issues/3925
 }, { // ------------------------------------------------------------------------
+fixed blank trlogs since ruby 2.7.7 upgrade (trlog fetcher wasn't using correct ruby)
+https://github.com/beeminder/beeminder/issues/3923
+https://github.com/beeminder/beeminder/pull/3924
 }, { // ------------------------------------------------------------------------
-removed a silly special case around the meta user; some of the graphs there aren't really for "beeminding", but just to track data. We used to have a silly thing to make those not recommit and increase pledge etc, but now instead we used normal means for doing the same [i.e. $0 pledge caps, and our exception list for charges]
-https://github.com/beeminder/beeminder/pull/2924
-https://github.com/beeminder/beeminder/pull/2920
-"c": "maybe we don't actually want to tweet this?"
+nearing Honeycomb column limit
+We are nearing our Honeycomb column limit. We need to cull the old unused ones. I was hoping to wait for when we can bring in OpenTelemetry to our Honeycomb stuff but it'll have to be sooner.
+https://github.com/beeminder/beeminder/issues/3910
 }, { // ------------------------------------------------------------------------
-TOO LAME?
-"x": "Cleaned dupicate metadata on existing datapoints in our database so that we could do UVI#4010 (https://changelog.beeminder.com/#4010)",
-"c": "Yes, the UVI portion has already been counted, but the cleaning part was significant work, and was infra I guess?",
-"u": ["https://github.com/beeminder/beeminder/pull/2899"],
-"t": "2022-03-30"
+Fix BSD Findism from bee.sh and lee.sh re maxdepth 
+There's a line using find in bee.sh and lee.sh that causes problems with GNU find, and it's relatively complicated and could be expanded and made to work in both setups at the same time.
+https://github.com/beeminder/beeminder/pull/3907
+https://github.com/beeminder/beeminder/issues/3903
 }, { // ------------------------------------------------------------------------
+rails 5.2=>6 upgrade followon: Dev env complains about bundle config underscores 
+https://github.com/beeminder/beeminder/issues/3891
 }, { // ------------------------------------------------------------------------
-added a few more fine-grained mailing list management controls to our massmailer interface
-https://github.com/beeminder/beeminder/pull/3058
-"c": "this was the plaud users thing, and maybe not actually something we should point to?"
-}, { // ------------------------------------------------------------------------
-Print logs on GitHub Actions failure
-https://github.com/beeminder/beeminder/pull/3046
-https://github.com/beeminder/beeminder/pull/3026
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
+beesh.yml github actions job needs development keys
+When we added dev and test environment keys, I did not check that the beesh.yml scheduled job had everything it needed.
+
+It needs the development keys since it runs bee.sh init.
+https://github.com/beeminder/beeminder/issues/3881
+https://github.com/beeminder/beeminder/pull/3882
+https://github.com/beeminder/beeminder/pull/3886
+https://github.com/beeminder/beeminder/pull/3899
+https://github.com/beeminder/beeminder/pull/3906
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------

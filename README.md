@@ -1,23 +1,22 @@
 See index.html for the background about User-Visible Improvements (UVIs).
 
-This is hosted on Glitch at [changelog.beeminder.com](https://changelog.beeminder.com ).
+This is hosted on Glitch at [changelog.beeminder.com](https://changelog.beeminder.com "Or uvi.glitch.me").
 
-The interface / protocol for adding a new UVI to the changelog is as follows:
+Interface / protocol for adding a new UVI to the changelog:
 
-1. Add the JSON for it to pub/uvis2020.js (following a bunch of conventions only dreev knows)
+1. Add the JSON for it to pub/uvis2022.js (following a bunch of conventions only dreev knows)
 2. Include a link to the relevant gissue
 3. Tweet it at twitter.com/beemuvi
 4. Paste in the URL of the tweet to the JSON
-5. Manually update the bmndr.com/meta/uvi graph
+5. Manually update the beeminder.com/meta/uvi graph
 6. Double check that the total number of UVIs at beeminder.com/changelog matches the total in the stats tab at beeminder.com/meta/uvi
 7. Paste the canonical UVI link (e.g., beeminder.com/changelog#123) into the relevant gissue
 
-It sounds like that process wants more automation but it's fraught.
-For example, it especially might not be worth trying to duplicate Twitter's interface and automatically tweeting. 
-There are too many things like expanding @-mentions that wouldn't work as well outside of Twitter.
-And I even like manually updating the Beeminder meta graph because I give 
+Adding more automation to the above is easier said than done.
+For example, Twitter's UI with expanding @-mentions and stuff wouldn't work as well outside of Twitter.
+And I even kinda like manually updating the Beeminder meta graph because I characterize the UVI with a short phrase there that makes it easier to refer to.
 
-Update: Since Twitter doubled its character limit we decided to self-impose 160 characters as the max length for a UVI.
+Early UVIs adhered to Twitter's original 140-character limit. When Twitter doubled its character limit we decided to self-impose 160 characters as the max length for a UVI.
 
 See tweets.glitch.me for how to import your Twitter archive into a progress log like this.
 
@@ -34,7 +33,7 @@ t: date tweeted/logged/announced/entered [YYYY-MM-DD string]
 c: comment / note to selves              [string]
 ```
 
-Tentative refactor:
+Planned refactor:
 
 ```
 f: Featured / bolded / highlighted       [bool: default false]
@@ -69,6 +68,7 @@ Migration plan for that refactoring:
 1. Pick featured UVIs through June 2013 when we started doing that
 1. Filtering options like only showing bugfixes, non-bugfixes, featured, etc
 1. Top-post! https://github.com/beeminder/beeminder/issues/1530
+1. Refactor #regression to #zombie
 
 ## Acknowledgments
 
