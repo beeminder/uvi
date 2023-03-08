@@ -310,8 +310,9 @@ const batch2022feb = [{
 }, { // ------------------------------------------------------------------------
 "x": "We took the next step from UVI#3847 and removed the ability to add PayPal as a payment method (can still switch back and forth if you already added it)",
 "u": ["https://twitter.com/beemuvi/status/1491187722287185922",
-      "https://github.com/beeminder/beeminder/pull/2969",
-      "https://github.com/beeminder/beeminder/issues/1840"],
+      "https://github.com/beeminder/beeminder/issues/1840",
+      "https://github.com/beeminder/beeminder/issues/2987",
+      "https://github.com/beeminder/beeminder/pull/2969"],
 "d": "2022-02-02",
 "t": "2022-02-08",
 }, { // ------------------------------------------------------------------------
@@ -2482,7 +2483,8 @@ const batch2022dec = [{
 }, { // ------------------------------------------------------------------------
 "x": "Regression from our Rails upgrade: legacy users with PayPal as a payment method saw a 500-error when trying to view the payments page. #bugfix #zombie",
 "u": ["https://twitter.com/beemuvi/status/1607536222242746368",
-      "https://github.com/beeminder/beeminder/issues/3900"],
+      "https://github.com/beeminder/beeminder/issues/3900",
+      "https://github.com/beeminder/beeminder/pull/3905"],
 "d": "2022-12-20",
 "t": "2022-12-26",
 "c": "Braintree zomb",

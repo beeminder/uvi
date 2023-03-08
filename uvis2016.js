@@ -540,6 +540,7 @@ var batch2016apr = [
 "x": "We now include a list of Things You Should Know about beeminding on the empty dashboard/gallery page, similar to the commitwall webcopy",
 "u": "https://twitter.com/beemuvi/status/721646223388639232",
 "t": "2016-04-17 10:27:21 +0000",
+"c": "See earlier UVIs about 'commit-wall': this version just puts up the commitwall when trying to create your nth goal, where we experimented with different n's."
 }, /*************************************************************************/ {
 "x": "Lots of changes to the popup that warns you that by adding a credit card you're on the hook for everything eg links to adjust existing goals",
 "u": "https://twitter.com/beemuvi/status/721955743117631488",
@@ -1149,7 +1150,7 @@ var batch2016aug = [
 "u": "https://twitter.com/beemuvi/status/763260696700198912",
 "t": "2016-08-10 06:28:25 +0000",
 }, /*************************************************************************/ {
-"x": "Plugged leak in the commit-wall: creating various autodata goals circumvented the prompt to add your credit card before creating more goals",
+"x": "Plugged leak in the commit-wall: creating various autodata goals circumvented the prompt to add your credit card before creating additional goals",
 "u": "https://twitter.com/beemuvi/status/763949494270504961",
 "t": "2016-08-12 04:05:27 +0000",
 }, /*************************************************************************/ {
