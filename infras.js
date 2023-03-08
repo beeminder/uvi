@@ -1492,6 +1492,59 @@ x: "Updated our Stripe gem, and updated the Stripe api version we are targeting 
 "https://twitter.com/beeminfra/status/1608989379149836292"],
 "t": '2022-12-30',
 }, { // ------------------------------------------------------------------------
+"x": "Updated VCR config so that 1) it errors on any unexpected HTTP hits, and 2) it errors if an interaction in a cassette isn't used.",
+"c": "If we update a cassette, we want to be forced to take the old entries out. A step towards getting us to keep them up to date.",
+"u": ["https://twitter.com/beeminfra/status/1611166727920054272",
+      "https://github.com/beeminder/beeminder/issues/3816",
+      "https://github.com/beeminder/beeminder/pull/3909"],
+}, { // ------------------------------------------------------------------------
+"x": "Fixed a regression introduced in PR#3839 that caused admin's \"latest charge\" helper in the admin sidebar to be out of date.",
+"u": ["https://github.com/beeminder/beeminder/issues/3857",
+      "https://github.com/beeminder/beeminder/pull/3839",
+      "https://github.com/beeminder/beeminder/pull/3867",
+      "https://twitter.com/beeminfra/status/1613605360203628545"],
+"d": "2022-12-08",
+"t": "2023-01-12"
+}, { // ------------------------------------------------------------------------
+"x": "Upgraded to Rails 6.0",
+"u": ["https://twitter.com/beeminfra/status/1616599125423980545"],
+"d": "",
+"t": "2023-01-20"
+}, { // ------------------------------------------------------------------------
+"x": "As part of upgrading to Rails 6.0 we had to upgrade servers to use ruby 2.7; Added chruby to the servers and capistrano and ansible both work with it now.",
+"u": ["https://github.com/beeminder/beeminder/issues/3861",
+"https://github.com/beeminder/beeploy/issues/75",
+"https://twitter.com/beeminfra/status/1619100662725492737"],
+"t": "2023-01-27",
+}, { // ------------------------------------------------------------------------
+"x": "Newer version of rspec deprecated the \"should\" syntax, so had to do a gsub from \"should\" to \"expect\".",
+"u": ["https://twitter.com/beeminfra/status/1621668539328528384",
+      "https://github.com/beeminder/beeminder/issues/3859",
+      "https://github.com/beeminder/beeminder/pull/3860"],
+"t": "2023-02-03"
+}, { // ------------------------------------------------------------------------
+"x": "Upgrading ruby broke the background job that admins use to get a log of changes to your goal because that job was still trying to use the old ruby version.",
+"u": ["https://twitter.com/beeminfra/status/1624195020495675392",
+      "https://github.com/beeminder/beeminder/issues/3923",
+      "https://github.com/beeminder/beeminder/pull/3924"],
+"d": "2022-12-27",
+"t": "2023-02-10"
+}, { // ------------------------------------------------------------------------
+"x": "Announce in our Slack when the translog fetcher is done, so workerbees can do other stuff whilst it is fetching.",
+"u": ["https://github.com/beeminder/beeminder/issues/3925",
+"https://twitter.com/beeminfra/status/1628182443999232001"],
+"t": "2023-02-21",
+}, { // ------------------------------------------------------------------------
+"x": "Added a GH action to check for the string \"UVI\" in all our PRs to enforce that we explicitly describe the UVI/non status of a change.",
+"u": ["https://twitter.com/beeminfra/status/1630727828290560001"],
+"t": "2023-02-28"
+}, { // ------------------------------------------------------------------------
+"x": "Docker Compose uses a cache that GitHub Actions knows about; makes the quals check Action faster. The cache gets updated by a different Action.",
+"d": "2022-12-14",
+"u": ["https://twitter.com/beeminfra/status/1633252624509329408",
+"https://github.com/beeminder/beeminder/issues/3872",
+"https://github.com/beeminder/beeminder/issues/3877"]
+}, { // ------------------------------------------------------------------------
 }, /* ----------------------------------------------------------- end batch */ ]
 
 var staged = [ { // note: sub-entries not allowed here in staging
@@ -1523,7 +1576,6 @@ Tweak sudo for passenger restarts
 https://github.com/beeminder/beeploy/pull/94
 https://github.com/beeminder/beeploy/issues/77
 }, { // ------------------------------------------------------------------------
-rails 6 upgrade stuff
 }, { // ------------------------------------------------------------------------
 Pull out webpack-dev-server
 remove half-setup webpacker dev server
@@ -1548,13 +1600,6 @@ We should make sure the bee.sh checker on GitHub Actions is happy with any chang
 https://github.com/beeminder/beeminder/issues/3953
 https://github.com/beeminder/beeminder/issues/3940
 }, { // ------------------------------------------------------------------------
-Announce completion of trlog fetch in hornucopia for workerbees to see its done
-https://github.com/beeminder/beeminder/issues/3925
-}, { // ------------------------------------------------------------------------
-fixed blank trlogs since ruby 2.7.7 upgrade (trlog fetcher wasn't using correct ruby)
-https://github.com/beeminder/beeminder/issues/3923
-https://github.com/beeminder/beeminder/pull/3924
-}, { // ------------------------------------------------------------------------
 nearing Honeycomb column limit
 We are nearing our Honeycomb column limit. We need to cull the old unused ones. I was hoping to wait for when we can bring in OpenTelemetry to our Honeycomb stuff but it'll have to be sooner.
 https://github.com/beeminder/beeminder/issues/3910
@@ -1563,6 +1608,7 @@ Fix BSD Findism from bee.sh and lee.sh re maxdepth
 There's a line using find in bee.sh and lee.sh that causes problems with GNU find, and it's relatively complicated and could be expanded and made to work in both setups at the same time.
 https://github.com/beeminder/beeminder/pull/3907
 https://github.com/beeminder/beeminder/issues/3903
+https://github.com/beeminder/beeminder/issues/3878
 }, { // ------------------------------------------------------------------------
 rails 5.2=>6 upgrade followon: Dev env complains about bundle config underscores 
 https://github.com/beeminder/beeminder/issues/3891
@@ -1576,6 +1622,20 @@ https://github.com/beeminder/beeminder/pull/3882
 https://github.com/beeminder/beeminder/pull/3886
 https://github.com/beeminder/beeminder/pull/3899
 https://github.com/beeminder/beeminder/pull/3906
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
