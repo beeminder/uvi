@@ -463,99 +463,6 @@ const batch2023feb = [{
 
 const batch2023mar = [{
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, /* --------------------------------------------------------- end 2023mar */ ]
-const batch2023apr = [{
-}, { // ------------------------------------------------------------------------
-}, /* --------------------------------------------------------- end 2023apr */ ]
-const batch2023may = [{
-}, { // ------------------------------------------------------------------------
-}, /* --------------------------------------------------------- end 2023may */ ]
-const batch2023jun = [{
-}, { // ------------------------------------------------------------------------
-}, /* --------------------------------------------------------- end 2023jun */ ]
-const batch2023jul = [{
-}, { // ------------------------------------------------------------------------
-}, /* --------------------------------------------------------- end 2023jul */ ]
-const batch2023aug = [{
-}, { // ------------------------------------------------------------------------
-}, /* --------------------------------------------------------- end 2023aug */ ]
-const batch2023sep = [{
-}, { // ------------------------------------------------------------------------
-}, /* --------------------------------------------------------- end 2023sep */ ]
-const batch2023oct = [{
-}, { // ------------------------------------------------------------------------
-}, /* --------------------------------------------------------- end 2023oct */ ]
-const batch2023nov = [{
-}, { // ------------------------------------------------------------------------
-}, /* --------------------------------------------------------- end 2023nov */ ]
-const batch2023dec = [{
-}, { // ------------------------------------------------------------------------
-}, /* --------------------------------------------------------- end 2023dec */ ]
-
-const staged = [ {
-}, { // ------------------------------------------------------------------------
 "x": "Help docs: Added Google Pay and Apple Pay and 3D Secure to our article about payment methods",
 "u": ["https://twitter.com/beemuvi/status/1631096180141850624",
       "https://help.beeminder.com/article/27-what-payment-methods-are-available"],
@@ -620,10 +527,113 @@ const staged = [ {
 "u": ["https://twitter.com/beemuvi/status/1633269388433555457",
       "https://blog.beeminder.com/smooth/",
       "https://help.beeminder.com/article/105-graph-settings",
-      "https://github.com/beeminder/beeminder/issues/3530",
-      "https://github.com/beeminder/beeminder/pull/4136"],
+      "https://github.com/beeminder/beeminder/issues/3273",
+      "https://github.com/beeminder/beeminder/pull/4136",
+      "https://github.com/beeminder/beeminder/pull/4137"],
 "d": "2023-03-07",
 "t": "2023-03-07",
+}, { // ------------------------------------------------------------------------
+"x": "Oops, in the legend descriptions if you tried to click on one of the links, the whole description would switch state on you. #bugfix",
+"u": ["https://twitter.com/beemuvi/status/1633633638008115201",
+      "https://github.com/beeminder/beeminder/issues/3530",
+      "https://github.com/beeminder/beeminder/pull/4136"],
+"t": "2023-03-08",
+"c": "It still worked to click links, it would just also toggle the expanded/collapsed state.",
+}, { // ------------------------------------------------------------------------
+"x": "We made a bunch of copyedits and improvements to the graph legend (including a link to the glossary and marking the rosy line as deprecated)",
+"u": ["https://twitter.com/beemuvi/status/1633634149717397505",
+      "https://github.com/beeminder/beeminder/issues/3530",
+      "https://github.com/beeminder/beeminder/pull/4136"],
+"t": "2023-03-08",
+"c": "Say graph instead of goal whenever it makes sense to, prose-tightening, anti-scarequotes, elaborate hovertext",
+}, { // ------------------------------------------------------------------------
+"x": "Added Forfeit and TaskRatchet and Complice to our FAQ (in case you're looking for commitment devices without data and graphs)",
+"u": ["https://twitter.com/beemuvi/status/1633996475620524033",
+      "https://www.beeminder.com/faq",
+      "https://github.com/beeminder/beeminder/issues/4140"],
+"d": "2023-03-07",
+"t": "2023-03-09",
+"c": "And huge thanks to Forfeit.app for putting us in their FAQ",
+}, { // ------------------------------------------------------------------------
+"x": "Fixed inconsistent links in our graph legends; they all open in a new tab now. Also made more improvements to the explanations there.",
+"u": ["https://twitter.com/beemuvi/status/1633996660690026496",
+      "https://github.com/beeminder/beeminder/issues/4149"],
+"d": "2023-03-09",
+"t": "2023-03-09",
+}, { // ------------------------------------------------------------------------
+"x": "Regression from UVI#799 fixed: logging in with the wrong username/password actually tells you which was incorrect. #bugfix #zombie",
+"u": ["https://mobile.twitter.com/beemuvi/status/1634353395271356418",
+      "https://github.com/beeminder/beeminder/issues/4064"],
+"d": "2023-03-09",
+"t": "2023-03-10",
+"c": "At some point it started saying 'invalide username or password'. Black magic with Devise.",
+}, { // ------------------------------------------------------------------------
+"x": "Missed a couple spots in the graph legend: we now give the true story of the moving average and purple swath (IIR filter, etc) with links",
+"u": ["https://mobile.twitter.com/beemuvi/status/1634353436908212225",
+      "https://github.com/beeminder/beeminder/issues/4155"],
+"d": "2023-03-10",
+"t": "2023-03-10",
+}, { // ------------------------------------------------------------------------
+"x": "Formatting/layout improvements to the signup form, lots of fussing with the webcopy, improved accessibility by adding labels to CAPTCHA and intentions fields",
+"u": ["https://twitter.com/beemuvi/status/1635728473938628609",
+      "https://github.com/beeminder/beeminder/pull/4138"],
+"d": "2023-03-07",
+"t": "2023-03-14",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, /* --------------------------------------------------------- end 2023mar */ ]
+const batch2023apr = [{
+}, { // ------------------------------------------------------------------------
+}, /* --------------------------------------------------------- end 2023apr */ ]
+const batch2023may = [{
+}, { // ------------------------------------------------------------------------
+}, /* --------------------------------------------------------- end 2023may */ ]
+const batch2023jun = [{
+}, { // ------------------------------------------------------------------------
+}, /* --------------------------------------------------------- end 2023jun */ ]
+const batch2023jul = [{
+}, { // ------------------------------------------------------------------------
+}, /* --------------------------------------------------------- end 2023jul */ ]
+const batch2023aug = [{
+}, { // ------------------------------------------------------------------------
+}, /* --------------------------------------------------------- end 2023aug */ ]
+const batch2023sep = [{
+}, { // ------------------------------------------------------------------------
+}, /* --------------------------------------------------------- end 2023sep */ ]
+const batch2023oct = [{
+}, { // ------------------------------------------------------------------------
+}, /* --------------------------------------------------------- end 2023oct */ ]
+const batch2023nov = [{
+}, { // ------------------------------------------------------------------------
+}, /* --------------------------------------------------------- end 2023nov */ ]
+const batch2023dec = [{
+}, { // ------------------------------------------------------------------------
+}, /* --------------------------------------------------------- end 2023dec */ ]
+
+const staged = [ {
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 "x": "Adam's StoryGraph \"number of books\" metric",
@@ -675,11 +685,6 @@ TODO: review with @bsoule
 beebrain: say 'eke' instead of :) if you're at tfin but on the wrong side of the bright red line. probably should be a normal beemergency in that case
 also i guess now we sometimes say 'fin' and sometimes a happyface but i've forgotten why we do one vs the other... (and did we already tweet that?)
 https://github.com/beeminder/road/issues/172
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-[MINI/QUESTIONABLE]
-made the milkman group publicly viewable and show all goals, archived or not
-https://github.com/beeminder/beeminder/issues/2472
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 [HOLD: BEEDROID BUGFIX IN NEXT RELEASE: TIMEZONE SHORTNAMES NOW DST-SENSITIVE]
@@ -809,10 +814,12 @@ TODO: MAYBE DO https://github.com/beeminder/beeminder/issues/3443 BEFORE TWEETIN
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 READY TO DEPLOY:
+click-to-sort in megabreak
 https://github.com/beeminder/beeminder/issues/3465#issuecomment-1222662142
 damn, i lost track of when this went live and if we already tweeted enough about this (we do have 3 UVIs in a row for it in august 2022)
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
+[QUESTIONABLE]
 "x": "Better api simple 404 error response" [Questionable? it was giving a 404 so maybe it's not really differentiable before and after?]
 "c": "It seems like it errors while looking for the ErrorsController (to render a 404) and then ends up rendering a 404 anyway"
 https://github.com/beeminder/beeminder/issues/3567
@@ -837,40 +844,18 @@ SAVING UP FOR POST-6.2 BEEMIOS
   https://github.com/beeminder/BeeSwift/pull/366
 * Make the UI look a little cleaner by lining up various elements and making the spacing more consistent.
   https://github.com/beeminder/BeeSwift/pull/367
+BEEMIOS AGAIN
+Reduce wall clock time spend during background updates (PR #374)
+* iOS applies some complex logic to decide how often to allow apps to run background updates. The rules are opaque, but potentially include the app's energy use. To try to maximize the chance of beeminder waking up to update goals and badges, here we change background processesing to complete as quickly as possible
+* For background updates, do work as quickly as possible For healthkit observers report as soon as we are done, even on failure.
+* Stand hours autodata metric now accurate (as accurate as Apple is).
+* Gallery now sorted by countdown + pledge + goalname
+* Respect timey-ness: https://github.com/beeminder/BeeSwift/issues/233
 
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-adam called this stale resque workers thing an infra but maybe we could call it user-visible if we can find a way to describe it:
-Resque workers could be stale after deploy because our way of restarting them wasn't pointing at the PIDs of the workers themselves, but of the wrapper that started them up
-[TODO: why was this only a problem sometimes? why does restarting the wrapper sometimes restart them and sometimes not?]
-https://github.com/beeminder/beeminder/issues/3914
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-Questionable:
-we introduced a syntax error on Jan 5th that turned a "422" error to a "500" error response.
-questionable because it's an error that's returned to some javascript on our pages, so was already an error response and probably the difference in 422 vs 500 didn't change how it was handled / what it looked like from the user's POV.
-https://github.com/beeminder/beeminder/issues/3983
-https://github.com/beeminder/beeminder/pull/3984
-"d": "2023-01-07"
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-focusmate non-monotone something?
-https://github.com/beeminder/beeminder/issues/3614
-BEE: "sounds like this is a repeat of: http://beeminder.com/changelog#4361 (probably just add this url to the changelog entry for 4361)"
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-NIX: copy change addressing user confusion: "when you cross the line" => "when you're on the wrong side of the line when the deadline hits" (sadly much less pithyfiable)
-https://github.com/beeminder/beeminder/issues/3446
-https://github.com/beeminder/beeminder/pull/4036
-"d": "2023-01-24"
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-add "autocomplete" attributes to registration, password, signup forms to hint the browser how to help with autocomplete stuff it does (where it remembers your name and address and tries to help filling out forms)
-https://github.com/beeminder/beeminder/issues/4054
-https://github.com/beeminder/beeminder/pull/4055
-NOTE: this is not deployed yet
-give autocomplete attributes in forms
-this is probably a UVI. (but maybe warrants looking at how it is in different browsers etc before making broad declarations?)
+* This largely rewrites how we aggregate metrics for category data types. There is a base implementation, and an entirely separate implementation for time asleep.
+  https://github.com/beeminder/BeeSwift/pull/362
+  - For most metrics (Time In Bed, Meditation Minutes, etc), we now look at total non-overlapping time. This avoids double counting with multiple data sources.
+  - For sleep we do a complex attribution process looking at both asleep and awake samples, and disagreements between multiple data sources. This isn't quite right for cases with multiple inputs (e.g. Oura and Apple Watch) but is much closer than the previous implementation. The calculation function is moderately covered by unit tests.
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 BEEDROID
@@ -894,66 +879,59 @@ This is maybe a UVI?
 * UVI: get a little popup that says you can't add a widget before logging into Beeminder.
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
+adam called this stale resque workers thing an infra but maybe we could call it user-visible if we can find a way to describe it:
+Resque workers could be stale after deploy because our way of restarting them wasn't pointing at the PIDs of the workers themselves, but of the wrapper that started them up
+[TODO: why was this only a problem sometimes? why does restarting the wrapper sometimes restart them and sometimes not?]
+https://github.com/beeminder/beeminder/issues/3914
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+[QUESTIONABLE]
+we introduced a syntax error on Jan 5th that turned a "422" error to a "500" error response.
+questionable because it's an error that's returned to some javascript on our pages, so was already an error response and probably the difference in 422 vs 500 didn't change how it was handled / what it looked like from the user's POV.
+https://github.com/beeminder/beeminder/issues/3983
+https://github.com/beeminder/beeminder/pull/3984
+"d": "2023-01-07"
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+focusmate non-monotone something?
+https://github.com/beeminder/beeminder/issues/3614
+BEE: "sounds like this is a repeat of: http://beeminder.com/changelog#4361 (probably just add this url to the changelog entry for 4361)"
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+NIX: copy change addressing user confusion: "when you cross the line" => "when you're on the wrong side of the line when the deadline hits" (sadly much less pithyfiable)
+https://github.com/beeminder/beeminder/issues/3446
+https://github.com/beeminder/beeminder/pull/4036
+"d": "2023-01-24"
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+[NOT DEPLOYED YET]
+add "autocomplete" attributes to registration, password, signup forms to hint the browser how to help with autocomplete stuff it does (where it remembers your name and address and tries to help filling out forms)
+https://github.com/beeminder/beeminder/issues/4054
+https://github.com/beeminder/beeminder/pull/4055
+give autocomplete attributes in forms
+this is probably a UVI. (but maybe warrants looking at how it is in different browsers etc before making broad declarations?)
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-"x": "Oops, in the legend descriptions if you tried to click on one of the links, the whole description would switch state on you. #bugfix",
-https://github.com/beeminder/beeminder/issues/3530
-https://github.com/beeminder/beeminder/pull/4136
-
-
-* plus #bugfixed toggle on legend descriptions so that you can click links [it was toggling every time you clicked it, so that if you tried to click a link in the description it would close up again as you clicked it (but still launch the link in a blank tab)]
-X and uncommented / added jolly roger
-
-tweaks to language in graph legend:
-* Say graph instead of goal whenever it makes sense to
-* "safety buffer you have left on the goal." -> "safety buffer you have."
-* No scarequotes on "good" but it does want to be highlighted as jargon :thinking_face: let's make it a link to https://blog.beeminder.com/glossary/#g with the following as hovertext:
-* The bright red line separates the graph into two half-planes. If you end the day (whenever you set your deadline to) on the wrong side, you derail and have to pay Beeminder money.
-* "The safety amount is shown" -> "How safe you are is shown"
-* "Optimistic projection" -> "Optimistic projection (deprecated)"
-X "Polynomial fit" -> "Smoothed trend line" with link to https://blog.beeminder.com/smooth/
-
-https://github.com/beeminder/beeminder/issues/3530
-https://github.com/beeminder/beeminder/pull/4136
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-this is a UVI (though maybe not on its own. really I just missed a spot in the previous PRs).
-https://github.com/beeminder/beeminder/pull/4137
-missed two instances of "polynomial fit"
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-BEEMIOS
-Reduce wall clock time spend during background updates (PR #374)
-* iOS applies some complex logic to decide how often to allow apps to run background updates. The rules are opaque, but potentially include the app's energy use. To try to maximize the chance of beeminder waking up to update goals and badges, here we change background processesing to complete as quickly as possible
-* For background updates, do work as quickly as possible For healthkit observers report as soon as we are done, even on failure.
-* Stand hours autodata metric now accurate (as accurate as Apple is).
-* Gallery now sorted by countdown + pledge + goalname
-* Respect timey-ness: https://github.com/beeminder/BeeSwift/issues/233
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-forfeit / taskratchet / complice in the FAQ
-https://github.com/beeminder/beeminder/issues/4140
-"d": "2023-03-07",
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-changes (improvements?) to signup page: -- see PR for after picture
-* add section headings and separation
-* add formatting to the message for "intentions" field
 * add explanation about Stripe redirect & link to Stripe
-* add accessibility label to captcha & intentions fields
+https://github.com/beeminder/beeminder/issues/4120
 https://github.com/beeminder/beeminder/pull/4138
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
+placeholder text in intentinos field on signup form
+https://github.com/beeminder/beeminder/issues/4144
+"d": "2023-03-08",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
+MINI
+"x": "Fix some microcopy in the ratchet UI that erroneously referred to "the 'commit to' section" instead of the commitment dial. #bugfix
+"u": [
+      "https://github.com/beeminder/beeminder/issues/3915"],
+"d": "2023-03-11",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------

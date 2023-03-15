@@ -1545,6 +1545,11 @@ x: "Updated our Stripe gem, and updated the Stripe api version we are targeting 
 "https://github.com/beeminder/beeminder/issues/3872",
 "https://github.com/beeminder/beeminder/issues/3877"]
 }, { // ------------------------------------------------------------------------
+"x": "Upgraded our ruby container to fix an error re nokogiri in our docker dev environment.",
+"u": ["https://twitter.com/beeminfra/status/1635778309429813249",
+"https://github.com/beeminder/beeminder/issues/3953",
+"https://github.com/beeminder/beeminder/issues/3940"]
+}, { // ------------------------------------------------------------------------
 }, /* ----------------------------------------------------------- end batch */ ]
 
 var staged = [ { // note: sub-entries not allowed here in staging
@@ -1590,15 +1595,6 @@ https://github.com/beeminder/beeminder/pull/3967
 }, { // ------------------------------------------------------------------------
 Run bee.sh Github Actions checker when docker/ changes
 https://github.com/beeminder/beeminder/issues/3955
-}, { // ------------------------------------------------------------------------
-Upgrade ruby container in Docker dev environment: for "bee.sh init gives error about nokogiri"
-The ruby container is running ruby/ruby:2.7.7-buster. This is based on Debian buster, which is substantially older than Debian bullseye--the other provided base.
-
-Nokogiri can run fine on aarch64 systems as long as glibc is 2.29 or newer--which it is in bullseye, but not in buster. (See #3940)
-
-We should make sure the bee.sh checker on GitHub Actions is happy with any changes we make to the Dockerfile. (it is!)
-https://github.com/beeminder/beeminder/issues/3953
-https://github.com/beeminder/beeminder/issues/3940
 }, { // ------------------------------------------------------------------------
 nearing Honeycomb column limit
 We are nearing our Honeycomb column limit. We need to cull the old unused ones. I was hoping to wait for when we can bring in OpenTelemetry to our Honeycomb stuff but it'll have to be sooner.
