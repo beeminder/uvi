@@ -1550,6 +1550,95 @@ x: "Updated our Stripe gem, and updated the Stripe api version we are targeting 
 "https://github.com/beeminder/beeminder/issues/3953",
 "https://github.com/beeminder/beeminder/issues/3940"]
 }, { // ------------------------------------------------------------------------
+"x": "Github Actions needs development keys; also run actions when docker directory changes",
+"u": [
+      "https://twitter.com/beeminfra/status/1638298813747331073",
+      "https://github.com/beeminder/beeminder/issues/3881",
+      "https://github.com/beeminder/beeminder/pull/3882",
+      "https://github.com/beeminder/beeminder/pull/3886",
+      "https://github.com/beeminder/beeminder/pull/3899",
+      "https://github.com/beeminder/beeminder/pull/3906",
+      "https://github.com/beeminder/beeminder/issues/3955"],
+"d": "2023-01-02",
+"t": "2023-03-21",
+}, { // ------------------------------------------------------------------------
+"x": "Honeycomb maintenance: we needed to cull old unused columns because we were nearing the column limit.",
+"u": ["https://github.com/beeminder/beeminder/issues/3910",
+"https://twitter.com/beeminfra/status/1645576471392690177"],
+"t": "2023-04-10"
+}, { // ------------------------------------------------------------------------
+"x": "Added some icons to a part of the admin section to help differentiate a list of links.",
+"u": ["https://github.com/beeminder/beeminder/pull/4203",
+"https://twitter.com/beeminfra/status/1648107512087060485"],
+"t": "2023-04-17"
+}, { // ------------------------------------------------------------------------
+"x": "More work done on moving our minitest quals over into rspec",
+"u": ["https://twitter.com/beeminfra/status/1650626777520431104",
+"https://github.com/beeminder/beeminder/pull/4193",
+"https://github.com/beeminder/beeminder/pull/4157",
+"https://github.com/beeminder/beeminder/pull/4100",
+"https://github.com/beeminder/beeminder/issues/3503"],
+"d": "2023-02-16",
+"t": "2023-04-24",
+}, { // ------------------------------------------------------------------------
+"x": "Fix BSD Findism re maxdepth from dev scripts that was causing problems with GNU find, causing problems with using the dev env scripts on Linux machines.",
+"u": ["https://twitter.com/beeminfra/status/1653148745138319360",
+"https://github.com/beeminder/beeminder/pull/3907",
+"https://github.com/beeminder/beeminder/issues/3903",
+"https://github.com/beeminder/beeminder/issues/3878"],
+"t": "2023-05-01"
+}, { // ------------------------------------------------------------------------
+"x": "Ansible nginx & passenger stuff: Tweak restarts, update the load balancer config, reload after certs are updated etc.",
+"u": ["https://twitter.com/beeminfra/status/1655702379415879682",
+"https://github.com/beeminder/beeploy/pull/82",
+"https://github.com/beeminder/beeploy/pull/94",
+"https://github.com/beeminder/beeploy/issues/77",
+"https://github.com/beeminder/beeploy/pull/88",
+"https://github.com/beeminder/beeploy/issues/87"],
+"t": "2023-05-08"
+}, { // ------------------------------------------------------------------------
+"x": "Fixed a 500 error when admins try to visit certain meta goals because of buginess in the helper for grabbing a goal's latest charge",
+"u": ["https://twitter.com/beeminfra/status/1658258013545975808",
+"https://github.com/beeminder/beeminder/issues/3966",
+"https://github.com/beeminder/beeminder/pull/3967"],
+"t": "2023-05-15"
+}, { // ------------------------------------------------------------------------
+"x": "Fixed a complaint in the dev env after our upgrade from Rails 5.2=>6 by swapping some hyphens for underscores in our bundler config.",
+"u": ["https://github.com/beeminder/beeminder/issues/3891",
+"https://twitter.com/beeminfra/status/1660778642224594946"],
+"t": "2023-05-22"
+}, { // ------------------------------------------------------------------------
+"x": "Improved rack attack docs & quals, and adjusted throttle rates; also split api & web auth throttles.",
+"u": ["https://github.com/beeminder/beeminder/pull/4033",
+"https://twitter.com/beeminfra/status/1663307235399958529"],
+"t": "2023-05-29"
+}, { // ------------------------------------------------------------------------
+"x": "Added a gissue template for autodata integrations which includes the pre-launch checklist already loaded up for you.",
+"u": ["https://twitter.com/beeminfra/status/1665832805719490560",
+      "https://github.com/beeminder/beeminder/pull/4275",
+],
+"d": "2023-05-30",
+"t": "2023-06-05",
+"c": "this was one small step toward not forgetting about integration help docs in the future."
+}, { // ------------------------------------------------------------------------
+"x": "We now automatically capture info about flaky quals from github actions, so we can keep an eye on problem quals.",
+"u": ["https://twitter.com/beeminfra/status/1668390353324605440",
+"https://github.com/beeminder/beeminder/issues/3672",
+"https://github.com/beeminder/beeminder/pull/4285"],
+"t": "2023-06-12",
+}, { // ------------------------------------------------------------------------
+"x": "Clean up Rails backtraces by silencing output from some noisy frameworks & libraries.",
+"u": ["https://twitter.com/beeminfra/status/1677802460243709952",
+"https://github.com/beeminder/beeminder/pull/4331",
+"https://github.com/beeminder/beeminder/issues/2856"],
+"t": "2023-07-08"
+}, { // ------------------------------------------------------------------------
+"x": "Made deploy more robust, fixing a heisenbug with docker shared directory permissions.",
+"u": ["https://github.com/beeminder/beeminder/issues/1956",
+"https://github.com/beeminder/beeminder/pull/4243",
+"https://twitter.com/beeminfra/status/1681803027282554881"]
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, /* ----------------------------------------------------------- end batch */ ]
 
 var staged = [ { // note: sub-entries not allowed here in staging
@@ -1569,17 +1658,6 @@ https://github.com/beeminder/beeminder/commit/
 1. Add lighthouseci Ansible role #97: https://github.com/beeminder/beeploy/pull/97
 "d": "2022-08-01"
 }, { // ------------------------------------------------------------------------
-## ansible nginx related stuff:
-Reload a running nginx after certs are updated; I also added a playbook for just updating the certificates.
-https://github.com/beeminder/beeploy/pull/88
-https://github.com/beeminder/beeploy/issues/87
-}, { // ------------------------------------------------------------------------
-Update load balancer nginx config 
-https://github.com/beeminder/beeploy/pull/82
-}, { // ------------------------------------------------------------------------
-Tweak sudo for passenger restarts
-https://github.com/beeminder/beeploy/pull/94
-https://github.com/beeminder/beeploy/issues/77
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 Pull out webpack-dev-server
@@ -1589,50 +1667,35 @@ https://github.com/beeminder/beeminder/issues/3972
 Clean up babel warnings (something something about translating es6 to es5, but we don't really care)
 https://github.com/beeminder/beeminder/issues/3968
 }, { // ------------------------------------------------------------------------
-500 error when admin visits certain meta goals
-https://github.com/beeminder/beeminder/issues/3966
-https://github.com/beeminder/beeminder/pull/3967
-}, { // ------------------------------------------------------------------------
-Run bee.sh Github Actions checker when docker/ changes
-https://github.com/beeminder/beeminder/issues/3955
-}, { // ------------------------------------------------------------------------
-nearing Honeycomb column limit
-We are nearing our Honeycomb column limit. We need to cull the old unused ones. I was hoping to wait for when we can bring in OpenTelemetry to our Honeycomb stuff but it'll have to be sooner.
-https://github.com/beeminder/beeminder/issues/3910
-}, { // ------------------------------------------------------------------------
-Fix BSD Findism from bee.sh and lee.sh re maxdepth 
-There's a line using find in bee.sh and lee.sh that causes problems with GNU find, and it's relatively complicated and could be expanded and made to work in both setups at the same time.
-https://github.com/beeminder/beeminder/pull/3907
-https://github.com/beeminder/beeminder/issues/3903
-https://github.com/beeminder/beeminder/issues/3878
-}, { // ------------------------------------------------------------------------
-rails 5.2=>6 upgrade followon: Dev env complains about bundle config underscores 
-https://github.com/beeminder/beeminder/issues/3891
-}, { // ------------------------------------------------------------------------
-beesh.yml github actions job needs development keys
-When we added dev and test environment keys, I did not check that the beesh.yml scheduled job had everything it needed.
 
-It needs the development keys since it runs bee.sh init.
-https://github.com/beeminder/beeminder/issues/3881
-https://github.com/beeminder/beeminder/pull/3882
-https://github.com/beeminder/beeminder/pull/3886
-https://github.com/beeminder/beeminder/pull/3899
-https://github.com/beeminder/beeminder/pull/3906
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
+fix docker cache in github
+https://github.com/beeminder/beeminder/pull/4210
+https://github.com/beeminder/beeminder/issues/4209
 }, { // ------------------------------------------------------------------------
+cleanup in README
+https://github.com/beeminder/beeminder/issues/3902
+https://github.com/beeminder/beeminder/pull/4282
 }, { // ------------------------------------------------------------------------
+qual for android-specific notifications page
+https://github.com/beeminder/beeminder/issues/4109
+https://github.com/beeminder/beeminder/pull/4280
 }, { // ------------------------------------------------------------------------
+make it easier to see which qual failed in gh actions
+https://github.com/beeminder/beeminder/issues/4261
+https://github.com/beeminder/beeminder/pull/4279
 }, { // ------------------------------------------------------------------------
+adjusted down the volume of some airhorns re change in double derail behavior
+https://github.com/beeminder/beeminder/issues/3285
+https://github.com/beeminder/beeminder/pull/4277
+MOAR moving minitests to specs -- we have a beeminder goal to make progress on this. it's getting very close to done. [perhaps just wait on the last two or three files?]
+https://github.com/beeminder/beeminder/pull/4242
+https://github.com/beeminder/beeminder/pull/4273
+https://github.com/beeminder/beeminder/pull/4274
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
+simplified & removed some logic from old landing pages which are no longer active. Now they're purely for show. [ugly ass show]
+https://github.com/beeminder/beeminder/pull/4235
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
