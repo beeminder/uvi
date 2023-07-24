@@ -179,7 +179,7 @@ function numbum(uvi) {
   } else if (uvi.n === false) {       // explicit false means don't increment it
     uvi.n = n
   } else if (!isnum(uvi.n)) {
-    console.log(`ERROR: Invalid value for n: ${uvi.n}`)
+    console.log(`ERROR: Invalid value for n: ${uvi.n}, explicit trues verboten`)
   } else if (uvi.n === n+1) {
     console.log(`Superfluously set n=${uvi.n} but could've let it default`)
     n += 1
