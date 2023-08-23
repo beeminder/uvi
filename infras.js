@@ -1638,6 +1638,32 @@ x: "Updated our Stripe gem, and updated the Stripe api version we are targeting 
 "https://github.com/beeminder/beeminder/pull/4243",
 "https://twitter.com/beeminfra/status/1681803027282554881"]
 }, { // ------------------------------------------------------------------------
+"x": "Make it easier to see which qual failed in gh actions.",
+"u": ["https://twitter.com/beeminfra/status/1684305559909175297",
+"https://github.com/beeminder/beeminder/issues/4261",
+"https://github.com/beeminder/beeminder/pull/4279"],
+"t": "2023-07-26"
+}, { // ------------------------------------------------------------------------
+"x": "Fixed docker cache in github; did a cleanup in README",
+"u": ["https://twitter.com/beeminfra/status/1686849093304451072",
+"https://github.com/beeminder/beeminder/pull/4210",
+"https://github.com/beeminder/beeminder/issues/4209",
+"https://github.com/beeminder/beeminder/issues/3902",
+"https://github.com/beeminder/beeminder/pull/4282"],
+}, { // ------------------------------------------------------------------------
+"x": "Quals for android-specific notifications page, and cleaned up Babel warnings about translating es6 to es5 from quals",
+"u": ["https://twitter.com/beeminfra/status/1689416849170300936",
+"https://github.com/beeminder/beeminder/issues/4109",
+"https://github.com/beeminder/beeminder/issues/3968",
+"https://github.com/beeminder/beeminder/pull/4280"],
+"t": "2023-08-09"
+}, { // ------------------------------------------------------------------------
+"x": "Decreased the volume of some airlerts re a change in double derail behavior.",
+"u": ["https://twitter.com/beeminfra/status/1691938736207212923",
+"https://github.com/beeminder/beeminder/issues/3285",
+"https://github.com/beeminder/beeminder/pull/4277"],
+"t": "2023-08-16"
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, /* ----------------------------------------------------------- end batch */ ]
 
@@ -1664,31 +1690,11 @@ Pull out webpack-dev-server
 remove half-setup webpacker dev server
 https://github.com/beeminder/beeminder/issues/3972
 }, { // ------------------------------------------------------------------------
-Clean up babel warnings (something something about translating es6 to es5, but we don't really care)
-https://github.com/beeminder/beeminder/issues/3968
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-fix docker cache in github
-https://github.com/beeminder/beeminder/pull/4210
-https://github.com/beeminder/beeminder/issues/4209
-}, { // ------------------------------------------------------------------------
-cleanup in README
-https://github.com/beeminder/beeminder/issues/3902
-https://github.com/beeminder/beeminder/pull/4282
-}, { // ------------------------------------------------------------------------
-qual for android-specific notifications page
-https://github.com/beeminder/beeminder/issues/4109
-https://github.com/beeminder/beeminder/pull/4280
-}, { // ------------------------------------------------------------------------
-make it easier to see which qual failed in gh actions
-https://github.com/beeminder/beeminder/issues/4261
-https://github.com/beeminder/beeminder/pull/4279
-}, { // ------------------------------------------------------------------------
-adjusted down the volume of some airhorns re change in double derail behavior
-https://github.com/beeminder/beeminder/issues/3285
-https://github.com/beeminder/beeminder/pull/4277
 MOAR moving minitests to specs -- we have a beeminder goal to make progress on this. it's getting very close to done. [perhaps just wait on the last two or three files?]
 https://github.com/beeminder/beeminder/pull/4242
 https://github.com/beeminder/beeminder/pull/4273
