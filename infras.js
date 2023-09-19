@@ -1664,6 +1664,31 @@ x: "Updated our Stripe gem, and updated the Stripe api version we are targeting 
 "https://github.com/beeminder/beeminder/pull/4277"],
 "t": "2023-08-16"
 }, { // ------------------------------------------------------------------------
+"x": "Fixed some date-related quals to adjust timezones and do time travel in the correct order for the desired results.",
+"u": ["https://twitter.com/beeminfra/status/1694492596801073286",
+      "https://github.com/beeminder/beeminder/pull/4434"],
+"t": "2023-08-23",
+"d": "2023-08-17"
+}, { // ------------------------------------------------------------------------
+"x": "Upgraded to Rails 6.1! We're the tortoise in the upgrade-all-the-things race that is life.",
+"u": ["https://twitter.com/beeminfra/status/1697030399371948537",
+"https://github.com/beeminder/beeminder/pull/4391"],
+"d": "2023-08-02",
+"t": "2023-08-30"
+}, { // ------------------------------------------------------------------------
+"x": "Moved factories from minitest into rspec, also bb_test_helper, and all the VCR stuff. We're within 400 lines of the goal: all specs, no minitest.",
+"u": ["https://twitter.com/beeminfra/status/1699559638709227780",
+"https://github.com/beeminder/beeminder/pull/4242",
+"https://github.com/beeminder/beeminder/pull/4273",
+"https://github.com/beeminder/beeminder/pull/4274"],
+"t": "2023-09-06"
+}, { // ------------------------------------------------------------------------
+"x": "Fixed some airlerts that inverted code & subject, uglying up the logs.", 
+"u": ["https://twitter.com/beeminfra/status/1702090890557415728",
+"https://github.com/beeminder/beeminder/pull/4459"],
+"d": "",
+"t": "2023-09-13",
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, /* ----------------------------------------------------------- end batch */ ]
 
@@ -1686,23 +1711,29 @@ https://github.com/beeminder/beeminder/commit/
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-Pull out webpack-dev-server
-remove half-setup webpacker dev server
-https://github.com/beeminder/beeminder/issues/3972
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+simplified & removed some logic from old landing pages which are no longer active. Now they're purely for show. [ugly ass show]
+https://github.com/beeminder/beeminder/pull/4235
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+rewrote blog scraping scripts for keeping the frontpage "latest from the blog" section up to date
+https://github.com/beeminder/beeminder/pull/4451
+"d": "2023-08-24"
+}, { // ------------------------------------------------------------------------
+captcha tweaking stuff for recaptcha? other registration card testing related stuff? or do we just not want to mention that?
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 
-MOAR moving minitests to specs -- we have a beeminder goal to make progress on this. it's getting very close to done. [perhaps just wait on the last two or three files?]
-https://github.com/beeminder/beeminder/pull/4242
-https://github.com/beeminder/beeminder/pull/4273
-https://github.com/beeminder/beeminder/pull/4274
-}, { // ------------------------------------------------------------------------
-simplified & removed some logic from old landing pages which are no longer active. Now they're purely for show. [ugly ass show]
-https://github.com/beeminder/beeminder/pull/4235
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
 */
