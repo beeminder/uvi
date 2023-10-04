@@ -1430,9 +1430,10 @@ const batch2023jul = [{
 "s": true,
 "x": "Finally, version 6.3 added various new Apple Health metrics users have requested. fireworks-emoji!",
 "u": ["https://twitter.com/beemuvi/status/1679264275553226752",
-      "https://github.com/beeminder/BeeSwift/issues/338"],
+      "https://github.com/beeminder/BeeSwift/issues/338",
+      "https://github.com/beeminder/BeeSwift/pull/401"],
 "t": "2023-07-12",
-"c": "I think this includes Standing Hours?",
+"c": "I think this includes Standing Hours and Workout Minutes?",
 }, { // ------------------------------------------------------------------------
 "s": true,
 "x": "Finally-finally, we used to sometimes DOS ourselves by making like 90 requests/second to Beeminder; now we don't! Phew.",
@@ -1945,64 +1946,6 @@ const batch2023sep = [{
 "d": "2023-09-04",
 "t": "2023-09-04",
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, /* --------------------------------------------------------- end 2023sep */ ]
-const batch2023oct = [{
-}, { // ------------------------------------------------------------------------
-}, /* --------------------------------------------------------- end 2023oct */ ]
-const batch2023nov = [{
-}, { // ------------------------------------------------------------------------
-}, /* --------------------------------------------------------- end 2023nov */ ]
-const batch2023dec = [{
-}, { // ------------------------------------------------------------------------
-}, /* --------------------------------------------------------- end 2023dec */ ]
-
-const staged = [ {
-}, { // ------------------------------------------------------------------------
 "x": "BeemiOS now ignores data from before your goal was created and syncs more than just the current day automatically (as of version 6.4 or maybe earlier)",
 "u": ["https://twitter.com/beemuvi/status/1698846974295069009",
       "https://github.com/beeminder/beeswift"],
@@ -2054,6 +1997,200 @@ const staged = [ {
 "d": "2023-09-01",
 "t": "2023-09-12",
 "c": "The workaround is to not do confmail for HEAD requests",
+}, { // ------------------------------------------------------------------------
+"x": "Follow-on #bugfix's from the blog redesign: reinstated some missing images and two missing posts",
+"u": ["https://twitter.com/beemuvi/status/1702109523572633931",
+      "https://github.com/beeminder/blog/issues/361"],
+"d": "2023-09-05",
+"t": "2023-09-13",
+}, { // ------------------------------------------------------------------------
+"x": "Also fixed the subscribe-by-email link in the header of the blog",
+"u": ["https://twitter.com/beemuvi/status/1702109622201700365",
+      "https://github.com/beeminder/blog/issues/307",
+      "https://github.com/beeminder/beeminder/issues/4102"],
+"t": "2023-09-13",
+}, { // ------------------------------------------------------------------------
+"x": "Added a warning to the API docs that the `mathishard` goal attribute can be null when the goal has an error (typically something like \"no datapoints\")",
+"u": ["https://twitter.com/beemuvi/status/1702468983923032303",
+      "https://github.com/beeminder/beeminder/issues/4414",
+      "https://github.com/beeminder/apidocs/commit/5bbe72c36e344bb3b97a571bbf0dcc65599892b0"],
+"d": "2023-09-13",
+"t": "2023-09-14",
+}, { // ------------------------------------------------------------------------
+"x": "Soft launch of the Readwise Reader autodata integration! Beta users welcome at beeminder dot com slash readwisereader!",
+"u": ["https://twitter.com/beemuvi/status/1702469075325329538",
+      "https://forum.beeminder.com/t/integration-request-readwise-reader/10710",
+      "https://github.com/beeminder/beeminder/issues/4428"],
+"d": "2023-09-12",
+"t": "2023-09-14",
+}, { // ------------------------------------------------------------------------
+"x": "Help docs: New FAQs in the TryDeepWork autodata integration article, plus minor clarifications/tweaks in 7 other autodata articles",
+"u": ["https://twitter.com/beemuvi/status/1702825391621022202",
+      "https://help.beeminder.com/article/340-trydeepwork",
+      "https://help.beeminder.com/article/84-sleep-as-android",
+      "https://help.beeminder.com/article/112-sms",
+      "https://help.beeminder.com/article/281-strava",
+      "https://help.beeminder.com/article/289-taskratchet",
+      "https://help.beeminder.com/article/300-the-storygraph",
+      "https://help.beeminder.com/article/79-todoist",
+      "https://help.beeminder.com/article/78-trello"],
+"d": "2023-09-15",
+"t": "2023-09-15",
+}, { // ------------------------------------------------------------------------
+"x": "The Pledge / [do thing] / Track boxes on autodata landing pages had some messed up CSS that made them different heights. #bugfix #zombie",
+"u": ["https://twitter.com/beemuvi/status/1703919445885022506",
+      "https://github.com/beeminder/beeminder/issues/4481",
+      "https://github.com/beeminder/beeminder/pull/4479"],
+"d": "2023-09-15",
+"t": "2023-09-18",
+"c": "Probably from one of the Rails upgrades?",
+}, { // ------------------------------------------------------------------------
+"x": "While we were at it we made other spacing tweaks to the autodata landing pages and fixed a typo in the anchor link on the BaaS landing page",
+"u": ["https://twitter.com/beemuvi/status/1704061624322338880",
+      "https://github.com/beeminder/beeminder/issues/4481",
+      "https://github.com/beeminder/beeminder/pull/4479"],
+"d": "2023-09-15",
+"t": "2023-09-19",
+}, { // ------------------------------------------------------------------------
+"x": "Made the autodata landing page boxes shrink consistently: width distributed evenly betwixt them, layout switches to stacked boxes at same breakpoint",
+"u": ["https://twitter.com/beemuvi/status/1704065641949565202",
+      "https://github.com/beeminder/beeminder/issues/4481",
+      "https://github.com/beeminder/beeminder/pull/4479"],
+"d": "2023-09-15",
+"t": "2023-09-19",
+"c": "Mobile-friendliness / responsive design. The amount that the boxes shrank at smaller screen sizes was inconsistent -- controlled by the width of the image in the box -- so e.g. on the Fitbit page the middle box shrank much more than the flanking boxes. Also because of the variable width between the boxes, sometimes one box would get shoved down onto a second line, while two boxes remained, instead of predictably switching to a stacked layout as the screen size shrank.",
+}, { // ------------------------------------------------------------------------
+"x": "Help docs: Brought the Twitter integration article up to spec for the new Muskiness (only minding your own tweets) plus tweaks for URLminder, Withings, & Zapier",
+"u": ["https://twitter.com/beemuvi/status/1705008004494512494",
+      "https://help.beeminder.com/article/293-twitter",
+      "https://help.beeminder.com/article/88-urlminder",
+      "https://help.beeminder.com/article/90-withings",
+      "https://help.beeminder.com/article/87-zapier"],
+"d": "2023-09-21",
+"t": "2023-09-21",
+}, { // ------------------------------------------------------------------------
+"x": "Fixed a CSS error on the blog that made things misaligned when viewing by year (plus a few other bugs users caught that we've now paid honey bounties for!)",
+"u": ["https://twitter.com/beemuvi/status/1705274147851706735",
+      "https://github.com/beeminder/blog/issues/358"],
+"d": "2023-09-17",
+"t": "2023-09-22",
+}, { // ------------------------------------------------------------------------
+"x": "Help docs: Clarified that quit/archived goals keep their URLs & explained more about restarting archived goals in the articles about archiving & quitting goals",
+"u": ["https://twitter.com/beemuvi/status/1706452651884568956",
+      "https://help.beeminder.com/article/44-how-do-i-quit-a-goal",
+      "https://help.beeminder.com/article/46-what-happens-to-an-archived-goal"],
+"d": "2023-09-25",
+"t": "2023-09-25",
+}, { // ------------------------------------------------------------------------
+"x": "We updated our integrations gallery and landing page for Toggl's rebranding to Toggl Track",
+"u": ["https://twitter.com/beemuvi/status/1706452860828086488",
+      "https://github.com/beeminder/beeminder/issues/4458"],
+"d": "2023-09-25",
+"t": "2023-09-25",
+}, { // ------------------------------------------------------------------------
+"x": "We improved the social proof section of the signup page, showing off what Scott Alexander (@slatestarcodex) thinks of us, as well as the internet at large",
+"u": ["https://twitter.com/beemuvi/status/1706798094795644951",
+      "https://github.com/beeminder/beeminder/issues/4127"],
+"d": "2023-09-26",
+"c": "We're linking to Astral Codex Ten and to google.com/search?q=Beeminder. Also dropped TechCrunch.",
+}, { // ------------------------------------------------------------------------
+"x": "Also the responsive resizing of the different sections on the signup page is smoother now and they remain consistent widths + better distribution of whitespace",
+"u": ["https://twitter.com/beemuvi/status/1706818821045317892",
+      "https://github.com/beeminder/beeminder/issues/4127",
+      "https://github.com/beeminder/beeminder/commit/f30369a123435b42364ec065420c7bb0602a48b7"],
+"d": "2023-09-26",
+"t": "2023-09-26",
+}, { // ------------------------------------------------------------------------
+"x": "Help docs: Lots of copy changes and reorganizing of the \"How do I delete a goal?\" article, including explaining archiving, what you really wanna know, up front",
+"u": ["https://twitter.com/beemuvi/status/1707173992761880613",
+      "https://help.beeminder.com/article/47-how-do-i-delete-a-goal"],
+"d": "2023-09-26",
+"t": "2023-09-27",
+}, { // ------------------------------------------------------------------------
+"x": "Help docs: Updated the Toggl Track autodata integration article for their new branding and reorganized it, removing unnecessary things, adding caveats, etc",
+"u": ["https://twitter.com/beemuvi/status/1707537589371322599",
+      "https://help.beeminder.com/article/155-toggl"],
+"d": "2023-09-28",
+"t": "2023-09-28",
+}, { // ------------------------------------------------------------------------
+"x": "More signup page fiddling: we swapped the oAuth & social proof sections and added some color for contrast / visual division of space",
+"u": ["https://twitter.com/beemuvi/status/1707543353527861265",
+      "https://github.com/beeminder/beeminder/issues/4098",
+      "https://github.com/beeminder/beeminder/pull/4504"],
+"d": "2023-09-28",
+"t": "2023-09-28",
+}, { // ------------------------------------------------------------------------
+"x": "As more enticement to get through signup, we added the whole list of autodata integrations to the sidebar of the signup page",
+"u": ["https://twitter.com/beemuvi/status/1707543542447686094",
+      "https://github.com/beeminder/beeminder/issues/4098",
+      "https://github.com/beeminder/beeminder/pull/4504"],
+"d": "2023-09-28",
+"t": "2023-09-28",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, /* --------------------------------------------------------- end 2023sep */ ]
+const batch2023oct = [{
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, /* --------------------------------------------------------- end 2023oct */ ]
+const batch2023nov = [{
+}, { // ------------------------------------------------------------------------
+}, /* --------------------------------------------------------- end 2023nov */ ]
+const batch2023dec = [{
+}, { // ------------------------------------------------------------------------
+}, /* --------------------------------------------------------- end 2023dec */ ]
+
+const staged = [ {
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -2203,13 +2340,6 @@ https://github.com/beeminder/beeminder/pull/3568
 "d": "2022-09-13"
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-[SCHEDEL]
-not a full UVI since we've already tweeted it more than once and embarrassingly keep missing spots of edit-warring over it:
-MINI: change "goal name" to "goalname" in a couple more places
-https://github.com/beeminder/beeminder/issues/3782
-"d": "2022-10-27",
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
 SAVING UP FOR POST-6.2 BEEMIOS
 * https://github.com/beeminder/BeeSwift/pull/330 -- possibly made autofetching faster or more reliable or less resource-intensive?
 * 2022-12-21: https://github.com/beeminder/BeeSwift/pull/359 -- iOS 16 introduces support for more granular sleep tracking, with different levels of sleep. Apple Watch records this data when worn during sleep. These levels do not match the filter we were using for sleep analysis data, so Apple Watch users would not see any sleep data. Here we also count these periods as sleeping on new iOS.
@@ -2284,6 +2414,7 @@ https://github.com/beeminder/beeminder/issues/4107
 "d": "2023-03-23",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 OTHER BEEDROID 5 THINGS:
 https://github.com/beeminder/beedroid/issues/217 -- Expand abbreviations in Android widget picker
 https://github.com/beeminder/beedroid/issues/217 -- Support dynamic widget previews so the preview is closer to what will be placed on your launcher
@@ -2302,77 +2433,76 @@ adam assigned this to dreev for UVI but maybe it's covered in beedroid uvis?
 https://github.com/beeminder/beeminder/issues/896
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-BEEMIOS 6.4 STILL IN BETA:
-* Adds a new metric for workout minutes, similar to other Apple Health metrics. Implementation is slightly different due to the different health type.
-  https://github.com/beeminder/BeeSwift/pull/401
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-READWISE READER INTEGRATION
-https://github.com/beeminder/beeminder/pull/4429
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-old: better 500-error errorcopy (but a question about user-visibility)
-[i can't find that we tweeted about this already, but as it is from 2022, I don't feel bad saying it's too late and too lame.]
-https://github.com/beeminder/beeminder/issues/2609
-https://github.com/beeminder/beeminder/commit/7076559aa625fe2e51c2af5082f5d56dc5cc2b7c
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-"x": "Follow-on #bugfix's from the blog redesign: reinstated some missing images and two missing posts",
-"u": ["https://twitter.com/beemuvi/status/1702109523572633931",
-      "https://github.com/beeminder/blog/issues/361"],
-"d": "2023-09-05",
-"t": "2023-09-13",
-}, { // ------------------------------------------------------------------------
-"x": "Also fixed the subscribe-by-email link in the header of the blog",
-"u": ["https://twitter.com/beemuvi/status/1702109622201700365",
-      "https://github.com/beeminder/beeminder/issues/4102"],
-"t": "2023-09-13",
-}, { // ------------------------------------------------------------------------
-"x": "Added a warning to the API docs that the `mathishard` goal attribute can be null when the goal has an error (typically something like "no datapoints")
-https://twitter.com/beemuvi/status/1702468983923032303
-https://github.com/beeminder/beeminder/issues/4414
-https://github.com/beeminder/apidocs/commit/5bbe72c36e344bb3b97a571bbf0dcc65599892b0
-"d": "2023-09-13",
-"t": "2023-09-14",
-}, { // ------------------------------------------------------------------------
-"x": "Soft launch of the Readwise Reader autodata integration! Beta users welcome at beeminder dot com slash readwisereader!"
-https://twitter.com/beemuvi/status/1702469075325329538
-https://forum.beeminder.com/t/integration-request-readwise-reader/10710
-TODOBEE: gissue
-"d": "2023-09-12",
-"t": "2023-09-14",
-}, { // ------------------------------------------------------------------------
-"x": "Help docs: New FAQs in the TryDeepWork autodata integration article, plus minor clarifications/tweaks in 7 other autodata articles",
-"u": ["https://twitter.com/beemuvi/status/1702825391621022202",
-      "https://help.beeminder.com/article/340-trydeepwork",
-      "https://help.beeminder.com/article/84-sleep-as-android",
-      "https://help.beeminder.com/article/112-sms",
-      "https://help.beeminder.com/article/281-strava",
-      "https://help.beeminder.com/article/289-taskratchet",
-      "https://help.beeminder.com/article/300-the-storygraph",
-      "https://help.beeminder.com/article/79-todoist",
-      "https://help.beeminder.com/article/78-trello"],
-"d": "2023-09-15",
-"t": "2023-09-15",
-}, { // ------------------------------------------------------------------------
-"x": "The Pledge / [do thing] / Track boxes on autodata landing pages had some messed up CSS that made them different heights. #bugfix #zombie",
-"u": ["https://twitter.com/beemuvi/status/1703919445885022506",
-      "https://github.com/beeminder/beeminder/issues/4481",
-      "https://github.com/beeminder/beeminder/pull/4479"],
-"d": TODOBEE
-"t": "2023-09-18",
-"c": "Probably from one of the Rails upgrades?",
-}, { // ------------------------------------------------------------------------
-"x": "Other autodata landing page improvements: more spacing tweaks, mobile-friendlier, fix typo'd anchor link on the BaaS landing page",
-"u": [
-      "https://github.com/beeminder/beeminder/issues/4481",
-      "https://github.com/beeminder/beeminder/pull/4479"],
-"d": TODOBEE
-ALSO:
-* fixed some spacing issues with the box headers (e.g. "progress" on lichess landing)
-* improved responsiveness of all landing pages
-* fixed a bug with the anchor link on baas landing page (it was copypasta from mutatis-mutandis-ing the taskratchet landing page)
+HONEY MONEY
+[X] tweeted the main one, that you can use honey for derailments in addition to premium
+[X] tweeted the 2nd one, that there's a "buy honey" button on the payments page
+[ ] made a cute icon for H$ currency (except maybe it has issues we just want to go to 'H$'? so maybe don't tweet this one?)
+[ ] if you go negative, you get marked "deadbeat" until you bring your honey balance positive again
+[ ] 
+[ ] you can exchange honey for mana
+[ ] 
 
+setup & honey stripe checkout sess
+
+* adds routes & controller to handle the callback
+* adds helper for setting up params for the honey-top-up checkout
+* adds button in payments page to add honey
+* updates user's balance after successful payment
+* adds a custom honey-money icon
+
+working on deploy on 2023-09-19 (after midnight the night of sep 18)
+}, { // ------------------------------------------------------------------------
+erroneous alert copy when changing to honey money (e.g. "success! you switched to [honey money/paypal]")
+https://github.com/beeminder/beeminder/issues/4501
+}, { // ------------------------------------------------------------------------
+"f": true,
+"x": "Official launch of our Readwise Reader integration! Blog post, landing page, help doc! Plus lots of improvements since the soft launch.",
+"u": ["https://twitter.com/beemuvi/status/1707183394919272671",
+      "https://help.beeminder.com/article/347-readwise-reader",
+      "https://github.com/beeminder/beeminder/issues/4428",
+      "https://github.com/beeminder/beeminder/pull/4429"],
+"d": "2023-09-27",
+"t": "2023-09-27",
+}, { // ------------------------------------------------------------------------
+"x": "More signup page CSS fixes: getting things to wrap and rearrange themselves nicely on small screens, and changed the Google logo to be the same size as others",
+"u": ["https://twitter.com/beemuvi/status/1707901952296988951",
+      "https://github.com/beeminder/beeminder/issues/4098",
+      "https://github.com/beeminder/beeminder/pull/4508"]
+"d": "2023-09-29",
+"t": "2023-09-29",
+}, { // ------------------------------------------------------------------------
+"x": "And one more fix for small screens: hide the integrations (there are too many!) and adjust the ordering of sections to get you to the signup form quicker",
+"u": ["https://twitter.com/beemuvi/status/1708992974414340101",
+      "https://github.com/beeminder/beeminder/issues/4098",
+      "https://github.com/beeminder/beeminder/pull/4508"]
+"d": "2023-09-29",
+"t": "2023-10-02",
+}, { // ------------------------------------------------------------------------
+"x": "Help docs: Rearranged things in the \"How do I delete my account?\" article to sound less scammy 😬 and fixed some broken html in the iOS integration article",
+"u": ["https://twitter.com/beemuvi/status/1708993114860613821",
+      "https://help.beeminder.com/article/48-how-do-i-delete-my-account",
+      "https://help.beeminder.com/article/60-ios-app"],
+"d": "2023-09-29",
+"t": "2023-10-02",
+}, { // ------------------------------------------------------------------------
+"f": true,
+"x": "Honey Money can now be used for derailments, not just premium (it's currently opt-in to do so, on your payments page)",
+"u": ["https://twitter.com/beemuvi/status/1709355923964416338"
+      ],
+"d": TODO,
+"t": "2023-10-03",
+}, { // ------------------------------------------------------------------------
+"x": "And you can buy honey directly, also from the payments page, if you prefer to prepay for derailments (or can't pay the traditional way)",
+"u": ["https://twitter.com/beemuvi/status/1709356157410914652",
+      ],
+"d": TODO,
+"t": "2023-10-03",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
