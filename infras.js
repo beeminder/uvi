@@ -1689,6 +1689,17 @@ x: "Updated our Stripe gem, and updated the Stripe api version we are targeting 
 "d": "",
 "t": "2023-09-13",
 }, { // ------------------------------------------------------------------------
+"x": "Rewrote blog scraping scripts for keeping the frontpage \"latest from the blog\" section up to date after new blog redesign.",
+"u": ["https://github.com/beeminder/beeminder/pull/4451",
+"https://twitter.com/beeminfra"],
+"d": "2023-08-24",
+"t": "2023-09-20"
+}, { // ------------------------------------------------------------------------
+"x": "Fix some debug/info logging around sending mail -- we were referencing a non-existent variable in a very rarely reached code-path. Not user-visible.",
+"u": ["https://twitter.com/beeminfra/status/1707176434584920202","https://github.com/beeminder/beeminder/pull/4484"],
+"d": "2023-09-19",
+"t": "2023-09-27",
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, /* ----------------------------------------------------------- end batch */ ]
 
@@ -1719,13 +1730,10 @@ simplified & removed some logic from old landing pages which are no longer activ
 https://github.com/beeminder/beeminder/pull/4235
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-rewrote blog scraping scripts for keeping the frontpage "latest from the blog" section up to date
-https://github.com/beeminder/beeminder/pull/4451
-"d": "2023-08-24"
-}, { // ------------------------------------------------------------------------
 captcha tweaking stuff for recaptcha? other registration card testing related stuff? or do we just not want to mention that?
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
+tweaked some stuff around the 
+https://github.com/beeminder/beeminder/pull/4496/files
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
