@@ -1700,6 +1700,67 @@ x: "Updated our Stripe gem, and updated the Stripe api version we are targeting 
 "d": "2023-09-19",
 "t": "2023-09-27",
 }, { // ------------------------------------------------------------------------
+"x": "Send a message to slack when the translogs are ready so workerbees don't have to wait around for it.",
+"u": ["https://twitter.com/beeminfra/status/1709662736467341428",
+"https://github.com/beeminder/beeminder/issues/3925"]
+}, { // ------------------------------------------------------------------------
+"x": "Additionally, add a summary header to translogs fetched on server, giving status info etc, & include status in the slackhorn.",
+"u": ["https://twitter.com/beeminfra/status/1712243020668776921",
+"https://github.com/beeminder/beeminder/pull/4499"],
+"t": "2023-10-11"
+}, { // ------------------------------------------------------------------------
+"x": "Add a line showing admins the last time the \"fetch translog\" button was clicked, for reference",
+"u": ["https://twitter.com/beeminfra/status/1713995705822626258",
+"https://github.com/beeminder/beeminder/issues/4498",
+"https://github.com/beeminder/beeminder/pull/4505"],
+"d": "2023-09-28",
+"t": "2023-10-16"
+}, { // ------------------------------------------------------------------------
+"x": "Renamed some internals with how we avoid deadbeating & charging special test- and meta- accounts, and also added quals for it.",
+"u": ["https://twitter.com/beeminfra/status/1716567379856273599",
+"https://github.com/beeminder/beeminder/pull/4496/files"],
+"d": "2023-09-27",
+"t": "2023-10-23",
+}, { // ------------------------------------------------------------------------
+"x": "We automated some tasks for anonymizing and exporting data for a science experiment with Darden",
+"u": ["https://twitter.com/beeminfra/status/1719862999325065549","https://github.com/beeminder/beeminder/pull/4514"],
+"d": "2023-10-09",
+"t": "2023-11-01"
+}, { // ------------------------------------------------------------------------
+"x": "Added an airhorn to gather more information about a semi-frequent error from Garmin",
+"u": ["https://github.com/beeminder/beeminder/commit/b59391761f7d4824f0ac3b8cb41e1d53876fb568",
+"https://twitter.com/beeminfra/status/1722409847747236096"],
+"d": "2023-11-06",
+"t": "2023-11-08"
+}, { // ------------------------------------------------------------------------
+"x": "Updates to the nginx config to serve & proxy websockets so we can do modern railsy Hotwire stuff.",
+"u": ["https://github.com/beeminder/beeploy/issues/148",
+"https://twitter.com/beeminfra/status/1724943061455913222",
+"https://github.com/beeminder/beeploy/pull/153"],
+"d": "2023-01-03",
+"t": "2023-11-15"
+}, { // ------------------------------------------------------------------------
+"x": "Improved the translog fetching for admins to be more specific about errors it encounters, and differentiate between errors vs nothing found.",
+"u": ["https://github.com/beeminder/beeminder/pull/4563",
+"https://twitter.com/beeminfra/status/1727444664289206440"],
+"d": "2023-11-21",
+"t": "2023-11-22"
+}, { // ------------------------------------------------------------------------
+"x": "Finished moving quals out of minitest into rspec. Also cleaned up github action related to tracking of the move.",
+"u": ["https://twitter.com/beeminfra/status/1729953590268350476",
+"https://github.com/beeminder/beeminder/pull/4575",
+"https://github.com/beeminder/beeminder/issues/3503",
+"https://github.com/beeminder/beeminder/pull/4558",
+"https://github.com/beeminder/beeminder/pull/4559"],
+"d": "2023-11-16",
+"t": "2023-11-29"
+}, { // ------------------------------------------------------------------------
+"x": "Reduced re-tries in quals runs: sometimes we would hit a race in feature quals. Now we're using `expects` so the qual waits on page load before continuing.",
+"u": ["https://twitter.com/beeminfra/status/1732561254290723117",
+"https://github.com/beeminder/beeminder/pull/4574",
+"https://github.com/beeminder/beeminder/issues/4572"],
+d: "2023-11-27"
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, /* ----------------------------------------------------------- end batch */ ]
 
@@ -1716,26 +1777,24 @@ https://github.com/beeminder/beeminder/commit/
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-## ansible things:
+## lighthouseci something something?
 1. Add lighthouseci Ansible role #97: https://github.com/beeminder/beeploy/pull/97
 "d": "2022-08-01"
 }, { // ------------------------------------------------------------------------
+Stop ignoring the Accept header #4568 [THIS MIGHT BE MILKABLE / COUNTABLE AS A UVI?]
+To get Turbo to work, we've got to stop ignoring the Accept header.
+
+This means we've got to make some other adjustments, too.
+https://github.com/beeminder/beeminder/pull/4568
+https://github.com/beeminder/beeminder/issues/4567
 }, { // ------------------------------------------------------------------------
+revamp breaks with turbo and stimulus -- [lots of UVIs, but sure to be some infras as well]
+https://github.com/beeminder/beeminder/pull/4546
 }, { // ------------------------------------------------------------------------
+iou ledger-style refactor of credit [no UVIs so must be infra, just have to figure out how to explain]
+https://github.com/beeminder/beeminder/pull/4560
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-simplified & removed some logic from old landing pages which are no longer active. Now they're purely for show. [ugly ass show]
-https://github.com/beeminder/beeminder/pull/4235
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-captcha tweaking stuff for recaptcha? other registration card testing related stuff? or do we just not want to mention that?
-}, { // ------------------------------------------------------------------------
-tweaked some stuff around the 
-https://github.com/beeminder/beeminder/pull/4496/files
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
+
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
