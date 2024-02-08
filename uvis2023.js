@@ -2481,7 +2481,8 @@ const batch2023nov = [{
 }, { // ------------------------------------------------------------------------
 "x": "Our Slack bot broke (similar to UVI#4243) and once again, Bee did the upgrades and got it back on its feet. #zombie",
 "u": ["https://twitter.com/beemuvi/status/1723111761422012465",
-      "https://github.com/beeminder/beeminder/issues/4512"],
+      "https://github.com/beeminder/beeminder/issues/4512",
+      "https://github.com/beeminder/beebot/pull/39"],
 "d": "2023-11-09",
 "t": "2023-11-10",
 }, { // ------------------------------------------------------------------------
@@ -2518,6 +2519,7 @@ const batch2023nov = [{
 "x": "Updated the API to accept oAuth apps' access_tokens in an `Authorization: Bearer` header in addition to as a param; HT patimen",
 "u": ["https://twitter.com/beemuvi/status/1724912470924652936",
       "https://forum.beeminder.com/t/making-a-beeminder-gpts/11239",
+      "https://github.com/beeminder/beeminder/issues/4368",
       "https://github.com/beeminder/beeminder/pull/4551"],
 "d": "2023-11-14",
 "t": "2023-11-15",
@@ -2671,337 +2673,6 @@ const batch2023nov = [{
 
 const batch2023dec = [{
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, /* --------------------------------------------------------- end 2023dec */ ]
-
-const staged = [ {
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-"x": "Adam's StoryGraph \"number of books\" metric",
-"u": [
-      "https://github.com/beeminder/beeminder/issues/3947",
-      "https://github.com/beeminder/beeminder/pull/3948/"],
-"c": "We have the ability to count books if appropriate stuff is set in ii, but it's not added to elf yet, so not possible to set up a goal for it on your own yet.",
-"d": "2022-12-31", // [only semi-live]
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, /* ---------------------------------------------------------- end staged */ ]
-
-
-/*********************************************************************************************************************************************************************
-~~~~~~----------------------------- METASTAGED -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-[MINI] awaiting more changes with slug/goalname/goalID in the API
-"x": "Undeprecated the id field in the Goal endpoint of the API and ... [TODO]"
-"x": "Super mini: removed \"Deprecated\" from the 'id' field in the API docs Goal resource -- UVI#2104 sort of myopically semi-broke the API, since we want you to use the goalname (aka slug) as the identifier, but now you can change the goalname, so we'd definitely better keep the goal ID around so API clients can piece things back together if someone goes and changes a goalname on them",
-"c": "It's super mini, but took lots of words to say the things",
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-[HOLD] BeemiOS 6.0: (see UVI#4031 and UVI#4045 for the 6pm deadline thing with sleep goals)
-- Bug fix for inaccurate sleep data for Apple Health goals [tweeted 2 UVIs about forcing to 6pm already]
-- Preliminary support for adding data to goals via Shortcut [users disconfirm; sadface]
-- username whitespace bugfix: https://github.com/beeminder/BeeSwift/issues/285
-"d": "2012-12-29", // um, maybe this meant to say 2022-12-29?
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-[TODO: discuss] open graph / meta tags / link previews: more milking? separate UVI for doing it for the blog? more about the tweaks? consistent casing?
-https://github.com/beeminder/beeminder/issues/1866
-https://github.com/beeminder/beeminder/pull/3181
-* fix og:image reference in baas, complice, and taskratchet
-* add defaults og:title, description, image, type to all beeminder pages
-* add twitter:card tag
-* update image & description tags for goal pages
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-[TODO WIP]
-WIP PR: https://github.com/beeminder/beeminder/pull/3223
-Much of this PR was encompassed in PR#3226 which has been deployed and UVIs composed above
-Check #3255 for summary of UVIs once deployed.
-https://github.com/beeminder/beeminder/issues/3225
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-ADAM TODO: not merged? also it says "road" in the error copy which, well, we also need to deprecate and make aliases for things like "roadall" in the API
-Error if road has too few elements per row (PR #3256)
-This cleans up an error message from the deep munging issues around roadall -- but it will be seen if you mess up arguments to roadall and don't have the right number of elements.
-For #3253 (deep munging rails upgrade thing)
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-TODO: we have a closed-and-unmerged PR -- https://github.com/beeminder/beeminder/pull/2265 -- in which adam mentions the following UVI:
-  UVI: API users can once again get json from API urls that don't end in .json, like api/v1/users/me.
-did that (a) happen some other way and we should tweet it, or (b) was already tweeted, or (c) is not true yet and should be gissued, or (d) has a gissue?
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-[WIP: Actually do something with Strava webhook payloads]
-"x": "Subscribe to and handle Strava webhooks, so that your activities are updated to Beeminder in (nearly) real-time."
-"u": [
-      "https://github.com/beeminder/beeminder/pull/3363",
-      "https://github.com/beeminder/beeminder/issues/3352"]
-"c": "Everywhere Everystrava All At Once was fixing the bug where we'd get ratelimited and be slow getting your data, but still relying on the sorta-hourly polling checks that beeminder does. This PR adds webhook handling so that strava sends us a push any time you have new data, so theoretically should be much more realtime than the hourly polling thing"
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-[HOLD]
-"x": "As a follow-on to UVI#4165 & UVI#4166, we now return an error unless passed-in graph matrices (the roadall parameter) have 3 elements per row",
-"u": [
-      "https://github.com/beeminder/beeminder/pull/3256"],
-"d": "2022-07-13",
-"c": "The previous UVIs were about more general input handling and fixing weird things with parsing of those inputs",
-TODO: MAYBE DO https://github.com/beeminder/beeminder/issues/3443 BEFORE TWEETING THIS
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-READY TO DEPLOY:
-click-to-sort in megabreak
-https://github.com/beeminder/beeminder/issues/3465#issuecomment-1222662142
-damn, i lost track of when this went live and if we already tweeted enough about this (we do have 3 UVIs in a row for it in august 2022)
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-[QUESTIONABLE]
-"x": "Better api simple 404 error response" [Questionable? it was giving a 404 so maybe it's not really differentiable before and after?]
-"c": "It seems like it errors while looking for the ErrorsController (to render a 404) and then ends up rendering a 404 anyway"
-https://github.com/beeminder/beeminder/issues/3567
-https://github.com/beeminder/beeminder/pull/3568
-"d": "2022-09-13"
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-SAVING UP FOR POST-6.2 BEEMIOS
-* https://github.com/beeminder/BeeSwift/pull/330 -- possibly made autofetching faster or more reliable or less resource-intensive?
-* 2022-12-21: https://github.com/beeminder/BeeSwift/pull/359 -- iOS 16 introduces support for more granular sleep tracking, with different levels of sleep. Apple Watch records this data when worn during sleep. These levels do not match the filter we were using for sleep analysis data, so Apple Watch users would not see any sleep data. Here we also count these periods as sleeping on new iOS.
-* [2023-ish] This adds a confirmation screen to the flow for adding an apple health metric. This screen
- - Allows for a preview of the data which will be added for the metric and information about the unit.
- - In the future will allow additional configuration settings.
-  https://github.com/beeminder/BeeSwift/pull/364
-* Previously when syncing healthkit datapoints to the server data, we would always fetch exactly 7 server points. This would go badly if there were multiple points for a day on the server, and didn't support adding features where we synced more history. Here we instead estimate the number of points to fetch from the server, and fetch more until we have confirmed we have enough.
-  https://github.com/beeminder/BeeSwift/pull/366
-* Make the UI look a little cleaner by lining up various elements and making the spacing more consistent.
-  https://github.com/beeminder/BeeSwift/pull/367
-BEEMIOS AGAIN
-Reduce wall clock time spend during background updates (PR #374)
-* iOS applies some complex logic to decide how often to allow apps to run background updates. The rules are opaque, but potentially include the app's energy use. To try to maximize the chance of beeminder waking up to update goals and badges, here we change background processesing to complete as quickly as possible
-* For background updates, do work as quickly as possible For healthkit observers report as soon as we are done, even on failure.
-* Stand hours autodata metric now accurate (as accurate as Apple is).
-* Gallery now sorted by countdown + pledge + goalname
-* Respect timey-ness: https://github.com/beeminder/BeeSwift/issues/233
-
-* This largely rewrites how we aggregate metrics for category data types. There is a base implementation, and an entirely separate implementation for time asleep.
-  https://github.com/beeminder/BeeSwift/pull/362
-  - For most metrics (Time In Bed, Meditation Minutes, etc), we now look at total non-overlapping time. This avoids double counting with multiple data sources.
-  - For sleep we do a complex attribution process looking at both asleep and awake samples, and disagreements between multiple data sources. This isn't quite right for cases with multiple inputs (e.g. Oura and Apple Watch) but is much closer than the previous implementation. The calculation function is moderately covered by unit tests.
-* Send badge update to ios when eep_count changes. We do this by sending a badge update whenever a goal goes from emergency to non-emergency or backwards.
-  For beeminder/beeminder#4106
-  For beeminder/BeeSwift#376
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-BEEDROID
-https://github.com/beeminder/beedroid/issues/62
-google auth?
-push notifications?
-BEEDROID
-Adjust Android Firebase messages (PR #4103)
-* This stops sending a direct notification. We can't get the IDs on the Android app that we need when we send a direct notification.
-* This sends a "multiuser" title down, too, in case there are multiple accounts logged into the Android app.
-* This refactors the android_push_notification method on Goal and puts it on AndroidNotification instead. I removed "delay_while_idle" as it has been ignored by Google for ~5 years. I added a "now_safe" to the goal_push_options, to generate Now Safe notifications on the Android side. I removed the collapse key because we should only have a total of four per user max, and there's no limit to how many folks can sign into one Android app. I added the slug for the goal that triggered the goal push notification as well.
-* This removes the emoji header, and adds a countdown time for emergency day notifications.
-For #896.
---
-Add Android Notification config page (PR #4110)
-This will eventually be a UVI.
-It works better on small screens, and has some extra CSS.
-This is gated behind beeta_features[:beedroid_push].
-For #4109.
-This is maybe a UVI?
-* UVI: get a little popup that says you can't add a widget before logging into Beeminder.
-* The Android checkboxes are centered, and the goal names are right justified, which helps things if you have really long goal names and a small phone screen.
-  It adjusts some spacing.
-  For https://github.com/beeminder/beeminder/issues/4109
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-[SCHEDEL]
-adam called this stale resque workers thing an infra but maybe we could call it user-visible if we can find a way to describe it:
-Resque workers could be stale after deploy because our way of restarting them wasn't pointing at the PIDs of the workers themselves, but of the wrapper that started them up
-[TODO: why was this only a problem sometimes? why does restarting the wrapper sometimes restart them and sometimes not?]
-https://github.com/beeminder/beeminder/issues/3914
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-[QUESTIONABLE][SCHEDEL]
-we introduced a syntax error on Jan 5th that turned a "422" error to a "500" error response.
-questionable because it's an error that's returned to some javascript on our pages, so was already an error response and probably the difference in 422 vs 500 didn't change how it was handled / what it looked like from the user's POV.
-https://github.com/beeminder/beeminder/issues/3983
-https://github.com/beeminder/beeminder/pull/3984
-"d": "2023-01-07"
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-[SCHEDEL]
-PROBABLY DON'T ACTUALLY TWEET THIS ONE?
-"x": "Subtle but important change in premium FAQ: "you can ask us for a refund if the perks feel disappointing and we'll do what's fair" as opposed to "say yes"
-https://github.com/beeminder/beeminder/issues/4107
-"d": "2023-03-23",
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-OTHER BEEDROID 5 THINGS PRE-5.1:
-https://github.com/beeminder/beedroid/issues/217 -- Expand abbreviations in Android widget picker
-https://github.com/beeminder/beedroid/issues/217 -- Support dynamic widget previews so the preview is closer to what will be placed on your launcher
-https://github.com/beeminder/beedroid/issues/217 -- Allow users to reconfigure single goal widget
-https://github.com/beeminder/beedroid/issues/208 -- widget color match
-https://github.com/beeminder/beedroid/issues/98  -- ssl issues
-https://github.com/beeminder/beedroid/issues/232 -- don't use weight loss as example since it's hard to beemind
-https://github.com/beeminder/beedroid/issues/145 -- show current rate, not rate at akrasia horizon (but maybe not part of this release?)
-ANCIENT BEEDROID THING TO MAYBE INCLUDE IN A FINAL CATCHALL UVI:
-https://github.com/beeminder/beedroid/issues/198
-https://forum.beeminder.com/t/tiny-bug-beedroid-timezone-inaccuracy/9746
-did we already get the android reminders page: https://github.com/beeminder/beeminder/issues/4109 (need to bow-tie that gissue in any case)
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-adam assigned this to dreev for UVI but maybe it's covered in beedroid uvis?
-https://github.com/beeminder/beeminder/issues/896
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-HONEY MONEY MILKING ("the plan of milkin' honey")
-[X] 1. you can use honey for derailments in addition to premium
-[X] 2. there's a "buy honey" button on the payments page
-[X] 3. for the cute yellow honeypot symbol on the credit-card-shaped thing at top of payments page
-[X] 4. for webcopy about stored payment info vs honey, link to stripe, and link to forum FAQ
-[X] 5. fixed the "success"-type banner which said "yay! you switched to paypal (!sic)" when switching to honey.
-[X] 6. if you go negative, you get marked "deadbeat" until you bring your honey balance positive again
-[X] 7. charge sweeper so you don't stay deadbeated? also a zomb, barely/kinda
-[X] 8. honey purchase 500-error
-[X] 9. made a cute icon for H$ currency but then reverted to just "H$"
-[ ] 10. you can exchange honey for mana!
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-MICRO-UVI:
-Changed "Resent confirmation email" in some flashes to "Resending confirmation email". (It's not quite true that we've resent it when we show it to them, and it might be minutes until we actually send it.)
-https://github.com/beeminder/beeminder/issues/4013
-previous UVI: UVI#4371
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
 "x": "We moved the Buy Honey button to the top of the payments page",
 "u": ["https://twitter.com/beemuvi/status/1733288907901727040",
       "https://github.com/beeminder/beeminder/pull/4592"],
@@ -3018,28 +2689,15 @@ previous UVI: UVI#4371
 "u": ["https://twitter.com/beemuvi/status/1734370845680931265",
       "https://github.com/beeminder/beeminder/issues/4567",
       "https://github.com/beeminder/beeminder/pull/4569"],
-"d": TODO,
 "t": "2023-12-11",
-MILKING QUESTION MARK:
-How does this impact the API?
 "c": "Related to MIME types",
 }, { // ------------------------------------------------------------------------
-"x": "Patched a hole in our Slytherin 404 Glomarization: it was possible to get a 500-error for a goal that was different depending on whether the goal existed
+"x": "Patched a hole in our Slytherin 404 Glomarization: it was possible to get a 500-error for a goal that was different depending on whether the goal existed",
 "u": ["https://twitter.com/beemuvi/status/1734371258522108319",
       "https://github.com/beeminder/beeminder/issues/4567",
       "https://github.com/beeminder/beeminder/pull/4569"],
-"d": TODO,
 "t": "2023-12-11",
-"c": "More specifically, it was possible to get a 500-error if a goal existed or a 403 or something otherwise.",
-MILKING QUESTION MARK:
-- breaks page was one leak (post hotwire updates) 
-- also the graphs controller (pre hotwire updates; does image redirect stuff) -- is this the 500-error thing that's now tweeted?
-----
-stop ignoring accept header: (see specs/requests/mime for details)
-- we were ignoring the format (in api) and forcing to json no matter what you said. now we set to json if no format given, but if e.g. api/v1/goals.xml then you get an error
-- not just the API actually: gives a 406 error for e.g. bmndr.com/terms.json -- what did this used to do? (in dev it did ActionController::UnknownFormat in InfoController#legalschmegal)
-https://github.com/beeminder/beeminder/issues/4567
-https://github.com/beeminder/beeminder/pull/4568
+"c": "More specifically, it was possible to get a 500-error if a goal existed or a 403 or something otherwise",
 }, { // ------------------------------------------------------------------------
 "x": "Help docs: Improved 5 articles with copyedits for flow, steering people to the forum, and new links to other help articles",
 "u": ["https://twitter.com/beemuvi/status/1734733499259822244",
@@ -3051,7 +2709,7 @@ https://github.com/beeminder/beeminder/pull/4568
 "d": "2023-12-04",
 "t": "2023-12-12",
 }, { // ------------------------------------------------------------------------
-"x": "Help docs: Added details users get confused by to the article on ratcheting, plus minor tweaks and layout improvements to 2 other articles
+"x": "Help docs: Added details users get confused by to the article on ratcheting, plus minor tweaks and layout improvements to 2 other articles",
 "u": ["https://twitter.com/beemuvi/status/1734733691149332863",
       "https://help.beeminder.com/article/56-can-i-get-rid-of-extra-safety-buffer",
       "https://help.beeminder.com/article/98-can-i-put-my-goal-on-pause-for-a-little-bit",
@@ -3059,119 +2717,146 @@ https://github.com/beeminder/beeminder/pull/4568
 "d": "2023-12-08",
 "t": "2023-12-12",
 }, { // ------------------------------------------------------------------------
+"x": "Help docs: Revamped the article for scheduling breaks for multiple goals at once AKA megabreak in light of the recent deluge of improvements",
+"u": ["https://twitter.com/beemuvi/status/1735099497586548768",
+      "https://help.beeminder.com/article/154-can-i-schedule-breaks-on-many-goals-at-once"],
+"d": "2023-12-07",
+"t": "2023-12-13",
 }, { // ------------------------------------------------------------------------
+"x": "Help docs: Improved 3 more articles with an extra tip, formatting and tweaks, clarifications, and a new cross-link to a related article",
+"u": ["https://twitter.com/beemuvi/status/1735099804483833964",
+      "https://help.beeminder.com/article/58-what-if-i-only-want-to-do-something-once-a-month",
+      "https://help.beeminder.com/article/124-my-goal-doesnt-make-any-sense",
+      "https://help.beeminder.com/article/117-can-i-start-my-goal-over"],
+"d": "2023-12-13",
+"t": "2023-12-13",
 }, { // ------------------------------------------------------------------------
-"x": "Also API errors are more consistent and more often in JSON as opposed to TODO
+"x": "We improved/consolidated the glomarization filter which we believe patched a brief glomarization leak on the breaks page and makes us robust to future leaks",
+"u": ["https://twitter.com/beemuvi/status/1735452898027516382",
+      "https://github.com/beeminder/beeminder/issues/4623"],
+"t": "2023-12-14",
+"c": "Not that this has been exploited in practice, we're fairly sure, but good for peace of mind",
 }, { // ------------------------------------------------------------------------
+"x": "From UVI#4679, turns out the Slack bot was broken in different ways for DMs and for in-channel messages. Now both are fixed, at least for public channels. Phew!",
+"u": ["https://twitter.com/beemuvi/status/1735459643688878363",
+      "https://github.com/beeminder/beeminder/issues/4512",
+      "https://github.com/beeminder/beebot/pull/39"],
+"t": "2023-12-14",
+"c": "Still not sure why private channels aren't allowing messages, eek",
 }, { // ------------------------------------------------------------------------
-PAYPALPURGE MINIs:
-- add a parenthetical about paypal going away to the payments page
-- emailing everyone
+"x": "We now do a better job of showing a reasonable error if you request something with a conflicting extension and Accept header, or a missing extension",
+"u": ["https://twitter.com/beemuvi/status/1735822343015117125",
+      "https://github.com/beeminder/beeminder/issues/4567",
+      "https://github.com/beeminder/beeminder/pull/4569",
+      "https://github.com/beeminder/beeminder/pull/4568"],
+"t": "2023-12-15",
+"c": "Related to UVI#4706. This was part of getting Turbo/Hotwire working for megabreak. Also probably the API is violating anti-Postel all over the place still.",
 }, { // ------------------------------------------------------------------------
+"x": "Page load times are faster and we added accessibility labeling for links and images in the header and footer",
+"u": ["https://twitter.com/beemuvi/status/1735823526010159602",
+      "https://github.com/beeminder/beeminder/issues/4580",
+      "https://github.com/beeminder/beeminder/pull/4581",
+      "https://github.com/beeminder/beeminder/pull/4582"],
+"t": "2023-12-15",
 }, { // ------------------------------------------------------------------------
-WAITING TO VERIFY IF THERE'S ANY USER-VISIBILITY HERE
-"x": "Fixed a double redirect from things like bmndr.co/user/goalname.png which now redirects directly to our CDN"
-"c": "Redirect straight to image from user/goal.ext; this is not much of a UVI, but doing a double redirect is dumb, and might matter if you were writing scripts and stuff, so this is marginally better", [TODO: did this fix the issue with forum post images? was it supposed to?]
-"u": [
-      "https://github.com/beeminder/beeminder/issues/2107",
-      "https://github.com/beeminder/beeminder/pull/4576],
+"x": "More decrufting, getting rid of old Javascript and things, thus improving page load times, plus tweaking some footer CSS for margins and font sizes",
+"u": ["https://twitter.com/beemuvi/status/1736912130778276143",
+      "https://github.com/beeminder/beeminder/issues/4630",
+      "https://github.com/beeminder/beeminder/issues/4580"],
+"t": "2023-12-18",
 }, { // ------------------------------------------------------------------------
+"x": "And more accessibility tweaking, telling the browser that buttons are buttons and close links are close links and background images are background images",
+"u": ["https://twitter.com/beemuvi/status/1736912539316003015",
+      "https://github.com/beeminder/beeminder/issues/4580"],
+"t": "2023-12-18",
 }, { // ------------------------------------------------------------------------
-Some improvements with page load times & accessibility labeling for links & images in both the header and footer.
- - host our own google play image instead of hotlinking out to another site [browser score / load time]
- - specified image dimension ratios in the HTML, allowing the browser to reserve space for the image right away. [browser score / load time]
- - added lazy loading to all the footer images. [browser score / load time]
- - fixed the aspect ratio on the Google Play image. [browser score / load time]
- - tweaked some footer CSS. [adjusted margins & font size]
- - added a title to the user avatar nav dropdown toggle, and I added alt text to the avatar. [accessibility]
- - added the button role and a close label to the flash close link. [accessibility]
- - added a title to the home link, and a label for the div used to display the logo via CSS (cuz it's background image, not image image so screenreaders need that label). [accessibility]
- "u": [
-       "https://github.com/beeminder/beeminder/issues/4580",
-       "https://github.com/beeminder/beeminder/pull/4581",
-       "https://github.com/beeminder/beeminder/pull/4582"],
+"x": "Fixed aspect ratio on images and give dimensions so the browser can reserve space and things don't jump around as the page loads",
+"u": ["https://twitter.com/beemuvi/status/1737267925172773279",
+      "https://github.com/beeminder/beeminder/issues/4580"],
+"t": "2023-12-19",
 }, { // ------------------------------------------------------------------------
+"x": "We now offer browsers webp versions of more images, further improving page load times",
+"u": ["https://twitter.com/beemuvi/status/1737268149710705061",
+      "https://github.com/beeminder/beeminder/issues/4586"],
+"t": "2023-12-19",
 }, { // ------------------------------------------------------------------------
-header & footer images do webp [browser score / load times]
-https://github.com/beeminder/beeminder/issues/4580
-https://github.com/beeminder/beeminder/pull/4595
-https://github.com/beeminder/beeminder/pull/4594
+"x": "Added missing alt and hover text to the logos in the integrations gallery",
+"u": ["https://twitter.com/beemuvi/status/1737638153367027807"],
+"t": "2023-12-20",
 }, { // ------------------------------------------------------------------------
+"x": "Switched to thumbnail version of blog images on the homepage, and lazyload them (yes, we're still talking about page load time improvements)",
+"u": ["https://twitter.com/beemuvi/status/1737638420313514111"],
+"t": "2023-12-20",
 }, { // ------------------------------------------------------------------------
-improve homepage more:
-integrations gallery linked images are smaller therefore load faster, add missing alttext and title text to integrations, offer webp images
-https://github.com/beeminder/beeminder/issues/4586
-https://github.com/beeminder/beeminder/pull/4587
+"x": "Added a Save All button to the breaks page (PDP violation avoided!) #zombie",
+"u": ["https://twitter.com/beemuvi/status/1737998682883252393",
+      "https://forum.beeminder.com/t/two-issues-with-the-new-breaks-page/11278/8?u=dreev",
+      "https://github.com/beeminder/beeminder/issues/4607"],
+"d": "2023-12-11",
+"t": "2023-12-21",
 }, { // ------------------------------------------------------------------------
+"f": true,
+"x": "Honeygrams! You can now transfer honey money to any other Beeminder user!",
+"u": ["https://twitter.com/beemuvi/status/1737999017991450734",
+      "https://www.beeminder.com/honeygram",
+      "https://github.com/beeminder/beeminder/issues/4529",
+      "https://github.com/beeminder/beeminder/pull/4624",
+      "https://github.com/beeminder/beeminder/pull/4629",
+      "https://github.com/beeminder/beeminder/pull/4634"],
+"t": "2023-12-21",
 }, { // ------------------------------------------------------------------------
-fixed channel messages in the slackbot too -- the dm fix didn't extend to channel messages and those were still getting dropped. now (if your channel is public) they work.. still not sure why private channels aren't allowing messages.
-https://github.com/beeminder/beeminder/issues/4512
+"x": "New help doc about honey money and updated the Honey Money FAQ links to point to it instead of the forum post we were using till now",
+"u": ["https://twitter.com/beemuvi/status/1737999152909599217",
+      "https://help.beeminder.com/article/354-honey-money",
+      "https://github.com/beeminder/beeminder/pull/4646"],
+"t": "2023-12-21",
 }, { // ------------------------------------------------------------------------
+"x": "We made a new landing page for honeygrams that lists all the things you can do with honey money",
+"u": ["https://twitter.com/beemuvi/status/1738362313756098868",
+      "https://github.com/beeminder/beeminder/issues/4529"],
+"t": "2023-12-22",
 }, { // ------------------------------------------------------------------------
-get "forgot password" and login links off of the signup page
-https://github.com/beeminder/beeminder/pull/4616
+"x": "We made beeminder.com/honey an alias for the landing page and gave it a holiday theme",
+"u": ["https://twitter.com/beemuvi/status/1739378170212831471",
+      "https://github.com/beeminder/beeminder/issues/4529"],
+"t": "2023-12-25",
 }, { // ------------------------------------------------------------------------
+"x": "We fixed some honeygram bugs: you can no longer send more honey than you have, nor can you send a negative amount of honey!",
+"u": ["https://twitter.com/beemuvi/status/1739800259197575563",
+      "https://github.com/beeminder/beeminder/issues/4529"],
+"t": "2023-12-26",
 }, { // ------------------------------------------------------------------------
-Increase datapoint limit per day from 150 to 300
-
-This adjusts the validation error to not say ratelimit, in order to be sliiightly more helpful.
-
-It adjusts the IFTTT error to say
-
-You've reached the limit of 300 datapoints added to one day.
-
-rather than
-
-You've reached the limit of 150 datapoints added in one day.
-
-This adds some quals for the ifttt_controller!
-
-For #4604
-
-Candidate UVIs:
-* increase the number of datapoints you can add to a single day
-* be slightly more helpful with the validation error and IFTTT email error
+"x": "Also it's no longer disallowed to send yourself honey, in case you want to try it out as a dry run before sending to a friend",
+"u": ["https://twitter.com/beemuvi/status/1739800352952914271",
+      "https://github.com/beeminder/beeminder/issues/4529"],
+"t": "2023-12-26",
+"c": "And because we don't believe in if-statements; it's naturally effectively a no-op so just let it be",
 }, { // ------------------------------------------------------------------------
+"x": "Made the honeygram page and the pages showing gifted honey viewable even if you're not logged in",
+"u": ["https://twitter.com/beemuvi/status/1740162307441959279",
+      "https://github.com/beeminder/beeminder/issues/4529"],
+"t": "2023-12-27",
 }, { // ------------------------------------------------------------------------
-slack channels not just DMS -- i forget what we tweeted originally
-https://github.com/beeminder/beeminder/issues/4512#issuecomment-1851084539
+"x": "We now round down your displayed honey money balance to ignore fractional cents; it seemed buggy that you couldn't always honeygram your whole balance otherwise",
+"u": ["https://twitter.com/beemuvi/status/1740529464940077517",
+      "https://github.com/beeminder/beeminder/issues/4529"],
+"t": "2023-12-28",
 }, { // ------------------------------------------------------------------------
+"x": "Added alt and hovertext and accessibility stuff (screenreader hints) on the honeygrams pages",
+"u": ["https://twitter.com/beemuvi/status/1740529529012261146",
+      "https://github.com/beeminder/beeminder/issues/4529"],
+"t": "2023-12-28",
+"c": "Eg role=button",
 }, { // ------------------------------------------------------------------------
+"f": true,
+"x": "You can exchange honey money for mana on Manifold! https://www.beeminder.com/honeygram/manifold",
+"u": ["https://twitter.com/beemuvi/status/1740889684589543883",
+      "https://github.com/beeminder/beeminder/issues/4529"],
+"t": "2023-12-29",
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-//////------------------------------------------------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
-*********************************************************************************************************************************************************************/
+"f": true,
+"x": "And vice versa: You can convert mana on Manifold into honey money on Beeminder!",
+"u": ["https://twitter.com/beemuvi/status/1740889807482695759",
+      "https://github.com/beeminder/beeminder/issues/4529"],
+"t": "2023-12-29",
+}, /* --------------------------------------------------------- end 2023dec */ ]

@@ -186,6 +186,8 @@ function numbum(uvi) {
   } else {
     console.log(`NUMBERING ERROR: ${n} -> ${uvi.n}`)
   }
+  // PS: I think if those errors happen we should find a way to alert ourselves.
+  // Workaround: keep the browser console open!
 }
 
 // Takes UVI object and generates the html <li> element as a string
