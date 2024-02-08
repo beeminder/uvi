@@ -1759,8 +1759,65 @@ x: "Updated our Stripe gem, and updated the Stripe api version we are targeting 
 "u": ["https://twitter.com/beeminfra/status/1732561254290723117",
 "https://github.com/beeminder/beeminder/pull/4574",
 "https://github.com/beeminder/beeminder/issues/4572"],
-d: "2023-11-27"
+t: "2023-11-27"
 }, { // ------------------------------------------------------------------------
+"x": "Adding (and removing) additional logging to cover / elucidate problems in a couple different domains.",
+"u": ["https://twitter.com/beeminfra/status/1735094136813084798",
+"https://github.com/beeminder/beeminder/pull/4602",
+"https://github.com/beeminder/beeminder/pull/4596",
+"https://github.com/beeminder/beeminder/pull/4539"],
+"t": "2023-12-13"
+}, { // ------------------------------------------------------------------------
+"x": "Did a big refactor of how we store info about credits (aka honey money), to make it all queryable etc.",
+"c": "iou ledger-style refactor of credit",
+"u": ["https://twitter.com/beeminfra/status/1737571208890393034",
+"https://github.com/beeminder/beeminder/pull/4560",
+"https://twitter.com/beeminfra/status/1737571208890393034"],
+t: "2023-12-20"
+}, { // ------------------------------------------------------------------------
+"x": "Make it more obvious in admin's sidebar if a user is deadbeat.",
+"u": ["https://twitter.com/beeminfra/status/1740160528880906694",
+"https://github.com/beeminder/beeminder/pull/4615",
+"https://github.com/beeminder/beeminder/issues/3263"]
+}, { // ------------------------------------------------------------------------
+"x": "Increase build timeout in some github workflows, so it is consistent across all jobs.",
+"u": ["https://github.com/beeminder/beeminder/pull/4593",
+"https://twitter.com/beeminfra/status/1742702438170452198"],
+"t": "2024-01-03"
+}, { // ------------------------------------------------------------------------
+"x": "Don't hide deadbeat graphs from admins now that it is more obvious in sidebar. Also added some basic quals for \"admin sees deadbeat graph\"",
+"u": ["https://twitter.com/beeminfra/status/1745234300977684897",
+"https://github.com/beeminder/beeminder/issues/3263",
+"https://github.com/beeminder/beeminder/pull/4615"],
+"d": "2023-12-12",
+"t": "2024-01-10"
+}, { // ------------------------------------------------------------------------
+"x": "Skip Github Actions when keyword is present in the PR title, so we can run CI fewer times when creating multiple PRs at the same time.",
+"u": ["https://twitter.com/beeminfra/status/1747780417837768957",
+"https://github.com/beeminder/beeminder/pull/4660",
+"https://github.com/beeminder/beeminder/issues/4656"],
+"d": "2023-12-22"
+}, { // ------------------------------------------------------------------------
+"x": "Adjusted an excessively noisy slackhorn about the manachecker. Turns out we don't actually care about that case.",
+"u": ["https://twitter.com/beeminfra/status/1750305010683138172",
+"https://github.com/beeminder/beeminder/pull/4689"],
+"d": "2024-01-12"
+}, { // ------------------------------------------------------------------------
+"x": "Added the web-console gem for development debugging etc.",
+"u": ["https://twitter.com/beeminfra/status/1752806761562767582",
+"https://github.com/beeminder/beeminder/issues/3162",
+"https://github.com/beeminder/beeminder/pull/4612"],
+"d": "2023-12-12",
+"t": "2024-01-31"
+}, { // ------------------------------------------------------------------------
+"x": "Retired one of our background worker servers, and moved logs off of it, adjusted the translog fetcher to check archived logs too.",
+"u": ["https://twitter.com/beeminfra/status/1755357181619429541",
+"https://github.com/beeminder/beeminder/issues/4669",
+"https://github.com/beeminder/beeminder/pull/4677",
+"https://github.com/beeminder/beeminder/pull/4670",
+"https://github.com/beeminder/beeminder/pull/4672"],
+"d": "2024-01-06",
+"t": "2024-02-07",
 }, { // ------------------------------------------------------------------------
 }, /* ----------------------------------------------------------- end batch */ ]
 
@@ -1783,7 +1840,6 @@ https://github.com/beeminder/beeminder/commit/
 }, { // ------------------------------------------------------------------------
 Stop ignoring the Accept header #4568 [THIS MIGHT BE MILKABLE / COUNTABLE AS A UVI?]
 To get Turbo to work, we've got to stop ignoring the Accept header.
-
 This means we've got to make some other adjustments, too.
 https://github.com/beeminder/beeminder/pull/4568
 https://github.com/beeminder/beeminder/issues/4567
@@ -1791,10 +1847,33 @@ https://github.com/beeminder/beeminder/issues/4567
 revamp breaks with turbo and stimulus -- [lots of UVIs, but sure to be some infras as well]
 https://github.com/beeminder/beeminder/pull/4546
 }, { // ------------------------------------------------------------------------
-iou ledger-style refactor of credit [no UVIs so must be infra, just have to figure out how to explain]
-https://github.com/beeminder/beeminder/pull/4560
+"x": "Fixed an error in error handling that was causing a particular job to fail on resque, instead of sending us diagnostics",
+"u": [
+"https://github.com/beeminder/beeminder/pull/4700"]
+"d": "2024-01-17"
 }, { // ------------------------------------------------------------------------
+Properly 403 when request has no Accept header #4688
+https://github.com/beeminder/beeminder/issues/4686
+https://github.com/beeminder/beeminder/pull/4688
+d: 2024-01-12
+[HOLD: "This is UV and arguably I"]
 
+}, { // ------------------------------------------------------------------------
+pin bundler to version that supports ruby < 3 #4671
+https://github.com/beeminder/beeminder/pull/4671
+(Docker build fails without this because the latest version of bundler doesn't support ruby < 3)
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
