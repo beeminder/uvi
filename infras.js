@@ -1819,6 +1819,58 @@ t: "2023-12-20"
 "d": "2024-01-06",
 "t": "2024-02-07",
 }, { // ------------------------------------------------------------------------
+"x": "Turned up debug logs for request-ids, habitica dailies, and rssminder integration.",
+"u": ["https://twitter.com/beeminfra/status/1757925211645825303",
+"https://github.com/beeminder/beeminder/pull/4710",
+"https://github.com/beeminder/beeminder/pull/4714",
+"https://github.com/beeminder/beeminder/pull/4717"],
+"d": "2024-01-25"
+}, { // ------------------------------------------------------------------------
+"x": "Fixed error handling in three background jobs that were causing things to wind up on resque failed queue instead of giving us diagnostics.",
+"u": ["https://twitter.com/beeminfra/status/1760466591379267664",
+"https://github.com/beeminder/beeminder/pull/4700"],
+"d": "2024-01-17",
+"t": "2024-02-21"
+}, { // ------------------------------------------------------------------------
+"x": "Added a new spec helper for \"eventually equal\", for when we need more granular control on how long to block on the result",
+"u": ["https://twitter.com/beeminfra/status/1762982037403979962",
+"https://github.com/beeminder/beeminder/pull/4546/files"],
+"c": "random little part of big breaks page hotwire update",
+"t": "2024-02-28"
+}, { // ------------------------------------------------------------------------
+"x": "Pin bundler to a version that works with our ruby version.",
+"u": ["https://github.com/beeminder/beeminder/pull/4671",
+"https://twitter.com/beeminfra/status/1765536433555845510"],
+"t": "2024-03-06",
+"c": "Docker build fails without this because the latest version of bundler doesn't support ruby < 3"
+}, { // ------------------------------------------------------------------------
+"x": "Refactoring in the Habitica autodata integration to make the api client align with current best-practices.",
+"u": ["https://twitter.com/beeminfra/status/1767707767169847573",
+      "https://github.com/beeminder/beeminder/pull/4779"],
+"t": "2024-03-12",
+"d": "2024-03-08",
+}, { // ------------------------------------------------------------------------
+"x": "Improve Mime handling, stop ignoring the Accept header, & remove a monkeypatch from ca2012; brings us closer to Rails standards, and necessary for Turbo to work.", 
+"u": ["https://twitter.com/beeminfra/status/1770596696550146080",
+"https://github.com/beeminder/beeminder/pull/4568",
+"https://github.com/beeminder/beeminder/issues/4567"],
+"d": "2023-11-24",
+"t": "2024-03-20"
+}, { // ------------------------------------------------------------------------
+"x": "Added baremin amounts to the translog per workerbee request, since a common issue in support is \"I swear the page said I only needed +2!\"",
+"u": ["https://twitter.com/beeminfra/status/1773240891525808400",
+      "https://github.com/beeminder/beeminder/issues/4530",
+      "https://github.com/beeminder/beeminder/pull/4810"],
+"d": "2024-03-27",
+"t": "2024-03-27"
+}, { // ------------------------------------------------------------------------
+"x": "Fixed some annoying alignment issues in the admin user-edit form and removed excess padding.",
+"u": [
+"https://twitter.com/beeminfra/status/1775761996291674127",
+"https://github.com/beeminder/beeminder/pull/4819"],
+"d": "2024-04-03",
+"t": "2024-04-03",
+}, { // ------------------------------------------------------------------------
 }, /* ----------------------------------------------------------- end batch */ ]
 
 var staged = [ { // note: sub-entries not allowed here in staging
@@ -1838,40 +1890,35 @@ https://github.com/beeminder/beeminder/commit/
 1. Add lighthouseci Ansible role #97: https://github.com/beeminder/beeploy/pull/97
 "d": "2022-08-01"
 }, { // ------------------------------------------------------------------------
-Stop ignoring the Accept header #4568 [THIS MIGHT BE MILKABLE / COUNTABLE AS A UVI?]
-To get Turbo to work, we've got to stop ignoring the Accept header.
-This means we've got to make some other adjustments, too.
-https://github.com/beeminder/beeminder/pull/4568
-https://github.com/beeminder/beeminder/issues/4567
-}, { // ------------------------------------------------------------------------
 revamp breaks with turbo and stimulus -- [lots of UVIs, but sure to be some infras as well]
 https://github.com/beeminder/beeminder/pull/4546
 }, { // ------------------------------------------------------------------------
-"x": "Fixed an error in error handling that was causing a particular job to fail on resque, instead of sending us diagnostics",
-"u": [
-"https://github.com/beeminder/beeminder/pull/4700"]
-"d": "2024-01-17"
-}, { // ------------------------------------------------------------------------
+Changes to Accept headers 
 Properly 403 when request has no Accept header #4688
 https://github.com/beeminder/beeminder/issues/4686
 https://github.com/beeminder/beeminder/pull/4688
 d: 2024-01-12
 [HOLD: "This is UV and arguably I"]
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+"x": "Adjusted ratelimiting of writes to a goal through the api.",
+"u": ["https://github.com/beeminder/beeminder/pull/4749",
+]
+}, { // ------------------------------------------------------------------------
+"x": "added a webcredentials thing for ios to use"
 
+"https://github.com/beeminder/beeminder/pull/4771"
+hmm.. wait, this is for a stored passwords from password manager thing for beemios, so maybe it is UVI?
 }, { // ------------------------------------------------------------------------
-pin bundler to version that supports ruby < 3 #4671
-https://github.com/beeminder/beeminder/pull/4671
-(Docker build fails without this because the latest version of bundler doesn't support ruby < 3)
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
+- fixed some annoying alignment issues in the admin forms, and removed weird/excess padding (no gissue)
+- use "time ago" rails helper in the "gimme free stuff" email, which makes more sense in the case of short or long tenures (now will say 12 hours instead of 0.00057 months).
+- add a "remove subscription" button for admins to use.
+
+https://github.com/beeminder/beeminder/issues/4763
+https://github.com/beeminder/beeminder/issues/3665
+https://github.com/beeminder/beeminder/pull/4819
+
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
