@@ -1871,6 +1871,34 @@ t: "2023-12-20"
 "d": "2024-04-03",
 "t": "2024-04-03",
 }, { // ------------------------------------------------------------------------
+"x": "Focusmate changed their oauth url, and we updated our integration to point to the new endpoint.",
+"u": ["https://github.com/beeminder/beeminder/issues/4799",
+"https://github.com/beeminder/beeminder/pull/4813",
+"https://twitter.com/beeminfra/status/1778205969589370984"],
+"d": "2024-03-29",
+"t": "2024-04-10"
+}, { // ------------------------------------------------------------------------
+"x": "Added a \"remove subscription\" button for admins to use in those cases where we refund and downgrade immediately.",
+"u": ["https://twitter.com/beeminfra/status/1783267005891846614",
+      "https://github.com/beeminder/beeminder/issues/3665",
+      "https://github.com/beeminder/beeminder/pull/4819"],
+"d": "2024-04-03",
+"t": "2024-04-24"
+}, { // ------------------------------------------------------------------------
+"x": "Fixed that remove premium plan button after a rewording broke it. And change rounding of datapoints/day to make sense with users less than a day old.",
+"u": ["https://twitter.com/beeminfra/status/1785790221914951851",
+            "https://github.com/beeminder/beeminder/issues/3665",
+"https://github.com/beeminder/beeminder/pull/4853"],
+"c": "While technically correct, it was confusing to admins to see 3 datapoint added, divided by 0.00043 of a day calculating out to a daily average of 7142 datapoints.",
+"d": "2024-04-17",
+"t": "2024-05-01"
+}, { // ------------------------------------------------------------------------
+"x": "Added instructions on updating the resque schedule and master copy of said to the beeploy repo README.",
+"u": ["https://twitter.com/beeminfra/status/1788336886131696066"],
+"d": "2024-05-08",
+"t": "2024-05-08"
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, /* ----------------------------------------------------------- end batch */ ]
 
 var staged = [ { // note: sub-entries not allowed here in staging
@@ -1911,20 +1939,21 @@ d: 2024-01-12
 "https://github.com/beeminder/beeminder/pull/4771"
 hmm.. wait, this is for a stored passwords from password manager thing for beemios, so maybe it is UVI?
 }, { // ------------------------------------------------------------------------
-- fixed some annoying alignment issues in the admin forms, and removed weird/excess padding (no gissue)
 - use "time ago" rails helper in the "gimme free stuff" email, which makes more sense in the case of short or long tenures (now will say 12 hours instead of 0.00057 months).
-- add a "remove subscription" button for admins to use.
-
 https://github.com/beeminder/beeminder/issues/4763
-https://github.com/beeminder/beeminder/issues/3665
 https://github.com/beeminder/beeminder/pull/4819
-
+"c": "this was fixing a user-invisible problem... but introduced a user-visible problem. so fixing the error introduced here is mentioned in UVIs"
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
+"finish autoincrease refactor removing final vestiges from javascript for goal setup"
+https://github.com/beeminder/beeminder/pull/4865
 }, { // ------------------------------------------------------------------------
+fix cassette names for certain VCR recorded web responses after changing the names of a few quals
+https://github.com/beeminder/beeminder/pull/4863
+https://github.com/beeminder/beeminder/pull/4861
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
+debug logging for wakatime questions
+https://github.com/beeminder/beeminder/pull/4862
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
