@@ -26,21 +26,46 @@ content="List of all User-Visible Improvements to Beeminder since 2011 Feb 20">
 </header>
 
 <script>
+// --------------------------------- 80chars ---------------------------------->
 // Kludge to make anchor links work when the DOM doesn't load all at once. Ewww.
 // Without this, the page scrolls to the wrong spot when you follow a link like
 // changelog.bmndr.co#1234
-// CSS escaping, see mothereff.in/css-escapes but maybe not at the dinner table
-function csscape(hash) { return '#' + hash.slice(1).replace(/^(\d)/, '\\3$1 ') }
-// This part is even grosser, where we guess an amount of time to wait before 
-// rescrolling the page. Too short and it won't work, cuz the page isn't done 
-// changing, and too long and user might have already started scrolling themself
-// and be pretty annoyed to have the page rescroll itself.
+// Worst is how we're guessing an amount of time to wait before rescrolling the
+// page. Too short and it won't work, cuz the page isn't done changing, and too
+// long and user might have already started manually scrolling and be pretty
+// annoyed to have the page rescroll itself.
 window.addEventListener('load', function() {
-  const hash = window.location.hash;
+  const hash = window.location.hash.slice(1); // Remove the '#' from the hash
   if (!hash) return;
-  const te = document.querySelector(csscape(hash)); // target element
+  const te = document.getElementById(hash); // target element
   if (te) { setTimeout(() => te.scrollIntoView(), 500) }
 });
+
+/* Serine's version, not working for me:  
+window.addEventListener('DOMContentLoaded', function() {
+  const hash = window.location.hash;
+  if (!hash) return;
+  te = document.getElementById(hash.slice(1));
+  te?.scrollIntoView();
+  let top = window.scrollY + te.getBoundingClientRect().top;
+  function updateScroll() {
+    let oldtop = top;
+    top = window.scrollY + te.getBoundingClientRect().top;
+    window.scrollTo(
+      window.scrollX,
+      window.scrollY + (top - oldtop)
+    );
+  }
+  window.addEventListener('load', updateScroll);
+  setTimeout(updateScroll, 100);
+  setTimeout(updateScroll, 300);
+  setTimeout(updateScroll, 500);
+  setTimeout(updateScroll, 1000);
+  setTimeout(updateScroll, 2000);
+  setTimeout(updateScroll, 3000);
+});
+*/
+// --------------------------------- 80chars ---------------------------------->
 </script>
 
 <main>
@@ -294,10 +319,10 @@ src="https://cdn.glitch.com/048f1230-830a-4702-9106-1d28c7e8a2c9%2Ffaire-uvi-ava
 <div id="2024mar"><script>genbatch(2024,  3)</script></div>
 <div id="2024apr"><script>genbatch(2024,  4)</script></div>
 <div id="2024may"><script>genbatch(2024,  5)</script></div>
-<!--
 <div id="2024jun"><script>genbatch(2024,  6)</script></div>
 <div id="2024jul"><script>genbatch(2024,  7)</script></div>
 <div id="2024aug"><script>genbatch(2024,  8)</script></div>
+<!--
 <div id="2024sep"><script>genbatch(2024,  9)</script></div>
 <div id="2024oct"><script>genbatch(2024, 10)</script></div>
 <div id="2024nov"><script>genbatch(2024, 11)</script></div>

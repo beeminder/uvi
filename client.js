@@ -132,6 +132,7 @@ function icon(u) {
          /help\.beeminder.com/      .test(u) ? 'fa-info-circle' :
          /blog\.beeminder.com/      .test(u) ? 'fa-book'        :
          /twitter\.com/             .test(u) ? 'fa-twitter'     :
+         /x\.com/                   .test(u) ? 'fa-twitter'     :
          /github\.com/              .test(u) ? 'fa-github'      :
          /trello\.com/              .test(u) ? 'fa-trello'      :
          /dropbox\.com/             .test(u) ? 'fa-dropbox'     :

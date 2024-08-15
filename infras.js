@@ -1898,6 +1898,72 @@ t: "2023-12-20"
 "d": "2024-05-08",
 "t": "2024-05-08"
 }, { // ------------------------------------------------------------------------
+"x": "Generate a webp image for every image asset at precompile time, and view helper for rendering picture tags from Rails 7.1",
+"u": ["https://twitter.com/beeminfra/status/1790820385002565638",
+      "https://github.com/beeminder/beeminder/issues/4585",
+      "https://github.com/beeminder/beeminder/pull/4595",
+      "https://github.com/beeminder/beeminder/pull/4587"],
+"d": "2023-12-05",
+"t": "2024-05-15"
+}, { // ------------------------------------------------------------------------
+"x": "Removed braintree and trello and admin javascript libraries from paths where they're not needed.",
+"u": ["https://x.com/beeminfra/status/1792989967297151303",
+"https://github.com/beeminder/beeminder/issues/4642",
+"https://github.com/beeminder/beeminder/issues/3155",
+"https://github.com/beeminder/beeminder/pull/4643",
+"https://github.com/beeminder/beeminder/issues/4631",
+"https://github.com/beeminder/beeminder/pull/4644",
+"https://github.com/beeminder/beeminder/issues/4652",
+"https://github.com/beeminder/beeminder/pull/4653"],
+"d": "2023-12-20",
+"t": "2024-05-21"
+}, { // ------------------------------------------------------------------------
+"x": "Finish autoincrease => pledge cap refactor, removing final vestiges from javascript for goal setup.",
+"u": ["https://x.com/beeminfra/status/1795955939943628923",
+"https://github.com/beeminder/beeminder/pull/4865"],
+"d": "2024-04-24"
+}, { // ------------------------------------------------------------------------
+"x": "Fix cassette names for certain VCR recorded web responses after changing the names of their quals.",
+"u": ["https://x.com/beeminfra/status/1798468103480967283",
+      "https://github.com/beeminder/beeminder/pull/4863",
+      "https://github.com/beeminder/beeminder/pull/4861"],
+"d": "2024-04-25",
+"t": "2024-06-05"
+}, { // ------------------------------------------------------------------------
+"x": "Use timey Rails helper in the more-free-goals-button email, because \"12 hours\" makes way more sense than \"0.00057 months\" for admins on the receiving end.",
+"u": ["https://x.com/beeminfra/status/1801013515521835122",
+      "https://github.com/beeminder/beeminder/issues/4763",
+      "https://github.com/beeminder/beeminder/pull/4819"],
+"d": "2024-04-03",
+"t": "2024-06-12",
+"c": "this was fixing a user-invisible problem... but introduced a user-visible problem. so this gissue/PR has related UVIs as well."
+}, { // ------------------------------------------------------------------------
+"x": "Several improvements for admin sidetray, bringing more info top-of-mind, and adding additional user tracking metrics, and fewer if-statements.",
+"u": ["https://x.com/beeminfra/status/1803552586227916969",
+"https://github.com/beeminder/beeminder/pull/4936",
+"https://github.com/beeminder/beeminder/pull/4941"],
+"d": "2024-06-14",
+"t": "2024-06-19"
+}, { // ------------------------------------------------------------------------
+"x": "Moved charges-related section of admin sidebar to its own partial for #housekeeping",
+"u": ["https://github.com/beeminder/beeminder/pull/4974",
+"https://x.com/beeminfra/status/1816590226736971947"],
+"d": "2024-07-24",
+"t": "2024-07-25"
+}, { // ------------------------------------------------------------------------
+"x": "bugfix with server-support side of android app beta that made it impossible to rename goals if you were opted into the beta.",
+"u": ["https://github.com/beeminder/beeminder/pull/4942",
+"https://x.com/beeminfra/status/1819141105872785814"],
+"d": "2024-06-17",
+"t": "2024-08-01",
+"c": "not a UVI because it was only visible to adam and nicky because of beta opt-in"
+}, { // ------------------------------------------------------------------------
+"x": "Set up new development app and keys for our Garmin integration after a change in how they handle non-production apps.",
+"u": ["https://github.com/beeminder/beeminder/pull/4987",
+"https://x.com/beeminfra/status/1821682476529676508"],
+"d": "2024-08-08",
+"t": "2024-08-08"
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, /* ----------------------------------------------------------- end batch */ ]
 
@@ -1930,30 +1996,36 @@ d: 2024-01-12
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 "x": "Adjusted ratelimiting of writes to a goal through the api.",
 "u": ["https://github.com/beeminder/beeminder/pull/4749",
 ]
 }, { // ------------------------------------------------------------------------
-"x": "added a webcredentials thing for ios to use"
-
-"https://github.com/beeminder/beeminder/pull/4771"
-hmm.. wait, this is for a stored passwords from password manager thing for beemios, so maybe it is UVI?
 }, { // ------------------------------------------------------------------------
-- use "time ago" rails helper in the "gimme free stuff" email, which makes more sense in the case of short or long tenures (now will say 12 hours instead of 0.00057 months).
-https://github.com/beeminder/beeminder/issues/4763
-https://github.com/beeminder/beeminder/pull/4819
-"c": "this was fixing a user-invisible problem... but introduced a user-visible problem. so fixing the error introduced here is mentioned in UVIs"
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-"finish autoincrease refactor removing final vestiges from javascript for goal setup"
-https://github.com/beeminder/beeminder/pull/4865
-}, { // ------------------------------------------------------------------------
-fix cassette names for certain VCR recorded web responses after changing the names of a few quals
-https://github.com/beeminder/beeminder/pull/4863
-https://github.com/beeminder/beeminder/pull/4861
 }, { // ------------------------------------------------------------------------
 debug logging for wakatime questions
 https://github.com/beeminder/beeminder/pull/4862
+}, { // ------------------------------------------------------------------------
+ add DMARC policy of reject to airhorn.us
+ document airhorn.us in https://github.com/beeminder/beeminder/wiki/How-Beeminder-Sends-Email
+It's set up to email reports to the valimail account.
+https://github.com/beeminder/beeminder/issues/4722
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
