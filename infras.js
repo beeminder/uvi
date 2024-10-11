@@ -1964,6 +1964,48 @@ t: "2023-12-20"
 "d": "2024-08-08",
 "t": "2024-08-08"
 }, { // ------------------------------------------------------------------------
+"x": "Opportunistically removed a bunch of unused view helper methods from application, goals, and users helpers.",
+"u": ["https://github.com/beeminder/beeminder/pull/5001",
+"https://x.com/beeminfra/status/1824216412078084449"],
+"d": "2024-08-15",
+"t": "2024-08-15"
+}, { // ------------------------------------------------------------------------
+"x": "Also removed a bunch of very very old infrastructure (routes, views, controller methods etc) for the very very old concept of front/back-burnering.",
+"u": ["https://github.com/beeminder/beeminder/pull/5001",
+"https://x.com/beeminfra/status/1826762471224607089"],
+"d": "2024-08-15",
+"t": "2024-08-15"
+}, { // ------------------------------------------------------------------------
+"x": "Doing housekeeping on expired FCM tokens on our side, per the recommendations in docs. Not user visible to beedroid users.",
+"u": [
+"https://x.com/beeminfra/status/1831479766912004190",
+"https://github.com/beeminder/beeminder/pull/5012"],
+"d": "2024-08-23",
+"t": "2024-09-04"
+}, { // ------------------------------------------------------------------------
+"x":"Set up email reports and DMARC policy for background mail domain, and documented it all in the How-Beeminder-Sends-Email wiki.",
+"u": [
+"https://x.com/beeminfra/status/1834002019444781059",
+"https://github.com/beeminder/beeminder/issues/4722",
+],
+"t": "2024-09-11"
+}, { // ------------------------------------------------------------------------
+"x": "Added relative tmin to admin interface as well as adding tmin quals.",
+"u": ["https://x.com/beeminfra/status/1836546550564294851",
+"https://github.com/beeminder/beeminder/pull/5020"],
+"t": "2024-09-18"
+}, { // ------------------------------------------------------------------------
+"x": "Actually remove android tokens when we get a 404 response from FCM.",
+"u": ["https://x.com/beeminfra/status/1839040905082450401",
+"https://github.com/beeminder/beeminder/pull/5012"],
+"d": "2024-08-23",
+"t": "2024-09-25"
+}, { // ------------------------------------------------------------------------
+"x": "Along with the user-visible #bugfix, added a sanity check for format of ids in habitica api data, to catch future backwards-incompatible changes.",
+"u": ["https://github.com/beeminder/beeminder/pull/5013/commits/07d734b8c081d96839a2a3ef073cc1fdcde437db",
+"https://x.com/beeminfra/status/1844515161677365762"],
+"t": "2024-10-10"
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, /* ----------------------------------------------------------- end batch */ ]
 
@@ -2008,20 +2050,13 @@ d: 2024-01-12
 }, { // ------------------------------------------------------------------------
 debug logging for wakatime questions
 https://github.com/beeminder/beeminder/pull/4862
-}, { // ------------------------------------------------------------------------
- add DMARC policy of reject to airhorn.us
- document airhorn.us in https://github.com/beeminder/beeminder/wiki/How-Beeminder-Sends-Email
-It's set up to email reports to the valimail account.
-https://github.com/beeminder/beeminder/issues/4722
+
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
+"include the username in deleted goal subject for workerbees"
+https://github.com/beeminder/beeminder/pull/5026/files
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
+"x": "migrate existing android tokens into new fcm token store along with timestamps"
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------

@@ -1414,8 +1414,10 @@ const batch2023jul = [{
 }, { // ------------------------------------------------------------------------
 "s": true,
 "x": "BeemiOS now calculates sleep / time in bed / mindful minutes properly (it used to be confused by multiple devices reporting data, etc)",
-"u": ["https://twitter.com/beemuvi/status/1678545469306470401"],
+"u": ["https://twitter.com/beemuvi/status/1678545469306470401",
+      "https://github.com/beeminder/BeeSwift/issues/452"],
 "t": "2023-07-10",
+"c": "Beeswift gissue 452 might be about a different problem with Mindful Minutes that we seemingly never logged as its own UVI",
 }, { // ------------------------------------------------------------------------
 "s": true,
 "x": "The pointless \":\" button on iPad is gone, and restyled on iPhone. Also we removed support for iOS 13 and earlier. Onward into the future!",
