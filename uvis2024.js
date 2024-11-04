@@ -1985,33 +1985,168 @@ const batch2024oct = [{
 "t": "2024-10-10",
 "c": "E.g., sleep dashboard or activity dashboard",
 }, { // ------------------------------------------------------------------------
+"x": "Cute hand-sketched heart on the Oura landing page plus smoother re-authorization of Beeminder's access to your Oura should you revoke it and change your mind",
+"u": ["https://x.com/beemuvi/status/1844889618208129139",
+      "https://github.com/beeminder/beeminder/pull/5007"],
+"t": "2024-10-11",
+"c": "Namely, the revocation is now mutual",
 }, { // ------------------------------------------------------------------------
+"x": "Added new Strava activity types: golf, velomobile, skateboarding, sailing, and soccer!",
+"u": ["https://x.com/beemuvi/status/1845974351868530752",
+      "https://github.com/beeminder/beeminder/issues/4469",
+      "https://github.com/beeminder/beeminder/pull/5047"],
+"d": "2024-10-10",
+"t": "2024-10-14",
 }, { // ------------------------------------------------------------------------
+"x": "Also on Strava goal steup, moved walking to the top section of \"common activities\" and made a separation between common and \"the rest\" to make it clearer",
+"u": ["https://x.com/beemuvi/status/1846330671155024282",
+      "https://github.com/beeminder/beeminder/issues/4469",
+      "https://github.com/beeminder/beeminder/pull/5047"],
+"d": "2024-10-10",
+"t": "2024-10-15",
 }, { // ------------------------------------------------------------------------
+"x": "Finally (still Strava), made the select box resizable and made the font just a hair smaller, so you can see more items at once",
+"u": ["https://x.com/beemuvi/status/1846330759092883856",
+      "https://github.com/beeminder/beeminder/issues/4469",
+      "https://github.com/beeminder/beeminder/pull/5047"],
+"d": "2024-10-10",
+"t": "2024-10-15",
 }, { // ------------------------------------------------------------------------
+"x": "The Manifold integration wasn't letting you customize your deadline. Turns out there was no need for that restriction, so we removed it. HT gbear605",
+"u": ["https://x.com/beemuvi/status/1847418205905834228",
+      "https://github.com/beeminder/beeminder/pull/5051"],
+"d": "2024-10-16",
+"t": "2024-10-18",
 }, { // ------------------------------------------------------------------------
+"x": "We now accept time format for the rate in goal creation. If you want to do 15 minutes of knitting a day you can put 0:15 as the rate when setting up the goal.",
+"u": ["https://x.com/beemuvi/status/1848513430119944376",
+      "https://github.com/beeminder/beeminder/issues/578",
+      "https://github.com/beeminder/beeminder/pull/5050"],
+"d": "2024-10-16",
+"t": "2024-10-21",
 }, { // ------------------------------------------------------------------------
+"x": "The time-formatted-rates-in-goal-creation UVI messed up creating new inboxer and weight goals (which don't ask for a rate up front). #bugfix #zombie",
+"u": ["https://x.com/beemuvi/status/1848873260626415924",
+      "https://github.com/beeminder/beeminder/pull/5052",
+      "https://github.com/beeminder/beeminder/pull/5050"],
+"d": "2024-10-21",
+"t": "2024-10-22",
 }, { // ------------------------------------------------------------------------
+"x": "Help docs: Added links in the Zapier article, removed a no-longer-needed warning in YNAB, rearranged the flow and added warnings in \"How do I quit a goal?\"",
+"u": ["https://x.com/beemuvi/status/1848875022443811121",
+      "https://help.beeminder.com/article/87-zapier",
+      "https://help.beeminder.com/article/359-ynab",
+      "https://help.beeminder.com/article/44-how-do-i-quit-a-goal"],
+"d": "2024-10-14",
+"t": "2024-10-22",
 }, { // ------------------------------------------------------------------------
+"x": "Help docs: Added warnings and a link to the article on restarting archived goals, reordered/clarified things in \"How do I delete a goal?\", tweaked Withings",
+"u": ["https://x.com/beemuvi/status/1849232858302575015",
+      "https://help.beeminder.com/article/46-what-happens-to-an-archived-goal",
+      "https://help.beeminder.com/article/47-how-do-i-delete-a-goal",
+      "https://help.beeminder.com/article/90-withings"],
+"t": "2024-10-23",
 }, { // ------------------------------------------------------------------------
+"x": "Help docs: Clarifications in the account deletion article, html fixes in the iOS one, and changed the TagTime article to say the Android app is sadly retired",
+"u": ["https://x.com/beemuvi/status/1849600864480264368",
+      "https://help.beeminder.com/article/48-how-do-i-delete-my-account",
+      "https://help.beeminder.com/article/60-ios-app",
+      "https://help.beeminder.com/article/64-tagtime"],
+"t": "2024-10-24",
 }, { // ------------------------------------------------------------------------
+"x": "Help docs: The Beedroid article now explains how the app won't work when payments fail and what to do about that, plus tweaks to \"Android App Beta Testing\"",
+"u": ["https://x.com/beemuvi/status/1849955589713240486",
+      "https://help.beeminder.com/article/62-android-app",
+      "https://help.beeminder.com/article/158-android-app-beta-testing"],
+"t": "2024-10-25",
 }, { // ------------------------------------------------------------------------
+"x": "Help docs: Reformatted the iOS beta testing article to match the Android one plus added instructions on opting back out of the beta",
+"u": ["https://x.com/beemuvi/status/1849955917363806491",
+      "https://help.beeminder.com/article/321-ios-app-beta-testing"],
+"t": "2024-10-25",
 }, { // ------------------------------------------------------------------------
+"x": "Help docs: Added a link to the \"Can't you just lie?\" article, fixed a bad typo in the one about beneficiaries, plus tweaks to those and 2 other articles",
+"u": ["https://x.com/beemuvi/status/1851051435678712291",
+      "https://help.beeminder.com/article/34-cant-you-just-lie-about-your-data",
+      "https://help.beeminder.com/article/114-can-i-specify-a-beneficiary-for-my-derailments",
+      "https://help.beeminder.com/article/45-what-is-the-akrasia-horizon",
+      "https://help.beeminder.com/article/49-why-should-i-use-beeminder-over-stickk"],
+"t": "2024-10-28",
 }, { // ------------------------------------------------------------------------
+"x": "We now only show the 25 most recent honey money transactions on your payments page but you can click to see all of them",
+"u": ["https://x.com/beemuvi/status/1851412466531766500",
+      "https://github.com/beeminder/beeminder/issues/5004",
+      "https://github.com/beeminder/beeminder/pull/5056"],
+"t": "2024-10-29",
+"c": "This was a WVI request but is also a UVI to one's own payments page",
 }, { // ------------------------------------------------------------------------
+"x": "Additions and changes to the glossary, including starting to add links to the help docs",
+"u": ["https://blog.beeminder.com/glossary",
+      "https://x.com/beemuvi/status/1851412754269421765"],
+"d": "2024-10-29",
+"t": "2024-10-29",
 }, { // ------------------------------------------------------------------------
+"x": "Fixed a 500-error when you tried to view someone else's full list of honey money transactions, http://bmndr.co/ious/username #bugfix",
+"u": ["https://x.com/beemuvi/status/1851769366075052154",
+      "https://github.com/beeminder/beeminder/pull/5060"],
+"d": "2024-10-30",
+"t": "2024-10-30",
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
+"x": "We've implemented one-click unsubscribe for beemails. It's up to your email client how to show that to you but is visible for at least some users!",
+"u": ["https://x.com/beemuvi/status/1852115557090497009",
+      "https://github.com/beeminder/beeminder/issues/4725",
+      "https://github.com/beeminder/beeminder/issues/4759",
+      "https://github.com/beeminder/beeminder/pull/4958"],
+"d": "2024-10-25",
+"t": "2024-10-31",
 }, /* --------------------------------------------------------- end 2024oct */ ]
+
+const batch2024nov = [{
+}, { // ------------------------------------------------------------------------
+"x": "Turns out one-click unsubscribe was only live for the subset of users we still send beemails to via Mailgun, not via SendGrid. Now done for everyone, phew.",
+"u": ["https://x.com/beemuvi/status/1852497873101090897",
+      "https://github.com/beeminder/beeminder/pull/5064"],
+"d": "2024-11-01",
+"t": "2024-11-01",
+}, { // ------------------------------------------------------------------------
+"x": "Help docs: Got the Account Details article in line with the latest website copy and made small copy tweaks to the Derailing It Is Nailing It article",
+"u": ["https://x.com/beemuvi/status/1852498002751246790",
+      "https://help.beeminder.com/article/109-account-details",
+      "https://help.beeminder.com/article/335-derailing-is-not-failing"],
+"d": "2024-11-01",
+"t": "2024-11-01",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, /* --------------------------------------------------------- end 2024nov */ ]
 
 const staged = [ {
 }, { // ------------------------------------------------------------------------
@@ -2285,22 +2420,6 @@ X Privacy fix for group goal invites
 - Nix underscores in email subject
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-ADAM: Add One Click Unsubscribe to beemails
-This is for #4759
-This is a UVI.
-This should not be deployed yet.
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-DO THE REMAINING OURA THINGS COUNT AS UVIS OR ARE THEY PART OF OURA LAUNCH?
-oura (and other minor autodata) improvements:
-- new header for landing page
-X found a typo that broke the link to pocket for pocket autod goals (just the sidebar thing that says "this data is autogenerated from pocket")
-- send revocation to oura when user deletes the service
-X oura datapoints link to the dashboard for that day in oura's web interface (e.g. sleep dashboard, or activity dashboard)
-X made strava "view on strava" links open in a new tab so they don't take you away from your datapage.
-
-https://github.com/beeminder/beeminder/pull/5007
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 already tweeted, i think:
@@ -2314,10 +2433,10 @@ link preview on apple
 https://github.com/beeminder/beeminder/issues/1618#issuecomment-2327444912
 "c": "we haven't made any new changes to this since we last tweeted about it, i just found this open gissue in my freshening, and verified that what we do currently is sane"
 }, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 UM, weird: we are no longer listed in their community page, so maybe old this? I emailed the api-help person I have been communicating with....
 Got our beeminder integration approved for >25 users by YNAB, and added to their community page. https://api.ynab.com/#works-with-ynab-community
 https://github.com/beeminder/beeminder/issues/4980
-
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 BEEMIOS 2024-09-16:
@@ -2326,9 +2445,23 @@ BEEMIOS 2024-09-16:
 * Blue text doesn't work in dark mode (Issue #346): Fixed by #404
 * Sort dashboard exactly same as website (#49): Fixed by #451
 * Show goalname on timer screen [not merged yet]: https://github.com/beeminder/BeeSwift/issues/477
+* Maybe this is an older one but removing the deltatext numbers: https://github.com/beeminder/BeeSwift/pull/455
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-
+honey money regression (oldest 25 instead of newest)
+https://github.com/beeminder/beeminder/issues/5004#issuecomment-2454193039
+https://github.com/beeminder/beeminder/pull/5065
+hopefully deploying 2024-11-04
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
