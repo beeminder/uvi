@@ -2007,6 +2007,21 @@ t: "2023-12-20"
 "t": "2024-10-10"
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
+"x": "Job to migrate existing android tokens into new fcm token store along with timestamps.",
+"u": ["https://x.com/beeminfra/status/1847051267006517472"],
+"t": "2024-10-17"
+}, { // ------------------------------------------------------------------------
+"x": "Fixed a non-user-visible syntax error in Honeycomb tracking for the payment methods controller.",
+"u": ["https://x.com/beeminfra/status/1848485979184636193",
+"https://github.com/beeminder/beeminder/pull/4048",
+"https://github.com/beeminder/beeminder/issues/4047"],
+"d": "2024-01-07",
+"t": "2024-10-21"
+}, { // ------------------------------------------------------------------------
+"x": "Fixed a long standing annoyance for admins/devs where the advanced entry box doesn't work on your test goals.",
+"u": ["https://x.com/beeminfra/status/1852099482609160570","https://github.com/beeminder/beeminder/pull/5054"],
+"c": "or at all in dev. it was from a namespace conflict with the admin bar."
+}, { // ------------------------------------------------------------------------
 }, /* ----------------------------------------------------------- end batch */ ]
 
 var staged = [ { // note: sub-entries not allowed here in staging
@@ -2042,9 +2057,6 @@ d: 2024-01-12
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-"x": "Adjusted ratelimiting of writes to a goal through the api.",
-"u": ["https://github.com/beeminder/beeminder/pull/4749",
-]
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -2055,10 +2067,6 @@ https://github.com/beeminder/beeminder/pull/4862
 }, { // ------------------------------------------------------------------------
 "include the username in deleted goal subject for workerbees"
 https://github.com/beeminder/beeminder/pull/5026/files
-}, { // ------------------------------------------------------------------------
-"x": "migrate existing android tokens into new fcm token store along with timestamps"
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
