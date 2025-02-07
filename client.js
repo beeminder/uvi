@@ -245,4 +245,9 @@ function genstaged() {
   d.insertAdjacentHTML('beforeend', '<ol class="grayout">\n'+genol(l)+'</ol>')
 }
 
+function calcdays() {
+  document.getElementById('n').innerHTML = undayify_full(
+    Math.floor((Date.now() - 1298188800000) / (1000*60*60*24)))
+}
+
 // --------------------------------- 80chars ---------------------------------->

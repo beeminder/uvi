@@ -1,3 +1,21 @@
+html {
+  /*
+  For some reason, Chrome is messing up scroll anchoring on long pages.
+
+  What's scroll anchoring? Well, normally, web pages load top to bottom. But
+  sometimes, something high up on the page will change size, and everything
+  below it will need to have its position recalculated. This is called layout
+  shift and it's bad for a number of reasons. One is that if you were reading
+  something under it, it will jump around. Scroll anchoring is supposed to
+  compensate for this, by recalculating your scroll position when this happens.
+
+  Unfortunately, Chrome's is bugged on really long pages, and this is a really
+  long page. So we have to disable it, and also make really sure we never do
+  any layout shifts.
+  */
+  overflow-anchor: none;
+}
+
 body {
   font-family: verdana, sans-serif;
   /* font-family: "Lucida Console", Monaco, monospace; */
@@ -35,4 +53,9 @@ li {
   /* roman's original: #edff30 */
   /* a little dark: #FFFF00 */
   background-color: #FFFBCC;
+}
+
+.fa {
+  min-height: 14px;
+  min-width: 14px;
 }
