@@ -25,49 +25,6 @@ content="List of all User-Visible Improvements to Beeminder since 2011 Feb 20">
 </h1>
 </header>
 
-<script>
-// --------------------------------- 80chars ---------------------------------->
-// Kludge to make anchor links work when the DOM doesn't load all at once. Ewww.
-// Without this, the page scrolls to the wrong spot when you follow a link like
-// changelog.bmndr.co#1234
-// Worst is how we're guessing an amount of time to wait before rescrolling the
-// page. Too short and it won't work, cuz the page isn't done changing, and too
-// long and user might have already started manually scrolling and be pretty
-// annoyed to have the page rescroll itself.
-window.addEventListener('load', function() {
-  const hash = window.location.hash.slice(1); // Remove the '#' from the hash
-  if (!hash) return;
-  const te = document.getElementById(hash); // target element
-  if (te) { setTimeout(() => te.scrollIntoView(), 500) }
-});
-
-/* Serine's version, not working for me:  
-window.addEventListener('DOMContentLoaded', function() {
-  const hash = window.location.hash;
-  if (!hash) return;
-  te = document.getElementById(hash.slice(1));
-  te?.scrollIntoView();
-  let top = window.scrollY + te.getBoundingClientRect().top;
-  function updateScroll() {
-    let oldtop = top;
-    top = window.scrollY + te.getBoundingClientRect().top;
-    window.scrollTo(
-      window.scrollX,
-      window.scrollY + (top - oldtop)
-    );
-  }
-  window.addEventListener('load', updateScroll);
-  setTimeout(updateScroll, 100);
-  setTimeout(updateScroll, 300);
-  setTimeout(updateScroll, 500);
-  setTimeout(updateScroll, 1000);
-  setTimeout(updateScroll, 2000);
-  setTimeout(updateScroll, 3000);
-});
-*/
-// --------------------------------- 80chars ---------------------------------->
-</script>
-
 <main>
 
 <!--
@@ -125,12 +82,14 @@ We're keeping the link to the Twitter export until we're certain everything matc
 <img 
 alt="A bee working on the Infinibee logo"
 title="Image credit: Faire Soule-Reeves. Also the Beeminder founders made Faire Soule-Reeves."
-width="200px"
+width="200" height="200"
 src="https://cdn.glitch.com/048f1230-830a-4702-9106-1d28c7e8a2c9%2Ffaire-uvi-avatar-from-twitter.jpg?v=1589583921293"/>
 </center>
 
 <script src="/client.js"></script>
-
+<script>
+  calcdays()
+</script>
 
 <script src="/uvis2011.js"></script>
 <div id="2011feb"><script>genbatch(2011,  2)</script></div>
@@ -378,16 +337,11 @@ src="https://cdn.glitch.com/048f1230-830a-4702-9106-1d28c7e8a2c9%2Ffaire-uvi-ava
 <img 
 alt="A bee working on the Infinibee logo"
 title="Image credit: Faire Soule-Reeves. Also the Beeminder founders made Faire Soule-Reeves."
-width="200px"
+width="200" height="200"
 src="https://cdn.glitch.com/048f1230-830a-4702-9106-1d28c7e8a2c9%2Ffaire-uvi-avatar-from-twitter.jpg?v=1589583921293"/>
 </center>
 
 <div id="stg"></div><script>genstaged()</script>
-
-<script>
-  var d = document.getElementById("n")
-  d.innerHTML = undayify_full(n)
-</script>
 
 
 <!--
