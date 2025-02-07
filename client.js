@@ -25,7 +25,7 @@ const MONA = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', // month array
               'jul', 'aug', 'sep', 'oct', 'nov', 'dec']
 const MONAF = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
                'August', 'September', 'October', 'November', 'December']
-const NOTES = eval(getQueryParam('shownotes'))
+const NOTES = Number(getQueryParam('shownotes'))
 
 var n = 0 // global variable counting the PLEs as we generate them
 
@@ -222,7 +222,7 @@ function genol(l) {
 // Generate html for a batch of UVIs including the year/month header
 function genbatch(year, mon) {
   var d = document.getElementById(year + MONA[mon-1])
-  var l = eval("batch" + year + MONA[mon-1])
+  var l = window["batch" + year + MONA[mon-1]]
   var cd = new Date() // current date object
   var cur = cd.getFullYear() + ' ' + MONAF[cd.getMonth()]
   d.insertAdjacentHTML('beforeend', '<h3>'+year+' '+MONAF[mon-1]+
@@ -235,7 +235,7 @@ function genbatch(year, mon) {
 // Generate html for the batch of staged UVIs
 function genstaged() {
   var d = document.getElementById('stg')
-  var l = eval('staged')
+  var l = staged
   if (l.every(function(x) { return isEmpty(x) })) { return }
   d.insertAdjacentHTML('beforeend', '<h3 class="grayout">'
     +"<br>Staged UVIs</h3><p class=\"grayout\">"
