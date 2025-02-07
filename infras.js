@@ -2022,55 +2022,35 @@ t: "2023-12-20"
 "u": ["https://x.com/beeminfra/status/1852099482609160570","https://github.com/beeminder/beeminder/pull/5054"],
 "c": "or at all in dev. it was from a namespace conflict with the admin bar."
 }, { // ------------------------------------------------------------------------
+"x": "Cleanup of whitespace, line lengths, commas, and :vcr declarations in elf spec.",
+"u": ["https://github.com/beeminder/beeminder/pull/5062",
+"https://x.com/beeminfra/status/1854671846047924639"],
+"d": "2024-11-05",
+"t": "2024-11-07"
+}, { // ------------------------------------------------------------------------
+"x": "Include the username in deleted goal email's subject line (for the workerbees).",
+"u": ["https://github.com/beeminder/beeminder/pull/5026/files",
+"https://x.com/beeminfra/status/1857224402812969160"]
+}, { // ------------------------------------------------------------------------
+"x": "Enabled HSTS a while back and now increased HSTS time period to one month.",
+"u": ["https://x.com/beeminfra/status/1859738635765211383",
+"https://github.com/beeminder/beeminder/issues/3150",
+"https://github.com/beeminder/beeminder/pull/5086"],
+"d": "2024-11-21",
+"t": "2024-11-21"
+}, { // ------------------------------------------------------------------------
+"x": "Documented and refactored some confusing old names with manipulating graph matrixes.",
+"c": "This included changing 'restart'=>'jumpline', and others.",
+"u": ["https://x.com/beeminfra/status/1865191028086706212",
+"https://github.com/beeminder/beeminder/pull/5093"],
+"t": "2024-12-06",
+"d": "2024-12-03"
+}, { // ------------------------------------------------------------------------
+"x": "Minor improvement to translogging -- fixed a bug in scheduling weekends that introduced a different time format to the graph matrix.",
+"u": ["https://x.com/beeminfra/status/1867689539034395097",
+"https://github.com/beeminder/beeminder/pull/5104/files"],
+"d": "2024-12-13",
+"t": "2024-12-13"
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, /* ----------------------------------------------------------- end batch */ ]
-
-var staged = [ { // note: sub-entries not allowed here in staging
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, /* ---------------------------------------------------------- end staged */ ]
-
-/*
-METASTAGED: --10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
-https://github.com/beeminder/beeminder/commit/
-
-
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-## lighthouseci something something?
-1. Add lighthouseci Ansible role #97: https://github.com/beeminder/beeploy/pull/97
-"d": "2022-08-01"
-}, { // ------------------------------------------------------------------------
-revamp breaks with turbo and stimulus -- [lots of UVIs, but sure to be some infras as well]
-https://github.com/beeminder/beeminder/pull/4546
-}, { // ------------------------------------------------------------------------
-Changes to Accept headers 
-Properly 403 when request has no Accept header #4688
-https://github.com/beeminder/beeminder/issues/4686
-https://github.com/beeminder/beeminder/pull/4688
-d: 2024-01-12
-[HOLD: "This is UV and arguably I"]
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-debug logging for wakatime questions
-https://github.com/beeminder/beeminder/pull/4862
-
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-"include the username in deleted goal subject for workerbees"
-https://github.com/beeminder/beeminder/pull/5026/files
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-
-*/
