@@ -6,7 +6,7 @@
 
 'use strict';
 
-// list all the symbols we use here so Glitch doesn't complain!
+// list all the global symbols we use here so Glitch doesn't complain!
 /* globals staged */
 
 // StackOverflow says this is how you check if a hash is empty in ES5 (but
@@ -224,15 +224,15 @@ function genol(l) {
 
 // Generate html for a batch of UVIs including the year/month header
 function genbatch(year, mon) {
+  const l = window["batch" + year + MONA[mon-1]]
+  if (!l) { return }
   const d = document.getElementById(year + MONA[mon-1])
-  const l = eval("batch" + year + MONA[mon-1])
-  // The following eval-less version from SerineMolecule is not working for me:
-  //var l = window["batch" + year + MONA[mon-1]]
   const cd = new Date() // current date object
   const cur = cd.getFullYear() + ' ' + MONAF[cd.getMonth()]
   d.insertAdjacentHTML('beforeend', '<h3>'+year+' '+MONAF[mon-1]+
     (year===2011 && mon===2 ? 
-     ' <font size="-1">(<a href="#latest">jump to '+cur+' &darr;</a>)</font>' : '')
+     ' <font size="-1">(<a href="#latest">jump to '+cur+' &darr;</a>)</font>' 
+     : '')
     +'</h3>')
   d.insertAdjacentHTML('beforeend', '\n<ol>\n' + genol(l) + '</ol>\n')
 }
