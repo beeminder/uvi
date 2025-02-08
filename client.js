@@ -6,6 +6,9 @@
 
 'use strict';
 
+// list all the global symbols we use here so Glitch doesn't complain!
+/* globals staged */
+
 // StackOverflow says this is how you check if a hash is empty in ES5 (but
 // probably we can stop caring about ES5 by now!)
 function isEmpty(obj) { return Object.keys(obj).length === 0 }
@@ -25,7 +28,7 @@ const MONA = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', // month array
               'jul', 'aug', 'sep', 'oct', 'nov', 'dec']
 const MONAF = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
                'August', 'September', 'October', 'November', 'December']
-const NOTES = eval(getQueryParam('shownotes'))
+const NOTES = Number(getQueryParam('shownotes'))
 
 var n = 0 // global variable counting the PLEs as we generate them
 
@@ -221,22 +224,24 @@ function genol(l) {
 
 // Generate html for a batch of UVIs including the year/month header
 function genbatch(year, mon) {
-  var d = document.getElementById(year + MONA[mon-1])
-  var l = eval("batch" + year + MONA[mon-1])
-  var cd = new Date() // current date object
-  var cur = cd.getFullYear() + ' ' + MONAF[cd.getMonth()]
+  const l = window["batch" + year + MONA[mon-1]]
+  if (!l) { return }
+  const d = document.getElementById(year + MONA[mon-1])
+  const cd = new Date() // current date object
+  const cur = cd.getFullYear() + ' ' + MONAF[cd.getMonth()]
   d.insertAdjacentHTML('beforeend', '<h3>'+year+' '+MONAF[mon-1]+
     (year===2011 && mon===2 ? 
-     ' <font size="-1">(<a href="#latest">jump to '+cur+' &darr;</a>)</font>' : '')
+     ' <font size="-1">(<a href="#latest">jump to '+cur+' &darr;</a>)</font>' 
+     : '')
     +'</h3>')
   d.insertAdjacentHTML('beforeend', '\n<ol>\n' + genol(l) + '</ol>\n')
 }
 
 // Generate html for the batch of staged UVIs
 function genstaged() {
-  var d = document.getElementById('stg')
-  var l = eval('staged')
+  const l = staged; // from uvis[CURRENTYEAR].js
   if (l.every(function(x) { return isEmpty(x) })) { return }
+  const d = document.getElementById('stg')
   d.insertAdjacentHTML('beforeend', '<h3 class="grayout">'
     +"<br>Staged UVIs</h3><p class=\"grayout\">"
     +"(These are not official until deployed "
