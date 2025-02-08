@@ -257,6 +257,11 @@ const batch2025jan = [{
 "t": "2025-02-06",
 "c": "I rearranged what I did yesterday and made it slightly better, so that's why there are two PRs now",
 }, { // ------------------------------------------------------------------------
+"x": "SerineMolecule fixed the bug w/ anchor links here in the changelog. Linking to specific UVIs works now without scrolling slightly away from the target! #bugfix",
+"u": ["https://x.com/beemuvi/status/1888027264756936832",
+      ],
+"d": "2025-02-07",
+"t": "2025-02-07",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
