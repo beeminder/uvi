@@ -204,13 +204,15 @@ const batch2025jan = [{
 "t": "2025-01-30",
 "c": "This is for the kind of auto-fetch error that puts up a blue banner. Also the tweeted version of this was slightly wrong.",
 }, { // ------------------------------------------------------------------------
-// TODO: add to meta/uvi
-  
 "x": "The API has a new boolean field to tell you if a datapoint is a true logical datapoint or just a placeholder/meta datapoint like marking a derail (is_dummy)",
 "u": ["https://x.com/beemuvi/status/1885492312543027453",
       "https://github.com/beeminder/BeeSwift/pull/599#issuecomment-2599381144"],
 "t": "2025-01-31",
 "c": "Also PPRs are considered dummy datapoints in this sense",
+}, /* --------------------------------------------------------- end 2025jan */ ]
+
+
+const batch2025feb = [{
 }, { // ------------------------------------------------------------------------
 "x": "The API also has a new boolean field to distinguish the initial datapoint that's added as part of goal creation: is_initial (documented these as well)",
 "u": ["https://x.com/beemuvi/status/1886535306104725870",
@@ -259,19 +261,31 @@ const batch2025jan = [{
 }, { // ------------------------------------------------------------------------
 "x": "SerineMolecule fixed the bug w/ anchor links here in the changelog. Linking to specific UVIs works now without scrolling slightly away from the target! #bugfix",
 "u": ["https://x.com/beemuvi/status/1888027264756936832",
-      ],
+      "https://github.com/beeminder/uvi"],
 "d": "2025-02-07",
 "t": "2025-02-07",
 }, { // ------------------------------------------------------------------------
+"x": "Help docs: Subtle edits to the \"how much do I pledge?\" article to encourage derailing-it-is-nailing-it plus tweaks/rearranging to 5 other articles",
+"u": ["https://x.com/beemuvi/status/1889120491623109099",
+      "https://help.beeminder.com/article/20-how-much-do-i-pledge-on-my-goals",
+      "https://help.beeminder.com/article/21-can-i-decrease-the-pledge-on-my-goal",
+      "https://help.beeminder.com/article/24-how-do-i-manage-my-subscription",
+      "https://help.beeminder.com/article/26-what-if-i-buy-one-plan-and-change-my-mind",
+      "https://help.beeminder.com/article/27-what-payment-methods-are-available",
+      "https://help.beeminder.com/article/28-how-do-i-update-my-payment-information"],
+"t": "2025-02-10",
+}, { // ------------------------------------------------------------------------
+"x": "Help docs: Same story for the \"can I increase the pledge?\" article plus tweaks/clarifications to another 3 articles",
+"u": ["https://x.com/beemuvi/status/1889120644962640273",
+      "https://help.beeminder.com/article/343-can-i-increase-the-pledge-on-my-goal",
+      "https://help.beeminder.com/article/22-can-i-limit-how-high-my-pledge-gets",
+      "https://help.beeminder.com/article/23-can-i-have-goals-without-pledges",
+      "https://help.beeminder.com/article/25-how-do-auto-canceling-subscriptions-work"],
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-}, /* --------------------------------------------------------- end 2025jan */ ]
-
-
-const batch2025feb = [{
 }, { // ------------------------------------------------------------------------
 }, /* --------------------------------------------------------- end 2025feb */ ]
 
@@ -635,7 +649,6 @@ firefox add-on for super-collapsing dashboard goals
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 - UNCLE api endpoint [TODO: document in api and then we can count this]
-}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------

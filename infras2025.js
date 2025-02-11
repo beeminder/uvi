@@ -24,12 +24,26 @@ var batch2025jan = [{
 "u": ["https://x.com/beeminfra/status/1881483330312720698"],
 "t": "2025-01-20",
 }, { // ------------------------------------------------------------------------
+"x": "Robustified translog fetching script and trim how far back it looks.",
+"u": [
+"https://x.com/beeminfra/status/1884022025955729724"],
+"t": "2025-01-27",
+"d": ""
+}, { // ------------------------------------------------------------------------
 "x": "Debug logging for wakatime and storygraph issues, and differentiate source of ResponseErrors in the library.",
 "u": ["https://x.com/beeminfra/status/1886538580048404983",
 "https://github.com/beeminder/beeminder/pull/4862",
 "https://github.com/beeminder/beeminder/pull/5145"],
 "d": "2025-01-27",
 "t": "2025-02-03"
+}, { // ------------------------------------------------------------------------
+"x": "Robustified spec for the breaks page where capybara was struggling with some timezone related things.",
+"u": [
+"https://github.com/beeminder/beeminder/pull/5158",
+"https://x.com/beeminfra/status/1889113970273075658",
+],
+"t": "2025-02-10",
+"d": "2025-02-07"
 }, { // ------------------------------------------------------------------------
 }, /* ----------------------------------------------------------- end batch */ ]
 
@@ -53,14 +67,14 @@ https://github.com/beeminder/beeminder/commit/
 revamp breaks with turbo and stimulus -- [lots of UVIs, but sure to be some infras as well]
 https://github.com/beeminder/beeminder/pull/4546
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-"x": "Robustified translog fetching script and trim how far back it looks."
+"x": "MVP for admin analytics page.",
 "u": [
-
-"https://x.com/beeminfra/status/1884022025955729724"]
+"https://github.com/beeminder/beeminder/pull/5155"
+],
+"t": "",
+"d": "2025-02-07"
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 
