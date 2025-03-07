@@ -1,3 +1,5 @@
+/* globals batches */
+
 batches['2025jan'] = [{
 }, { // ------------------------------------------------------------------------
 "x": "The breaks page now disallows breaks after the implicit end date (for goals w/ a final target + rate, w/ inferred end date). #bugfix HT Clive",
@@ -385,22 +387,22 @@ batches['2025feb'] = [{
 
 batches['2025mar'] = [{
 }, { // ------------------------------------------------------------------------
-"x": "Help docs: New FAQ item / clarification in the article for the Fatebook autodata integration, plus copy tweaks to 3 other articles",
-"u": ["https://x.com/beemuvi/status/1896723193441964234",
-      "https://help.beeminder.com/article/366-fatebook",
-      "https://help.beeminder.com/article/16-what-is-a-legit-derailment",
-      "https://help.beeminder.com/article/360-what-is-no-excuses-mode",
-      "https://help.beeminder.com/article/61-apple-health"],
-"t": "2025-03-03",
+x: "Help docs: New FAQ item / clarification in the article for the Fatebook autodata integration, plus copy tweaks to 3 other articles",
+u: ["https://x.com/beemuvi/status/1896723193441964234",
+    "https://help.beeminder.com/article/366-fatebook",
+    "https://help.beeminder.com/article/16-what-is-a-legit-derailment",
+    "https://help.beeminder.com/article/360-what-is-no-excuses-mode",
+    "https://help.beeminder.com/article/61-apple-health"],
+t: "2025-03-03",
 }, { // ------------------------------------------------------------------------
-"x": "Help docs: The Focusmate autodata integration article now covers the new time-based metric, plus copy tweaks or added details to 4 more articles",
-"u": ["https://x.com/beemuvi/status/1896724799818543295",
-      "https://help.beeminder.com/article/278-focusmate",
-      "https://help.beeminder.com/article/17-what-happens-when-i-derail",
-      "https://help.beeminder.com/article/290-clozemaster",
-      "https://help.beeminder.com/article/288-codecombat",
-      "https://help.beeminder.com/article/364-curlex"],
-"t": "2025-03-03",
+x: `Help docs: The Focusmate autodata integration article now covers the new time-based metric, plus copy tweaks or added details to 4 more articles`,
+u: ["https://x.com/beemuvi/status/1896724799818543295",
+    "https://help.beeminder.com/article/278-focusmate",
+    "https://help.beeminder.com/article/17-what-happens-when-i-derail",
+    "https://help.beeminder.com/article/290-clozemaster",
+    "https://help.beeminder.com/article/288-codecombat",
+    "https://help.beeminder.com/article/364-curlex"],
+t: "2025-03-03",
 }, { // ------------------------------------------------------------------------
 }, /* --------------------------------------------------------- end 2025mar */ ]
 
