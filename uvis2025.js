@@ -282,6 +282,100 @@ const batch2025feb = [{
       "https://help.beeminder.com/article/23-can-i-have-goals-without-pledges",
       "https://help.beeminder.com/article/25-how-do-auto-canceling-subscriptions-work"],
 }, { // ------------------------------------------------------------------------
+"f": true,
+"x": "Official launch of our Fatebook (with a T) integration! https://blog.beeminder.com/fatebook",
+"u": ["https://x.com/beemuvi/status/1889499697821499512",
+      "https://github.com/beeminder/blog/issues/582",
+      "https://github.com/beeminder/integrations/issues/52",
+      "https://github.com/beeminder/beeminder/issues/5114",
+      "https://github.com/beeminder/beeminder/pull/5160"],
+"d": "2025-02-11",
+"t": "2025-02-11",
+"c": "Improvements to the landing page, logo on front page gallery, blog post",
+}, { // ------------------------------------------------------------------------
+"x": "Help docs: New article for the new Fatebook integration",
+"u": ["https://x.com/beemuvi/status/1889500812759761090",
+      "https://help.beeminder.com/article/366-fatebook"],
+"d": "2025-02-11",
+"t": "2025-02-11",
+}, { // ------------------------------------------------------------------------
+"x": "We fixed the alignment of the integrations gallery so when the don't fit in a nice rectangle, the overlow is left-justified",
+"u": ["https://x.com/beemuvi/status/1890201640264954337",
+      "https://github.com/beeminder/beeminder/commit/615f17f39eca9dcea34bb1ac4789f786c9857a94"],
+"t": "2025-02-13",
+}, { // ------------------------------------------------------------------------
+"x": "Also we improved the spacing of the gallery and made the logos slightly smaller so things fit better",
+"u": ["https://x.com/beemuvi/status/1890201677913104869",
+      "https://github.com/beeminder/beeminder/commit/615f17f39eca9dcea34bb1ac4789f786c9857a94"],
+"d": "2025-02-11",
+"t": "2025-02-13",
+}, { // ------------------------------------------------------------------------
+"x": "Removed all-commits tracking from Gitminder for now; it has been semi-broken because the API it uses is not realtime and we can miss data & derail edge-skaters",
+"u": ["https://x.com/beemuvi/status/1890555566482690220",
+      "https://github.com/beeminder/beeminder/pull/5167"],
+"d": "2025-02-14",
+"t": "2025-02-14",
+}, { // ------------------------------------------------------------------------
+"x": "Toggl changed their URLs around and we now once again link to the right place to find your token for pasting in to create a Beeminder autodata goal",
+"u": ["https://x.com/beemuvi/status/1892013006973698393",
+      "https://github.com/beeminder/beeminder/issues/5172",
+      "https://github.com/beeminder/beeminder/pull/5170"],
+"d": "2025-02-18",
+"t": "2025-02-18",
+}, { // ------------------------------------------------------------------------
+"x": "We fixed a slight/sorta error in the feet-weeting emailcopy and added a conditional blurb for the (edge) case that the goal ended up archived (somehow)",
+"u": ["https://x.com/beemuvi/status/1892368469800227298",
+      "https://github.com/beeminder/beeminder/issues/4947",
+      "https://github.com/beeminder/beeminder/pull/5169"],
+"d": "2025-02-18",
+"t": "2025-02-19",
+"c": "HT Andy. This is so corner-casey: it involves creating the goal, turning on no-excuses mode (otherwise there's no option to archive, only delete), and then immediately archive it. And then maybe losing a race condition?",
+}, { // ------------------------------------------------------------------------
+"x": "Help docs: Rearranging and clarifying in the \"Why did Beeminder charge me?\" article plus smaller tweaks to 4 other articles",
+"u": ["https://x.com/beemuvi/status/1892739995607433546",
+      "https://help.beeminder.com/article/29-why-did-beeminder-charge-my-card",
+      "https://help.beeminder.com/article/30-what-happens-if-a-charge-fails",
+      "https://help.beeminder.com/article/354-honey-money",
+      "https://help.beeminder.com/article/12-what-is-a-derailment",
+      "https://help.beeminder.com/article/13-when-do-derailments-happen"],
+"t": "2025-02-20",
+}, { // ------------------------------------------------------------------------
+"x": "Fixed a bug introduced by UVI#5122 where we weren't validating your tracked repo when you set up a new GitHub (Gitminder) goal. #bugfix #zombie",
+"u": ["https://x.com/beemuvi/status/1894185693074649553",
+      "https://github.com/beeminder/beeminder/issues/5027",
+      "https://github.com/beeminder/beeminder/pull/5173"],
+"t": "2025-02-24",
+"c": "Autodata integration improvements. UVI#5122 removed all-commits from goal setup, and that messed up the validation, so we weren't even checking if you entered a repo, let alone whether or not we could access it with your credentials",
+}, { // ------------------------------------------------------------------------
+"x": "Our GitHub integration now checks and keeps in sync the last week of data, in line with other autodata, rather than just the current day",
+"u": ["https://x.com/beemuvi/status/1894185827292295201",
+      "https://github.com/beeminder/beeminder/issues/5027",
+      "https://github.com/beeminder/beeminder/pull/5173"],
+"t": "2025-02-24",
+"c": "This is to help with gissue #5027 -- part of the problem with the allcommits endpoint not being real-time was that if the delay happened across midnight, we'd miss the commits entirely because we didn't go back and check past days",
+}, { // ------------------------------------------------------------------------
+"x": "We now check that the goaldate parameter passed to the API in goal creation is a Unix timestamp, and give a coherent error if not",
+"u": ["https://x.com/beemuvi/status/1894548534541914594",
+      "https://github.com/beeminder/beeminder/issues/4952",
+      "https://github.com/beeminder/beeminder/pull/5174"],
+"t": "2025-02-25",
+"c": "Prior to this we were just accepting it and interpreting as 1969-12-31, which is super wrong",
+}, { // ------------------------------------------------------------------------
+"x": "To catch more errors (e.g., unixtime in milliseconds instead of seconds), we further enforce NOW < goaldate < 2099-12-31",
+"u": ["https://x.com/beemuvi/status/1894914472650977571",
+      "https://github.com/beeminder/beeminder/pull/5174",
+      "https://github.com/beeminder/beeminder/pull/5177"],
+"t": "2025-02-26",
+}, { // ------------------------------------------------------------------------
+"x": "Help docs: Added to the Boss as a Service integration article info about non-legit derailments when using that integration",
+"u": ["https://x.com/beemuvi/status/1894914534697316564",
+      "https://help.beeminder.com/article/329-boss-as-a-service-baas"],
+"t": "2025-02-26",
+"c": "We still also allow nil/null goaldate",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -290,6 +384,23 @@ const batch2025feb = [{
 }, /* --------------------------------------------------------- end 2025feb */ ]
 
 const batch2025mar = [{
+}, { // ------------------------------------------------------------------------
+"x": "Help docs: New FAQ item / clarification in the article for the Fatebook autodata integration, plus copy tweaks to 3 other articles",
+"u": ["https://x.com/beemuvi/status/1896723193441964234",
+      "https://help.beeminder.com/article/366-fatebook",
+      "https://help.beeminder.com/article/16-what-is-a-legit-derailment",
+      "https://help.beeminder.com/article/360-what-is-no-excuses-mode",
+      "https://help.beeminder.com/article/61-apple-health"],
+"t": "2025-03-03",
+}, { // ------------------------------------------------------------------------
+"x": "Help docs: The Focusmate autodata integration article now covers the new time-based metric, plus copy tweaks or added details to 4 more articles",
+"u": ["https://x.com/beemuvi/status/1896724799818543295",
+      "https://help.beeminder.com/article/278-focusmate",
+      "https://help.beeminder.com/article/17-what-happens-when-i-derail",
+      "https://help.beeminder.com/article/290-clozemaster",
+      "https://help.beeminder.com/article/288-codecombat",
+      "https://help.beeminder.com/article/364-curlex"],
+"t": "2025-03-03",
 }, { // ------------------------------------------------------------------------
 }, /* --------------------------------------------------------- end 2025mar */ ]
 
@@ -332,9 +443,6 @@ const batch2025dec = [{
 
 
 const staged = [ {
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -617,6 +725,8 @@ BEEMIOS POST-6.7
 * accidentally showed deadbeat briefly: https://github.com/beeminder/BeeSwift/issues/586
 * sort-by-pledge matches website: https://github.com/beeminder/BeeSwift/issues/578
 * fix blank icon in iOS 17: https://github.com/beeminder/BeeSwift/issues/621
+* incremental goal updates: https://github.com/beeminder/BeeSwift/pull/635
+* date is wrong at first? or was this in 6.7?: https://github.com/beeminder/BeeSwift/issues/473
 }, { // ------------------------------------------------------------------------
 BEEMIOS 2024-09-16:
 * Don't delete the #DERAIL datapoint: Closed #456 as completed via #474.
@@ -652,14 +762,73 @@ firefox add-on for super-collapsing dashboard goals
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
+HELP DOCS
+small or no UVI yet:
+https://help.beeminder.com/article/11-fitbit
+Added a note that Fitbit can be used as a bridge to Beeminder for data from other services. Small UVI, or no UVI because I haven’t explained how?
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
+andy aggday thing:
+https://github.com/beeminder/beeminder/compare/4b2219ce39f7%5E...f15111044035
+andy aggday stuff?
+https://github.com/beeminder/beeminder/pull/5180#event-16518662889
+
+5b53565 small refactor for goal method
+5e442fa show aggday warnings
+74e7b48 add datapoint helper for formatted value
+1c83ca2 use new datapoint method for formatted value
+a1e8a61 move aggday info to its own box
+0fb91a7 link to docs for all aggday options
+
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
+"x": "We added an explicit link to the dashboard in the dropdown menu in the upper right of the website; apparently not everyone knew how to find the dashboard",
+"u": ["https://x.com/beemuvi/status/1895274339584679995",
+      "https://github.com/beeminder/beeminder/pull/5181"],
+"d": "2025-02-27",
+"t": "2025-02-27",
+}, { // ------------------------------------------------------------------------
+"x": "While we were at it we changed \"gallery\" to \"gallery view\" and added some handy tooltips",
+"u": ["https://x.com/beemuvi/status/1895573333862989913",
+      "https://github.com/beeminder/beeminder/pull/5181"],
+"t": "2025-02-28",
+}, { // ------------------------------------------------------------------------
+TODO: oops, forgot to move the two things above up
+}, { // ------------------------------------------------------------------------
+"x": "For consistency (and cuteness?) and I guess in some cases actual usefulness, we added tooltips to pretty much everything in the navbar and dropdown menu",
+"u": ["https://x.com/beemuvi/status/1897080286581842025",
+      "https://github.com/beeminder/beeminder/issues/5182",
+      "https://github.com/beeminder/beeminder/pull/5184"],
+"t": "2025-03-04",
+}, { // ------------------------------------------------------------------------
+"x": "Oops, we accidentally swapped the Log In and Sign Up links. #bugfix #zombie",
+"u": ["https://x.com/beemuvi/status/1897451417662812638",
+      "https://forum.beeminder.com/t/log-in-and-sign-up-buttons-permuted/12269",
+      "https://github.com/beeminder/beeminder/pull/5189"],
+"t": "2025-03-05",
+}, { // ------------------------------------------------------------------------
+"x": "While we were at it / for completionism, we added tooltips to the remaining navbar / menu items, and improved several of them",
+"u": ["https://x.com/beemuvi/status/1897451534675595342",
+      ],
+"t": "2025-03-05",
+}, { // ------------------------------------------------------------------------
+"x": "Help docs: Clarification about donations to freeCodeCamp in the article about the autodata integration, plus tweaks to 2 other autodata articles",
+"u": ["https://x.com/beemuvi/status/1897814167329161530",
+      "https://help.beeminder.com/article/287-freecodecamp",
+      "https://help.beeminder.com/article/80-duolingo",
+      "https://help.beeminder.com/article/74-garmin"],
+"t": "2025-03-06",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
+don't delete derail datapt in autodata
+for #4192.
+needs quals for autodatas, and decide if ths is correct response to 4192
+https://github.com/beeminder/beeminder/pull/5183
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
+finish up using noderail scope #5186
+UVI: this is a followon to 4192, but does not constitute a UVI on its own.
+https://github.com/beeminder/beeminder/pull/5186
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
