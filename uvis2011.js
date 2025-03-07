@@ -1,4 +1,4 @@
-var batch2011feb = [{
+batches['2011feb'] = [{
 "x": "Created <a href=\"http://twitter.com/beemuvi\" title=\"@beemuvi is just for tweeting UVIs; Beeminder's main Twitter account is @bmndr\">this twitter acct</a> to log user-visible improvements (UVIs) to Beeminder. (Yes, this is a UVI. Everything counts no matter how small!)",
 "d": "2011-02-20",
 "t": "2011-02-20", // "2011-02-20 19:14:06 +0000",
@@ -42,7 +42,7 @@ var batch2011feb = [{
 "t": "2011-02-25 18:24:02 +0000",
 } /* ---------------------------------------------------------- end 2011feb */ ]
 
-var batch2011mar = [{
+batches['2011mar'] = [{
 "x": "Negative rates are no longer confusingly listed in the wrong order in the stats at the bottom of graphs.",
 "u": "https://twitter.com/beemuvi/status/42701921961787392",
 "t": "2011-03-01 21:45:06 +0000",
@@ -167,7 +167,7 @@ var batch2011mar = [{
 "c": "Note from the future: Blog posts don't count as UVIs anymore, especially not this one which doesn't even have anything to do with Beeminder (rolls eyes at past selves)",
 } /* ---------------------------------------------------------- end 2011mar */ ]
 
-var batch2011apr = [{
+batches['2011apr'] = [{
 "x": "Unix timestamps always output as integers in API. Matters because they serve as identifiers for datapoints. Also better error handling.",
 "u": "https://twitter.com/beemuvi/status/53946493190684672",
 "t": "2011-04-01 22:27:00 +0000",
@@ -361,7 +361,7 @@ var batch2011apr = [{
 "t": "2011-05-01 00:30:36 +0000",
 } /* ---------------------------------------------------------- end 2011apr */ ]
 
-var batch2011may = [
+batches['2011may'] = [
 {
 "x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: Post on <a href=\"https://twitter.com/msymtrs\">@msymtrs</a> blog about an experimental part of beeminder: (bee)minding how you spend your time. http://messymatters.com/tagtime",
 "u": "https://twitter.com/bmndr/status/65018163489816576",
@@ -408,7 +408,7 @@ var batch2011may = [
 "t": "2011-05-31 02:29:35 +0000",
 }, /* --------------------------------------------------------- end 2011may */ ]
 
-var batch2011jun = [
+batches['2011jun'] = [
 {
 "x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: Going all soup-nazi on our users: http://blog.beeminder.com/akratics #akrasia",
 "u": "https://twitter.com/bmndr/status/75774306155630593",
@@ -535,7 +535,7 @@ var batch2011jun = [
 "t": "2011-06-28 22:29:29 +0000",
 }, /* --------------------------------------------------------- end 2011jun */ ]
 
-var batch2011jul = [
+batches['2011jul'] = [
 {
 "x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: Commitment contracts with maximal flexibility: Beeminder's Force Majeure Clause. <a href=\"http://blog.beeminder.com/sos\">blog.beeminder.com/sos</a> #akrasia",
 "u": "https://twitter.com/bmndr/status/86901351812055040",
@@ -670,7 +670,7 @@ var batch2011jul = [
 "t": "2011-07-31 04:56:08 +0000",
 }, /* --------------------------------------------------------- end 2011jul */ ]
 
-var batch2011aug = [
+batches['2011aug'] = [
 {
 "x": "Bug fix: couple people's bot reminders not going out (and should always be sent within an hour of specified time now)",
 "u": "https://twitter.com/beemuvi/status/98253774224764928",
@@ -821,7 +821,7 @@ var batch2011aug = [
 "t": "2011-08-31 18:38:42 +0000",
 }, /* --------------------------------------------------------- end 2011aug */ ]
 
-var batch2011sep = [
+batches['2011sep'] = [
 {
 "x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: New blog post: The Road Dial and the Akrasia Horizon. <a href=\"http://blog.beeminder.com/dial\">blog.beeminder.com/dial</a> (commitment devices with maximal flexibility)",
 "u": "https://twitter.com/bmndr/status/109114106589614080",
@@ -969,7 +969,7 @@ var batch2011sep = [
 "t": "2011-09-29 23:53:07 +0000",
 }, /* --------------------------------------------------------- end 2011sep */ ]
 
-var batch2011oct = [
+batches['2011oct'] = [
 {
 "x": "Number of safety buffer days (how long till you go off the YBR if you do nothing) now in the subject of bot reminder emails & sms reminders",
 "u": "https://twitter.com/beemuvi/status/120026613676126208",
@@ -1109,7 +1109,7 @@ var batch2011oct = [
 "t": "2011-10-31 00:27:23 +0000",
 }, /* ---------------------------------------------------------- end 2011oc */ ]
 
-var batch2011nov = [
+batches['2011nov'] = [
 {
 "x": "Bugfix in datepicker when setting goal date that made calendar show up 1st time you click date, but not 2nd time.",
 "u": "https://twitter.com/beemuvi/status/131992467225591808",
@@ -1188,7 +1188,7 @@ var batch2011nov = [
 "t": "2011-12-01 01:26:32 +0000",
 }, /* --------------------------------------------------------- end 2011nov */ ]
 
-var batch2011dec = [
+batches['2011dec'] = [
 {
 "x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: Another post-hoc justification for the name \"beeminder\": You use <a href=\"https://twitter.com/bmndr\">@bmndr</a> because you want to be minded. <a href=\"http://blog.beeminder.com/beenamer\">blog.beeminder.com/beenamer</a>",
 "u": "https://twitter.com/bmndr/status/142695414569771008",

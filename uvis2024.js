@@ -1,4 +1,4 @@
-const batch2024jan = [{
+batches['2024jan'] = [{
 }, { // ------------------------------------------------------------------------
 "x": "Fixed broken blog images on the front page and robusted up the script that generates them so they shouldn't break again",
 "u": ["https://twitter.com/beemuvi/status/1741984677945287147",
@@ -273,7 +273,7 @@ const batch2024jan = [{
 }, /* --------------------------------------------------------- end 2024jan */ ]
 
 
-const batch2024feb = [{
+batches['2024feb'] = [{
 }, { // ------------------------------------------------------------------------
 "x": "We messed up UVI#4684 when we claimed that `Authorization: Bearer` now worked for API request authorizations. #bugfix HT Theo Spears",
 "u": ["https://twitter.com/beemuvi/status/1753220563676643474",
@@ -462,7 +462,7 @@ const batch2024feb = [{
 "c": "Slighty WIP still, because there are still kind of pinky flowery images, but it's back to the default/base beeminder theme, and most of the hearts etc are gone",
 }, /* --------------------------------------------------------- end 2024feb */ ]
 
-const batch2024mar = [{
+batches['2024mar'] = [{
 }, { // ------------------------------------------------------------------------
 "x": "Help docs: Fixed some goofy HTML in the Lichess integration article and added a section on using Do Less goals with Lichess, since users asked about that",
 "u": ["https://twitter.com/beemuvi/status/1764810105520877917",
@@ -693,7 +693,7 @@ const batch2024mar = [{
 }, /* --------------------------------------------------------- end 2024mar */ ]
 
 
-const batch2024apr = [{
+batches['2024apr'] = [{
 }, { // ------------------------------------------------------------------------
 "x": "The blog has its own cute favicon now",
 "u": ["https://twitter.com/beemuvi/status/1776036432093843644",
@@ -954,7 +954,7 @@ const batch2024apr = [{
 }, { // ------------------------------------------------------------------------
 }, /* --------------------------------------------------------- end 2024apr */ ]
 
-const batch2024may = [{
+batches['2024may'] = [{
 }, { // ------------------------------------------------------------------------
 "x": "The introduction of feet-wetting mode broke the CSS for checkboxes elsewhere in the UI. #bugfix #zombie",
 "u": ["https://twitter.com/beemuvi/status/1787992929832984639",
@@ -1170,7 +1170,7 @@ const batch2024may = [{
 "t": "2024-05-28",
 }, /* --------------------------------------------------------- end 2024may */ ]
 
-const batch2024jun = [{
+batches['2024jun'] = [{
 }, { // ------------------------------------------------------------------------
 "x": "We fixed some confusion-to-the-point-of-bugginess by not letting you create a goal with starting pledge greater than pledge cap (was possible on Beemium)",
 "u": ["https://x.com/beemuvi/status/1801403302107861274",
@@ -1279,7 +1279,7 @@ const batch2024jun = [{
 }, { // ------------------------------------------------------------------------
 }, /* --------------------------------------------------------- end 2024jun */ ]
 
-const batch2024jul = [{
+batches['2024jul'] = [{
 }, { // ------------------------------------------------------------------------
 "x": "Help docs: Added a clearly-needed explainer to the article on getting rid of extra safety buffer, about two-step ratcheting to remove a flat spot",
 "u": ["https://x.com/beemuvi/status/1807924421140832743",
@@ -1483,7 +1483,7 @@ const batch2024jul = [{
 }, /* --------------------------------------------------------- end 2024jul */ ]
 
 
-const batch2024aug = [{
+batches['2024aug'] = [{
 }, { // ------------------------------------------------------------------------
 "x": "Help docs: Updates to \"What happens if a charge fails?\" about retrying charges on your own, plus more on honey money there and in another article",
 "u": ["https://x.com/beemuvi/status/1819158158495174817",
@@ -1742,7 +1742,7 @@ const batch2024aug = [{
 "t": "2024-08-30",
 }, /* --------------------------------------------------------- end 2024aug */ ]
 
-const batch2024sep = [{
+batches['2024sep'] = [{
 }, { // ------------------------------------------------------------------------
 "x": "We went full anti-magic on the x-min setting: Pick a date that's before your graph has any data and you'll just see empty space on the left side of it",
 "u": ["https://x.com/beemuvi/status/1830728450703008099",
@@ -1927,7 +1927,7 @@ const batch2024sep = [{
 "t": "2024-10-03",
 }, /* --------------------------------------------------------- end 2024sep */ ]
 
-const batch2024oct = [{
+batches['2024oct'] = [{
 }, { // ------------------------------------------------------------------------
 "x": "Fixed a dumb javascript bug that prevented editing one's fine print when No-Excuses Mode was on. #bugfix",
 "u": ["https://x.com/beemuvi/status/1842353663840538853",
@@ -2102,7 +2102,7 @@ const batch2024oct = [{
 "t": "2024-10-31",
 }, /* --------------------------------------------------------- end 2024oct */ ]
 
-const batch2024nov = [{
+batches['2024nov'] = [{
 }, { // ------------------------------------------------------------------------
 "x": "Turns out one-click unsubscribe was only live for the subset of users we still send beemails to via Mailgun, not via SendGrid. Now done for everyone, phew.",
 "u": ["https://x.com/beemuvi/status/1852497873101090897",
@@ -2272,7 +2272,7 @@ const batch2024nov = [{
 "t": "2024-11-25",
 }, /* --------------------------------------------------------- end 2024nov */ ]
 
-const batch2024dec = [{
+batches['2024dec'] = [{
 }, { // ------------------------------------------------------------------------
 "x": "Help docs: Added to the Post-derail Respite article an explanation of how it works for Do Less, Odometer, Whittle Down, and Weight goals",
 "u": ["https://x.com/beemuvi/status/1863721925182361984",

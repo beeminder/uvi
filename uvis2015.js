@@ -1,4 +1,4 @@
-var batch2015jan = [
+batches['2015jan'] = [
 {
 //"n": 1411,
 "x": "If there was an error submitting credit card info we left the submit button disabled till you refreshed. #bugfix HT <a href=\"http://dreev.es/eli5\">Faire Soule-Reeves</a>",
@@ -135,7 +135,7 @@ var batch2015jan = [
 "t": "2015-01-31 23:51:16 +0000",
 }, /*************************************************************************/ ]
 
-var batch2015feb = [
+batches['2015feb'] = [
 {
 "x": "For ppl who'd created gitminder goals before or out of freebees, we were failing to redirect to the goal page after goal creation. #bugfix",
 "u": "https://twitter.com/beemuvi/status/562043791654125568",
@@ -262,7 +262,7 @@ var batch2015feb = [
 "t": "2015-03-01 00:49:40 +0000",
 }, /*************************************************************************/ ]
 
-var batch2015mar = [
+batches['2015mar'] = [
 {
 //"n": 1470,
 "x": "Added hint \"(Did you mix up auth_token and access_token?)\" to an API error message and added two more aggday functions: square and clocky",
@@ -396,7 +396,7 @@ var batch2015mar = [
 "t": "2015-03-31 23:55:58 +0000",
 }, /*************************************************************************/ ]
 
-var batch2015apr = [
+batches['2015apr'] = [
 {
 "x": "The API now supports upsert. Set upsert=true (and include a requestid) for create datapoint, and it creates or updates. HT <a href=\"http://complice.co\">Malcolm Ocean</a>",
 "u": "https://twitter.com/beemuvi/status/583413017523527680",
@@ -528,7 +528,7 @@ var batch2015apr = [
 "t": "2015-04-29 23:04:01 +0000",
 }, /*************************************************************************/ ]
 
-var batch2015may = [
+batches['2015may'] = [
 {
 "x": "Seeming bug in Gmail's API returning spurious empty messages that we're working around now by disregarding. So less overcounting. #bugfix",
 "u": "https://twitter.com/beemuvi/status/594240906468831232",
@@ -666,7 +666,7 @@ var batch2015may = [
 "c": "When/why do you have to refresh on Beeminder? you shouldn't in theory. though i don't know *how* quickly they push data out. There might be a delay? like IFTTT 'automatically' syncs, but you still have to wait 16 minutes",
 }, /*************************************************************************/ ]
 
-var batch2015jun = [
+batches['2015jun'] = [
 {
 "x": "Have lots of goals/datapoints? Should see up to 50% faster syncs in the Android app (was partly responsible for server issues last week too)",
 "u": "https://twitter.com/beemuvi/status/605508429650624513",
@@ -810,7 +810,7 @@ var batch2015jun = [
 "t": "2015-06-30 07:30:13 +0000",
 }, /*************************************************************************/ ]
 
-var batch2015jul = [
+batches['2015jul'] = [
 {
 "f": true,
 "x": "Beeminder iPhone app 4.0! (We may've accidentally made it require iOS 8.3 instead of the intended 8.0) Faster, robuster syncing and submitting",
@@ -932,7 +932,7 @@ var batch2015jul = [
 "t": "2015-08-01 03:07:26 +0000",
 }, /*************************************************************************/ ]
 
-var batch2015aug = [
+batches['2015aug'] = [
 {
 "x": "When forcing you to pledge (cuz no freebees) on a new <a href=\"https://twitter.com/fitbit\">@fitbit</a> goal we were failing to redirect to your goal page after creating it. #bugfix",
 "u": "https://twitter.com/beemuvi/status/627653229585653761",
@@ -1066,7 +1066,7 @@ var batch2015aug = [
 "t": "2015-08-31 07:59:22 +0000",
 }, /*************************************************************************/ ]
 
-var batch2015sep = [
+batches['2015sep'] = [
 {
 "x": "API now gives permissions error if you try to change the slug (premium only) instead of silent failure #bugfix HT Chris of <a href=\"http://blog.openendings.net/\">blog.openendings.net</a>",
 "u": "https://twitter.com/beemuvi/status/638568090284888064",
@@ -1224,7 +1224,7 @@ var batch2015sep = [
 "t": "2015-09-30 22:57:59 +0000",
 }, /*************************************************************************/ ]
 
-var batch2015oct = [
+batches['2015oct'] = [
 {
 "x": "Now using html emails for the alerts (though we're barely taking advantage: links instead of raw URLs, bullets) Also: bugfixes w/ email body",
 "u": "https://twitter.com/beemuvi/status/649469827216609284",
@@ -1346,7 +1346,7 @@ var batch2015oct = [
 "t": "2015-10-30 05:25:24 +0000",
 }, /*************************************************************************/ ]
 
-var batch2015nov = [
+batches['2015nov'] = [
 {
 "x": "Renamed defaults tab to 'Reminders/Defaults', rearranged/edited \"new goal\" email copy, tooltip for \"-1\" in indiv. alert settings #mini ×3",
 "u": "https://twitter.com/beemuvi/status/662058385496391680",
@@ -1507,7 +1507,7 @@ var batch2015nov = [
 "t": "2015-11-30 19:11:56 +0000",
 }, /*************************************************************************/ ]
 
-var batch2015dec = [
+batches['2015dec'] = [
 {
 //"n": 1753,
 "x": "We made a new kind of coupon code for Cyber Monday where you get the 2nd period free. http://blog.beeminder.com/cybermonday",

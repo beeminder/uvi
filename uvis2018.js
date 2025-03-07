@@ -1,4 +1,4 @@
-var batch2018jan = [{
+batches['2018jan'] = [{
 //"n": 2516,
 "f": true,
 "x": "(+) Version 4.9 of iOS app!",
@@ -224,7 +224,7 @@ var batch2018jan = [{
 "c": "Most of the credit to Chelsea for creating the amazing documenation of all the goal types!",
 }, /* --------------------------------------------------------- end 2018jan */ ]
 
-var batch2018feb = [{
+batches['2018feb'] = [{
 "x": "Converted existing active exponential roads to be piecewise linear (and we're shirk-n-turking the remaining inactive ones when/if they're restarted). http://blog.beeminder.com/deathtoexp",
 "u": "https://twitter.com/beemuvi/status/959195765796085760",
 "t": "2018-02-01",
@@ -432,7 +432,7 @@ var batch2018feb = [{
 "c": "By Andy. Sounds similar to UVI#2223 but not sure if there's any connection",
 }, /* --------------------------------------------------------- end 2018feb */ ]
 
-var batch2018mar = [{
+batches['2018mar'] = [{
 "x": "We were briefly missing the +/- buttons after each row in the road matrix that let you remove or insert a row after the mobile-friendly deploy. #bugfix",
 "u": ["https://twitter.com/beemuvi/status/969374264041259008",
       "https://github.com/beeminder/beeminder/commit/455edcdde94d6efd756cfb7e41d89e9c8f065c9b"],
@@ -596,7 +596,7 @@ var batch2018mar = [{
 "t": "2018-03-23",
 }, /* --------------------------------------------------------- end 2018mar */ ]
 
-var batch2018apr = [{
+batches['2018apr'] = [{
 "x": "We no longer let you blithely turn on SMS reminders in goal or reminder settings if you haven't actually provided a phone number",
 "u": ["https://twitter.com/beemuvi/status/981316372398419969",
       "https://github.com/beeminder/beeminder/issues/78"],
@@ -783,7 +783,7 @@ var batch2018apr = [{
 "t": "2018-04-30",
 }, /* --------------------------------------------------------- end 2018apr */ ]
 
-var batch2018may = [{
+batches['2018may'] = [{
 "x": "Thanks to @patio11 pointing out that the \"You have signed up successfully! Please confirm your email address...\" banner was adding no value, we removed it",
 "u": ["https://twitter.com/beemuvi/status/991445737127919616",
       "https://github.com/beeminder/beeminder/commit/729890bfb4de3e19ca3807d826ab87994ee2c4b7"],
@@ -998,7 +998,7 @@ var batch2018may = [{
 "t": "2018-05-31",
 }, /* --------------------------------------------------------- end 2018may */ ]
 
-var batch2018jun = [{
+batches['2018jun'] = [{
 "x": "Fixed some bad syntax highlighting in the http://beeminder.com/api examples that made the contrast all wrong (purple on black) #mini",
 "u": ["https://twitter.com/beemuvi/status/1002820169721237505",
       "https://github.com/beeminder/apidocs/commit/5365b39014f125e4f5722cf78a7a5007725816a5",
@@ -1217,7 +1217,7 @@ var batch2018jun = [{
 "c": "When looking at a modal on mobile there's no space outside the modal to click to dismiss, and you don't have a keyboard for pressing ESC, so modals are in want of a dismiss button of some sort when trying to be mobile friendly",
 }, /* --------------------------------------------------------- end 2018jun */ ]
 
-var batch2018jul = [{
+batches['2018jul'] = [{
 "x": "On the \"more free goals please\" popup, we moved the X to the right side for consistency, made the textarea bigger, and rearranged things to be less ugly",
 "u": ["https://twitter.com/beemuvi/status/1014050994420764673",
       "https://github.com/beeminder/beeminder/commit/b293d7e414b5a5e89ffdcd607ce5360ccc6caf28",
@@ -1407,7 +1407,7 @@ var batch2018jul = [{
 "t": "2018-07-31",
 }, /* --------------------------------------------------------- end 2018jul */ ]
 
-var batch2018aug = [{
+batches['2018aug'] = [{
 "x": "Were inconsistent in how we hid your graph (showing masked bee) for other users / logged-out users when your payment method failed (deadbeat flag set). #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1024935112352223232",
       "https://github.com/beeminder/beeminder/issues/264"],
@@ -1672,7 +1672,7 @@ var batch2018aug = [{
 "t": "2018-08-27",
 }, /* --------------------------------------------------------- end 2018aug */ ]
 
-var batch2018sep = [{
+batches['2018sep'] = [{
 "x": "Graph images that fail to load now magically refresh themselves. Should never see broken graph images again (for more than a few seconds)!",
 "u": ["https://twitter.com/beemuvi/status/1036884161670262784",
       "https://github.com/beeminder/beeminder/issues/133",
@@ -1890,7 +1890,7 @@ var batch2018sep = [{
 "t": "2018-09-30",
 }, /* --------------------------------------------------------- end 2018sep */ ]
 
-var batch2018oct = [{
+batches['2018oct'] = [{
 "x": "Thanks to @chipmanaged for pointing out the privacy problem w/ showing hashtags on public graphs w/ private data. Now we don't do that unless you opt in!",
 "u": ["https://twitter.com/beemuvi/status/1047252685739634689",
       "https://github.com/beeminder/beeminder/commit/92f59cd8ca83dcfd0e736164762c9630130e56d3"],
@@ -2040,7 +2040,7 @@ var batch2018oct = [{
 "c": "And Clozemaster (but that integration's not officially launched yet). We intend for all new integrations to do this (where it is possible) and move older integrations in this direction.",
 }, /* --------------------------------------------------------- end 2018oct */ ]
 
-var batch2018nov = [{
+batches['2018nov'] = [{
 "x": "If you removed Beeminder's permission to read your Todoist data, we'd give a 500 error on any active Todoist goal page (when trying to show settings) #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1058238267601039360",
       "https://github.com/beeminder/beeminder/commit/0a9d7707a53aac2b1b2f32d2360febe8d568b3cd"],
@@ -2263,7 +2263,7 @@ var batch2018nov = [{
 "t": "2018-11-29",
 }, /* --------------------------------------------------------- end 2018nov */ ]
 
-var batch2018dec = [{
+batches['2018dec'] = [{
 }, { // ------------------------------------------------------------------------
 "f": true,
 "x": "The signup form now asks you to state your intentions as a way to help you commit to your goals (and maybe in the future as a quasi-captcha)",

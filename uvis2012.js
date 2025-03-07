@@ -1,4 +1,4 @@
-var batch2012jan = [
+batches['2012jan'] = [
 {
 "x": "Spent new year's eve on a <a href=\"https://twitter.com/bmndr\">@bmndr</a> mass email (did you get it? it's the first we've sent) & made a new email settings tab in account settings",
 "u": "https://twitter.com/beemuvi/status/153445114751102976",
@@ -89,7 +89,7 @@ var batch2012jan = [
 "t": "2012-01-29 00:14:21 +0000",
 }, /*************************************************************************/ ]
 
-var batch2012feb = [
+batches['2012feb'] = [
 {
 "x": "Bugfix: hovertext for goal titles that contain quotes got truncated.",
 "u": "https://twitter.com/beemuvi/status/164583686665273344",
@@ -220,7 +220,7 @@ var batch2012feb = [
 "t": "2012-02-29 01:01:28 +0000",
 }, /*************************************************************************/ ]
 
-var batch2012mar = [
+batches['2012mar'] = [
 {
 "x": "Fixed the tooltips on the road dial below the graph so that they don't interfere with each other. Thanks again <a href=\"https://twitter.com/pruneau\">@pruneau</a>!",
 "u": "https://twitter.com/beemuvi/status/175483392199098368",
@@ -347,7 +347,7 @@ var batch2012mar = [
 "t": "2012-03-30 04:13:56 +0000",
 }, /*************************************************************************/ ]
 
-var batch2012apr = [
+batches['2012apr'] = [
 {
 "x": "Withings! 0) already a beeminder? sign-in first  1) go to <a href=\"http://beeminder.com/auth/withings\">beeminder.com/auth/withings</a>  2) \"update from withings\" on the goal settings tab.",
 "u": "https://twitter.com/beemuvi/status/187377005547896832",
@@ -458,7 +458,7 @@ var batch2012apr = [
 "t": "2012-04-27 19:52:48 +0000",
 }, /*************************************************************************/ ]
 
-var batch2012may = [
+batches['2012may'] = [
 {
 "x": "<a href=\"https://twitter.com/beemuvi\">@beemuvi</a> <a href=\"https://twitter.com/AutofocusTM\">@AutofocusTM</a> Bugfix/robustifying of the syntax for entering weight in stone. Can now say \"16st\" instead of \"16st0\".",
 "u": "https://twitter.com/beemuvi/status/197176949511159808",
@@ -598,7 +598,7 @@ var batch2012may = [
 "t": "2012-05-30 22:27:10 +0000",
 }, /*************************************************************************/ ]
 
-var batch2012jun = [
+batches['2012jun'] = [
 {
 "x": "fixed egregious bug: voluntarily starting a contract (when not frozen) wd sometimes flatten your road. pls msg support if you've seen this!",
 "u": "https://twitter.com/beemuvi/status/209050584702140416",
@@ -717,7 +717,7 @@ var batch2012jun = [
 "t": "2012-06-30 23:27:39 +0000",
 }, /*************************************************************************/ ]
 
-var batch2012jul = [
+batches['2012jul'] = [
 {
 "x": "Bugfix: Since June 14 we've accidentally been too lenient in allowing unfreezes w/o pledging. Bug involved extending grace period too long.",
 "u": "https://twitter.com/beemuvi/status/219502962752487428",
@@ -840,7 +840,7 @@ var batch2012jul = [
 "t": "2012-07-31 21:02:00 +0000",
 }, /*************************************************************************/ ]
 
-var batch2012aug = [
+batches['2012aug'] = [
 {
 "x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: New blog post: <a href=\"https://twitter.com/Gympact\">@Gympact</a> vs <a href=\"https://twitter.com/bmndr\">@bmndr</a> (including discussion of adverse selection) <a href=\"http://blog.beeminder.com/gympact\">blog.beeminder.com/gympact</a>",
 "u": "https://twitter.com/bmndr/status/230748769979879424",
@@ -979,7 +979,7 @@ var batch2012aug = [
 "t": "2012-09-01 03:58:21 +0000",
 }, /*************************************************************************/ ]
 
-var batch2012sep = [
+batches['2012sep'] = [
 {
 "x": "Patched a security hole in the API, thanks to <a href=\"https://twitter.com/jmillikin\">@jmillikin</a>. Thanks to him and others for hammering on it this weekend before we announce it!",
 "u": "https://twitter.com/beemuvi/status/241962027709509632",
@@ -1110,7 +1110,7 @@ var batch2012sep = [
 "t": "2012-09-30 15:15:12 +0000",
 }, /*************************************************************************/ ]
 
-var batch2012oct = [
+batches['2012oct'] = [
 {
 "x": "Updates to <a href=\"http://blog.beeminder.com/synonyms\">blog.beeminder.com/synonyms</a> &amp; <a href=\"http://blog.beeminder.com/dial\">blog.beeminder.com/dial</a> (image of road dial) &amp; <a href=\"http://blog.beeminder.com/gym\">blog.beeminder.com/gym</a> &amp; <a href=\"http://beeminder.com/faq\">beeminder.com/faq</a> (how do i delete)",
 "u": "https://twitter.com/beemuvi/status/253391195005394944",
@@ -1250,7 +1250,7 @@ var batch2012oct = [
 "t": "2012-10-31 08:31:34 +0000",
 }, /*************************************************************************/ ]
 
-var batch2012nov = [
+batches['2012nov'] = [
 {
 "x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: Beemind Your NaNoWriMo Progress: http://blog.beeminder.com/nanowrimo/ #nanowrimo",
 "u": "https://twitter.com/bmndr/status/264086297239486465",
@@ -1349,7 +1349,7 @@ var batch2012nov = [
 "t": "2012-11-28 21:17:57 +0000",
 }, /*************************************************************************/ ]
 
-var batch2012dec = [
+batches['2012dec'] = [
 {
 "x": "Bugfix: Imports from Fitbit no longer import days with no data before you started using Fitbit",
 "u": "https://twitter.com/beemuvi/status/275057664231366656",

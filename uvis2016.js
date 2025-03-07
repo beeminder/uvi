@@ -1,4 +1,4 @@
-var batch2016jan = [
+batches['2016jan'] = [
 {
 "x": "In goal default settings if you tried to submit the form with no leadtime or no alertstart or no deadline it would give a 500 error #bugfix",
 "u": "https://twitter.com/beemuvi/status/683068394736726016",
@@ -162,7 +162,7 @@ var batch2016jan = [
 "t": "2016-01-28 21:09:24 +0000",
 }, /*************************************************************************/ ]
 
-var batch2016feb = [
+batches['2016feb'] = [
 {
 //"n": 1806, 
 "x": "Trivial yet maybe a big deal: Lots of confusion about initial flat spot (eg, bot doesn't bug you for ~9 days) so default now is no flat week",
@@ -297,7 +297,7 @@ var batch2016feb = [
 "c": "Slightly different syntax for fields_for: fixes bug with fwomp page not saving individual goal changes - the goal name wasn't getting included in the fieldset. Fix dial-it-in position? Bugfix: checkmarks for 'data entered today' not showing up in the gallery (or persisting in the dashboard)",
 }, /*************************************************************************/ ]
 
-var batch2016mar = [
+batches['2016mar'] = [
 {
 "x": "We rearranged goal settings a bit, moving things betw Basic &amp; Advanced (was a while ago; we're improving @bmndr faster thn we cn twt abt it)",
 "u": ["https://twitter.com/beemuvi/status/704616863175606272",
@@ -472,7 +472,7 @@ var batch2016mar = [
 "t": "2016-03-25 12:38:28 +0000",
 }, /*************************************************************************/ ]
 
-var batch2016apr = [
+batches['2016apr'] = [
 {
 //"n": 1868, 
 "x": "Fixed the blue-on-black text in the \"credible threat\" banner, removed horrendous text shadow for popups #mini ×2",
@@ -736,7 +736,7 @@ var batch2016apr = [
 "t": "2016-04-29 22:30:09 +0000",
 }, /*************************************************************************/ ]
 
-var batch2016may = [
+batches['2016may'] = [
 {
 //"n": 1917,
 "f": true,
@@ -794,7 +794,7 @@ var batch2016may = [
 "t": "2016-05-27 16:48:04 +0000",
 }, /*************************************************************************/ ]
 
-var batch2016jun = [
+batches['2016jun'] = [
 {
 "x": "Better URLs for goal settings tabs: /settings, /reminders, /supporters, /terrifying, /datapoints",
 "u": "https://twitter.com/beemuvi/status/737897923376218112",
@@ -924,7 +924,7 @@ var batch2016jun = [
 "t": "2016-06-30 09:28:01 +0000",
 }, /*************************************************************************/ ]
 
-var batch2016jul = [
+batches['2016jul'] = [
 {
 "x": "The countdown timers for archiving &amp; pledge stepdowns would sometimes fail to start if the page wasn't fully loaded. #bugfix",
 "u": "https://twitter.com/beemuvi/status/748802557040955392",
@@ -1056,7 +1056,7 @@ var batch2016jul = [
 "t": "2016-07-31 07:05:27 +0000",
 }, /*************************************************************************/ ]
 
-var batch2016aug = [
+batches['2016aug'] = [
 {
 "x": "SMS bot reminders more concise after initial reminder on an eep day. Eg, \"Eep! +3 in &lt;30m for pushups ($5)\"",
 "u": "https://twitter.com/beemuvi/status/760015554497290244",
@@ -1192,7 +1192,7 @@ var batch2016aug = [
 "t": "2016-08-31 04:35:43 +0000",
 }, /*************************************************************************/ ]
 
-var batch2016sep = [
+batches['2016sep'] = [
 {
 "x": "If you came to /premium w/ a coupon code we'd forget it after page reload after clicking a button to add a plan. Coupon worked but.. #bugfix",
 "u": "https://twitter.com/beemuvi/status/771607780054532096",
@@ -1316,7 +1316,7 @@ var batch2016sep = [
 "t": "2016-09-30 07:22:35 +0000",
 }, /* --------------------------------------------------------- end 2016sep */ ]
 
-var batch2016oct = [
+batches['2016oct'] = [
 {
 "x": "If you downgraded and lost the SMS bot perk, we'd get horribly confused and not let you save user settings anymore. #bugfix",
 "u": "https://twitter.com/beemuvi/status/782117460610736129",
@@ -1576,7 +1576,7 @@ var batch2016oct = [
 "t": "2016-10-31 05:04:17 +0000",
 }, /* --------------------------------------------------------- end 2016oct */ ]
 
-var batch2016nov = [
+batches['2016nov'] = [
 {
 "x": "Tweetstorm about the flurry of bugfixes since deploying the redesign: We broke an embarrassing number of things! 1/5",
 "u": "https://twitter.com/beemuvi/status/795689384238403584",
@@ -1695,7 +1695,7 @@ var batch2016nov = [
 "t": "2016-11-30 05:53:07 +0000",
 }, /* --------------------------------------------------------- end 2016nov */ ]
 
-var batch2016dec = [
+batches['2016dec'] = [
 {
 "x": "Dumb #bugfix w/ Fitbit goal creation: gave error if you didn't change the default settings. (ps: bugs intro'd by redesign count again now)",
 "u": "https://twitter.com/beemuvi/status/804203048876707840",

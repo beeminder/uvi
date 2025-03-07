@@ -1,6 +1,6 @@
 // Awaiting proglogs generalization...
 
-var batch2011feb = [{
+batches['2011feb'] = [{
 "x": "Timezones, asof-null, sadedgy, sadreset, and inferred tini/vini all purged from Beebrain!",
 "u": "https://twitter.com/beeminfra/status/931291064794718208",
 "t": "2017-11-16",

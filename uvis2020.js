@@ -1,4 +1,4 @@
-var batch2020jan = [{
+batches['2020jan'] = [{
 "x": "Zapier accidentally broke our integration, which we fixed thanks to Adam and Mary and Nikki. Emailed affected users and cleaned it all up! #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1212885935823577088",
       "https://github.com/beeminder/beeminder/issues/981", // has postmortem and stuff
@@ -222,7 +222,7 @@ var batch2020jan = [{
 "t": "2020-01-31",
 }, /* --------------------------------------------------------- end 2020jan */ ]
 
-var batch2020feb = [{
+batches['2020feb'] = [{
 "x": "Additional #regression #bugfix: Added \"About You\" to the gallery page (where \"Your Site\" has been showing this whole time)",
 "u": ["https://twitter.com/beemuvi/status/1224474100283822080",
       "https://github.com/beeminder/beeminder/issues/1036",
@@ -475,7 +475,7 @@ var batch2020feb = [{
 "t": "2020-03-03",
 }, /* --------------------------------------------------------- end 2020feb */ ]
 
-var batch2020mar = [{  
+batches['2020mar'] = [{  
 "x": "On http://beeminder.com/breaks if you turned on weekends-off and scheduled a break on that same goal at the same time, the weekend would clobber the break. #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1235729946670059520",
       "https://github.com/beeminder/beeminder/pull/1149",
@@ -711,7 +711,7 @@ var batch2020mar = [{
 "t": "2020-03-31",
 }, /* --------------------------------------------------------- end 2020mar */ ]
 
-const batch2020apr = [{  
+batches['2020apr'] = [{  
 "x": "There's no such thing as lanes in the Yellow Brick Half-Plane new world order but we made the API lane field backward-compatible to not break clients. #YBHP",
 "u": ["https://github.com/beeminder/road/commit/4a277094534da2f9af5e3569a0da6ea41359af68",
       "https://forum.beeminder.com/t/api-changes-in-the-yellow-brick-half-plane-new-world-order/6493"],
@@ -963,7 +963,7 @@ const batch2020apr = [{
 "c": "Originally tweeted these as '(__ of 10)' and prefixed this one with 'Turns out BeemiOS UVIs go up to 11'",
 }, /* --------------------------------------------------------- end 2020apr */ ]
 
-const batch2020may = [{  
+batches['2020may'] = [{  
 }, { // ------------------------------------------------------------------------
 "x": "The SVG URL in the JSON output at beeminder.com/username/goalname.json was broken. #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1257454842232143874",
@@ -1195,7 +1195,7 @@ const batch2020may = [{
 "t": "2020-05-29",
 }, /* --------------------------------------------------------- end 2020may */ ]
 
-const batch2020jun = [{  
+batches['2020jun'] = [{  
 "x": "And a new help page for Pessimistic Presumptive Reports (PPRs)! These are all thanks to @shanaqui!",
 "u": ["https://twitter.com/beemuvi/status/1267562697941331968",
       "https://help.beeminder.com/article/157-pessimistic-presumptive-reports"],
@@ -1459,7 +1459,7 @@ const batch2020jun = [{
 }, /* --------------------------------------------------------- end 2020jun */ ]
 
 
-const batch2020jul = [{  
+batches['2020jul'] = [{  
 }, { // ------------------------------------------------------------------------
 "x": "The help doc for URLminder now clarifies about sharable links vs public docs, points to the blog post which has new screenshots for Google Docs & Dropbox",
 "u": ["https://twitter.com/beemuvi/status/1278461631865839616",
@@ -1719,7 +1719,7 @@ const batch2020jul = [{
 "t": "2020-07-31",
 }, /* --------------------------------------------------------- end 2020jul */ ]
 
-const batch2020aug = [{  
+batches['2020aug'] = [{  
 "x": "The pink shading & the grayed-out lines denoting the region your road can't intersect (the akrasia horizon constraint) were sometimes mismatched. #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1290432162622091265",
       "https://github.com/beeminder/road/issues/100"],
@@ -2138,7 +2138,7 @@ const batch2020aug = [{
 "t": "2020-08-31",
 }, /* --------------------------------------------------------- end 2020aug */ ]
 
-const batch2020sep = [{  
+batches['2020sep'] = [{  
 "x": "We now strip html out of user-entered stuff when showing error messages (and fixed a bug that that #bugfix caused with showing our own html!)",
 "u": ["https://twitter.com/beemuvi/status/1300921854874378240",
       "https://forum.beeminder.com/t/xss-kind-of/7176?u=dreev",
@@ -2291,7 +2291,7 @@ const batch2020sep = [{
 }, /* --------------------------------------------------------- end 2020sep */ ]
 
 
-const batch2020oct = [{  
+batches['2020oct'] = [{  
 "x": "Relatedly, if you have an upcoming flat spot in your yellow brick road, the interface warns you, \"you may not be able to remove all of your buffer\"",
 "u": ["https://twitter.com/beemuvi/status/1311744368177364992",
       "https://github.com/beeminder/beeminder/pull/1640/commits/b57f24190a5b24fd1a01a951e15eafb0501d06fc"],
@@ -2545,7 +2545,7 @@ const batch2020oct = [{
 "t": "2020-10-31",
 }, /* --------------------------------------------------------- end 2020oct */ ]
 
-const batch2020nov = [{  
+batches['2020nov'] = [{  
 "f": true,
 "x": "BeemiOS version 5.8! New hotness (but mostly incremental improvements and bugfixes) in the Beeminder iOS app!",
 "u": ["https://twitter.com/beemuvi/status/1324476341861801984",
@@ -2675,7 +2675,7 @@ const batch2020nov = [{
 "c": "From \"Beeminder isn't taking new signups right now but you can get on the waitlist on the website!\" to \"Beeminder signup is in flux and only works via the website. Apologies!\"",
 }, /* --------------------------------------------------------- end 2020nov */ ]
 
-const batch2020dec = [{  
+batches['2020dec'] = [{  
 "x": "Fixed the too-long placeholder text for goalname in goal creation and are now consistent about \"goalname\" instead of \"goal name\". HT Cantor Soule-Reeves",
 "u": ["https://twitter.com/beemuvi/status/1333932982139174913",
       "https://github.com/beeminder/beeminder/issues/1526",

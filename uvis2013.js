@@ -1,4 +1,4 @@
-var batch2013jan = [
+batches['2013jan'] = [
 {
 "x": "Bethany's (<a href=\"https://twitter.com/thatgirl\">@thatgirl</a>) how-to video is on the front page now. We really need to redo it but we a/b tested and it's much better than nothing!",
 "u": "https://twitter.com/beemuvi/status/287318784019161089",
@@ -85,7 +85,7 @@ var batch2013jan = [
 "t": "2013-02-01 04:57:51 +0000",
 }, /*************************************************************************/ ]
 
-var batch2013feb = [
+batches['2013feb'] = [
 {
 "x": "RT <a href=\"https://twitter.com/bmndr\">@bmndr</a>: Another revenue-destroying bug: for the last week, until today, we accidentally had the unfreeze/re-rail button disabled for everyone. Oy.",
 "u": "https://twitter.com/bmndr/status/297439110052839424",
@@ -212,7 +212,7 @@ var batch2013feb = [
 "t": "2013-02-27 15:38:03 +0000",
 }, /*************************************************************************/ ]
 
-var batch2013mar = [
+batches['2013mar'] = [
 {
 "x": "Bugfix: Gitminder reminder emails have been confusingly prompting you to reply with data even though the whole point is it's automated now!",
 "u": "https://twitter.com/beemuvi/status/309188577303093248",
@@ -323,7 +323,7 @@ var batch2013mar = [
 "t": "2013-03-31 18:22:39 +0000",
 }, /*************************************************************************/ ]
 
-var batch2013apr = [
+batches['2013apr'] = [
 {
 "x": "No more \"temporary test goals\", aka ephemeral goals, since anyone can now use the akrasia-proof archive button on goals they don't want",
 "u": "https://twitter.com/beemuvi/status/318890740623237120",
@@ -450,7 +450,7 @@ var batch2013apr = [
 "t": "2013-04-30 01:05:51 +0000",
 }, /*************************************************************************/ ]
 
-var batch2013may = [
+batches['2013may'] = [
 {
 "x": "Blog improvements: grouped FAQ posts <a href=\"http://blog.beeminder.com/tag/faq\">blog.beeminder.com/tag/faq</a> &amp; new pie charts <a href=\"http://blog.beeminder.com/exponential\">blog.beeminder.com/exponential</a> (&amp; <a href=\"http://beeminder.com/faq\">beeminder.com/faq</a> improvements)",
 "u": "https://twitter.com/beemuvi/status/329485840659120130",
@@ -579,7 +579,7 @@ var batch2013may = [
 "t": "2013-05-30 16:07:51 +0000",
 }, /*************************************************************************/ ]
 
-var batch2013jun = [
+batches['2013jun'] = [
 {
 "x": "Bugfix: if Fitbit goals run into an auth error, we show you a nice error message instead of silent failure",
 "u": "https://twitter.com/beemuvi/status/340966574141890560",
@@ -712,7 +712,7 @@ var batch2013jun = [
 "t": "2013-06-26 19:36:41 +0000",
 }, /*************************************************************************/ ]
 
-var batch2013jul = [
+batches['2013jul'] = [
 {
 "x": "Small bugfix update to the Android app (version 1.6-r1)",
 "u": "https://twitter.com/beemuvi/status/351749528933773313",
@@ -828,7 +828,7 @@ var batch2013jul = [
 "t": "2013-07-30 19:03:25 +0000",
 }, /*************************************************************************/ ]
 
-var batch2013aug = [
+batches['2013aug'] = [
 {
 "x": "Bugfix: <a href=\"https://twitter.com/rescuetime\">@rescuetime</a> import (like when you first start a goal) was double counting past time! Fixed now &amp; fixed up everyone's past graphs.",
 "u": "https://twitter.com/beemuvi/status/362826038285303808",
@@ -1007,7 +1007,7 @@ var batch2013aug = [
 "t": "2013-08-30 21:27:40 +0000",
 }, /*************************************************************************/ ]
 
-var batch2013sep = [
+batches['2013sep'] = [
 {
 "x": "We now let you know in the reminder emails if you need to add a payment method #dundundun (get it? like <a href=\"http://www.macmillandictionary.com/us/dictionary/american/dun\">macmillandictionary.com/us/dictionary/american/dun</a>)",
 "u": "https://twitter.com/beemuvi/status/374215304118665216",
@@ -1098,7 +1098,7 @@ var batch2013sep = [
 "t": "2013-09-30 22:31:18 +0000",
 }, /*************************************************************************/ ]
 
-var batch2013oct = [
+batches['2013oct'] = [
 {
 "x": "Android app version 1.6.2: Facebook &amp; Twitter login, scrollbar on goal list, hard cap shown for Do Less goals, bugfixes, speedups",
 "u": "https://twitter.com/beemuvi/status/385657626421252096",
@@ -1209,7 +1209,7 @@ var batch2013oct = [
 "t": "2013-11-01 02:55:00 +0000",
 }, /*************************************************************************/ ]
 
-var batch2013nov = [
+batches['2013nov'] = [
 {
 "x": "Let people add data manually to nanowrimo goals; bug fix with text in reminder email on jawbone goals.",
 "u": "https://twitter.com/beemuvi/status/396466669674975232",
@@ -1334,7 +1334,7 @@ var batch2013nov = [
 "t": "2013-11-28 21:07:43 +0000",
 }, /*************************************************************************/ ]
 
-var batch2013dec = [
+batches['2013dec'] = [
 {
 "x": "Added <a href=\"https://twitter.com/Jawbone\">@Jawbone</a> and <a href=\"https://twitter.com/gooddraft\">@gooddraft</a> logos to the front page of <a href=\"http://beeminder.com\">beeminder.com</a>",
 "u": "https://twitter.com/beemuvi/status/407413418518249472",
