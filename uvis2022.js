@@ -1,4 +1,4 @@
-const batch2022jan = [{
+batches['2022jan'] = [{
 "x": "Our API docs for the charges endpoint were wrong. You must include a user_id parameter (technically it worked anyway when using a personal auth_token). #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1478159041335480321",
       "https://github.com/beeminder/beeminder/issues/2888",
@@ -270,7 +270,7 @@ const batch2022jan = [{
 "t": "2022-01-31",
 }, /* --------------------------------------------------------- end 2022jan */ ]
 
-const batch2022feb = [{
+batches['2022feb'] = [{
 "x": "New help menu in the header! Links to the FAQ, forum, help docs, and contact page.",
 "u": ["https://twitter.com/beemuvi/status/1488663407549059080",
       "https://github.com/beeminder/beeminder/issues/2942",
@@ -441,7 +441,7 @@ const batch2022feb = [{
 "t": "2022-03-01",
 }, /* --------------------------------------------------------- end 2022feb */ ]
 
-const batch2022mar = [{
+batches['2022mar'] = [{
 "x": "Help docs: The \"What happens if a charge fails?\" page now says exactly what happens when the poorly-named deadbeat flag is set. Also keywords.",
 "u": ["https://twitter.com/beemuvi/status/1498825431608270850",
       "https://help.beeminder.com/article/30-what-happens-if-a-charge-fails"],
@@ -669,7 +669,7 @@ const batch2022mar = [{
 "t": "2022-03-31",
 }, /* --------------------------------------------------------- end 2022mar */ ]
 
-const batch2022apr = [{
+batches['2022apr'] = [{
 "x": "Help docs: Added a caveat about autodata to the article on Data Source, plus a link to Boss as a Service",
 "u": ["https://twitter.com/beemuvi/status/1510022691620737026",
       "https://help.beeminder.com/article/103-data-source"],
@@ -913,7 +913,7 @@ const batch2022apr = [{
 }, /* --------------------------------------------------------- end 2022apr */ ]
 
 
-const batch2022may = [{
+batches['2022may'] = [{
 "x": "Graphs no longer show ugly non-monotone guiding lines on do-less goals with weird jumps in the bright red line. #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1521278234695856129",
       "https://github.com/beeminder/road/issues/205"],
@@ -1109,7 +1109,7 @@ const batch2022may = [{
 }, /* --------------------------------------------------------- end 2022may */ ]
 
 
-const batch2022jun = [{
+batches['2022jun'] = [{
 "x": "If you picked \"moving time\" for your Strava metric, it kept the units displayed as \"miles\" so you'd see like \"30 miles of moving time per day\" #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1532145485158359041",
       "https://github.com/beeminder/beeminder/issues/3288",
@@ -1307,7 +1307,7 @@ const batch2022jun = [{
 "t": "2022-06-29",
 }, /* --------------------------------------------------------- end 2022jun */ ]
 
-const batch2022jul = [{
+batches['2022jul'] = [{
 "x": "Help docs: new FAQ item for the article on Pessimistic Presumptive reports, other tweaking in that and the megabreak article",
 "u": ["https://twitter.com/beemuvi/status/1546962867425083392",
       "https://help.beeminder.com/article/157-pessimistic-presumptive-reports",
@@ -1405,7 +1405,7 @@ const batch2022jul = [{
 "c": "#zombie rails upgrade regression",
 }, /* --------------------------------------------------------- end 2022jul */ ]
 
-const batch2022aug = [{
+batches['2022aug'] = [{
 "x": "Soft launch of our StoryGraph integration at https://beeminder.com/storygraph plus a fix (HT Christopher Moravec) to a broken link on that page",
 "u": ["https://twitter.com/beemuvi/status/1554614459993182208",
       "https://forum.beeminder.com/t/tracking-reading-on-beeminder-with-the-storygraph-beta-feature-to-try/10442",
@@ -1676,7 +1676,7 @@ const batch2022aug = [{
 "t": "2022-09-01",
 }, /* --------------------------------------------------------- end 2022aug */ ]
 
-const batch2022sep = [{
+batches['2022sep'] = [{
 "x": "We should've had at least 8 instances of the failsafe from UVI#3705 but it was buggy and those legit checks (and charges) got suppressed! #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1565842400727437312",
       "https://github.com/beeminder/beeminder/issues/1185",
@@ -1969,7 +1969,7 @@ const batch2022sep = [{
 "t": "2022-09-30",
 }, /* --------------------------------------------------------- end 2022sep */ ]
 
-const batch2022oct = [{
+batches['2022oct'] = [{
 "x": "Our Focusmate integration was setting your goal's units to \"Focusmates\", which didn't quite make sense. Changed it to \"sessions\"!",
 "u": ["https://twitter.com/beemuvi/status/1577074984438353920",
       "https://github.com/beeminder/beeminder/issues/3640",
@@ -2233,7 +2233,7 @@ const batch2022oct = [{
 "t": "2022-11-02",
 }, /* --------------------------------------------------------- end 2022oct */ ]
 
-const batch2022nov = [{
+batches['2022nov'] = [{
 "x": "We briefly broke the ability to regenerate graphs for goals derailing for the second time in the same 24 hour period. #bugfix #zombie HT @chipmanaged",
 "u": ["https://twitter.com/beemuvi/status/1588313670395654144",
       "https://github.com/beeminder/beeminder/issues/3227",
@@ -2364,7 +2364,7 @@ const batch2022nov = [{
 "c": "User was surprised to land on the reminders fwomp page instead of the place in account settings to adjust beemail frequency",
 }, /* --------------------------------------------------------- end 2022nov */ ]
 
-const batch2022dec = [{
+batches['2022dec'] = [{
 }, { // ------------------------------------------------------------------------
 "x": "Help docs: more explanation of examples, added hovertext and anchor links to a few articles; bit more substantial changes to article on goal pausing",
 "u": ["https://twitter.com/beemuvi/status/1598834534224912384",

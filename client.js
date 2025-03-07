@@ -31,6 +31,7 @@ const MONAF = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
 const NOTES = Number(getQueryParam('shownotes'))
 
 var n = 0 // global variable counting the PLEs as we generate them
+var batches = {}
 
 document.getElementById("shownotes").onclick = function() {
   Array.from(document.getElementsByClassName("note")).forEach(function(x) {
@@ -225,7 +226,7 @@ function genol(l) {
 // Generate html for a batch of UVIs including the year/month header
 function genbatch(year, mon) {
   //const l = window["batch" + year + MONA[mon-1]] // seems better but...
-  const l = eval("batch" + year + MONA[mon-1])
+  const l = batches["" + year + MONA[mon-1]]
   if (!l) { return }
   const d = document.getElementById(year + MONA[mon-1])
   const cd = new Date() // current date object

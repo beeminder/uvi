@@ -1,4 +1,4 @@
-var batch2021jan = [{
+batches['2021jan'] = [{
 }, { // ------------------------------------------------------------------------
 "x": "Dumb rare bank-error-in-your-favor bug with failed PayPal charges; we would sometimes fail to retry them all! #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1345161598462115840",
@@ -236,7 +236,7 @@ var batch2021jan = [{
 "t": "2021-01-29",
 }, /* --------------------------------------------------------- end 2021jan */ ]
 
-var batch2021feb = [{
+batches['2021feb'] = [{
 "f": true,
 "x": "Visual Road Editor redesign! http://road.beeminder.com",
 "u": ["https://twitter.com/beemuvi/status/1356404646454038528",
@@ -421,7 +421,7 @@ var batch2021feb = [{
 "c": "Actual copy change: \"here are the key things to remember since you've added a credit card\" -> \"here are the key things to remember about your new goal commitment\"",
 }, /* --------------------------------------------------------- end 2021feb */ ]
 
-var batch2021mar = [{
+batches['2021mar'] = [{
 "x": "We removed the old \"nomercy\" field from the API docs since that hasn't been a thing since UVI#2734; also fixed a broken link to RapidAPI",
 "u": ["https://twitter.com/beemuvi/status/1366619658124627971",
       "https://github.com/beeminder/beeminder/issues/2044",
@@ -644,7 +644,7 @@ var batch2021mar = [{
 "t": "2021-03-31",
 }, /* --------------------------------------------------------- end 2021mar */ ]
 
-var batch2021apr = [{
+batches['2021apr'] = [{
 }, { // ------------------------------------------------------------------------
 "x": "As a failsafe for the quasi-archived limbo state, or other problems with archived goals, the legit check email now explicitly mentions this if it happens",
 "u": ["https://twitter.com/beemuvi/status/1377772368328675330",
@@ -939,7 +939,7 @@ var batch2021apr = [{
 "t": "2021-04-29",
 }, /* --------------------------------------------------------- end 2021apr */ ]
 
-var batch2021may = [{
+batches['2021may'] = [{
 "x": "We added a premium FAQ item about why the Beemium plan is so pricey and how you probably don't really want it",
 "u": ["https://twitter.com/beemuvi/status/1389728874989117440",
       "https://github.com/beeminder/beeminder/pull/2272",
@@ -1194,7 +1194,7 @@ var batch2021may = [{
 "t": "2021-05-28",
 }, /* --------------------------------------------------------- end 2021may */ ]
 
-var batch2021jun = [{
+batches['2021jun'] = [{
 "x": "Fetching data for your autodata goals is now faster. We used to send two jobs through our background queues, but now it just takes one.",
 "u": ["https://twitter.com/beemuvi/status/1400128768136548355",
       "https://github.com/beeminder/beeminder/pull/2323#issuecomment-850737542"],
@@ -1330,7 +1330,7 @@ var batch2021jun = [{
 "t": "2021-06-30",
 }, /* --------------------------------------------------------- end 2021jun */ ]
 
-var batch2021jul = [{
+batches['2021jul'] = [{
 }, { // ------------------------------------------------------------------------
 "x": "Help docs now explain about recurring Todoist tasks and how to transition existing graphs",
 "u": ["https://twitter.com/beemuvi/status/1410748893776596995",
@@ -1631,7 +1631,7 @@ var batch2021jul = [{
 "c": "Fuller anti-magic probably says to gray it out rather than replacing it with static text",
 }, /* --------------------------------------------------------- end 2021jul */ ]
 
-var batch2021aug = [{
+batches['2021aug'] = [{
 }, { // ------------------------------------------------------------------------
 "x": "Dumb regression: we were (mostly) sending emails with the \"From\" as a bare email address instead of, e.g., \"Beeminder Support &lt;support@beeminder.com&gt;\" #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1425228591969701891",
@@ -1800,7 +1800,7 @@ var batch2021aug = [{
 }, /* --------------------------------------------------------- end 2021aug */ ]
 
 
-var batch2021sep = [{
+batches['2021sep'] = [{
 "x": "Added a click-to-copy button for your Personal Auth Token in API settings instead of just linking to the raw JSON (and added \"Personal\" to the header)",
 "u": ["https://twitter.com/beemuvi/status/1433141599987331073",
       "https://github.com/beeminder/beeminder/issues/2511",
@@ -2076,7 +2076,7 @@ var batch2021sep = [{
 "t": "2021-09-30",
 }, /* --------------------------------------------------------- end 2021sep */ ]
 
-var batch2021oct = [{
+batches['2021oct'] = [{
 "x": "Starting 4 days ago the email bot was replying to datapoints you sent it AND replying to all subsequent data as if it'd been emailed to the bot. #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1444080393590689797",
       "https://github.com/beeminder/beeminder/issues/2603",
@@ -2317,7 +2317,7 @@ var batch2021oct = [{
 "c": "This is an error from the fitbit_user_info endpoint. It sucked to create the goal as if everything was fine and then only later put up a banner about the failure to be able to fetch data.",
 }, /* --------------------------------------------------------- end 2021oct */ ]
 
-var batch2021nov = [{
+batches['2021nov'] = [{
 "x": "The dropdown for units in Fitbit goal creation for weight was mis-sized and partially unreadable. #css #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1455309544528093184",
       "https://github.com/beeminder/beeminder/issues/2689",
@@ -2518,7 +2518,7 @@ var batch2021nov = [{
 "t": "2021-12-01",
 }, /* --------------------------------------------------------- end 2021nov */ ]
 
-var batch2021dec = [{
+batches['2021dec'] = [{
 }, { // ------------------------------------------------------------------------
 "x": "When we downgraded your perks from Beemium we failed to downgrade your default pledge cap, so you could still wind up with $0 pledge caps on new goals. #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1466570393150316565",

@@ -1,4 +1,4 @@
-const batch2023jan = [{
+batches['2023jan'] = [{
 }, { // ------------------------------------------------------------------------
 "x": "The Metaminder integration was missing datapoint info in the comment of the meta datapoints. #bugfix HT @lady_alys",
 "u": ["https://twitter.com/beemuvi/status/1610439647041294337",
@@ -264,7 +264,7 @@ const batch2023jan = [{
 "c": "Aka magic-meta or dummy datapoints",
 }, /* --------------------------------------------------------- end 2023jan */ ]
 
-const batch2023feb = [{
+batches['2023feb'] = [{
 }, { // ------------------------------------------------------------------------
 "x": "Doh, UVI#4378 accidentally made the captcha for the signup page be case-sensitive and trailing-whitespace-sensitive. #bugfix #zombie",
 "u": ["https://twitter.com/beemuvi/status/1622758633728786432",
@@ -462,7 +462,7 @@ const batch2023feb = [{
 "t": "2023-02-28",
 }, /* --------------------------------------------------------- end 2023feb */ ]
 
-const batch2023mar = [{
+batches['2023mar'] = [{
 }, { // ------------------------------------------------------------------------
 "x": "Help docs: Added Google Pay and Apple Pay and 3D Secure to our article about payment methods",
 "u": ["https://twitter.com/beemuvi/status/1631096180141850624",
@@ -679,7 +679,7 @@ const batch2023mar = [{
 "t": "2023-03-23",
 }, /* --------------------------------------------------------- end 2023mar */ ]
 
-const batch2023apr = [{
+batches['2023apr'] = [{
 }, { // ------------------------------------------------------------------------
 "x": "A kind of obscure bug in the API that was affecting our Complice integration at least: API calls with long enough URLs would give 500-errors. #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1644102283112886273",
@@ -923,7 +923,7 @@ const batch2023apr = [{
 "t": "2023-04-28",
 }, /* --------------------------------------------------------- end 2023apr */ ]
 
-const batch2023may = [{
+batches['2023may'] = [{
 "x": "Help docs: Overhaul of our Android App article in anticipation of new Beedroid version, plus tweaks to the Beedroid Beta Testing and Permanotification articles",
 "u": ["https://twitter.com/beemuvi/status/1653166636453736448",
       "https://help.beeminder.com/article/62-android-app",
@@ -1264,7 +1264,7 @@ const batch2023may = [{
 "c": "Also more keywords for the variant spellings and for the old erroneous term 'retro-ratchet'",
 }, /* --------------------------------------------------------- end 2023may */ ]
 
-const batch2023jun = [{
+batches['2023jun'] = [{
 "x": "We now use a ❗ instead of ✔️ in the due-by table for do-less goals that are in the red, ie ineluctably derailing unless negative data is allowed",
 "u": ["https://twitter.com/beemuvi/status/1664423497400209408",
       "https://github.com/beeminder/beeminder/issues/3844",
@@ -1405,7 +1405,7 @@ const batch2023jun = [{
 "c": "See UVI#3564. UI-copy: \"Uh, sorry! This button is disabled since you've previously clicked it more than six times already. Harsh!\". PS: We messed up the tweeting of this, tweeting it once on 2023-06-16 and then again on 2023-07-07. I think we deleted the earlier tweet but in any case, beeminder.com/changelog is the master copy.",
 }, /* --------------------------------------------------------- end 2023jun */ ]
 
-const batch2023jul = [{
+batches['2023jul'] = [{
 }, { // ------------------------------------------------------------------------
 "f": true,
 "x": "Beeminder iOS app version 6.3! The money-ectomy spaghetti-throwing Apple-appeasement release, with actual improvements along for the ride...",
@@ -1637,7 +1637,7 @@ const batch2023jul = [{
 "t": "2023-07-31",
 }, /* --------------------------------------------------------- end 2023jul */ ]
 
-const batch2023aug = [{
+batches['2023aug'] = [{
 }, { // ------------------------------------------------------------------------
 "x": "Added hovertext giving more details for each premium perk (even ones that aren't hyperlinks) on http://beeminder.com/premium",
 "u": ["https://twitter.com/beemuvi/status/1686519622798016512",
@@ -1924,7 +1924,7 @@ const batch2023aug = [{
 "c": "The open graph link preview for the blog home page was missing",
 }, /* --------------------------------------------------------- end 2023aug */ ]
 
-const batch2023sep = [{
+batches['2023sep'] = [{
 }, { // ------------------------------------------------------------------------
 "x": "We're now less likely to miss our hourly polling for autodata: we no longer abandon the fetch for everyone if one goal has an error",
 "u": ["https://twitter.com/beemuvi/status/1697678128230043758",
@@ -2146,7 +2146,7 @@ const batch2023sep = [{
 "t": "2023-09-29",
 }, /* --------------------------------------------------------- end 2023sep */ ]
 
-const batch2023oct = [{
+batches['2023oct'] = [{
 }, { // ------------------------------------------------------------------------
 "x": "And one more fix for small screens: hide the integrations (there are too many!) and adjust the ordering of sections to get you to the signup form quicker",
 "u": ["https://twitter.com/beemuvi/status/1708992974414340101",
@@ -2442,7 +2442,7 @@ const batch2023oct = [{
 "c": "PS: Previously we'd fixed some but not all of them",
 }, /* --------------------------------------------------------- end 2023oct */ ]
 
-const batch2023nov = [{
+batches['2023nov'] = [{
 }, { // ------------------------------------------------------------------------
 "x": "Beemergency notifications now auto-dismiss when the deadline hits",
 "u": ["https://twitter.com/beemuvi/status/1719865415323779401",
@@ -2673,7 +2673,7 @@ const batch2023nov = [{
 "c": "Previously just a vague 'error with your break' kind of message",
 }, /* --------------------------------------------------------- end 2023nov */ ]
 
-const batch2023dec = [{
+batches['2023dec'] = [{
 }, { // ------------------------------------------------------------------------
 "x": "We moved the Buy Honey button to the top of the payments page",
 "u": ["https://twitter.com/beemuvi/status/1733288907901727040",

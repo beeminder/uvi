@@ -1,4 +1,4 @@
-var batch2019jan = [{
+batches['2019jan'] = [{
 "x": "Better URL for <a href=\"http://beeminder.com/survivor\">survivor</a> (still redirects to the ugly one for now though) and fixed a broken image on the signup page (wasn't broken for long, but still). #mini",
 "u": ["https://twitter.com/beemuvi/status/1080362247480733696",
       "https://github.com/beeminder/beeminder/commit/a09ccc95eb0eb24d084d9841be5bf6259abad9d0",
@@ -238,7 +238,7 @@ var batch2019jan = [{
 "t": "2019-01-31",
 }, /* --------------------------------------------------------- end 2019jan */ ]
 
-var batch2019feb = [{
+batches['2019feb'] = [{
 "x": "Another improvement with the new graphs: the purple steppy line is drawn for all past datapoints, even ones before the start of the YBR. HT <a href=\"https://forum.beeminder.com/u/zedmango\">zedmango</a> #beebrain",
 "u": ["https://twitter.com/beemuvi/status/1093021975709020160",
       "https://github.com/beeminder/road"],
@@ -398,7 +398,7 @@ var batch2019feb = [{
 "t": "2019-02-28",
 }, /* --------------------------------------------------------- end 2019feb */ ]
 
-var batch2019mar = [{
+batches['2019mar'] = [{
 "f": true,
 "x": "We cranked up the image resolution on graphs to... literally infinity. That's right, next time your graph regenerates it will be an SVG image!",
 "u": ["https://twitter.com/beemuvi/status/1101804577530175488",
@@ -646,7 +646,7 @@ var batch2019mar = [{
 "c": "E.g. maybe you pressed enter after typing your username, then realized that you needed to actually click the button or use a tab+enter or whatever. It was kind of insidious because the initial fetch was fine.",
 }, /* --------------------------------------------------------- end 2019mar */ ]
 
-var batch2019apr = [{
+batches['2019apr'] = [{
 "x": "New copy, links to things (like this changelog!) on our /beebacksoon.html \"bee back in a bit\" page shown during downtime, sadly user-visible for ~3 hours today. #poppies",
 "u": ["https://twitter.com/beemuvi/status/1112929257213157376",
       "https://github.com/beeminder/beeminder/commit/c19835f915cd554d76e2266b35f74ee458af01b0",
@@ -842,7 +842,7 @@ var batch2019apr = [{
 "t": "2019-04-30",
 }, /* --------------------------------------------------------- end 2019apr */ ]
 
-var batch2019may = [{
+batches['2019may'] = [{
 "x": "The so-called todayta checkmark was weirdly over-specific, only showing up if you'd entered data today AND that datapoint was the most recent datapoint. #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1123809766059466753",
       "https://github.com/beeminder/beeminder/pull/601"],
@@ -1202,7 +1202,7 @@ var batch2019may = [{
 "t": "2019-05-31",
 }, /* --------------------------------------------------------- end 2019may */ ]
 
-var batch2019jun = [{
+batches['2019jun'] = [{
 "x": "Errors from Beebrain (like segments of the yellow brick road being out of order) were displaying on the graph as black rectangles instead of text. #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1136113614631235587",
       "https://github.com/beeminder/road/issues/78"],
@@ -1410,7 +1410,7 @@ var batch2019jun = [{
 "t": "2019-06-28",
 }, /* --------------------------------------------------------- end 2019jun */ ]
 
-var batch2019jul = [{
+batches['2019jul'] = [{
 "x": "Beedroid version 3.0.2 handles SSL errors more gracefully/informatively (and maybe fixes a couple other things but we're saving those for when we're certain!)",
 "u": ["https://twitter.com/beemuvi/status/1145914879225655296",
       "https://github.com/beeminder/beedroid/issues/98"],
@@ -1548,7 +1548,7 @@ var batch2019jul = [{
 "c": "Cf https://commonsware.com/blog/2016/09/07/notifications-sounds-android-7p0-aggravation.html",
 }, /* --------------------------------------------------------- end 2019jul */ ]
 
-var batch2019aug = [{
+batches['2019aug'] = [{
 //2019-08-02 22:22:12, 2019-08-02, 2019-08-02 22:22:12, 1, zero-mercy derails
 "f": true,
 "x": "Follow-on to UVI#3084, you can now choose zero-mercy derails (including as a default for all new goals in account-level settings)",
@@ -1819,7 +1819,7 @@ var batch2019aug = [{
 "c": "Possible moneyfire?",
 }, /* --------------------------------------------------------- end 2019aug */ ]
 
-var batch2019sep = [{
+batches['2019sep'] = [{
 //2019-09-03 21:44:39, 2019-09-03, 2019-09-03 21:44:39, 1, duolingo latin
 "x": "Duolingo Latin is here and beemindable!",
 "u": ["https://twitter.com/beemuvi/status/1169108432009363457",
@@ -2073,7 +2073,7 @@ var batch2019sep = [{
 "t": "2019-09-30",
 }, /* --------------------------------------------------------- end 2019sep */ ]
 
-var batch2019oct = [{
+batches['2019oct'] = [{
 //2019-10-02 22:44:51, 2019-10-02, 2019-10-02 22:44:51, 1, todoist saturday bug
 "x": "We'd sometimes give a bad date (unixtime 0, 1969-12-31!) to all the datapoints we fetched when we did the initial fetch for brand new Todoist goals. #bugfix",
 "u": ["https://twitter.com/beemuvi/status/1179633217466290176",
@@ -2323,7 +2323,7 @@ var batch2019oct = [{
 "c": "Previously we would create the datapoint, and then choke on our own vomit.",
 }, /* --------------------------------------------------------- end 2019oct */ ]
 
-var batch2019nov = [{
+batches['2019nov'] = [{
 //2019-11-05 17:00:40, 2019-11-05, 2019-11-05 17:00:40, 2, project euler
 "x": "Project Euler integration #bugfix: we weren't sending the reminder emails for Project Euler goals (fixed before public launch)",
 "u": ["https://twitter.com/beemuvi/status/1191882388114038785",
@@ -2560,7 +2560,7 @@ var batch2019nov = [{
 "c": "We monkeypatched Ruby's to_str method for Floats. Then that broke everything so we undid that and used a sprintf at least for datapoint values!",
 }, /* --------------------------------------------------------- end 2019nov */ ]
 
-var batch2019dec = [{
+batches['2019dec'] = [{
 "x": "Made various UI tweaks to accommodate the the new less-decimally world order, like getting the \"integery\" field out of custom settings",
 "u": ["https://twitter.com/beemuvi/status/1201544387013931008",
       "https://github.com/beeminder/beeminder/pull/944",

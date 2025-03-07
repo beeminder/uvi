@@ -1,4 +1,4 @@
-var batch2017jan = [{
+batches['2017jan'] = [{
 //"n": 2157,
 "x": "Fixed a case of showing the wrong new pledge amount in the legit check email if you had auto-increasing pledges turned off. #bugfix",
 "u": ["https://twitter.com/beemuvi/status/816448028806516741",
@@ -77,7 +77,7 @@ var batch2017jan = [{
 "t": "2017-02-01 00:56:17 +0000",
 } /* ---------------------------------------------------------- end 2017jan */ ]
 
-var batch2017feb = [{
+batches['2017feb'] = [{
 "f": true,
 "x": "We're obviously very behind on UVI tweets because we're just getting to our official Todoist integration! http://blog.beeminder.com/todoist/",
 "u": "https://twitter.com/beemuvi/status/826950360493236224",
@@ -231,7 +231,7 @@ var batch2017feb = [{
 "t": "2017-02-28 23:49:36 +0000",
 } /* ---------------------------------------------------------- end 2017feb */ ]
 
-var batch2017mar = [{
+batches['2017mar'] = [{
 "x": "#bugfix w/ goal wizard that'd occasionally/rarely give a blank page when creating a goal (related to bad state from previous goal creation)",
 "u": "https://twitter.com/beemuvi/status/837095751960272896",
 "t": "2017-03-02 00:22:34 +0000",
@@ -350,7 +350,7 @@ var batch2017mar = [{
 "t": "2017-03-31 22:36:44 +0000",
 }, /* --------------------------------------------------------- end 2017mar */ ]
 
-var batch2017apr = [{
+batches['2017apr'] = [{
 "f": true,
 "x": "We upgraded our database and got graph regeneration times back down to ~5s. Phew! Now we may <a href=\"http://forum.beeminder.com/t/februarys-annoyingness-straw-poll/2995\" title=\"Forum post with our Annoyingness Straw Poll\">have to work on mass-editing of goals</a>",
 "u": "https://twitter.com/beemuvi/status/849045469703528449",
@@ -481,7 +481,7 @@ var batch2017apr = [{
 "u": "https://twitter.com/beemuvi/status/858098808311357441",
 }, /* --------------------------------------------------------- end 2017apr */ ]
 
-var batch2017may = [{
+batches['2017may'] = [{
 "x": "Fixed broken image for blog post on front page; trimmed whitespace when not displaying seconds; fixed formatting bug in API docs. #mini ×3",
 "t": "2017-05-02",
 "u": "https://twitter.com/beemuvi/status/859557387643961345",
@@ -686,7 +686,7 @@ var batch2017may = [{
 "c": "[twttr#2298]",
 }, /* --------------------------------------------------------- end 2017may */ ]
 
-var batch2017jun = [{
+batches['2017jun'] = [{
 //"n": 2300,
 "x": "<a href=\"http://blog.beeminder.com/gtbee\">GTBee</a> 1.4! It now shows you your list of your completed tasks (only starting from when you upgrade though) http://forum.beeminder.com/t/gtbee/3209",
 "u": "https://twitter.com/beemuvi/status/870427512588730368",
@@ -840,7 +840,7 @@ var batch2017jun = [{
 "u": "https://twitter.com/beemuvi/status/880558372751265792",
 }, /* --------------------------------------------------------- end 2017jun */ ]
 
-var batch2017jul = [{
+batches['2017jul'] = [{
 //"n": 2327,
 "x": "Trello #bugfix HT @richarmstrong: goal creation now nicely handles the case that Beeminder's authorization to read your Trello data expired",
 "u": "https://twitter.com/beemuvi/status/882010906703482881",
@@ -1030,7 +1030,7 @@ var batch2017jul = [{
 "t": "2017-07-31",
 }, /* --------------------------------------------------------- end 2017jul */ ]
 
-var batch2017aug = [{
+batches['2017aug'] = [{
 "x": "Most of a #bugfix for duplicate datapoints on Apple Health: script to remove them server-side (<a href=\"http://forum.beeminder.com/t/duplicates-from-apple-health-steps/3365\">forum thread</a>)",
 "u": ["https://twitter.com/beemuvi/status/892896042231799809",
       "https://github.com/beeminder/beeminder/commit/91ac3e7f2563c1dac1703040c2f9fccf0c7bf47b"],
@@ -1171,7 +1171,7 @@ var batch2017aug = [{
 "c": "By Chelsea",
 }, /* --------------------------------------------------------- end 2017aug */ ]
 
-var batch2017sep = [ {
+batches['2017sep'] = [ {
 "x": "Better client-side validation of take-a-break dates: added checks for trying to create breaks in the past or before the akrasia horizon",
 "u": ["https://twitter.com/beemuvi/status/903764399457878016",
       "https://github.com/beeminder/beeminder/commit/18b2c324904324bb45ad6d005c7ebb643429c80b"],
@@ -1402,7 +1402,7 @@ So we hedged against that by just using +6 days instead of +7, which made it OK-
 Now it's fixed for real.",
 }, /* --------------------------------------------------------- end 2017sep */ ]
 
-var batch2017oct = [ {
+batches['2017oct'] = [ {
 "f": true,
 //"n": 2422,
 "x": "(+) Improvements to restarting goals!",
@@ -1630,7 +1630,7 @@ var batch2017oct = [ {
 "c": "They are really a-tags that are just styled to look like buttons. And changed the yellow color for text on black to be a slightly paler shade of the same yellow, because of contrast and looking slightly better without actually looking like a different color."
 }, /* --------------------------------------------------------- end 2017oct */ ]
 
-var batch2017nov = [ {
+batches['2017nov'] = [ {
 }, { // ------------------------------------------------------------------------
 "x": "Barely user-visible mass-mailer #bugfix: if you unsubscribe after an email is queued, we check again to make sure it's still ok to send",
 "u": ["https://twitter.com/beemuvi/status/925865728263143425",
@@ -1799,7 +1799,7 @@ var batch2017nov = [ {
 "c": "We were grabbing the latest datapoint and comparing the value, then only adding the new datapoint if the value changed. Except we were grabbing \"latest\" by the daystamp, not ID, which meant that we were getting the first datapoint from the most recent day, not the most recently entered. Meaning, if there were multiple datapoints for today you could get something where your datapoints are: 28 120, 28 120, 28 120, 28 100. The next time we'd go to look, we'd see 28 100 as the \"latest\" datapoint and add 120 again. I was surprised this wasn't rampant, but on looking at my own data, and at a bunch of URLminder data, convinced myself that we didn't see more of it because we don't check very frequently when you're not red, and then, for me, when I'm red and forcing refresh all the time, it's while I'm writing, so the count is climbing, so there aren't duplicates. I did confirm other instances of this in the wild, but it turns out to be fairly rare.",
 }, /* --------------------------------------------------------- end 2017nov */ ]
 
-var batch2017dec = [ {
+batches['2017dec'] = [ {
 }, { // ------------------------------------------------------------------------
 "x": "Added rate units dropdown to RescueTime goal creation (had been static text, \"EACH WEEK\", but it was easy to miss and wind up confused). HT Louis Hong",
 "t": "2017-12-01",

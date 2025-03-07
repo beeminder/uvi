@@ -1,6 +1,6 @@
 // Awaiting proglogs generalization...
 
-var batch2025jan = [{
+batches['2025jan'] = [{
 "x": "Changes to Accept headers to properly 403 when request has no Accept header. From turbo/stimulus updates.",
 "u": ["https://x.com/beeminfra/status/1873505523695505419",
 "https://github.com/beeminder/beeminder/issues/4686",

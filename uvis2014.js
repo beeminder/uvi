@@ -1,4 +1,4 @@
-var batch2014jan = [
+batches['2014jan'] = [
 {
 "x": "If you came in thru <a href=\"https://twitter.com/fitbit\">@fitbit</a> to our wizard, but then detoured to normal Beeminder sign up, cookie confusion ensued and we'd 500 you #bugfix",
 "u": "https://twitter.com/beemuvi/status/418271925899501568",
@@ -125,7 +125,7 @@ var batch2014jan = [
 "t": "2014-01-31 07:23:59 +0000",
 }, /* --------------------------------------------------------- end 2014jan */ ]
 
-var batch2014feb = [
+batches['2014feb'] = [
 {
 "x": "Setting the max plot date eventually caused an error; now we remove tmax if in the past, and enforce that it be in the future when first set",
 "u": "https://twitter.com/beemuvi/status/429516432070565888",
@@ -240,7 +240,7 @@ var batch2014feb = [
 "t": "2014-02-27 08:21:44 +0000",
 }, /* --------------------------------------------------------- end 2014feb */ ]
 
-var batch2014mar = [
+batches['2014mar'] = [
 {
 "x": "Javascript error w/ our signup/in modal (used in goal creation wizards) where u couldn't switch back to sign-up from the sign-in tab #bugfix",
 "u": "https://twitter.com/beemuvi/status/439648636234772481",
@@ -367,7 +367,7 @@ var batch2014mar = [
 "t": "2014-03-31 06:19:09 +0000",
 }, /* --------------------------------------------------------- end 2014mar */ ]
 
-var batch2014apr = [
+batches['2014apr'] = [
 {
 "x": "Pessimistic datapoints now back to end-of-day (thx for the feedback, y'all! keeping autodestruct) &amp; now zeno-poll if the PPR may derail you",
 "u": "https://twitter.com/beemuvi/status/450878769859801088",
@@ -490,7 +490,7 @@ var batch2014apr = [
 "t": "2014-04-30 06:35:28 +0000",
 }, /* --------------------------------------------------------- end 2014apr */ ]
 
-var batch2014may = [
+batches['2014may'] = [
 {
 "x": "Fixes to newbee data entry: include the day of the month next to \"today/yest\" (HT <a href=\"https://twitter.com/aaronpk\">@aaronpk</a>), only allow single numbers for value.",
 "u": "https://twitter.com/beemuvi/status/461755747051638784",
@@ -617,7 +617,7 @@ var batch2014may = [
 "t": "2014-05-29 20:52:41 +0000",
 }, /* --------------------------------------------------------- end 2014may */ ]
 
-var batch2014jun = [
+batches['2014jun'] = [
 {
 "x": "Check <a href=\"https://twitter.com/Runkeeper\">@Runkeeper</a> for data since the last datapoint *excluding* resets (otherwise we'd sometimes miss events that synced to RunKeeper late)",
 "u": "https://twitter.com/beemuvi/status/472992598643064832",
@@ -760,7 +760,7 @@ var batch2014jun = [
 "t": "2014-06-30 00:08:42 +0000",
 }, /* --------------------------------------------------------- end 2014jun */ ]
 
-var batch2014jul = [
+batches['2014jul'] = [
 {
 "x": "If you had a credit card on file we'd sometimes send you to the payment page instead of the restart page for goals that were frozen. #bugfix HT <a href=\"http://luciamerlo.com/\">Lucia Merlo</a>", 
 "u": "https://twitter.com/beemuvi/status/484106109293051904",
@@ -902,7 +902,7 @@ var batch2014jul = [
 "t": "2014-07-31 00:37:55 +0000",
 }, /* --------------------------------------------------------- end 2014jul */ ]
 
-var batch2014aug = [
+batches['2014aug'] = [
 {
 "x": "Fixed moneyburning lunacy where we used to increment freebees every time you added a pledge so lots of people wouldn't ever actually run out.", 
 "u": "https://twitter.com/beemuvi/status/495084484178345984",
@@ -1095,7 +1095,7 @@ var batch2014aug = [
 "t": "2014-08-31 07:45:49 +0000",
 }, /* --------------------------------------------------------- end 2014aug */ ]
 
-var batch2014sep = [
+batches['2014sep'] = [
 {
 "x": "We now canonicalize phone numbers when you add them so we can find you again to confirm your number (SMS bot is still US-only unfortunately).", 
 "u": "https://twitter.com/beemuvi/status/506849593191981056",
@@ -1183,7 +1183,7 @@ var batch2014sep = [
 "t": "2014-09-29 23:48:43 +0000",
 }, /* --------------------------------------------------------- end 2014sep */ ]
 
-var batch2014oct = [
+batches['2014oct'] = [
 {
 "f": true,
 "x": "You can now buy 10 freebees (goals that start with $0 pledged) for $1, which we also <a href=\"http://blog.beeminder.com/freebees\">blogged about</a>", 
@@ -1282,7 +1282,7 @@ var batch2014oct = [
 "t": "2014-10-31 22:11:32 +0000",
 }, /* --------------------------------------------------------- end 2014oct */ ]
 
-var batch2014nov = [
+batches['2014nov'] = [
 {
 "f": true,
 "x": "Important <a href=\"https://play.google.com/store/apps/details?id=com.beeminder.beeminder\">new version of the Beeminder Android app (v2.3.1r2)</a> with bugfixes for arbitrary deadlines.", 
@@ -1430,7 +1430,7 @@ var batch2014nov = [
 "t": "2014-11-26 00:35:41 +0000",
 }, /* --------------------------------------------------------- end 2014nov */ ]
 
-var batch2014dec = [
+batches['2014dec'] = [
 {
 "x": "Mini-UVIs: Added <a href=\"https://twitter.com/Malcolm_Ocean\">@Malcolm_Ocean</a> to <a href=\"http://beeminder.com/aboutus\">beeminder.com/aboutus</a> &amp; \"(bee)mind\" instead of the apparently confusing \"mind\" on the frontpage",
 "u": "https://twitter.com/beemuvi/status/540005114824499200",
