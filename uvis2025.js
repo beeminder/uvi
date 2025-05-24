@@ -374,15 +374,18 @@ batches['2025feb'] = [{
       "https://help.beeminder.com/article/329-boss-as-a-service-baas"],
 "t": "2025-02-26",
 "c": "We still also allow nil/null goaldate",
+}, { // ------------------------------------------------------------------------  
+"x": "We added an explicit link to the dashboard in the dropdown menu in the upper right of the website; apparently not everyone knew how to find the dashboard",
+"u": ["https://x.com/beemuvi/status/1895274339584679995",
+      "https://github.com/beeminder/beeminder/issues/5193",
+      "https://github.com/beeminder/beeminder/pull/5181"],
+"d": "2025-02-27",
+"t": "2025-02-27",
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
+"x": "While we were at it we changed \"gallery\" to \"gallery view\" and added some handy tooltips",
+"u": ["https://x.com/beemuvi/status/1895573333862989913",
+      "https://github.com/beeminder/beeminder/pull/5181"],
+"t": "2025-02-28",
 }, /* --------------------------------------------------------- end 2025feb */ ]
 
 batches['2025mar'] = [{
@@ -404,13 +407,537 @@ u: ["https://x.com/beemuvi/status/1896724799818543295",
     "https://help.beeminder.com/article/364-curlex"],
 t: "2025-03-03",
 }, { // ------------------------------------------------------------------------
+x: "For consistency (and cuteness?) and I guess in some cases actual usefulness, we added tooltips to pretty much everything in the navbar and dropdown menu",
+u: ["https://x.com/beemuvi/status/1897080286581842025",
+    "https://github.com/beeminder/beeminder/issues/5182",
+    "https://github.com/beeminder/beeminder/pull/5184"],
+t: "2025-03-04",
+}, { // ------------------------------------------------------------------------
+x: "Oops, we accidentally swapped the Log In and Sign Up links. #bugfix #zombie",
+u: ["https://x.com/beemuvi/status/1897451417662812638",
+    "https://forum.beeminder.com/t/log-in-and-sign-up-buttons-permuted/12269",
+    "https://github.com/beeminder/beeminder/pull/5189"],
+t: "2025-03-05",
+}, { // ------------------------------------------------------------------------
+x: "While we were at it / for completionism, we added tooltips to the remaining navbar / menu items, and improved several of them",
+u: ["https://x.com/beemuvi/status/1897451534675595342",
+    "https://github.com/beeminder/beeminder/issues/5182",
+    "https://github.com/beeminder/beeminder/pull/5189"],
+t: "2025-03-05",
+}, { // ------------------------------------------------------------------------
+"x": "Help docs: Clarification about donations to freeCodeCamp in the article about the autodata integration, plus tweaks to 2 other autodata articles",
+u: ["https://x.com/beemuvi/status/1897814167329161530",
+    "https://help.beeminder.com/article/287-freecodecamp",
+    "https://help.beeminder.com/article/80-duolingo",
+    "https://help.beeminder.com/article/74-garmin"],
+t: "2025-03-06",
+}, { // ------------------------------------------------------------------------
+x: "Some autodata integrations used to overwrite the #DERAIL datapoints and others wouldn't. Now they never do. Consistency (and moar information) FTW.",
+u: ["https://x.com/beemuvi/status/1898167363910222321",
+    "https://github.com/beeminder/beeminder/issues/4192",
+    "https://github.com/beeminder/beeminder/pull/5183",
+    "https://github.com/beeminder/beeminder/pull/5186"],
+d: "2025-03-04",
+t: "2025-03-07",
+}, { // ------------------------------------------------------------------------
+x: `There's a new AGGDAY section at the end of the Data tab indicating how multiple datapoints for a single day are aggregated, e.g., "last", "first", "min", "max"`,
+u: ["https://x.com/beemuvi/status/1899246071563665748",
+    "https://github.com/beeminder/beeminder/issues/5044",
+    "https://github.com/beeminder/beeminder/pull/5180"],
+d: "2025-03-04",
+t: "2025-03-10",
+}, { // ------------------------------------------------------------------------
+x: `The new AGGDAY section also explains aggdays in general and links to the help doc about them`,
+u: ["https://x.com/beemuvi/status/1899246455212400921",
+    "https://github.com/beeminder/beeminder/issues/5044",
+    "https://github.com/beeminder/beeminder/pull/5180"],
+d: "2025-03-04",
+t: "2025-03-10",
+}, { // ------------------------------------------------------------------------
+x: `Tweaks to the aggday section: following our convention for opening links in new tabs or not, not using "here" as anchor text, more words for aggday=max`,
+u: ["https://x.com/beemuvi/status/1899593751724720623",
+    "https://github.com/beeminder/beeminder/pull/5194"],
+d: "2025-03-11",
+t: "2025-03-11",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Added a section to the GmailZero article about how to add a break`,
+u: ["https://x.com/beemuvi/status/1899955528455073923",
+    "https://help.beeminder.com/article/82-gmail"],
+t: "2025-03-12",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Added a section to the Gitminder article about flakiness with all-commits tracking with link to new forum thread`,
+u: ["https://x.com/beemuvi/status/1899969992856396257",
+    "https://help.beeminder.com/article/81-github"],
+t: "2025-03-12",
+}, { // ------------------------------------------------------------------------
+x: `Added "6 months" as one of the choices for relative t-min aka x-min (either by popular demand or because 3 months was demanded and having 3 but not 6 was weird)`,
+u: ["https://x.com/beemuvi/status/1900335100744908805",
+    "https://github.com/beeminder/beeminder/issues/5187",
+    "https://github.com/beeminder/beeminder/pull/5197"],
+d: "2025-03-13",
+t: "2025-03-13",
+}, { // ------------------------------------------------------------------------
+x: `Our authorization to read your Lichess data only lasts a year. Now we handle that gracefully, showing you the error and letting you reauthorize us.`,
+u: ["https://x.com/beemuvi/status/1900686994407362656",
+    "https://github.com/beeminder/beeminder/issues/4973",
+    "https://github.com/beeminder/beeminder/pull/5195"],
+d: "2025-03-14",
+t: "2025-03-14",
+}, { // ------------------------------------------------------------------------
+x: `Added an "Expired Services" section to your account settings; otherwise we would only notice a service expired if you had an active autodata goal using it`,
+u: ["https://x.com/beemuvi/status/1900687378748239960",
+    "https://github.com/beeminder/beeminder/issues/4973",
+    "https://github.com/beeminder/beeminder/pull/5195"],
+d: "2025-03-14",
+t: "2025-03-14",
+}, { // ------------------------------------------------------------------------
+x: "YNAB sent us some legalese to put in our TOS. We're counting this as a UVI on grounds that they'd demote (and thus break) the integration if we didn't.",
+u: ["https://x.com/beemuvi/status/1901782022621962497",
+    "https://github.com/beeminder/beeminder/issues/5199",
+    "https://github.com/beeminder/beeminder/pull/5201"],
+d: "2025-03-17",
+t: "2025-03-17",
+}, { // ------------------------------------------------------------------------
+x: "The Toggl autodata integration, for earlybird goals, wasn't adding data for the new day till the calendar day and Beeminder day matched. #bugfix",
+u: ["https://x.com/beemuvi/status/1901782512009195752",
+    "https://github.com/beeminder/beeminder/issues/5108",
+    "https://github.com/beeminder/beeminder/pull/5198"],
+d: "2025-03-17",
+c: "E.g. if your deadline was noon, and then you did another hour of work starting at 1pm, we wouldn't add that hour until after the clock rolled over midnight",
+}, { // ------------------------------------------------------------------------
+x: `Our query for showing Expired Services from UVI#5147 was wrongly including non-expired services (ones with refresh tokens). #bugfix`,
+u: ["https://x.com/beemuvi/status/1902509714984067296",
+    "https://github.com/beeminder/beeminder/pull/5204"],
+t: "2025-03-19",
+d: "2025-03-19",
+c: "Services with refresh tokens are ones that expire on the regular but self-renew. (Sorta. oAuth2 is actually a bit more complicated than that in practice, but anyway.)",
+}, { // ------------------------------------------------------------------------
+x: `We also made it anti-magic-compliant so if you have no expired services it tells you so explicitly`,
+u: ["https://x.com/beemuvi/status/1902509910056968648",
+    "https://github.com/beeminder/beeminder/pull/5204"],
+t: "2025-03-19",
+d: "2025-03-19"
+}, { // ------------------------------------------------------------------------
+x: `The anti-magic fix also magically fixed an if-statement bug that caused us to only show *one* of auth'd, expired, or "you haven't auth'd anything yet". #bugfix`,
+u: ["https://x.com/beemuvi/status/1902870740363587986",
+    "https://github.com/beeminder/beeminder/pull/5204"],
+t: "2025-03-20",
+c: "Probably this ought to have been obvious, but code reviews are hard, my friends."
+}, { // ------------------------------------------------------------------------
+x: `Also in the Apps&API tab of Settings, we made the autodata integration logos and names look better at small screen sizes`,
+u: ["https://x.com/beemuvi/status/1903210671241875457",
+    "https://github.com/beeminder/beeminder/pull/5204"],
+d: "2025-03-19",
+t: "2025-03-21",
+}, { // ------------------------------------------------------------------------
+x: `Another style improvement: we fixed up the whitespace in the Unauth'd and Expired sections so it's distributed evenly`,
+u: ["https://x.com/beemuvi/status/1903210938758734302",
+    "https://github.com/beeminder/beeminder/pull/5204"],
+d: "2025-03-19",
+t: "2025-03-21",
+}, { // ------------------------------------------------------------------------
+x: `Finally, we made the layout responsive so it switches to a two-column layout at small enough screen sizes`,
+u: ["https://x.com/beemuvi/status/1903210984669597719",
+    "https://github.com/beeminder/beeminder/pull/5204"],
+d: "2025-03-19",
+t: "2025-03-21",
+}, { // ------------------------------------------------------------------------
+x: `Fixed an alignment problem w/ the "Apps you have authorized to access your beeswax" section that we introduced in the previous batch of UVIs. #css #bugfix #zomb`,
+u: ["https://x.com/beemuvi/status/1907220503267582278",
+    "https://github.com/beeminder/beeminder/pull/5206"],
+d: "2025-03-20",
+t: "2025-04-01",
+}, { // ------------------------------------------------------------------------
+x: `Changed the syling of the list of expired services and we now let you either re-auth or delete the service`,
+u: ["https://x.com/beemuvi/status/1907576815654441415",
+    "https://github.com/beeminder/beeminder/issues/4845",
+    "https://github.com/beeminder/beeminder/pull/5206"],
+d: "2025-03-20",
+t: "2025-04-02",
+}, { // ------------------------------------------------------------------------
+x: `Made the spacing/alignment of "Add another service" nicer by giving everything a consistent width, plus some vertical space between sections`,
+u: ["https://x.com/beemuvi/status/1907576934663688214",
+    "https://github.com/beeminder/beeminder/issues/4845",
+    "https://github.com/beeminder/beeminder/pull/5206"],
+d: "2025-03-20",
+t: "2025-04-02",
+}, { // ------------------------------------------------------------------------
+x: `Finally, we adjusted the growing/shrinking of columns in the "Authorized" and "Expired" sections to use whitespace better and wrap text less`,
+u: ["https://x.com/beemuvi/status/1907944873027842089",
+    "https://github.com/beeminder/beeminder/issues/4845",
+    "https://github.com/beeminder/beeminder/pull/5206"],
+d: "2025-03-20",
+t: "2025-04-03",
 }, /* --------------------------------------------------------- end 2025mar */ ]
 
 batches['2025apr'] = [{
 }, { // ------------------------------------------------------------------------
+f: true,
+x: `Official launch of our Postminder autodata integration, with new Discourse logo, nicer landing page, and inclusion in the integrations gallery`,
+u: ["https://x.com/beemuvi/status/1908259775303082465",
+    "https://blog.beeminder.com/postminder"],
+t: "2025-04-04",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: New article for our Postminder integration`,
+u: ["https://x.com/beemuvi/status/1908259967179874730",
+    "https://help.beeminder.com/article/368-postminder"],
+t: "2025-04-04",
+}, { // ------------------------------------------------------------------------
+x: `Loophole closing: If you try to create goals via the API when you're in the "deadbeat" state (failed payment method), it now gives an error`,
+u: ["https://x.com/beemuvi/status/1909367794728153577",
+    "https://github.com/beeminder/beeminder/issues/1978",
+    "https://github.com/beeminder/beeminder/pull/5214"],
+d: "2025-04-07",
+t: "2025-04-07",
+}, { // ------------------------------------------------------------------------
+x: `We introduced a syntax error that caused email reminders for Curlminder (aka Curlex), Fatebook, Oura, and Wakatime autodata goals to fail to send. #bugfix #zomb`,
+u: ["https://x.com/beemuvi/status/1909757623957917886",
+    "https://github.com/beeminder/beeminder/issues/5216",
+    "https://github.com/beeminder/beeminder/pull/5215"],
+d: "2025-04-04",
+t: "2025-04-08",
+c: "See `cute_reminder` for autodata reminders. Possibly broken ever since the Wakatime integration.",
+}, { // ------------------------------------------------------------------------
+x: `And a tiny set of users (who managed to have the SMS bot checkbox checked but had a blank phone number) were failing to get any reminders of any kind. #bugfix`,
+u: ["https://x.com/beemuvi/status/1910117505328357769",
+    "https://github.com/beeminder/beeminder/issues/5220"],
+d: "2025-04-04",
+t: "2025-04-09",
+c: "There's some followon work to robustify and fix things, but the direct fix for the users who weren't getting their alerts was just a database update. Total affected was between 5 and 8.",
+}, { // ------------------------------------------------------------------------
+x: `Restarting a goal that hit its end date was yielding a new end date of +1.5 years. Now we correctly put the default end date at 2099, ie open-ended. #bugfix`,
+u: ["https://x.com/beemuvi/status/1910118544601489912",
+    "https://github.com/beeminder/beeminder/issues/4049",
+    "https://github.com/beeminder/beeminder/pull/5207"],
+d: "2025-03-21",
+t: "2025-04-09",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: New article, "What happens when I reach my goal total / end date?" because users asked and we didn't have it in one place to search for or link to`,
+u: ["https://x.com/beemuvi/status/1910481082199511163",
+    "https://help.beeminder.com/article/367-what-happens-when-i-reach-my-goal-total-end-date"],
+t: "2025-04-10",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Attempted to ameliorate confusion about the Metaminder integration in that article, plus tweaks to 5 other autodata articles`,
+u: ["https://x.com/beemuvi/status/1910781955836404028",
+    "https://help.beeminder.com/article/323-metaminder",
+    "https://help.beeminder.com/article/83-habitica",
+    "https://help.beeminder.com/article/86-ifttt",
+    "https://help.beeminder.com/article/338-lichess",
+    "https://help.beeminder.com/article/318-make-formerly-integromat",
+    "https://help.beeminder.com/article/352-manifold"],
+t: "2025-04-11",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Added a bit of a troubleshooting note to the Intend autodata article, a solicitation of new metrics in the Oura one, plus tweaks in 3 others`,
+u: ["https://x.com/beemuvi/status/1910783188949176451",
+    "https://help.beeminder.com/article/85-intend",
+    "https://help.beeminder.com/article/361-oura",
+    "https://help.beeminder.com/article/291-pocket",
+    "https://help.beeminder.com/article/292-project-euler",
+    "https://help.beeminder.com/article/347-readwise-reader"],
+t: "2025-04-11",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Replaced the screenshots in the Postminder article to reflect the final version that supports arbitrary Discourse fora`,
+u: ["https://x.com/beemuvi/status/1911877942420119898",
+    "https://help.beeminder.com/article/368-postminder"],
+t: "2025-04-14",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: The RescueTime autodata integration article now documents the slight delay we have in derailing RescueTime goals`,
+u: ["https://x.com/beemuvi/status/1912293947936063859",
+    "https://help.beeminder.com/article/76-rescuetime",
+    "https://doc.bmndr.co/freshat"],
+t: "2025-04-15",
+}, { // ------------------------------------------------------------------------
+x: `Our freeCodeCamp autodata integration briefly broke due to an API change on their end. We got approval for a workaround, now put in place! #bugfix #zomb`,
+u: ["https://x.com/beemuvi/status/1912653410513699159",
+    "https://github.com/beeminder/beeminder/issues/5236",
+    "https://github.com/beeminder/beeminder/pull/5233"],
+d: "2025-04-16",
+t: "2025-04-16",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Added more about syncing to the Skritter autodata article, plus a couple links added to the RSSminder and Runkeeper articles`,
+u: ["https://x.com/beemuvi/status/1912653488892588459",
+    "https://help.beeminder.com/article/89-skritter",
+    "https://help.beeminder.com/article/331-rssminder",
+    "https://help.beeminder.com/article/77-runkeeper"],
+t: "2025-04-16",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Added a note to the TaskRatchet autodata article about how to not count tasks as a +1 on Beeminder until they're completed on TaskRatchet`,
+u: ["https://x.com/beemuvi/status/1913019198059823527",
+    "https://help.beeminder.com/article/289-taskratchet"],
+t: "2025-04-17",
+}, { // ------------------------------------------------------------------------
+x: `We weren't tracking when you change your phone number, so you could wind up with an 'active' number that you hadn't actually opted in to the SMS bot. #bugfix`,
+u: ["https://x.com/beemuvi/status/1913379713453838413",
+    "https://github.com/beeminder/beeminder/issues/5223",
+    "https://github.com/beeminder/beeminder/pull/5235"],
+d: "2025-04-18",
+t: "2025-04-18",
+c: "We thought we were, but there was a bug with assignment so that we weren't actually updating the 'phone number state', which meant once you had activated the bot once, you could change or even delete your number and we'd still have it marked down as 'active'",
+}, { // ------------------------------------------------------------------------
+x: `Soft launch of our Maayot autodata integration for Chinese language learning, at the still-slightly-secret URL beeminder.com/maayot`,
+u: ["https://x.com/beemuvi/status/1914467551574368664",
+    "https://github.com/beeminder/integrations/issues/70",
+    "https://github.com/beeminder/beeminder/issues/5191",
+    "https://github.com/beeminder/beeminder/pull/5239"],
+d: "2025-04-21",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Added a troubleshooting section to the StoryGraph autodata integration article and clarified a point about changing projects in the Todoist article`,
+u: ["https://x.com/beemuvi/status/1914468070556578034",
+    "https://help.beeminder.com/article/300-the-storygraph",
+    "https://help.beeminder.com/article/79-todoist"],
+t: "2025-04-21",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Additions/tweaks to the Toggl Track autodata integration article (re: other Toggl software, etc) plus tiny tweaks to 5 other articles`,
+u: ["https://x.com/beemuvi/status/1914824457526649059",
+    "https://help.beeminder.com/article/155-toggl",
+    "https://help.beeminder.com/article/116-slack",
+    "https://help.beeminder.com/article/84-sleep-as-android",
+    "https://help.beeminder.com/article/368-postminder",
+    "https://help.beeminder.com/article/112-sms",
+    "https://help.beeminder.com/article/281-strava"],
+t: "2025-04-22",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Rearranged the FAQ for WakaTime to put higher-frequency questions on top, plus small tweaks for clarity to 4 other articles`,
+u: ["https://x.com/beemuvi/status/1914826975816176061",
+    "https://help.beeminder.com/article/357-wakatime",
+    "https://help.beeminder.com/article/78-trello",
+    "https://help.beeminder.com/article/340-trydeepwork",
+    "https://help.beeminder.com/article/293-twitter",
+    "https://help.beeminder.com/article/88-urlminder"],
+t: "2025-04-22",
+}, { // ------------------------------------------------------------------------
+f: true,
+x: `Official launch of our Maayot autodata integration, with fancy landing page and Maayot's logo on the Beeminder front page, plus blog post`,
+u: ["https://x.com/beemuvi/status/1915187506343227407",
+    "https://blog.beeminder.com/maayot",
+    "https://x.com/bmndr/status/1915184408640004271",
+    "https://github.com/beeminder/integrations/issues/70",
+    "https://github.com/beeminder/beeminder/issues/5191"],
+d: "2025-04-22",
+t: "2025-04-23",
+}, { // ------------------------------------------------------------------------
+x: `Tiny #bugfix with the Maayot integration: if we can't find your Maayot account when you're setting up your goal, we actually tell you that`,
+u: ["https://x.com/beemuvi/status/1915187914071589255",
+    "https://github.com/beeminder/beeminder/issues/5191"],   
+t: "2025-04-23",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: New article for the Maayot autodata integration`,
+u: ["https://x.com/beemuvi/status/1915188131097383145",
+    "https://help.beeminder.com/article/369-maayot"],
+t: "2025-04-23",
+}, { // ------------------------------------------------------------------------
+x: `Added a line to the email about failed charges to let people know they can manually force a retry of charges from the Payments page`,
+u: ["https://x.com/beemuvi/status/1915518113057218824",
+    "https://github.com/beeminder/beeminder/pull/5242"],
+t: "2025-04-24",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Todoist integration article mentions combining projects/tags with boolean-OR; plus rephrasings, rearranging, new links, and more for Withings`,
+u: ["https://x.com/beemuvi/status/1915888400479227998",
+    "https://help.beeminder.com/article/79-todoist",
+    "https://help.beeminder.com/article/90-withings"],
+t: "2025-04-25",
+}, { // ------------------------------------------------------------------------
+x: `Closed a loophole that allowed you to end a goal within the akrasia horizon in some sneaky convoluted cases by messing with the graph editor`,
+u: ["https://x.com/beemuvi/status/1915910283887063215",
+    "https://github.com/beeminder/beeminder/issues/1930",
+    "https://github.com/beeminder/beeminder/pull/5237"],
+d: "2025-04-25",
+t: "2025-04-25",
+}, { // ------------------------------------------------------------------------
+x: "The StoryGraph integration was broken for several days. Related to a DDOS attack they were experiencing, but we got them to whitelist us, phew!",
+u: ["https://x.com/beemuvi/status/1916993551227097358",
+    "https://github.com/beeminder/beeminder/pull/5246"],
+d: "2025-04-25",
+t: "2025-04-28",
+c: "added a descriptive user-agent header to the requests"
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Added a "Related Integrations" section to the language-learning integrations so they all link to each other`,
+u: ["https://x.com/beemuvi/status/1916993739199025165",
+    "https://help.beeminder.com/article/369-maayot"],
+d: "2025-04-28",
+t: "2025-04-28",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Clarifications and cross-links on the "how do I quit a goal?" article based on user confusion about goals about to end`,
+u: ["https://x.com/beemuvi/status/1917361582847521251",
+    "https://help.beeminder.com/article/44-how-do-i-quit-a-goal"],
+t: "2025-04-29",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Added feedback solicitation on new metrics for the YNAB article plus readability tweaks to the Zapier and Slack integration articles`,
+u: ["https://x.com/beemuvi/status/1917361704608137469",
+    "https://help.beeminder.com/article/359-ynab",
+    "https://help.beeminder.com/article/87-zapier",
+    "https://help.beeminder.com/article/116-slack"],
+t: "2025-04-29",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+x: `Another #bugfix with the Maayot integration: pasting a bad URL (either nonsense or doesn't point to your Maayot settings) gives a nice error instead of silence`,
+u: ["https://x.com/beemuvi/status/1917729823268692030",
+    "https://github.com/beeminder/beeminder/pull/5251"],
+c: `It says "that URL format looks sus"`,
+d: "2025-04-30",
+t: "2025-04-30",
+}, { // ------------------------------------------------------------------------
+x: `Yet more error checking for the Maayot integration: We don't let you choose more than 1 story per day as your commitment since that's the most Maayot offers`,
+u: ["https://x.com/beemuvi/status/1917729922027773976",
+    "https://github.com/beeminder/beeminder/pull/5251"],
+d: "2025-04-30",
+t: "2025-04-30",
+}, { // ------------------------------------------------------------------------
+x: `Also in Maayot goal setup: some error messages were flashing several times and/or disappearing too soon. Also nixed an errant "Euler" from a tooltip. #bugfix`,
+u: ["https://x.com/beemuvi/status/1917730014868693206",
+    "https://github.com/beeminder/beeminder/pull/5251"],
+d: "2025-04-30",
+t: "2025-04-30",
+}, { // ------------------------------------------------------------------------
+x: `One more for Maayot: Clicking the stepper up or down to change the rate you're committing to increments by ±1/7 so it's easy to pick, say, 2 per week`,
+u: ["https://x.com/beemuvi/status/1917730103519502775",
+    "https://github.com/beeminder/beeminder/pull/5251"],
+d: "2025-04-30",
+t: "2025-04-30",
 }, /* --------------------------------------------------------- end 2025apr */ ]
 
 batches['2025may'] = [{
+}, { // ------------------------------------------------------------------------
+x: `Not specific to Maayot, the up/down stepper buttons no longer ever allow you to step past whatever the upper/lower bounds are. #bugfix`,
+u: ["https://x.com/beemuvi/status/1918377397923221608",
+    "https://github.com/beeminder/beeminder/pull/5251"],
+d: "2025-04-30",
+t: "2025-05-02",
+}, { // ------------------------------------------------------------------------
+x: `Grandpatricide! The year of grandfathering for the last Beemium price hike ($50->$64) ended and we emailed those affected. Time for another price hike?`,
+u: ["https://x.com/beemuvi/status/1918378106517442639",
+    "https://github.com/beeminder/beeminder/issues/4153",
+    "https://github.com/beeminder/beeminder/commit/90a4edc7690e4d2d73824447aa875dfb63b140e9"],
+d: "2025-05-02",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: More clarifications on Beeminder login for the iOS app article, plus smaller clarifications and tweaks for 3 other articles`,
+u: ["https://x.com/beemuvi/status/1919541589573304835",
+    "https://help.beeminder.com/article/60-ios-app",
+    "https://help.beeminder.com/article/48-how-do-i-delete-my-account",
+    "https://help.beeminder.com/article/47-how-do-i-delete-a-goal",
+    "https://help.beeminder.com/article/46-what-happens-to-an-archived-goal"],
+t: "2025-05-05",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Added a note to the Fitbit article about using Fitbit as a bridge to Beeminder from other services, plus links to other bridging integrations`,
+u: ["https://x.com/beemuvi/status/1919541715523838412",
+    "https://help.beeminder.com/article/11-fitbit"],
+t: "2025-05-05",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Added a screenshot and details about the due-by table to the Android app (Beedroid) article, much asked-about in support`,
+u: ["https://x.com/beemuvi/status/1919896411560440176",
+    "https://help.beeminder.com/article/62-android-app#dueby"],
+t: "2025-05-06",
+}, { // ------------------------------------------------------------------------
+x: `We made a new flash banner warning you when your Beeminder timezone doesn't match your browser's timezone (displays once a day)`,
+u: ["https://x.com/beemuvi/status/1919904577270223063",
+    "https://github.com/beeminder/beeminder/issues/3069",
+    "https://github.com/beeminder/beeminder/pull/5248"],
+d: "2025-05-06",
+t: "2025-05-06",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Add a Related Integrations section to the TagTime article plus a link to a new community-driven Android implementation`,
+u: ["https://x.com/beemuvi/status/1920265327788573003",
+    "https://help.beeminder.com/article/64-tagtime"],
+d: "2025-05-07",
+t: "2025-05-07",
+}, { // ------------------------------------------------------------------------
+x: `Updated the example goals section of beeminder.com/overview to fix whitespace usage (it was sqwunched together on the left, not using available space). #css`,
+u: ["https://x.com/beemuvi/status/1922076408496508997",
+    "https://github.com/beeminder/beeminder/pull/5261#event-17597626304",
+    "https://github.com/beeminder/beeminder/issues/4074"],
+d: `2025-05-09`,
+t: `2025-05-12`,
+c: `Before/after shots in the PR`,
+}, { // ------------------------------------------------------------------------
+x: `Shortened the "fitness & training" header to just "fitness". It was slightly redundant, and also wrapped at small screen sizes messing up the layout. #css`,
+u: ["https://x.com/beemuvi/status/1922076489136079268",
+    "https://github.com/beeminder/beeminder/pull/5261#event-17597626304",
+    "https://github.com/beeminder/beeminder/issues/4074"],
+d: `2025-05-09`,
+t: `2025-05-12`,
+c: `Before/after shots in the PR`,
+}, { // ------------------------------------------------------------------------
+x: `For group goals, we now send SMS reminders to any groupie with an active phone number for SMS (if the owner chooses SMS reminders)`,
+u: ["https://x.com/beemuvi/status/1922441518003929558",
+    "https://github.com/beeminder/beeminder/pull/5264"],
+t: "2025-05-13",
+}, { // ------------------------------------------------------------------------
+x: `And we put more helpful info in the "this is a fallback for your SMS alerts" blurb in the fallback email in case SMS fails`,
+u: ["https://x.com/beemuvi/status/1922441556071506384",
+    "https://github.com/beeminder/beeminder/pull/5264"],
+t: "2025-05-13",
+}, { // ------------------------------------------------------------------------
+x: `Oops, we broke the SMS reminders on Monday and were always falling back to email. #zombie #bugfix`,
+u: ["https://x.com/beemuvi/status/1922803215529111798",
+    "https://github.com/beeminder/beeminder/pull/5268"],
+d: "2025-05-14",
+c: `This was due to a dumb syntax error using assignment '=' instead of comparison '=='. Mortifying."`,
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Moved up the definition of akrasia in the article on the akrasia horizon and restructured accordingly, plus tweaks to 2 other articles`,
+u: ["https://x.com/beemuvi/status/1922803301692715208",
+    "https://help.beeminder.com/article/45-what-is-the-akrasia-horizon",
+    "https://help.beeminder.com/article/321-ios-app-beta-testing",
+    "https://help.beeminder.com/article/158-android-app-beta-testing"],
+t: "2025-05-14",
+}, { // ------------------------------------------------------------------------
+x: `More robust fallback for SMS reminder failures; we now always fall back to email due to any problems on Beeminder's side at least (follow-on to UVI#5164)`,
+u: ["https://x.com/beemuvi/status/1923165423433875803",
+    "https://github.com/beeminder/beeminder/pull/5264",
+    "https://github.com/beeminder/beeminder/issues/4378"],
+t: "2025-05-15",
+c: `Case where it failed: user had SMS turned on, but no phone number, and the job freaked out and failed. Now the if-statements are more thorough so it would only raise an error if Twilio returns an error (or times out or somesuch). Which we also ought to be more robust to.`,
+}, { // ------------------------------------------------------------------------
+x: `The "renew" link for expired services could cause you to wind up with two copies of the service stored (and then we wouldn't use the new/correct one) #bugfix`,
+u: ["https://x.com/beemuvi/status/1923165735695618122",
+    "https://github.com/beeminder/beeminder/issues/5255",
+    "https://github.com/beeminder/beeminder/pull/5270"],
+d: "2025-05-14",
+t: "2025-05-15",
+c: `Reported as Lichess dups, but could apply to any service showing up in the expired list`,
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Added more arguments and links to our article about Beeminder vs StickK, like how Beeminder can be your personal Pigouvian tax`,
+u: ["https://x.com/beemuvi/status/1923499461243986290",
+    "https://help.beeminder.com/article/49-why-should-i-use-beeminder-over-stickk",
+    "https://blog.beeminder.com/pigou"],
+t: "2025-05-16",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Edited how we talk about Beemium (superusers only) to not be mistakable for upselling, plus a typo fix in the Privacy article`,
+u: ["https://x.com/beemuvi/status/1923499990879699264",
+    "https://help.beeminder.com/article/114-can-i-specify-a-beneficiary-for-my-derailments",
+    "https://help.beeminder.com/article/102-privacy"],
+t: "2025-05-16",
+}, { // ------------------------------------------------------------------------
+x: `For the dialog box where you explicitly say you want to archive a derailed goal and accept the charge immediately, we added "this is non-refundable"`,
+u: ["https://x.com/beemuvi/status/1924605941615677918",
+    "https://github.com/beeminder/beeminder/issues/5271",
+    "https://github.com/beeminder/beeminder/pull/5272"],
+d: "2025-05-19",
+t: "2025-05-19",
+c: `This is the insta-archive dialog which tells users "we're gonna charge you this $X right now if you click that button; email support instead if you have a problem with that". Support Czar request."`,
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, /* --------------------------------------------------------- end 2025may */ ]
 
@@ -645,19 +1172,17 @@ https://github.com/beeminder/blog/pull/459
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-Pull in default jqueryui smoothness theme #4651
-This prevents waiting on a connection to Google and gives us the ability to handle caching.
-For https://github.com/beeminder/beeminder/issues/4650
-This is ... who knows, maybe a microUVI?
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-"x": "Closed a loophole in which you could change your pledge cap via the API"
+api pledge cap loophole
+x: "Closed a loophole in which you could change your pledge cap to $0 via the API"
 Don't let folks set pledge cap via API
 This just handles the API goals endpoint, and adds a qual.
 https://github.com/beeminder/beeminder/issues/4533
-No idea if this is a UVI.  Maybe, in that we're helping folks with megakrasia?
-PR from 2023 Nov
-is it deployed? NOT DEPLOYED
+https://github.com/beeminder/beeminder/pull/5205
+https://github.com/beeminder/beeminder/pull/4578
+PR from 2023 Nov [did it wrong and messed up goal creation]
+questionable uvi since setting it via the api was an undocumented “feature” to begin with, but it does give an explanatory error message now, so maybe it could count?
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 probably not a UVI yet (without doing more steps toward PPPurge): change what counts as having a valid payment method for paypal users
@@ -681,30 +1206,6 @@ What’s the difference between the goal types? - Added a note on which goal typ
 https://help.beeminder.com/article/51-whats-the-difference-between-the-goal-types
 "d": "2024-06-05",
 }, { // ------------------------------------------------------------------------
-Group goals launch: 
-X you can invite people to join a goal you've created. good for shared chores, or moral support
-X we send an email the person you're inviting and they have to confirm themself.
-X there's a nice interface in your settings which shows the invites you've sent out, and the people who've accepted and joined. also explains how stuff works.
-  https://github.com/beeminder/beeminder/pull/4932
-Group goals pre-blog updates:
-X Don't resend groupie invite to existing groupie
-X fix typo in the email and remove underscores around the goal name (also in the invite email)
-  https://github.com/beeminder/beeminder/pull/4938
-Group goals tweaks before publishing the blog post, gissue #4935
-X Special case for no pending invitees
-- Lots of copyedits along the lines of the email copyedits
-- Extra tightening of the prose
-X Splur a thing, though turned out not to matter
-Final mendozas for the blog announce
-X don't let user confirm themself if it will create a conflict with an existing goal of their own
-X don't invite people who are already members
-- don't say "gallery/dashboard", "dashboard" will do
-X usernames are case insensitive, so don't fail to find folx if the username is entered with capitalization
-X fix up html on [none so far] line when no invites pending
-- tweak js to remove "[none so far]" line when invitee line is added
-- minor change to wording of "only the owner can add ppl"
-X Privacy fix for group goal invites
-- Nix underscores in email subject
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -724,11 +1225,21 @@ https://github.com/beeminder/beeminder/issues/1618#issuecomment-2327444912
 }, { // ------------------------------------------------------------------------
 BEEMIOS POST-6.7
 * rounded corners visual glitch: https://github.com/beeminder/BeeSwift/issues/558 
+  another one? https://github.com/beeminder/BeeSwift/pull/552
+    https://github.com/beeminder/BeeSwift/issues/551
 * accidentally showed deadbeat briefly: https://github.com/beeminder/BeeSwift/issues/586
 * sort-by-pledge matches website: https://github.com/beeminder/BeeSwift/issues/578
 * fix blank icon in iOS 17: https://github.com/beeminder/BeeSwift/issues/621
 * incremental goal updates: https://github.com/beeminder/BeeSwift/pull/635
 * date is wrong at first? or was this in 6.7?: https://github.com/beeminder/BeeSwift/issues/473
+* better transition from placeholder to graph?: https://github.com/beeminder/BeeSwift/issues/608#issue-2769414147
+  fixed by https://github.com/beeminder/BeeSwift/pull/609#pullrequestreview-2547275472
+* fix a crash when logging out and back in?: https://github.com/beeminder/BeeSwift/issues/590#issuecomment-2569768484
+* keep keyboard from obscuring last goals in gallery view: https://github.com/beeminder/BeeSwift/pull/536
+* dark green (forest green) for >7 safe days: https://github.com/beeminder/BeeSwift/pull/535
+* no more stale badge count when you log out? https://github.com/beeminder/BeeSwift/issues/553
+* more dark mode improvements? white on black instead of gray on black for logo: https://github.com/beeminder/BeeSwift/issues/150
+* fix styling of the navbar: https://github.com/beeminder/BeeSwift/pull/569
 }, { // ------------------------------------------------------------------------
 BEEMIOS 2024-09-16:
 * Don't delete the #DERAIL datapoint: Closed #456 as completed via #474.
@@ -763,74 +1274,95 @@ firefox add-on for super-collapsing dashboard goals
 - UNCLE api endpoint [TODO: document in api and then we can count this]
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
+x: `There were a couple graph images on http://beeminder.com/overview that still showed yellow brick road style graphs. Modernized them to bright red line versions.`,
+u: ["https://x.com/beemuvi/status/1920268626327650735",
+    "https://github.com/beeminder/beeminder/issues/4074",
+    "https://github.com/beeminder/beeminder/pull/5258"],
+d: "2025-05-07",
+t: "2025-05-07",
 }, { // ------------------------------------------------------------------------
-HELP DOCS
-small or no UVI yet:
-https://help.beeminder.com/article/11-fitbit
-Added a note that Fitbit can be used as a bridge to Beeminder for data from other services. Small UVI, or no UVI because I haven’t explained how?
+x: `Modernized the screenshot for setting a starting stakes and pledge cap on http://beeminder.com/overview`,
+u: ["https://x.com/beemuvi/status/1920626895302926809",
+    "https://github.com/beeminder/beeminder/pull/5258"],
+t: "2025-05-08",
 }, { // ------------------------------------------------------------------------
+x: `Updated the webcopy on beeminder.com/overview to talk about pledge caps rather than "first derail typically free" which is less true now`,
+u: ["https://x.com/beemuvi/status/1920627042728783966",
+    "https://github.com/beeminder/beeminder/pull/5258"],
+t: "2025-05-08",
 }, { // ------------------------------------------------------------------------
-andy aggday thing:
-https://github.com/beeminder/beeminder/compare/4b2219ce39f7%5E...f15111044035
-andy aggday stuff?
-https://github.com/beeminder/beeminder/pull/5180#event-16518662889
-
-5b53565 small refactor for goal method
-5e442fa show aggday warnings
-74e7b48 add datapoint helper for formatted value
-1c83ca2 use new datapoint method for formatted value
-a1e8a61 move aggday info to its own box
-0fb91a7 link to docs for all aggday options
-
+x: `The rosy line is deprecated and now turned off by default for new graphs; we have plans for something better!`,
+u: ["https://x.com/beemuvi/status/1920963752913932535",
+    "https://github.com/beeminder/road/issues/268",
+    "https://github.com/beeminder/beeminder/pull/5258"],
+t: "2025-05-09",
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-"x": "We added an explicit link to the dashboard in the dropdown menu in the upper right of the website; apparently not everyone knew how to find the dashboard",
-"u": ["https://x.com/beemuvi/status/1895274339584679995",
-      "https://github.com/beeminder/beeminder/pull/5181"],
-"d": "2025-02-27",
-"t": "2025-02-27",
-}, { // ------------------------------------------------------------------------
-"x": "While we were at it we changed \"gallery\" to \"gallery view\" and added some handy tooltips",
-"u": ["https://x.com/beemuvi/status/1895573333862989913",
-      "https://github.com/beeminder/beeminder/pull/5181"],
-"t": "2025-02-28",
-}, { // ------------------------------------------------------------------------
-TODO: oops, forgot to move the two things above up
-}, { // ------------------------------------------------------------------------
-"x": "For consistency (and cuteness?) and I guess in some cases actual usefulness, we added tooltips to pretty much everything in the navbar and dropdown menu",
-"u": ["https://x.com/beemuvi/status/1897080286581842025",
-      "https://github.com/beeminder/beeminder/issues/5182",
-      "https://github.com/beeminder/beeminder/pull/5184"],
-"t": "2025-03-04",
-}, { // ------------------------------------------------------------------------
-"x": "Oops, we accidentally swapped the Log In and Sign Up links. #bugfix #zombie",
-"u": ["https://x.com/beemuvi/status/1897451417662812638",
-      "https://forum.beeminder.com/t/log-in-and-sign-up-buttons-permuted/12269",
-      "https://github.com/beeminder/beeminder/pull/5189"],
-"t": "2025-03-05",
-}, { // ------------------------------------------------------------------------
-"x": "While we were at it / for completionism, we added tooltips to the remaining navbar / menu items, and improved several of them",
-"u": ["https://x.com/beemuvi/status/1897451534675595342",
-      ],
-"t": "2025-03-05",
-}, { // ------------------------------------------------------------------------
-"x": "Help docs: Clarification about donations to freeCodeCamp in the article about the autodata integration, plus tweaks to 2 other autodata articles",
-"u": ["https://x.com/beemuvi/status/1897814167329161530",
-      "https://help.beeminder.com/article/287-freecodecamp",
-      "https://help.beeminder.com/article/80-duolingo",
-      "https://help.beeminder.com/article/74-garmin"],
-"t": "2025-03-06",
+x: `UVI#4572 got most of these but we finally got the stragglers: modernized the example graph images on the GmailZero and Withings landing pages`,
+u: ["https://x.com/beemuvi/status/1920963932228813292",
+    "https://github.com/beeminder/beeminder/pull/5258"],
+t: "2025-05-09",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-don't delete derail datapt in autodata
-for #4192.
-needs quals for autodatas, and decide if ths is correct response to 4192
-https://github.com/beeminder/beeminder/pull/5183
+x: `The cropping of the how-it-works graph image on beeminder.com/overview was bumping into the border uglily. Now cropped nicely. #css (sort of)`,
+u: ["https://x.com/beemuvi/status/1924612972036686059",
+    "https://github.com/beeminder/beeminder/issues/4074"],
+d: "2025-05-19",
+t: "2025-05-19",
+}, { // ------------------------------------------------------------------------
+x: `Added an example graph to the Metaminder landing page`
+u: ["https://x.com/beemuvi/status/1924976856509673477",
+    "https://github.com/beeminder/beeminder/issues/4074",
+    "https://github.com/beeminder/beeminder/issues/3814"],
+t: "2025-05-20",
+}, { // ------------------------------------------------------------------------
+x: `More webcopy changes on beeminder.com/overview to keep up with Beeminder changes, such as customizable post-derail respite and fancier data-smoothing`,
+u: ["https://x.com/beemuvi/status/1924977459516346851",
+    "https://github.com/beeminder/beeminder/issues/4074",
+    "https://blog.beeminder.com/smooth"],
+t: "2025-05-20",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-finish up using noderail scope #5186
-UVI: this is a followon to 4192, but does not constitute a UVI on its own.
-https://github.com/beeminder/beeminder/pull/5186
+x: `Added a link to the Featured Gallery on beeminder.com/overview and made other copyedits`,
+u: ["https://x.com/beemuvi/status/1925336132491030636",
+    "https://github.com/beeminder/beeminder/pull/5278",
+    "https://github.com/beeminder/beeminder/issues/4074"],
+t: "2025-05-21",
+}, { // ------------------------------------------------------------------------
+x: `Fixed a tiny typo on the landing page of the Intend integration ("an Intend user", not "a Intend") plus more copyedit tweaks fussing with commas`,
+u: ["https://x.com/beemuvi/status/1925336602014097796",
+    "https://github.com/beeminder/beeminder/pull/5278",
+    "https://github.com/beeminder/beeminder/issues/4074"],
+t: "2025-05-21",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+x: `All autodata goals now have a Settings section, for consistency, even if the specific integration doesn't implement letting you set things`,
+u: ["https://x.com/beemuvi/status/1925697443104006602",
+    "https://github.com/beeminder/beeminder/pull/5277"],
+d: "2025-05-20",
+t: "2025-05-22",
+c: `E.g. Strava now has a section in settings, whereas it did not before`,
+}, { // ------------------------------------------------------------------------
+x: `Flash banners for errors/warnings/FYIs finally wrap when the words don't fit. Phew!`,
+u: ["https://x.com/beemuvi/status/1925697591485804845",
+    "https://github.com/beeminder/beeminder/issues/166",
+    "https://github.com/beeminder/beeminder/pull/5276"],
+d: "2025-05-20",
+t: "2025-05-22",
+}, { // ------------------------------------------------------------------------
+x: `Flash banners are also more responsive to screen size in that the font size is adaptive. Yay mobile-friendliness.`,
+u: ["https://x.com/beemuvi/status/1925697784818159739",
+    "https://github.com/beeminder/beeminder/issues/166",
+    "https://github.com/beeminder/beeminder/pull/5276"],
+d: "2025-05-20",
+t: "2025-05-22",
+c: "There probably exist instances where this looks demonstrably worse now, because the wrapped text will be long and crowded -- in fact could potentially overflow the banner area? So there's prolly more work to be done, but I think it's definitely an improvement to be able to see the whole message on mobile and stuff...",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Rearranged and clarified things and added new details in the 3 articles about account settings`,
+u: ["https://x.com/beemuvi/status/1926042655051354489",
+    "https://help.beeminder.com/article/109-account-details",
+    "https://help.beeminder.com/article/110-apps-and-api",
+    "https://help.beeminder.com/article/111-new-goal-defaults"],
+t: "2025-05-23",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -839,5 +1371,13 @@ https://github.com/beeminder/beeminder/pull/5186
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-//////------------------------------------------------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
-*********************************************************************************************************************************************************************/
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+////------------------------------------------------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
+*******************************************************************************************************************************************************************/

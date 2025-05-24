@@ -60,7 +60,41 @@ batches['2025jan'] = [{
 }, { // ------------------------------------------------------------------------
 "x": "Opportunistic refactoring: use helper functions in main menu partials.",
 "u": ["https://github.com/beeminder/beeminder/pull/5181",
-"https://x.com/beeminfra/status/1896720343697687012"]
+"https://x.com/beeminfra/status/1896720343697687012"],
+}, { // ------------------------------------------------------------------------
+"x": "Some nice refactoring with named scopes in autodata fetching.",
+"u": ["https://x.com/beeminfra/status/1899242233154646321",
+"https://github.com/beeminder/beeminder/pull/5192",
+"https://github.com/beeminder/beeminder/pull/5186"],
+"t": "2025-03-10"
+}, { // ------------------------------------------------------------------------
+"x": "Added the autodata error field to translogged fields, in order to capture when / what the error is for future reference.",
+"u": ["https://github.com/beeminder/beeminder/issues/5150",
+"https://x.com/beeminfra/status/1907558991984734556",
+"https://github.com/beeminder/beeminder/pull/5151"],
+"d": "2025-02-04",
+"t": "2025-04-02"
+}, { // ------------------------------------------------------------------------
+"x": "Changed how we're logging break scheduling, to be clearer about what the user entered, vs what changed in the graph matrix.",
+"u": ["https://x.com/beeminfra/status/1910116267044093981",
+"https://github.com/beeminder/beeminder/pull/5224"],
+"d": "2025-04-08",
+"t": "2025-04-09"
+}, { // ------------------------------------------------------------------------
+"x": "merged view/edit user links (for admin interface) into one.",
+"u": ["https://github.com/beeminder/beeminder/issues/4743",
+"https://github.com/beeminder/beeminder/pull/5209"],
+"d": "2025-03-21"
+}, { // ------------------------------------------------------------------------
+"x": "Fixed a bug with posting analytics events to G4A that was causing failures.",
+"u": ["https://github.com/beeminder/beeminder/pull/5229",
+"https://x.com/beeminfra/status/1912623980550422909"],
+"t": "2024-04-16"
+}, { // ------------------------------------------------------------------------
+"x": "Fixed the docker compose deprecation issue with change from v1 to v2",
+"u": ["https://github.com/beeminder/beeminder/pull/5119",
+"https://github.com/beeminder/beeminder/issues/4323"],
+"t": "2025-05-06"
 }, { // ------------------------------------------------------------------------
 }, /* ----------------------------------------------------------- end batch */ ]
 
@@ -73,13 +107,6 @@ var staged = [ { // note: sub-entries not allowed here in staging
 METASTAGED: --10--------20--------30--------40--------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
 https://github.com/beeminder/beeminder/commit/
 
-
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
