@@ -841,6 +841,34 @@ u: ["https://x.com/beemuvi/status/1920265327788573003",
 d: "2025-05-07",
 t: "2025-05-07",
 }, { // ------------------------------------------------------------------------
+x: `There were a couple graph images on http://beeminder.com/overview that still showed yellow brick road style graphs. Modernized them to bright red line versions.`,
+u: ["https://x.com/beemuvi/status/1920268626327650735",
+    "https://github.com/beeminder/beeminder/issues/4074",
+    "https://github.com/beeminder/beeminder/pull/5258"],
+d: "2025-05-07",
+t: "2025-05-07",
+}, { // ------------------------------------------------------------------------
+x: `Modernized the screenshot for setting a starting stakes and pledge cap on http://beeminder.com/overview`,
+u: ["https://x.com/beemuvi/status/1920626895302926809",
+    "https://github.com/beeminder/beeminder/pull/5258"],
+t: "2025-05-08",
+}, { // ------------------------------------------------------------------------
+x: `Updated the webcopy on beeminder.com/overview to talk about pledge caps rather than "first derail typically free" which is less true now`,
+u: ["https://x.com/beemuvi/status/1920627042728783966",
+    "https://github.com/beeminder/beeminder/pull/5258"],
+t: "2025-05-08",
+}, { // ------------------------------------------------------------------------
+x: `The rosy line is deprecated and now turned off by default for new graphs; we have plans for something better!`,
+u: ["https://x.com/beemuvi/status/1920963752913932535",
+    "https://github.com/beeminder/road/issues/268",
+    "https://github.com/beeminder/beeminder/pull/5258"],
+t: "2025-05-09",
+}, { // ------------------------------------------------------------------------
+x: `UVI#4572 got most of these but we finally got the stragglers: modernized the example graph images on the GmailZero and Withings landing pages`,
+u: ["https://x.com/beemuvi/status/1920963932228813292",
+    "https://github.com/beeminder/beeminder/pull/5258"],
+t: "2025-05-09",
+}, { // ------------------------------------------------------------------------
 x: `Updated the example goals section of beeminder.com/overview to fix whitespace usage (it was sqwunched together on the left, not using available space). #css`,
 u: ["https://x.com/beemuvi/status/1922076408496508997",
     "https://github.com/beeminder/beeminder/pull/5261#event-17597626304",
@@ -915,6 +943,115 @@ d: "2025-05-19",
 t: "2025-05-19",
 c: `This is the insta-archive dialog which tells users "we're gonna charge you this $X right now if you click that button; email support instead if you have a problem with that". Support Czar request."`,
 }, { // ------------------------------------------------------------------------
+x: `The cropping of the how-it-works graph image on beeminder.com/overview was bumping into the border uglily. Now cropped nicely. #css (sort of)`,
+u: ["https://x.com/beemuvi/status/1924612972036686059",
+    "https://github.com/beeminder/beeminder/issues/4074"],
+d: "2025-05-19",
+t: "2025-05-19",
+}, { // ------------------------------------------------------------------------
+x: `Added an example graph to the Metaminder landing page`,
+u: ["https://x.com/beemuvi/status/1924976856509673477",
+    "https://github.com/beeminder/beeminder/issues/4074",
+    "https://github.com/beeminder/beeminder/issues/3814"],
+t: "2025-05-20",
+}, { // ------------------------------------------------------------------------
+x: `More webcopy changes on beeminder.com/overview to keep up with Beeminder changes, such as customizable post-derail respite and fancier data-smoothing`,
+u: ["https://x.com/beemuvi/status/1924977459516346851",
+    "https://github.com/beeminder/beeminder/issues/4074",
+    "https://blog.beeminder.com/smooth"],
+t: "2025-05-20",
+}, { // ------------------------------------------------------------------------
+x: `Added a link to the Featured Gallery on beeminder.com/overview and made other copyedits`,
+u: ["https://x.com/beemuvi/status/1925336132491030636",
+    "https://github.com/beeminder/beeminder/pull/5278",
+    "https://github.com/beeminder/beeminder/issues/4074"],
+t: "2025-05-21",
+}, { // ------------------------------------------------------------------------
+x: `Fixed a tiny typo on the landing page of the Intend integration ("an Intend user", not "a Intend") plus more copyedit tweaks fussing with commas`,
+u: ["https://x.com/beemuvi/status/1925336602014097796",
+    "https://github.com/beeminder/beeminder/pull/5278",
+    "https://github.com/beeminder/beeminder/issues/4074"],
+t: "2025-05-21",
+}, { // ------------------------------------------------------------------------
+x: `All autodata goals now have a Settings section, for consistency, even if the specific integration doesn't implement letting you set things`,
+u: ["https://x.com/beemuvi/status/1925697443104006602",
+    "https://github.com/beeminder/beeminder/pull/5277"],
+d: "2025-05-20",
+t: "2025-05-22",
+c: `E.g. Strava now has a section in settings, whereas it did not before`,
+}, { // ------------------------------------------------------------------------
+x: `Flash banners for errors/warnings/FYIs finally wrap when the words don't fit. Phew!`,
+u: ["https://x.com/beemuvi/status/1925697591485804845",
+    "https://github.com/beeminder/beeminder/issues/166",
+    "https://github.com/beeminder/beeminder/pull/5276"],
+d: "2025-05-20",
+t: "2025-05-22",
+}, { // ------------------------------------------------------------------------
+x: `Flash banners are also more responsive to screen size in that the font size is adaptive. Yay mobile-friendliness.`,
+u: ["https://x.com/beemuvi/status/1925697784818159739",
+    "https://github.com/beeminder/beeminder/issues/166",
+    "https://github.com/beeminder/beeminder/pull/5276"],
+d: "2025-05-20",
+t: "2025-05-22",
+c: "There probably exist instances where this looks demonstrably worse now, because the wrapped text will be long and crowded -- in fact could potentially overflow the banner area? So there's prolly more work to be done, but I think it's definitely an improvement to be able to see the whole message on mobile and stuff...",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Rearranged and clarified things and added new details in the 3 articles about account settings`,
+u: ["https://x.com/beemuvi/status/1926042655051354489",
+    "https://help.beeminder.com/article/109-account-details",
+    "https://help.beeminder.com/article/110-apps-and-api",
+    "https://help.beeminder.com/article/111-new-goal-defaults"],
+t: "2025-05-23",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Added information to the Pocket article about its imminent shutdown, what to do about it, and added a Related Integrations section to it`,
+u: ["https://x.com/beemuvi/status/1927151766656721021",
+    "https://help.beeminder.com/article/291-pocket"],
+t: "2025-05-26",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Added freeCodeCamp to the list of charities in the Goal Settings article; also we linked that to the freeCodeCamp article and edited that article`,
+u: ["https://x.com/beemuvi/status/1927151868636971139",
+    "https://help.beeminder.com/article/106-goal-settings",
+    "https://help.beeminder.com/article/287-freecodecamp"],
+t: "2025-05-26",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Added a "Related Autodata Integrations" section to all the coding integration articles so they link to each other`,
+u: ["https://x.com/beemuvi/status/1927158176677351763",
+    "https://help.beeminder.com/article/287-freecodecamp",
+    "https://help.beeminder.com/article/288-codecombat",
+    "https://help.beeminder.com/article/81-github",
+    "https://help.beeminder.com/article/292-project-euler",
+    "https://help.beeminder.com/article/357-wakatime"],
+t: "2025-05-26",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: And same for all the time-tracking integrations: RescueTime, WakaTime, Toggl Track, and TagTime`,
+u: ["https://x.com/beemuvi/status/1927158433708454226",
+    "https://help.beeminder.com/article/357-wakatime",
+    "https://help.beeminder.com/article/76-rescuetime",
+    "https://help.beeminder.com/article/64-tagtime",
+    "https://help.beeminder.com/article/155-toggl"],
+t: "2025-05-26",
+}, { // ------------------------------------------------------------------------
+x: `Updated the Pocket landing page to say they're shutting down, link to our Readwise integration, and link to Pocket's post about exporting your data`,
+u: ["https://x.com/beemuvi/status/1927614552725995727",
+    "https://wwww.beeminder.com/pocket",
+    "https://github.com/beeminder/beeminder/issues/5280",
+    "https://github.com/beeminder/beeminder/pull/5282"],
+d: "2025-05-26",
+t: "2025-05-27",
+}, { // ------------------------------------------------------------------------
+x: `Also we removed the ability to create new Pocket goals and updated the help doc again, linking to forum discussion, etc`,
+u: ["https://x.com/beemuvi/status/1927614740056179070",
+    "https://help.beeminder.com/article/291-pocket",
+    "https://forum.beeminder.com/t/rip-pocket-long-live-readwise-reader-what-else-are-folks-switching-to/12378",
+    "https://github.com/beeminder/beeminder/issues/5280",
+    "https://github.com/beeminder/beeminder/pull/5282"],
+d: "2025-05-26",
+t: "2025-05-27",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Added a link to timezone settings to the Deadline & Reminders article and a link to one of Nicky's goals as an example in the Privacy article`,
+u: ["https://x.com/beemuvi/status/1927616922201563195",
+    "https://help.beeminder.com/article/14-deadline",
+    "https://help.beeminder.com/article/102-privacy"],
+t: "2025-05-27",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -1240,6 +1377,7 @@ BEEMIOS POST-6.7
 * no more stale badge count when you log out? https://github.com/beeminder/BeeSwift/issues/553
 * more dark mode improvements? white on black instead of gray on black for logo: https://github.com/beeminder/BeeSwift/issues/150
 * fix styling of the navbar: https://github.com/beeminder/BeeSwift/pull/569
+* search works across goalnames and blurbs: https://github.com/beeminder/BeeSwift/issues/631
 }, { // ------------------------------------------------------------------------
 BEEMIOS 2024-09-16:
 * Don't delete the #DERAIL datapoint: Closed #456 as completed via #474.
@@ -1274,99 +1412,12 @@ firefox add-on for super-collapsing dashboard goals
 - UNCLE api endpoint [TODO: document in api and then we can count this]
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-x: `There were a couple graph images on http://beeminder.com/overview that still showed yellow brick road style graphs. Modernized them to bright red line versions.`,
-u: ["https://x.com/beemuvi/status/1920268626327650735",
-    "https://github.com/beeminder/beeminder/issues/4074",
-    "https://github.com/beeminder/beeminder/pull/5258"],
-d: "2025-05-07",
-t: "2025-05-07",
 }, { // ------------------------------------------------------------------------
-x: `Modernized the screenshot for setting a starting stakes and pledge cap on http://beeminder.com/overview`,
-u: ["https://x.com/beemuvi/status/1920626895302926809",
-    "https://github.com/beeminder/beeminder/pull/5258"],
-t: "2025-05-08",
-}, { // ------------------------------------------------------------------------
-x: `Updated the webcopy on beeminder.com/overview to talk about pledge caps rather than "first derail typically free" which is less true now`,
-u: ["https://x.com/beemuvi/status/1920627042728783966",
-    "https://github.com/beeminder/beeminder/pull/5258"],
-t: "2025-05-08",
-}, { // ------------------------------------------------------------------------
-x: `The rosy line is deprecated and now turned off by default for new graphs; we have plans for something better!`,
-u: ["https://x.com/beemuvi/status/1920963752913932535",
-    "https://github.com/beeminder/road/issues/268",
-    "https://github.com/beeminder/beeminder/pull/5258"],
-t: "2025-05-09",
-}, { // ------------------------------------------------------------------------
-x: `UVI#4572 got most of these but we finally got the stragglers: modernized the example graph images on the GmailZero and Withings landing pages`,
-u: ["https://x.com/beemuvi/status/1920963932228813292",
-    "https://github.com/beeminder/beeminder/pull/5258"],
-t: "2025-05-09",
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-x: `The cropping of the how-it-works graph image on beeminder.com/overview was bumping into the border uglily. Now cropped nicely. #css (sort of)`,
-u: ["https://x.com/beemuvi/status/1924612972036686059",
-    "https://github.com/beeminder/beeminder/issues/4074"],
-d: "2025-05-19",
-t: "2025-05-19",
-}, { // ------------------------------------------------------------------------
-x: `Added an example graph to the Metaminder landing page`
-u: ["https://x.com/beemuvi/status/1924976856509673477",
-    "https://github.com/beeminder/beeminder/issues/4074",
-    "https://github.com/beeminder/beeminder/issues/3814"],
-t: "2025-05-20",
-}, { // ------------------------------------------------------------------------
-x: `More webcopy changes on beeminder.com/overview to keep up with Beeminder changes, such as customizable post-derail respite and fancier data-smoothing`,
-u: ["https://x.com/beemuvi/status/1924977459516346851",
-    "https://github.com/beeminder/beeminder/issues/4074",
-    "https://blog.beeminder.com/smooth"],
-t: "2025-05-20",
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-x: `Added a link to the Featured Gallery on beeminder.com/overview and made other copyedits`,
-u: ["https://x.com/beemuvi/status/1925336132491030636",
-    "https://github.com/beeminder/beeminder/pull/5278",
-    "https://github.com/beeminder/beeminder/issues/4074"],
-t: "2025-05-21",
-}, { // ------------------------------------------------------------------------
-x: `Fixed a tiny typo on the landing page of the Intend integration ("an Intend user", not "a Intend") plus more copyedit tweaks fussing with commas`,
-u: ["https://x.com/beemuvi/status/1925336602014097796",
-    "https://github.com/beeminder/beeminder/pull/5278",
-    "https://github.com/beeminder/beeminder/issues/4074"],
-t: "2025-05-21",
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-x: `All autodata goals now have a Settings section, for consistency, even if the specific integration doesn't implement letting you set things`,
-u: ["https://x.com/beemuvi/status/1925697443104006602",
-    "https://github.com/beeminder/beeminder/pull/5277"],
-d: "2025-05-20",
-t: "2025-05-22",
-c: `E.g. Strava now has a section in settings, whereas it did not before`,
-}, { // ------------------------------------------------------------------------
-x: `Flash banners for errors/warnings/FYIs finally wrap when the words don't fit. Phew!`,
-u: ["https://x.com/beemuvi/status/1925697591485804845",
-    "https://github.com/beeminder/beeminder/issues/166",
-    "https://github.com/beeminder/beeminder/pull/5276"],
-d: "2025-05-20",
-t: "2025-05-22",
-}, { // ------------------------------------------------------------------------
-x: `Flash banners are also more responsive to screen size in that the font size is adaptive. Yay mobile-friendliness.`,
-u: ["https://x.com/beemuvi/status/1925697784818159739",
-    "https://github.com/beeminder/beeminder/issues/166",
-    "https://github.com/beeminder/beeminder/pull/5276"],
-d: "2025-05-20",
-t: "2025-05-22",
-c: "There probably exist instances where this looks demonstrably worse now, because the wrapped text will be long and crowded -- in fact could potentially overflow the banner area? So there's prolly more work to be done, but I think it's definitely an improvement to be able to see the whole message on mobile and stuff...",
-}, { // ------------------------------------------------------------------------
-x: `Help docs: Rearranged and clarified things and added new details in the 3 articles about account settings`,
-u: ["https://x.com/beemuvi/status/1926042655051354489",
-    "https://help.beeminder.com/article/109-account-details",
-    "https://help.beeminder.com/article/110-apps-and-api",
-    "https://help.beeminder.com/article/111-new-goal-defaults"],
-t: "2025-05-23",
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
+rest of help docs goal settings roundup (already got goal settings, deadline&reminders, privacy):
+PPRs -- tidied up wording for clarity
+other HELP DOCS TWEAKS:
+https://help.beeminder.com/article/335-derailing-is-not-failing
+TODO: fix related integrations header style (and add to table of contents)
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
