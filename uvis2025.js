@@ -728,6 +728,7 @@ t: "2025-04-23",
 }, { // ------------------------------------------------------------------------
 x: `Added a line to the email about failed charges to let people know they can manually force a retry of charges from the Payments page`,
 u: ["https://x.com/beemuvi/status/1915518113057218824",
+    "https://github.com/beeminder/beeminder/issues/5238",
     "https://github.com/beeminder/beeminder/pull/5242"],
 t: "2025-04-24",
 }, { // ------------------------------------------------------------------------
@@ -1053,36 +1054,323 @@ u: ["https://x.com/beemuvi/status/1927616922201563195",
     "https://help.beeminder.com/article/102-privacy"],
 t: "2025-05-27",
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
+x: `Years ago (UVI#2718) we made charges for new premium plans happen immediately (no 24-hour delay) but didn't do the same for premium upgrades till now`,
+u: ["https://x.com/beemuvi/status/1928238520591630684",
+    "https://github.com/beeminder/beeminder/issues/3184",
+    "https://github.com/beeminder/beeminder/pull/5286"],
+d: "2025-05-29",
+t: "2025-05-29",
 }, /* --------------------------------------------------------- end 2025may */ ]
 
 batches['2025jun'] = [{
 }, { // ------------------------------------------------------------------------
+x: `Finally made the capitalization of RSSminder and URLminder consistent, including the logos on the front page`,
+u: ["https://x.com/beemuvi/status/1929681501555441878",
+    "https://github.com/beeminder/beeminder/pull/5288"],
+d: "2025-06-02",
+t: "2025-06-02",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Added links and clarifications to 4 more articles in the Goal Settings section: PPRs, Data, Groupies, and Supporters`,
+u: ["https://x.com/beemuvi/status/1930049416930701411",
+    "https://help.beeminder.com/article/157-pessimistic-presumptive-reports",
+    "https://help.beeminder.com/article/103-data-source",
+    "https://help.beeminder.com/article/363-groupies",
+    "https://help.beeminder.com/article/104-supporters"],
+t: "2025-06-03",
+}, { // ------------------------------------------------------------------------
+x: `Similar to UVI#5215, the Uncle button blurb now clarifies that you're accepting the charge immediately, no legit check or undo or refund`,
+u: ["https://x.com/beemuvi/status/1930412335908434372",
+    "https://github.com/beeminder/beeminder/issues/5290",
+    "https://github.com/beeminder/beeminder/pull/5291"],
+t: "2025-06-04",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Added explanation to the Graph Editor article plus small tweaks for clarity in the remaining 3 of the 11 articles in the Goal Settings section`,
+u: ["https://x.com/beemuvi/status/1930674144439566468",
+    "https://help.beeminder.com/article/99-graph-editor",
+    "https://help.beeminder.com/article/101-reminders",
+    "https://help.beeminder.com/article/18-respite",
+    "https://help.beeminder.com/article/105-graph-settings"],
+t: "2025-06-05",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Made a short article for our new third-party integration with Time Stream (also small tweaks to articles in the Historical Interest section)`,
+u: ["https://x.com/beemuvi/status/1931107778724253925",
+    "https://blog.beeminder.com/timestream",
+    "https://help.beeminder.com/article/370-time-stream",
+    "https://github.com/beeminder/beeminder/pull/5293"],
+t: "2025-06-06",
+}, { // ------------------------------------------------------------------------
+f: true,
+x: `New landing page for the official Time Stream autodata integration! https://www.beeminder.com/timestream`,
+u: ["https://x.com/beemuvi/status/1932225110435635621",
+    "https://github.com/beeminder/beeminder/pull/5293"],
+t: "2025-06-09",
+c: `Modeled on TaskRatchet and Intend`,
+}, { // ------------------------------------------------------------------------
+x: `Also we added Time Stream's logo to the front page and new goal creation gallery`,
+u: ["https://x.com/beemuvi/status/1932225227091796235",
+    "https://github.com/beeminder/beeminder/pull/5293"],
+t: "2025-06-09",
+}, { // ------------------------------------------------------------------------
+x: `If you were in too easterly a timezone, we were decrementing the goal date by a day every time you hit submit on the commitment dial. Timezones are hard #bugfix`,
+u: ["https://x.com/beemuvi/status/1932585243023978978",
+    "https://github.com/beeminder/beeminder/issues/1025",
+    "https://github.com/beeminder/beeminder/pull/5294"],
+t: "2025-06-10",
+c: "The user's client was getting the date as a string, and then converting it to a time in the local timezone before submitting. And since it was a date, not a full time, Javascript would assume midnight in your timezone. So if midnight in your timezone is still 'yesterday' in Eastern time, then we'd wind up off-by-one with the date we saved.",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Another freshening pass complete! Now looking for things it's safe to cut and prune. So far we made the "What Is Beeminder?" article a bit sleeker.`,
+u: ["https://x.com/beemuvi/status/1932585329460203711",
+    "https://help.beeminder.com/article/70-what-is-beeminder"],
+t: "2025-06-10",
+}, { // ------------------------------------------------------------------------
+x: `On top of UVI#5233, did you notice we improved the RSSminder logo? It's nicer and more modern now, and the infinibee logo is more parsable as such. #bugfix`,
+u: ["https://x.com/beemuvi/status/1932949050732786074",
+    "https://github.com/beeminder/beeminder/issues/5211",
+    "https://github.com/beeminder/beeminder/pull/5288"],
+d: "2025-06-02",
+t: "2025-06-11",
+}, { // ------------------------------------------------------------------------
+x: `Fixed a goofy, arcane bug where you got a 500-error from the API (instead of a useful error message) if you tried to pass nil for "yaw" or "dir". #bugfix`,
+u: ["https://x.com/beemuvi/status/1932949165702853052",
+    "https://github.com/beeminder/beeminder/issues/2939",
+    "https://github.com/beeminder/beeminder/pull/5298"],
+d: "2025-06-11",
+t: "2025-06-11",
+c: "Arcane because you're unlikely to ever actually encounter this bug unless you're Mary? Now it sensibly responds like 'yaw' can't be nil yo.",
+}, { // ------------------------------------------------------------------------
+x: `We added the Uncle button as an API endpoint and documented it in the API docs`,
+u: ["https://x.com/beemuvi/status/1933312839579808149",
+    "https://api.beeminder.com/#unclebutton",
+    "https://github.com/beeminder/beeminder/issues/2376",
+    "https://github.com/beeminder/apidocs/commit/ffc0dd7fc88f75f5fffb1853a506c1973b83cc63"],
+c: "We sat on tweeting this forever because we wanted to update the API docs, then we did so but forgot to tweet it for another forever",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Cut 80 words and added 32 (about the link to the graph image) to the "How do I interpret the goal page" article`,
+u: ["https://x.com/beemuvi/status/1933312907686916274",
+    "https://help.beeminder.com/article/115-how-do-i-interpret-the-goal-page"],
+t: "2025-06-12",
+}, { // ------------------------------------------------------------------------
+x: `We updated our snailmail address on contact page (we moved recently)`,
+u: ["https://x.com/beemuvi/status/1933675060667297862",
+    "https://github.com/beeminder/beeminder/issues/5284",
+    "https://github.com/beeminder/beeminder/pull/5300"],
+d: "2025-06-13",
+t: "2025-06-13",
+}, { // ------------------------------------------------------------------------
+x: `We added a P.P.S. to the "You Derailed" email in the case where we suppress the charge because you already have one pending within the last 24 hours`,
+u: ["https://x.com/beemuvi/status/1933675149976613330",
+    "https://github.com/beeminder/beeminder/issues/3290",
+    "https://github.com/beeminder/beeminder/pull/5299"],
+d: "2025-06-13",
+t: "2025-06-13",
+c: "The gissue includes the text used; basically that we canceled it out of an abundance of caution but please reply to let us know either way",
+}, { // ------------------------------------------------------------------------
+x: `Gitminder wasn't letting you authorize Beeminder to read your GitHub as part of goal creation (doing it in User Settings still worked). #bugfix`,
+u: ["https://x.com/beemuvi/status/1934762434339987671",
+    "https://github.com/beeminder/beeminder/issues/5289",
+    "https://github.com/beeminder/beeminder/pull/5304"],
+d: "2025-06-16",
+t: "2025-06-16",
+c: `It would get stuck in a loop trying to verify your repo existed, before actually getting access to your GitHub, if it was your first GitHub goal. Basically it would give an error like "can't access that repo" instead of asking you for permission to access that repo. This bug has been happening since somewhere around removing the track-all-repos option. If you happened to already have authed us to read your GH (like by doing it in "Auth'd Services") then you could create a goal fine, however.`,
+}, { // ------------------------------------------------------------------------
+x: `In the case of expired GitHub auth where we link you to where to re-auth, the link was wrong! #bugfix`,
+u: ["https://x.com/beemuvi/status/1934762506473623868",
+    "https://github.com/beeminder/beeminder/issues/5302",
+    "https://github.com/beeminder/beeminder/pull/5301"],
+d: "2025-06-13",
+t: "2025-06-16",
+c: "See gissue for a before screenshot of what the error looked like",
+}, { // ------------------------------------------------------------------------
+x: `Also in GitHub goal setup, if we don't find the repo you gave us, we now give an extra hint about the format we're looking for.`,
+u: ["https://x.com/beemuvi/status/1935119435045708097",
+    "https://github.com/beeminder/beeminder/issues/5305",
+    "https://github.com/beeminder/beeminder/pull/5307"],
+d: "2025-06-17",
+t: "2025-06-17",
+}, { // ------------------------------------------------------------------------
+x: `Our WakaTime integration wasn't catching all errors and the javascript on the page would break if that happened. Unsure if real users were affected. #bugfix`,
+u: ["https://x.com/beemuvi/status/1935119665526927492",
+    "https://github.com/beeminder/beeminder/pull/5304",
+    "https://github.com/beeminder/beeminder/pull/5307/commits/f394a78730eed448e65df07b0cb0d7977f54a7fa",
+    "https://github.com/beeminder/beeminder/pull/5307"],
+d: "2025-06-17",
+t: "2025-06-17",
+c: `Unknown unknowns. Now we catch expected as well as unexpected errors. Real users were affected in expectation so we're counting this.`,
+}, { // ------------------------------------------------------------------------
+x: `We finally got all instances of "max pledge" changed to the less ambiguous "pledge cap"`,
+u: ["https://x.com/beemuvi/status/1935472079396274285",
+    "https://github.com/beeminder/beeminder/issues/5230",
+    "https://github.com/beeminder/beeminder/pull/5308"],
+t: "2025-06-18",
+}, { // ------------------------------------------------------------------------
+x: `We no longer let goals restart with non-standard stakes. Eg, if you had an old $1 pledge, your only option to restart will be at $5.`,
+u: ["https://x.com/beemuvi/status/1935472627231113653",
+    "https://github.com/beeminder/beeminder/issues/5230",
+    "https://github.com/beeminder/beeminder/pull/5308"],
+d: "2025-06-17",
+t: "2025-06-18",
+c: "Pledge schedule aka schedge",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Renovations (keywords, clarifications, related integrations section) to the article for the Time Stream integration`,
+u: ["https://x.com/beemuvi/status/1935848451994185866",
+    "https://help.beeminder.com/article/370-time-stream"],
+t: "2025-06-19",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Removed 50 words and replaced an image in the "How do I interpret the graph" article, plus 60 words cut from the "What to do first" article`,
+u: ["https://x.com/beemuvi/status/1935849320248680643",
+    "https://help.beeminder.com/article/118-how-do-i-interpret-the-graph",
+    "https://help.beeminder.com/article/32-what-do-i-do-first"],
+t: "2025-06-19",
+}, { // ------------------------------------------------------------------------
+x: `Lots of small improvements to the goal restart page, like the pro-tip re: the exponential pledge schedule was floating unaligned, now put in its place #css`,
+u: ["https://x.com/beemuvi/status/1936175715793486219",
+    "https://github.com/beeminder/beeminder/issues/5230",
+    "https://github.com/beeminder/beeminder/pull/5310"],
+d: "2025-06-20",
+t: "2025-06-20",
+}, { // ------------------------------------------------------------------------
+x: `Also the breadcrumb for "Back to USERNMAE/GOALNAME" was unaligned with the layout and had no padding. Now it lines up normal. #css #bugfix`,
+u: ["https://x.com/beemuvi/status/1936175751977717973",
+    "https://github.com/beeminder/beeminder/issues/5230",
+    "https://github.com/beeminder/beeminder/pull/5310"],
+d: "2025-06-20",
+t: "2025-06-20",
+}, { // ------------------------------------------------------------------------
+x: `And the text box for putting in a starting buffer was wider than it needed to be. Now it matches what the same form piece looks like during goal setup. #css`,
+u: ["https://x.com/beemuvi/status/1936175796789584171",
+    "https://github.com/beeminder/beeminder/issues/5230",
+    "https://github.com/beeminder/beeminder/pull/5310"],
+d: "2025-06-20",
+t: "2025-06-20",
+}, { // ------------------------------------------------------------------------
+x: `Finally, the "current value" input (for non-kyoom goals) had no explanation at all. Added (1) an 'e.g. current weight' type note, and (2) the goal units.`,
+u: ["https://x.com/beemuvi/status/1936175834962051576",
+    "https://github.com/beeminder/beeminder/issues/5230",
+    "https://github.com/beeminder/beeminder/pull/5310"],
+d: "2025-06-20",
+t: "2025-06-20",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Fixed an error (or something that had become an error) in describing ratcheting in the "How do I change my goal?" article, plus trimmed 20-30 words`,
+u: ["https://x.com/beemuvi/status/1937655209230225453",
+    "https://help.beeminder.com/article/54-how-do-i-change-my-goal"],
+t: "2025-06-24",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Removed 100 words, added 50 new ones, rearranged lots of others in the "What's the best way to beemind ___?" article`,
+u: ["https://x.com/beemuvi/status/1937656093108576658",
+    "https://help.beeminder.com/article/120-whats-the-best-way-to-beemind"],
+t: "2025-06-24",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Rearranged and trimmed the "weekly rate" article (80 words sleeker) and similarly for the "when does my week start?" article`,
+u: ["https://x.com/beemuvi/status/1938016934601363903",
+    "https://help.beeminder.com/article/339-how-do-i-set-a-goal-with-a-weekly-rate",
+    "https://help.beeminder.com/article/123-weekstart"],
+t: "2025-06-25",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Documented a hopefully temporary limitation of the Skritter integration (learn/test time vs study/review time)`,
+u: ["https://x.com/beemuvi/status/1938017059428044936",
+    "https://help.beeminder.com/article/89-skritter"],
+t: "2025-06-25",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+x: `Added sqrt (square root) as an aggday function. It's another way to incentivize daily consistency over getting ahead. HT Eino Gourdin`,
+u: ["https://x.com/beemuvi/status/1938386515048210650",
+    "https://github.com/beeminder/road/issues/272",
+    "https://github.com/beeminder/beeminder/issues/3212",
+    "https://github.com/beeminder/beeminder/pull/5313"],
+t: "2025-06-26",
+}, { // ------------------------------------------------------------------------
+x: `In the ratchet UI, we got rid of the "you have X days/units left till derail" microcopy and put that X as the default and max amount to ratchet to`,
+u: ["https://x.com/beemuvi/status/1938386712285352291",
+    "https://github.com/beeminder/beeminder/issues/4045",
+    "https://github.com/beeminder/beeminder/pull/5314"],
+t: "2025-06-26",
+}, { // ------------------------------------------------------------------------
+x: `We've been wanting to slip a "(∑)" somewhere useful as an indicator of cumulative goals. Now we're trying it out on the Add Data button on your dashboard.`,
+u: ["https://x.com/beemuvi/status/1938729725758972030",
+    "https://github.com/beeminder/beeminder/issues/3759",
+    "https://github.com/beeminder/beeminder/pull/5316"],
+d: "2025-06-27",
+t: "2025-06-27",
+}, { // ------------------------------------------------------------------------
+x: `In addition to your dashboard, we added the summing indicator to the goal page too and there's a mildly explanatory tooltip if you hover your mouse over it.`,
+u: ["https://x.com/beemuvi/status/1938730231566868993",
+    "https://github.com/beeminder/beeminder/issues/3759",
+    "https://github.com/beeminder/beeminder/pull/5316"],
+d: "2025-06-27",
+t: "2025-06-27",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: We clarified in the Postminder and RSSminder articles about neither integration picking up on private posts`,
+u: ["https://x.com/beemuvi/status/1939834542598361341",
+    "https://help.beeminder.com/article/368-postminder",
+    "https://help.beeminder.com/article/331-rssminder"],
+t: "2025-06-30",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Quite a bit of rearranging/rewriting of the "Why does Beeminder think it's tomorrow/yesterday?" article, plus new links and keywords`,
+u: ["https://x.com/beemuvi/status/1939836584838463802",
+    "https://help.beeminder.com/article/122-why-does-beeminder-think-its-already-tomorrow"],
+t: "2025-06-30",
 }, /* --------------------------------------------------------- end 2025jun */ ]
 
 batches['2025jul'] = [{
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Significantly cut down the words in the meta-help article (what to do if you're not finding the answers in the help docs) and added headings to it`,
+u: ["https://x.com/beemuvi/status/1940192457943392756",
+    "https://help.beeminder.com/article/351-i-need-help"],
+t: "2025-07-01",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Added Oura and Make to the "example goal: 10k steps/day" article, more trimming/rephrasing, plus cutting of rambling in "example goal: run 3x/week"`,
+u: ["https://x.com/beemuvi/status/1940195839034761351",
+    "https://help.beeminder.com/article/71-example-10k-steps",
+    "https://help.beeminder.com/article/72-example-goal-run-3-times-per-week"],
+t: "2025-07-01",
+}, { // ------------------------------------------------------------------------
+x: `There was a bug with goal page link previews that made them show the preview for the Beeminder front page on some platforms, including the forum. #bugfix`,
+u: ["https://x.com/beemuvi/status/1940554493483159740",
+    "https://github.com/beeminder/beeminder/issues/3533",
+    "https://github.com/beeminder/beeminder/issues/5005",
+    "https://github.com/beeminder/beeminder/pull/5318"],
+d: "2025-07-01",
+t: "2025-07-02",
+c: "So UVI#4128 is finally true. Huge sigh of relief for posting links in Discord and the forum.",
+}, { // ------------------------------------------------------------------------
+x: `Oops, the new square root (sqrt) aggday was throwing an error. #bugfix`,
+u: ["https://x.com/beemuvi/status/1940554584457728344",
+    "https://github.com/beeminder/beeminder/issues/3212"],
+t: "2025-07-02",
+c: `Needed to deploy latest Beebrain`,
+}, { // ------------------------------------------------------------------------
+x: `Help docs: In the "Example goal: gym 5x/week" article we cut some words, added them back elsewhere, and fixed some funky formatting`,
+u: ["https://x.com/beemuvi/status/1940878961850114369",
+    "https://help.beeminder.com/article/92-example-goal-go-to-the-gym-4-times-per-week"],
+t: "2025-07-03",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: In the "Example goal: less time on Facebook" article we pared it down by linking out to other pages plus smoothing of the one for eating more veggies`,
+u: ["https://x.com/beemuvi/status/1940879141764841785",
+    "https://help.beeminder.com/article/93-example-goal-spend-less-time-on-facebook",
+    "https://help.beeminder.com/article/94-example-goal-eat-14-servings-of-vegetables-per-week"],
+t: "2025-07-03",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, /* --------------------------------------------------------- end 2025jul */ ]
 
@@ -1378,6 +1666,10 @@ BEEMIOS POST-6.7
 * more dark mode improvements? white on black instead of gray on black for logo: https://github.com/beeminder/BeeSwift/issues/150
 * fix styling of the navbar: https://github.com/beeminder/BeeSwift/pull/569
 * search works across goalnames and blurbs: https://github.com/beeminder/BeeSwift/issues/631
+* update button bigger: https://github.com/beeminder/BeeSwift/pull/577
+* list now matches website when sorting by pledge: https://github.com/beeminder/BeeSwift/pull/579
+* Introduce a freshness indicator for the goal screen: https://github.com/beeminder/BeeSwift/pull/537
+* App now notices when you switch Beeminder timezone: https://github.com/beeminder/BeeSwift/issues/507
 }, { // ------------------------------------------------------------------------
 BEEMIOS 2024-09-16:
 * Don't delete the #DERAIL datapoint: Closed #456 as completed via #474.
@@ -1409,15 +1701,21 @@ changed the class for dashboard subtitles in PR#5066, which messed with the
 firefox add-on for super-collapsing dashboard goals
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-- UNCLE api endpoint [TODO: document in api and then we can count this]
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-rest of help docs goal settings roundup (already got goal settings, deadline&reminders, privacy):
-PPRs -- tidied up wording for clarity
 other HELP DOCS TWEAKS:
 https://help.beeminder.com/article/335-derailing-is-not-failing
 TODO: fix related integrations header style (and add to table of contents)
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Streamlined and added a mention of Maayot to the "Example goal: language learning" article, and improved consistency of the article on goal types
+https://help.beeminder.com/article/95-example-goal-learn-a-new-language
+https://help.beeminder.com/article/51-whats-the-difference-between-the-goal-types
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------

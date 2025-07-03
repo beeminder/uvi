@@ -2015,6 +2015,7 @@ batches['2024oct'] = [{
 }, { // ------------------------------------------------------------------------
 "x": "The Manifold integration wasn't letting you customize your deadline. Turns out there was no need for that restriction, so we removed it. HT gbear605",
 "u": ["https://x.com/beemuvi/status/1847418205905834228",
+      "https://github.com/beeminder/beeminder/issues/5028",
       "https://github.com/beeminder/beeminder/pull/5051"],
 "d": "2024-10-16",
 "t": "2024-10-18",
