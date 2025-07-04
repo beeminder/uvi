@@ -1,6 +1,7 @@
 See index.html for the background about User-Visible Improvements (UVIs).
 
 This is hosted on Glitch at [changelog.beeminder.com](https://changelog.beeminder.com "Or uvi.glitch.me").
+PS: Migrating to GitHub Pages now...
 
 Interface / protocol for adding a new UVI to the changelog:
 

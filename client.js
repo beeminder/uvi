@@ -160,7 +160,7 @@ function render(uvi) {
   if (!note) { note = '' }
   if (!urls) { urls = [] }
   if (urls.constructor !== Array) { urls = [urls] }
-  urls.unshift('http://beeminder.com/changelog#'+num)
+  urls.unshift('#'+num)
   var hovt = 'title="' + (subl ? '(#'+num+') ' : '') 
                        + genhov(date, tate, note) + '"'
 
