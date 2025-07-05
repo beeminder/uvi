@@ -1350,6 +1350,18 @@ u: ["https://x.com/beemuvi/status/1940879141764841785",
     "https://help.beeminder.com/article/94-example-goal-eat-14-servings-of-vegetables-per-week"],
 t: "2025-07-03",
 }, { // ------------------------------------------------------------------------
+x: `Help docs: Streamlined and added a mention of Maayot to the "Example goal: language learning" article, and improved consistency of the article on goal types`,
+u: ["https://x.com/beemuvi/status/1941285318524895526"
+    "https://help.beeminder.com/article/95-example-goal-learn-a-new-language",
+    "https://help.beeminder.com/article/51-whats-the-difference-between-the-goal-types"],
+t: "2025-07-04",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Streamlined the article on free goals and added a note the group goals article about how to get removed or remove someone from a group goal`,
+u: ["https://x.com/beemuvi/status/1941285386531283211",
+    "https://help.beeminder.com/article/336-how-many-goals-can-i-make-for-free",
+    "https://help.beeminder.com/article/362-what-is-a-group-goal"],
+t: "2025-07-04",
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -1408,7 +1420,7 @@ const staged = [ {
 
 
 /*********************************************************************************************************************************************************************
-~~~~~~----------------------------- METASTAGED -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
+~~~~----------------------------- METASTAGED -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 [TODO: discuss] open graph / meta tags / link previews: more milking? separate UVI for doing it for the blog? more about the tweaks? consistent casing?
@@ -1704,12 +1716,6 @@ firefox add-on for super-collapsing dashboard goals
 other HELP DOCS TWEAKS:
 https://help.beeminder.com/article/335-derailing-is-not-failing
 TODO: fix related integrations header style (and add to table of contents)
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-x: `Help docs: Streamlined and added a mention of Maayot to the "Example goal: language learning" article, and improved consistency of the article on goal types
-https://help.beeminder.com/article/95-example-goal-learn-a-new-language
-https://help.beeminder.com/article/51-whats-the-difference-between-the-goal-types
-}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
