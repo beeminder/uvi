@@ -1351,7 +1351,7 @@ u: ["https://x.com/beemuvi/status/1940879141764841785",
 t: "2025-07-03",
 }, { // ------------------------------------------------------------------------
 x: `Help docs: Streamlined and added a mention of Maayot to the "Example goal: language learning" article, and improved consistency of the article on goal types`,
-u: ["https://x.com/beemuvi/status/1941285318524895526"
+u: ["https://x.com/beemuvi/status/1941285318524895526",
     "https://help.beeminder.com/article/95-example-goal-learn-a-new-language",
     "https://help.beeminder.com/article/51-whats-the-difference-between-the-goal-types"],
 t: "2025-07-04",
