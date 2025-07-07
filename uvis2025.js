@@ -1369,7 +1369,7 @@ u: ["https://x.com/beemuvi/status/1942348190738768275",
 d: "2025-07-04",
 }, { // ------------------------------------------------------------------------
 x: `As part of working our way through all the integration link previews, we've used the Infinibee image for any that don't have their own header image`,
-u: ["https://x.com/beemuvi/status/1942348282799481182,
+u: ["https://x.com/beemuvi/status/1942348282799481182",
     "https://github.com/beeminder/beeminder/pull/5321"],
 d: "2025-07-04",
 }, { // ------------------------------------------------------------------------
