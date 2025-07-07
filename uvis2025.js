@@ -1362,6 +1362,17 @@ u: ["https://x.com/beemuvi/status/1941285386531283211",
     "https://help.beeminder.com/article/362-what-is-a-group-goal"],
 t: "2025-07-04",
 }, { // ------------------------------------------------------------------------
+x: `Fixed up the link previews for the autodata integration landing pages, eg, beeminder.com/gmailzero`,
+u: ["https://x.com/beemuvi/status/1942348190738768275",
+    "https://github.com/beeminder/beeminder/issues/5297",
+    "https://github.com/beeminder/beeminder/pull/5321"],
+d: "2025-07-04",
+}, { // ------------------------------------------------------------------------
+x: `As part of working our way through all the integration link previews, we've used the Infinibee image for any that don't have their own header image`,
+u: ["https://x.com/beemuvi/status/1942348282799481182,
+    "https://github.com/beeminder/beeminder/pull/5321"],
+d: "2025-07-04",
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
