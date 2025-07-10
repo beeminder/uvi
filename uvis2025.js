@@ -1403,7 +1403,7 @@ t: "2025-07-09",
 }, { // ------------------------------------------------------------------------
 x: `Help docs: Serious streamlining of the pause-my-goals article (100 fewer words) plus rearranging, plus less major rewriting of 3 other articles`,
 u: ["https://x.com/beemuvi/status/1943443439888248886",
-    "https://help.beeminder.com/article/98-can-i-put-my-goal-on-pause-for-a-little-bit".
+    "https://help.beeminder.com/article/98-can-i-put-my-goal-on-pause-for-a-little-bit",
     "https://help.beeminder.com/article/52-why-cant-i-create-a-do-less-odometer-whittle-down",
     "https://help.beeminder.com/article/55-what-is-safety-buffer",
     "https://help.beeminder.com/article/56-can-i-get-rid-of-extra-safety-buffer"],
