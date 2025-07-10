@@ -1394,6 +1394,12 @@ u: ["https://x.com/beemuvi/status/1942717105629167838",
 d: "2025-07-08",
 t: "2025-07-08",
 }, { // ------------------------------------------------------------------------
+x: `We now send a lifecycle email *before* your goal reaches its end date, prompting you to re-up it or whatnot. HT Clive`,
+u: ["https://x.com/beemuvi/status/1943089124094939196",
+    "https://github.com/beeminder/beeminder/issues/593",
+    "https://github.com/beeminder/beeminder/pull/5324"],
+d: "2025-07-09",
+t: "2025-07-09",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
