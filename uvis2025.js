@@ -1468,6 +1468,13 @@ u: ["https://x.com/beemuvi/status/1945264011781484735",
 d: "2025-07-15",
 t: "2025-07-15",
 }, { // ------------------------------------------------------------------------
+x: `Help docs: Streamlining, clarifying, down-slimming of the megabreak article and 3 other articles`,
+u: ["https://x.com/beemuvi/status/1945609512435814889",
+    "https://help.beeminder.com/article/154-can-i-schedule-breaks-on-many-goals-at-once",
+    "https://help.beeminder.com/article/57-what-if-i-only-want-to-do-my-goal-on-weekdays",
+    "https://help.beeminder.com/article/58-what-if-i-only-want-to-do-something-once-a-month",
+    "https://help.beeminder.com/article/367-what-happens-when-i-reach-my-goal-total-end-date"],
+t: "2025-07-16",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
