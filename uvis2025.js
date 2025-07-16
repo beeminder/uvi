@@ -1426,7 +1426,7 @@ t: "2025-07-11",
 c: `I.e., "emaciated", cuz it's even skinnier. Get it? Except maybe that's not necessarily true?`,
 }, { // ------------------------------------------------------------------------
 x: `Made a pitch in the webcopy for giving us a chance to debug your goal problems before you delete it, and added a "just send feedback" button to the form.`,
-u: ["https://x.com/beemuvi/status/1943822027607224748,
+u: ["https://x.com/beemuvi/status/1943822027607224748",
     "https://github.com/beeminder/beeminder/issues/3174",
     "https://github.com/beeminder/beeminder/pull/5332"],
 d: "2025-07-11",
