@@ -1476,6 +1476,20 @@ u: ["https://x.com/beemuvi/status/1945609512435814889",
     "https://help.beeminder.com/article/367-what-happens-when-i-reach-my-goal-total-end-date"],
 t: "2025-07-16",
 }, { // ------------------------------------------------------------------------
+x: `Added the "new day has dawned banner" (previously just on goal pages: UVI#4107) to the dashboard, based on whatever your most urgent goal is`,
+u: ["https://x.com/beemuvi/status/1945995917880074514",
+    "https://github.com/beeminder/beeminder/issues/4806"],
+d: "2025-07-17",
+t: "2025-07-17",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Fixed a copy/paste error in the Maayot article, added related integrations to table of contents for all the language-learning integration articles`,
+u: ["https://x.com/beemuvi/status/1945996020695081114",
+    "https://help.beeminder.com/article/89-skritter",
+    "https://help.beeminder.com/article/80-duolingo",
+    "https://help.beeminder.com/article/369-maayot",
+    "https://help.beeminder.com/article/290-clozemaster"],
+d: "2025-07-17",
+t: "2025-07-17",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
