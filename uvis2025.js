@@ -1491,6 +1491,35 @@ u: ["https://x.com/beemuvi/status/1945996020695081114",
 d: "2025-07-17",
 t: "2025-07-17",
 }, { // ------------------------------------------------------------------------
+x: `Fixed up the alignment and margin of the user-avatar image in the site header. It's centered relative to the nav bar links now.`,
+u: ["https://x.com/beemuvi/status/1946301323600969907",
+    "https://github.com/beeminder/beeminder/issues/4803",
+    "https://github.com/beeminder/beeminder/pull/5338"],
+d: "2025-07-17",
+t: "2025-07-18",
+}, { // ------------------------------------------------------------------------
+x: `Also fixed the dropdown arrows in the main nav bar so that they are aligned on the same horizontal line`,
+u: ["https://x.com/beemuvi/status/1946301562726543853",
+    "https://github.com/beeminder/beeminder/issues/4803",
+    "https://github.com/beeminder/beeminder/pull/5338"],
+d: "2025-07-17",
+t: "2025-07-18",
+c: `After screenshot in the gissue`,
+}, { // ------------------------------------------------------------------------
+x: `Oops, weird bug introduced in the previous UVI that made the arrow move itself when clicked and unclicked. #css #bugfix`,
+u: ["https://x.com/beemuvi/status/1947437719157936247",
+    "https://github.com/beeminder/beeminder/pull/5340"],
+t: "2025-07-21",
+c: `CSS rule was too specific`,
+}, { // ------------------------------------------------------------------------
+x: `We updated the API docs to mention the $1 charge floor`,
+u: ["https://x.com/beemuvi/status/1947437895129899502",
+    "https://api.beeminder.com/#charge",
+    "https://github.com/beeminder/beeminder/issues/612",
+    "https://github.com/beeminder/apidocs/pull/50"],
+d: "2025-07-21",
+t: "2025-07-21",
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
