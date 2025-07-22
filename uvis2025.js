@@ -1520,6 +1520,19 @@ u: ["https://x.com/beemuvi/status/1947437895129899502",
 d: "2025-07-21",
 t: "2025-07-21",
 }, { // ------------------------------------------------------------------------
+x: `Important #bugfix for restarting weekends-off-enabled goals: the first weekend off after restarting wasn't getting scheduled!`,
+u: ["https://x.com/beemuvi/status/1947787497934889352",
+    "https://github.com/beeminder/beeminder/issues/1308",
+    "https://github.com/beeminder/beeminder/pull/5341"],
+d: "2025-07-21",
+}, { // ------------------------------------------------------------------------
+x: `We now explicitly reset weekends-off to off on restart, with new webcopy explaining this. (If you then turn it on, we do schedule the upcoming weekend off)`,
+u: ["https://x.com/beemuvi/status/1947787679250452969",
+    "https://github.com/beeminder/beeminder/issues/1308",
+    "https://github.com/beeminder/beeminder/pull/5341"],
+d: "2025-07-21",
+c: "Note that it won't schedule a break for the weekend if you're already in the middle of it. Also it warns you if you no longer have the premium plan that lets you turn weekends-off back on. So this is also a slight bit of loophole closing.",
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
