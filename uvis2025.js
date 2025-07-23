@@ -1535,6 +1535,21 @@ c: "Note that it won't schedule a break for the weekend if you're already in the
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
+x: `Critical #bugfix: We would erase future changes in your red line if your goal was set as Value+Rate and you used the commitment dial to change the final rate`,
+u: ["https://x.com/beemuvi/status/1948134276056408338",
+    "https://github.com/beeminder/beeminder/issues/4957",
+    "https://github.com/beeminder/beeminder/pull/5343"],
+d: "2025-07-21",
+t: "2025-07-23",
+c: "Screenshots in the PR"
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Rewording and the update of an old screenshot from 2018 in the goal stats article, plus tweaks, simplifications, and rephrasings in 2 other articles`,
+u: ["https://x.com/beemuvi/status/1948134415076593990",
+    "https://help.beeminder.com/article/119-what-are-the-goal-statistics",
+    "https://help.beeminder.com/article/124-my-goal-doesnt-make-any-sense",
+    "https://help.beeminder.com/article/117-can-i-start-my-goal-over"],
+t: "2025-07-23",
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
