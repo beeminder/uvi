@@ -1533,8 +1533,6 @@ u: ["https://x.com/beemuvi/status/1947787679250452969",
 d: "2025-07-21",
 c: "Note that it won't schedule a break for the weekend if you're already in the middle of it. Also it warns you if you no longer have the premium plan that lets you turn weekends-off back on. So this is also a slight bit of loophole closing.",
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
 x: `Critical #bugfix: We would erase future changes in your red line if your goal was set as Value+Rate and you used the commitment dial to change the final rate`,
 u: ["https://x.com/beemuvi/status/1948134276056408338",
     "https://github.com/beeminder/beeminder/issues/4957",
@@ -1549,6 +1547,18 @@ u: ["https://x.com/beemuvi/status/1948134415076593990",
     "https://help.beeminder.com/article/124-my-goal-doesnt-make-any-sense",
     "https://help.beeminder.com/article/117-can-i-start-my-goal-over"],
 t: "2025-07-23",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Cutting and rephrasing in the Do-More Goals article, plus new link, plus adding and rephrasing things in the Restarting Archived Goals article`,
+u: ["https://x.com/beemuvi/status/1948527946098246087",
+    "https://help.beeminder.com/article/66-do-more-goals",
+    "https://help.beeminder.com/article/358-can-i-restart-an-archived-goal"],
+t: "2025-07-24",
+}, { // ------------------------------------------------------------------------
+x: `Emailed the Very Old PayPal-only users threatening to delete their accounts if they don’t create a goal. We already tried slathering them up with honey (money).`,
+u:["https://x.com/beemuvi/status/1948528180442398856",
+   "https://github.com/beeminder/beeminder/pull/5339"],
+t: "2025-07-24",
+c: `The honey-slathering was UVI#4746`,
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
