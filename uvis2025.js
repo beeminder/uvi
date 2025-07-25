@@ -1560,6 +1560,21 @@ u:["https://x.com/beemuvi/status/1948528180442398856",
 t: "2025-07-24",
 c: `The honey-slathering was UVI#4746`,
 }, { // ------------------------------------------------------------------------
+x: `If you're on the premium page wanting to sign up to a paid plan but have to create an account first, we now send you back to /premium when you've done that`,
+u: ["https://x.com/beemuvi/status/1948824597157347489",
+    "https://www.beeminder.com/premium",
+    "https://github.com/beeminder/beeminder/issues/726",
+    "https://github.com/beeminder/beeminder/pull/5342",
+    "https://github.com/beeminder/beeminder/pull/5346"],
+d: "2025-07-24",
+t: "2025-07-25",
+c: "AKA remember when the user wants to pay us! Previously we'd send you to your dashboard after signing up. HT Clive. Nice little moneyfire extinguished.",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Cutting, rephrasing, line-break-tweaking in the Do-Less Goals article plus quite a bit of cutting of wordiness (plus rearranging) in the PPR article`,
+u: ["https://x.com/beemuvi/status/1948852926447026552",
+    "https://help.beeminder.com/article/67-do-less-goals",
+    "https://help.beeminder.com/article/157-pessimistic-presumptive-reports"],
+t: "2025-07-25",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
