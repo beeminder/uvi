@@ -1578,6 +1578,7 @@ t: "2025-07-25",
 }, { // ------------------------------------------------------------------------
 x: `We valiantly rescued the servers from a major Linode outage, delayed charges for those who derailed during it, emailed them, and improved the downtime checklist`,
 u: ["https://x.com/beemuvi/status/1949981951332380714",
+    "https://github.com/beeminder/beeminder/wiki/Beeminder-Downtime-Checklist",
     "https://status.beeminder.com"],
 d: "2025-07-27",
 t: "2025-07-28",
