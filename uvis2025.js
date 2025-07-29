@@ -1576,6 +1576,22 @@ u: ["https://x.com/beemuvi/status/1948852926447026552",
     "https://help.beeminder.com/article/157-pessimistic-presumptive-reports"],
 t: "2025-07-25",
 }, { // ------------------------------------------------------------------------
+x: `We valiantly rescued the servers from a major Linode outage, delayed charges for those who derailed during it, emailed them, and improved the downtime checklist`,
+u: ["https://x.com/beemuvi/status/1949981951332380714",
+    "https://status.beeminder.com"],
+d: "2025-07-27",
+t: "2025-07-28",
+c: `In particular, we could've reduced the downtime a lot if we'd realized the database server was accessible to other Beeminder servers even when it wasn't accessible to us directly`,
+}, { // ------------------------------------------------------------------------
+x: `Thanks to the downtime, we fixed a regression from UVI#4747 and got rid of the stale version of the poppy page that led to it regressing`,
+u: ["https://x.com/beemuvi/status/1949982315515429216",
+    "https://status.beeminder.com",
+    "https://github.com/beeminder/beeminder/issues/4699",
+    "https://github.com/beeminder/beeploy/pull/170",
+    "https://github.com/beeminder/beeminder/pull/5352"],
+d: "2025-07-28",
+t: "2025-07-28",
+c: `Master copy is in the beeploy repo now; also updated the poppytoggle instructions`,
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
