@@ -1594,6 +1594,22 @@ d: "2025-07-28",
 t: "2025-07-28",
 c: `Master copy is in the beeploy repo now; also updated the poppytoggle instructions`,
 }, { // ------------------------------------------------------------------------
+x: `Habitica started enforcing the inclusion of a special header for API calls, which broke our integration. But now we include the thing so it works again! #bugfix`,
+u: ["https://x.com/beemuvi/status/1950344553128743366",
+    "https://forum.beeminder.com/t/integration-issue-habitica-integration-not-working-29-07-25/12492?u=dreev",
+    "https://github.com/HabitRPG/habitica/wiki/API-Usage-Guidelines",
+    "https://github.com/beeminder/beeminder/pull/5354"],
+d: "2025-07-29",
+t: "2025-07-29",
+c: `Namely the X-Client header`,
+}, { // ------------------------------------------------------------------------
+x: "We now link to Honeygrams on the payments page. Previously we only sent out links to this in, e.g., hooliday promotions.",
+u: ["https://x.com/beemuvi/status/1950346231118454839",
+    "https://github.com/beeminder/beeminder/issues/4617",
+    "https://github.com/beeminder/beeminder/pull/5355"],
+d: "2025-07-29",
+t: "2025-07-29",
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
