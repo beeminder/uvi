@@ -1622,11 +1622,24 @@ u: ["https://x.com/beemuvi/status/1950703086051447247",
 d: "2025-07-29",
 t: "2025-07-30",
 }, { // ------------------------------------------------------------------------
-x: `Help docs: Also added RSSminder to the collection of meta-ish autodata integrations and fixed at least one copy/paste error in making these sections consistent
+x: `Help docs: Also added RSSminder to the collection of meta-ish autodata integrations and fixed at least one copy/paste error in making these sections consistent`,
 u: ["https://x.com/beemuvi/status/1950703213923221508",
     "https://help.beeminder.com/article/331-rssminder#related"],
 d: "2025-07-30",
 t: "2025-07-30",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Cut lots of words from the Custom Goals article, hopefully making it more readable, plus added sqrt to the aggday options`,
+u: ["https://x.com/beemuvi/status/1951063458973360326",
+    "https://help.beeminder.com/article/97-custom-goals"],
+d: "2025-07-31",
+t: "2025-07-31",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Trimmed and reworked the Weight Loss/Gain Goals article, plus smaller edits/trimming to the Whittle Down and Odometer Goals articles`,
+u: ["https://x.com/beemuvi/status/1951063576812355776",
+    "https://help.beeminder.com/article/96-weight-gain-loss-goals",
+    "https://help.beeminder.com/article/69-whittle-down-goals",
+    "https://help.beeminder.com/article/68-odometer-goals"],
+t: "2025-07-31",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
