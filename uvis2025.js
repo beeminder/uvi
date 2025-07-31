@@ -1611,6 +1611,24 @@ d: "2025-07-29",
 t: "2025-07-29",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
+x: `Help docs: Added a Related Autodata Integrations section to all the Zapier-like things`,
+u: ["https://x.com/beemuvi/status/1950703086051447247",
+    "https://help.beeminder.com/article/86-ifttt",
+    "https://help.beeminder.com/article/87-zapier",
+    "https://help.beeminder.com/article/318-make-formerly-integromat",
+    "https://help.beeminder.com/article/364-curlex",
+    "https://help.beeminder.com/article/323-metaminder#related",
+    "https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.beeminder/"],
+d: "2025-07-29",
+t: "2025-07-30",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Also added RSSminder to the collection of meta-ish autodata integrations and fixed at least one copy/paste error in making these sections consistent
+u: ["https://x.com/beemuvi/status/1950703213923221508",
+    "https://help.beeminder.com/article/331-rssminder#related"],
+d: "2025-07-30",
+t: "2025-07-30",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
