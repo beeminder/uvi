@@ -1525,12 +1525,14 @@ u: ["https://x.com/beemuvi/status/1947787497934889352",
     "https://github.com/beeminder/beeminder/issues/1308",
     "https://github.com/beeminder/beeminder/pull/5341"],
 d: "2025-07-21",
+t: "2025-07-22",
 }, { // ------------------------------------------------------------------------
 x: `We now explicitly reset weekends-off to off on restart, with new webcopy explaining this. (If you then turn it on, we do schedule the upcoming weekend off)`,
 u: ["https://x.com/beemuvi/status/1947787679250452969",
     "https://github.com/beeminder/beeminder/issues/1308",
     "https://github.com/beeminder/beeminder/pull/5341"],
 d: "2025-07-21",
+t: "2025-07-22",
 c: "Note that it won't schedule a break for the weekend if you're already in the middle of it. Also it warns you if you no longer have the premium plan that lets you turn weekends-off back on. So this is also a slight bit of loophole closing.",
 }, { // ------------------------------------------------------------------------
 x: `Critical #bugfix: We would erase future changes in your red line if your goal was set as Value+Rate and you used the commitment dial to change the final rate`,
@@ -1610,7 +1612,6 @@ u: ["https://x.com/beemuvi/status/1950346231118454839",
 d: "2025-07-29",
 t: "2025-07-29",
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
 x: `Help docs: Added a Related Autodata Integrations section to all the Zapier-like things`,
 u: ["https://x.com/beemuvi/status/1950703086051447247",
     "https://help.beeminder.com/article/86-ifttt",
@@ -1640,6 +1641,27 @@ u: ["https://x.com/beemuvi/status/1951063576812355776",
     "https://help.beeminder.com/article/69-whittle-down-goals",
     "https://help.beeminder.com/article/68-odometer-goals"],
 t: "2025-07-31",
+}, { // ------------------------------------------------------------------------
+x: `A while back the Beeminder infinibee logo got lost from the forum header. Now we've restored it, and made it link to the Beeminder front page`,
+u: ["https://x.com/beemuvi/status/1951432251373396473",
+    "https://forum.beeminder.com",
+    "https://forum.beeminder.com/admin/customize/themes/6/common/js/edit?safe_mode=no_themes"],
+d: "2025-08-01",
+t: "2025-08-01",
+}, { // ------------------------------------------------------------------------
+x: `We bumped up the price of Beemium to $81, because that's the next square number. And to discourage people from buying it.`,
+u: ["https://x.com/beemuvi/status/1951432434597372225",
+    "https://blog.beeminder.com/boobeemium",
+    "https://github.com/beeminder/beeminder/pull/5357"],
+d: "2025-08-01",
+t: "2025-08-01",
+}, { // ------------------------------------------------------------------------
+x: `Sent grandfathering emails to current Beemium subscribers to let them know the countdown starts now, and they'll be bumped to the higher price in a year`,
+u: ["https://x.com/beemuvi/status/1952484735755960542",
+    "https://www.beeminder.com/premium"],
+d: "2025-08-01",
+t: "2025-08-04",
+c: `Didn't include lifetime subscribers, since you already paid all your money`,
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
