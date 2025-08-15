@@ -1663,6 +1663,11 @@ d: "2025-08-01",
 t: "2025-08-04",
 c: `Didn't include lifetime subscribers, since you already paid all your money`,
 }, { // ------------------------------------------------------------------------
+x: `Help docs: Streamlining and clarifying notes added to "how do I enter data?" plus slimming down and rephrasing in "what is my data?"`,
+u: ["https://x.com/beemuvi/status/1956470234606649464",
+    "https://help.beeminder.com/article/37-how-do-i-enter-data-to-my-goal",
+    "https://help.beeminder.com/article/36-what-is-my-data"],
+t: "2025-08-15",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -1974,6 +1979,8 @@ BEEMIOS POST-6.7
 * list now matches website when sorting by pledge: https://github.com/beeminder/BeeSwift/pull/579
 * Introduce a freshness indicator for the goal screen: https://github.com/beeminder/BeeSwift/pull/537
 * App now notices when you switch Beeminder timezone: https://github.com/beeminder/BeeSwift/issues/507
+* Add goal shortname to zeno notification
+
 }, { // ------------------------------------------------------------------------
 BEEMIOS 2024-09-16:
 * Don't delete the #DERAIL datapoint: Closed #456 as completed via #474.
