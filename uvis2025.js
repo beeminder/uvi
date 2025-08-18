@@ -1669,6 +1669,18 @@ u: ["https://x.com/beemuvi/status/1956470234606649464",
     "https://help.beeminder.com/article/36-what-is-my-data"],
 t: "2025-08-15",
 }, { // ------------------------------------------------------------------------
+x: `Help docs: Across 4 adding-data articles we added links and clarifications, removed less relevant stuff, and added discussion of adding past data via mobile`,
+u: ["https://x.com/beemuvi/status/1957590013581095256",
+    "https://help.beeminder.com/article/38-what-happens-if-i-forgot-to-enter-data".
+    "https://help.beeminder.com/article/39-how-do-i-fix-incorrect-data",
+    "https://help.beeminder.com/article/40-can-anybody-else-add-data-to-my-goal",
+    "https://help.beeminder.com/article/113-can-i-import-previous-data"],
+t: "2025-08-18",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Corrected a wrong explanation of where to enter a URL to export datapoints in the "Can I export my data?" article (plus minor rewording)`,
+u: ["https://x.com/beemuvi/status/1957590289079759066",
+    "https://help.beeminder.com/article/41-can-i-export-my-data"],
+t: "2025-08-18",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
