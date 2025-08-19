@@ -1671,7 +1671,7 @@ t: "2025-08-15",
 }, { // ------------------------------------------------------------------------
 x: `Help docs: Across 4 adding-data articles we added links and clarifications, removed less relevant stuff, and added discussion of adding past data via mobile`,
 u: ["https://x.com/beemuvi/status/1957590013581095256",
-    "https://help.beeminder.com/article/38-what-happens-if-i-forgot-to-enter-data".
+    "https://help.beeminder.com/article/38-what-happens-if-i-forgot-to-enter-data",
     "https://help.beeminder.com/article/39-how-do-i-fix-incorrect-data",
     "https://help.beeminder.com/article/40-can-anybody-else-add-data-to-my-goal",
     "https://help.beeminder.com/article/113-can-i-import-previous-data"],
@@ -1681,6 +1681,17 @@ x: `Help docs: Corrected a wrong explanation of where to enter a URL to export d
 u: ["https://x.com/beemuvi/status/1957590289079759066",
     "https://help.beeminder.com/article/41-can-i-export-my-data"],
 t: "2025-08-18",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: By popular demand, added a section on discounts to the "how much does Beeminder cost?" article`,
+u: ["https://x.com/beemuvi/status/1957938784575852873",
+    "https://help.beeminder.com/article/19-how-much-does-beeminder-cost"],
+t: "2025-08-19",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Cut a big repetitive chunk out of the switching-goal-units article, plus deleted wordiness and reorganized and reworded the "when do I pay?" article`,
+u: ["https://x.com/beemuvi/status/1957938917614973005",
+    "https://help.beeminder.com/article/42-switching-goal-units",
+    "https://help.beeminder.com/article/324-when-do-i-pay"],
+t: "2025-08-19",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
