@@ -1694,6 +1694,49 @@ u: ["https://x.com/beemuvi/status/1957938917614973005",
 t: "2025-08-19",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
+f: true,
+x: `Added an alternate graph view to the goal page. Click your graph and it becomes zoomable and pan-able!`,
+u: ["https://x.com/beemuvi/status/1958315090509492666",
+    "https://github.com/beeminder/beeminder/issues/454",
+    "https://github.com/beeminder/beeminder/pull/5362"],
+d: "2025-08-19",
+t: "2025-08-20",
+c: "Dynagraphs baby step. HT Clive.",
+}, { // ------------------------------------------------------------------------
+f: true,
+x: `Related new feature: hover over the datapoints in the dynamic graph view to see details about them`,
+u: ["https://x.com/beemuvi/status/1958315167487504671",
+    "https://github.com/beeminder/beeminder/issues/454",
+    "https://github.com/beeminder/beeminder/pull/5362"],
+d: "2025-08-19",
+t: "2025-08-20",
+}, { // ------------------------------------------------------------------------
+x: `Fixed a bug with the zoomable graphs where the datapoints could be plotted on the wrong day if you had a non-midnight deadline, leading to wrong color or worse`,
+u: ["https://x.com/beemuvi/status/1958676891784946006",
+    "https://github.com/beeminder/beeminder/issues/5364",
+    "https://github.com/beeminder/beeminder/pull/5365",
+    "https://github.com/beeminder/beeminder/pull/5366"],
+d: "2025-08-20",
+t: "2025-08-21",
+}, { // ------------------------------------------------------------------------
+x: `We briefly showed interactive graphs to others for goals with non-public data, or hide-y axis settings. #bugfix`,
+u: ["https://x.com/beemuvi/status/1958677010999648316",
+    "https://github.com/beeminder/beeminder/issues/5364",
+    "https://github.com/beeminder/beeminder/pull/5365",
+    "https://github.com/beeminder/beeminder/pull/5366"],
+d: "2025-08-20",
+t: "2025-08-21",
+}, { // ------------------------------------------------------------------------
+x: `Relatedly, we no longer offer the tooltip ("Click for zoomable graph"), and then give an error response, if you're not authorized to see the zoomable graph`,
+u: ["https://x.com/beemuvi/status/1958677548721930527",
+    "https://github.com/beeminder/beeminder/issues/5364",
+    "https://github.com/beeminder/beeminder/pull/5365",
+    "https://github.com/beeminder/beeminder/pull/5366"],
+d: "2025-08-20"
+t: "2025-08-21",
+c: `Even if you weren't authorized to see the interactive graph, we'd give the 'click to zoom' hint. Then when you clicked, we'd show an error banner like "you're not authorized"`,
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
