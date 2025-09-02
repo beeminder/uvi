@@ -1720,6 +1720,7 @@ u: ["https://x.com/beemuvi/status/1958676891784946006",
     "https://github.com/beeminder/beeminder/pull/5366"],
 d: "2025-08-20",
 t: "2025-08-21",
+c: `Sometimes even wrongly showed skull and crossbones`,
 }, { // ------------------------------------------------------------------------
 x: `We briefly showed interactive graphs to others for goals with non-public data, or hide-y axis settings. #bugfix`,
 u: ["https://x.com/beemuvi/status/1958677010999648316",
@@ -1740,6 +1741,11 @@ c: `Even if you weren't authorized to see the interactive graph, we'd give the '
 }, /* --------------------------------------------------------- end 2025aug */ ]
 
 batches['2025sep'] = [{
+}, { // ------------------------------------------------------------------------
+x: `Help docs: In the payment methods doc, pared it down, rephrased, and added a note about slow honey money purchases via PayPal`,
+u: ["https://help.beeminder.com/article/27-what-payment-methods-are-available",
+    "https://x.com/beemuvi/status/1963021508877680694"],
+t: "2025-09-02",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
