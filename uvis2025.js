@@ -1693,7 +1693,6 @@ u: ["https://x.com/beemuvi/status/1957938917614973005",
     "https://help.beeminder.com/article/324-when-do-i-pay"],
 t: "2025-08-19",
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
 f: true,
 x: `Added an alternate graph view to the goal page. Click your graph and it becomes zoomable and pan-able!`,
 u: ["https://x.com/beemuvi/status/1958315090509492666",
@@ -1732,7 +1731,7 @@ u: ["https://x.com/beemuvi/status/1958677548721930527",
     "https://github.com/beeminder/beeminder/issues/5364",
     "https://github.com/beeminder/beeminder/pull/5365",
     "https://github.com/beeminder/beeminder/pull/5366"],
-d: "2025-08-20"
+d: "2025-08-20",
 t: "2025-08-21",
 c: `Even if you weren't authorized to see the interactive graph, we'd give the 'click to zoom' hint. Then when you clicked, we'd show an error banner like "you're not authorized"`,
 }, { // ------------------------------------------------------------------------
