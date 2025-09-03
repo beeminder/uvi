@@ -1747,6 +1747,24 @@ u: ["https://help.beeminder.com/article/27-what-payment-methods-are-available",
     "https://x.com/beemuvi/status/1963021508877680694"],
 t: "2025-09-02",
 }, { // ------------------------------------------------------------------------
+x: `Help docs: In "what happens if a charge fails?" we rearranged, reworded, trimmed, and clarified what deadbeating means in the smartphone apps`,
+u: ["https://x.com/beemuvi/status/1963356826155778285",
+    "https://help.beeminder.com/article/30-what-happens-if-a-charge-fails"],
+t: "2025-09-03",
+}, { // ------------------------------------------------------------------------
+x: `Interactive graphs on the goal page for goals with the aura turned on were broken. So we turned off the aura when initializing interactive graphs. #bugfix`,
+u: ["https://x.com/beemuvi/status/1963380445795815441",
+    "https://github.com/beeminder/beeminder/issues/5368",
+    "https://github.com/beeminder/beeminder/pull/5369"],
+d: "2025-09-01",
+t: "2025-09-03",
+}, { // ------------------------------------------------------------------------
+x: `We changed the logo and text for our Metaminder integration in our integrations gallery, due to user confusion`,
+u: ["https://x.com/beemuvi/status/1963376979195171323",
+    "https://forum.beeminder.com/t/not-able-to-set-new-goals-help/12520/4"],
+d: "2025-09-02",
+t: "2025-09-03",
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
