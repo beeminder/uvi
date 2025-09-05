@@ -1765,6 +1765,22 @@ u: ["https://x.com/beemuvi/status/1963376979195171323",
 d: "2025-09-02",
 t: "2025-09-03",
 }, { // ------------------------------------------------------------------------
+x: `Help docs: Replaced repetitive verbiage in the "decrease my pledge" doc with link to the one on pledge caps, plus minor tidying/rewording in 4 other articles`,
+u: ["https://x.com/beemuvi/status/1963706205685350427",
+    "https://help.beeminder.com/article/21-can-i-decrease-the-pledge-on-my-goal",
+    "https://help.beeminder.com/article/20-how-much-do-i-pledge-on-my-goals",
+    "https://help.beeminder.com/article/343-can-i-increase-the-pledge-on-my-goal",
+    "https://help.beeminder.com/article/23-can-i-have-goals-without-pledges",
+    "https://help.beeminder.com/article/24-how-do-i-manage-my-subscription"],
+t: "2025-09-04",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Added advice against too-high pledge caps in the pledge caps article, plus rewording and trimming in that and 2 other articles`,
+u: ["https://x.com/beemuvi/status/1964038571205226946",
+    "https://help.beeminder.com/article/25-how-do-auto-canceling-subscriptions-work",
+    "https://help.beeminder.com/article/26-what-if-i-buy-one-plan-and-change-my-mind",
+    "https://help.beeminder.com/article/22-can-i-limit-how-high-my-pledge-gets"],
+t: "2025-09-05",
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
