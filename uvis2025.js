@@ -1782,7 +1782,7 @@ u: ["https://x.com/beemuvi/status/1964038571205226946",
 t: "2025-09-05",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
-x: `Help docs: Added some extra explanation to the honey money article, plus rewording and trimming in 4 other articles
+x: `Help docs: Added some extra explanation to the honey money article, plus rewording and trimming in 4 other articles`,
 u: ["https://x.com/beemuvi/status/1965202372139040774",
     "https://help.beeminder.com/article/354-honey-money",
     "https://help.beeminder.com/article/28-how-do-i-update-my-payment-information",
