@@ -1790,6 +1790,12 @@ u: ["https://x.com/beemuvi/status/1965202372139040774",
     "https://help.beeminder.com/article/13-when-do-derailments-happen"],
 t: "2025-09-08",
 }, { // ------------------------------------------------------------------------
+x: `We no longer clear the "deadbeat" flag (failed payment method) till all pending charges succeed, rather than clearing it after the first successful charge`,
+u: ["https://x.com/beemuvi/status/1965558284750127441",
+    "https://github.com/beeminder/beeminder/issues/5217",
+    "https://github.com/beeminder/beeminder/pull/5370"],
+d: "2025-09-05",
+t: "2025-09-09",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
