@@ -1804,6 +1804,24 @@ u: ["https://x.com/beemuvi/status/1965559328984994090",
 d: "2025-09-09",
 t: "2025-09-09",
 }, { // ------------------------------------------------------------------------
+x: `Admins now have better visibility and greater powers w/ your goals, which trickles down to you. Bonus mini-UVI: "you" is now reserved/disallowed as a username.`,
+u: ["https://x.com/beemuvi/status/1966035375287320594",
+    "https://github.com/beeminder/beeminder/issues/1339",
+    "https://github.com/beeminder/beeminder/pull/5377",
+    "https://github.com/beeminder/beeminder/issues/5361",
+    "https://github.com/beeminder/beeminder/pull/5381",
+    "https://github.com/beeminder/beeminder/issues/1425",
+    "https://github.com/beeminder/beeminder/pull/5382"],
+d: "2025-09-08",
+t: "2025-09-11",
+c: `Namely: (1) admins can refetch autodata on frozen goals, solving a long-time frustration for admins, and (2) we make clear in the "delete goal feedback" email (that goes to Support) if the goal has not actually been deleted.`,
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Better articulated our latest philosophy about calling non-legit in the "what is a legit derailment?" article, plus new links/keywords`,
+u: ["https://x.com/beemuvi/status/1966036377663058224",
+    "https://help.beeminder.com/article/16-what-is-a-legit-derailment"],
+d: "2025-09-05",
+t: "2025-09-11",
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
