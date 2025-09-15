@@ -1822,6 +1822,12 @@ u: ["https://x.com/beemuvi/status/1966036377663058224",
 d: "2025-09-05",
 t: "2025-09-11",
 }, { // ------------------------------------------------------------------------
+x: `Help docs: Removed some wordiness and equivocal language in the No-Excuses Mode doc, plus a typo fix (lick vs click) in the gym goal example doc`,
+u: ["https://x.com/beemuvi/status/1967716417375260804",
+    "https://help.beeminder.com/article/360-what-is-no-excuses-mode",
+    "https://help.beeminder.com/article/92-example-goal-go-to-the-gym-4-times-per-week"],
+t: "2025-09-15",
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
