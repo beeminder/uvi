@@ -1828,6 +1828,20 @@ u: ["https://x.com/beemuvi/status/1967716417375260804",
     "https://help.beeminder.com/article/92-example-goal-go-to-the-gym-4-times-per-week"],
 t: "2025-09-15",
 }, { // ------------------------------------------------------------------------
+x: `Switching to interactive graph view didn't work for graphs with certain far-future goal dates. #bugfix`,
+u: ["https://x.com/beemuvi/status/1968068315248726092",
+    "https://github.com/beeminder/beeminder/issues/5379",
+    "https://github.com/beeminder/beeminder/pull/5387"],
+d: "2025-09-10",
+t: "2025-09-16",
+c: `This was for graphs with tfin=2099-12-30 (not 2099-12-31?) and it would generate an error and not instantiate the interactive graph`,
+}, { // ------------------------------------------------------------------------
+x: `Replaced the "hhmmformat" goal field in the API output with "timey" and updated the API docs to say the old name is deprecated`,
+u: ["https://x.com/beemuvi/status/1968072176915058744",
+    "https://github.com/beeminder/beeminder/issues/1862",
+    "https://github.com/beeminder/beeminder/pull/5389"],
+d: "2025-09-15",
+t: "2025-09-16",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
