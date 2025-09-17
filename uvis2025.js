@@ -1843,6 +1843,23 @@ u: ["https://x.com/beemuvi/status/1968072176915058744",
 d: "2025-09-15",
 t: "2025-09-16",
 }, { // ------------------------------------------------------------------------
+x: `Help docs: Tidying and rearranging and clarifying and removing of no-longer-relevant bits in the articles about derailing, Apple Health, and 2 others`,
+u: ["https://x.com/beemuvi/status/1968462434135351401",
+    "https://help.beeminder.com/article/17-what-happens-when-i-derail",
+    "https://help.beeminder.com/article/61-apple-health",
+    "https://help.beeminder.com/article/288-codecombat",
+    "https://help.beeminder.com/article/364-curlex"],
+t: "2025-09-17",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: We made the "help, something came up" article sound a tad stricter, to discourage weaseling`,
+u: ["https://x.com/beemuvi/status/1968462568604749928",
+    "https://help.beeminder.com/article/325-help-something-came-up-and-i-cant-do-my-goal"],
+t: "2025-09-17",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: The Boss as a Service integration article now says what we need from the BaaS Boss in the case of an integration failure derailing a No-Excuses goal`,
+u: ["https://x.com/beemuvi/status/1968462691795718393",
+    "https://help.beeminder.com/article/329-boss-as-a-service-baas"],
+t: "2025-09-17",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
