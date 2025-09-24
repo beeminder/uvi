@@ -1922,7 +1922,7 @@ x: `Killed some ancient backward compatibility with magic strings. Eg, datapoint
 u: ["https://x.com/beemuvi/status/1970998918386528282",
     "https://blog.beeminder.com/magicdata",
     "https://forum.beeminder.com/t/subtle-change-to-self-destructing-datapoints/10655?u=dreev",
-    "https://github.com/beeminder/beeminder/issues/4188"]
+    "https://github.com/beeminder/beeminder/issues/4188"],
 t: "2025-09-24",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
