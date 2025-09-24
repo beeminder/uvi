@@ -1862,6 +1862,69 @@ u: ["https://x.com/beemuvi/status/1968462691795718393",
     "https://help.beeminder.com/article/329-boss-as-a-service-baas"],
 t: "2025-09-17",
 }, { // ------------------------------------------------------------------------
+x: `New lifecycle email: If you've been inactive for 14+ days we show you up to 5 of your active goals and twist your arm to get back on the wagon`,
+u: ["https://x.com/beemuvi/status/1968827260833505741",
+    "https://github.com/beeminder/beeminder/issues/3765",
+    "https://github.com/beeminder/beeminder/pull/5358",
+    "https://github.com/beeminder/beeminder/pull/5397"],
+t: "2025-09-18",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Explained about private predictions counting for the Fatebook (with a t) integration, plus minor tweaks to the Clozemaster integration article`,
+u: ["https://x.com/beemuvi/status/1969150639818125344",
+    "https://help.beeminder.com/article/366-fatebook",
+    "https://help.beeminder.com/article/290-clozemaster"],
+t: "2025-09-19",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Added an FAQ about what happens at the deadline for the Focusmate article, plus other clarifications and fixing some wordiness (and user confusion!)`,
+u: ["https://x.com/beemuvi/status/1969150717005816051",
+    "https://help.beeminder.com/article/278-focusmate"],
+t: "2025-09-19",
+}, { // ------------------------------------------------------------------------
+x: `Our new lifecycle email sending was broken till now, thankfully by just not sending the emails. Now fixed and sending to just daily beemail folks initially.`,
+u: ["https://x.com/beemuvi/status/1970276399270543736",
+    "https://github.com/beeminder/beeminder/pull/5358",
+    "https://github.com/beeminder/beeminder/pull/5398"],
+d: "2025-09-22",
+t: "2025-09-22",
+}, { // ------------------------------------------------------------------------
+x: `New lifecycle email: If you seem to be crushing it, we send an email with status on 7 of your goals, general encouragement, and soliciting of feedback`,
+u: ["https://x.com/beemuvi/status/1970276415615705459",
+    "https://github.com/beeminder/beeminder/pull/5398",
+    "https://github.com/beeminder/beeminder/pull/5358"],
+d: "2025-09-22",
+t: "2025-09-22",
+}, { // ------------------------------------------------------------------------
+x: `You can now alternatively use @ instead of # for magic strings in datapoint comments to avoid invoking the hashtag feature. HT Philip Hellyer`,
+u: ["https://x.com/beemuvi/status/1970633954370994448",
+    "https://github.com/beeminder/beeminder/issues/4188",
+    "https://github.com/beeminder/beeminder/pull/5393",
+    "https://github.com/beeminder/road"],
+t: "2025-09-23",
+}, { // ------------------------------------------------------------------------
+x: `New hover effects in the graph editor: knots and dots show you which way you can drag them`,
+u: ["https://x.com/beemuvi/status/1970639465573163075",
+    "https://github.com/beeminder/road/commit/3160d4fb7ed206ae096199e21c2c3344f3052349"],
+t: "2025-09-23",
+}, { // ------------------------------------------------------------------------
+x: `We briefly cluttered up people's graphs with "#DERAIL" hashtags (if you have hashtags turned on and derail a lot). #bugfix #zombie`,
+u: ["https://x.com/beemuvi/status/1970998396573155482",
+    "https://github.com/beeminder/beeminder/issues/4188"],
+d: "2025-09-23",
+t: "2025-09-24",
+c: `To clarify, it's intentional that these show up as hashtag annotations, but we didn't mean for that to happen retroactively for all derailments in your whole history, even before we introduced the #DERAIL hashtags for derailments.`,
+}, { // ------------------------------------------------------------------------
+x: `We made the regexes for our magic strings more robust and consistent, for fewer false positives`,
+u: ["https://x.com/beemuvi/status/1970998615696179393"
+    "https://github.com/beeminder/beeminder/issues/4188"]
+t: "2025-09-24",
+}, { // ------------------------------------------------------------------------
+x: `Killed some ancient backward compatibility with magic strings. Eg, datapoints only self-destruct if tagged #SELFDESTRUCT or #THISWILLSELFDESTRUCT (or w/ @)`,
+u: ["https://x.com/beemuvi/status/1970998918386528282",
+    "https://blog.beeminder.com/magicdata",
+    "https://forum.beeminder.com/t/subtle-change-to-self-destructing-datapoints/10655?u=dreev",
+    "https://github.com/beeminder/beeminder/issues/4188"]
+t: "2025-09-24",
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
