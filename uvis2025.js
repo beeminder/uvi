@@ -1606,7 +1606,7 @@ d: "2025-07-29",
 t: "2025-07-29",
 c: `Namely the X-Client header`,
 }, { // ------------------------------------------------------------------------
-x: "We now link to Honeygrams on the payments page. Previously we only sent out links to this in, e.g., hooliday promotions.",
+x: "We now link to Honeygrams on the payments page. Previously we only sent out links to this in, e.g., Hooliday (TM) Promotions.",
 u: ["https://x.com/beemuvi/status/1950346231118454839",
     "https://github.com/beeminder/beeminder/issues/4617",
     "https://github.com/beeminder/beeminder/pull/5355"],
