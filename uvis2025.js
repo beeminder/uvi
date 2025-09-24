@@ -1292,6 +1292,7 @@ u: ["https://x.com/beemuvi/status/1938729725758972030",
     "https://github.com/beeminder/beeminder/pull/5316"],
 d: "2025-06-27",
 t: "2025-06-27",
+c: `That's sigma, for greppability`,
 }, { // ------------------------------------------------------------------------
 x: `In addition to your dashboard, we added the summing indicator to the goal page too and there's a mildly explanatory tooltip if you hover your mouse over it.`,
 u: ["https://x.com/beemuvi/status/1938730231566868993",
