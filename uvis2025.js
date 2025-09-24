@@ -1914,8 +1914,8 @@ t: "2025-09-24",
 c: `To clarify, it's intentional that these show up as hashtag annotations, but we didn't mean for that to happen retroactively for all derailments in your whole history, even before we introduced the #DERAIL hashtags for derailments.`,
 }, { // ------------------------------------------------------------------------
 x: `We made the regexes for our magic strings more robust and consistent, for fewer false positives`,
-u: ["https://x.com/beemuvi/status/1970998615696179393"
-    "https://github.com/beeminder/beeminder/issues/4188"]
+u: ["https://x.com/beemuvi/status/1970998615696179393",
+    "https://github.com/beeminder/beeminder/issues/4188"],
 t: "2025-09-24",
 }, { // ------------------------------------------------------------------------
 x: `Killed some ancient backward compatibility with magic strings. Eg, datapoints only self-destruct if tagged #SELFDESTRUCT or #THISWILLSELFDESTRUCT (or w/ @)`,
