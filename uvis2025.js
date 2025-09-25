@@ -1926,6 +1926,14 @@ u: ["https://x.com/beemuvi/status/1970998918386528282",
 t: "2025-09-24",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
+x: `Ever since UVI#5253 we'd give a 500-error if you tried to restart a goal with a old-style $1 pledge. #bugfix HT rafal aka divide`,
+u: ["https://x.com/beemuvi/status/1971297231035863420",
+    "https://github.com/beeminder/beeminder/issues/5405",
+    "https://github.com/beeminder/beeminder/pull/5407"],
+d: "2025-09-24",
+t: "2025-09-25",
+c: `We introduced a new pledge schedule (schedge) of $1, $5, $10, $20, etc, in 2019 with UVI#3097 with an option to stick with the traditional one. We made it opt-in in 2020 with UVI#3344. We removed the ability to opt for the new pledge schedule later in 2020 with UVI#3603. We stopped letting you restart a goal at $1 in 2024 with UVI#5253.`,
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
