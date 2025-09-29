@@ -1925,7 +1925,6 @@ u: ["https://x.com/beemuvi/status/1970998918386528282",
     "https://github.com/beeminder/beeminder/issues/4188"],
 t: "2025-09-24",
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
 x: `Ever since UVI#5253 we'd give a 500-error if you tried to restart a goal with a old-style $1 pledge. #bugfix HT rafal aka divide`,
 u: ["https://x.com/beemuvi/status/1971297231035863420",
     "https://github.com/beeminder/beeminder/issues/5405",
@@ -1933,6 +1932,19 @@ u: ["https://x.com/beemuvi/status/1971297231035863420",
 d: "2025-09-24",
 t: "2025-09-25",
 c: `We introduced a new pledge schedule (schedge) of $1, $5, $10, $20, etc, in 2019 with UVI#3097 with an option to stick with the traditional one. We made it opt-in in 2020 with UVI#3344. We removed the ability to opt for the new pledge schedule later in 2020 with UVI#3603. We stopped letting you restart a goal at $1 in 2024 with UVI#5253.`,
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Clarified the FAQ item on intensity minutes for the Garmin autodata integration, abating some real-live user confusion`,
+u: ["https://x.com/beemuvi/status/1971698934688170449",
+    "https://help.beeminder.com/article/74-garmin"],
+t: "2025-09-26",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Clarifications, wordiness fixes, tweaks for flow, and an internal link added in the Duolingo, Fitbit, freeCodeCamp, and GitHub integration articles`,
+u: ["https://x.com/beemuvi/status/1971699003785204033",
+    "https://help.beeminder.com/article/80-duolingo",
+    "https://help.beeminder.com/article/11-fitbit",
+    "https://help.beeminder.com/article/287-freecodecamp",
+    "https://help.beeminder.com/article/81-github"],
+t: "2025-09-26",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
