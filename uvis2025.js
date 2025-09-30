@@ -1946,6 +1946,32 @@ u: ["https://x.com/beemuvi/status/1971699003785204033",
     "https://help.beeminder.com/article/81-github"],
 t: "2025-09-26",
 }, { // ------------------------------------------------------------------------
+x: `When you opt to "just send feedback" and not delete the goal yet, we no longer say "successfully deleted the goal". We never did, but now we don't *say* we did.`,
+u: ["https://x.com/beemuvi/status/1972805775090458980",
+    "https://github.com/beeminder/beeminder/pull/5409"],
+c: `We weren't actually deleting the goal, but we briefly gave you a heart attack because we did exactly the same thing we woulda done had we deleted it`,
+d: "2025-09-26",
+t: "2025-09-29",
+}, { // ------------------------------------------------------------------------
+x: `Also we no longer redirect to your dashboard after doing that, something we do do when you actually delete the goal, since the page you're on no longer exists`,
+u: ["https://x.com/beemuvi/status/1972805977050370528",
+    "https://github.com/beeminder/beeminder/pull/5409"],
+d: "2025-09-26",
+t: "2025-09-29",
+}, { // ------------------------------------------------------------------------
+x: `There was a syntax error in the template for the much-announced lifecycle emails, so none actually got sent yet. Slowly resending missed ones. #bugfix`,
+u: ["https://x.com/beemuvi/status/1972846116438962495",
+    "https://github.com/beeminder/beeminder/pull/5410"],
+d: "2025-09-26",
+t: "2025-09-29",
+c: `We were referencing a variable that doesn't exist`,
+}, { // ------------------------------------------------------------------------
+x: `Help docs: We made the GmailZero article a lot better: general readability and a lot easier to understand the troubleshooting section`,
+u: ["https://x.com/beemuvi/status/1972847089035182186",
+    "https://help.beeminder.com/article/82-gmail"],
+t: "2025-09-29",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
