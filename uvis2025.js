@@ -1990,6 +1990,34 @@ d: "2025-09-30",
 t: "2025-10-01",
 c: `UI polish`,
 }, { // ------------------------------------------------------------------------
+x: `In the graph editor we now check more robustly for whether you're on a device with a touchscreen (to adapt the UI)`,
+u: ["https://x.com/beemuvi/status/1973897260481249641",
+    "https://github.com/beeminder/road/commit/dc71f546c74bfc0908b996f9c075b617a9d20e9c",
+    "https://github.com/beeminder/road/commit/eab9118ecd0f51e26dfcfe0a09c663d413306e54"],
+d: "2025-10-01",
+t: "2025-10-02",
+c: `Also we upgraded D3 from version 5 to version 7 but there's nothing user-visible about that that we know of besides proper math minus signs, UVI#TODO`,
+}, { // ------------------------------------------------------------------------
+x: `Also in the graph editor, the Data tab that lets you edit datapoints (in case you want to do that there) has been broken for a long time till now. #bugfix`,
+u: ["https://x.com/beemuvi/status/1973897388457930966",
+    "https://github.com/beeminder/road/commit/d00801e3435fd464b7cfa4dbd823eb8b9ae2808f"],
+d: "2025-10-02",
+t: "2025-10-02",
+}, { // ------------------------------------------------------------------------
+x: `Fixed a 500 error for some Slack users when trying to visit their account settings page. And made the authorizations more robust to this type of error. #bugfix`,
+u: ["https://x.com/beemuvi/status/1974067770032861554",
+    "https://github.com/beeminder/beeminder/pull/5413"],
+d: "2025-10-02",
+t: "2025-10-03",
+c: "HT Lanthala who reported that she couldn't reach her account settings. It was because something is wonky with her Slack authorization. Probably the Slack integration is not working for her... which we did not fix. But we did go through the whole service-model and robust it up to this type of thing with defensive programming.",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Fixed grammar, flow problems in the Intend autodata article (& caught old instances of "Complice"), plus reduced wordiness etc in 2 others`,
+u: ["https://x.com/beemuvi/status/1974075976993898641",
+    "https://help.beeminder.com/article/85-intend",
+    "https://help.beeminder.com/article/83-habitica",
+    "https://help.beeminder.com/article/86-ifttt"],
+t: "2025-10-03",
+c: `Also started making sure we include previous names of things (eg, HabitRPG) in the keywords for searchability`,
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
