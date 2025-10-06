@@ -2019,6 +2019,39 @@ u: ["https://x.com/beemuvi/status/1974075976993898641",
 t: "2025-10-03",
 c: `Also started making sure we include previous names of things (eg, HabitRPG) in the keywords for searchability`,
 }, { // ------------------------------------------------------------------------
+x: `After some package upgrades to the graph generator, some graph PNGs have subtly but noticeably smoother, less jagged lines`,
+u: ["https://x.com/beemuvi/status/1975314560350626282",
+    "https://github.com/beeminder/road/commit/41c2d9b6588a5f0b24434846f82f9ef3869b5f32"],
+t: "2025-10-06",
+c: `I think this was from upgrading our version of Puppeteer; also it may have broken the production Beebrain in some heisenbuggy way? Pushed to the beebrain repo on 2025-09-17 or so, not sure it was exactly the commit linked here. It wasn't live for graphs via Beeminder-proper till deplying the new Beebrain on 2025-10-06.`,
+}, { // ------------------------------------------------------------------------
+x: `This is the subtlest, persnicketiest thing but we now use proper mathematical minus signs for negative numbers on the y-axis`,
+u: ["https://x.com/beemuvi/status/1975315004783268171",
+    "https://github.com/beeminder/road/issues/333",
+    "https://github.com/beeminder/road/commit/4a6f5ab14dc651c635e1123899cf119722de18fa"],
+t: "2025-10-06",
+c: `We got this as part of the D3 v7 upgrade. We actually added a regex to force hyphens insto minus signs ahead of time on v5 so we could more easily spot any subtle changes to graphs from the v5-to-v7 switchover.`,
+}, { // ------------------------------------------------------------------------
+x: `Goal restarts are now indicated with a zigzaggy vertical line on your graph. This is determined by the #RESTART / @RESTART magic string.`,
+u: ["https://x.com/beemuvi/status/1975315238200512564",
+    "https://blog.beeminder.com/magicdata",
+    "https://github.com/beeminder/road/issues/151",
+    "https://github.com/beeminder/road/commit/35a1183ae342da857a37f131cfc5ae021a9fec39"],
+d: "2025-10-06",
+t: "2025-10-06",
+c: `Deployed as Beebrain v2025.10.02-f`,
+}, { // ------------------------------------------------------------------------
+f: true,
+x: `Visual PPRs! Self-destructing datapoints now appear 1.5x bigger and have a little slash through them`,
+u: ["https://x.com/beemuvi/status/1975315720553832656",
+    "https://help.beeminder.com/article/157-pessimistic-presumptive-reports",
+    "https://blog.beeminder.com/magicdata",
+    "https://github.com/beeminder/road/issues/151",
+    "https://github.com/beeminder/road/commit/4cfecb73851a570bc5fbb5a2613c229536d990a2"],
+d: "2025-10-06",
+t: "2025-10-06",
+c: `Deployed as Beebrain v2025.10.03-a`,
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
