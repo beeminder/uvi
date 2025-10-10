@@ -2053,6 +2053,62 @@ t: "2025-10-06",
 c: `Deployed as Beebrain v2025.10.03-a`,
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
+f: true,
+x: `Tare Tags! Instead of a setting on odometer goals to treat zeros as odometer resets, you now just include "#TARE" or "@TARE" in the datapoint comment`,
+u: ["https://x.com/beemuvi/status/1976073422577991723",
+    "https://blog.beeminder.com/tare",
+    "https://github.com/beeminder/road/issues/216"],
+d: "2025-10-07",
+t: "2025-10-08",
+}, { // ------------------------------------------------------------------------
+x: `We ripped the old odometer reset checkbox out of the UI since that feature is subsumed by tare tags, which need no setting. One fewer setting, hooray!`,
+u: ["https://x.com/beemuvi/status/1976073570343321860",
+    "https://blog.beeminder.com/magicstrings",
+    "https://blog.beeminder.com/magicdata",
+    "https://github.com/beeminder/road/issues/216"],
+d: "2025-10-07",
+t: "2025-10-08",
+}, { // ------------------------------------------------------------------------
+x: `We updated everyone's existing zero datapoints (for which the odometer reset feature was turned on) to include a @TARE tag, to make the transition seamless`,
+u: ["https://x.com/beemuvi/status/1976416525860077729",
+    "https://github.com/beeminder/road/issues/216"],
+d: "2025-10-07",
+t: "2025-10-09",
+}, { // ------------------------------------------------------------------------
+x: `We also (some time ago) updated everyone's datapoints for restarts and derails and PPRs to conform to the new standard for datapoint magic strings`,
+u: ["https://x.com/beemuvi/status/1976417395138044106",
+    "https://blog.beeminder.com/magicdata",
+    "https://github.com/beeminder/beeminder/issues/2423"],
+t: "2025-10-09",
+c: `Forgot to tweet this UVI at the time; it's a follow-on to UVI#5355`,
+}, { // ------------------------------------------------------------------------
+x: `All tarings are visually indicated on the graph with a gray dashed vertical line, same as the old odometer resets`,
+u: ["https://x.com/beemuvi/status/1976752511941066773",
+    "https://github.com/beeminder/road/issues/216"],
+d: "2025-10-07",
+t: "2025-10-10",
+}, { // ------------------------------------------------------------------------
+x: `Multiple bugs and confusion have come out in the wash with tare tags, like initial zeros with backfilled data and URLminder goals borking themselves`,
+u: ["https://x.com/beemuvi/status/1976752665880412388",
+    "https://blog.beeminder.com/tare",
+    "https://github.com/beeminder/beeminder/issues/2561"],
+t: "2025-10-10",
+}, { // ------------------------------------------------------------------------
+x: `We now show an error and don't generate the graph if you try to use #TARE tags on a graph that is auto-summing or has an aggday other than "last"`,
+u: ["https://x.com/beemuvi/status/1976753071327002868",
+    "https://github.com/beeminder/road/commit/84127d75e7e17140cb78fa47abe3d05560fd46db"],
+t: "2025-10-10",
+c: `Due to being stuck in dependency hell in Beebody, we hot-patched this in to the production Beebrain for now`,
+}, { // ------------------------------------------------------------------------
+x: `Updated the FAQ with the new way to deal with odometer resets`,
+u: ["https://x.com/beemuvi/status/1976753144735711529",
+    "https://www.beeminder.com/faq#qodo",
+    "https://github.com/beeminder/road/issues/216",
+    "https://github.com/beeminder/beeminder/pull/5424"],
+d: "2025-10-09",
+t: "2025-10-10",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
