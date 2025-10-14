@@ -2052,7 +2052,6 @@ d: "2025-10-06",
 t: "2025-10-06",
 c: `Deployed as Beebrain v2025.10.03-a`,
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
 f: true,
 x: `Tare Tags! Instead of a setting on odometer goals to treat zeros as odometer resets, you now just include "#TARE" or "@TARE" in the datapoint comment`,
 u: ["https://x.com/beemuvi/status/1976073422577991723",
@@ -2107,6 +2106,26 @@ u: ["https://x.com/beemuvi/status/1976753144735711529",
     "https://github.com/beeminder/beeminder/pull/5424"],
 d: "2025-10-09",
 t: "2025-10-10",
+}, { // ------------------------------------------------------------------------
+x: `We got sick of accidentally hitting Submit in the visual graph editor when meaning to hit Undo so we moved the Submit button to the bottom of the page`,
+u: ["https://x.com/beemuvi/status/1978245376294461764",
+    "https://graph.beeminder.com",
+    "https://github.com/beeminder/road/commit/9f8ef52d85d1d4bffa5248ab11caefffccebd027"],
+d: "2025-10-03",
+t: "2025-10-14",
+}, { // ------------------------------------------------------------------------
+x: `In the visual graph editor, in the Dial tab, you can now use a version of the commitment dial, ratcheting, and break scheduling`,
+u: ["https://x.com/beemuvi/status/1978245546058924357",
+    "https://graph.beeminder.com",
+    "https://github.com/beeminder/road/commit/2713c6e405941ae4ac44818580a3c7760ccfc49a"],
+d: "2025-10-04",
+t: "2025-10-14",
+}, { // ------------------------------------------------------------------------
+x: `We added an "Experimental features" section to the visual graph editor, with a few ways to get an SVG version of your graph`,
+u: ["https://x.com/beemuvi/status/1978245750535467221",
+    "https://github.com/beeminder/road/commit/2713c6e405941ae4ac44818580a3c7760ccfc49a"],
+d: "2025-10-04",
+t: "2025-10-14",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
