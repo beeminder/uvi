@@ -2127,6 +2127,14 @@ u: ["https://x.com/beemuvi/status/1978245750535467221",
 d: "2025-10-04",
 t: "2025-10-14",
 }, { // ------------------------------------------------------------------------
+x: `Help docs: Cleanup and prose-tightening in 5 autodata integration articles: Lichess, Maayot, Make, Manifold, and Metaminder`,
+u: ["https://x.com/beemuvi/status/1978572292582990173",
+    "https://help.beeminder.com/article/338-lichess",
+    "https://help.beeminder.com/article/369-maayot",
+    "https://help.beeminder.com/article/318-make-formerly-integromat",
+    "https://help.beeminder.com/article/352-manifold",
+    "https://help.beeminder.com/article/323-metaminder"],
+t: "2025-10-15",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
