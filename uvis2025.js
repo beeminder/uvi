@@ -2136,6 +2136,22 @@ u: ["https://x.com/beemuvi/status/1978572292582990173",
     "https://help.beeminder.com/article/323-metaminder"],
 t: "2025-10-15",
 }, { // ------------------------------------------------------------------------
+x: `The subject line of the "you updated your email/password" email alert now helpfully includes your username`,
+u: ["https://x.com/beemuvi/status/1978971752207151294",
+    "https://github.com/beeminder/beeminder/issues/5430",
+    "https://github.com/beeminder/beeminder/pull/5431"],
+d: "2025-10-14",
+t: "2025-10-16",
+c: `Bee noticed that lack of username made it really annoying to find the user-in-question in the updated-email case, because the email only had the old email address!`,
+}, { // ------------------------------------------------------------------------
+x: `Users can now remove an autodata integration from a goal, converting it to manual, instead of needing support to do it for them`,
+u: ["https://x.com/beemuvi/status/1978972026627821975",
+    "https://github.com/beeminder/beeminder/issues/4256",
+    "https://github.com/beeminder/beeminder/pull/5427"],
+d: "2025-10-13",
+t: "2025-10-16",
+c: `AKA self-serve goal conversion. This is also a WVI -- workerbees requested it because it's a common support request.`,
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
