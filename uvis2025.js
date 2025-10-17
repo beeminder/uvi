@@ -2152,6 +2152,13 @@ d: "2025-10-13",
 t: "2025-10-16",
 c: `AKA self-serve goal conversion. This is also a WVI -- workerbees requested it because it's a common support request.`,
 }, { // ------------------------------------------------------------------------
+x: `Put out a dumb moneyfire: When support delayed your charge for whatever support reasons, we were *skipping* any charges that occurred in the interim. No longer!`,
+u: ["https://x.com/beemuvi/status/1979048170685374600",
+    "https://github.com/beeminder/beeminder/issues/3595",
+    "https://github.com/beeminder/beeminder/pull/5390"],
+d: "2025-10-16",
+c: `#bugfix HT Clive. This was for when an admin does a 48-hour charge delay. Interim charges were just silently skipped.`,
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
