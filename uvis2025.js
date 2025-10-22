@@ -2159,6 +2159,10 @@ u: ["https://x.com/beemuvi/status/1979048170685374600",
 d: "2025-10-16",
 c: `#bugfix HT Clive. This was for when an admin does a 48-hour charge delay. Interim charges were just silently skipped.`,
 }, { // ------------------------------------------------------------------------
+x: `Help docs: New article on the special datapoints with magic string hashtags`,
+u: ["https://x.com/beemuvi/status/1981145205958131766",
+    "https://help.beeminder.com/article/374-are-there-any-special-types-of-datapoints"],
+t: "2025-10-22",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
