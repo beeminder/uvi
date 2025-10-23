@@ -2164,6 +2164,37 @@ u: ["https://x.com/beemuvi/status/1981145205958131766",
     "https://help.beeminder.com/article/374-are-there-any-special-types-of-datapoints"],
 t: "2025-10-22",
 }, { // ------------------------------------------------------------------------
+x: `Help docs: Rewrote the bits about odometer resets in the Duolingo and Trello autodata integration articles in light of the switch to tare tags, plus links, etc`,
+u: ["https://x.com/beemuvi/status/1981497564974502397",
+    "https://help.beeminder.com/article/80-duolingo",
+    "https://help.beeminder.com/article/78-trello"],
+t: "2025-10-23",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Revamped the article on odometer goals in light of tare tags, including new screenshots`,
+u: ["https://x.com/beemuvi/status/1981497665050542296",
+    "https://help.beeminder.com/article/68-odometer-goals"],
+t: "2025-10-23",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Another sneaky mention of odometer resets in the URLminder autodata integration article`,
+u: ["https://x.com/beemuvi/status/1981497786765103146",
+    "https://help.beeminder.com/article/88-urlminder"],
+t: "2025-10-23",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Rephrasing and prose-tightening in the Oura autodata integration article plus smaller readability tweaks for Postminder and Project Euler`,
+u: ["https://x.com/beemuvi/status/1981497980969767177",
+    "https://help.beeminder.com/article/361-oura",
+    "https://help.beeminder.com/article/368-postminder",
+    "https://help.beeminder.com/article/292-project-euler"],
+t: "2025-10-23",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Moved Pocket (RIP) autodata integration article to Historical Interest with pointer to RSSminder/Readwise, plus readability tweaks to 4 other articles`,
+u: ["https://x.com/beemuvi/status/1981498131230707816",
+    "https://help.beeminder.com/article/291-pocket",
+    "https://help.beeminder.com/article/347-readwise-reader",
+    "https://help.beeminder.com/article/76-rescuetime",
+    "https://help.beeminder.com/article/331-rssminder",
+    "https://help.beeminder.com/article/77-runkeeper"],
+t: "2025-10-23",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
