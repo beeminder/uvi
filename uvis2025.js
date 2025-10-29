@@ -2196,6 +2196,13 @@ u: ["https://x.com/beemuvi/status/1981498131230707816",
     "https://help.beeminder.com/article/77-runkeeper"],
 t: "2025-10-23",
 }, { // ------------------------------------------------------------------------
+x: `Oops, last week or so we accidentally lost the buttons in the graph editor that add and remove rows of the graph matrix. #bugfix #zombie`,
+u: ["https://x.com/beemuvi/status/1983681488253284608",
+    "https://graph.beeminder.com",
+    "https://github.com/beeminder/road/commit/18e103f68a74cc8895379420380d22caca0a141c"],
+d: "2025-10-20",
+t: "2025-10-29",
+c: `It was still possible with the visual UI on the graph itself; maybe that's why it took a while for someone to complain`,
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
