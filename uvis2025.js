@@ -2261,6 +2261,34 @@ d: "2025-11-03",
 t: "2025-11-03",
 c: `From "wants to delete goal" to "sending feedback on goal". User-visible when support replies to it and fixes lots of user and workerbee confusion!`,
 }, { // ------------------------------------------------------------------------
+x: `When restarting an autodata goal that uses oAuth, we check that it isn't expired, and we warn you if it's missing or expired prior to restarting the goal`,
+u: ["https://x.com/beemuvi/status/1985870569389412578",
+    "https://github.com/beeminder/beeminder/issues/186",
+    "https://github.com/beeminder/beeminder/pull/5442"],
+d: "2025-11-04",
+t: "2025-11-04",
+}, { // ------------------------------------------------------------------------
+x: `In the visual graph editor, you can now click anywhere on the "Include scrubber" line, not just the checkbox; plus removed extraneous SVG download buttons`,
+u: ["https://x.com/beemuvi/status/1985874353779818695",
+    "https://graph.beeminder.com",
+    "https://github.com/beeminder/road/commit/70858217afef92413643c4786fdfa34d94ee9e91",
+    "https://github.com/beeminder/road/commit/e32e37485a11698165c275f1d975ef00a27747e6"],
+t: "2025-11-04",
+c: `Deployed the checkbox improvement 2025-10-07 and the SVG button cleanup 2025-11-04`,
+}, { // ------------------------------------------------------------------------
+x: `We fixed the clickable area for interactive graphs on the goal page, shrinkwrapping the image and not treating whitespace surrounding the graph as triggerable`,
+u: ["https://x.com/beemuvi/status/1986233744337014794",
+    "https://forum.beeminder.com/t/dont-open-interactive-graph-on-whitespace-click/12527?u=dreev",
+    "https://github.com/beeminder/beeminder/issues/5414",
+    "https://github.com/beeminder/beeminder/pull/5450"],
+d: "2025-11-04",
+t: "2025-11-05",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Key clarification in the "Help, something came up" article that you can't use the Uncle button and then call non-legit`,
+u: ["https://x.com/beemuvi/status/1986233848691356143",
+    "https://help.beeminder.com/article/325-help-something-came-up-and-i-cant-do-my-goal"],
+t: "2025-11-05",
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
