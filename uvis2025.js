@@ -2289,6 +2289,32 @@ u: ["https://x.com/beemuvi/status/1986233848691356143",
     "https://help.beeminder.com/article/325-help-something-came-up-and-i-cant-do-my-goal"],
 t: "2025-11-05",
 }, { // ------------------------------------------------------------------------
+x: `The Uncle Button now pops up an explanation of what it does when you click it -- no more insta-uncling (sorry about those!)`,
+u: ["https://x.com/beemuvi/status/1986597581686980780",
+    "https://github.com/beeminder/beeminder/issues/5290",
+    "https://github.com/beeminder/beeminder/issues/5317",
+    "https://github.com/beeminder/beeminder/pull/5453"],
+d: "2025-11-06",
+t: "2025-11-06",
+c: `One piece of user feedback on the uncle button was "I was surprised when I used it that nothing happened" -- because it used to immediately do the derail without confirmation, but not scroll you back to the top of the page to witness the infinibee and graph reload. So, yikes, extra bad.`,
+}, { // ------------------------------------------------------------------------
+x: `To further ensure no accidental cryings of uncle, the popup makes you type out confirmation that you've actually read most of the words, no takebacks, etc`,
+u: ["https://x.com/beemuvi/status/1986597674779542005",
+    "https://github.com/beeminder/beeminder/issues/5290",
+    "https://github.com/beeminder/beeminder/issues/5317",
+    "https://github.com/beeminder/beeminder/pull/5453"],
+d: "2025-11-06",
+t: "2025-11-06",
+c: `This is similar to the No-Excuses Mode confirmation`,
+}, { // ------------------------------------------------------------------------
+x: `Finally, the Uncle Button now scrolls you back to the graph after uncle-crying (especially bad before how you might not notice you'd effected a derail)`,
+u: ["https://x.com/beemuvi/status/1986597748662280384",
+    "https://github.com/beeminder/beeminder/issues/5290",
+    "https://github.com/beeminder/beeminder/issues/5317",
+    "https://github.com/beeminder/beeminder/pull/5453"],
+d: "2025-11-06",
+t: "2025-11-06",
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
