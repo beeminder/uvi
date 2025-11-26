@@ -2248,6 +2248,7 @@ batches['2025nov'] = [{
 x: `When setting up rate and units on a new goal, there's now some dynamic text that tells you the actual date of your first beemergency and how much will be due`,
 u: ["https://x.com/beemuvi/status/1985509775862608240",
     "https://github.com/beeminder/beeminder/issues/4789",
+    "https://github.com/beeminder/beeminder/issues/1144",
     "https://github.com/beeminder/beeminder/pull/5440"],
 d: "2025-10-28",
 t: "2025-11-03",
@@ -2315,7 +2316,21 @@ u: ["https://x.com/beemuvi/status/1986597748662280384",
 d: "2025-11-06",
 t: "2025-11-06",
 }, { // ------------------------------------------------------------------------
+x: `Help docs: Fixed an error where Do Less goals weren't listed as being a perk of Infinibee, alleviating some genuine user confusion`,
+u: ["https://x.com/beemuvi/status/1993121250785607765",
+    "https://help.beeminder.com/article/51-whats-the-difference-between-the-goal-types",
+    "https://forum.beeminder.com/t/contradicting-claims-in-the-documentation/12569"],
+t: "2025-11-24",
 }, { // ------------------------------------------------------------------------
+x: `Help docs: Added explanation to the "How do I quit a goal?" article about the exception for new goals, plus wordiness and readability fixes`,
+u: ["https://x.com/beemuvi/status/1993484803459760158",
+    "https://help.beeminder.com/article/44-how-do-i-quit-a-goal"],
+t: "2025-11-25",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Brand new article, "Should I use a manual goal or an integration?" (inspired by a question in support)`,
+u: ["https://x.com/beemuvi/status/1993484877334036822",
+    "https://help.beeminder.com/article/375-should-i-use-a-manual-goal-or-an-integration"],
+t: "2025-11-25",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
