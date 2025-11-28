@@ -2332,6 +2332,41 @@ u: ["https://x.com/beemuvi/status/1993484877334036822",
     "https://help.beeminder.com/article/375-should-i-use-a-manual-goal-or-an-integration"],
 t: "2025-11-25",
 }, { // ------------------------------------------------------------------------
+x: `Help docs: Streamlined and replaced a screenshot in the "How do I delete a goal?" article, plus streamlining/dewordifying of of 3 other articles`,
+u: ["https://x.com/beemuvi/status/1993839894880506006",
+    "https://help.beeminder.com/article/47-how-do-i-delete-a-goal",
+    "https://help.beeminder.com/article/155-toggl",
+    "https://help.beeminder.com/article/340-trydeepwork",
+    "https://help.beeminder.com/article/293-twitter"],
+t: "2025-11-26",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: New article about the Uncle Button`,
+u: ["https://x.com/beemuvi/status/1993840057883717753",
+    "https://help.beeminder.com/article/376-what-is-the-uncle-button"],
+t: "2025-11-26",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Added solicitation of autodata metrics to the Withings integration article, plus minor/tiny tweaks to 6 other articles`,
+u: ["https://x.com/beemuvi/status/1994129587564134422",
+    "https://help.beeminder.com/article/90-withings",
+    "https://help.beeminder.com/article/357-wakatime",
+    "https://help.beeminder.com/article/88-urlminder",
+    "https://help.beeminder.com/article/359-ynab",
+    "https://help.beeminder.com/article/87-zapier",
+    "https://help.beeminder.com/article/46-what-happens-to-an-archived-goal",
+    "https://help.beeminder.com/article/48-how-do-i-delete-my-account",
+t: "2025-11-27",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Removed mention of the obsolete iOS widgets from the iOS app article, plus rewording/tweaking/typo-fixing in that and 4 other articles`,
+u: ["https://x.com/beemuvi/status/1994129692614623483",
+    "https://help.beeminder.com/article/60-ios-app",
+    "https://help.beeminder.com/article/62-android-app",
+    "https://help.beeminder.com/article/158-android-app-beta-testing",
+    "https://help.beeminder.com/article/321-ios-app-beta-testing",
+    "https://help.beeminder.com/article/64-tagtime",
+t: "2025-11-27",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
