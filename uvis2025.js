@@ -2353,7 +2353,7 @@ u: ["https://x.com/beemuvi/status/1994129587564134422",
     "https://help.beeminder.com/article/359-ynab",
     "https://help.beeminder.com/article/87-zapier",
     "https://help.beeminder.com/article/46-what-happens-to-an-archived-goal",
-    "https://help.beeminder.com/article/48-how-do-i-delete-my-account",
+    "https://help.beeminder.com/article/48-how-do-i-delete-my-account"],
 t: "2025-11-27",
 }, { // ------------------------------------------------------------------------
 x: `Help docs: Removed mention of the obsolete iOS widgets from the iOS app article, plus rewording/tweaking/typo-fixing in that and 4 other articles`,
@@ -2362,7 +2362,7 @@ u: ["https://x.com/beemuvi/status/1994129692614623483",
     "https://help.beeminder.com/article/62-android-app",
     "https://help.beeminder.com/article/158-android-app-beta-testing",
     "https://help.beeminder.com/article/321-ios-app-beta-testing",
-    "https://help.beeminder.com/article/64-tagtime",
+    "https://help.beeminder.com/article/64-tagtime"],
 t: "2025-11-27",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
