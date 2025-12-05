@@ -2366,7 +2366,6 @@ u: ["https://x.com/beemuvi/status/1994129692614623483",
     "https://help.beeminder.com/article/64-tagtime"],
 t: "2025-11-27",
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
 x: `We reduced the number of times we call Toggl's API for each goal fetch, which is kind of a big deal since their per-user API limits have gotten quite stringent`,
 u: ["https://x.com/beemuvi/status/1994554660729098514",
     "https://github.com/beeminder/beeminder/pull/5456",
@@ -2442,6 +2441,18 @@ u: ["https://x.com/beemuvi/status/1996744382998041048",
     "https://help.beeminder.com/article/84-sleep-as-android"],
 t: "2025-12-04",
 }, { // ------------------------------------------------------------------------
+x: `Help docs: Made the "Can I specify a beneficiary?" article less StickK-centric and more derailing-it-is-nailing-it, plus added a link to honeygrams`,
+u: ["https://x.com/beemuvi/status/1997042944361353579",
+    "https://help.beeminder.com/article/114-can-i-specify-a-beneficiary-for-my-derailments"],
+d: "2025-12-05",
+t: "2025-12-05",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: A new link (plus readability rephrasings) in the "Derailing is not Failing" article plus a new screenshot in the "Account details" article`,
+u: ["https://x.com/beemuvi/status/1997057276147126436",
+    "https://help.beeminder.com/article/335-derailing-is-not-failing",
+    "https://help.beeminder.com/article/109-account-details"],
+d: "2025-12-05",
+t: "2025-12-05",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
