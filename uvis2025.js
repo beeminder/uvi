@@ -868,6 +868,7 @@ t: "2025-05-09",
 }, { // ------------------------------------------------------------------------
 x: `UVI#4572 got most of these but we finally got the stragglers: modernized the example graph images on the GmailZero and Withings landing pages`,
 u: ["https://x.com/beemuvi/status/1920963932228813292",
+    "https://github.com/beeminder/beeminder/issues/3814",
     "https://github.com/beeminder/beeminder/pull/5258"],
 t: "2025-05-09",
 }, { // ------------------------------------------------------------------------
@@ -2366,17 +2367,90 @@ u: ["https://x.com/beemuvi/status/1994129692614623483",
 t: "2025-11-27",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
+x: `We reduced the number of times we call Toggl's API for each goal fetch, which is kind of a big deal since their per-user API limits have gotten quite stringent`,
+u: ["https://x.com/beemuvi/status/1994554660729098514",
+    "https://github.com/beeminder/beeminder/pull/5456",
+    "https://github.com/beeminder/beeminder/pull/5457"],
+d: "2025-11-10",
+t: "2025-11-28",
+c: "HT Clive. Now we fetch Projects, Tags, and Tasks (for filtering which timers we count) with one API call",
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
+x: `Legit check emails no longer ever say the wrong pledge amount, which used to happen sometimes if the email took too long to send`,
+u: ["https://x.com/beemuvi/status/1994555553818030240",
+    "https://github.com/beeminder/beeminder/issues/5421",
+    "https://github.com/beeminder/beeminder/pull/5463"],
+d: "2025-11-21",
+t: "2025-11-28",
+c: `We now pass the amount to the email job so it says the right amount no matter how long it takes to send`,
 }, /* --------------------------------------------------------- end 2025nov */ ]
 
 batches['2025dec'] = [{
+}, { // ------------------------------------------------------------------------
+x: `Fixing user confusion about whether custom goals are included on Infinibee, we changed "unlimited goal types" to "exotic goal types" on the premium page`,
+u: ["https://x.com/beemuvi/status/1995646650711507045",
+    "https://github.com/beeminder/beeminder/issues/5454",
+    "https://forum.beeminder.com/t/contradicting-claims-in-the-documentation/12569/4?u=dreev",
+    "https://github.com/beeminder/beeminder/pull/5467"],
+d: "2025-11-26",
+t: "2025-12-01",
+}, { // ------------------------------------------------------------------------
+x: `Odometer goals now use your post-TARE datapoint value as the +/- stepper starting point in the UI rather than confusingly using the current y-value of the graph`,
+u: ["https://x.com/beemuvi/status/1995646826675122246",
+    "https://github.com/beeminder/beeminder/issues/5444",
+    "https://github.com/beeminder/beeminder/pull/5458"],
+d: "2025-12-01",
+t: "2025-12-01",
+c: `E.g. I've read 3 books and TAREd my goal in between, so my cumulative total read pages is 1376, but my most recent page read is page 34 of the current book. When I go to add my next page, if I use the `+` stepper, it used to start incrementing from 1376, not my current 34.`,
+}, { // ------------------------------------------------------------------------
+f: true,
+x: `The front page now shows the all-time number of datapoints and goals created!`,
+u: ["https://x.com/beemuvi/status/1996016929941979148",
+    "https://github.com/beeminder/beeminder/issues/3180"],
+d: "2025-12-02",
+t: "2025-12-02",
+c: `We briefly deployed this last week but it slowed down datapoint creation so we reverted. Probably should've counted that for a UVI regardless!`,
+}, { // ------------------------------------------------------------------------
+x: `The datapoints/goals numbers on the front page now update in real time and we fixed a bug that caused that to slow the whole site down, oops`,
+u: ["https://x.com/beemuvi/status/1996017045931262313",
+    "https://github.com/beeminder/beeminder/issues/3180"],
+d: "2025-12-02",
+t: "2025-12-02",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Added an extra anti-cheating tip to the "Can't you just lie?" article, about lowering your pledge cap`,
+u: ["https://x.com/beemuvi/status/1996377045543297113",
+    "https://help.beeminder.com/article/34-cant-you-just-lie-about-your-data"],
+t: "2025-12-03",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Added to arguments (and a link to the classic Grayson post) to the Beeminder-vs-StickK article, plus streamlining to that and the akrasia horizon one`,
+u: ["https://x.com/beemuvi/status/1996377282873864636",
+    "https://help.beeminder.com/article/49-why-should-i-use-beeminder-over-stickk",
+    "https://help.beeminder.com/article/45-what-is-the-akrasia-horizon"],
+t: "2025-12-03",
+}, { // ------------------------------------------------------------------------
+x: `We updated the Sleep as Android landing page and goal creation page in light of changes they made (add-on now free but subscription needed for automatic data)`,
+u: ["https://x.com/beemuvi/status/1996743028963528961",
+    "https://www.beeminder.com/sleepminder",
+    "https://github.com/beeminder/beeminder/issues/5469",
+    "https://help.beeminder.com/article/84-sleep-as-android",
+    "https://github.com/beeminder/beeminder/pull/5475",
+    "https://github.com/beeminder/beeminder/pull/5476"],
+d: "2025-12-04",
+t: "2025-12-04",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Updated the Sleep as Android autodata integration article for the same reason, plus offering potential workarounds`,
+u: ["https://x.com/beemuvi/status/1996744382998041048",
+    "https://help.beeminder.com/article/84-sleep-as-android"],
+t: "2025-12-04",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, /* --------------------------------------------------------- end 2025dec */ ]
 
