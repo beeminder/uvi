@@ -2454,6 +2454,20 @@ u: ["https://x.com/beemuvi/status/1997057276147126436",
 d: "2025-12-05",
 t: "2025-12-05",
 }, { // ------------------------------------------------------------------------
+x: `You can now pre-fill the parameters for goal creation by encoding them at the end of beeminder.com/new (ie, in the query string; step 1 towards clonable goals!)`,
+u: ["https://x.com/beemuvi/status/1998194267538457078",
+    "https://www.beeminder.com/new?goaltype=domore&units=pushups&dailyrate=5&goalname=pushups",
+    "https://github.com/beeminder/beeminder/issues/2974",
+    "https://github.com/beeminder/beeminder/pull/5462"],
+d: "2025-11-28",
+t: "2025-12-08",
+}, { // ------------------------------------------------------------------------
+x: `Added documentation for URL-based goal creation to the API docs`,
+u: ["https://x.com/beemuvi/status/1998194462946927076",
+    "https://api.beeminder.com/#url-based-goal-creation",
+    "https://github.com/beeminder/beeminder/issues/2974"],
+d: "2025-12-02",
+t: "2025-12-08",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
