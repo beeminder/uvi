@@ -2469,6 +2469,49 @@ u: ["https://x.com/beemuvi/status/1998194462946927076",
 d: "2025-12-02",
 t: "2025-12-08",
 }, { // ------------------------------------------------------------------------
+x: `The old URL for reminder settings, beeminder.com/reminders/USER/GOAL, was 404ing, oops. Now it redirects to beeminder.com/USER/GOAL#deadline #bugfix #zombie`,
+u: ["https://x.com/beemuvi/status/1998554736598114525",
+    "https://github.com/beeminder/beeminder/issues/3818",
+    "https://github.com/beeminder/beeminder/pull/5478"],
+d: "2025-12-08",
+t: "2025-12-09",
+}, { // -----------------------------------------------------------------------
+x: `GitHub autodata integration improvements: Now you can opt to track commits on any branch, instead of just the main one when you're setting up the goal`,
+u: ["https://x.com/beemuvi/status/1998556254990729310",
+    "https://beeminder.com/gitminder",
+    "https://github.com/beeminder/beeminder/issues/5027",
+    "https://github.com/beeminder/beeminder/pull/5465"],
+t: "2025-12-09",
+}, { // -----------------------------------------------------------------------
+x: `The GitHub integration now lets you opt into or out of tracking all the branches on any new or existing goal. See the new checkbox in settings.`,
+u: ["https://x.com/beemuvi/status/1998915008072503765",
+    "https://beeminder.com/gitminder",
+    "https://github.com/beeminder/beeminder/issues/5027",
+    "https://github.com/beeminder/beeminder/pull/5465"],
+t: "2025-12-10",
+}, { // ------------------------------------------------------------------------
+x: `We added a tooltip about main (master, whatever) vs all-branch tracking in Gitminder goal settings, and now capitalize GitHub correctly`,
+u: ["https://x.com/beemuvi/status/1998918572391977471",
+    "https://beeminder.com/gitminder",
+    "https://github.com/beeminder/beeminder/issues/5027",
+    "https://github.com/beeminder/beeminder/pull/5465"],
+d: "2025-12-10",
+t: "2025-12-10",
+}, { // ------------------------------------------------------------------------
+x: `Oops, the Gitminder tooltip was a little broken on the goal creation page, and also we missed a spot on camelCasing GitHub`,
+u: ["https://x.com/beemuvi/status/1999277073270210599",
+    "https://beeminder.com/gitminder",
+    "https://github.com/beeminder/beeminder/issues/5027"],
+d: "2025-12-11",
+t: "2025-12-11",
+}, { // ------------------------------------------------------------------------
+x: `Fixed inconsistencies in displaying timey goals (we had variously HH:MM and HH:MM:SS and HH:MM.xxx). We now default to HH:MM:SS, or pick HH:MM in settings.`,
+u: ["https://x.com/beemuvi/status/1999278447240314946",
+    "https://github.com/beeminder/beeminder/pull/5455",
+    "https://github.com/beeminder/beeminder/pull/5443"],
+d: "2025-12-09",
+t: "2025-12-11",
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
