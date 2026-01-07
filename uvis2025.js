@@ -2512,6 +2512,33 @@ u: ["https://x.com/beemuvi/status/1999278447240314946",
 d: "2025-12-09",
 t: "2025-12-11",
 }, { // ------------------------------------------------------------------------
+x: `Help docs: Straightened out ambiguity between goal settings vs reminder settings in the "Deadlines & Reminders" article, plus minor tweaks in 2 other articles`,
+u: ["https://x.com/beemuvi/status/1999597490652479856",
+    "https://help.beeminder.com/article/14-deadline",
+    "https://help.beeminder.com/article/110-apps-and-api",
+    "https://help.beeminder.com/article/111-new-goal-defaults"],
+t: "2025-12-12",
+}, { // ------------------------------------------------------------------------
+x: `Rounding + timey display could alter values when editing data. Now we use full precision when editing and don't touch the value if you just edit the comment.`,
+u: ["https://x.com/beemuvi/status/1999609413020373276",
+    "https://github.com/beeminder/beeminder/issues/2002",
+    "https://github.com/beeminder/beeminder/pull/5455"],
+d: "2025-12-09",
+t: "2025-12-12",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: New short help page for the "apply goal defaults" feature plus tweaks and small additions to the "goal settings" article`,
+u: ["https://x.com/beemuvi/status/2000719272491028484",
+    "https://help.beeminder.com/article/377-apply-goal-defaults",
+    "https://help.beeminder.com/article/106-goal-settings"],
+d: "2025-12-15",
+t: "2025-12-15",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Added a section to the PPR article to answer user questions about technical details plus tweaks and clarifications to the one on Privacy`,
+u: ["https://x.com/beemuvi/status/2000719475306352945",
+    "https://help.beeminder.com/article/157-pessimistic-presumptive-reports",
+    "https://help.beeminder.com/article/102-privacy"],
+t: "2025-12-15",
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
