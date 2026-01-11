@@ -2539,6 +2539,23 @@ u: ["https://x.com/beemuvi/status/2000719475306352945",
     "https://help.beeminder.com/article/102-privacy"],
 t: "2025-12-15",
 }, { // ------------------------------------------------------------------------
+x: `In API error message we embarrassingly misused 'deprecated' to mean 'removed' in exactly the way we decried in our own blog post. Changed to "has been removed".`,
+u: ["https://x.com/beemuvi/status/2001093473831961070",
+    "https://github.com/beeminder/beeminder/issues/5480",
+    "https://github.com/beeminder/beeminder/pull/5486"],
+d: "2025-12-11",
+t: "2025-12-16",
+c: `Changed from "parameter X has been deprecated" to "parameter X is no longer supported" + error status. This was for X in {exprd, noisy, abslnw}.`,
+}, { // ------------------------------------------------------------------------
+x: `Visual graph editor: Date fields in the graph matrix were uneditable on mobile. #bugfix HT trb97horsegal`,
+u: ["https://x.com/beemuvi/status/2001093887478390836",
+    "https://forum.beeminder.com/t/can-no-longer-edit-date-in-graph-editor/12660",
+    "https://graph.beeminder.com",
+    "https://github.com/beeminder/road/commit/36a9340097577f256832319ca4a70474b3c788c9"],
+d: "2025-12-16",
+t: "2025-12-16",
+c: `Beebrain`,
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
