@@ -2556,6 +2556,37 @@ d: "2025-12-16",
 t: "2025-12-16",
 c: `Beebrain`,
 }, { // ------------------------------------------------------------------------
+x: `We broke iOS notifications for 4 days (Jul 31 - Aug 4) due to a change that was supposed to only affect the development environment. #bugfix #zombie`,
+u: ["https://x.com/beemuvi/status/2001448033150460002",
+    "https://github.com/beeminder/beeminder/pull/5348",
+    "https://github.com/beeminder/beeminder/pull/5360"],
+d: "2025-08-04",
+t: "2025-12-17",
+c: `We were missing an auth token when trying to send the push notifications. Not sure how/why this sat in staging so long? Probably because it happened right before we went on vacation.`,
+}, { // ------------------------------------------------------------------------
+x: `Todoist switched to a new version of their API and will soon do intentional brownouts of v9, which we've been using, but we've now switched and are immune!`,
+u: ["https://x.com/beemuvi/status/2001448393596624918",
+    "https://github.com/beeminder/beeminder/pull/5487"],
+d: "2025-12-17",
+t: "2025-12-17",
+c: `#pregression`,
+}, { // ------------------------------------------------------------------------
+x: `Visual graph editor: We were swallowing error messages when you tried to hit submit. #zombie #bugfix Plus we made one error message describe a workaround.`,
+u: ["https://x.com/beemuvi/status/2001817939453055185"
+    "https://graph.beeminder.com",
+    "https://github.com/beeminder/road/commit/3f99f82d814e58dda0b1f6a2fe1a7043937f8752"],
+d: "2025-12-17",
+t: "2025-12-18",
+c: `HT @aad. The spurious "graph matrix can't get easier in akrasia horizon" off-by-one bug now displays "Oops! You've hit a known bug that we're working on. As a workaround, try having your change to the bright red line start one day later."`,
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Added keywords, tweaked headings in the "Data" article to help surface the timey option, plus rearrangings / very minor tweaks in 3 other articles`,
+u: ["https://x.com/beemuvi/status/2001818000459239874",
+    "https://help.beeminder.com/article/103-data-source",
+    "https://help.beeminder.com/article/363-groupies",
+    "https://help.beeminder.com/article/104-supporters",
+    "https://help.beeminder.com/article/105-graph-settings"],
+t: "2025-12-18",
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
