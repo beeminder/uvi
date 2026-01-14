@@ -2572,7 +2572,7 @@ t: "2025-12-17",
 c: `#pregression`,
 }, { // ------------------------------------------------------------------------
 x: `Visual graph editor: We were swallowing error messages when you tried to hit submit. #zombie #bugfix Plus we made one error message describe a workaround.`,
-u: ["https://x.com/beemuvi/status/2001817939453055185"
+u: ["https://x.com/beemuvi/status/2001817939453055185",
     "https://graph.beeminder.com",
     "https://github.com/beeminder/road/commit/3f99f82d814e58dda0b1f6a2fe1a7043937f8752"],
 d: "2025-12-17",
