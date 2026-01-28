@@ -81,6 +81,47 @@ d: "2026-01-09",
 t: "2026-01-09",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
+x: `The sandbox page of the visual graph editor (we'd forgotten we'd linked to this the past) had a bug that made it impossible to set the red line rate. #bugfix`,
+u: ["https://x.com/beemuvi/status/2010878362127065412",
+    "https://graph.beeminder.com/sandbox",
+    "https://github.com/beeminder/road/issues/337",
+    "https://github.com/beeminder/road/commit/e5fa3c70d253e66f8f55d908cde67a530f225498"],
+d: "2026-01-06",
+t: "2026-01-12",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: New article "How many goals should I start with?" with advice and wisdom, since it comes up a lot in support`,
+u: ["https://x.com/beemuvi/status/2010879367354954116",
+    "https://help.beeminder.com/article/378-how-many-goals-should-i-start-with"],
+t: "2026-01-12",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Added info to about the interactive/zoomable graphs to the "How do I interpret the goal page?" and "How do I interpret the graph?" articles`,
+u: ["https://x.com/beemuvi/status/2011242064751837322",
+    "https://help.beeminder.com/article/115-how-do-i-interpret-the-goal-page",
+    "https://help.beeminder.com/article/118-how-do-i-interpret-the-graph"],
+t: "2026-01-13",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: New screenshot for the "How do I tell Beeminder when my week starts?" article, plus replaced an ancient graph image from the yellow brick road days`,
+u: ["https://x.com/beemuvi/status/2011242624758284514",
+    "https://help.beeminder.com/article/123-weekstart"],
+t: "2026-01-13",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Added to the Reminders article about where to change them, plus tweaks, streamlining, dewordinessifying to 3 others, especially Post-derail Respite`,
+u: ["https://x.com/beemuvi/status/2011603343807004691",
+    "https://help.beeminder.com/article/101-reminders",
+    "https://help.beeminder.com/article/99-graph-editor",
+    "https://help.beeminder.com/category/353-historical-interest",
+    "https://help.beeminder.com/article/18-respite"],
+t: "2026-01-14",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: New links, reorganizing, and other minor edits to "What is Beeminder?" and 4 other articles (including new screenshot for "How do I change my goal?")`,
+u: ["https://x.com/beemuvi/status/2011603415793877240",
+    "https://help.beeminder.com/article/70-what-is-beeminder",
+    "https://help.beeminder.com/article/32-what-do-i-do-first",
+    "https://help.beeminder.com/article/54-how-do-i-change-my-goal",
+    "https://help.beeminder.com/article/120-whats-the-best-way-to-beemind",
+    "https://help.beeminder.com/article/339-how-do-i-set-a-goal-with-a-weekly-rate"],
+t: "2026-01-14",
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
