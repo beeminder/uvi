@@ -1763,7 +1763,8 @@ t: "2025-09-03",
 }, { // ------------------------------------------------------------------------
 x: `We changed the logo and text for our Metaminder integration in our integrations gallery, due to user confusion`,
 u: ["https://x.com/beemuvi/status/1963376979195171323",
-    "https://forum.beeminder.com/t/not-able-to-set-new-goals-help/12520/4"],
+    "https://forum.beeminder.com/t/not-able-to-set-new-goals-help/12520/4",
+    "https://github.com/beeminder/beeminder/pull/5375"],
 d: "2025-09-02",
 t: "2025-09-03",
 }, { // ------------------------------------------------------------------------
