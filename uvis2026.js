@@ -264,14 +264,205 @@ u: ["https://x.com/beemuvi/status/2016313621861826817",
 t: "2026-01-27",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
+x: `Fixed a longstanding bug where restarting custom goals with some non-standard aggdays would cause an instaderail. #bugfix`,
+u: ["https://x.com/beemuvi/status/2016672722122904034",
+    "https://github.com/beeminder/beeminder/issues/1444",
+    "https://github.com/beeminder/beeminder/pull/5529"],
+d: "2026-01-27",
+t: "2026-01-28",
+c: `Things like a kyoom goal where aggday=count. Also we think but aren't sure that this manifested in derail loops even without restarting sometimes.`,
 }, { // ------------------------------------------------------------------------
+x: `Emailed Todoist users about impending breaking changes to their Todoist goals with labels`,
+u: ["https://x.com/beemuvi/status/2016673025723383845",
+    "https://forum.beeminder.com/t/todoist-integration-to-regress/12705",
+    "https://github.com/beeminder/beeminder/issues/5530"],
+d: "2026-01-28",
+t: "2026-01-28",
 }, { // ------------------------------------------------------------------------
+x: `In goal settings the singular version of goal units now properly defaults to the plural version if you never chose both`,
+u: ["https://x.com/beemuvi/status/2017034777363382568",
+    "https://github.com/beeminder/beeminder/pull/5522"],
+d: "2026-01-29",
+t: "2026-01-29",
+c: `This is for anti-magic: we're going to use the plural version everywhere if you don't have singular specified, so that's what the user should see. The cleaner and even more anti-magic version will be to do a database update to just set every null gunitSING equal to gunitPLUR. From then on both fields can simply be required at the database level. Otherwise we're doing a fallback depending on gunitSING being set, which is always a red flag.`,
 }, { // ------------------------------------------------------------------------
+x: `Plural-guessing in goal creation/settings was leaving crumbs (stray bits of what you typed) if you added then fully deleted your singular goal units. #bugfix`,
+u: ["https://x.com/beemuvi/status/2017034860976845095",
+    "https://github.com/beeminder/beeminder/issues/5532",
+    "https://github.com/beeminder/beeminder/pull/5522"],
+d: "2026-01-29",
+t: "2026-01-29",
+c: `Javascript bug`,
 }, { // ------------------------------------------------------------------------
+x: `We missed a spot with pluralization crumbs in the rate-stepper field during goal creation. #bugfix`,
+u: ["https://x.com/beemuvi/status/2017358890053341286",
+    "https://github.com/beeminder/beeminder/issues/5532",
+    "https://github.com/beeminder/beeminder/pull/5533"],
+d: "2026-01-30",
+t: "2026-01-30",
+}, { // ------------------------------------------------------------------------
+x: `View full payment history in the browser. Most recent 20 shown by default. Before you could only get the rest via email; now a button loads a separate page.`,
+u: ["https://x.com/beemuvi/status/2017358998656417908",
+    "https://github.com/beeminder/beeminder/issues/5488",
+    "https://github.com/beeminder/beeminder/pull/5528"],
+d: "2026-01-30",
+t: "2026-01-30",
+c: `Stripe or PayPal. Bee has some concerns that for ppl like herself & Danny & others with 10+ years of payment history it might be excessivly slow, tho.`,
 }, { // ------------------------------------------------------------------------
 }, /* --------------------------------------------------------- end 2026jan */ ]
 
-
+batches['2026feb'] = [{
+x: `We upgraded our servers' Transport Layer Security (TLS) to the current geological era (v1.3) which has made a measurable performance difference for the iOS app`,
+u: ["https://x.com/beemuvi/status/2018487295347949929",
+    "https://github.com/beeminder/beeploy"],
+t: "2026-02-02",
+c: `Thanks to Theo and Adam`,
+}, { // ------------------------------------------------------------------------
+x: `Feet-wetting wasn't getting turned on for API-created goals (HT Intend.do) and the pledge wouldn't auto-increase to $5 after a week. #bugfix`,
+u: ["https://x.com/beemuvi/status/2018487433524846629",
+    "https://github.com/beeminder/beeminder/issues/5517",
+    "https://github.com/beeminder/beeminder/pull/5535"],
+d: "2026-02-02",
+t: "2025-02-02",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Fixed an ambiguity in the Goal Statistics article plus tweaks for flow and dewordinessifying in the Restart Archived Goal article`,
+u: ["https://x.com/beemuvi/status/2018843411378528695",
+    "https://help.beeminder.com/article/119-what-are-the-goal-statistics",
+    "https://help.beeminder.com/article/358-can-i-restart-an-archived-goal"],
+t: "2025-02-03",
+}, { // ------------------------------------------------------------------------
+x: `Documented the new Goal fields, "colorkey" and "colorhex" that the API now returns so you don't have to compute them from safebuf`,
+u: ["https://x.com/beemuvi/status/2018852043335893391",
+    "https://api.beeminder.com/#attributes-2",
+    "https://github.com/beeminder/apidocs/commit/e3323f647de20b74e22580a1eb3fe939b94c0c78"],
+d: "2026-02-03",
+t: "2026-02-03",
+}, { // ------------------------------------------------------------------------
+x: `If you picked a deadline for your Metaminder goal that was earlier than your default reminder start time, goal creation would fail with an opaque error. #bugfix`,
+u: ["https://x.com/beemuvi/status/2019205759343747133",
+    "https://github.com/beeminder/beeminder/issues/5531",
+    "https://github.com/beeminder/beeminder/pull/5536"],
+d: "2026-02-03",
+t: "2026-02-04",
+c: `Namely, "there was a problem creating your goal". Aka alertstart. Solution: if selected deadline would've caused this error, set alertstart to be an hour earlier and give the user a warning that you're doing so in the interface. We're trying to balance the magic and the explosion of choices in the interface.`,
+}, { // ------------------------------------------------------------------------
+x: `Also fixed a UI problem where we'd exclude anything before your default reminder start time in the dropdown of choices when creating a Metaminder goal`,
+u: ["https://x.com/beemuvi/status/2019205956161401219",
+    "https://github.com/beeminder/beeminder/issues/5531",
+    "https://github.com/beeminder/beeminder/pull/5536"],
+d: "2026-02-03",
+t: "2026-02-04",
+c: `Now we give options from 9:30am (the default default-alertstart) to 6am-night-owl`,
+}, { // ------------------------------------------------------------------------
+x: `And fixed a tiny typo and reworded the deadline description in the Metaminder goal setup`,
+u: ["https://x.com/beemuvi/status/2019572628839866706",
+    "https://github.com/beeminder/beeminder/issues/5531",
+    "https://github.com/beeminder/beeminder/pull/5536"],
+d: "2026-02-03",
+t: "2026-02-05",
+}, { // ------------------------------------------------------------------------
+x: `Finally, in Metaminder goal creation we offer, as the first choice in the dropdown, a deadline of 15 minutes after the deadline of the goal it's populated from`,
+u: ["https://x.com/beemuvi/status/2019572725803806814",
+    "https://github.com/beeminder/beeminder/issues/5531",
+    "https://github.com/beeminder/beeminder/pull/5536"],
+d: "2026-02-03",
+t: "2026-02-05",
+c: `This is just about what we offer in the dropdown so less concerned about anti-magic violation, like the arbitrariness of 15 minutes or the if-statement for the case that the source goal's deadline is at 6am (the latest possible deadline) so +15m isn't possible`,
+}, { // ------------------------------------------------------------------------
+f: true,
+x: `New feature: keyboard navigation for the dashboard! Press j/k ↓/↑ to navigate your goals, and "?" for the help screen.`,
+u: ["https://x.com/beemuvi/status/2019921362484437332",
+    "https://blog.beeminder.com/hotkeys",
+    "https://github.com/beeminder/beeminder/issues/4906",
+    "https://github.com/beeminder/beeminder/pull/5537"],
+d: "2026-02-03",
+t: "2026-02-06",
+c: `The linked gissue is focusing on accessibility and screenreaders and Bee's not sure we actually made that much better, but she never explicitly wrote down her wishes for hotkeys in a different gissue and this was pretty close`,
+}, { // ------------------------------------------------------------------------
+x: `These hotkeys also now give you a non-sucky way to sync a goal with Beeminder's servers ("r") and refetch autodata ("e")`,
+u: ["https://x.com/beemuvi/status/2019921515530391667",
+    "https://blog.beeminder.com/hotkeys",
+    "https://github.com/beeminder/beeminder/issues/4906",
+    "https://github.com/beeminder/beeminder/pull/5537"],
+d: "2026-02-03",
+t: "2026-02-06",
+}, { // ------------------------------------------------------------------------
+f: true,
+x: `New feature currently only available via hotkey: SUPERCOLLAPSE, to make a goal only take up a single line on your dashboard, with no graph thumbnail`,
+u: ["https://x.com/beemuvi/status/2021012981841264789",
+    "https://blog.beeminder.com/hotkeys",
+    "https://github.com/beeminder/beeminder/issues/4906",
+    "https://github.com/beeminder/beeminder/pull/5537"],
+d: "2026-02-03",
+t: "2026-02-09",
+c: `Makes finished goals more out-of-sight while you're to-doing your way through your beemergencies`,
+}, { // ------------------------------------------------------------------------
+x: `A #bugfix for keyboard navigation: don't exit keyboard nav when you enter data`,
+u: ["https://x.com/beemuvi/status/2021013114754564408",
+    "https://blog.beeminder.com/hotkeys"],
+t: "2026-02-09",
+}, { // ------------------------------------------------------------------------
+x: `New hotkey (h) to jump to the header row makes it peasy to re-sort the dashboard and also to jump to the top or bottom of the list (cuz it wraps top to bottom)`,
+u: ["https://x.com/beemuvi/status/2021173251888582906",
+    "https://github.com/beeminder/beeminder/issues/5539",
+    "https://github.com/beeminder/beeminder/pull/5538"],
+d: "2026-02-05",
+t: "2026-02-10",
+}, { // ------------------------------------------------------------------------
+x: `Race condition with Firefox and Safari where using cmd-enter to submit data (dashboard or goal page) would yield a duplicate datapoint. #bugfix`,
+u: ["https://x.com/beemuvi/status/2021176006669656124",
+    "https://github.com/beeminder/beeminder/issues/5539",
+    "https://github.com/beeminder/beeminder/pull/5538"],
+d: "2026-02-05",
+t: "2026-02-10",
+c: `Surprisingly enough this bug was *not* introduced by the recent dashboard nav stuff`,
+}, { // ------------------------------------------------------------------------
+x: `Whoops, forgot to document the new 'h' shortcut in the help screen for keyboard nav. Now it's added in.`,
+u: ["https://x.com/beemuvi/status/2021746960835973587",
+    "https://github.com/beeminder/beeminder/pull/5540"],
+d: "2026-02-06",
+t: "2026-02-11",
+c: `Sorta cheap but we never used the help screen as its own UVI in the first place, which was opposite-of-cheap`,
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Shortened and clarified the article on special/meta datapoints and fixed the gif (it wasn't looping) on the Do More Goals article`,
+u: ["https://x.com/beemuvi/status/2021747269478052248",
+    "https://help.beeminder.com/article/374-are-there-any-special-types-of-datapoints",
+    "https://help.beeminder.com/article/66-do-more-goals"],
+t: "2026-02-11",
+}, { // ------------------------------------------------------------------------
+x: `We migrated your Todoist stuff to their new API without breaking all your goals this time! And we managed to preserve labels-minding for now. Tentative-phew.`,
+u: ["https://x.com/beemuvi/status/2022112400342983168",
+    "https://forum.beeminder.com/t/todoist-integration-to-regress-false-alarm/12705?u=dreev",
+    "https://github.com/beeminder/beeminder/pull/5543"],
+d: "2026-02-10",
+t: "2026-02-12",
+}, { // ------------------------------------------------------------------------
+x: `Migrated the Omniauth Todoist strategy to the new API and published the gem; now you can still auth Todoist with Beeminder and use the gem for your own projects`,
+u: ["https://x.com/beemuvi/status/2022112977227591735",
+    "https://github.com/beeminder/omniauth-todoist/pull/6",
+    "https://github.com/beeminder/beeminder/pull/5544"],
+d: "2026-02-10",
+t: "2026-02-12",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Corrected an error (PPRs on goals at 0/day) in the Pessimistic Presumptive Reports article, plus streamlining, rearranging, spring cleaning`,
+u: ["https://x.com/beemuvi/status/2022431352659022025",
+    "https://help.beeminder.com/article/157-pessimistic-presumptive-reports"],
+t: "2026-02-13",
+}, { // ------------------------------------------------------------------------
+x: `The all-transactions page wouldn't actually let you reload the page, but just redirected you back to the main payments page. #bugfix`,
+u: ["https://x.com/beemuvi/status/2022431547488690259",
+    "https://github.com/beeminder/beeminder/pull/5546"],
+d: "2026-02-12",
+t: "2026-02-13",
+c: `There was a redirect for non-admins, keeping them from viewing other folks' payments. Now we do that better.`,
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, /* --------------------------------------------------------- end 2026feb */ ]
 
 
 const staged = [ {
