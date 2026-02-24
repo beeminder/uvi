@@ -456,6 +456,33 @@ d: "2026-02-12",
 t: "2026-02-13",
 c: `There was a redirect for non-admins, keeping them from viewing other folks' payments. Now we do that better.`,
 }, { // ------------------------------------------------------------------------
+x: `Help docs: updated all the screenshots in all articles in the Goals category, along with improving and concise-ifying the prose`,
+u: ["https://x.com/beemuvi/status/2024644278287552607",
+    "https://help.beeminder.com/article/66-do-more-goals",
+    "https://help.beeminder.com/article/67-do-less-goals",
+    "https://help.beeminder.com/article/68-odometer-goals",
+    "https://help.beeminder.com/article/69-whittle-down-goals",
+    "https://help.beeminder.com/article/96-weight-gain-loss-goals"],
+t: "2026-02-19",
+}, { // ------------------------------------------------------------------------
+x: `Fixed a scroll bug in Firefox where using the h hotkey would jump to the header but fail to fully scroll it into view. #bugfix`,
+u: ["https://x.com/beemuvi/status/2024648643593269509",
+    "https://github.com/beeminder/beeminder/issues/5542",
+    "https://github.com/beeminder/beeminder/pull/5549"],
+t: "2026-02-19",
+}, { // ------------------------------------------------------------------------
+x: `We now nicely exit keyboard navigation if you click anywhere with the mouse`,
+u: ["https://x.com/beemuvi/status/2025000788964339750",
+    "https://github.com/beeminder/beeminder/issues/5542",
+    "https://github.com/beeminder/beeminder/pull/5549"],
+t: "2026-02-20",
+}, { // ------------------------------------------------------------------------
+x: `One more keyboard navigation improvement: we no longer collapse the goal when you hit enter with the submit button selected. #bugfix`,
+u: ["https://x.com/beemuvi/status/2025000911266017675",
+    "https://github.com/beeminder/beeminder/issues/5542",
+    "https://github.com/beeminder/beeminder/pull/5549"],
+t: "2026-02-20",
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
