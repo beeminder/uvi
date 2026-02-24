@@ -483,6 +483,19 @@ u: ["https://x.com/beemuvi/status/2025000911266017675",
     "https://github.com/beeminder/beeminder/pull/5549"],
 t: "2026-02-20",
 }, { // ------------------------------------------------------------------------
+x: `We added an API endpoint for ratcheting away safety buffer on a goal (HT Jolly <3)`,
+u: ["https://x.com/beemuvi/status/2026098745407156564",
+    "https://github.com/beeminder/beeminder/issues/5492"],
+d: "2026-02-23",
+t: "2026-02-23",
+}, { // ------------------------------------------------------------------------
+x: `Added a new section to the API docs for ratcheting, with example code, etc`,
+u: ["https://x.com/beemuvi/status/2026098867805233192",
+    "https://api.beeminder.com/#ratchet",
+    "https://github.com/beeminder/beeminder/issues/5492"],
+d: "2026-02-23",
+t: "2026-02-23",
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
