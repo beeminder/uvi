@@ -497,6 +497,52 @@ d: "2026-02-23",
 t: "2026-02-23",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
+x: `Help docs: New screenshots in all 5 of the articles in the Example Goals section that wanted them, plus new links, plus copyediting`,
+u: ["https://x.com/beemuvi/status/2026457510874591572",
+    "https://help.beeminder.com/article/71-example-10k-steps",
+    "https://help.beeminder.com/article/94-example-goal-eat-14-servings-of-vegetables-per-week",
+    "https://help.beeminder.com/article/95-example-goal-learn-a-new-language",
+    "https://help.beeminder.com/article/72-example-goal-run-3-times-per-week",
+    "https://help.beeminder.com/article/92-example-goal-go-to-the-gym-4-times-per-week"],
+t: "2026-02-24",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Rephrasing/streamlining of "What is my data?" and "Custom goals" and the "less time on Facebook" example goal article`,
+u: ["https://x.com/beemuvi/status/2026457871765090471",
+    "https://help.beeminder.com/article/36-what-is-my-data",
+    "https://help.beeminder.com/article/97-custom-goals",
+    "https://help.beeminder.com/article/93-example-goal-spend-less-time-on-facebook"],
+t: "2026-02-24",
+}, { // ------------------------------------------------------------------------
+x: `Visual Graph Editor: Better error checking / no silent failures when talking to Beeminder's servers`,
+u: ["https://x.com/beemuvi/status/2026823920469618911",
+    "https://graph.beeminder.com",
+    "https://github.com/beeminder/road/commit/ac33341cb21328eb674a103babbb204a2c0792e8",
+    "https://github.com/beeminder/road/commit/7cf0991998e4257f14f92b044fe65a0eda75d92d"],
+t: "2026-02-25",
+}, { // ------------------------------------------------------------------------
+x: `Visual Graph Editor: Added missing alt text and page title (what you see when you hover over the browser tab) and fixed the clickable area for two checkboxes`,
+u: ["https://x.com/beemuvi/status/2026824035271864569",
+    "https://graph.beeminder.com",
+    "https://github.com/beeminder/road/commit/685c7f3bccd971f3fd0c17cebb9d4285c12d3286",
+    "https://github.com/beeminder/road/commit/450911d16323556d682621a2af7f80f6603d3061"],
+t: "2026-02-25",
+c: `Specifically the "Show data" and "Propagate forward" checkboxes`,
+}, { // ------------------------------------------------------------------------
+x: `Visual Graph Editor: Added hovertext to all the buttons and interactive elements of the graph that didn't already have them or have words on them`,
+u: ["https://x.com/beemuvi/status/2027185685510402086",
+    "https://graph.beeminder.com",
+    "https://github.com/beeminder/road/commit/135f0d7a3e6395ed9cea29cc3e0ead7a7dc83a50"],
+d: "2026-02-26",
+t: "2026-02-26",
+}, { // ------------------------------------------------------------------------
+x: `The Intend.do integration was sending thousands of spurious emails falsely complaining of errors submitting data to Beeminder. #bugfix`,
+u: ["https://x.com/beemuvi/status/2027185847645458845",
+    "https://forum.beeminder.com/t/current-issue-datapoints-not-submitting-from-intend-associated-slowdown-in-support-responses/12725",
+    "https://github.com/malcolmocean/intend/commit/f86bcd66936a18435634522ca72da575473100aa"],
+d: "2026-02-26",
+c: `We actually pushed a changed directly to Intend to fix this. HT Nicky and Claude, and Malcolm for giving us access.`,
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
