@@ -496,7 +496,6 @@ u: ["https://x.com/beemuvi/status/2026098867805233192",
 d: "2026-02-23",
 t: "2026-02-23",
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
 x: `Help docs: New screenshots in all 5 of the articles in the Example Goals section that wanted them, plus new links, plus copyediting`,
 u: ["https://x.com/beemuvi/status/2026457510874591572",
     "https://help.beeminder.com/article/71-example-10k-steps",
@@ -542,13 +541,144 @@ u: ["https://x.com/beemuvi/status/2027185847645458845",
 d: "2026-02-26",
 c: `We actually pushed a changed directly to Intend to fix this. HT Nicky and Claude, and Malcolm for giving us access.`,
 }, { // ------------------------------------------------------------------------
+f: true,
+x: `Switched to an honor system against deadline snoozing on beemergency days instead of a blanket restriction within 6 hours and guilt trip emails otherwise`,
+u: ["https://x.com/beemuvi/status/2027530428039704623",
+    "https://github.com/beeminder/beeminder/issues/1385",
+    "https://github.com/beeminder/beeminder/pull/5554"],
+d: "2026-02-26",
+t: "2026-02-27",
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
+x: `So no more "Snoozing your beeminder deadline" emails; instead a confirmation popup that asks you to promise you're changing the deadline for a principled reason`,
+u: ["https://x.com/beemuvi/status/2027530511506411664",
+    "https://github.com/beeminder/beeminder/issues/1385",
+    "https://github.com/beeminder/beeminder/pull/5554"],
+d: "2026-02-26",
+t: "2026-02-27",
+c: `"I swear I'm not being akratic"`,
 }, { // ------------------------------------------------------------------------
 }, /* --------------------------------------------------------- end 2026feb */ ]
+
+batches['2026mar'] = [{
+}, { // ------------------------------------------------------------------------
+x: `Also you have to make changes from the individual goal page: we don't let you do it en masse on the Reminders FWOMP page when it's a beemergency`,
+u: ["https://x.com/beemuvi/status/2028633156564467779",
+    "https://www.beeminder.com/reminders",
+    "https://github.com/beeminder/beeminder/issues/1385",
+    "https://github.com/beeminder/beeminder/pull/5554"],
+d: "2026-02-26",
+t: "2026-03-02",
+}, { // ------------------------------------------------------------------------
+x: `And the Reminders page now has inline error messages, with the specific goal row with errors highlighted (and the error messages themselves are better)`,
+u: ["https://x.com/beemuvi/status/2028633423171195332",
+    "https://github.com/beeminder/beeminder/issues/1385",
+    "https://github.com/beeminder/beeminder/pull/5554"],
+d: "2026-02-26",
+t: "2026-03-02",
+}, { // ------------------------------------------------------------------------
+x: `The reminders page now indicates goals that are beemergencies with a red clock icon, and makes all the tooltip explanations nice and tablet accessible`,
+u: ["https://x.com/beemuvi/status/2028995296248861165",
+    "https://github.com/beeminder/beeminder/issues/1385",
+    "https://github.com/beeminder/beeminder/pull/5554"],
+d: "2026-02-26",
+t: "2026-03-03",
+}, { // ------------------------------------------------------------------------
+x: `And we differentiate which deadlines are disabled because of beemergency vs because of attached autodata and give explanations inline`,
+u: ["https://x.com/beemuvi/status/2028995425995513916",
+    "https://github.com/beeminder/beeminder/issues/1385",
+    "https://github.com/beeminder/beeminder/pull/5554"],
+d: "2026-02-26",
+t: "2026-03-03",
+}, { // ------------------------------------------------------------------------
+x: `Finally, we updated the links to individual goals from the reminders page to use an anchor and go directly to the goal's deadline & reminder settings section`,
+u: ["https://x.com/beemuvi/status/2029353026583183523",
+    "https://github.com/beeminder/beeminder/issues/1385",
+    "https://github.com/beeminder/beeminder/pull/5554"],
+d: "2026-02-26",
+t: "2026-03-04",
+}, { // ------------------------------------------------------------------------
+x: `Dumb bug with draggable popups that wouldn't let you *not* drag them, like they'd drag if you just tried to highlight text in them. #bugfix`,
+u: ["https://x.com/beemuvi/status/2029353132724240582",
+    "https://github.com/beeminder/beeminder/issues/1385",
+    "https://github.com/beeminder/beeminder/pull/5560"],
+t: "2026-03-04",
+}, { // ------------------------------------------------------------------------
+f: true,
+x: `Death to deadline snoozing for real -- no honor system!`,
+u: ["https://x.com/beemuvi/status/2029716359756796312",
+    "https://blog.beeminder.com/snooze",
+    "https://forum.beeminder.com/t/death-to-deadline-snoozing/12735",
+    "https://github.com/beeminder/beeminder/commit/f7ddeed5b093fce72e4cd93bb28fba2cfefad0fd",
+    "https://github.com/beeminder/beeminder/issues/1385",
+    "https://github.com/beeminder/beeminder/pull/5561"],
+d: "2026-03-03",
+t: "2026-03-05",
+}, { // ------------------------------------------------------------------------
+x: `That means new webcopy for the popup and on the Reminders page to be clear that deadline snoozing on beemergency days is verboten`,
+u: ["https://x.com/beemuvi/status/2029716586689712230",
+    "https://github.com/beeminder/beeminder/issues/1385",
+    "https://github.com/beeminder/beeminder/pull/5561"],
+d: "2026-03-03",
+t: "2026-03-05",
+}, { // ------------------------------------------------------------------------
+x: `We also added the Uncle button to the no-snoozing popup and made the Uncle popup replace the currently popped-up popup when you click it`,
+u: ["https://x.com/beemuvi/status/2030057351756275908",
+    "https://github.com/beeminder/beeminder/issues/1385",
+    "https://github.com/beeminder/beeminder/pull/5561"],
+d: "2026-03-03",
+t: "2026-03-06",
+}, { // ------------------------------------------------------------------------
+x: `For real now (probably) we use the actual amount you derailed at in the Legit Check email. #bugfix #zombie`,
+u: ["https://x.com/beemuvi/status/2030056903896879507",
+    "https://changelog.beeminder.com/#5416",
+    "https://github.com/beeminder/beeminder/issues/5421",
+    "https://github.com/beeminder/beeminder/issues/5512",
+    "https://github.com/beeminder/beeminder/pull/5552"],
+d: "2026-02-26",
+t: "2026-03-06",
+c: `Bee: UVI#5416 claimed to fix this; then it happened again and I thought it had to do with a pending stepdown... but turned out I just fucked up the fix; I failed to actually use the passed-in derail amount. ZOMBomBee.`,
+}, { // ------------------------------------------------------------------------
+x: `If you log time with a Toggl timer across your deadline, we now split the time correctly between the two days, instead of counting it all for the second day`,
+u: ["https://x.com/beemuvi/status/2031127772337418249",
+    "https://github.com/beeminder/beeminder/issues/5003",
+    "https://github.com/beeminder/beeminder/pull/5555"],
+d: "2026-03-02",
+t: "2026-03-09",
+}, { // ------------------------------------------------------------------------
+f: true,
+x: `Our Toggl integration now supports Do Less goals!`,
+u: ["https://x.com/beemuvi/status/2031127868286337097",
+    "https://github.com/beeminder/beeminder/issues/1346",
+    "https://github.com/beeminder/beeminder/pull/5562"],
+d: "2026-03-04",
+t: "2026-03-09",
+}, { // ------------------------------------------------------------------------
+x: `Turned off PPRs for all autodata goals -- there was some confusion with Do Less autodata and PPRs sometimes showing up and sometimes not`,
+u: ["https://x.com/beemuvi/status/2031514720654827712",
+    "https://github.com/beeminder/beeminder/issues/1346",
+    "https://github.com/beeminder/beeminder/pull/5562",
+    "https://github.com/beeminder/beeminder/commit/8edcf4320848899d1ff50cf73f47da71ddbf8a43"],
+d: "2026-03-04",
+t: "2026-03-10",
+c: `Concluded that we don't need them when there's an automatic data source, since the point of them is "you might just be avoiding us", which is not really possible with an autodata source`,
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Trimming and rephrasing and streamlining and rearranging in the "What happens if I forgot to enter data?" article and similar in 4 other articles`,
+u: ["https://x.com/beemuvi/status/2031514839596806201",
+    "https://help.beeminder.com/article/38-what-happens-if-i-forgot-to-enter-data",
+    "https://help.beeminder.com/article/37-how-do-i-enter-data-to-my-goal",
+    "https://help.beeminder.com/article/39-how-do-i-fix-incorrect-data",
+    "https://help.beeminder.com/article/40-can-anybody-else-add-data-to-my-goal",
+    "https://help.beeminder.com/article/41-can-i-export-my-data"],
+t: "2026-03-10",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, /* --------------------------------------------------------- end 2026mar */ ]
 
 
 const staged = [ {
