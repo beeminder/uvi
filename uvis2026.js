@@ -701,6 +701,20 @@ d: "2026-03-10",
 t: "2026-03-12",
 c: `Got a request from Theo for "a page which I could use when calendialing to review the commitment rates of all my goals"`,
 }, { // ------------------------------------------------------------------------
+x: `We now accept fractional rates in the take-a-break goal settings section, and on the megabreak page (for consistency with setting rates in the commitment dial)`,
+u: ["https://x.com/beemuvi/status/2032227820064424240",
+    "https://github.com/beeminder/beeminder/issues/4058",
+    "https://github.com/beeminder/beeminder/pull/5570"],
+d: "2026-03-12",
+t: "2026-03-12",
+}, { // ------------------------------------------------------------------------
+x: `Goal setup with the "N things due in M days" text was wrong if you specified initial buffer before rate. #bugfix`,
+u: ["https://x.com/beemuvi/status/2032227915568726484",
+    "https://github.com/beeminder/beeminder/issues/5556",
+    "https://github.com/beeminder/beeminder/pull/5563"],
+t: "2026-03-12",
+c: `Simple fix to path dependency in showing the user "N things due in M days" depending on whether you entered the slope or the leeway first`,
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
