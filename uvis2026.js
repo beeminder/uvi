@@ -671,6 +671,18 @@ u: ["https://x.com/beemuvi/status/2031514839596806201",
     "https://help.beeminder.com/article/41-can-i-export-my-data"],
 t: "2026-03-10",
 }, { // ------------------------------------------------------------------------
+x: `The fix from UVI#5516 where Intend.do would spam users with spurious error emails got accidentally undone; we've now fixed it more robustly. #bugfix #zombie`,
+u: ["https://x.com/beemuvi/status/2031882359273054672",
+    "https://github.com/malcolmocean/intend/commit/8e6c2aaaa14aaf462aa24fb886dcf64274e3d84d"],
+d: "2026-03-08",
+t: "2026-03-11",
+}, { // ------------------------------------------------------------------------
+x: `We added CSS to the blog to make tables display nicely in GitHub style`,
+u: ["https://x.com/beemuvi/status/2031882461911855327",
+    "https://blog.beeminder.com/tare",
+    "https://github.com/beeminder/blog/pull/598"],
+t: "2026-03-11",
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
