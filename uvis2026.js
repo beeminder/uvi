@@ -683,6 +683,24 @@ u: ["https://x.com/beemuvi/status/2031882461911855327",
     "https://github.com/beeminder/blog/pull/598"],
 t: "2026-03-11",
 }, { // ------------------------------------------------------------------------
+x: `Sometimes the data & red-line segments in the interactive graphs were off-by-one (based on deadline or timezone differences) #bugfix`,
+u: ["https://x.com/beemuvi/status/2032221451198337532",
+    "https://github.com/beeminder/beeminder/issues/5392",
+    "https://github.com/beeminder/beeminder/pull/5565"],
+d: "2026-03-09",
+t: "2026-03-12",
+c: `Now we're using the exact same API to transform/collect data & graph params for the interactive graphs as we use for Beebrain & graph.beeminder.com`,
+}, { // ------------------------------------------------------------------------
+f: true,
+x: `Added a new column with current dial rate (i.e. the rate in the commitment dial, not necessarily the current rate today of the red line) to the breaks page`,
+u: ["https://x.com/beemuvi/status/2032221780988068106",
+    "https://www.beeminder.com/breaks",
+    "https://github.com/beeminder/beeminder/issues/5351",
+    "https://github.com/beeminder/beeminder/pull/5568"],
+d: "2026-03-10",
+t: "2026-03-12",
+c: `Got a request from Theo for "a page which I could use when calendialing to review the commitment rates of all my goals"`,
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
