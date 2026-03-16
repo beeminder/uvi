@@ -715,6 +715,24 @@ u: ["https://x.com/beemuvi/status/2032227915568726484",
 t: "2026-03-12",
 c: `Simple fix to path dependency in showing the user "N things due in M days" depending on whether you entered the slope or the leeway first`,
 }, { // ------------------------------------------------------------------------
+x: `Visual Graph Editor: In robusting up the code we accidentally broke the ability to create new knots by double-clicking. #bugfix #zombie HT aad`,
+u: ["https://x.com/beemuvi/status/2033691242148860084",
+    "https://graph.beeminder.com",
+    "https://github.com/beeminder/road/commit/526c5e9e641ba0402f0736cc4f5d318403514435"],
+d: "2026-03-13",
+t: "2026-03-16",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Made the article in increasing stakes markedly clearer, even less misleading, plus minor edits for clarity in 6 other articles`,
+u: ["https://x.com/beemuvi/status/2033691583695229307",
+    "https://help.beeminder.com/article/343-can-i-increase-the-pledge-on-my-goal",
+    "https://help.beeminder.com/article/113-can-i-import-previous-data",
+    "https://help.beeminder.com/article/42-switching-goal-units",
+    "https://help.beeminder.com/article/19-how-much-does-beeminder-cost",
+    "https://help.beeminder.com/article/324-when-do-i-pay",
+    "https://help.beeminder.com/article/20-how-much-do-i-pledge-on-my-goals",
+    "https://help.beeminder.com/article/21-can-i-decrease-the-pledge-on-my-goal"],
+t: "2026-03-16",
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
