@@ -733,6 +733,19 @@ u: ["https://x.com/beemuvi/status/2033691583695229307",
     "https://help.beeminder.com/article/21-can-i-decrease-the-pledge-on-my-goal"],
 t: "2026-03-16",
 }, { // ------------------------------------------------------------------------
+x: `We were erroneously conservarounding the rates in the new column of the megabreak page. Now they show full precision.`,
+u: ["https://x.com/beemuvi/status/2034049472679055778",
+    "https://github.com/beeminder/beeminder/pull/5573"],
+t: "2026-03-17",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Rearranged and rephrased the "Can I have goals without pledges?" article to discourage such, plus minor tweaks to 3 other articles`,
+u: ["https://x.com/beemuvi/status/2034049569089339679",
+    "https://help.beeminder.com/article/23-can-i-have-goals-without-pledges",
+    "https://help.beeminder.com/article/22-can-i-limit-how-high-my-pledge-gets",
+    "https://help.beeminder.com/article/24-how-do-i-manage-my-subscription",
+    "https://help.beeminder.com/article/25-how-do-auto-canceling-subscriptions-work"],
+t: "2026-03-17",
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
