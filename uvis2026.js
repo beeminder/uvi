@@ -746,6 +746,28 @@ u: ["https://x.com/beemuvi/status/2034049569089339679",
     "https://help.beeminder.com/article/25-how-do-auto-canceling-subscriptions-work"],
 t: "2026-03-17",
 }, { // ------------------------------------------------------------------------
+x: `On the dashboard, we no longer toggle the expand/collapse state when using double-click-to-refresh`,
+u: ["https://x.com/beemuvi/status/2034412650860622196",
+    "https://github.com/beeminder/beeminder/pull/5576"],
+t: "2026-03-18",
+}, { // ------------------------------------------------------------------------
+x: `Also on the dashboard, the "r" hotkey and the double-click refresh both fetch autodata in addition to the refresh`,
+u: ["https://x.com/beemuvi/status/2034412723929596224",
+    "https://github.com/beeminder/beeminder/pull/5576"],
+t: "2026-03-18",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Payment methods article explains honey money workaround for users in India (and more on honey generally) plus minor disambiguating in 1 other article`,
+u: ["https://x.com/beemuvi/status/2034776529943896450",
+    "https://help.beeminder.com/article/27-what-payment-methods-are-available",
+    "https://help.beeminder.com/article/26-what-if-i-buy-one-plan-and-change-my-mind"],
+t: "2026-03-19",
+}, { // ------------------------------------------------------------------------
+x: `Payments page is now viewable on mobile http://beeminder.com/payments`,
+u: ["https://x.com/beemuvi/status/2034776845582049791",
+    "https://github.com/beeminder/beeminder/issues/4249",
+    "https://github.com/beeminder/beeminder/pull/5577"],
+t: "2026-03-19",
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
