@@ -24,6 +24,8 @@ See /lab/tweetimporter for how to import your Twitter archive into a progress lo
 
 ## Data structure for UVIs
 
+OLD: 
+
 ```
 f: featured                              [bool: default false]
 s: sub-UVI                               [bool: default false]
@@ -35,7 +37,7 @@ t: date tweeted/logged/announced/entered [YYYY-MM-DD string]
 c: comment / note to selves              [string]
 ```
 
-Planned refactor:
+NEW:
 
 ```
 f: Featured / bolded / highlighted       [bool: default false]
@@ -47,6 +49,8 @@ d: date Deployed                         [YYYY-MM-DD string]
 e: date tweeted/logged/announced/Entered [YYYY-MM-DD string]
 s: comment / note to Selves              [string]
 ```
+
+REFACTOR:
 
 So `f`, `x`, and `d` are unchanged;
 `s`, `u`, `t`, and `c` become `i`, `l`, `e`, and `s`;

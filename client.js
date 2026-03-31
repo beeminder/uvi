@@ -146,14 +146,14 @@ function icon(u) {
 
 // Takes UVI object and generates the html version, with anchor link
 function render(uvi) {
-  var num   = uvi.n // n: the number of the UVI (can omit if prev+1)
-  var subl  = uvi.s // s: whether to put this UVI in a sublist
-  var feat  = uvi.f // f: whether to highlight the UVI (boolean)
-  var text  = uvi.x // x: the full text of the UVI
-  var urls  = uvi.u // u: URLs for this UVI, like for the corresponding tweet
+  var num   = uvi.n // n: the number of the UVI (set by numbum)
+  var subl  = uvi.i // i: whether to indent this UVI in a sublist
+  var feat  = uvi.f // f: whether to feature/highlight the UVI (boolean)
+  var text  = uvi.x // x: full text of the UVI
+  var urls  = uvi.l // l: URL list, like for the corresponding tweet
   var date  = uvi.d // d: date the UVI was deployed
-  var tate  = uvi.t // t: date the UVI was tweeted
-  var note  = uvi.c // c: comment / note to selves / hovertext on permalink
+  var tate  = uvi.e // e: date the UVI was entered/tweeted
+  var note  = uvi.s // s: note to selves / comment / hovertext on permalink
   
   if (!text) { text = "ERROR: "+JSON.stringify(uvi) }
   else { text = linkify(feat ? embolden(text) : text) }
@@ -178,20 +178,15 @@ function isnum(x) { return x - parseFloat(x) + 1 >= 0 }
 
 // Update the global UVI counter and set uvi.n if it isn't already
 function numbum(uvi) {
-  if (uvi.n === undefined) {          // If n isn't specified, increment global
+  if (uvi.c === undefined) {          // If c isn't set, increment global
     n += 1                            // var for the number of the UVI.
-    uvi.n = n                  
-  } else if (uvi.n === false) {       // explicit false means don't increment it
     uvi.n = n
-  } else if (!isnum(uvi.n)) {
-    console.log(`ERROR: Invalid value for n: ${uvi.n}, explicit trues verboten`)
-  } else if (uvi.n === n+1) {
-    console.log(`Superfluously set n=${uvi.n} but could've let it default`)
-    n += 1
+  } else if (uvi.c === true) {        // c: true means don't increment it
+    uvi.n = n
   } else {
-    console.log(`NUMBERING ERROR: ${n} -> ${uvi.n}`)
+    console.log(`ERROR: c=${uvi.c}, should be true or absent`)
   }
-  // PS: I think if those errors happen we should find a way to alert ourselves.
+  // PS: If errors happen we should find a way to alert ourselves.
   // Workaround: keep the browser console open!
 }
 
@@ -207,18 +202,18 @@ function genol(l) {
   var s = ''
   // If we didn't need to deal with sublists we could just use this line:
   // l.forEach(function(x) { s += genli(x) })
-  for (var i = 0; i < l.length; i += 1) {
-    if (i < l.length-1 && l[i+1].s) { // a UVI with sub-UVIs!
-      numbum(l[i])
-      // At this point, i points to the "header" UVI for the sublist
-      s += '<li value="'+l[i].n+'">' + render(l[i]) + '<ul>\n'
-      i += 1 // Increment i to point to the first UVI in the sublist
-      for (; i < l.length && l[i].s; i += 1) { s += genli(l[i]) }
-      // At this point, i points to the first UVI after the sublist is done
-      i -= 1 // Scooch back to last UVI in sublist -- outer for-loop increments
+  for (var j = 0; j < l.length; j += 1) {
+    if (j < l.length-1 && l[j+1].i) { // a UVI with sub-UVIs!
+      numbum(l[j])
+      // At this point, j points to the "header" UVI for the sublist
+      s += '<li value="'+l[j].n+'">' + render(l[j]) + '<ul>\n'
+      j += 1 // Increment j to point to the first UVI in the sublist
+      for (; j < l.length && l[j].i; j += 1) { s += genli(l[j]) }
+      // At this point, j points to the first UVI after the sublist is done
+      j -= 1 // Scooch back to last UVI in sublist -- outer for-loop increments
       s += '\n</ul></li>\n'
     }
-    else { s += genli(l[i]) }
+    else { s += genli(l[j]) }
   }  
   return s
 }
