@@ -768,15 +768,43 @@ l: ["https://x.com/beemuvi/status/2034776845582049791",
     "https://github.com/beeminder/beeminder/pull/5577"],
 e: "2026-03-19",
 }, { // ------------------------------------------------------------------------
+x: `Help docs: Added a negative-honey-money bit to "What happens if a charge fails?" (and similar for "How does Honey Money work?") due to user confusion/indignation`,
+l: ["https://x.com/beemuvi/status/2039128706040619383",
+    "https://help.beeminder.com/article/30-what-happens-if-a-charge-fails",
+    "https://help.beeminder.com/article/354-honey-money"],
+e: "2026-03-31",
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
+x: `Help docs: Adjusted the section on waking up on time in "What's the best way to beemind ___?" (user thought Beeminder'd zeno them regardless)`,
+l: ["https://x.com/beemuvi/status/2039128832419262492",
+    "https://help.beeminder.com/article/120-whats-the-best-way-to-beemind"],
+e: "2026-03-31",
 }, /* --------------------------------------------------------- end 2026mar */ ]
 
+batches['2026apr'] = [{
+}, { // ------------------------------------------------------------------------
+x: `Help docs: PayPal blurb added to "How do I update my payment info?" (since we *still* haven't fully phased it out) plus clarifications etc to 3 other articles`,
+l: ["https://x.com/beemuvi/status/2039491263540629846",
+    "https://help.beeminder.com/article/28-how-do-i-update-my-payment-information",
+    "https://help.beeminder.com/article/29-why-did-beeminder-charge-my-card",
+    "https://help.beeminder.com/article/12-what-is-a-derailment",
+    "https://help.beeminder.com/article/13-when-do-derailments-happen"],
+e: "2026-04-01",
+}, { // ------------------------------------------------------------------------
+x: `We broke our graph previews in goal creation for a while. #bugfix #zombie`,
+l: ["https://x.com/beemuvi/status/2039491441005937096",
+    "https://github.com/beeminder/beeminder/pull/5587"],
+d: "2026-03-31",
+e: "2026-04-01",
+c: "D3 version mismatch",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, /* --------------------------------------------------------- end 2026apr */ ]
 
 const staged = [ {
 }, { // ------------------------------------------------------------------------
