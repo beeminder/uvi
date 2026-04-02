@@ -795,8 +795,31 @@ l: ["https://x.com/beemuvi/status/2039491441005937096",
     "https://github.com/beeminder/beeminder/pull/5587"],
 d: "2026-03-31",
 e: "2026-04-01",
-c: "D3 version mismatch",
+s: "D3 version mismatch",
 }, { // ------------------------------------------------------------------------
+f: true,
+x: `New autodata integration: BoardGameGeek!`,
+l: ["https://x.com/beemuvi/status/2039852028378350029",
+    "https://blog.beeminder.com/boardgamegeek",
+    "https://github.com/beeminder/beeminder/pull/5586"],
+e: "2026-04-02",
+}, { // ------------------------------------------------------------------------
+x: `The BoardGameGeek integration supports Do More goals and Do Less goals, and you can track all games or a specific game; added to the gallery, etc`,
+l: ["https://x.com/beemuvi/status/2039852201871642857",
+    "https://github.com/beeminder/beeminder/pull/5586",
+    "https://github.com/beeminder/beeminder/pull/5588"],
+e: "2026-04-02",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: New article for the new BoardGameGeek integration (also blog post and landing page, etc)`,
+l: ["https://x.com/beemuvi/status/2039852316380348420",
+    "https://help.beeminder.com/article/381-boardgamegeek"],
+}, { // ------------------------------------------------------------------------
+x: `There was some ugliness with long autodata names making the icon look off center, or the name wrapping, in the list of autodata icons during goal setup. #css`,
+l: ["https://x.com/beemuvi/status/2039852732618768434",
+    "https://github.com/beeminder/beeminder/pull/5586/changes/cca8e2de2b4e8a8c1a4210e45c3e8c924df554e9",
+    "https://github.com/beeminder/beeminder/pull/5586"],
+e: "2026-04-02",
+s: `Adding screenshots to the PR`,
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
