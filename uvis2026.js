@@ -822,6 +822,47 @@ e: "2026-04-02",
 s: `Adding screenshots to the PR`,
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
+x: `The "todayta" checkmark that we add to the dashboard row after you add data was getting hidden when you super-collapse a dashboard row. Now it always shows.`,
+l: ["https://x.com/beemuvi/status/2041303228130918583",
+    "https://github.com/beeminder/beeminder/pull/5589"],
+d: "2026-04-02",
+e: "2026-04-06",
+}, { // ------------------------------------------------------------------------
+x: `We added Pilates as an activity type to the Strava autodata integration`,
+l: ["https://x.com/beemuvi/status/2041303374541492284",
+    "https://github.com/beeminder/beeminder/issues/5566",
+    "https://github.com/beeminder/beeminder/pull/5590"],
+d: "2026-04-06",
+e: "2026-04-06",
+s: `Strava goals don't have full custom settings, so you can't add it to an existing goal, it is just one of the options when you are initially setting up a goal`,
+}, { // ------------------------------------------------------------------------
+x: `Band-aided a bug where a Beemium user could get a false-positive "end of feetwetting" email by dropping their pledge to $0. #bugfix`,
+l: ["https://x.com/beemuvi/status/2041667007331135908",
+    "https://github.com/beeminder/beeminder/pull/5583"],
+e: "2026-04-07",
+s: `Contra anti-magic, added an if-statement: no feetwetting email for goals created over a month ago. Bee thinks this is her fault for implementing feetwetting as a stack of kludges.`,
+}, { // ------------------------------------------------------------------------
+x: `Datapoint values now understand timey arithmetic (in, ironically, non-advanced entry), like Beeminder understands "00:10:00+00:05:30" to mean 00:15:30`,
+l: ["https://x.com/beemuvi/status/2041667079133393326",
+    "https://github.com/beeminder/beeminder/pull/5582"],
+d: "2026-04-07",
+e: "2026-04-07",
+}, { // ------------------------------------------------------------------------
+x: `Datapoint value placeholder text on dashboard and goal page for timey goals now respects the HH:MM vs HH:MM:SS setting and shows, e.g, "e.g., 0:06:23" if HH:MM:SS`,
+l: ["https://x.com/beemuvi/status/2042025869296988161",
+    "https://github.com/beeminder/beeminder/pull/5582"],
+d: "2026-04-07",
+e: "2026-04-08",
+s: `Previously always showed "e.g., 00:01"`,
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Added the clarification in the No-Excuses Mode article that opting back out isn't retroactive, plus minor rewriting/tightening in 2 other articles`,
+l: ["https://x.com/beemuvi/status/2042025979175170407",
+    "https://help.beeminder.com/article/360-what-is-no-excuses-mode",
+    "https://help.beeminder.com/article/16-what-is-a-legit-derailment",
+    "https://help.beeminder.com/article/17-what-happens-when-i-derail"],
+e: "2026-04-08",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
