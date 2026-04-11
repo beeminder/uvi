@@ -862,6 +862,27 @@ l: ["https://x.com/beemuvi/status/2042025979175170407",
     "https://help.beeminder.com/article/17-what-happens-when-i-derail"],
 e: "2026-04-08",
 }, { // ------------------------------------------------------------------------
+x: `Emailed users about changes to their datapoints when we updated them with #TAREs and removed the odometer reset setting. See UVI#5371+`,
+l: ["https://x.com/beemuvi/status/2042391933449093626",
+    "https://github.com/beeminder/beeminder/pull/5419"],
+e: "2026-04-09",
+s: `Looks like we did do this at the time but krugerk was omitted for a technical reason`,
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Highlighted and clarified key points in the Uncle Button article plus more minor streamlining/clarifying in 2 other articles`,
+l: ["https://x.com/beemuvi/status/2042392018929045712",
+    "https://help.beeminder.com/article/376-what-is-the-uncle-button",
+    "https://help.beeminder.com/article/325-help-something-came-up-and-i-cant-do-my-goal",
+    "https://help.beeminder.com/article/61-apple-health"],
+e: "2026-04-09",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
