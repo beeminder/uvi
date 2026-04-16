@@ -875,6 +875,50 @@ l: ["https://x.com/beemuvi/status/2042392018929045712",
     "https://help.beeminder.com/article/61-apple-health"],
 e: "2026-04-09",
 }, { // ------------------------------------------------------------------------
+x: `A user helpfully pointed out that when you picked all languages in Clozemaster goal setup the graph preview step of setup failed. #bugfix`,
+l: ["https://x.com/beemuvi/status/2044203993417822576",
+    "https://github.com/beeminder/beeminder/issues/5596",
+    "https://github.com/beeminder/beeminder/pull/5597"],
+d: "2026-04-10",
+e: "2026-04-14",
+}, { // ------------------------------------------------------------------------
+x: `Relatedly, we'd start the goal with the red line at an incorrect value, because we weren't passing along the initial value correctly. #bugfix`,
+l: ["https://x.com/beemuvi/status/2044204100515254685",
+    "https://github.com/beeminder/beeminder/issues/5596",
+    "https://github.com/beeminder/beeminder/pull/5597"],
+d: "2026-04-10",
+e: "2026-04-14",
+}, { // ------------------------------------------------------------------------
+x: `Plus error handling like if you haven't actually started Clozemaster language learning and have no points at all yet. #bugfix`,
+l: ["https://x.com/beemuvi/status/2044554294448521274",
+    "https://github.com/beeminder/beeminder/issues/5596",
+    "https://github.com/beeminder/beeminder/pull/5597"],
+d: "2026-04-10",
+e: "2026-04-15",
+}, { // ------------------------------------------------------------------------
+x: `The blog now has a nicer slider/carousel for related posts, based on shared tags. HT narthur`,
+l: ["https://x.com/beemuvi/status/2044554432185307282",
+    "https://blog.beeminder.com/",
+    "https://github.com/beeminder/blog/pull/627"],
+e: "2026-04-15",
+}, { // ------------------------------------------------------------------------
+x: `A pledge dropped to $0 (a Beemium-only thing) could pop back up to $5 within 24 hours of the step-down due to more pledge cap & feetwetting confusion. #bugfix`,
+l: ["https://x.com/beemuvi/status/2044888921612714130",
+    "https://github.com/beeminder/beeminder/issues/5602",
+    "https://github.com/beeminder/beeminder/pull/5603"],
+e: "2026-04-16",
+s: `See also UVI#5557. Technically probably not a full fix since it's more of a belt, but still lacking suspenders?`,
+}, { // ------------------------------------------------------------------------
+x: `Help docs: New section for the Boss as a Service integration about adding data to private goals, plus tweaks to 5 other autodata integration articles`,
+l: ["https://x.com/beemuvi/status/2044892335214121379",
+    "https://help.beeminder.com/article/329-boss-as-a-service-baas",
+    "https://help.beeminder.com/article/290-clozemaster",
+    "https://help.beeminder.com/article/288-codecombat",
+    "https://help.beeminder.com/article/364-curlex",
+    "https://help.beeminder.com/article/80-duolingo",
+    "https://help.beeminder.com/article/366-fatebook"],
+e: "2026-04-16",
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
