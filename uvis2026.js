@@ -1012,7 +1012,6 @@ l: ["https://x.com/beemuvi/status/2048902297569366373",
     "https://help.beeminder.com/article/74-garmin"],
 e: "2026-04-27",
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
 x: `Help docs: Lots of prose tightening and accuracy improvements to the Gmail autodata integration article, plus a Freudian typo fix (emails vs evils)`,
 l: ["https://x.com/beemuvi/status/2049258940417106012",
     "https://help.beeminder.com/article/82-gmail"],
