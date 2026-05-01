@@ -263,7 +263,6 @@ l: ["https://x.com/beemuvi/status/2016313621861826817",
     "https://help.beeminder.com/article/117-can-i-start-my-goal-over"],
 e: "2026-01-27",
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
 x: `Fixed a longstanding bug where restarting custom goals with some non-standard aggdays would cause an instaderail. #bugfix`,
 l: ["https://x.com/beemuvi/status/2016672722122904034",
     "https://github.com/beeminder/beeminder/issues/1444",
@@ -1014,18 +1013,74 @@ l: ["https://x.com/beemuvi/status/2048902297569366373",
 e: "2026-04-27",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
+x: `Help docs: Lots of prose tightening and accuracy improvements to the Gmail autodata integration article, plus a Freudian typo fix (emails vs evils)`,
+l: ["https://x.com/beemuvi/status/2049258940417106012",
+    "https://help.beeminder.com/article/82-gmail"],
+e: "2026-04-28",
 }, { // ------------------------------------------------------------------------
+f: true,
+x: `Metaminder goals can finally receive actual datapoint values, not just a +1 per datapoint on the source goal`,
+l: ["https://x.com/beemuvi/status/2049259575371812878",
+    "https://blog.beeminder.com/metamind",
+    "https://github.com/beeminder/beeminder/issues/5493",
+    "https://github.com/beeminder/beeminder/pull/5592",
+    "https://github.com/beeminder/beeminder/pull/5612"],
+d: "2026-04-27",
+e: "2026-04-28",
 }, { // ------------------------------------------------------------------------
+x: `Various UI changes to accommodate the more general Metaminder: count mode (default) vs value mode, plus ability for support workerbees to see/edit this`,
+l: ["https://x.com/beemuvi/status/2049633833235218597",
+    "https://github.com/beeminder/beeminder/issues/5493"],
+d: "2026-04-27",
+e: "2026-04-29",
+s: `The mode selection is stored in the ii field, so visible to admins`,
 }, { // ------------------------------------------------------------------------
+x: `We had missed a spot in UVI#5580, namely in goal restart. No more carrot-dangling there either!`,
+l: ["https://x.com/beemuvi/status/2049633974927126939",
+    "https://github.com/beeminder/beeminder/pull/5616"],
+d: "2026-04-29",
+e: "2026-04-29",
+s: `And we DRY'd this up so this mismatch can't happen again`,
 }, { // ------------------------------------------------------------------------
+x: `The sliders were only sliding one node at a time on mobile / touchscreens. Now they slide normally. #bugfix`,
+l: ["https://x.com/beemuvi/status/2049987214759866637",
+    "https://github.com/beeminder/beeminder/pull/5617"],
+d: "2026-04-29",
+e: "2026-04-30",
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
+x: `We added an interactive widget to the blog post about the sliders and fixed the above bug with it, as well as for a much older interactive blog post`,
+l: ["https://x.com/beemuvi/status/2049987349594185802",
+    "https://blog.beeminder.com/sliders",
+    "https://blog.beeminder.com/fair",
+    "https://github.com/beeminder/beeminder/pull/5617"],
+d: "2026-04-29",
+e: "2026-04-30",
 }, { // ------------------------------------------------------------------------
 }, /* --------------------------------------------------------- end 2026apr */ ]
+
+batches['2026may'] = [{
+}, { // ------------------------------------------------------------------------
+x: `Help docs: New FAQ item in the Intend autodata integration article about goal setup, plus minor tweaking in 3 other articles`,
+l: ["https://x.com/beemuvi/status/2050116813053370685",
+    "https://help.beeminder.com/article/85-intend",
+    "https://help.beeminder.com/article/83-habitica",
+    "https://help.beeminder.com/article/86-ifttt",
+    "https://help.beeminder.com/article/338-lichess"],
+e: "2026-05-01",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, /* --------------------------------------------------------- end 2026may */ ]
 
 const staged = [ {
 }, { // ------------------------------------------------------------------------
