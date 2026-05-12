@@ -1067,6 +1067,55 @@ l: ["https://x.com/beemuvi/status/2050116813053370685",
     "https://help.beeminder.com/article/338-lichess"],
 e: "2026-05-01",
 }, { // ------------------------------------------------------------------------
+x: `Help docs: Updated the Make autodata integration article to desribe an improvement to it, plus tiny tweaks in 2 other articles`,
+l: ["https://x.com/beemuvi/status/2051755285010919698",
+    "https://help.beeminder.com/article/318-make-formerly-integromat",
+    "https://help.beeminder.com/article/369-maayot",
+    "https://help.beeminder.com/article/352-manifold"],
+e: "2026-05-05",
+}, { // ------------------------------------------------------------------------
+x: `Made the link from the deadline-snoozing popup to the blog post about it open in a new tab. Also a new purply color for the "goal is archiving" warning.`,
+l: ["https://x.com/beemuvi/status/2052533595802317011",
+    "https://github.com/beeminder/beeminder/pull/5618",
+    "https://github.com/beeminder/beeminder/pull/5620"],
+d: "2026-05-06",
+e: "2026-05-07",
+s: `Aka target=blank for links in modals, which seems conventional. Aka tertiary color.`,
+}, { // ------------------------------------------------------------------------
+x: `Added a cache control header and removed the "expires-at" one to make hotlinks to graph images stop breaking. Also link previews for 404 and 403.5 pages.`,
+l: ["https://x.com/beemuvi/status/2052533724684894580",
+    "https://github.com/beeminder/beeminder/issues/5322",
+    "https://github.com/beeminder/beeminder/issues/5367",
+    "https://github.com/beeminder/beeminder/pull/5621"],
+d: "2026-05-06",
+e: "2026-05-07",
+s: `Fingers crossed this finally works for image hotlinking. Not sure the link previews for non-200-response pages actually matters though`,
+}, { // ------------------------------------------------------------------------
+x: `Oops, the email bot was confused by the "paying/repledging $X" wording in legit check subject lines. Relatedly, added "paying" as a disallowed username. #bugfix`,
+l: ["https://x.com/beemuvi/status/2052846002043060324",
+    "https://github.com/beeminder/beeminder/issues/4796",
+    "https://github.com/beeminder/beeminder/pull/5622"],
+e: "2026-05-08",
+s: `Happened if a user CC'd the emailbot on a legit check because it parsed the "paying/repledging" as USERNAME/GOALNAME. Now it just knows that isn't a valid yoog.`,
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Updated the Metaminder article in light of the new values-vs-plus-one feature`,
+l: ["https://x.com/beemuvi/status/2052846093109739884",
+    "https://help.beeminder.com/article/323-metaminder"],
+e: "2026-05-08",
+}, { // ------------------------------------------------------------------------
+x: `The pledge stepdown indicator on the goal page was wrong if stepping multiple steps in one go. Say you were stepping from $90=>$5, it'd say $90=>$30. #bugfix`,
+l: ["https://x.com/beemuvi/status/2053986611000688642",
+    "https://github.com/beeminder/beeminder/issues/5624",
+    "https://github.com/beeminder/beeminder/pull/5625"],
+e: "2026-05-11",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Updated 3 articles about pledges and pledge caps in light of the new coupled sliders and more lenient rules for changing pledges/caps`,
+l: ["https://x.com/beemuvi/status/2053986680840089952",
+    "https://help.beeminder.com/article/21-can-i-decrease-the-pledge-on-my-goal",
+    "https://help.beeminder.com/article/343-can-i-increase-the-pledge-on-my-goal",
+    "https://help.beeminder.com/article/22-can-i-limit-how-high-my-pledge-gets"],
+e: "2026-05-11",
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
