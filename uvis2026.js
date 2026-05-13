@@ -1116,6 +1116,17 @@ l: ["https://x.com/beemuvi/status/2053986680840089952",
     "https://help.beeminder.com/article/22-can-i-limit-how-high-my-pledge-gets"],
 e: "2026-05-11",
 }, { // ------------------------------------------------------------------------
+x: `Revamped how we hit the Toggl API to fetch autodata; now less likely to hit rate limits`,
+l: ["https://x.com/beemuvi/status/2054333158917799959",
+    "https://forum.beeminder.com/t/toggl-api-limits-changed/12534/1",
+    "https://github.com/beeminder/beeminder/issues/5400"],
+e: "2026-05-12",
+}, { // ------------------------------------------------------------------------
+x: `Added a silent reCAPTCHA to the "keep abreast of the buzz" mailing list signup to reduce spam; mostly invisible to normal users unless you're sus I guess`,
+l: ["https://x.com/beemuvi/status/2054333782636023993",
+    "https://github.com/beeminder/beeminder/issues/4840",
+    "https://github.com/beeminder/beeminder/pull/5629"],
+e: "2026-05-12",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
