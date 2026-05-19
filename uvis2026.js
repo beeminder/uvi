@@ -1128,6 +1128,21 @@ l: ["https://x.com/beemuvi/status/2054333782636023993",
     "https://github.com/beeminder/beeminder/pull/5629"],
 e: "2026-05-12",
 }, { // ------------------------------------------------------------------------
+x: `Added a little ⚠️ indicator icon in the dashboard for goals with graph generation errors, to match what we do with autodata errors`,
+l: ["https://x.com/beemuvi/status/2056811195827720667",
+    "https://github.com/beeminder/beeminder/issues/5542",
+    "https://github.com/beeminder/beeminder/pull/5630"],
+d: "2026-05-12",
+e: "2026-05-19",
+s: `Aka Beebrain errors aka BBerrors`,
+}, { // ------------------------------------------------------------------------
+x: `Also we now show the indicator icons (graph gen error, autodata error, archive coming up) in super-collapsed view (alongside todayta checkmark)`,
+l: ["https://x.com/beemuvi/status/2056811326186684511",
+    "https://github.com/beeminder/beeminder/issues/5542",
+    "https://github.com/beeminder/beeminder/pull/5630"],
+d: "2026-05-12",
+e: "2026-05-19",
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
