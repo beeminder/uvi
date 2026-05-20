@@ -1143,6 +1143,23 @@ l: ["https://x.com/beemuvi/status/2056811326186684511",
 d: "2026-05-12",
 e: "2026-05-19",
 }, { // ------------------------------------------------------------------------
+x: `Help docs: Added a warning to the RSSminder article about Substack's laggy RSS feed, plus copy tweaks in 4 other articles`,
+l: ["https://x.com/beemuvi/status/2057242841534054485",
+    "https://help.beeminder.com/article/331-rssminder",
+    "https://help.beeminder.com/article/361-oura",
+    "https://help.beeminder.com/article/368-postminder",
+    "https://help.beeminder.com/article/292-project-euler",
+    "https://help.beeminder.com/article/347-readwise-reader"],
+e: "2026-05-20",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: The Odometer Goals article clarifies that odometer resets don't have to be to zero, plus minor tweaks in 3 other articles`,
+l: ["https://x.com/beemuvi/status/2057243027891216434",
+    "https://help.beeminder.com/article/68-odometer-goals",
+    "https://help.beeminder.com/article/77-runkeeper",
+    "https://help.beeminder.com/article/89-skritter",
+    "https://help.beeminder.com/article/116-slack"],
+e: "2026-05-20",
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
