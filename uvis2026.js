@@ -1169,12 +1169,14 @@ l: ["https://x.com/beemuvi/status/2057605294164001041",
 d: "2026-05-20",
 e: "2026-05-21",
 }, { // ------------------------------------------------------------------------
-x: `Fixed some ugliness with the old alternate pledge schedule overrunning its modal area. #css`,
+x: `In the new slider interface, we fixed some ugliness with the old alternate pledge schedule overrunning its modal area. #css`,
 l: ["https://x.com/beemuvi/status/2057605372723274141",
     "https://github.com/beeminder/beeminder/issues/5606",
     "https://github.com/beeminder/beeminder/pull/5632",
     "https://github.com/beeminder/beeminder/commit/7b01bc1fb9652e4fce99825df0b708458bfcf686"],
+d: "2026-05-21",
 e: "2026-05-21",
+s: `Was fugly for folks on deprecated alternate pledge schedule -- fixed the layout by removing the highest option since no active goals were at that amount anyway`,
 }, { // ------------------------------------------------------------------------
 x: `API fix: The post-deauth callback was not actually identifying the user that deauthed to the client. Now it sends the username and client ID back. HT narthur`,
 u: ["https://x.com/beemuvi/status/2059406309917868405",
@@ -1213,6 +1215,19 @@ l: ["https://x.com/beemuvi/status/2060132812263731426",
     "https://help.beeminder.com/article/370-time-stream",
     "https://help.beeminder.com/article/79-todoist"],
 e: "2026-05-28",
+}, { // ------------------------------------------------------------------------
+x: `New Wakatime goals are now created with aggday "max" (instead of "last") to mitigate an autofetch problem with Wakatime occasionally returning "0"s`,
+l: ["https://x.com/beemuvi/status/2060466632867340346",
+    "https://github.com/beeminder/beeminder/issues/322",
+    "https://github.com/beeminder/beeminder/pull/5639"],
+d: "2026-05-29",
+e: "2026-05-29",
+s: `This is an occasional thing related to when Wakatime is recalculating totals (only a mitigation since a total fix would require waiting on autodata runs and re-runs to derail goals)`,
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Adjusted text/screenshots in the Toggl autodata integration article in light of UVI#5530 and being able to have Toggl Do Less goals without premium`,
+l: ["https://x.com/beemuvi/status/2060466941769429369",
+    "https://help.beeminder.com/article/155-toggl"],
+e: "2026-05-29",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
