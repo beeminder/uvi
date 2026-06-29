@@ -2372,7 +2372,7 @@ batches['2024dec'] = [{
 "s": "Not included in this list are the negative UVIs of killing the Today Widget and the delta text, to be replaced later with the modern widget equivalent and the due-by table, respectively",
 }, { // ------------------------------------------------------------------------
 "i": true,
-"x": "First little nicety he app icon now supports dark mode and tint mode",
+"x": "First little nicety: the app icon now supports dark mode and tint mode",
 "l": ["https://x.com/beemuvi/status/1871359893137187095",
       "https://github.com/beeminder/BeeSwift/pull/478",
       "https://github.com/beeminder/BeeSwift/blob/master/CHANGELOG.md"],

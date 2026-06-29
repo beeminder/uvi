@@ -10,7 +10,7 @@ Interface / protocol for adding a new UVI to the changelog:
 4. Paste in the URL of the tweet to the JSON
 5. Manually update the beeminder.com/meta/uvi graph
 6. Double check that the total number of UVIs at beeminder.com/changelog matches the total in the stats tab at beeminder.com/meta/uvi
-7. Paste the canonical UVI link (e.g., beeminder.com/changelog#123) into the relevant gissue
+7. Paste the canonical UVI link (like beeminder.com/changelog#123) into the relevant gissue
 
 Adding more automation to the above is easier said than done.
 For example, Twitter's UI with expanding @-mentions and stuff wouldn't work as well outside of Twitter.
@@ -49,23 +49,6 @@ d: date Deployed                         [YYYY-MM-DD string]
 e: date tweeted/logged/announced/Entered [YYYY-MM-DD string]
 s: comment / note to Selves              [string]
 ```
-
-REFACTOR:
-
-So `f`, `x`, and `d` are unchanged;
-`s`, `u`, `t`, and `c` become `i`, `l`, `e`, and `s`;
-and `n` gets toggled and becomes `c`.
-
-Migration plan for that refactoring:
- 1. Leave "f" alone
- 2. Change "s" to "i"
- 3. Change "n" to "newnum"  
- 4. Leave "x" alone
- 5. Change "u" to "l"
- 6. Leave "d" alone
- 7. Change "t" to "e"
- 8. Change "c" to "s"   
- 9. Change "newnum" to "c" and toggle the true/false-ness
 
 ## TODO LIST
 

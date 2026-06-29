@@ -313,7 +313,8 @@ s: `Stripe or PayPal. Bee has some concerns that for ppl like herself & Danny & 
 batches['2026feb'] = [{
 x: `We upgraded our servers' Transport Layer Security (TLS) to the current geological era (v1.3) which has made a measurable performance difference for the iOS app`,
 l: ["https://x.com/beemuvi/status/2018487295347949929",
-    "https://github.com/beeminder/beeploy"],
+    "https://github.com/beeminder/beeploy",
+    "https://github.com/beeminder/beeminder/issues/5218"],
 e: "2026-02-02",
 s: `Thanks to Theo and Adam`,
 }, { // ------------------------------------------------------------------------
@@ -1228,19 +1229,207 @@ x: `Help docs: Adjusted text/screenshots in the Toggl autodata integration artic
 l: ["https://x.com/beemuvi/status/2060466941769429369",
     "https://help.beeminder.com/article/155-toggl"],
 e: "2026-05-29",
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
 }, /* --------------------------------------------------------- end 2026may */ ]
+
+batches['2026jun'] = [{
+f: true,
+x: `Version 6.8 of the Beeminder iOS app! Headline new feature is in-app goal settings. Plus a long list of fixes and improvements, especially for autodata goals.`,
+l: ["https://x.com/beemuvi/status/2061627821571919945",
+    "https://apps.apple.com/us/app/beeminder/id551869729",
+    "https://github.com/beeminder/BeeSwift/blob/master/CHANGELOG.md"],
+d: "2026-06-01",
+e: "2026-06-01",
+}, { // ------------------------------------------------------------------------
+i: true,
+x: `Goal settings gives quick access to notification settings and autodata source config, plus we restructured the main menu to put this at the top`,
+l: ["https://x.com/beemuvi/status/2061628044968919340",
+    "https://github.com/beeminder/BeeSwift/pull/726"],
+e: "2026-06-01",
+}, { // ------------------------------------------------------------------------
+i: true,
+x: `New setting for weight-loss goals: toggle between individual weighings or the daily min. The former includes comments like "Weight via Withings at 9:00 AM".`,
+l: ["https://x.com/beemuvi/status/2061953703821836766",
+    "https://github.com/beeminder/BeeSwift/pull/724"],
+e: "2026-06-02",
+}, { // ------------------------------------------------------------------------
+i: true,
+x: `You can now filter which workout types (organized into 7 categories; defaults to everything) the Apple Health integration includes when syncing workout minutes`,
+l: ["https://x.com/beemuvi/status/2061953790962717028",
+    "https://github.com/beeminder/BeeSwift/pull/709"],
+e: "2026-06-02",
+s: `By default all workout types are included (including future iOS workout types the app doesn't know about). Users can select specific types organized into 7 categories (Cardio, Strength, Mind & Body, Racquet Sports, Team Sports, Individual Sports, Outdoor & Adventure).`,
+}, { // ------------------------------------------------------------------------
+i: true,
+x: `Moved the gallery sort UI onto the gallery screen itself, with a native menu and checkmark for the selected order`,
+l: ["https://x.com/beemuvi/status/2067016073229312438",
+    "https://github.com/beeminder/BeeSwift/pull/616",
+    "https://github.com/beeminder/BeeSwift/pull/769"],
+e: "2026-06-16",
+}, { // ------------------------------------------------------------------------
+i: true,
+x: `You can now see the full autodata configuration preview (filters and a preview of your data) when reconfiguring an Apple Health goal`,
+l: ["https://x.com/beemuvi/status/2067016216494141890",
+    "https://github.com/beeminder/BeeSwift/pull/714"],
+e: "2026-06-16",
+}, { // ------------------------------------------------------------------------
+i: true,
+x: `The configuration screen for an Apple Health metric now shows the Beeminder goal and its goal units at the top, plus workout-specific config`,
+l: ["https://x.com/beemuvi/status/2067016216494141890",
+    "https://github.com/beeminder/BeeSwift/pull/712"],
+e: "2026-06-16",
+}, { // ------------------------------------------------------------------------
+i: true,
+x: `The datapoint list now uses three aligned columns: day, value, comment. It sizes them dynamically and shows the month as needed, plus various alignment fixes.`,
+l: ["https://x.com/beemuvi/status/2067386158435422280",
+    "https://github.com/beeminder/BeeSwift/pull/713"],
+e: "2026-06-17",
+}, { // ------------------------------------------------------------------------
+i: true,
+x: `Exercise Minutes, Workout Minutes, and Water now have sensible default precision`,
+l: ["https://x.com/beemuvi/status/2067386281752215835",
+    "https://github.com/beeminder/BeeSwift/pull/668"],
+e: "2026-06-17",
+}, { // ------------------------------------------------------------------------
+i: true,
+x: `You can now edit notification times in 24-hour mode. #bugfix`,
+l: ["https://x.com/beemuvi/status/2067739486751281256",
+    "https://github.com/beeminder/BeeSwift/pull/619"],
+e: "2026-06-18",
+}, { // ------------------------------------------------------------------------
+i: true,
+x: `You can also set goal deadlines in the same place`,
+l: ["https://x.com/beemuvi/status/2067739633954533470",
+    "https://github.com/beeminder/BeeSwift/pull/619"],
+e: "2026-06-18",
+}, { // ------------------------------------------------------------------------
+i: true,
+x: `We brought back a better version of the colored deltas: a concise due-by table showing what's needed to get different amounts of safety buffer`,
+l: ["https://x.com/beemuvi/status/2068090590294917289",
+    "https://github.com/beeminder/BeeSwift/issues/567",
+    "https://github.com/beeminder/BeeSwift/pull/547"],
+e: "2026-06-19",
+}, { // ------------------------------------------------------------------------
+i: true,
+x: `Notifications about beemergencies (aka Zeno notifications) now include username and goalname`,
+l: ["https://x.com/beemuvi/status/2068090727838654743",
+    "https://github.com/beeminder/beeminder/pull/5359"],
+e: "2026-06-19",
+}, { // ------------------------------------------------------------------------
+i: true,
+x: `Search uses goal descriptions, not just goalnames, plus you can search for goals when creating Shortcuts`,
+l: ["https://x.com/beemuvi/status/2069125514217013505",
+    "https://github.com/beeminder/BeeSwift/issues/218",
+    "https://github.com/beeminder/BeeSwift/issues/631",
+    "https://github.com/beeminder/BeeSwift/pull/632",
+    "https://github.com/beeminder/BeeSwift/pull/669"],
+e: "2026-06-22",
+}, { // ------------------------------------------------------------------------
+i: true,
+x: `More UI polish: new menu icon, confirmation for disconnecting autodata, metric config simplifications, microcopy tweaks, less misleading freshness indicator`,
+l: ["https://x.com/beemuvi/status/2069125610547601651",
+    "https://github.com/beeminder/BeeSwift/pull/659",
+    "https://github.com/beeminder/BeeSwift/issues/573",
+    "https://github.com/beeminder/BeeSwift/pull/585",
+    "https://github.com/beeminder/BeeSwift/issues/604",
+    "https://github.com/beeminder/BeeSwift/pull/708",
+    "https://github.com/beeminder/BeeSwift/issues/265"],
+e: "2026-06-22",
+s: `Bonus things: When filtering goals in the gallery and no goals match the filter, the app now shows a helpful message indicating how many goals are hidden, instead of "You have no Beeminder goals!"; Direct link from goal to Apple Health settings for that goal?`,
+}, { // ------------------------------------------------------------------------
+i: true,
+x: `Goalnames are primary with descriptions as subtitles, and more UI smoothenings like showing the gallery behind the keyboard and fixing a render jump`,
+l: ["https://x.com/beemuvi/status/2069504880017080668",
+    "https://github.com/beeminder/BeeSwift/pull/706",
+    "https://github.com/beeminder/BeeSwift/pull/682"],
+e: "2026-06-23",
+}, { // ------------------------------------------------------------------------
+i: true,
+x: `Bugfixes: correct thumbnail borders even when your payment method fails, floating point fixes, fewer crashes, less showing stale data in gallery view, etc`,
+l: ["https://x.com/beemuvi/status/2069505324567142673",
+    "https://github.com/beeminder/BeeSwift/pull/749",
+    "https://github.com/beeminder/BeeSwift/pull/658",
+    "https://github.com/beeminder/BeeSwift/issues/30",
+    "https://github.com/beeminder/BeeSwift/issues/592",
+    "https://github.com/beeminder/BeeSwift/issues/588"],
+e: "2026-06-23",
+}, { // ------------------------------------------------------------------------
+i: true,
+x: `More bugfixes: Mindful Minutes tallied correctly and the app doesn't claim to not know your timezone`,
+l: ["https://x.com/beemuvi/status/2069932702212759887",
+    "https://github.com/beeminder/BeeSwift/issues/284",
+    "https://github.com/beeminder/BeeSwift/issues/360#issuecomment-4596806433"],
+e: "2026-06-24",
+}, { // ------------------------------------------------------------------------
+i: true,
+x: `Autodata fetching and refreshing happen in parallel, which should make things snappier`,
+l: ["https://x.com/beemuvi/status/2069932811516334423",
+    "https://github.com/beeminder/BeeSwift/pull/662"],
+e: "2026-06-24",
+}, { // ------------------------------------------------------------------------
+i: true,
+x: `Tapping a notification opens the app to the corresponding goal, and people with >20 goals can actually find them all in Shortcuts now`,
+l: ["https://x.com/beemuvi/status/2070291366417228268",
+    "https://github.com/beeminder/BeeSwift/issues/622",
+    "https://github.com/beeminder/BeeSwift/issues/41"],
+e: "2026-06-25",
+s: `Same for opening via Spotlight search result`,
+}, { // ------------------------------------------------------------------------
+i: true,
+x: `For "Workout Minutes" Apple Health sync you can have the app make datapoints for each workout, rather than just one combined one per day`,
+l: ["https://x.com/beemuvi/status/2070291533501431915",
+    "https://github.com/beeminder/BeeSwift/blob/master/CHANGELOG.md"],
+e: "2026-06-25",
+}, { // ------------------------------------------------------------------------
+i: true,
+x: `Added "Dietary Fiber" as an Apple Health metric`,
+l: ["https://x.com/beemuvi/status/2070655640499081307",
+    "https://github.com/beeminder/BeeSwift/pull/689"],
+e: "2026-06-26",
+}, { // ------------------------------------------------------------------------
+i: true,
+x: `There are new goal properties for filtering Shortcuts. And lots more. Enjoy!`,
+l: ["https://x.com/beemuvi/status/2070655956862779782",
+    "https://github.com/beeminder/BeeSwift/pull/710",
+    "https://github.com/beeminder/BeeSwift/blob/master/CHANGELOG.md"],
+e: "2026-06-26",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: The Zapier integration article now explains about removing previous integrations, plus minor tweaks and fixes in that and 8 other articles`,
+l: ["https://x.com/beemuvi/status/2071740805170225538",
+    "https://help.beeminder.com/article/87-zapier",
+    "https://help.beeminder.com/article/78-trello",
+    "https://help.beeminder.com/article/340-trydeepwork",
+    "https://help.beeminder.com/article/293-twitter",
+    "https://help.beeminder.com/article/88-urlminder",
+    "https://help.beeminder.com/article/357-wakatime",
+    "https://help.beeminder.com/article/90-withings",
+    "https://help.beeminder.com/article/292-project-euler",
+    "https://help.beeminder.com/article/359-ynab"],
+e: "2026-06-29",
+s: `Project Euler in particular is a negative UVI, explaining how they killed the ability to get problem counts, which kills our integration`,
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Rewrote the "How do I quit a goal?" article, adding missing info like about exporting from an archived goal; plus tweaks to 2 other articles`,
+l: ["https://x.com/beemuvi/status/2071743329554047157",
+    "https://help.beeminder.com/article/44-how-do-i-quit-a-goal",
+    "https://help.beeminder.com/article/46-what-happens-to-an-archived-goal",
+    "https://help.beeminder.com/article/47-how-do-i-delete-a-goal"],
+e: "2026-06-29",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, /* --------------------------------------------------------- end 2026jun */ ]
 
 const staged = [ {
 }, { // ------------------------------------------------------------------------
@@ -1255,6 +1444,29 @@ const staged = [ {
 
 /********************************************************************************************************************************************************************
 ~~~~----------------------------- METASTAGED -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+BEEMIOS 6.8 as described in beemail, June 2026:
+1. In-app goal settings: notification settings and autodata source config, plus we restructured the main menu to put this at the top
+2. We brought back a better version of the colored deltas: a concise due-by table showing what's needed to get different amounts of safety buffer
+3. New setting for weight-loss goals: toggle between individual weighings or the daily min (he former includes comments like "Weight via Withings at 9:00 AM")
+4. You can now filter which workout types (organized into 7 categories; defaults to everything) the Apple Health integration includes when syncing workout minutes
+5. Moved the gallery sort UI onto the gallery screen itself, with a native menu and checkmark for the selected order
+6. You can now see the full autodata configuration preview (filters and a preview of your data) when reconfiguring an Apple Health goal
+7. The configuration screen for an Apple Health metric now shows the Beeminder goal and its goal units at the top, plus workout-specific config
+8. The datapoint list now uses three aligned columns: day, value, comment; it sizes them dynamically and shows the month as needed, plus various alignment fixes
+9. Exercise Minutes, Workout Minutes, and Water now have sensible default precision
+10. You can now edit notification times in 24-hour mode.
+11. You can also set goal deadlines in the same place
+12. Notifications about beemergencies (aka Zeno notifications) now include username and goalname
+13. Search uses goal descriptions, not just goalnames, plus you can search for goals when creating Shortcuts
+14. More UI polish: new menu icon, confirmation for disconnecting autodata, metric config simplifications, microcopy tweaks, less misleading freshness indicator
+15. Goalnames are primary with descriptions as subtitles, and more UI smoothenings like showing the gallery behind the keyboard and fixing a render jump
+16. Bugfixes: correct thumbnail borders even when your payment method fails, floating point fixes, fewer crashes, less showing stale data in gallery view, etc
+17. Autodata fetching and refreshing happen in parallel, which should make things snappier
+18. Tapping a notification opens the app to the corresponding goal, and people with >20 goals can actually find them all in Shortcuts now
+19. For "Workout Minutes" you can have the app make datapoints for each workout, rather than just one combined one per day
+20. Added "Dietary Fiber" as an Apple Health metric
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 [TODO: discuss] open graph / meta tags / link previews: more milking? separate UVI for doing it for the blog? more about the tweaks? consistent casing?
