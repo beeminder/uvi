@@ -1413,23 +1413,74 @@ l: ["https://x.com/beemuvi/status/2071743329554047157",
     "https://help.beeminder.com/article/46-what-happens-to-an-archived-goal",
     "https://help.beeminder.com/article/47-how-do-i-delete-a-goal"],
 e: "2026-06-29",
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
 }, /* --------------------------------------------------------- end 2026jun */ ]
+
+
+batches['2026jul'] = [{
+f: true,
+x: `New autodata integration: Go Problems for solving tsumego (landing page with fancy human graphic design, gallery icon, blog post, etc)`,
+l: ["https://x.com/beemuvi/status/2074993032261452137",
+    "https://blog.beeminder.com/goproblems",
+    "https://github.com/beeminder/beeminder/pull/5661",
+    "https://github.com/beeminder/beeminder/pull/5679"],
+e: "2026-07-08",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: New article documenting the new Go Problems integration`,
+l: ["https://x.com/beemuvi/status/2074993105821167850",
+    "https://help.beeminder.com/article/382-goproblems"],
+e: "2026-07-08",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Revamped the delete-my-account article including headers for navigation, plus more minor rewriting/tweaking in 6 other articles`,
+l: ["https://x.com/beemuvi/status/2075360790656516150",
+    "https://help.beeminder.com/article/48-how-do-i-delete-my-account",
+    "https://help.beeminder.com/article/60-ios-app",
+    "https://help.beeminder.com/article/62-android-app",
+    "https://help.beeminder.com/article/64-tagtime",
+    "https://help.beeminder.com/article/158-android-app-beta-testing",
+    "https://help.beeminder.com/article/321-ios-app-beta-testing",
+    "https://help.beeminder.com/article/34-cant-you-just-lie-about-your-data"],
+e: "2026-07-09",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Updated the Apple Health article with the version 6.8 app changes, plus minor tweaks (and boasting about our support team) to 4 other articles`,
+l: ["https://x.com/beemuvi/status/2075361005056790857",
+    "https://help.beeminder.com/article/61-apple-health",
+    "https://help.beeminder.com/article/45-what-is-the-akrasia-horizon",
+    "https://help.beeminder.com/article/49-why-should-i-use-beeminder-over-stickk",
+    "https://help.beeminder.com/article/114-can-i-specify-a-beneficiary-for-my-derailments",
+    "https://help.beeminder.com/article/335-derailing-is-not-failing"],
+e: "2026-07-09",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Edited and added a bit about beemails to the "Account details" article, plus tweaks/clarifications/readability/layout-changes to 7 other articles`,
+l: ["https://x.com/beemuvi/status/2075676669348901223",
+    "https://help.beeminder.com/article/109-account-details",
+    "https://help.beeminder.com/article/14-deadline",
+    "https://help.beeminder.com/article/110-apps-and-api",
+    "https://help.beeminder.com/article/111-new-goal-defaults",
+    "https://help.beeminder.com/article/106-goal-settings",
+    "https://help.beeminder.com/article/102-privacy",
+    "https://help.beeminder.com/article/157-pessimistic-presumptive-reports",
+    "https://help.beeminder.com/article/103-data-source"],
+e: "2026-07-10",
+}, { // ------------------------------------------------------------------------
+x: `Tiny blog regression: missing space in byline (like "bybsoule" instead of "by bsoule") #bugfix #zombie HT narthur`,
+l: ["https://x.com/beemuvi/status/2075678880753688995",
+    "https://github.com/beeminder/blog/pull/668"],
+e: "2026-07-10",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, /* --------------------------------------------------------- end 2026jul */ ]
 
 const staged = [ {
 }, { // ------------------------------------------------------------------------
