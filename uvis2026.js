@@ -1467,6 +1467,20 @@ l: ["https://x.com/beemuvi/status/2075678880753688995",
     "https://github.com/beeminder/blog/pull/668"],
 e: "2026-07-10",
 }, { // ------------------------------------------------------------------------
+x: `Joining a group goal now fulfils your signup gateway-drug commitment, i.e., you won't be charged $5 for failing to create a goal`,
+l: ["https://x.com/beemuvi/status/2076815904755921258",
+    "https://github.com/beeminder/beeminder/issues/5594",
+    "https://github.com/beeminder/beeminder/pull/5667"],
+d: "2026-06-24",
+e: "2026-07-13",
+}, { // ------------------------------------------------------------------------
+f: true,
+x: `The Visual Graph Editor at graph.beeminder.com got a big facelift and rearranged UI`,
+l: ["https://x.com/beemuvi/status/2076818112713003059",
+    "https://github.com/beeminder/road/commit/6320cec47a53c19d7d270a6c0371483742416675"],
+d: "2026-07-11",
+e: "2026-07-13",
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
