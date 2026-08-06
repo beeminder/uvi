@@ -1481,20 +1481,283 @@ l: ["https://x.com/beemuvi/status/2076818112713003059",
 d: "2026-07-11",
 e: "2026-07-13",
 }, { // ------------------------------------------------------------------------
+x: `Doh, UVI#5400 didn't work until now! We got a boolean backwards. Now for real the subject line is correct when you send feedback instead of deleting a goal.`,
+l: ["https://x.com/beemuvi/status/2077164729131561154",
+    "https://github.com/beeminder/beeminder/pull/5448",
+    "https://github.com/beeminder/beeminder/pull/5680"],
+d: "2026-07-09",
+e: "2026-07-14",
+s: `Nicky says it's a UVI because we were confusing ourselves with the bad email subject and sometimes miscommunicating with y'all. And the email subject is in fact user-visible when we reply to it.`,
 }, { // ------------------------------------------------------------------------
+x: `The owner of a group goal can now remove people (groupies, we call them) from the goal. Similar confirmation dialog to deleting a datapoint.`,
+l: ["https://x.com/beemuvi/status/2077165092056289411",
+    "https://github.com/beeminder/beeminder/pull/5643"],
+d: "2026-06-02",
+e: "2026-07-14",
 }, { // ------------------------------------------------------------------------
+x: `Also the groupie who got booted gets a heads-up email, with the goal owner CC'd`,
+l: ["https://x.com/beemuvi/status/2077542176117125532",
+    "https://github.com/beeminder/beeminder/pull/5643"],
+d: "2026-06-02",
+e: "2026-07-15",
 }, { // ------------------------------------------------------------------------
+x: `The charge note now differentiates between upgrades and renewals of premium plans, which was potentially confusing before`,
+l: ["https://x.com/beemuvi/status/2077542254672294026",
+    "https://github.com/beeminder/beeminder/issues/3184",
+    "https://github.com/beeminder/beeminder/pull/5681"],
+d: "2026-07-12",
+e: "2026-07-15",
 }, { // ------------------------------------------------------------------------
+x: `The visual graph editor's minimap (renamed from "scrubber") now works consistently whether you're in View or Edit mode`,
+l: ["https://x.com/beemuvi/status/2077895565560688726",
+    "https://github.com/beeminder/road/commit/ed8addbdb22fb41f94eee216676900d0e78ac508"],
+e: "2026-07-16",
 }, { // ------------------------------------------------------------------------
+x: `More visual graph editor niceties: cmd-Z works for undo on macs and better-formatted tables`,
+l: ["https://x.com/beemuvi/status/2077895641007796662",
+    "https://github.com/beeminder/road/commit/4c027f636867a8223b9650bbb37834fcaa0f3c25"],
+e: "2026-07-16",
 }, { // ------------------------------------------------------------------------
+x: `New help pop-up for the visual graph editor, plus better tooltips`,
+l: ["https://x.com/beemuvi/status/2078263007759765940",
+    "https://github.com/beeminder/road/commit/f92b17820ff715bf337ace7641217dee27c5f592"],
+e: "2026-07-17",
 }, { // ------------------------------------------------------------------------
+f: true,
+x: `Deep links for the visual graph editor, meaning you can link directly to graph.beeminder.com/USER/GOAL`,
+l: ["https://x.com/beemuvi/status/2078263122671063379",
+    "https://github.com/beeminder/road/commit/70d0c4692f9dec7850b8bb02efa6ec66cd3c0be0"],
+e: "2026-07-17",
 }, { // ------------------------------------------------------------------------
+x: `Also we now skip the log-in page of the visual graph editor when possible`,
+l: ["https://x.com/beemuvi/status/2079350703475290506",
+    "https://github.com/beeminder/road/commit/b99e8da99353d577b32dfee1bd2df2e8119e58c0"],
+e: "2026-07-20",
+s: `Claude called it an "invisible OAuth bounce"`,
 }, { // ------------------------------------------------------------------------
+f: true,
+x: `We revamped the tutorial at graph.beeminder.com/tutorial -- now full screen, next/prev buttons, adjusted timings, better captions`,
+l: ["https://x.com/beemuvi/status/2079350779706744968",
+    "https://github.com/beeminder/road/commit/daf0325d1130e552e6d8bdebd2e911feca25642d",
+    "https://github.com/beeminder/road/commit/58f8e763404cc90da87d118aedfcaff2875c25be",
+    "https://github.com/beeminder/road/commit/0f5e781b5d57b97ccc75e70e49884b75c9d4f5e2",
+    "https://github.com/beeminder/road/commit/689448c8609db7cd529c3676caa8762236d08f8f"],
+e: "2026-07-20",
 }, { // ------------------------------------------------------------------------
+x: `Added a footnote to the tutorial to credit Maciej Cegłowski for the "ad astra per aspergera" line, plus lots more fussing with it and easter-egging`,
+l: ["https://x.com/beemuvi/status/2079718249307213894",
+    "https://github.com/beeminder/road/commit/689448c8609db7cd529c3676caa8762236d08f8f",
+    "https://github.com/beeminder/road/commit/0f5e781b5d57b97ccc75e70e49884b75c9d4f5e2"],
+e: "2026-07-21",
 }, { // ------------------------------------------------------------------------
+x: `Visual graph editor and related pages have a nicer header/footer (HT aad) that link to each other and to Beeminder proper`,
+l: ["https://x.com/beemuvi/status/2079718342513041736",
+    "https://github.com/beeminder/road/commit/c9d0b27a62913d31e89d7f492a186f581f0d05f1"],
+e: "2026-07-21",
 }, { // ------------------------------------------------------------------------
+x: `The browser tab titles for the visual graph editor now helpfully indicate which graph you're editing and whether you have unsaved changes`,
+l: ["https://x.com/beemuvi/status/2080081071472046221",
+    "https://github.com/beeminder/road/commit/cd85a4d0979ce1f7717dbc3460abd87e644ea03c"],
+e: "2026-07-22",
 }, { // ------------------------------------------------------------------------
+x: `Speedups for the graph generator and miscellaneous fixes and UI polish in the visual graph editor`,
+l: ["https://x.com/beemuvi/status/2080081145228833118",
+    "https://github.com/beeminder/road/commit/dbdfbbe6be5f91427a88c320f774af7e045edb3f",
+    "https://github.com/beeminder/road/commit/e03cbe457f98b866ce65bd1f4562c7a485819735",
+    "https://github.com/beeminder/road/commit/14346bbc471c6858bfe48d0306c7dd84ba97668a",
+    "https://github.com/beeminder/road/commit/90ad6dd2883232e92d7ed28eda3655918f396c65",
+    "https://github.com/beeminder/road/commit/c22d5789f59bbc664a4b2eb751ad717660725434"],
+e: "2026-07-22",
+}, { // ------------------------------------------------------------------------
+x: `Visual graph editor has nicer and more tucked away buttons for zoom and SVG screenshots and both Undo and Redo show counts and have nicer buttons`,
+l: ["https://x.com/beemuvi/status/2080443261953740958",
+    "https://github.com/beeminder/road/commit/e03cbe457f98b866ce65bd1f4562c7a485819735"],
+e: "2026-07-23",
+}, { // ------------------------------------------------------------------------
+x: `UI elements gray out properly while loading a new graph in the visual graph editor`,
+l: ["https://x.com/beemuvi/status/2080443346246582702",
+    "https://github.com/beeminder/road/commit/380b8fa2331d5c9e5c56a7b3fffbc4a38a89e39a"],
+e: "2026-07-23",
+}, { // ------------------------------------------------------------------------
+x: `Fixed the horizontal scroll on the login page for graph.beeminder.com plus clearer errors and redirects when trying to visit graphs that aren't yours`,
+l: ["https://x.com/beemuvi/status/2080783464392269948",
+    "https://github.com/beeminder/road/commit/cdbd70ab81d791ee775ff4c0dc008baa70ecc065"],
+e: "2026-07-24",
+}, { // ------------------------------------------------------------------------
+x: `The visual graph editor no longer loses your zoom/pan position when switching between View and Edit modes`,
+l: ["https://x.com/beemuvi/status/2080783633535902151",
+    "https://github.com/beeminder/road/commit/1f0ebe60d7ebbbd9199284110cf2e0143f776835"],
+e: "2026-07-24",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: In the "Apply goal defaults" article, tested and clarified what goes wrong when can't apply them, plus clarifications / typo fix in 2 other articles`,
+l: ["https://x.com/beemuvi/status/2081890044147892620",
+    "https://help.beeminder.com/article/377-apply-goal-defaults",
+    "https://help.beeminder.com/article/363-groupies",
+    "https://help.beeminder.com/article/104-supporters"],
+e: "2026-07-27",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Rewording based on user feedback in the article on changing premium plans, plus wordiness/clarity/flow/etc tweaks in 3 other articles`,
+l: ["https://x.com/beemuvi/status/2081890503700939199",
+    "https://help.beeminder.com/article/26-what-if-i-buy-one-plan-and-change-my-mind",
+    "https://help.beeminder.com/article/105-graph-settings",
+    "https://help.beeminder.com/article/99-graph-editor",
+    "https://help.beeminder.com/article/101-reminders"],
+e: "2026-07-27",
+}, { // ------------------------------------------------------------------------
+x: `You can now edit your Habitica autodata integration settings like your Habitica ID and key`,
+l: ["https://x.com/beemuvi/status/2082252647286059340",
+    "https://github.com/beeminder/beeminder/pull/5683"],
+e: "2026-07-28",
+}, { // ------------------------------------------------------------------------
+x: `If you added a Supporter we accidentally displayed the person's email as if they were a member of a group goal as well (they never were). #bugfix #zombie`,
+l: ["https://x.com/beemuvi/status/2082252723211419834",
+    "https://github.com/beeminder/beeminder/issues/5686",
+    "https://github.com/beeminder/beeminder/pull/5687"],
+e: "2026-07-28",
+s: `Also it was just in the Javascript and fixed itself when you reloaded the page, so pretty minor`,
+}, { // ------------------------------------------------------------------------
+x: `We're now wrapping long errors in the error banner properly`,
+l: ["https://x.com/beemuvi/status/2082616816791421130",
+    "https://github.com/beeminder/beeminder/issues/166",
+    "https://github.com/beeminder/beeminder/pull/5276"],
+e: "2026-07-29",
+s: `Before/after in the PR`,
+}, { // ------------------------------------------------------------------------
+x: `If you tried to connect Todoist as an autodata source and weren't logged in to Todoist, we started giving a 404 when Todoist changed their URLs around. #bugfix`,
+l: ["https://x.com/beemuvi/status/2082616941135663594",
+    "https://github.com/beeminder/beeminder/pull/5689"],
+d: "2026-07-21",
+e: "2026-07-29",
+s: `They stopped supporting login via api.todoist.com -- had to change it to just todoist.com`,
+}, { // ------------------------------------------------------------------------
+x: `Zigzag vertical lines are left-aligned to the date for #ARCHIVE and right-aligned for #RESTART so they're always in the inactive region and spoon nicely`,
+l: ["https://x.com/beemuvi/status/2082976650464276905",
+    "https://github.com/beeminder/road"],
+e: "2026-07-30",
+s: `Deployed in the visual graph editor on 2025-10-09 but Beebody took a long time to get with the program`,
+}, { // ------------------------------------------------------------------------
+x: `Also we shade gray the region of the graph from archiving to the corresponding restart, plus made the zigzags appear on top of the yellow guiding lines`,
+l: ["https://x.com/beemuvi/status/2082977079294128548",
+    "https://github.com/beeminder/road/commit/8da01ae1e100f5dc5c07e012d1b75d3657f942de"],
+e: "2026-07-30",
+s: `Same long delay for the version of Beebrain that Beebody uses`,
+}, { // ------------------------------------------------------------------------
+x: `In the visual graph editor, when you use the camera button to get an image of your graph, we helpfully name the file like username-goalname.svg`,
+l: ["https://x.com/beemuvi/status/2083332418036191275",
+    "https://github.com/beeminder/road/commit/42fb387c72b44580341885db964a8f4bd380d036"],
+e: "2026-07-31",
+}, { // ------------------------------------------------------------------------
+x: `Our Strava autodata integration now lets you change Strava activities in goal settings`,
+l: ["https://x.com/beemuvi/status/2083332512508772581",
+    "https://github.com/beeminder/beeminder/issues/380",
+    "https://github.com/beeminder/beeminder/pull/5676"],
+e: "2026-07-31",
 }, /* --------------------------------------------------------- end 2026jul */ ]
+
+batches['2026aug'] = [{
+}, { // ------------------------------------------------------------------------
+x: `The bare min, safety buffer, and pledge info chips at the top of the visual graph editor are now bigger, more consistent, and with better contrast`,
+l: ["https://x.com/beemuvi/status/2084436429720211715",
+    "https://github.com/beeminder/road/commit/60f28b91f6ed746914405624d1b9c72545beeddd"],
+d: "2026-08-03",
+e: "2026-08-03",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Fixed duplication and awkwardness and ordering and overwhelm and such in "How do I change my goal?" and 5 other articles`,
+l: ["https://x.com/beemuvi/status/2084436564281798813",
+    "https://help.beeminder.com/article/54-how-do-i-change-my-goal",
+    "https://help.beeminder.com/article/118-how-do-i-interpret-the-graph",
+    "https://help.beeminder.com/article/115-how-do-i-interpret-the-goal-page",
+    "https://help.beeminder.com/article/32-what-do-i-do-first",
+    "https://help.beeminder.com/article/70-what-is-beeminder",
+    "https://help.beeminder.com/article/18-respite"],
+e: "2026-08-03",
+}, { // ------------------------------------------------------------------------
+x: `The datepickers in the visual graph editor now have the right Beeminder color theme`,
+l: ["https://x.com/beemuvi/status/2084785383548879123",
+    "https://github.com/beeminder/road/commit/a7d7681f3bd37cfddedebf53c44edb285fda0a09"],
+d: "2026-08-03",
+e: "2026-08-04",
+}, { // ------------------------------------------------------------------------
+x: `The API now has a field on the Goal object, "archivedate", telling you if/when a goal is scheduled to be archived. HT narthur`,
+l: ["https://x.com/beemuvi/status/2084787037585227913",
+    "https://github.com/beeminder/beeminder/pull/5698"],
+d: "2026-08-04",
+e: "2026-08-04",
+x: `It'll be a unix timestamp if there's an archive scheduled, null otherwise`,
+}, { // ------------------------------------------------------------------------
+x: `New aggday options: countflat (for number of nonzero datapoints, HT Theo) and muflat (mean of nonzero datapoints, for consistency)`,
+l: ["https://x.com/beemuvi/status/2085152709276258643",
+    "https://github.com/beeminder/beeminder/issues/606",
+    "https://github.com/beeminder/beeminder/pull/5550",
+    "https://github.com/beeminder/road/commit/77e048d351ac05ebf47f900fbea4b037fc6a7ce6"],
+d: "2026-07-21",
+e: "2026-08-05",
+s: `These were in the graph editor version of Beebrain back in February but the Beebody version got behind for some months there`,
+}, { // ------------------------------------------------------------------------
+x: `Changed up the aggday names: mu = plain mean, munique = mean after de-duping, mutrim = trimmed mean, unary = 1 if any datapoints (else 0)`,
+l: ["https://x.com/beemuvi/status/2085152854810247482",
+    "https://github.com/beeminder/beeminder/issues/606",
+    "https://github.com/beeminder/beeminder/pull/5550",
+    "https://github.com/beeminder/road/commit/77e048d351ac05ebf47f900fbea4b037fc6a7ce6"],
+d: "2026-07-21",
+e: "2026-08-05",
+}, { // ------------------------------------------------------------------------
+x: `More aggday refactoring: unaryflat = 1 if any nonzero datapoints (else 0), satsum = sum but capped at 1 as in saturation arithmetic`,
+l: ["https://x.com/beemuvi/status/2085302355847946578",
+    "https://github.com/beeminder/beeminder/issues/606",
+    "https://github.com/beeminder/beeminder/pull/5550",
+    "https://github.com/beeminder/road/commit/77e048d351ac05ebf47f900fbea4b037fc6a7ce6"],
+d: "2026-07-21",
+e: "2026-08-06",
+}, { // ------------------------------------------------------------------------
+x: `The old names all still work as legacy aliases but the dropdown in the UI for custom goals has the new names`,
+l: ["https://x.com/beemuvi/status/2085302486035038337",
+    "https://github.com/beeminder/beeminder/issues/606",
+    "https://github.com/beeminder/beeminder/pull/5550",
+    "https://github.com/beeminder/road/commit/77e048d351ac05ebf47f900fbea4b037fc6a7ce6"],
+d: "2026-07-21",
+e: "2026-08-06",
+}, { // ------------------------------------------------------------------------
+x: `Finally, fixed a long-standing bug with unaryflat (nee "nonzero") where Beebody computed it like countflat`,
+l: ["https://x.com/beemuvi/status/2085302578829733948",
+    "https://github.com/beeminder/beeminder/issues/606",
+    "https://github.com/beeminder/beeminder/pull/5550",
+    "https://github.com/beeminder/road/commit/77e048d351ac05ebf47f900fbea4b037fc6a7ce6"],
+d: "2026-07-21",
+e: "2026-08-06",
+}, { // ------------------------------------------------------------------------
+x: `The visual graph editor now uses consistent icons, no janky emoji`,
+l: ["https://x.com/beemuvi/status/2085302777392345117",
+    "https://github.com/beeminder/road/commit/5ff83f9f17fac041f697ad2cd28843f7053dd2b7"],
+d: "2026-08-04",
+e: "2026-08-06",
+}, { // ------------------------------------------------------------------------
+x: `Made the tabs in the visual graph editor more consistent between View/Edit mode and fixed bugs with maintaining your place in those tabs`,
+l: ["https://x.com/beemuvi/status/2085302977439703151",
+    "https://github.com/beeminder/road/commit/0c028402a61ab96b522b0885571ea543ad548860"],
+d: "2026-08-05",
+e: "2026-08-06",
+}, { // ------------------------------------------------------------------------
+x: `The goal progress bars in the visual graph editor now match the styling of Beeminder proper, with overlays explaining time-based and unit-based progress`,
+l: ["https://x.com/beemuvi/status/2085304789450342748",
+    "https://github.com/beeminder/road/commit/45d93dfa15ee7a68bf13264681b9799414f195b4"],
+d: "2026-08-05",
+e: "2026-08-06",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, /* --------------------------------------------------------- end 2026aug */ ]
 
 const staged = [ {
 }, { // ------------------------------------------------------------------------
