@@ -1744,6 +1744,32 @@ l: ["https://x.com/beemuvi/status/2085304789450342748",
 d: "2026-08-05",
 e: "2026-08-06",
 }, { // ------------------------------------------------------------------------
+x: `Help docs: The "how many goals should I start with?" article clarifies user confusion about the optional week of feet-wetting, plus tweaks to 5 other articles`,
+l: ["https://x.com/beemuvi/status/2087311825331478717",
+    "https://help.beeminder.com/article/378-how-many-goals-should-i-start-with",
+    "https://help.beeminder.com/article/71-example-10k-steps",
+    "https://help.beeminder.com/article/72-example-goal-run-3-times-per-week",
+    "https://help.beeminder.com/article/92-example-goal-go-to-the-gym-4-times-per-week",
+    "https://help.beeminder.com/article/93-example-goal-spend-less-time-on-facebook",
+    "https://help.beeminder.com/article/94-example-goal-eat-14-servings-of-vegetables-per-week"],
+e: "2026-08-11",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Overhauled "How do I start a goal with a weekly rate?" to try to address user confusion, plus typo / formatting / misleadingness fixes in 3 others`,
+l: ["https://x.com/beemuvi/status/2087312464505614506",
+    "https://help.beeminder.com/article/339-how-do-i-set-a-goal-with-a-weekly-rate",
+    "https://help.beeminder.com/article/123-weekstart",
+    "https://help.beeminder.com/article/351-i-need-help",
+    "https://help.beeminder.com/article/375-should-i-use-a-manual-goal-or-an-integration"],
+e: "2026-08-11",
+}, { // ------------------------------------------------------------------------
+x: `Added slop disclosures to all the AI-generated images on the blog (and clarified our AI policy in a blog post)`,
+l: ["https://x.com/beemuvi/status/2087314063101730994",
+    "https://blog.beeminder.com/slop",
+    "https://github.com/beeminder/blog"],
+d: "2026-08-05",
+e: "2026-08-11",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
@@ -1770,7 +1796,7 @@ const staged = [ {
 }, /* ---------------------------------------------------------- end staged */ ]
 
 
-/********************************************************************************************************************************************************************
+/*******************************************************************************************************************************************************************
 ~~~~----------------------------- METASTAGED -------50--------60--------70--------80--------90-------100-------110-------120-------130-------140-----------------160
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
