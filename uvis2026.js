@@ -1683,7 +1683,7 @@ l: ["https://x.com/beemuvi/status/2084787037585227913",
     "https://github.com/beeminder/beeminder/pull/5698"],
 d: "2026-08-04",
 e: "2026-08-04",
-x: `It'll be a unix timestamp if there's an archive scheduled, null otherwise`,
+s: `It'll be a unix timestamp if there's an archive scheduled, null otherwise`,
 }, { // ------------------------------------------------------------------------
 x: `New aggday options: countflat (for number of nonzero datapoints, HT Theo) and muflat (mean of nonzero datapoints, for consistency)`,
 l: ["https://x.com/beemuvi/status/2085152709276258643",
