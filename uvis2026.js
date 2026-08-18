@@ -1806,7 +1806,7 @@ l: ["https://x.com/beemuvi/status/2088390177207292098",
     "https://github.com/beeminder/beeminder/issues/2991",
     "https://github.com/beeminder/beeminder/pull/5718"],
 e: "2026-08-14",
-s: Graph thumb polling. Pollice polling?",
+s: `Graph thumb polling. Pollice polling?`,
 }, { // ------------------------------------------------------------------------
 x: `And in rare edge cases if the graph regeneration gets stuck, the polling eventually gives up and surfaces an error to the user rather than failing silently`,
 l: ["https://x.com/beemuvi/status/2089502304391282714",
