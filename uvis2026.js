@@ -1906,6 +1906,16 @@ l: ["https://x.com/beemuvi/status/2095662995699535876",
     "https://help.beeminder.com/article/57-what-if-i-only-want-to-do-my-goal-on-weekdays"],
 e: "2026-09-03",
 }, { // ------------------------------------------------------------------------
+x: `Help docs: New section in the article about reaching the goal total / goal date about how derailing affects that and better link to "How do change my goal?"`,
+l: ["https://x.com/beemuvi/status/2096023886920130991",
+    "https://help.beeminder.com/article/367-what-happens-when-i-reach-my-goal-total-end-date"],
+e: "2026-09-04",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Added more explanation of errored-out goals (and how quickly support will fix such cases up for you) to the "My goal doesn't make any sense" article`,
+l: ["https://x.com/beemuvi/status/2096023990531956938",
+    "https://help.beeminder.com/article/124-my-goal-doesnt-make-any-sense"],
+e: "2026-09-04",
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
