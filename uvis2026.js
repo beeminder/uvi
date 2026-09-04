@@ -1835,21 +1835,92 @@ l: ["https://x.com/beemuvi/status/2089502471228146050",
 d: "2026-08-17",
 e: "2026-08-17",
 }, { // ------------------------------------------------------------------------
+x: `Updated the API docs to better explain ratcheting, especially to distinguish ratcheting by days of buffer vs by goal units of buffer (plus a typo fix)`,
+l: ["https://x.com/beemuvi/status/2090191161520697780",
+    "https://github.com/beeminder/apidocs/pull/54"],
+e: "2026-08-19",
 }, { // ------------------------------------------------------------------------
+x: `Added API endpoints to schedule an archive, or cancel a scheduled archive. Also document them in the API docs. HT narthur again <3`,
+l: ["https://x.com/beemuvi/status/2090191233255883000",
+    "https://github.com/beeminder/beeminder/pull/5710",
+    "https://github.com/beeminder/apidocs/pull/55"],
+d: "2026-08-18",
+e: "2026-08-19",
+s: "See also UVI#5677",
 }, { // ------------------------------------------------------------------------
+x: `Help docs: The article on custom goals now uses the new aggday names and links to the new blog post on aggday=sqrt`,
+l: ["https://x.com/beemuvi/status/2090584204505645560",
+    "https://help.beeminder.com/article/97-custom-goals"],
+d: "2026-08-18",
+e: "2026-08-20",
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
+x: `Help docs: New section in the "What happens when I reach the end?" article about end total / end date being affected by derailing, plus link to another article`,
+l: ["https://x.com/beemuvi/status/2090584282062614726",
+    "https://help.beeminder.com/article/367-what-happens-when-i-reach-my-goal-total-end-date"],
+e: "2026-08-20",
 }, /* --------------------------------------------------------- end 2026aug */ ]
+
+batches['2026sep'] = [{
+}, { // ------------------------------------------------------------------------
+x: `Fixed the broken Beeminder logo image in our Todoist integration authentication screen (the "do you trust Beeminder?" redirect)`,
+l: ["https://x.com/beemuvi/status/2094936336511938796",
+    "https://www.beeminder.com/todoist"],
+d: "2026-08-21",
+e: "2026-09-01",
+s: `No PRs or anything cuz it was uploading an image in Bee's Todoist dev account. Not sure how it got broken. Presumably their fault.`,
+}, { // ------------------------------------------------------------------------
+x: `Fixed an issue with setting up a Todoist goal: if you had no labels we treated it as an error and wouldn't let you continue setting up your goal #bugfix`,
+u: ["https://x.com/beemuvi/status/2094936438538441077",
+    "https://github.com/beeminder/beeminder/issues/5725",
+    "https://github.com/beeminder/beeminder/pull/5726"],
+d: "2026-08-21",
+e: "2026-09-01",
+}, { // ------------------------------------------------------------------------
+x: `The default date in one the visual graph editor's datepickers had an off-by-one bug (for those in the western hemisphere). #bugfix`,
+l: ["https://x.com/beemuvi/status/2095298843910996099",
+    "https://github.com/beeminder/road/commit/fb551ab8281144aba96f9de2ce7989a585403c11"],
+d: "2026-09-01",
+e: "2026-09-02",
+}, { // ------------------------------------------------------------------------
+x: `The visual graph editor's Goal Progress widget now formats numbers properly`,
+l: ["https://x.com/beemuvi/status/2095299142730088471",
+    "https://github.com/beeminder/road/commit/65e33cc16e317d97b06eeabbb022168cac6bc5b4"],
+d: "2026-09-01",
+e: "2026-09-02",
+s: `I.e., use shn()`,
+}, { // ------------------------------------------------------------------------
+x: `We made the feetweeting period epsilon more generous by having it end at midnight on the 7th day instead of exactly 7*24*3600 seconds after goal creation`,
+l: ["https://x.com/beemuvi/status/2095662308446126346",
+    "https://github.com/beeminder/beeminder/issues/5641",
+    "https://github.com/beeminder/beeminder/pull/5645"],
+e: "2026-09-03",
+s: `A couple months old; almost forgot to tweet this one. Moves feetwetting to GRACE calendar days in the owner's timezone instead: a goal stays in grace through the last midnight of (creation date + GRACE days). A goal created on the 23rd is in grace until midnight at the end of the 30th, regardless of the time of day it was created.`,
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Updated the 3-year-old screenshots plus some clarification in the Megabreak article, plus minor tweaks for flow etc to 5 other articles`,
+l: ["https://x.com/beemuvi/status/2095662995699535876",
+    "https://help.beeminder.com/article/154-can-i-schedule-breaks-on-many-goals-at-once",
+    "https://help.beeminder.com/article/52-why-cant-i-create-a-do-less-odometer-whittle-down",
+    "https://help.beeminder.com/article/55-what-is-safety-buffer",
+    "https://help.beeminder.com/article/56-can-i-get-rid-of-extra-safety-buffer",
+    "https://help.beeminder.com/article/98-can-i-put-my-goal-on-pause-for-a-little-bit",
+    "https://help.beeminder.com/article/57-what-if-i-only-want-to-do-my-goal-on-weekdays"],
+e: "2026-09-03",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, /* --------------------------------------------------------- end 2026sep */ ]
 
 const staged = [ {
 }, { // ------------------------------------------------------------------------
