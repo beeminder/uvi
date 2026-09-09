@@ -1916,6 +1916,19 @@ l: ["https://x.com/beemuvi/status/2096023990531956938",
     "https://help.beeminder.com/article/124-my-goal-doesnt-make-any-sense"],
 e: "2026-09-04",
 }, { // ------------------------------------------------------------------------
+x: `Help docs: Replaced outdated screenshots and added more info to "Can I restart an archived goal?" plus minor tweaks/reorg to 3 other articles`,
+l: ["https://x.com/beemuvi/status/2097483423065710692",
+    "https://help.beeminder.com/article/358-can-i-restart-an-archived-goal",
+    "https://help.beeminder.com/article/58-what-if-i-only-want-to-do-something-once-a-month",
+    "https://help.beeminder.com/article/117-can-i-start-my-goal-over",
+    "https://help.beeminder.com/article/119-what-are-the-goal-statistics"],
+e: "2026-09-08",
+}, { // ------------------------------------------------------------------------
+x: `Help docs: Clarified in the Focusmate article that we're awaiting a Focusmate API change to support group sessions, plus wording tweaks to 1 other article`,
+l: ["https://x.com/beemuvi/status/2097483563142926720",
+    "https://help.beeminder.com/article/278-focusmate",
+    "https://help.beeminder.com/article/66-do-more-goals"],
+e: "2026-09-08",
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
