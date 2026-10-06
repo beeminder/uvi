@@ -1931,8 +1931,6 @@ l: ["https://x.com/beemuvi/status/2097483563142926720",
     "https://help.beeminder.com/article/66-do-more-goals"],
 e: "2026-09-08",
 }, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
-}, { // ------------------------------------------------------------------------
 x: `The visual graph editor has more robust sessions, approximately never logs you out, and recovers gracefully if it does lose its connection`,
 l: ["https://x.com/beemuvi/status/2097835812356497439",
     "https://github.com/beeminder/road/commit/c8b7be49321fffd1fd8d92e4feadeb567f94366d"],
@@ -2008,19 +2006,156 @@ d: "2026-09-15",
 e: "2026-09-17",
 s: `POLA = Principle Of Least Suprise, which often overlaps with Anti-magic so this is a nice illustration of why Anti-magic is the better principle, IMHO`,
 }, { // ------------------------------------------------------------------------
+x: `Help docs: Added a link about self-destructing datapoints to the PPR article plus a key clarification about taring in the special datapoint types article`,
+l: ["https://x.com/beemuvi/status/2102911544988447063",
+    "https://help.beeminder.com/article/157-pessimistic-presumptive-reports",
+    "https://help.beeminder.com/article/374-are-there-any-special-types-of-datapoints"],
+e: "2026-09-23",
 }, { // ------------------------------------------------------------------------
+x: `Help docs: Smaller tweaks for clarity and wordiness and emphasis and new examples in 10 articles`,
+l: ["https://x.com/beemuvi/status/2102911730653495474",
+    "https://help.beeminder.com/article/67-do-less-goals",
+    "https://help.beeminder.com/article/68-odometer-goals",
+    "https://help.beeminder.com/article/69-whittle-down-goals",
+    "https://help.beeminder.com/article/96-weight-gain-loss-goals",
+    "https://help.beeminder.com/article/97-custom-goals",
+    "https://help.beeminder.com/article/36-what-is-my-data",
+    "https://help.beeminder.com/article/37-how-do-i-enter-data-to-my-goal",
+    "https://help.beeminder.com/article/38-what-happens-if-i-forgot-to-enter-data",
+    "https://help.beeminder.com/article/39-how-do-i-fix-incorrect-data",
+    "https://help.beeminder.com/article/40-can-anybody-else-add-data-to-my-goal"],
+e: "2026-09-23",
 }, { // ------------------------------------------------------------------------
+x: `It's now a bit easier to schedule breaks on all goals indiscriminately: New "schedule all" link on the breaks page to expand all the goal-break-forms`,
+l: ["https://x.com/beemuvi/status/2103245845667991586",
+    "https://github.com/beeminder/beeminder/issues/5728"],
+d: "2026-09-24",
+e: "2026-09-24",
 }, { // ------------------------------------------------------------------------
+f: true,
+x: `Todoist zero goals! There's now an option for Todoist autodata goals to whittle down your outstanding tasks, in addition to the classic keep-on-closing type`,
+l: ["https://x.com/beemuvi/status/2103245943407821151",
+    "https://github.com/beeminder/beeminder/issues/268",
+    "https://github.com/beeminder/beeminder/pull/5696"],
+d: "2026-09-24",
+e: "2026-09-24",
+s: `This was something Clive wanted for himself I think? Plus enough people asked about it that we created a gissue about it in 2018...`,
 }, { // ------------------------------------------------------------------------
+x: `Akrasia horizon rule is more consistent / sometimes more generous: you can always start a break 7 days from now even if it's technically tomorrow Beeminder-time`,
+l: ["https://x.com/beemuvi/status/2103634705421840426",
+    "https://github.com/beeminder/beeminder/issues/5374",
+    "https://github.com/beeminder/beeminder/pull/5644"],
+e: "2026-09-25",
+s: `From back in June; single source of truth for the akrasia horizon, clearer warning to users when trying to schedule a break inside the akrasia horizon`,
 }, { // ------------------------------------------------------------------------
+x: `We also made the API consistent, so you can always change the bright red line starting in 7 calendar days`,
+l: ["https://x.com/beemuvi/status/2103634776263627094",
+    "https://github.com/beeminder/beeminder/pull/5671",
+    "https://github.com/beeminder/beeminder/issues/5447"],
+e: "2026-09-25",
+s: `From back in June. API now accepts a road change (especially a break) that gets easier on the akrasia horizon day. This is to match what the breaks UI now allows.`,
 }, { // ------------------------------------------------------------------------
+x: `We were failing to refresh WakaTime authorization to read people's WakaTime data when the auth expired, which took a year to happen. #bugfix`,
+l: ["https://x.com/beemuvi/status/2104717703567327713",
+    "https://github.com/beeminder/beeminder/issues/322"],
+e: "2026-09-28",
 }, { // ------------------------------------------------------------------------
+x: `Separately WakaTime changed their API which broke our ability to create new WakaTime goals, plus better surfacing of errors. #bugfix`,
+l: ["https://x.com/beemuvi/status/2104717913915846686",
+    "https://github.com/beeminder/beeminder/issues/322"],
+e: "2026-09-28",
 }, { // ------------------------------------------------------------------------
+x: `Help docs: Clarified in the "how much we cost" article that you always need a payment method, plus clarifications/dewordinessing/formatting in 3 other articles`,
+l: ["https://x.com/beemuvi/status/2105077392989667538",
+    "https://help.beeminder.com/article/19-how-much-does-beeminder-cost",
+    "https://help.beeminder.com/article/41-can-i-export-my-data",
+    "https://help.beeminder.com/article/113-can-i-import-previous-data",
+    "https://help.beeminder.com/article/42-switching-goal-units"],
+e: "2026-09-29",
 }, { // ------------------------------------------------------------------------
+x: `API docs: Explicit mention that roadall's final row still has one null out of the t,v,r triple; plus clarification on currate coinciding with a rate change`,
+l: ["https://x.com/beemuvi/status/2105084442301878380",
+    "https://forum.beeminder.com/t/quibbles-about-the-api-documentation-for-roadall/12768",
+    "https://forum.beeminder.com/t/possible-mismatches-between-api-behavior-and-documentation/12728",
+    "https://github.com/beeminder/beeminder/issues/5626",
+    "https://github.com/beeminder/apidocs/commit/21e92e36bc15add4bcbe2944842215ab24e9aa0a"],
+d: "2026-09-29",
+e: "2026-09-29",
 }, { // ------------------------------------------------------------------------
+x: `API docs: We now clarify which Goal attributes are allowed to be null if the graph can't generate or is frozen; plus fixed some "nil"s that should be "null"s`,
+l: ["https://x.com/beemuvi/status/2105447229993668856",
+    "https://forum.beeminder.com/t/quibbles-about-the-api-documentation-for-roadall/12768",
+    "https://forum.beeminder.com/t/possible-mismatches-between-api-behavior-and-documentation/12728",
+    "https://github.com/beeminder/beeminder/issues/5626",
+    "https://github.com/beeminder/apidocs/commit/21e92e36bc15add4bcbe2944842215ab24e9aa0a"],
+d: "2026-09-29",
+e: "2026-09-30",
 }, { // ------------------------------------------------------------------------
+x: `We fixed all the shortened subdomain links like changelog.bmndr.co and graph.bmndr.co`,
+l: ["https://x.com/beemuvi/status/2105447312848044077",
+    "https://changelog.bmndr.co",
+    "https://changelog.bmndr.com",
+    "https://graph.bmndr.co",
+    "https://graph.bmndr.com"],
+d: "2026-09-30",
+e: "2026-09-30",
+s: `Subdomains, vanity domains, DNS`,
 }, { // ------------------------------------------------------------------------
 }, /* --------------------------------------------------------- end 2026sep */ ]
+
+batches['2026oct'] = [{
+}, { // ------------------------------------------------------------------------
+f: true,
+x: `Added a summary / review dialog when using the "save all breaks" button on the breaks page, per Nicky's brilliant suggestion`,
+l: ["https://x.com/beemuvi/status/2105807875906089185",
+    "https://github.com/beeminder/beeminder/pull/5746"],
+d: "2026-10-01",
+e: "2026-10-01",
+}, { // ------------------------------------------------------------------------
+x: `Improved tooltips on the dashboard to not show literal '<a href>' style html tags to your face`,
+l: ["https://x.com/beemuvi/status/2105808060296188151",
+    "https://github.com/beeminder/beeminder/issues/5697"],
+d: "2026-10-01",
+e: "2026-10-01",
+}, { // ------------------------------------------------------------------------
+x: `Also fixed those same links in the recent data (on dashboard); and in the browser hover-text we strip the html tags`,
+l: ["https://x.com/beemuvi/status/2106149866711966165",
+    "https://github.com/beeminder/beeminder/issues/5697"],
+d: "2026-10-01",
+e: "2026-10-02",
+}, { // ------------------------------------------------------------------------
+x: `Fixed the gray-on-black links in tooltips. #css`,
+l: ["https://x.com/beemuvi/status/2106149953039172064",
+    "https://github.com/beeminder/beeminder/issues/5697",
+    "https://github.com/beeminder/beeminder/pull/5747"],
+d: "2026-10-02",
+e: "2026-10-02",
+s: `Follow-on to yesterday's UVI`,
+}, { // ------------------------------------------------------------------------
+x: `Links to the visual graph editor from your goal page now link directly to that goal in the visual editor. HT trb97horsegal`,
+l: ["https://x.com/beemuvi/status/2107257262649856442",
+    "https://github.com/beeminder/beeminder/issues/5690",
+    "https://github.com/beeminder/beeminder/pull/5748"],
+d: "2026-10-05",
+e: "2026-10-05",
+s: `Deep links`,
+}, { // ------------------------------------------------------------------------
+x: `Help docs: The article on increasing your stakes now tries harder to warn you not to, and is clearer about what the sliders do`,
+l: ["https://x.com/beemuvi/status/2107257295734518026",
+    "https://help.beeminder.com/article/343-can-i-increase-the-pledge-on-my-goal"],
+e: "2026-10-05",
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, { // ------------------------------------------------------------------------
+}, /* --------------------------------------------------------- end 2026oct */ ]
 
 const staged = [ {
 }, { // ------------------------------------------------------------------------
