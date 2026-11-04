@@ -2347,6 +2347,14 @@ l: ["https://x.com/beemuvi/status/2117403343022870727",
 d: "2026-10-26",
 e: "2026-11-02",
 }, { // ------------------------------------------------------------------------
+x: `For adding a phone number we stripped ascii whitespace but not... fancier whitespace? So pasting a number in could yield "not a valid phone number". #bugfix`,
+l: ["https://x.com/beemuvi/status/2117774358727049335",
+    "https://github.com/beeminder/beeminder/issues/5770",
+    "https://github.com/beeminder/beeminder/pull/5771"],
+d: "2026-10-29",
+e: "2026-11-03",
+s: `When you copy from your phone contact card they commonly have weird hidden unicode whitespace characters`,
+}, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
 }, { // ------------------------------------------------------------------------
